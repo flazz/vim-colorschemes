@@ -1,3 +1,14 @@
+this branch is meant for preparing releases of this
+
+there are a few files:
+
+* `harvest.rb`: downloads all colorschemes from vim.org; caches the links in a file called `links`
+* `crosscheck.rb`: used to extract data from the links file, i'm using for a file called `not.vim`
+
+just hack away, the rest of this README.md is the normal one
+
+---
+
 **me:** Hi everyone, my name is Franco and I'm addicted to colorschemes
 
 **everyone else:** *Hi Franco*

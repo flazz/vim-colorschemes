@@ -1,3 +1,8 @@
+# run this to get all (first 1000) the colorschemes from vim.org
+#
+# the file called links will be created, this is a cache of the urls so we
+# don't hammer vim.org. just delete links to refresh it
+
 require 'nokogiri'
 require 'open-uri'
 require 'yaml'
