@@ -31,3 +31,4 @@ hi Constant     guifg=#9d7d4a	gui=NONE
 hi Function		guifg=#6f8b17	gui=NONE
 hi PreProc		guifg=#6f8b17	gui=NONE
 hi Keyword		guifg=#6f8b17	gui=NONE
+

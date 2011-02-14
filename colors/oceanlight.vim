@@ -1,5 +1,5 @@
 " Vim color file
-" Maintainer: HÃ¥kan WikstrÃ¶m <hakan@wikstrom.st>
+" Maintainer: Håkan Wikström <hakan@wikstrom.st>
 " Last Change: 2005-01-06
 " Version: 0.1
 " URL: 
@@ -10,7 +10,7 @@
 set background=light
 highlight clear
 if exists("syntax_on")
-  syntax reset
+    syntax reset
 endif
 let g:colors_name = "oceanlight"
 
@@ -36,11 +36,11 @@ highlight LineNr        gui=none guibg=#d3d3d3 guifg=#5daf83
 highlight ModeMsg       guibg=CadetBlue guifg=LightGrey
 highlight MoreMsg       gui=none  guifg=CadetBlue guibg=bg
 if version < 600
-  " same as SpecialKey
-  highlight NonText       guibg=#d3d3d3 guifg=#3D5D6D
+    " same as SpecialKey
+    highlight NonText       guibg=#d3d3d3 guifg=#3D5D6D
 else
-  " Bottom fill (use e.g. same as LineNr)
-  highlight NonText       gui=None guibg=#d3d3d3 guifg=#5daf83
+    " Bottom fill (use e.g. same as LineNr)
+    highlight NonText       gui=None guibg=#d3d3d3 guifg=#5daf83
 endif
 highlight Normal        gui=None guibg=#f5f5f5 guifg=DimGray
 highlight Question      gui=none  guifg=SeaGreen2 guibg=bg
@@ -62,21 +62,21 @@ highlight Comment       gui=None guifg=LightSteelBlue
 
 highlight Constant      guifg=#483d8b guibg=bg
 hi String gui=None guifg=MediumAquamarine guibg=bg
-"hi Character gui=None guifg=Cyan guibg=bg
-highlight Number gui=None guifg=MediumSeaGreen guibg=bg
-highlight Boolean gui=none guifg=DarkSeaGreen guibg=bg
-"hi Float gui=None guifg=Cyan guibg=bg
+    "hi Character gui=None guifg=Cyan guibg=bg
+    highlight Number gui=None guifg=MediumSeaGreen guibg=bg
+    highlight Boolean gui=none guifg=DarkSeaGreen guibg=bg
+    "hi Float gui=None guifg=Cyan guibg=bg
 
 highlight Identifier    guifg=CornflowerBlue
 hi Function gui=None guifg=DarkSeaGreen guibg=bg
 
 highlight Statement     gui=NONE guifg=SeaGreen
-highlight Conditional gui=None guifg=#5daf83 guibg=bg
-highlight Repeat gui=None guifg=#5daf83 guibg=bg
-"hi Label gui=None guifg=seagreen guibg=bg
-highlight Operator gui=None guifg=LightSlateBlue guibg=bg
-highlight Keyword gui=none guifg=SeaGreen guibg=bg
-highlight Exception gui=none guifg=SeaGreen guibg=bg
+    highlight Conditional gui=None guifg=#5daf83 guibg=bg
+    highlight Repeat gui=None guifg=#5daf83 guibg=bg
+    "hi Label gui=None guifg=seagreen guibg=bg
+    highlight Operator gui=None guifg=LightSlateBlue guibg=bg
+    highlight Keyword gui=none guifg=SeaGreen guibg=bg
+    highlight Exception gui=none guifg=SeaGreen guibg=bg
 
 highlight PreProc       guifg=SkyBlue1
 hi Include gui=None guifg=SteelBlue guibg=bg
@@ -90,11 +90,11 @@ hi Structure gui=None guifg=SteelBlue guibg=bg
 hi Typedef gui=None guifg=SteelBlue guibg=bg
 
 highlight Special       gui=none guifg=aquamarine3
-"hi SpecialChar gui=none guifg=White guibg=bg
-"hi Tag gui=none guifg=White guibg=bg
-"hi Delimiter gui=none guifg=White guibg=bg
-"hi SpecialComment gui=none guifg=White guibg=bg
-"hi Debug gui=none guifg=White guibg=bg
+    "hi SpecialChar gui=none guifg=White guibg=bg
+    "hi Tag gui=none guifg=White guibg=bg
+    "hi Delimiter gui=none guifg=White guibg=bg
+    "hi SpecialComment gui=none guifg=White guibg=bg
+    "hi Debug gui=none guifg=White guibg=bg
 
 highlight Underlined gui=underline guifg=honeydew4 guibg=bg
 
