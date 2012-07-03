@@ -270,6 +270,7 @@ Current colorschemes
 * louver.vim
 * lucius.vim
 * luinnar.vim
+* made_of_code.vim
 * manuscript.vim
 * manxome.vim
 * marklar.vim
