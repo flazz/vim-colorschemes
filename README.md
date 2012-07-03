@@ -41,7 +41,7 @@ pull request!; I'll take it!
 Previews
 ------------------------
 
-many of the themes here are listed [here](http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
+many of the themes here are listed [here](http://vimcolorschemetest.googlecode.com/svn/html/index-html.html)
 
 Current colorschemes
 --------------------
