@@ -362,6 +362,7 @@ Current colorschemes
 * railscasts.vim
 * rainbow_fine_blue.vim
 * rainbow_fruit.vim
+* rainbow_neon.vim
 * random.vim
 * rastafari.vim
 * rcg_gui.vim
