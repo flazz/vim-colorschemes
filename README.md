@@ -431,6 +431,7 @@ Current colorschemes
 * textmate16.vim
 * thegoodluck.vim
 * thestars.vim
+* thor.vim
 * tibet.vim
 * tidy.vim
 * tir_black.vim
