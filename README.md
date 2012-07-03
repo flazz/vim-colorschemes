@@ -20,6 +20,12 @@ if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-w
     cd ~/.vim
     git submodule add git@github.com:flazz/vim-colorschemes.git bundle/colorschemes
 
+if you [use vim + vundle](https://github.com/gmarik/vundle)
+
+    " add to .vimrc
+    Bundle 'flazz/vim-colorschemes'
+    :BundleInstall
+
 if you aren't so clever just get all the files in `colors/*.vim` into
   `~/.vim/colors`
 
@@ -31,6 +37,11 @@ Something missing? Fork!
 
 fork [this repo](http://github.com/flazz/vim-colorschemes); send a
 pull request!; I'll take it!
+
+Previews
+------------------------
+
+many of the themes here are listed [here](http://vimcolorschemetest.googlecode.com/svn/html/index-html.html)
 
 Current colorschemes
 --------------------
@@ -270,6 +281,7 @@ Current colorschemes
 * louver.vim
 * lucius.vim
 * luinnar.vim
+* made_of_code.vim
 * manuscript.vim
 * manxome.vim
 * marklar.vim
@@ -361,6 +373,7 @@ Current colorschemes
 * railscasts.vim
 * rainbow_fine_blue.vim
 * rainbow_fruit.vim
+* rainbow_neon.vim
 * random.vim
 * rastafari.vim
 * rcg_gui.vim
@@ -431,6 +444,7 @@ Current colorschemes
 * textmate16.vim
 * thegoodluck.vim
 * thestars.vim
+* thor.vim
 * tibet.vim
 * tidy.vim
 * tir_black.vim
