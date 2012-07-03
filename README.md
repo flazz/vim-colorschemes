@@ -20,6 +20,12 @@ if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-w
     cd ~/.vim
     git submodule add git@github.com:flazz/vim-colorschemes.git bundle/colorschemes
 
+if you [use vim + vundle](https://github.com/gmarik/vundle)
+
+    " add to .vimrc
+    Bundle 'flazz/vim-colorschemes'
+    :BundleInstall
+
 if you aren't so clever just get all the files in `colors/*.vim` into
   `~/.vim/colors`
 
@@ -31,6 +37,11 @@ Something missing? Fork!
 
 fork [this repo](http://github.com/flazz/vim-colorschemes); send a
 pull request!; I'll take it!
+
+Previews
+------------------------
+
+many of the themes here are listed [here](http://vimcolorschemetest.googlecode.com/svn/html/index-html.html)
 
 Current colorschemes
 --------------------
