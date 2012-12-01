@@ -72,6 +72,7 @@ Current colorschemes
 * automation.vim
 * autumn.vim
 * autumnleaf.vim
+* badwolf.vim
 * basic.vim
 * bayQua.vim
 * baycomb.vim
