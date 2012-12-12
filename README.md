@@ -72,6 +72,7 @@ Current colorschemes
 * automation.vim
 * autumn.vim
 * autumnleaf.vim
+* badwolf.vim
 * basic.vim
 * bayQua.vim
 * baycomb.vim
@@ -411,9 +412,11 @@ Current colorschemes
 * simplewhite.vim
 * skittles_dark.vim
 * smp.vim
+* smyck.vim
 * softblue.vim
 * softbluev2.vim
 * softlight.vim
+* solarized.vim
 * sonofobsidian.vim
 * sorcerer.vim
 * soso.vim
