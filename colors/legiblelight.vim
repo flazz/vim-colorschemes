@@ -202,7 +202,7 @@ elseif &t_Co == 256
     if v:version < 700
         command! -nargs=+ CSAHi exe "hi" substitute(substitute(<q-args>, "undercurl", "underline", "g"), "guisp\\S\\+", "", "g")
     else
-        commend! -nargs=+ CSAHi exe "hi" <q-args>
+        command! -nargs=+ CSAHi exe "hi" <q-args>
     endif
     if has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^screen") && exists("g:CSApprox_konsole") && g:CSApprox_konsol) || &term =~? "^konsole"
         CSAHi Normal        ctermfg=20  ctermbg=231
