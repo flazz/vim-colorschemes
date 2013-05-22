@@ -13,13 +13,15 @@ endif
 
 let colors_name = "darkblack"
 
-hi Normal	guifg=lightgrey guibg=black	ctermfg=lightgray ctermbg=black
-hi ErrorMsg	guifg=white guibg=lightblue	ctermfg=white ctermbg=lightblue
-hi Visual	guifg=lightblue guibg=fg	gui=reverse	ctermfg=lightblue ctermbg=fg cterm=reverse
+hi Normal	guifg=lightgray guibg=black	ctermfg=lightgray ctermbg=black
+hi ErrorMsg	guifg=black guibg=lightred	ctermfg=white ctermbg=lightblue
+hi PMenu guibg=PaleTurquoise1 guifg=black
+hi PMenuSel guibg=DeepSkyBlue2 guifg=black
+hi Visual               guifg=white guibg=DarkSlateGray
 hi VisualNOS	guifg=lightblue guibg=fg	gui=reverse,underline	ctermfg=lightblue ctermbg=fg cterm=reverse,underline
 hi Todo		guifg=red guibg=black	ctermfg=red	ctermbg=black
-hi Search	guifg=white guibg=black	ctermfg=white ctermbg=black cterm=underline term=underline
-hi IncSearch	guifg=black guibg=gray	ctermfg=black ctermbg=gray
+hi Search	guifg=black guibg=yellow	ctermfg=white ctermbg=black cterm=underline term=underline
+hi IncSearch	guifg=yellow guibg=black	ctermfg=black ctermbg=gray
 
 hi SpecialKey	guifg=cyan	ctermfg=darkcyan
 hi Directory	guifg=cyan	ctermfg=cyan
