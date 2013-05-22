@@ -46,6 +46,8 @@ many of the themes here are listed [here](http://vimcolorschemetest.googlecode.c
 Current colorschemes
 --------------------
 
+Total of **468** color schemes:
+
 * 256-grayvim.vim
 * 256-jungle.vim
 * 3dglasses.vim
@@ -54,6 +56,7 @@ Current colorschemes
 * ChocolatePapaya.vim
 * CodeFactoryv3.vim
 * DevC++.vim
+* Monokai.vim
 * MountainDew.vim
 * PapayaWhip.vim
 * adam.vim
@@ -68,6 +71,7 @@ Current colorschemes
 * aqua.vim
 * ashen.vim
 * asmanian_blood.vim
+* astronaut.vim
 * asu1dark.vim
 * automation.vim
 * autumn.vim
@@ -100,6 +104,7 @@ Current colorschemes
 * bocau.vim
 * bog.vim
 * borland.vim
+* breeze.vim
 * brookstream.vim
 * brown.vim
 * busierbee.vim
@@ -134,6 +139,7 @@ Current colorschemes
 * cobaltish.vim
 * codeblocks_dark.vim
 * codeburn.vim
+* codeschool.vim
 * coffee.vim
 * coldgreen.vim
 * colorer.vim
@@ -263,6 +269,7 @@ Current colorschemes
 * kib_plastic.vim
 * kiss.vim
 * kkruby.vim
+* kolor.vim
 * kruby.vim
 * lazarus.vim
 * legiblelight.vim
@@ -318,6 +325,7 @@ Current colorschemes
 * nazca.vim
 * nedit.vim
 * nedit2.vim
+* neon.vim
 * neutron.vim
 * neverness.vim
 * nevfn.vim
@@ -395,6 +403,7 @@ Current colorschemes
 * satori.vim
 * scala.vim
 * scite.vim
+* sea.vim
 * sean.vim
 * seashell.vim
 * selenitic.vim
@@ -433,6 +442,7 @@ Current colorschemes
 * surveyor.vim
 * symfony.vim
 * synic.vim
+* tabula.vim
 * tango-desert.vim
 * tango-morning.vim
 * tango.vim
