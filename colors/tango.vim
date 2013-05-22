@@ -76,7 +76,7 @@ hi DiffDelete   guibg=bg
 hi DiffDelete   ctermfg=gray ctermbg=none cterm=none
 hi DiffText     guifg=fg guibg=#c4a000 gui=none
 hi DiffText     ctermfg=gray ctermbg=yellow cterm=none
-ifg=#c4a000 guibg=bg
+
 highlight Todo gui=bold guifg=#ef2929 guibg=bg
 highlight Type gui=none guifg=#4e9a06 guibg=bg
 highlight Underlined gui=none guifg=#3465a4 guibg=bg
