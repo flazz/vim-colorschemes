@@ -46,7 +46,7 @@ many of the themes here are listed [here](http://vimcolorschemetest.googlecode.c
 Current colorschemes
 --------------------
 
-Total of **468** color schemes:
+Total of **469** color schemes:
 
 * 256-grayvim.vim
 * 256-jungle.vim
@@ -243,6 +243,7 @@ Total of **468** color schemes:
 * h80.vim
 * habiLight.vim
 * heliotrope.vim
+* hemisu.vim
 * herald.vim
 * hornet.vim
 * ibmedit.vim
