@@ -15,7 +15,8 @@ for hacking on vim.org harvesting see the branch [prep](https://github.com/flazz
 Installation
 ------------
 
-Basic install
+Basic install - very simple (*nix or cygwin install)
+
     mkdir ~/.vim
     git clone git@github.com:dgvigil/vim-colorschemes.git ~/.vim
 
