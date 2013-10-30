@@ -72,13 +72,13 @@ hi Search		guibg=#cdcdfd guifg=#000000 gui=italic
 
 " {{{ Syntax groups
 hi Ignore		guifg=#808080
-hi Identifier	guifg=#0086B3
+hi Identifier	guifg=#008080
 hi PreProc		guifg=#A0A0A0 gui=bold
 hi Comment		guifg=#999988
 hi Constant		guifg=#177F80 gui=none
 hi String		guifg=#D81745
 hi Function		guifg=#990000 gui=bold
-hi Statement	guifg=#000000 gui=bold
+hi Statement	guifg=#333333 gui=bold
 hi Type			guifg=#445588 gui=bold
 hi Number		guifg=#1C9898
 hi Todo			guifg=#FFFFFF guibg=#990000 gui=bold
@@ -87,9 +87,26 @@ hi rubySymbol   guifg=#960B73
 hi Error        guibg=#f8f8ff guifg=#ff1100 gui=undercurl
 hi Todo         guibg=#f8f8ff guifg=#ff1100 gui=underline
 hi Label        guifg=#000000 gui=bold
-hi StorageClass guifg=#000000 gui=bold
-hi Structure    guifg=#000000 gui=bold
+hi StorageClass guifg=#333333 gui=bold
+hi Structure    guifg=#333333 gui=bold
 hi TypeDef      guifg=#000000 gui=bold
+hi phpRegion    guifg=#333333
+hi phpRegionDelimiter guifg=#333333
+hi phpComment guifg=#d14
+hi phpType      guifg=#333333 gui=bold
+hi phpBrace     guifg=#333333
+hi phpDefineClassName guifg=#445588 gui=bold
+hi phpDefineClassImplementsName guifg=#333333
+hi phpClassDefine guifg=#333333 gui=bold
+hi phpArrayParens guifg=#333333 gui=bold
+hi phpDefineMethod guifg=#333333 gui=bold
+hi phpDefineMethodName guifg=#990000 gui=bold
+hi phpMemberSelector guifg=#333333 gui=bold
+hi phpFunctions guifg=#0086B3
+hi phpIdentifierInString guifg=#d14
+hi phpArrayParens guifg=#333333 gui=none
+hi phpParent guifg=#333333 gui=none
+hi phpMagicClass guifg=#333333 gui=none
 " }}}
 
 " {{{ Completion menus
@@ -126,6 +143,21 @@ hi link shVariable		Function
 hi link rubySharpBang	Special
 hi link perlSharpBang	Special
 hi link schemeFunc      Statement
+hi link phpDocComment phpComment
+hi link phpCommentTitle phpComment
+hi link phpCommentStar phpComment
+hi link phpDocTags phpComment
+hi link phpDocReturn phpComment
+hi link phpDocParamDesc phpComment
+hi link phpBraceFunc phpBrace
+hi link phpBraceClass phpBrace
+hi link phpVarSelector Identifier
+hi link phpSemiColon phpRegion
+hi link phpSpecialMethods phpDefineMethodName
+hi link phpSuperGlobal Identifier
+hi link phpMemberHere Identifier
+hi link phpObjectOperator Statement
+hi link phpSpecialFunction phpFunctions
 "hi link shSpecialVariables Constant
 "hi link bashSpecialVariables Constant
 " }}}
