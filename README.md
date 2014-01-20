@@ -10,12 +10,12 @@ Installation
 if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 
     cd ~/.vim
-    git submodule add git@github.com:flazz/vim-colorschemes.git bundle/colorschemes
+    git submodule add git@github.com:zachgersh/vim-colorschemes.git bundle/colorschemes
 
 if you [use vim + vundle](https://github.com/gmarik/vundle)
 
     " add to .vimrc
-    Bundle 'flazz/vim-colorschemes'
+    Bundle 'zachgersh/vim-colorschemes'
     :BundleInstall
 
 if you aren't so clever just get all the files in `colors/*.vim` into
@@ -27,7 +27,7 @@ if you aren't so clever just get all the files in `colors/*.vim` into
 Something missing? Send a pull request!!!
 ------------------------
 
-fork [this repo](http://github.com/flazz/vim-colorschemes) and send a pull request.
+fork [this repo](http://github.com/zachgersh/vim-colorschemes) and send a pull request.
 
 I am actively maintaining this now and hope to keep it up to date with as many colorschemes as people submit.
 
