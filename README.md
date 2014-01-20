@@ -1,16 +1,8 @@
-**me:** Hi everyone, my name is Franco and I'm addicted to colorschemes
+Intro
+-----
+Forked from the original and now seemingly not maintained vim-colorschemes repo at:
 
-**everyone else:** *Hi Franco*
-
-Vim colorschemes
-================
-
-one stop shop for vim colorschemes.
-
-this is harvested from vim.org. only colorschemes downloaded in a single `.vim`
-file are included.
-
-for hacking on vim.org harvesting see the branch [prep](https://github.com/flazz/vim-colorschemes/tree/prep).
+https://github.com/flazz/vim-colorschemes
 
 Installation
 ------------
@@ -32,11 +24,12 @@ if you aren't so clever just get all the files in `colors/*.vim` into
     # after downloading; unpacking; cd'ing
     cp colors/* ~/.vim/colors
 
-Something missing? Fork!
+Something missing? Send a pull request!!!
 ------------------------
 
-fork [this repo](http://github.com/flazz/vim-colorschemes); send a
-pull request!; I'll take it!
+fork [this repo](http://github.com/flazz/vim-colorschemes) and send a pull request.
+
+I am actively maintaining this now and hope to keep it up to date with as many colorschemes as people submit.
 
 Previews
 ------------------------
@@ -516,9 +509,3 @@ Total of **468** color schemes:
 * zenesque.vim
 * zephyr.vim
 * zmrok.vim
-
-- - -
-
-I'm a slave to aesthetics. If you are too, I hope this helps.
-
-[email](mailto:flazzarino@gmail.com)
