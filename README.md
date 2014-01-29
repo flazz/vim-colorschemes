@@ -39,7 +39,7 @@ many of the themes here are listed [here](http://vimcolorschemetest.googlecode.c
 Current colorschemes
 --------------------
 
-Total of **468** color schemes:
+Total of **471** color schemes:
 
 * 256-grayvim.vim
 * 256-jungle.vim
@@ -100,6 +100,7 @@ Total of **468** color schemes:
 * breeze.vim
 * brookstream.vim
 * brown.vim
+* bubblegum.vim
 * busierbee.vim
 * busybee.vim
 * buttercream.vim
@@ -218,6 +219,7 @@ Total of **468** color schemes:
 * gemcolors.vim
 * gentooish.vim
 * getafe.vim
+* getfresh.vim
 * github.vim
 * gobo.vim
 * golded.vim
@@ -282,6 +284,7 @@ Total of **468** color schemes:
 * louver.vim
 * lucius.vim
 * luinnar.vim
+* luna.vim
 * made_of_code.vim
 * manuscript.vim
 * manxome.vim
