@@ -39,7 +39,7 @@ many of the themes here are listed [here](http://vimcolorschemetest.googlecode.c
 Current colorschemes
 --------------------
 
-Total of **471** color schemes:
+Total of **472** color schemes:
 
 * 256-grayvim.vim
 * 256-jungle.vim
@@ -69,6 +69,7 @@ Total of **471** color schemes:
 * automation.vim
 * autumn.vim
 * autumnleaf.vim
+* babymate256.vim
 * badwolf.vim
 * basic.vim
 * bayQua.vim
