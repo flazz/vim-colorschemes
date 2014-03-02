@@ -241,6 +241,7 @@ Total of **472** color schemes:
 * heliotrope.vim
 * herald.vim
 * hornet.vim
+* hybrid.vim
 * ibmedit.vim
 * icansee.vim
 * impact.vim
