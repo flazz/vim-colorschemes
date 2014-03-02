@@ -1,16 +1,8 @@
-**me:** Hi everyone, my name is Franco and I'm addicted to colorschemes
+Intro
+-----
+Forked from the original and now seemingly not maintained vim-colorschemes repo at:
 
-**everyone else:** *Hi Franco*
-
-Vim colorschemes
-================
-
-one stop shop for vim colorschemes.
-
-this is harvested from vim.org. only colorschemes downloaded in a single `.vim`
-file are included.
-
-for hacking on vim.org harvesting see the branch [prep](https://github.com/flazz/vim-colorschemes/tree/prep).
+https://github.com/flazz/vim-colorschemes
 
 Installation
 ------------
@@ -18,12 +10,12 @@ Installation
 if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 
     cd ~/.vim
-    git submodule add git@github.com:flazz/vim-colorschemes.git bundle/colorschemes
+    git submodule add git@github.com:zachgersh/vim-colorschemes.git bundle/colorschemes
 
 if you [use vim + vundle](https://github.com/gmarik/vundle)
 
     " add to .vimrc
-    Bundle 'flazz/vim-colorschemes'
+    Bundle 'zachgersh/vim-colorschemes'
     :BundleInstall
 
 if you aren't so clever just get all the files in `colors/*.vim` into
@@ -32,11 +24,12 @@ if you aren't so clever just get all the files in `colors/*.vim` into
     # after downloading; unpacking; cd'ing
     cp colors/* ~/.vim/colors
 
-Something missing? Fork!
+Something missing? Send a pull request!!!
 ------------------------
 
-fork [this repo](http://github.com/flazz/vim-colorschemes); send a
-pull request!; I'll take it!
+fork [this repo](http://github.com/zachgersh/vim-colorschemes) and send a pull request.
+
+I am actively maintaining this now and hope to keep it up to date with as many colorschemes as people submit.
 
 Previews
 ------------------------
@@ -46,7 +39,7 @@ many of the themes here are listed [here](http://vimcolorschemetest.googlecode.c
 Current colorschemes
 --------------------
 
-Total of **468** color schemes:
+Total of **473** color schemes:
 
 * 256-grayvim.vim
 * 256-jungle.vim
@@ -76,6 +69,7 @@ Total of **468** color schemes:
 * automation.vim
 * autumn.vim
 * autumnleaf.vim
+* babymate256.vim
 * badwolf.vim
 * basic.vim
 * bayQua.vim
@@ -107,6 +101,7 @@ Total of **468** color schemes:
 * breeze.vim
 * brookstream.vim
 * brown.vim
+* bubblegum.vim
 * busierbee.vim
 * busybee.vim
 * buttercream.vim
@@ -225,6 +220,7 @@ Total of **468** color schemes:
 * gemcolors.vim
 * gentooish.vim
 * getafe.vim
+* getfresh.vim
 * github.vim
 * gobo.vim
 * golded.vim
@@ -245,6 +241,7 @@ Total of **468** color schemes:
 * heliotrope.vim
 * herald.vim
 * hornet.vim
+* hybrid.vim
 * ibmedit.vim
 * icansee.vim
 * impact.vim
@@ -289,6 +286,7 @@ Total of **468** color schemes:
 * louver.vim
 * lucius.vim
 * luinnar.vim
+* luna.vim
 * made_of_code.vim
 * manuscript.vim
 * manxome.vim
@@ -516,9 +514,3 @@ Total of **468** color schemes:
 * zenesque.vim
 * zephyr.vim
 * zmrok.vim
-
-- - -
-
-I'm a slave to aesthetics. If you are too, I hope this helps.
-
-[email](mailto:flazzarino@gmail.com)
