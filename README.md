@@ -46,7 +46,7 @@ many of the themes here are listed [here](http://vimcolorschemetest.googlecode.c
 Current colorschemes
 --------------------
 
-Total of **468** color schemes:
+Total of **469** color schemes:
 
 * 256-grayvim.vim
 * 256-jungle.vim
@@ -212,6 +212,7 @@ Total of **468** color schemes:
 * evening_2.vim
 * far.vim
 * fine_blue.vim
+* flatland.vim
 * fnaqevan.vim
 * fog.vim
 * fokus.vim
