@@ -1,13 +1,13 @@
 " Vim color scheme
 "
 " Name:        railscast.vim
-" Maintainer:  Josh O'Rourke <jorourke23@gmail.com> 
+" Maintainer:  Josh O'Rourke <joshorourke@me.com>
 " License:     public domain
 "
 " A GUI Only port of the RailsCasts TextMate theme [1] to Vim.
 " Some parts of this theme were borrowed from the well-documented Lucius theme [2].
-" 
-" [1] http://railscasts.com/about 
+"
+" [1] http://railscasts.com/about
 " [2] http://www.vim.org/scripts/script.php?script_id=2536
 
 set background=dark
@@ -26,17 +26,27 @@ let g:colors_name = "railscasts"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E1DC guibg=#2B2B2B
-hi Cursor                    guibg=#FFFFFF
-hi CursorLine                guibg=#333435
-hi LineNr                    guifg=#888888 guibg=#DEDEDE
-hi Search                    guibg=#5A647E
-hi Visual                    guibg=#5A647E
+hi Normal                    guifg=#E6E1DC guibg=#2B2B2B ctermfg=white ctermbg=234
+hi Cursor                    guifg=#000000 guibg=#FFFFFF ctermfg=0 ctermbg=15	
+hi CursorLine                guibg=#333435 ctermbg=235 cterm=NONE
+hi Search                    guibg=#5A647E ctermfg=NONE ctermbg=236 cterm=underline
+hi Visual                    guibg=#5A647E ctermbg=60
+hi LineNr                    guifg=#888888 ctermfg=242
+hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
+hi StatusLineNC              guibg=#414243 gui=NONE
+hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
+hi CursorLineNr              guifg=#bbbbbb ctermfg=248
+hi ColorColumn               guibg=#333435 ctermbg=235
 
 " Folds
 " -----
 " line used for closed folds
 hi Folded                    guifg=#F6F3E8 guibg=#444444 gui=NONE
+
+" Invisible Characters
+" ------------------
+hi NonText                   guifg=#777777 gui=NONE
+hi SpecialKey                guifg=#777777 gui=NONE
 
 " Misc
 " ----
@@ -56,58 +66,58 @@ hi PMenuThumb                guibg=#AAAAAA gui=NONE
 
 
 "rubyComment
-hi Comment                   guifg=#BC9458 gui=italic
-hi Todo                      guifg=#BC9458 guibg=NONE gui=italic
+hi Comment                   guifg=#BC9458 gui=italic ctermfg=137
+hi Todo                      guifg=#BC9458 guibg=NONE gui=italic ctermfg=94
 
 "rubyPseudoVariable
 "nil, self, symbols, etc
-hi Constant                  guifg=#6D9CBE
+hi Constant                  guifg=#6D9CBE ctermfg=73
 
 "rubyClass, rubyModule, rubyDefine
 "def, end, include, etc
-hi Define                    guifg=#CC7833
+hi Define                    guifg=#CC7833 ctermfg=173
 
 "rubyInterpolation
 hi Delimiter                 guifg=#519F50
 
 "rubyError, rubyInvalidVariable
-hi Error                     guifg=#FFFFFF guibg=#990000
+hi Error                     guifg=#FFFFFF guibg=#990000 ctermfg=221 ctermbg=88
 
 "rubyFunction
-hi Function                  guifg=#FFC66D gui=NONE
+hi Function                  guifg=#FFC66D gui=NONE ctermfg=221 cterm=NONE
 
 "rubyIdentifier
 "@var, @@var, $var, etc
-hi Identifier                guifg=#D0D0FF gui=NONE
+hi Identifier                guifg=#D0D0FF gui=NONE ctermfg=73 cterm=NONE
 
 "rubyInclude
 "include, autoload, extend, load, require
-hi Include                   guifg=#CC7833 gui=NONE
+hi Include                   guifg=#CC7833 gui=NONE ctermfg=173 cterm=NONE
 
 "rubyKeyword, rubyKeywordAsMethod
 "alias, undef, super, yield, callcc, caller, lambda, proc
-hi Keyword                   guifg=#CC7833
+hi Keyword                   guifg=#CC7833 ctermfg=172 cterm=NONE
 
 " same as define
-hi Macro                     guifg=#CC7833 gui=NONE
+hi Macro                     guifg=#CC7833 gui=NONE ctermfg=172
 
 "rubyInteger
-hi Number                    guifg=#A5C261
+hi Number                    guifg=#A5C261 ctermfg=107
 
 " #if, #else, #endif
-hi PreCondit                 guifg=#CC7833 gui=NONE
+hi PreCondit                 guifg=#CC7833 gui=NONE ctermfg=172 cterm=NONE
 
 " generic preprocessor
-hi PreProc                   guifg=#CC7833 gui=NONE
+hi PreProc                   guifg=#CC7833 gui=NONE ctermfg=103
 
 "rubyControl, rubyAccess, rubyEval
 "case, begin, do, for, if unless, while, until else, etc.
-hi Statement                 guifg=#CC7833 gui=NONE
+hi Statement                 guifg=#CC7833 gui=NONE ctermfg=172 cterm=NONE
 
 "rubyString
-hi String                    guifg=#A5C261
+hi String                    guifg=#A5C261 ctermfg=107
 
-hi Title                     guifg=#FFFFFF
+hi Title                     guifg=#FFFFFF ctermfg=15
 
 "rubyConstant
 hi Type                      guifg=#DA4939 gui=NONE
@@ -122,24 +132,3 @@ hi link htmlEndTag           xmlEndTag
 hi xmlTag                    guifg=#E8BF6A
 hi xmlTagName                guifg=#E8BF6A
 hi xmlEndTag                 guifg=#E8BF6A
-hi rubyClass                 guifg=#FFFFFF ctermfg=15
-highlight rubyConstant              guifg=#DA4939 ctermfg=167
-highlight rubyInstanceVariable      guifg=#D0D0FF ctermfg=189
-highlight rubyInterpolation         guifg=#519F50 ctermfg=107
-highlight rubyLocalVariableOrMethod guifg=#D0D0FF ctermfg=189
-highlight rubyPredefinedConstant    guifg=#DA4939 ctermfg=167
-highlight rubyPseudoVariable        guifg=#FFC66D ctermfg=221
-highlight rubyStringDelimiter       guifg=#A5C261 ctermfg=143
-
-highlight xmlTag                    guifg=#E8BF6A ctermfg=179
-highlight xmlTagName                guifg=#E8BF6A ctermfg=179
-highlight xmlEndTag                 guifg=#E8BF6A ctermfg=179
-
-highlight mailSubject               guifg=#A5C261 ctermfg=107
-highlight mailHeaderKey             guifg=#FFC66D ctermfg=221
-highlight mailEmail                 guifg=#A5C261 ctermfg=107 gui=italic cterm=underline
-
-highlight SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
-highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
-highlight SpellCap                  guifg=#D0D0FF ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
-highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
