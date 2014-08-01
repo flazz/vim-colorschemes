@@ -1,4 +1,5 @@
 " Vim color file - twitchy
+" Ryan Bohannon | Univeristy of Colorado Boulder | Unixops
 set background=dark
 if version > 580
 	hi clear
