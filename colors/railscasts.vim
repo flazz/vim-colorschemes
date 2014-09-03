@@ -36,7 +36,8 @@ hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
 hi StatusLineNC              guibg=#414243 gui=NONE
 hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
 hi CursorLineNr              guifg=#bbbbbb ctermfg=248
-hi ColorColumn               guibg=#333435 ctermbg=235
+"hi ColorColumn               guibg=#333435 ctermbg=235
+hi CursorColumn                guibg=#333435 ctermbg=235 cterm=NONE
 
 " Folds
 " -----
