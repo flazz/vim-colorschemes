@@ -18,12 +18,12 @@ Installation
 Basic install - very simple (*nix or cygwin install)
 
     mkdir ~/.vim
-    git clone git@github.com:dgvigil/vim-colorschemes.git ~/.vim
+    git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 
 if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 
     cd ~/.vim
-    git submodule add git@github.com:flazz/vim-colorschemes.git bundle/colorschemes
+    git submodule add https://github.com/flazz/vim-colorschemes.git bundle/colorschemes
 
 if you [use vim + vundle](https://github.com/gmarik/vundle)
 
