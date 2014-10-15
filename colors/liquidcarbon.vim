@@ -15,15 +15,22 @@ let colors_name = "liquidcarbon"
 
 " Normal Color {{{1
 " ============================================================================
-hi Normal           guifg=#bdcdcd   guibg=#303030
+if exists("g:liquidcarbon_high_contrast") && g:liquidcarbon_high_contrast
+    hi Normal          guifg=#bdcdcd   guibg=#202020
+    hi CursorLine      guifg=NONE      guibg=#292929   gui=NONE
+    hi ColorColumn     guifg=NONE      guibg=#292929
+else
+    hi Normal          guifg=#bdcdcd   guibg=#303030
+    hi CursorLine      guifg=NONE      guibg=#3a3a3a   gui=NONE
+    hi ColorColumn     guifg=NONE      guibg=#3a3a3a
+endif
+
 " 1}}}
 
 " Core Highlights {{{1
 " ============================================================================
-hi  ColorColumn     guifg=NONE      guibg=#3A3A3A
 hi  Cursor          guifg=bg        guibg=fg        gui=NONE
 hi  CursorIM        guifg=bg        guibg=fg        gui=NONE
-hi  CursorLine      guifg=NONE      guibg=#303030   gui=NONE
 hi  lCursor         guifg=bg        guibg=fg        gui=NONE
 hi  DiffAdd         guifg=#000000   guibg=#3cb371   gui=NONE
 hi  DiffChange      guifg=#000000   guibg=#4f94cd   gui=NONE
@@ -34,7 +41,7 @@ hi  ErrorMsg        guifg=#ff6a6a   guibg=NONE      gui=bold
 hi  FoldColumn      guifg=#68838b   guibg=#4B4B4B   gui=bold
 hi  Folded          guifg=#68838b   guibg=#4B4B4B   gui=NONE
 hi  IncSearch       guifg=#ffffff   guibg=#ff4500   gui=bold
-hi  LineNr          guifg=#767676   guibg=#222222   gui=NONE
+hi  LineNr          guifg=#767676   guibg=#000000   gui=NONE
 hi  MatchParen      guifg=#fff000   guibg=#000000   gui=bold
 hi  ModeMsg         guifg=#000000   guibg=#00ff00   gui=bold
 hi  MoreMsg         guifg=#2e8b57   guibg=bg        gui=bold

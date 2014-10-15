@@ -1,304 +1,772 @@
-" Lucius vim color file
-" Maintainer:   Jonathan Filip <jfilip1024@gmail.com>
-" Version: 3.5
+" ============================================================================
+" Name:     Lucius vim color scheme
+" Author:   Jonathan Filip <jfilip1024@gmail.com>
+" Version:  8.1.5
+" ----------------------------------------------------------------------------
+"
+" Light and dark color scheme for GUI and 256 color terminal.
+"
+" There are several options available to customize the color scheme to your
+" own tastes. This is particularly useful when you have to work in different
+" environments at different times (home, work, day, night, etc).
+"
+" The GUI and 256 color terminal versions of this color scheme are identical.
+"
+" You can set up the color scheme by manually setting the options you want or
+" by choosing one of the presets defined. These presets are loaded after you
+" first source the color scheme file and are all commands that start with
+" 'Lucius'.
+"
+" I have also started to create color schemes for different applications. I
+" have been using them for PuTTY, iTerm2, and Visual Studio, but will keep
+" adding more as I go along. You can find the files for these on Github:
+"
+" https://github.com/jonathanfilip/lucius
+"
+" You can also clone the following repository if you use Pathogen or something
+" similar. It holds the vim color scheme in a 'colors' directory:
+"
+" https://github.com/jonathanfilip/vim-lucius
+"
+"
+"
+" Presets:
+"
+" There are several presets available that will set all the options for you.
+" There are screenshots of each preset below:
+"
+" * LuciusDark (dark default): http://i.imgur.com/LsZbF.png
+" * LuciusDarkHighContrast: http://i.imgur.com/e70i9.png
+" * LuciusDarkLowContrast: http://i.imgur.com/Hmw8s.png
+" * LuciusBlack: http://i.imgur.com/iD4ri.png
+" * LuciusBlackHighContrast: http://i.imgur.com/lHvTJ.png
+" * LuciusBlackLowContrast: http://i.imgur.com/oZLkg.png
+"
+" * LuciusLight (light default): http://i.imgur.com/soYD8.png
+" * LuciusLightLowContrast: http://i.imgur.com/95I86.png
+" * LuciusWhite: http://i.imgur.com/wDzkz.png
+" * LuciusWhiteLowContrast: http://i.imgur.com/jlUf4.png
+"
+" To use the presets, you just need to set the color scheme first. In your
+" vimrc, you can just do this:
+"
+" colorscheme lucius
+" LuciusBlack
+"
+" You can still just set the background variable and then set the color
+" scheme. This will default to LuciusDark for 'dark' and LuciusLight for
+" 'light'.
+"
+"
+" Options:
+"
+" The presets available cover most of the options. You can, however, customize
+" things by setting the following variables yourself:
+"
+" g:lucius_style  (default: 'dark')
+"
+" Set this option to either 'light' or 'dark' for your desired color scheme.
+" It has the same effect as setting the background.
+"
+" g:lucius_contrast  (default: 'normal')
+"
+" This option determines the contrast to use for text/ui elements. It can be
+" set to 'low', 'normal', or 'high'. At this time there is no 'high' for the
+" light scheme.
+"
+" g:lucius_contrast_bg  (default: 'normal')
+"
+" Setting this option makes the background a higher contrast. Current settings
+" are 'normal' and 'high'.
+"
+" g:lucius_use_bold (default: 1)
+"
+" Setting this will cause the color scheme to use bold fonts for some items.
+"
+" g:lucius_use_underline (default: 1)
+"
+" Setting this will cause the color scheme to use underlined fonts for some
+" items.
+"
+" g:lucius_no_term_bg (default: 0)
+"
+" Setting this will cause the color scheme to not set a background color in
+" the terminal (useful for transparency or terminals with different background
+" colors).
+"
+" ============================================================================
 
-set background=dark
+
+
+" ============================================================================
+" Options:
+" ============================================================================
+
+unlet! g:colors_name
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let colors_name="lucius"
+
+if exists("g:lucius_style")
+    let s:style = g:lucius_style
+else
+    let s:style = &background
+endif
+
+if exists("g:lucius_contrast")
+    let s:contrast = g:lucius_contrast
+else
+    let s:contrast = "normal"
+endif
+
+if exists("g:lucius_contrast_bg")
+    let s:contrast_bg = g:lucius_contrast_bg
+else
+    let s:contrast_bg = "normal"
+endif
+
+if exists("g:lucius_use_bold")
+    let s:use_bold = g:lucius_use_bold
+else
+    let s:use_bold = 1
+endif
+
+if exists("g:lucius_use_underline")
+    let s:use_underline = g:lucius_use_underline
+else
+    let s:use_underline = 1
+endif
+
+if exists("g:lucius_no_term_bg")
+    let s:no_term_bg = g:lucius_no_term_bg
+else
+    let s:no_term_bg = 0
+endif
 
 
-" == Normal color ==
-hi Normal           guifg=#e0e0e0           guibg=#202020
-hi Normal           ctermfg=253             ctermbg=234
+" ============================================================================
+" Color Map:
+" ============================================================================
+
+let s:color_map = {
+    \ 'bg': 'bg', 'fg': 'fg', 'NONE': 'NONE',
+    \ '#000000':  '16', '#00005f':  '17', '#000087':  '18', '#0000af':  '19',
+    \ '#0000d7':  '20', '#0000ff':  '21', '#005f00':  '22', '#005f5f':  '23',
+    \ '#005f87':  '24', '#005faf':  '25', '#005fd7':  '26', '#005fff':  '27',
+    \ '#008700':  '28', '#00875f':  '29', '#008787':  '30', '#0087af':  '31',
+    \ '#0087d7':  '32', '#0087ff':  '33', '#00af00':  '34', '#00af5f':  '35',
+    \ '#00af87':  '36', '#00afaf':  '37', '#00afd7':  '38', '#00afff':  '39',
+    \ '#00d700':  '40', '#00d75f':  '41', '#00d787':  '42', '#00d7af':  '43',
+    \ '#00d7d7':  '44', '#00d7ff':  '45', '#00ff00':  '46', '#00ff5f':  '47',
+    \ '#00ff87':  '48', '#00ffaf':  '49', '#00ffd7':  '50', '#00ffff':  '51',
+    \ '#5f0000':  '52', '#5f005f':  '53', '#5f0087':  '54', '#5f00af':  '55',
+    \ '#5f00d7':  '56', '#5f00ff':  '57', '#5f5f00':  '58', '#5f5f5f':  '59',
+    \ '#5f5f87':  '60', '#5f5faf':  '61', '#5f5fd7':  '62', '#5f5fff':  '63',
+    \ '#5f8700':  '64', '#5f875f':  '65', '#5f8787':  '66', '#5f87af':  '67',
+    \ '#5f87d7':  '68', '#5f87ff':  '69', '#5faf00':  '70', '#5faf5f':  '71',
+    \ '#5faf87':  '72', '#5fafaf':  '73', '#5fafd7':  '74', '#5fafff':  '75',
+    \ '#5fd700':  '76', '#5fd75f':  '77', '#5fd787':  '78', '#5fd7af':  '79',
+    \ '#5fd7d7':  '80', '#5fd7ff':  '81', '#5fff00':  '82', '#5fff5f':  '83',
+    \ '#5fff87':  '84', '#5fffaf':  '85', '#5fffd7':  '86', '#5fffff':  '87',
+    \ '#870000':  '88', '#87005f':  '89', '#870087':  '90', '#8700af':  '91',
+    \ '#8700d7':  '92', '#8700ff':  '93', '#875f00':  '94', '#875f5f':  '95',
+    \ '#875f87':  '96', '#875faf':  '97', '#875fd7':  '98', '#875fff':  '99',
+    \ '#878700': '100', '#87875f': '101', '#878787': '102', '#8787af': '103',
+    \ '#8787d7': '104', '#8787ff': '105', '#87af00': '106', '#87af5f': '107',
+    \ '#87af87': '108', '#87afaf': '109', '#87afd7': '110', '#87afff': '111',
+    \ '#87d700': '112', '#87d75f': '113', '#87d787': '114', '#87d7af': '115',
+    \ '#87d7d7': '116', '#87d7ff': '117', '#87ff00': '118', '#87ff5f': '119',
+    \ '#87ff87': '120', '#87ffaf': '121', '#87ffd7': '122', '#87ffff': '123',
+    \ '#af0000': '124', '#af005f': '125', '#af0087': '126', '#af00af': '127',
+    \ '#af00d7': '128', '#af00ff': '129', '#af5f00': '130', '#af5f5f': '131',
+    \ '#af5f87': '132', '#af5faf': '133', '#af5fd7': '134', '#af5fff': '135',
+    \ '#af8700': '136', '#af875f': '137', '#af8787': '138', '#af87af': '139',
+    \ '#af87d7': '140', '#af87ff': '141', '#afaf00': '142', '#afaf5f': '143',
+    \ '#afaf87': '144', '#afafaf': '145', '#afafd7': '146', '#afafff': '147',
+    \ '#afd700': '148', '#afd75f': '149', '#afd787': '150', '#afd7af': '151',
+    \ '#afd7d7': '152', '#afd7ff': '153', '#afff00': '154', '#afff5f': '155',
+    \ '#afff87': '156', '#afffaf': '157', '#afffd7': '158', '#afffff': '159',
+    \ '#d70000': '160', '#d7005f': '161', '#d70087': '162', '#d700af': '163',
+    \ '#d700d7': '164', '#d700ff': '165', '#d75f00': '166', '#d75f5f': '167',
+    \ '#d75f87': '168', '#d75faf': '169', '#d75fd7': '170', '#d75fff': '171',
+    \ '#d78700': '172', '#d7875f': '173', '#d78787': '174', '#d787af': '175',
+    \ '#d787d7': '176', '#d787ff': '177', '#d7af00': '178', '#d7af5f': '179',
+    \ '#d7af87': '180', '#d7afaf': '181', '#d7afd7': '182', '#d7afff': '183',
+    \ '#d7d700': '184', '#d7d75f': '185', '#d7d787': '186', '#d7d7af': '187',
+    \ '#d7d7d7': '188', '#d7d7ff': '189', '#d7ff00': '190', '#d7ff5f': '191',
+    \ '#d7ff87': '192', '#d7ffaf': '193', '#d7ffd7': '194', '#d7ffff': '195',
+    \ '#ff0000': '196', '#ff005f': '197', '#ff0087': '198', '#ff00af': '199',
+    \ '#ff00d7': '200', '#ff00ff': '201', '#ff5f00': '202', '#ff5f5f': '203',
+    \ '#ff5f87': '204', '#ff5faf': '205', '#ff5fd7': '206', '#ff5fff': '207',
+    \ '#ff8700': '208', '#ff875f': '209', '#ff8787': '210', '#ff87af': '211',
+    \ '#ff87d7': '212', '#ff87ff': '213', '#ffaf00': '214', '#ffaf5f': '215',
+    \ '#ffaf87': '216', '#ffafaf': '217', '#ffafd7': '218', '#ffafff': '219',
+    \ '#ffd700': '220', '#ffd75f': '221', '#ffd787': '222', '#ffd7af': '223',
+    \ '#ffd7d7': '224', '#ffd7ff': '225', '#ffff00': '226', '#ffff5f': '227',
+    \ '#ffff87': '228', '#ffffaf': '229', '#ffffd7': '230', '#ffffff': '231',
+    \ '#080808': '232', '#121212': '233', '#1c1c1c': '234', '#262626': '235',
+    \ '#303030': '236', '#3a3a3a': '237', '#444444': '238', '#4e4e4e': '239',
+    \ '#585858': '240', '#626262': '241', '#6c6c6c': '242', '#767676': '243',
+    \ '#808080': '244', '#8a8a8a': '245', '#949494': '246', '#9e9e9e': '247',
+    \ '#a8a8a8': '248', '#b2b2b2': '249', '#bcbcbc': '250', '#c6c6c6': '251',
+    \ '#d0d0d0': '252', '#dadada': '253', '#e4e4e4': '254', '#eeeeee': '255',
+    \ }
 
 
-" == Comments ==
-hi Comment          guifg=#606060                                   gui=none
-hi Comment          ctermfg=240                                     cterm=none
+" ============================================================================
+" Functions:
+" ============================================================================
+
+function! s:AddCterm(name)
+    exec "let l:gfg = synIDattr(synIDtrans(hlID('" . a:name .
+                \ "')), 'fg', 'gui')"
+    exec "let l:gbg = synIDattr(synIDtrans(hlID('" . a:name .
+                \ "')), 'bg', 'gui')"
+    let l:gfg = l:gfg == "" ? "NONE" : l:gfg
+    let l:gbg = l:gbg == "" ? "NONE" : l:gbg
+    exec "hi " . a:name . " ctermfg=" . s:color_map[l:gfg] .
+                \ " ctermbg=" . s:color_map[l:gbg]
+endfunction
+
+function! s:AddSpCterm(name)
+    exec "let l:gsp = synIDattr(synIDtrans(hlID('" . a:name .
+                \ "')), 'sp', 'gui')"
+    let l:gsp = l:gsp == "" ? "NONE" : l:gsp
+    exec "hi " . a:name . " ctermfg=" . s:color_map[l:gsp]
+endfunction
 
 
-" == Constants ==
-" any constant
-hi Constant         guifg=#70c0d8                                   gui=none
-hi Constant         ctermfg=74                                      cterm=none
-" strings
-hi String           guifg=#80c0d8                                   gui=none
-hi String           ctermfg=110                                     cterm=none
-" character constant
-hi Character        guifg=#80c0d8                                   gui=none
-hi Character        ctermfg=110                                     cterm=none
-" numbers decimal/hex
-hi Number           guifg=#70c0d8                                   gui=none
-hi Number           ctermfg=74                                      cterm=none
-" true, false
-hi Boolean          guifg=#70c0d8                                   gui=none
-hi Boolean          ctermfg=74                                      cterm=none
-" float
-hi Float            guifg=#70c0d8                                   gui=none
-hi Float            ctermfg=74                                      cterm=none
+" ============================================================================
+" Text Groups:
+" ============================================================================
+
+let s:normal_items = [
+            \ "ColorColumn", "Comment", "Constant", "Cursor", "CursorColumn",
+            \ "CursorIM", "CursorLine", "CursorLineNr", "DiffAdd", "DiffChange",
+            \ "DiffDelete", "Directory", "Error", "ErrorMsg", "Identifier",
+            \ "IncSearch", "LineNr", "MatchParen", "ModeMsg", "MoreMsg",
+            \ "NonText", "Pmenu", "PmenuSbar", "PmenuSel",
+            \ "PmenuThumb", "PreProc", "Question", "Search", "SignColumn",
+            \ "Special", "SpecialKey", "Statement", "StatusLineNC", "TabLine",
+            \ "TabLineFill", "Todo", "Type", "VertSplit", "Visual",
+            \ "WarningMsg", "WildMenu",
+            \ ]
+
+let s:bold_items = [
+            \ "DiffText", "FoldColumn", "Folded", "StatusLine", "TabLineSel",
+            \ "Title", "CursorLineNr",
+            \ ]
+
+let s:underline_items = [
+            \ "Underlined", "VisualNOS"
+            \ ]
+
+let s:undercurl_items = [
+            \ "SpellBad", "SpellCap", "SpellLocal", "SpellRare"
+            \ ]
 
 
-" == Identifiers ==
-" any variable name
-hi Identifier       guifg=#86c6b6                                   gui=none 
-hi Identifier       ctermfg=116                                     cterm=none
-" function, method, class
-hi Function         guifg=#86c6b6                                   gui=none 
-hi Function         ctermfg=116                                     cterm=none
+" ============================================================================
+" Color Definitions:
+" ============================================================================
+
+" ----------------------------------------------------------------------------
+" 'Normal' Colors:
+" ----------------------------------------------------------------------------
+
+hi clear Normal
+hi Normal gui=none cterm=none term=none
+
+if s:style == "light"
+    if s:contrast == "high"
+        hi Normal       guifg=#000000
+    elseif s:contrast == "low"
+        hi Normal       guifg=#626262
+    else
+        hi Normal       guifg=#444444
+    endif
+else
+    if s:contrast == "high"
+        hi Normal       guifg=#eeeeee
+    elseif s:contrast == "low"
+        hi Normal       guifg=#bcbcbc
+    else
+        hi Normal       guifg=#d7d7d7
+    endif
+endif
+
+if s:style == "light"
+    if s:contrast_bg == "high"
+        hi Normal                       guibg=#ffffff
+    else
+        hi Normal                       guibg=#eeeeee
+    endif
+else
+    if s:contrast_bg == "high"
+        hi Normal                       guibg=#121212
+    else
+        hi Normal                       guibg=#303030
+    endif
+endif
+
+call s:AddCterm("Normal")
 
 
-" == Statements ==
-" any statement
-hi Statement        guifg=#b3d38c                                   gui=none
-hi Statement        ctermfg=150                                     cterm=none
-" if, then, else
-hi Conditional      guifg=#b3d38c                                   gui=none
-hi Conditional      ctermfg=150                                     cterm=none
-" try, catch, throw, raise
-hi Exception        guifg=#b3d38c                                   gui=none
-hi Exception        ctermfg=150                                     cterm=none
-" for, while, do
-hi Repeat           guifg=#b3d38c                                   gui=none
-hi Repeat           ctermfg=150                                     cterm=none
-" case, default
-hi Label            guifg=#b3d38c                                   gui=none
-hi Label            ctermfg=150                                     cterm=none
-" sizeof, +, *
-hi Operator         guifg=#b3d38c                                   gui=none
-hi Operator         ctermfg=150                                     cterm=none
-" any other keyword
-hi Keyword          guifg=#b3d38c                                   gui=none
-hi Keyword          ctermfg=150                                     cterm=none
+" ----------------------------------------------------------------------------
+" Extra setup
+" ----------------------------------------------------------------------------
+
+exec "set background=" . s:style
+
+" Clear default settings
+for s:item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
+    exec "hi " . s:item . " guifg=NONE guibg=NONE gui=none"
+                \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
+endfor
+
+let g:colors_name="lucius"
 
 
-" == Preprocessor ==
-" generic preprocessor
-hi PreProc          guifg=#e0e8b0                                   gui=none
-hi PreProc          ctermfg=187                                     cterm=none
-" #include
-hi Include          guifg=#e0e8b0                                   gui=none
-hi Include          ctermfg=187                                     cterm=none
-" #define
-hi Define           guifg=#e0e8b0                                   gui=none
-hi Define           ctermfg=187                                     cterm=none
-" same as define
-hi Macro            guifg=#e0e8b0                                   gui=none
-hi Macro            ctermfg=187                                     cterm=none
-" #if, #else, #endif
-hi PreCondit        guifg=#e0e8b0                                   gui=none
-hi PreCondit        ctermfg=187                                     cterm=none
+" ----------------------------------------------------------------------------
+" Text Markup:
+" ----------------------------------------------------------------------------
+
+if s:style == "light"
+    hi NonText      guifg=#afafd7
+    hi SpecialKey   guifg=#afd7af
+    if s:contrast == "low"
+        hi Comment      guifg=#9e9e9e
+        hi Constant     guifg=#d78700
+        hi Directory    guifg=#00af87
+        hi Identifier   guifg=#00af00
+        hi PreProc      guifg=#00afaf
+        hi Special      guifg=#af00af
+        hi Statement    guifg=#0087d7
+        hi Title        guifg=#0087d7
+        hi Type         guifg=#0087af
+    else
+        hi Comment      guifg=#808080
+        hi Constant     guifg=#af5f00
+        hi Directory    guifg=#00875f
+        hi Identifier   guifg=#008700
+        hi PreProc      guifg=#008787
+        hi Special      guifg=#870087
+        hi Statement    guifg=#005faf
+        hi Title        guifg=#005faf
+        hi Type         guifg=#005f87
+    endif
+else
+    hi NonText      guifg=#5f5f87
+    hi SpecialKey   guifg=#5f875f
+    if s:contrast == "low"
+        hi Comment      guifg=#6c6c6c
+        hi Constant     guifg=#afaf87
+        hi Directory    guifg=#87af87
+        hi Identifier   guifg=#87af5f
+        hi PreProc      guifg=#5faf87
+        hi Special      guifg=#af87af
+        hi Statement    guifg=#5fafd7
+        hi Title        guifg=#00afd7
+        hi Type         guifg=#5fafaf
+    elseif s:contrast == "high"
+        hi Comment      guifg=#8a8a8a
+        hi Constant     guifg=#ffffd7
+        hi Directory    guifg=#d7ffd7
+        hi Identifier   guifg=#d7ffaf
+        hi PreProc      guifg=#afffd7
+        hi Special      guifg=#ffd7ff
+        hi Statement    guifg=#afffff
+        hi Title        guifg=#87d7ff
+        hi Type         guifg=#afffff
+    else
+        hi Comment      guifg=#808080
+        hi Constant     guifg=#d7d7af
+        hi Directory    guifg=#afd7af
+        hi Identifier   guifg=#afd787
+        hi PreProc      guifg=#87d7af
+        hi Special      guifg=#d7afd7
+        hi Statement    guifg=#87d7ff
+        hi Title        guifg=#5fafd7
+        hi Type         guifg=#87d7d7
+    endif
+endif
 
 
-" == Types ==
-" int, long, char
-hi Type             guifg=#90d0a0                                   gui=none
-hi Type             ctermfg=115                                     cterm=none
-" static, register, volative
-hi StorageClass     guifg=#90d0a0                                   gui=none
-hi StorageClass     ctermfg=115                                     cterm=none
-" struct, union, enum
-hi Structure        guifg=#90d0a0                                   gui=none
-hi Structure        ctermfg=115                                     cterm=none
-" typedef
-hi Typedef          guifg=#90d0a0                                   gui=none
-hi Typedef          ctermfg=115                                     cterm=none
+" ----------------------------------------------------------------------------
+" Highlighting:
+" ----------------------------------------------------------------------------
+
+hi Cursor       guifg=bg
+hi CursorColumn guifg=NONE
+hi CursorIM     guifg=bg
+hi CursorLine   guifg=NONE
+hi Visual       guifg=NONE
+hi VisualNOS    guifg=fg        guibg=NONE
+if s:style == "light"
+    hi CursorColumn                 guibg=#dadada
+    hi CursorLine                   guibg=#dadada
+    hi IncSearch    guifg=fg        guibg=#5fd7d7
+    hi MatchParen   guifg=NONE      guibg=#5fd7d7
+    hi Search       guifg=fg        guibg=#ffaf00
+    hi Visual                       guibg=#afd7ff
+    if s:contrast == "low"
+        hi Cursor                       guibg=#87afd7
+        hi CursorIM                     guibg=#87afd7
+        hi Error        guifg=#d70000   guibg=#ffd7d7
+        hi Todo         guifg=#af8700   guibg=#ffffaf
+    else
+        hi Cursor                       guibg=#5f87af
+        hi CursorIM                     guibg=#5f87af
+        hi Error        guifg=#af0000   guibg=#d7afaf
+        hi Todo         guifg=#875f00   guibg=#ffffaf
+    endif
+else
+    hi CursorColumn                 guibg=#444444
+    hi CursorLine                   guibg=#444444
+    hi IncSearch    guifg=bg
+    hi MatchParen   guifg=bg
+    hi Search       guifg=bg
+    hi Visual                       guibg=#005f87
+    if s:contrast == "low"
+        hi Cursor                       guibg=#5f87af
+        hi CursorIM                     guibg=#5f87af
+        hi Error        guifg=#d75f5f   guibg=#870000
+        hi IncSearch                    guibg=#00afaf
+        hi MatchParen                   guibg=#87af5f
+        hi Search                       guibg=#d78700
+        hi Todo         guifg=#afaf00   guibg=#5f5f00
+    elseif s:contrast == "high"
+        hi Cursor                       guibg=#afd7ff
+        hi CursorIM                     guibg=#afd7ff
+        hi Error        guifg=#ffafaf   guibg=#af0000
+        hi IncSearch                    guibg=#87ffff
+        hi MatchParen                   guibg=#d7ff87
+        hi Search                       guibg=#ffaf5f
+        hi Todo         guifg=#ffff87   guibg=#87875f
+    else
+        hi Cursor                       guibg=#87afd7
+        hi CursorIM                     guibg=#87afd7
+        hi Error        guifg=#ff8787   guibg=#870000
+        hi IncSearch                    guibg=#5fd7d7
+        hi MatchParen                   guibg=#afd75f
+        hi Search                       guibg=#d78700
+        hi Todo         guifg=#d7d75f   guibg=#5f5f00
+    endif
+endif
 
 
-" == Special ==
-" any special symbol
-hi Special          guifg=#b0a0c0                                   gui=none
-hi Special          ctermfg=182                                     cterm=none
-" special character in a constant
-hi SpecialChar      guifg=#b0a0c0                                   gui=none
-hi SpecialChar      ctermfg=182                                     cterm=none
-" things you can CTRL-]
-hi Tag              guifg=#b0a0c0                                   gui=none
-hi Tag              ctermfg=182                                     cterm=none
-" character that needs attention
-hi Delimiter        guifg=#b0a0c0                                   gui=none
-hi Delimiter        ctermfg=182                                     cterm=none
-" special things inside a comment
-hi SpecialComment   guifg=#b0a0c0                                   gui=none
-hi SpecialComment   ctermfg=182                                     cterm=none
-" debugging statements
-hi Debug            guifg=#b0a0c0           guibg=NONE              gui=none
-hi Debug            ctermfg=182             ctermbg=NONE            cterm=none
+" ----------------------------------------------------------------------------
+" Messages:
+" ----------------------------------------------------------------------------
+
+hi Question     guifg=fg
+if s:style == "light"
+    if s:contrast == "low"
+        hi ErrorMsg     guifg=#d70000
+        hi ModeMsg      guifg=#0087ff
+        hi MoreMsg      guifg=#0087ff
+        hi WarningMsg   guifg=#d78700
+    else
+        hi ErrorMsg     guifg=#af0000
+        hi ModeMsg      guifg=#005faf
+        hi MoreMsg      guifg=#005faf
+        hi WarningMsg   guifg=#af5f00
+    endif
+else
+    if s:contrast == "low"
+        hi ErrorMsg     guifg=#d75f5f
+        hi ModeMsg      guifg=#87afaf
+        hi MoreMsg      guifg=#87afaf
+        hi WarningMsg   guifg=#af875f
+    elseif s:contrast == "high"
+        hi ErrorMsg     guifg=#ff8787
+        hi ModeMsg      guifg=#afffff
+        hi MoreMsg      guifg=#afffff
+        hi WarningMsg   guifg=#ffaf87
+    else
+        hi ErrorMsg     guifg=#ff5f5f
+        hi ModeMsg      guifg=#afd7d7
+        hi MoreMsg      guifg=#afd7d7
+        hi WarningMsg   guifg=#d7875f
+    endif
+endif
 
 
-" == Text Markup ==
-" text that stands out, html links
-hi Underlined       guifg=fg                                        gui=underline
-hi Underlined       ctermfg=fg                                      cterm=underline
-" any erroneous construct
-hi Error            guifg=#e37170           guibg=#432323           gui=none
-hi Error            ctermfg=167             ctermbg=236            cterm=none
-" todo, fixme, note, xxx
-hi Todo             guifg=#e0e090           guibg=NONE              gui=underline
-hi Todo             ctermfg=186             ctermbg=NONE            cterm=underline
-" match parenthesis, brackets
-hi MatchParen       guifg=#00ff00           guibg=NONE              gui=bold
-hi MatchParen       ctermfg=46              ctermbg=NONE            cterm=bold
-" the '~' and '@' and showbreak, '>' double wide char doesn't fit on line
-hi NonText          guifg=#404040                                   gui=none
-hi NonText          ctermfg=238                                     cterm=none
-" meta and special keys used with map, unprintable characters
-hi SpecialKey       guifg=#405060
-hi SpecialKey       ctermfg=239
-" titles for output from :set all, :autocmd, etc
-hi Title            guifg=#62bdde                                   gui=none
-hi Title            ctermfg=74                                      cterm=none
+" ----------------------------------------------------------------------------
+" UI:
+" ----------------------------------------------------------------------------
+
+hi ColorColumn  guifg=NONE
+hi Pmenu        guifg=bg
+hi PmenuSel     guifg=fg
+hi PmenuThumb   guifg=fg
+hi StatusLine   guifg=bg
+hi TabLine      guifg=bg
+hi TabLineSel   guifg=fg
+hi WildMenu     guifg=fg
+if s:style == "light"
+    hi ColorColumn                  guibg=#e4e4e4
+    hi CursorLineNr guifg=#626262   guibg=#dadada
+    hi FoldColumn                   guibg=#bcbcbc
+    hi Folded                       guibg=#bcbcbc
+    hi LineNr       guifg=#9e9e9e   guibg=#dadada
+    hi PmenuSel                     guibg=#afd7ff
+    hi SignColumn                   guibg=#d0d0d0
+    hi StatusLineNC guifg=#dadada
+    hi TabLineFill  guifg=#dadada
+    hi VertSplit    guifg=#e4e4e4
+    hi WildMenu                     guibg=#afd7ff
+    if s:contrast == "low"
+        hi FoldColumn   guifg=#808080
+        hi Folded       guifg=#808080
+        hi Pmenu                        guibg=#9e9e9e
+        hi PmenuSbar    guifg=#9e9e9e   guibg=#626262
+        hi PmenuThumb                   guibg=#9e9e9e
+        hi SignColumn   guifg=#808080
+        hi StatusLine                   guibg=#9e9e9e
+        hi StatusLineNC                 guibg=#9e9e9e
+        hi TabLine                      guibg=#9e9e9e
+        hi TabLineFill                  guibg=#9e9e9e
+        hi TabLineSel                   guibg=#afd7ff
+        hi VertSplit                    guibg=#9e9e9e
+    else
+        hi FoldColumn   guifg=#626262
+        hi Folded       guifg=#626262
+        hi Pmenu                        guibg=#808080
+        hi PmenuSbar    guifg=#808080   guibg=#444444
+        hi PmenuThumb                   guibg=#9e9e9e
+        hi SignColumn   guifg=#626262
+        hi StatusLine                   guibg=#808080
+        hi StatusLineNC                 guibg=#808080
+        hi TabLine                      guibg=#808080
+        hi TabLineFill                  guibg=#808080
+        hi TabLineSel                   guibg=#afd7ff
+        hi VertSplit                    guibg=#808080
+    endif
+else
+    hi ColorColumn                  guibg=#3a3a3a
+    hi CursorLineNr guifg=#9e9e9e   guibg=#444444
+    hi FoldColumn                   guibg=#4e4e4e
+    hi Folded                       guibg=#4e4e4e
+    hi LineNr       guifg=#626262   guibg=#444444
+    hi PmenuSel                     guibg=#005f87
+    hi SignColumn                   guibg=#4e4e4e
+    hi StatusLineNC guifg=#4e4e4e
+    hi TabLineFill  guifg=#4e4e4e
+    hi VertSplit    guifg=#626262
+    hi WildMenu                     guibg=#005f87
+    if s:contrast == "low"
+        hi FoldColumn   guifg=#a8a8a8
+        hi Folded       guifg=#a8a8a8
+        hi Pmenu                        guibg=#8a8a8a
+        hi PmenuSbar    guifg=#8a8a8a   guibg=#bcbcbc
+        hi PmenuThumb                   guibg=#585858
+        hi SignColumn   guifg=#8a8a8a
+        hi StatusLine                   guibg=#8a8a8a
+        hi StatusLineNC                 guibg=#8a8a8a
+        hi TabLine                      guibg=#8a8a8a
+        hi TabLineFill                  guibg=#8a8a8a
+        hi TabLineSel                   guibg=#005f87
+        hi VertSplit                    guibg=#8a8a8a
+    elseif s:contrast == "high"
+        hi FoldColumn   guifg=#c6c6c6
+        hi Folded       guifg=#c6c6c6
+        hi Pmenu                        guibg=#bcbcbc
+        hi PmenuSbar    guifg=#bcbcbc   guibg=#dadada
+        hi PmenuThumb                   guibg=#8a8a8a
+        hi SignColumn   guifg=#bcbcbc
+        hi StatusLine                   guibg=#bcbcbc
+        hi StatusLineNC                 guibg=#bcbcbc
+        hi TabLine                      guibg=#bcbcbc
+        hi TabLineFill                  guibg=#bcbcbc
+        hi TabLineSel                   guibg=#0087af
+        hi VertSplit                    guibg=#bcbcbc
+    else
+        hi FoldColumn   guifg=#bcbcbc
+        hi Folded       guifg=#bcbcbc
+        hi Pmenu                        guibg=#b2b2b2
+        hi PmenuSbar    guifg=#b2b2b2   guibg=#d0d0d0
+        hi PmenuThumb                   guibg=#808080
+        hi SignColumn   guifg=#b2b2b2
+        hi StatusLine                   guibg=#b2b2b2
+        hi StatusLineNC                 guibg=#b2b2b2
+        hi TabLine                      guibg=#b2b2b2
+        hi TabLineFill                  guibg=#b2b2b2
+        hi TabLineSel                   guibg=#005f87
+        hi VertSplit                    guibg=#b2b2b2
+    endif
+endif
 
 
-" == Ignore ==
-" left blank, hidden
-hi Ignore           guifg=bg
-hi Ignore           ctermfg=bg
+" ----------------------------------------------------------------------------
+" Diff:
+" ----------------------------------------------------------------------------
+
+hi DiffAdd      guifg=fg
+hi DiffChange   guifg=fg
+hi DiffDelete   guifg=fg
+
+if s:style == "light"
+    hi DiffAdd                      guibg=#afd7af
+    hi DiffChange                   guibg=#d7d7af
+    hi DiffDelete                   guibg=#d7afaf
+    hi DiffText                     guibg=#d7d7af
+    if s:contrast == "low"
+        hi DiffText     guifg=#ff8700
+    else
+        hi DiffText     guifg=#d75f00
+    endif
+else
+    hi DiffAdd                      guibg=#5f875f
+    hi DiffChange                   guibg=#87875f
+    hi DiffDelete                   guibg=#875f5f
+    hi DiffText                     guibg=#87875f
+    if s:contrast == "low"
+        hi DiffText     guifg=#d7d75f
+    else
+        hi DiffText     guifg=#ffff87
+    endif
+endif
 
 
-" == Text Selection ==
-" character under the cursor
-hi Cursor           guifg=bg                guibg=#a3e3ed
-hi Cursor           ctermfg=bg              ctermbg=153
-" like cursor, but used when in IME mode
-hi CursorIM         guifg=bg                guibg=#96cdcd
-hi CursorIM         ctermfg=bg              ctermbg=116
-" cursor column
-hi CursorColumn     guifg=NONE              guibg=#404448           gui=none
-hi CursorColumn     ctermfg=NONE            ctermbg=236             cterm=none
-" cursor line/row
-hi CursorLine       gui=NONE                guibg=#404448           gui=none
-hi CursorLine       cterm=NONE              ctermbg=236             cterm=none
-" visual mode selection
-hi Visual           guifg=NONE              guibg=#364458
-hi Visual           ctermfg=NONE            ctermbg=24
-" visual mode selection when vim is not owning the selection (x11 only)
-hi VisualNOS        guifg=fg                                        gui=underline
-hi VisualNOS        ctermfg=fg                                      cterm=underline
-" highlight incremental search text; also highlight text replaced with :s///c
-hi IncSearch        guifg=#66ffff                                   gui=reverse
-hi IncSearch        ctermfg=87                                      cterm=reverse
-" hlsearch (last search pattern), also used for quickfix
-hi Search                                    guibg=#ffaa33          gui=none
-hi Search                                    ctermbg=214            cterm=none
+" ----------------------------------------------------------------------------
+" Spelling:
+" ----------------------------------------------------------------------------
+
+if s:style == "light"
+    hi SpellBad     guisp=#d70000
+    hi SpellCap     guisp=#00afd7
+    hi SpellLocal   guisp=#d7af00
+    hi SpellRare    guisp=#5faf00
+else
+    hi SpellBad     guisp=#ff5f5f
+    hi SpellCap     guisp=#5fafd7
+    hi SpellLocal   guisp=#d7af5f
+    hi SpellRare    guisp=#5faf5f
+endif
 
 
-" == UI ==
-" normal item in popup
-hi Pmenu            guifg=#e0e0e0           guibg=#303840           gui=none
-hi Pmenu            ctermfg=253             ctermbg=233             cterm=none
-" selected item in popup
-hi PmenuSel         guifg=#cae682           guibg=#505860           gui=none
-hi PmenuSel         ctermfg=186             ctermbg=237             cterm=none
-" scrollbar in popup
-hi PMenuSbar                                guibg=#505860           gui=none
-hi PMenuSbar                                ctermbg=59              cterm=none
-" thumb of the scrollbar in the popup
-hi PMenuThumb                               guibg=#808890           gui=none
-hi PMenuThumb                               ctermbg=102             cterm=none
-" status line for current window
-hi StatusLine       guifg=#e0e0e0           guibg=#363946           gui=bold
-hi StatusLine       ctermfg=254             ctermbg=237             cterm=bold
-" status line for non-current windows
-hi StatusLineNC     guifg=#767986           guibg=#363946           gui=none
-hi StatusLineNC     ctermfg=244             ctermbg=237             cterm=none
-" tab pages line, not active tab page label
-hi TabLine          guifg=#b6bf98           guibg=#363946           gui=none
-hi TabLine          ctermfg=244             ctermbg=236             cterm=none
-" tab pages line, where there are no labels
-hi TabLineFill      guifg=#cfcfaf           guibg=#363946           gui=none
-hi TabLineFill      ctermfg=187             ctermbg=236             cterm=none
-" tab pages line, active tab page label
-hi TabLineSel       guifg=#efefef           guibg=#414658           gui=bold
-hi TabLineSel       ctermfg=254             ctermbg=236             cterm=bold
-" column separating vertically split windows
-hi VertSplit        guifg=#777777           guibg=#363946           gui=none
-hi VertSplit        ctermfg=242             ctermbg=237             cterm=none
-" line used for closed folds
-hi Folded           guifg=#d0e0f0           guibg=#202020           gui=none
-hi Folded           ctermfg=117             ctermbg=235             cterm=none
-" column on side used to indicated open and closed folds
-hi FoldColumn       guifg=#c0c0d0           guibg=#363946           gui=none
-hi FoldColumn       ctermfg=117             ctermbg=238             cterm=none
+" ----------------------------------------------------------------------------
+" Miscellaneous:
+" ----------------------------------------------------------------------------
+
+hi Ignore       guifg=bg
+hi Underlined   guifg=fg
 
 
-" == Spelling ==
-" word not recognized
-hi SpellBad         guisp=#ee0000                                   gui=undercurl
-hi SpellBad                                 ctermbg=196             cterm=undercurl
-" word not capitalized
-hi SpellCap         guisp=#eeee00                                   gui=undercurl
-hi SpellCap                                 ctermbg=226             cterm=undercurl
-" rare word
-hi SpellRare        guisp=#ffa500                                   gui=undercurl
-hi SpellRare                                ctermbg=214             cterm=undercurl
-" wrong spelling for selected region
-hi SpellLocal       guisp=#ffa500                                   gui=undercurl
-hi SpellLocal                               ctermbg=214             cterm=undercurl
+" ============================================================================
+" Text Emphasis:
+" ============================================================================
+
+if s:use_bold == 1
+    for s:item in s:bold_items
+        exec "hi " . s:item . " gui=bold cterm=bold term=none"
+    endfor
+endif
+
+if s:use_underline == 1
+    for s:item in s:underline_items
+        exec "hi " . s:item . " gui=underline cterm=underline term=none"
+    endfor
+    for s:item in s:undercurl_items
+        exec "hi " . s:item . " cterm=underline"
+    endfor
+endif
+
+for s:item in s:undercurl_items
+    exec "hi " . s:item . " gui=undercurl term=none"
+endfor
 
 
-" == Diff ==
-" added line
-hi DiffAdd          guifg=#80a090           guibg=#313c36           gui=none
-hi DiffAdd          ctermfg=fg              ctermbg=22              cterm=none
-" changed line
-hi DiffChange       guifg=NONE              guibg=#4a343a           gui=none
-hi DiffChange       ctermfg=fg              ctermbg=52              cterm=none
-" deleted line
-hi DiffDelete       guifg=#6c6661           guibg=#3c3631           gui=none
-hi DiffDelete       ctermfg=fg              ctermbg=58              cterm=none
-" changed text within line
-hi DiffText         guifg=#f05060           guibg=#4a343a           gui=bold
-hi DiffText         ctermfg=203             ctermbg=52              cterm=bold
+" ============================================================================
+" Cterm Colors:
+" ============================================================================
+
+for s:item in s:normal_items + s:bold_items + s:underline_items
+    call s:AddCterm(s:item)
+endfor
+
+for s:item in s:undercurl_items
+    call s:AddSpCterm(s:item)
+endfor
+
+if s:no_term_bg == 1
+    hi Normal ctermbg=NONE
+endif
 
 
-" == Misc ==
-" directory names and other special names in listings
-hi Directory        guifg=#c0e0b0                                   gui=none
-hi Directory        ctermfg=151                                     cterm=none
-" error messages on the command line
-hi ErrorMsg         guifg=#ee0000           guibg=NONE              gui=none
-hi ErrorMsg         ctermfg=196             ctermbg=NONE            cterm=none
-" columns where signs are displayed (used in IDEs)
-hi SignColumn       guifg=#9fafaf           guibg=#181818           gui=none
-hi SignColumn       ctermfg=145             ctermbg=233             cterm=none
-" line numbers
-hi LineNr           guifg=#818698           guibg=#363946
-hi LineNr           ctermfg=245             ctermbg=237
-" the 'more' prompt when output takes more than one line
-hi MoreMsg          guifg=#2e8b57                                   gui=none
-hi MoreMsg          ctermfg=29                                      cterm=none
-" text showing what mode you are in
-hi ModeMsg          guifg=#76d5f8           guibg=NONE              gui=none
-hi ModeMsg          ctermfg=117             ctermbg=NONE            cterm=none
-" the hit-enter prompt (show more output) and yes/no questions
-hi Question         guifg=fg                                        gui=none
-hi Question         ctermfg=fg                                      cterm=none
-" warning messages
-hi WarningMsg       guifg=#e5786d                                   gui=none
-hi WarningMsg       ctermfg=173                                     cterm=none
-" current match in the wildmenu completion
-hi WildMenu         guifg=#cae682           guibg=#363946           gui=bold,underline
-hi WildMenu         ctermfg=16              ctermbg=186             cterm=bold
-" color column highlighting
-hi ColorColumn      guifg=NONE              guibg=#403630           gui=none
-hi ColorColumn      ctermfg=NONE            ctermbg=95              cterm=none
+" ============================================================================
+" Alternative Bold Definitions:
+" ============================================================================
+
+let s:alternative_bold_items = ["Identifier", "PreProc", "Statement",
+            \ "Special", "Constant", "Type"]
+
+for s:item in s:alternative_bold_items
+    exec "let s:temp_gui_fg = synIDattr(synIDtrans(hlID('" . s:item .
+                \ "')), 'fg', 'gui')"
+    exec "let s:temp_cterm_fg = synIDattr(synIDtrans(hlID('" . s:item .
+                \ "')), 'fg', 'cterm')"
+    exec "hi B" . s:item . " guifg=" . s:temp_gui_fg . " ctermfg=" .
+                \ s:temp_cterm_fg . " gui=bold cterm=bold term=none"
+endfor
 
 
-" == Vimwiki Colors ==
+" ============================================================================
+" Plugin Specific Colors:
+" ============================================================================
 
-hi VimwikiHeader1   guifg=#e0e8b0                                   gui=bold
-hi VimWikiHeader1   ctermfg=187                                     cterm=none
-hi VimwikiHeader2   guifg=#80c0d8                                   gui=bold
-hi VimwikiHeader2   ctermfg=110                                     cterm=none
-hi VimwikiHeader3   guifg=#b3d38c                                   gui=bold
-hi VimwikiHeader3   ctermfg=150                                     cterm=none
-hi VimwikiHeader4   guifg=#86c6b6                                   gui=bold 
-hi VimwikiHeader4   ctermfg=116                                     cterm=none
-hi VimwikiHeader5   guifg=#b0a0c0                                   gui=bold
-hi VimwikiHeader5   ctermfg=182                                     cterm=none
-hi VimwikiHeader6   guifg=#90d0a0                                   gui=bold
-hi VimwikiHeader6   ctermfg=115                                     cterm=none
+" Tagbar:
+hi link TagbarAccessPublic Constant
+hi link TagbarAccessProtected Type
+hi link TagbarAccessPrivate PreProc
 
+" Vimwiki:
+hi link VimwikiHeader1 BIdentifier
+hi link VimwikiHeader2 BPreProc
+hi link VimwikiHeader3 BStatement
+hi link VimwikiHeader4 BSpecial
+hi link VimwikiHeader5 BConstant
+hi link VimwikiHeader6 BType
+
+
+" ============================================================================
+" Preset Commands:
+" ============================================================================
+
+function! SetLucius(style, contrast, contrast_bg)
+    let g:lucius_style = a:style
+    let g:lucius_contrast = a:contrast
+    let g:lucius_contrast_bg = a:contrast_bg
+endfunction
+
+command! LuciusLight call SetLucius("light", "normal", "normal")
+            \ | colorscheme lucius
+command! LuciusLightLowContrast call SetLucius("light", "low", "normal")
+            \ | colorscheme lucius
+command! LuciusLightHighContrast call SetLucius("light", "high", "normal")
+            \ | colorscheme lucius
+
+command! LuciusWhite call SetLucius("light", "normal", "high")
+            \ | colorscheme lucius
+command! LuciusWhiteLowContrast call SetLucius("light", "low", "high")
+            \ | colorscheme lucius
+command! LuciusWhiteHighContrast call SetLucius("light", "high", "high")
+            \ | colorscheme lucius
+
+command! LuciusDark call SetLucius("dark", "normal", "normal")
+            \ | colorscheme lucius
+command! LuciusDarkLowContrast call SetLucius("dark", "low", "normal")
+            \ | colorscheme lucius
+command! LuciusDarkHighContrast call SetLucius("dark", "high", "normal")
+            \ | colorscheme lucius
+
+command! LuciusBlack call SetLucius("dark", "normal", "high")
+            \ | colorscheme lucius
+command! LuciusBlackLowContrast call SetLucius("dark", "low", "high")
+            \ | colorscheme lucius
+command! LuciusBlackHighContrast call SetLucius("dark", "high", "high")
+            \ | colorscheme lucius
+
+" vim: tw=78

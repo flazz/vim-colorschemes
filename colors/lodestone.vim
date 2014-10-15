@@ -1,14 +1,12 @@
 " Vim color scheme
 "
 " Name:         lodestone.vim
-" Maintainer:   Matt Petty <matt@kizmeta.com> 
-" Last Change:  16 September 2010
-" License:      public domain
-" Version:      4.1
+" Maintainer:   Matt Petty <matt@kizmeta.com> @mattpetty
+" Last Change:  2011-11-22
+" License:      MIT, public domain, who cares
+" Version:      4.1.1
 "
 " 256 color scheme based on lucius, railscasts, many others.
-" Looks good, feels good, but is secretly evil in a good way.
-" This file is also kept here:
 " http://github.com/lodestone/lodestone.vim
 
 
@@ -30,15 +28,15 @@ let colors_name="lodestone"
 " Base color
 " ----------
 " hi Normal           guifg=#e0e0e0           guibg=#202020
-hi Normal           guifg=#e0e0e0           guibg=#030303
+hi Normal           guifg=#e0e0e0           guibg=#151515
 hi Normal           ctermfg=253             ctermbg=000
 
 
 " Comment Group
 " -------------
 " any comment
-hi Comment          guifg=#606060                                   gui=none
-hi Comment          ctermfg=240                                     cterm=none
+hi Comment          guifg=#606060                                   gui=italic
+hi Comment          ctermfg=240                                     cterm=italic
 
 
 " Constant Group
@@ -339,15 +337,17 @@ hi PMenuThumb                               ctermbg=102             cterm=none
 " -----------
 " status line for current window
 " hi StatusLine       guifg=#e0e0e0           guibg=#363946           gui=bold
-hi StatusLine       guifg=#222222           guibg=#eeeeee           gui=bold
+hi StatusLine       guifg=#222222           guibg=#eeeeee           gui=none
 " hi StatusLine       ctermfg=244             ctermbg=186            cterm=bold
-hi StatusLine      ctermfg=238 ctermbg=233
+hi StatusLine       ctermfg=244 ctermbg=232
 
 " status line for non-current windows
 hi StatusLineNC     guifg=#767986           guibg=#363946           gui=none
-hi StatusLineNC    ctermfg=244 ctermbg=232
+hi StatusLineNC     ctermfg=238 ctermbg=233
 " hi StatusLineNC     ctermfg=244             ctermbg=white             cterm=none
 
+hi StatusLine ctermbg=LightGray ctermfg=Black guibg=#334b7d guifg=fg gui=none
+hi StatusLineNC ctermbg=DarkGray ctermfg=Black guibg=#25365a guifg=fg gui=none
 
 " Tab Lines
 " ---------
@@ -362,6 +362,8 @@ hi TabLineSel       guifg=#efefef           guibg=#414658           gui=bold
 hi TabLineSel       ctermfg=254             ctermbg=black             cterm=bold
 
 
+hi TabLine guibg=#41609e guifg=fg gui=underline
+hi TabLineFill guibg=#41609e guifg=fg gui=underline
 " Visual
 " ------
 " visual mode selection
@@ -377,19 +379,33 @@ hi Visual           ctermfg=NONE            ctermbg=24
 " hi link railsMethod         PreProc
 " hi link rubyDefine          Keyword
 " hi link rubySymbol          Constant
-hi rubySymbol guifg=#800000 ctermfg=124
+" hi rubySymbol guifg=#fd1122 ctermfg=124
+" hi rubySymbol guifg=#c2130e ctermfg=124
+                    " Purple
+hi rubySymbol guifg=#9B7EF6 ctermfg=099
+
+
+
+" hi rubyDoBlock guifg=#dedede ctermfg=124
+" hi rubyArrayDelimiter guifg=#9090dd ctermfg=189
+" hi rubyArrayLiteral guifg=#9f9fbd ctermfg=189
+" hi rubyCurlyDelimiter guifg=#9090dd ctermfg=189
+hi rubyRailsARAssociationMethod guifg=#fd0011 ctermfg=124
+" hi rubyRailsARAssociationMethod guifg=#6666ff ctermfg=099
+hi rubyRailsARValidationMethod guifg=#fd0011 ctermfg=124
+" hi rubyLocalVariableOrMethod guifg=#9090ff ctermfg=124
 " hi link rubyAccess          rubyMethod
 " hi link rubyAttribute       rubyMethod
 " hi link rubyEval            rubyMethod
 " hi link rubyException       rubyMethod
 " hi link rubyInclude         rubyMethod
-hi rubyString guifg=#60e000 ctermfg=28
+hi rubyString guifg=#00942c ctermfg=28
 hi link rubyStringDelimiter rubyString
 " hi link rubyRegexp          Regexp
 " hi link rubyRegexpDelimiter rubyRegexp
 " hi link rubyConstant        Identifier
 " hi link rubyClassVariable Keyword
-" hi rubyInstanceVariable      guifg=#D0D0FF ctermfg=189
+hi rubyInstanceVariable      guifg=#9090FF ctermfg=189
 " hi railsUserClass guifg=#aaaaaa ctermfg=255
 " 
 " hi rubyLocalVariableOrMethod guifg=#D0D0FF ctermfg=189
