@@ -17,6 +17,8 @@ if exists("syntax_on")
 endif
 let g:colors_name = "railscasts"
 
+highlight clear SignColumn " gitgutter settings
+
 " Colors
 " Brown        #BC9458
 " Dark Blue    #6D9CBE
@@ -35,7 +37,7 @@ hi LineNr                    guifg=#888888 ctermfg=242
 hi StatusLine                guibg=#414243 gui=NONE guifg=#E6E1DC
 hi StatusLineNC              guibg=#414243 gui=NONE
 hi VertSplit                 guibg=#414243 gui=NONE guifg=#414243
-hi CursorLineNr              guifg=#bbbbbb ctermfg=248
+hi CursorLineNr              guifg=#f4f800 ctermfg=248
 hi ColorColumn               guibg=#333435 ctermbg=235
 
 " Folds
@@ -132,3 +134,4 @@ hi link htmlEndTag           xmlEndTag
 hi xmlTag                    guifg=#E8BF6A
 hi xmlTagName                guifg=#E8BF6A
 hi xmlEndTag                 guifg=#E8BF6A
+

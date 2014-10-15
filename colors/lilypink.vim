@@ -3,8 +3,9 @@
 " See http://www.vim.org/scripts/script.php?script_id=2778 for more info
 " Vim colorscheme: a dark one
 " Maintainer:  lilydjwg <lilydjwg@gmail.com>
-" Last Change: 2010年2月17日
+" Version:     1.3
 " License:     Vim license, see :help 'license'
+" http://www.vim.org/scripts/script.php?script_id=3323
 
 set background=dark
 
@@ -18,55 +19,64 @@ let colors_name = "lilypink"
 
 " Vim >= 7.0 specific colors
 if version >= 700
-  hi CursorLine		guibg=#303030 ctermbg=236 cterm=none
-  hi CursorColumn	guibg=#303030 ctermbg=236 cterm=none
-  hi MatchParen		guifg=#98ff85 guibg=bg gui=bold ctermfg=120 ctermbg=235 cterm=bold
-  hi Pmenu		guifg=#f6f3e8 guibg=#444444 ctermfg=230 ctermbg=238 cterm=none
-  hi PmenuSbar		guibg=#333333 ctermbg=236 cterm=none
-  hi PmenuThumb		gui=reverse ctermbg=235 cterm=reverse
-  hi PmenuSel		guifg=#000000 guibg=#cae682 ctermfg=16 ctermbg=150 cterm=none
+  highlight CursorLine guibg=#303030 ctermbg=236 cterm=NONE
+  highlight CursorLineNr guifg=#4f4f4f guibg=#303030 ctermfg=239 ctermbg=236 cterm=NONE
+  highlight CursorColumn guibg=#303030 ctermbg=236 cterm=NONE
+  highlight MatchParen guifg=#98ff85 guibg=bg gui=bold ctermfg=120 ctermbg=235 cterm=bold
+  highlight Pmenu guifg=#f6f3e8 guibg=#444444 ctermfg=255 ctermbg=238 cterm=NONE
+  highlight PmenuSbar guibg=#333333 ctermbg=236 cterm=NONE
+  highlight PmenuThumb gui=reverse cterm=reverse
+  highlight PmenuSel guifg=#000000 guibg=#cae682 ctermfg=16 ctermbg=149 cterm=NONE
+endif
+if version >= 703
+  highlight ColorColumn guibg=#000000 ctermbg=16 cterm=NONE
 endif
 
 " General colors
-hi Cursor	guifg=NONE    guibg=#666666 gui=none ctermfg=254 ctermbg=241 cterm=none
-hi Normal	guifg=#e0e0e0 guibg=#242424 gui=none ctermfg=254 ctermbg=235 cterm=none
-hi NonText	guifg=#99968b guibg=#242424 gui=none ctermfg=246 ctermbg=235 cterm=none
-hi LineNr	guifg=#444444 guibg=#242424 gui=none ctermfg=238 ctermbg=235 cterm=none
-hi VertSplit	guifg=#1c1c1c guibg=#1c1c1c gui=none ctermfg=234 ctermbg=234 cterm=none
-hi Title	guifg=#f6f3e8 guibg=NONE    gui=bold ctermfg=230 ctermbg=none cterm=bold
-hi Visual	guifg=NONE    guibg=#000000 gui=none ctermfg=254 ctermbg=16 cterm=none
-hi Ignore	guifg=bg gui=none ctermfg=235 ctermbg=235 cterm=none
+highlight Cursor guifg=NONE guibg=#666666 gui=NONE ctermbg=241 cterm=NONE
+highlight Normal guifg=#e0e0e0 guibg=#242424 gui=NONE ctermfg=254 ctermbg=235 cterm=NONE
+highlight NonText guifg=#99968b guibg=#242424 gui=NONE ctermfg=246 ctermbg=235 cterm=NONE
+highlight LineNr guifg=#444444 guibg=#242424 gui=NONE ctermfg=238 ctermbg=235 cterm=NONE
+highlight VertSplit guifg=#1c1c1c guibg=#1c1c1c gui=NONE ctermfg=234 ctermbg=234 cterm=NONE
+highlight Title guifg=#f6f3e8 guibg=NONE gui=bold ctermfg=255 cterm=bold
+highlight Visual guifg=NONE guibg=#000000 gui=NONE ctermbg=16 cterm=NONE
+highlight Ignore guifg=bg gui=NONE ctermfg=235 cterm=NONE
 
-hi StatusLine	guifg=#a0a0a0 guibg=#1c1c1c gui=none ctermfg=247 ctermbg=234 cterm=none
-hi StatusLineNC guifg=#857b6f guibg=#1c1c1c gui=none ctermfg=59 ctermbg=234 cterm=none
+highlight StatusLine guifg=#a0a0a0 guibg=#1c1c1c gui=NONE ctermfg=247 ctermbg=234 cterm=NONE
+highlight StatusLineNC guifg=#857b6f guibg=#1c1c1c gui=NONE ctermfg=244 ctermbg=234 cterm=NONE
 
-hi Folded	guibg=#384048 guifg=#a0a8b0 gui=none ctermfg=103 ctermbg=237 cterm=none
-hi FoldColumn	guibg=#000000 guifg=#ff99ff gui=none ctermfg=213 ctermbg=16 cterm=none
+highlight Folded guifg=#a0a8b0 guibg=#384048 gui=NONE ctermfg=248 ctermbg=238 cterm=NONE
+highlight FoldColumn guifg=#ff99ff guibg=#000000 gui=NONE ctermfg=213 ctermbg=16 cterm=NONE
 
-hi SpecialKey	guifg=#d090ff guibg=#242424 gui=none ctermfg=177 ctermbg=235 cterm=none
-hi Special	guifg=#ffddaa gui=none ctermfg=223 ctermbg=235 cterm=none
+highlight SpecialKey guifg=#d090ff guibg=#242424 gui=NONE ctermfg=177 ctermbg=235 cterm=NONE
+highlight Special guifg=#ffddaa gui=NONE ctermfg=223 cterm=NONE
 
-hi IncSearch	guifg=#33ff1c guibg=#000000 gui=underline ctermfg=46 ctermbg=16 cterm=underline
-hi Search	guibg=#000000 guifg=NONE ctermfg=NONE ctermbg=16 cterm=none
-hi WildMenu	guifg=#33ff1c guibg=#000000 gui=underline ctermfg=46 ctermbg=16 cterm=underline
+highlight IncSearch guifg=#33ff1c guibg=#000000 gui=underline ctermfg=46 ctermbg=16 cterm=underline
+highlight Search guifg=NONE guibg=#000000 ctermfg=NONE ctermbg=16 cterm=NONE
+highlight WildMenu guifg=#33ff1c guibg=#000000 gui=underline ctermfg=46 ctermbg=16 cterm=underline
 
-hi TabLine	guifg=#e0e0e0 guibg=#444444 gui=none ctermfg=254 ctermbg=238 cterm=none
-hi TabLineSel	guifg=#ffffff gui=bold ctermfg=231 ctermbg=235 cterm=bold
-hi TabLineFill	guifg=#e0e0e0 guibg=#444444 gui=none ctermfg=254 ctermbg=238 cterm=none
+highlight TabLine guifg=#e0e0e0 guibg=#444444 gui=NONE ctermfg=254 ctermbg=238 cterm=NONE
+highlight TabLineSel guifg=#ffffff gui=bold ctermfg=231 cterm=bold
+highlight TabLineFill guifg=#e0e0e0 guibg=#444444 gui=NONE ctermfg=254 ctermbg=238 cterm=NONE
 
 " Syntax highlighting
-hi Comment	guifg=#99968b gui=italic ctermfg=246 ctermbg=235 cterm=NONE
-hi Todo		guifg=#ff4444 guibg=#333333 gui=bold ctermfg=203 ctermbg=236 cterm=bold
-hi String	guifg=#98ff85 gui=italic ctermfg=120 ctermbg=235 cterm=NONE
-hi Underlined	gui=underline guifg=#80a0ff ctermfg=111 ctermbg=235 cterm=underline
+highlight Comment guifg=#99968b gui=italic ctermfg=246 cterm=NONE
+highlight Todo guifg=#ff4444 guibg=#333333 gui=bold ctermfg=203 ctermbg=236 cterm=bold
+highlight String guifg=#98ff85 gui=italic ctermfg=120 cterm=NONE
+highlight Underlined guifg=#80a0ff gui=underline ctermfg=111 cterm=underline
 
-hi Identifier	guifg=#ffff99 gui=none ctermfg=228 ctermbg=235 cterm=none
-hi Function	guifg=#ffff99 gui=none ctermfg=228 ctermbg=235 cterm=none
-hi Type		guifg=#ffff99 gui=none ctermfg=228 ctermbg=235 cterm=none
+highlight Identifier guifg=#ffff99 gui=NONE ctermfg=228 cterm=NONE
+highlight Function guifg=#ffff99 gui=NONE ctermfg=228 cterm=NONE
+highlight Type guifg=#ffff99 gui=NONE ctermfg=228 cterm=NONE
 
-hi PreProc	guifg=#008faf gui=none ctermfg=31 ctermbg=235 cterm=none
-hi Number	guifg=#00ab11 gui=none ctermfg=34 ctermbg=235 cterm=none
-hi Constant	guifg=#ffa1cf gui=none ctermfg=218 ctermbg=235 cterm=none
+highlight PreProc guifg=#008faf gui=NONE ctermfg=31 cterm=NONE
+highlight Number guifg=#00ab11 gui=NONE ctermfg=34 cterm=NONE
+highlight Constant guifg=#ffa1cf gui=NONE ctermfg=218 cterm=NONE
 
-hi Statement	guifg=#8ac6f2 gui=none ctermfg=117 ctermbg=235 cterm=none
-hi Keyword	guifg=#8ac6f2 gui=none ctermfg=117 ctermbg=235 cterm=none
+highlight Statement guifg=#8ac6f2 gui=NONE ctermfg=117 cterm=NONE
+highlight Keyword guifg=#8ac6f2 gui=NONE ctermfg=117 cterm=NONE
+
+highlight DiffAdd guibg=#003300 ctermbg=22
+highlight DiffDelete guifg=#731b00 guibg=#400f00 ctermfg=88 ctermbg=52
+highlight DiffChange guibg=#1b0042 ctermbg=17
+highlight DiffText guibg=#003c4c ctermbg=24

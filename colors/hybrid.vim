@@ -126,21 +126,18 @@ else
     let s:blue       = "12"   " LightBlue
     let s:purple     = "13"   " LightMagenta
   elseif g:hybrid_use_iTerm_colors == 1
-    let s:background = "8"
-    let s:foreground = "15"
-    let s:selection  = "13"
+    let s:background = "NONE"
+    let s:foreground = "7"
+    let s:selection  = "0"
     let s:line       = "0"
-    let s:comment    = "7"
-    let s:red        = "1"   
-    let s:orange     = "9"   
-    let s:yellow     = "3"   
+    let s:comment    = "15"
+    let s:red        = "1"
+    let s:orange     = "11"
+    let s:yellow     = "3"
     let s:green      = "2"
     let s:aqua       = "6"
     let s:blue       = "4"
     let s:purple     = "5"
-    let s:darkcolumn = "11"
-    let s:addbg      = "10"
-    let s:changebg   = "12"
   else
     let s:foreground = "250"
     let s:selection  = "237"
