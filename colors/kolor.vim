@@ -15,67 +15,83 @@
 "
 "
 "
-" Name: Kolor
-" Author: Alessandro Di Martino
-" Version: 1.3.0
+" Name: kolor
+" Author: Alessandro Di Martino <aledimax@gmail.com>
+" Version: 1.4.1
 " URL: https://github.com/zeis/vim-kolor
-" License: MIT License (see end of this file)
+" License: MIT
 "
 " --------------------------------------------------------------------------
 " DESCRIPTION
 " --------------------------------------------------------------------------
 " Colorful Vim color scheme with 256 color terminal support.
-" Designed to have high text readability and optimal visibility of every
-" element, and to be eye comfortable as well.
+" Designed for high readability and optimal visibility of every element,
+" and to be eye comfortable as well.
 "
 " --------------------------------------------------------------------------
 " INSTALLATION
 " --------------------------------------------------------------------------
-" Copy kolor.vim to ~/.vim/colors (on Windows <your-vim-dir>\vimfiles\colors).
+" Copy kolor.vim to ~/.vim/colors (on Win <your-vim-dir>\vimfiles\colors).
 " Then add the line "colorscheme kolor" in your vimrc file, and restart Vim.
-" If you use Pathogen, the directory structure is compatible.
+"
+" --------------------------------------------------------------------------
+" OPTIONS
+" --------------------------------------------------------------------------
+" Options must be set before the line "colorscheme kolor" in your vimrc.
+"
+" let g:kolor_italic=1                 " Enable italic. Default: 1
+" let g:kolor_bold=1                   " Enable bold. Default: 1
+" let g:kolor_underlined=0             " Enable underline. Default: 0
+" let g:kolor_alternative_matchparen=0 " Gray 'MatchParen' color. Default: 0
 "
 " --------------------------------------------------------------------------
 " DONATIONS
 " --------------------------------------------------------------------------
-" If you want to make a donation, rather, consider to help the Uganda children
-" on Vim's website.
-" This color scheme is dedicated to them.
+" This color scheme is dedicated to the the Ugandan children (see Vim's
+" website).
+" How about donating to them? (http://iccf-holland.org/click5.html).
+" And, if you donate, please, let me know.
 
 
 highlight clear
 set background=dark
-if exists('syntax_on')
+if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name='kolor'
+let g:colors_name="kolor"
+
+
+if !exists("g:kolor_bold")
+  let g:kolor_bold=1
+endif
+if !exists("g:kolor_italic")
+  let g:kolor_italic=1
+endif
+if !exists("g:kolor_underlined")
+  let g:kolor_underlined=0
+endif
+if !exists("g:kolor_alternative_matchparen")
+  let g:kolor_alternative_matchparen=0
+endif
 
 highlight Normal          guifg=#c6c6c6    guibg=#2e2d2b    gui=none
 highlight SpecialKey      guifg=#7eaefd    guibg=NONE       gui=none
 highlight NonText         guifg=#7eaefd    guibg=#2e2d2b    gui=none
 highlight Directory       guifg=#e6987a    guibg=NONE       gui=none
-highlight ErrorMsg        guifg=#d96e8a    guibg=NONE       gui=bold
 highlight IncSearch       guifg=#000000    guibg=#ff5fd7    gui=none
-highlight Search          guifg=#ff8901    guibg=NONE       gui=bold
-highlight MoreMsg         guifg=#8cd991    guibg=NONE       gui=bold
-highlight ModeMsg         guifg=#e2e2e2    guibg=NONE       gui=bold
 highlight LineNr          guifg=#808080    guibg=#242322    gui=none
-highlight CursorLineNr    guifg=#e2e2e2    guibg=#383734    gui=bold
-highlight Question        guifg=#75d7d8    guibg=NONE       gui=bold
 highlight StatusLine      guifg=#000000    guibg=#9e9e9e    gui=none
 highlight StatusLineNC    guifg=#b2b2b2    guibg=#4a4a4a    gui=none
 highlight VertSplit       guifg=#4a4a4a    guibg=#4a4a4a    gui=none
-highlight Title           guifg=#e2e2e2    guibg=NONE       gui=none
 highlight Visual          guifg=#e2e2e2    guibg=#5c5c5c    gui=none
 highlight VisualNOS       guifg=#e2e2e2    guibg=NONE       gui=underline
-highlight WarningMsg      guifg=#ff5fd7    guibg=NONE       gui=bold
 highlight WildMenu        guifg=#000000    guibg=#75d7d8    gui=none
 highlight Folded          guifg=#8787af    guibg=#242322    gui=none
 highlight FoldColumn      guifg=#8787af    guibg=#242322    gui=none
 highlight DiffAdd         guifg=NONE       guibg=#005154    gui=none
 highlight DiffChange      guifg=NONE       guibg=#4f3598    gui=none
 highlight DiffDelete      guifg=#d96e8a    guibg=#72323f    gui=none
-highlight DiffText        guifg=NONE       guibg=#00488e    gui=none
+highlight DiffText        guifg=#000000    guibg=#75d7d8    gui=none
 highlight SignColumn      guifg=#808080    guibg=#2e2d2b    gui=none
 highlight Conceal         guifg=#c6c6c6    guibg=NONE       gui=none
 highlight SpellBad        guifg=NONE       guibg=NONE       gui=undercurl    guisp=#d96e8a
@@ -95,49 +111,86 @@ highlight CursorLine      guifg=NONE       guibg=#383734    gui=none
 highlight ColorColumn     guifg=NONE       guibg=#383734    gui=none
 highlight Cursor          guifg=#000000    guibg=#e2e2e2    gui=none
 highlight lCursor         guifg=#000000    guibg=#e2e2e2    gui=none
-highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=bold
-highlight Comment         guifg=#808080    guibg=NONE       gui=italic
-highlight Constant        guifg=#e6987a    guibg=NONE       gui=italic
 highlight Special         guifg=#ce6bd0    guibg=NONE       gui=none
 highlight Identifier      guifg=#75d7d8    guibg=NONE       gui=none
-highlight Statement       guifg=#d96e8a    guibg=NONE       gui=bold
 highlight PreProc         guifg=#dbc570    guibg=NONE       gui=none
-highlight Type            guifg=#a080ea    guibg=NONE       gui=bold
-highlight Underlined      guifg=#7eaefd    guibg=NONE       gui=underline
-highlight Error           guifg=#d96e8a    guibg=NONE       gui=bold
-highlight Todo            guifg=#75d7d8    guibg=NONE       gui=bold
-highlight String          guifg=#ad8788    guibg=NONE       gui=italic
 highlight Number          guifg=#dbc570    guibg=NONE       gui=none
 highlight Function        guifg=#88da77    guibg=NONE       gui=none
-highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=bold
+highlight htmlEndTag      guifg=#88da77    guibg=NONE       gui=none
+highlight xmlEndTag       guifg=#88da77    guibg=NONE       gui=none
+if g:kolor_bold==0
+  highlight ErrorMsg        guifg=#d96e8a    guibg=NONE       gui=none
+  highlight Search          guifg=#ff8901    guibg=NONE       gui=none
+  highlight MoreMsg         guifg=#8cd991    guibg=NONE       gui=none
+  highlight ModeMsg         guifg=#e2e2e2    guibg=NONE       gui=none
+  highlight CursorLineNr    guifg=#e2e2e2    guibg=#383734    gui=none
+  highlight Question        guifg=#75d7d8    guibg=NONE       gui=none
+  highlight WarningMsg      guifg=#ff5fd7    guibg=NONE       gui=none
+  highlight Statement       guifg=#d96e8a    guibg=NONE       gui=none
+  highlight Type            guifg=#a080ea    guibg=NONE       gui=none
+  highlight Error           guifg=#d96e8a    guibg=NONE       gui=none
+  highlight Todo            guifg=#75d7d8    guibg=NONE       gui=none
+  highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=none
+  highlight Title           guifg=#a080ea    guibg=NONE       gui=none
+  if g:kolor_alternative_matchparen==0
+    highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=none
+  else
+    highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=none
+  endif
+else
+  highlight ErrorMsg        guifg=#d96e8a    guibg=NONE       gui=bold
+  highlight Search          guifg=#ff8901    guibg=NONE       gui=bold
+  highlight MoreMsg         guifg=#8cd991    guibg=NONE       gui=bold
+  highlight ModeMsg         guifg=#e2e2e2    guibg=NONE       gui=bold
+  highlight CursorLineNr    guifg=#e2e2e2    guibg=#383734    gui=bold
+  highlight Question        guifg=#75d7d8    guibg=NONE       gui=bold
+  highlight WarningMsg      guifg=#ff5fd7    guibg=NONE       gui=bold
+  highlight Statement       guifg=#d96e8a    guibg=NONE       gui=bold
+  highlight Type            guifg=#a080ea    guibg=NONE       gui=bold
+  highlight Error           guifg=#d96e8a    guibg=NONE       gui=bold
+  highlight Todo            guifg=#75d7d8    guibg=NONE       gui=bold
+  highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=bold
+  highlight Title           guifg=#a080ea    guibg=NONE       gui=bold
+  if g:kolor_alternative_matchparen==0
+    highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=bold
+  else
+    highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=bold
+  endif
+endif
+if g:kolor_italic==0
+    highlight Comment         guifg=#808080    guibg=NONE   gui=none
+    highlight Constant        guifg=#e6987a    guibg=NONE   gui=none
+    highlight String          guifg=#ad8788    guibg=NONE   gui=none
+else
+    highlight Comment         guifg=#808080    guibg=NONE   gui=italic
+    highlight Constant        guifg=#e6987a    guibg=NONE   gui=italic
+    highlight String          guifg=#ad8788    guibg=NONE   gui=italic
+endif
+if g:kolor_underlined==0
+  highlight Underlined      guifg=#7eaefd    guibg=NONE   gui=none
+else
+  highlight Underlined      guifg=#7eaefd    guibg=NONE   gui=underline
+endif
 
 if &t_Co > 255
   highlight Normal          ctermfg=251     ctermbg=235     cterm=none
   highlight SpecialKey      ctermfg=111     ctermbg=none    cterm=none
   highlight NonText         ctermfg=111     ctermbg=235     cterm=none
   highlight Directory       ctermfg=180     ctermbg=none    cterm=none
-  highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=bold
   highlight IncSearch       ctermfg=0       ctermbg=206     cterm=none
-  highlight Search          ctermfg=208     ctermbg=none    cterm=bold
-  highlight MoreMsg         ctermfg=121     ctermbg=none    cterm=bold
-  highlight ModeMsg         ctermfg=254     ctermbg=none    cterm=bold
   highlight LineNr          ctermfg=244     ctermbg=234     cterm=none
-  highlight CursorLineNr    ctermfg=254     ctermbg=236     cterm=bold
-  highlight Question        ctermfg=80      ctermbg=none    cterm=bold
   highlight StatusLine      ctermfg=0       ctermbg=247     cterm=none
   highlight StatusLineNC    ctermfg=247     ctermbg=238     cterm=none
   highlight VertSplit       ctermfg=238     ctermbg=238     cterm=none
-  highlight Title           ctermfg=254     ctermbg=none    cterm=none
   highlight Visual          ctermfg=254     ctermbg=240     cterm=none
   highlight VisualNOS       ctermfg=254     ctermbg=none    cterm=underline
-  highlight WarningMsg      ctermfg=206     ctermbg=none    cterm=bold
   highlight WildMenu        ctermfg=0       ctermbg=80      cterm=none
   highlight Folded          ctermfg=103     ctermbg=234     cterm=none
   highlight FoldColumn      ctermfg=103     ctermbg=234     cterm=none
   highlight DiffAdd         ctermfg=none    ctermbg=23      cterm=none
   highlight DiffChange      ctermfg=none    ctermbg=56      cterm=none
   highlight DiffDelete      ctermfg=168     ctermbg=96      cterm=none
-  highlight DiffText        ctermfg=none    ctermbg=25      cterm=none
+  highlight DiffText        ctermfg=0       ctermbg=80      cterm=none
   highlight SignColumn      ctermfg=244     ctermbg=235     cterm=none
   highlight Conceal         ctermfg=251     ctermbg=none    cterm=none
   highlight SpellBad        ctermfg=168     ctermbg=none    cterm=underline
@@ -155,46 +208,58 @@ if &t_Co > 255
   highlight CursorLine      ctermfg=none    ctermbg=236     cterm=none
   highlight ColorColumn     ctermfg=none    ctermbg=236     cterm=none
   highlight Cursor          ctermfg=0       ctermbg=254     cterm=none
-  highlight MatchParen      ctermfg=235     ctermbg=206     cterm=bold
   highlight Comment         ctermfg=244     ctermbg=none    cterm=none
   highlight Constant        ctermfg=180     ctermbg=none    cterm=none
   highlight Special         ctermfg=176     ctermbg=none    cterm=none
   highlight Identifier      ctermfg=80      ctermbg=none    cterm=none
-  highlight Statement       ctermfg=168     ctermbg=none    cterm=bold
   highlight PreProc         ctermfg=186     ctermbg=none    cterm=none
-  highlight Type            ctermfg=141     ctermbg=none    cterm=bold
-  highlight Underlined      ctermfg=111     ctermbg=none    cterm=underline
-  highlight Error           ctermfg=168     ctermbg=none    cterm=bold
-  highlight Todo            ctermfg=80      ctermbg=none    cterm=bold
   highlight String          ctermfg=138     ctermbg=none    cterm=none
   highlight Number          ctermfg=186     ctermbg=none    cterm=none
   highlight Function        ctermfg=114     ctermbg=none    cterm=none
-  highlight Keyword         ctermfg=168     ctermbg=none    cterm=bold
+  highlight htmlEndTag      ctermfg=114     ctermbg=none    cterm=none
+  highlight xmlEndTag       ctermfg=114     ctermbg=none    cterm=none
+  if g:kolor_bold==0
+    highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=none
+    highlight Search          ctermfg=208     ctermbg=none    cterm=none
+    highlight MoreMsg         ctermfg=121     ctermbg=none    cterm=none
+    highlight ModeMsg         ctermfg=254     ctermbg=none    cterm=none
+    highlight CursorLineNr    ctermfg=254     ctermbg=236     cterm=none
+    highlight Question        ctermfg=80      ctermbg=none    cterm=none
+    highlight WarningMsg      ctermfg=206     ctermbg=none    cterm=none
+    highlight Statement       ctermfg=168     ctermbg=none    cterm=none
+    highlight Type            ctermfg=141     ctermbg=none    cterm=none
+    highlight Error           ctermfg=168     ctermbg=none    cterm=none
+    highlight Todo            ctermfg=80      ctermbg=none    cterm=none
+    highlight Keyword         ctermfg=168     ctermbg=none    cterm=none
+    highlight Title           ctermfg=141     ctermbg=none    cterm=none
+    if g:kolor_alternative_matchparen==0
+      highlight MatchParen      ctermfg=235     ctermbg=206     cterm=none
+    else
+      highlight MatchParen      ctermfg=235     ctermbg=247     cterm=none
+    endif
+  else
+    highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=bold
+    highlight Search          ctermfg=208     ctermbg=none    cterm=bold
+    highlight MoreMsg         ctermfg=121     ctermbg=none    cterm=bold
+    highlight ModeMsg         ctermfg=254     ctermbg=none    cterm=bold
+    highlight CursorLineNr    ctermfg=254     ctermbg=236     cterm=bold
+    highlight Question        ctermfg=80      ctermbg=none    cterm=bold
+    highlight WarningMsg      ctermfg=206     ctermbg=none    cterm=bold
+    highlight Statement       ctermfg=168     ctermbg=none    cterm=bold
+    highlight Type            ctermfg=141     ctermbg=none    cterm=bold
+    highlight Error           ctermfg=168     ctermbg=none    cterm=bold
+    highlight Todo            ctermfg=80      ctermbg=none    cterm=bold
+    highlight Keyword         ctermfg=168     ctermbg=none    cterm=bold
+    highlight Title           ctermfg=141     ctermbg=none    cterm=bold
+    if g:kolor_alternative_matchparen==0
+      highlight MatchParen      ctermfg=235     ctermbg=206     cterm=bold
+    else
+      highlight MatchParen      ctermfg=235     ctermbg=247     cterm=bold
+    endif
+  endif
+  if g:kolor_underlined==0
+    highlight Underlined      ctermfg=111     ctermbg=none    cterm=none
+  else
+    highlight Underlined      ctermfg=111     ctermbg=none    cterm=underline
+  endif
 end
-
-
-" --------------------------------------------------------------------------
-" LICENSE
-" --------------------------------------------------------------------------
-" Copyright (c) 2012 Alessandro Di Martino
-"
-" Permission is hereby granted, free of charge, to any person
-" obtaining a copy of this software and associated documentation
-" files (the "Software"), to deal in the Software without
-" restriction, including without limitation the rights to use,
-" copy, modify, merge, publish, distribute, sublicense, and/or sell
-" copies of the Software, and to permit persons to whom the
-" Software is furnished to do so, subject to the following
-" conditions:
-"
-" The above copyright notice and this permission notice shall be
-" included in all copies or substantial portions of the Software.
-"
-" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-" EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-" OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-" NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-" HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-" WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-" FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-" OTHER DEALINGS IN THE SOFTWARE.

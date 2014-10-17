@@ -115,14 +115,16 @@ hi ColorColumn                     guibg=#f7f7f7
 hi Cursor          guifg=#ffffff   guibg=#000000
 hi CursorLine                      guibg=#f7f7f7
 hi Directory       guifg=#1d5a88
-hi VertSplit       guifg=#eeeeee   guibg=#eeeeee
+hi VertSplit       guifg=#a7a7a7   guibg=#a7a7a7
 hi Folded          guifg=#bbbbbb   guibg=#fbfbfb
 hi IncSearch                       guibg=#ffdfce
 hi LineNr          guifg=#bbbbbb
 hi NonText         guifg=#eeeeee
 hi Search                          guibg=#feffec
 hi StatusLine      guifg=#ffffff   guibg=#000000
-hi StatusLineNC    guifg=#ffffff   guibg=#eeeeee
+hi StatusLineNC    guifg=#ffffff   guibg=#a7a7a7
+hi Pmenu           guifg=#ffffff   guibg=#a7a7a7
+hi PmenuSel        guifg=#ffffff   guibg=#000000
 
 " Syntax related colors
 

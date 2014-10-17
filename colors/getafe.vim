@@ -1,27 +1,28 @@
 " Maintainer:   Lars Smit
-" Version:      0.1
-" Last Change:  7 februari 2011
+" Version:      1.1
+" Last Change:  19 januari 2013
 " Credits:      Vim color scheme "getafe"
 "
-" Color Scheme Overview: 
+" Color Scheme Overview:
 "	:ru syntax/hitest.vim
 "
-" Relevant Help: 
+" Relevant Help:
 "	:h highlight-groups
 "
 "	Colors
 "         HEX       R   G   B
 " blue    #01B0F0   1   176 240
+" purple  #B994FF   185 150 255
 " pink    #FF358B   255 53  139
 " black   #000000   0   0   0
 " brown   #1B1D1E   27  29  30
 " green   #AEEE00   174 238 0
 " grey    #5A7085   90  112 133
-" orange  #FF500E   255 80  14
+" orange  #FF6E0E   255 100 0
 " yellow  #FFDC00   255 220 0
 " white   #F8FFF9   248 255 249
-" cyan    #C6C5FE   198 197 254
-
+" cyan    #69C3FF   198 197 254
+" red     #FF0000   255 0   0
 
 set background=dark
 
@@ -75,18 +76,17 @@ hi PmenuThumb      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=1
 hi Question        guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Search          guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi SpecialKey      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi SpellBad        guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi SpellCap        guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi SpellLocal      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi SpellRare       guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi StatusLine      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi StatusLineNC    guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi TabLine         guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi TabLineFill     guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi TabLine         guifg=#5A7085   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi TabLineFill     guifg=#5A7085   guibg=#323638   gui=none            ctermfg=15      ctermbg=234
 hi TabLineSel      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Title           guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi VisualNOS       guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi WarningMsg      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi WarningMsg      guifg=#FF0000   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi WildMenu        guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 
 "————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
@@ -126,16 +126,16 @@ hi SpecialComment  guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=1
 hi Debug           guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Underlined      guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Ignore          guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
-hi Error           guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
+hi Error           guifg=#FF0000   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 hi Todo            guifg=#F8FFF9   guibg=#1B1D1E   gui=none            ctermfg=15      ctermbg=234
 
 "————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
 " Interface                                                                                                          "
 "————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
 
-hi ColorColumn                     guibg=#f7f7f7                                       ctermbg=15
-hi Cursor          guifg=#1B1D1E   guibg=#FF500E                       ctermfg=234     ctermbg=202
-hi CursorLine                      guibg=#f7f7f7                                       ctermbg=15
+hi ColorColumn                     guibg=#5A7085                                       ctermbg=15
+hi Cursor          guifg=#1B1D1E   guibg=#FF358B                       ctermfg=234     ctermbg=202
+hi CursorLine                      guibg=#000000                                       ctermbg=15
 hi Directory       guifg=#01B0F0                                       ctermfg=39
 hi VertSplit       guifg=#F8FFF9   guibg=#5A7085                       ctermfg=15      ctermbg=60
 hi Folded          guifg=#5A7085   guibg=#FFDC00                       ctermfg=60      ctermbg=220
@@ -143,22 +143,20 @@ hi IncSearch       guifg=#1B1D1E   guibg=#a7a7a7                       ctermfg=2
 hi LineNr          guifg=#5A7085   guibg=#000000                       ctermfg=60      ctermbg=0
 hi NonText         guifg=#eeeeee   guibg=#1B1D1E                       ctermfg=7       ctermbg=234
 hi Search          guifg=#F8FFF9   guibg=#FF358B                       ctermfg=15      ctermbg=204
-hi StatusLine      guifg=#F8FFF9   guibg=#01B0F0    gui=bold           ctermfg=15      ctermbg=39
+hi StatusLine      guifg=#000000   guibg=#01B0F0    gui=bold           ctermfg=15      ctermbg=39
 hi StatusLineNC    guifg=#F8FFF9   guibg=#5A7085                       ctermfg=15      ctermbg=60
 hi Todo            guifg=#000000   guibg=#FFDC00    gui=bold           ctermfg=0       ctermbg=220
-hi Visual                          guibg=#5A7085                                       ctermbg=60
-hi CursorLine                      guibg=#5A7085                                       ctermbg=60
-hi ColorColumn                     guibg=#5A7085                                       ctermbg=60
+hi Visual          guifg=#F8FFF9   guibg=#FF358B                                       ctermbg=60
 hi ModeMsg         guifg=#000000   guibg=#FFDC00                       ctermfg=0       ctermbg=220
 hi SpecialKey      guifg=#5A7085                                       ctermfg=60
 hi ErrorMsg        guifg=#000000   guibg=#FF500E                       ctermfg=0       ctermbg=202
 hi Title           guifg=#F8FFF9                                       ctermfg=15
 hi DiffAdd	       guifg=#000000   guibg=#AEEE00                       ctermfg=0       ctermbg=154
 hi DiffChange      guifg=#000000   guibg=#FFDC00                       ctermfg=0       ctermbg=220
-hi DiffDelete      guifg=#000000   guibg=#FF358B                       ctermfg=0       ctermbg=204
+hi DiffDelete      guifg=#000000   guibg=#9187FF                       ctermfg=0       ctermbg=204
 hi DiffText        guifg=#F8FFF9                                       ctermfg=15
 hi MatchParen      guifg=#F8FFF9   guibg=#FF500E                       ctermfg=15      ctermbg=202
-hi Identifier      guifg=#FF500E                                       ctermfg=202
+hi Identifier      guifg=#01B0F0                                       ctermfg=202
 hi Type            guifg=#AEEE00                                       ctermfg=154
 hi Label           guifg=#AEEE00                                       ctermfg=154
 hi Special         guifg=#01B0F0                                       ctermfg=39
@@ -173,17 +171,26 @@ hi PmenuThumb      guifg=#01B0F0                                       ctermfg=3
 "————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
 
 hi Comment         guifg=#5A7085                                       ctermfg=60
-hi Constant        guifg=#FF358B                                       ctermfg=204
-hi String          guifg=#FF358B                                       ctermfg=204
-hi Number          guifg=#FF500E                                       ctermfg=202
-hi Boolean         guifg=#AEEE00                                       ctermfg=154
-hi Float           guifg=#B37A7A                                       ctermfg=138
+hi Constant        guifg=#B994FF                                       ctermfg=204
+hi String          guifg=#AEEE00                                       ctermfg=204
+hi Number          guifg=#FF6E0E                                       ctermfg=202
+hi Boolean         guifg=#FF6E0E                                       ctermfg=154
+hi Float           guifg=#FF6E0E                                       ctermfg=138
 hi Function        guifg=#01B0F0                                       ctermfg=39
 hi Statement       guifg=#01B0F0                                       ctermfg=39
-hi Conditional     guifg=#AEEE00                                       ctermfg=154
-hi Operator        guifg=#FF500E                                       ctermfg=202
-hi Keyword         guifg=#AEEE00                                       ctermfg=154
-hi Define          guifg=#AEEE00                                       ctermfg=154
-hi Delimiter       guifg=#AEEE00                                       ctermfg=154
+hi Conditional     guifg=#69C3FF                                       ctermfg=154
+hi Operator        guifg=#69C3FF                                       ctermfg=202
+hi Keyword         guifg=#69C3FF                                       ctermfg=154
+hi Define          guifg=#69C3FF                                       ctermfg=154
+hi Delimiter       guifg=#69C3FF                                       ctermfg=154
+hi Exception       guifg=#FF0000
+hi Include         guifg=#FF0000
 
 
+" PHP specific colors
+hi phpStructure    guifg=#69C3FF                                       ctermfg=154
+hi phpRegion       guifg=#AEEE00                                       ctermfg=204
+hi phpStorageClass guifg=#69C3FF
+hi phpRepeat       guifg=#FF6E0E
+hi phpIdentifier   guifg=#F8FFF9
+hi phpMethodsVar   guifg=#69C3FF

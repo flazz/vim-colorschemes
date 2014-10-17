@@ -24,7 +24,7 @@ hi LineNr       guifg=#928c75  ctermfg=darkgray   guibg=#000000 ctermbg=black
 hi Directory    guifg=#00bbdd  ctermfg=cyan       guibg=#000000 ctermbg=black
 hi NonText      guifg=#77ff22  ctermfg=yellow     guibg=#000000 ctermbg=black  gui=bold cterm=bold
 hi SpecialKey   guifg=#559933  ctermfg=green      guibg=#000000 ctermbg=black
-hi SpellBad     guifg=NONE     ctermfg=white                    ctermbg=darkred
+hi SpellBad     guifg=NONE     ctermfg=darkred                  ctermbg=black
 hi SpellCap     guifg=NONE     ctermfg=white                    ctermbg=darkblue
 hi SpellLocal   guifg=NONE     ctermfg=black                    ctermbg=cyan
 hi SpellRare    guifg=NONE     ctermfg=white                    ctermbg=darkmagenta
@@ -41,13 +41,13 @@ hi Pmenu        guifg=#000000       guibg=#a6a190       ctermfg=white       cter
 hi PmenuSel     guifg=#ffffff       guibg=#133293       ctermfg=white       ctermbg=lightblue
 hi PmenuSbar    guifg=NONE          guibg=#555555       ctermfg=black       ctermbg=black
 hi PmenuThumb   guifg=NONE          guibg=#cccccc       ctermfg=gray        ctermbg=gray
-hi StatusLine   guifg=#222222       guibg=#c2bfa5       ctermfg=darkgray    ctermbg=yellow
-hi StatusLineNC guifg=#111111       guibg=#c2bfa5       ctermfg=darkgray    ctermbg=gray
+hi StatusLine   guifg=#222222       guibg=#c2bfa5       ctermfg=darkblue    ctermbg=white
+hi StatusLineNC guifg=#111111       guibg=#c2bfa5       ctermfg=lightblue   ctermbg=black
 hi WildMenu     guifg=#ffffff       guibg=#133293       ctermfg=white       ctermbg=darkblue  gui=bold   cterm=bold
 hi VertSplit    guifg=#c2bfa5       guibg=#c2bfa5       ctermfg=white       ctermbg=white
-hi TabLine      guifg=#000000       guibg=#c2bfa5       ctermfg=black       ctermbg=white
-hi TabLineFill  guifg=#000000       guibg=#c2bfa5       ctermfg=black       ctermbg=white
-hi TabLineSel   guifg=#ffffff       guibg=#133293       ctermfg=white       ctermbg=black
+hi TabLine      guifg=#000000       guibg=#c2bfa5       ctermfg=white       ctermbg=blue cterm=NONE
+hi TabLineSel   guifg=#ffffff       guibg=#133293       ctermfg=yellow      ctermbg=blue cterm=underline,bold
+hi TabLineFill  guifg=#000000       guibg=#c2bfa5       ctermfg=black       ctermbg=black
 
 "hi Menu
 "hi Scrollbar
@@ -73,7 +73,7 @@ hi ModeMsg      guifg=#eecc18 ctermfg=yellow
 hi Title        guifg=#dd4452 ctermfg=red       guibg=#000000 ctermbg=black  gui=bold cterm=bold
 hi Question     guifg=#66d077 ctermfg=green     guibg=#000000 ctermbg=black
 hi MoreMsg      guifg=#39d049 ctermfg=green     guibg=#000000 ctermbg=black
-hi ErrorMsg     guifg=#ffffff ctermfg=white     guibg=#ff0000 ctermbg=red    gui=bold cterm=bold
+hi ErrorMsg     guifg=#ff0000 ctermfg=red       guibg=#000000 ctermbg=black  gui=bold cterm=bold
 hi WarningMsg   guifg=#ccae22 ctermfg=yellow    guibg=#000000 ctermbg=black  gui=bold cterm=bold
 
 
@@ -89,7 +89,8 @@ hi Identifier   guifg=#ffffff  ctermfg=white       guibg=#000000 ctermbg=black  
 hi Operator     guifg=#ffffff  ctermfg=white       guibg=#000000 ctermbg=black
 hi Delimiter    guifg=#ffffff  ctermfg=white       guibg=#000000 ctermbg=black
 hi Todo         guifg=#a00000  ctermfg=darkred     guibg=#000000 ctermbg=black  gui=bold cterm=bold
-hi Error        guifg=#ffffff  ctermfg=white       guibg=#ff0000 ctermbg=red
+"hi Error        guifg=#ffffff  ctermfg=white       guibg=#ff0000 ctermbg=red
+hi Error        guifg=#ff0000  ctermfg=red       guibg=#000000 ctermbg=black  gui=bold cterm=bold
 hi Function     guifg=#2080ff  ctermfg=blue        guibg=#000000 ctermbg=black
 hi Underlined   guifg=#80a0ff  ctermfg=cyan        guibg=#000000 ctermbg=black  gui=underline cterm=underline
 hi Ignore       guifg=#888888  ctermfg=darkgray    guibg=#000000 ctermbg=black

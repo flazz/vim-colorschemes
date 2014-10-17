@@ -13,29 +13,30 @@ hi Cursor         guifg=#212121           guibg=#9ca9b7
 hi CursorLine	  guifg=#ffffff		      guibg=#6c8095
 hi Directory      guifg=#6c8095            guibg=NONE
 hi VertSplit      guifg=#b6b6b6           guibg=#a6a6a6
-hi Folded         guifg=#424242           guibg=NONE     gui=italic
-hi FoldColumn	  guifg=#9ca9b7           guibg=NONE     gui=italic
-hi vimFold	      guifg=#dee4ea		      guibg=NONE     gui=italic
+hi Folded         guifg=#9ca9b7           guibg=NONE        gui=italic
+hi FoldColumn	  guifg=#9ca9b7           guibg=NONE        gui=italic
+hi vimFold	      guifg=#dee4ea		      guibg=NONE        gui=italic
 hi IncSearch      guifg=#212121           guibg=#b6b6b6
 hi LineNr         guifg=#424242           guibg=NONE
 hi ModeMsg        guifg=#8f9d6a           guibg=NONE
 hi MoreMsg        guifg=#8f9d6a           guibg=NONE
 hi NonText        guifg=#424242           guibg=NONE
-hi Search         guifg=#212121           guibg=#b6b6b6     gui=underline
+hi Search         guifg=#eedd82           guibg=NONE        gui=underline
 hi StatusLine     guifg=#9ca9b7           guibg=#424242     
 hi StatusLineNC   guifg=#9ca9b7           guibg=#212121     
 hi Visual         guifg=#212121           guibg=#9ca9b7     gui=italic
 hi WildMenu       guifg=#6c8095           guibg=#ffffff
-hi MatchParen	  guifg=#ffffff		      guibg=#6c8095     gui=bold
+hi MatchParen	  guifg=#ffffff		      guibg=#6c8095     gui=NONE
 hi ErrorMsg	      guifg=#cf6a4c           guibg=NONE        gui=NONE
 hi WarningMsg	  guifg=#eedd82		      guibg=NONE        gui=NONE
-hi Title	      guifg=#cf6a4c		      guibg=NONE
+hi Title	      guifg=#cf6a4c		      guibg=NONE        gui=NONE
+hi SpecialKey     guifg=#424242           guibg=NONE
 
 "Syntax hilight groups
 
-hi Comment        guifg=#424242           gui=italic
-hi Constant       guifg=#7587a6           gui=bold
-hi Exception      guifg=#cf6a4c           gui=NONE
+hi Comment        guifg=#646959           gui=italic
+hi Constant       guifg=#7587a6           gui=NONE
+hi Exception      guifg=#cf6a4c           gui=NONE          
 hi String         guifg=#8f9d6a           gui=NONE
 hi Variable       guifg=#7587a6           gui=NONE
 hi Number         guifg=#cf6a4c           gui=NONE
@@ -48,7 +49,7 @@ hi Keyword        guifg=#cda869           gui=NONE
 hi PreProc        guifg=#7587a6           gui=NONE
 hi Type           guifg=#9b859d		      gui=NONE		
 hi Typedef        guifg=#cda869           gui=NONE
-hi Special        guifg=#cda869           gui=NONE
+hi Special        guifg=NONE              guibg=NONE         gui=bold
 hi SpecialChar    guifg=#7587a6           gui=NONE
 hi SpecialComment guifg=#4f94cd           gui=NONE
 hi Ignore         guifg=#848484           gui=NONE
@@ -76,19 +77,19 @@ hi pythonClassVariable  guifg=NONE guibg=NONE gui=NONE
 hi pythonOperator  guifg=NONE guibg=NONE gui=NONE
 hi pythonException  guifg=#cf6a4c guibg=NONE gui=NONE
 hi pythonPseudoVariable  guifg=NONE guibg=NONE gui=NONE
+
 hi makoDelimiter  guifg=NONE guibg=NONE gui=NONE
 hi makoComment  guifg=NONE guibg=NONE gui=NONE
+
 hi htmlTag  guifg=#cda869 guibg=NONE gui=NONE
 hi htmlEndTag  guifg=#cda869 guibg=NONE gui=NONE
 hi htmlTagName  guifg=#b6b6b6 guibg=NONE gui=NONE
 hi htmlArg  guifg=NONE guibg=NONE gui=NONE
 hi htmlSpecialChar  guifg=#cf6a4c guibg=NONE gui=NONE
+
 hi javaScriptFunction  guifg=#cf6a4c guibg=NONE gui=NONE
 hi javaScriptBraces  guifg=NONE guibg=NONE gui=NONE
-hi yamlKey  guifg=#4f94cd guibg=NONE gui=NONE
-hi yamlAnchor  guifg=NONE guibg=NONE gui=NONE
-hi yamlAlias  guifg=NONE guibg=NONE gui=NONE
-hi yamlDocumentHeader  guifg=#cda869 guibg=NONE gui=NONE
+
 hi cssURL  guifg=NONE guibg=NONE gui=NONE
 hi cssFunctionName  guifg=NONE guibg=NONE gui=NONE
 hi cssColor  guifg=NONE guibg=NONE gui=NONE
@@ -97,7 +98,6 @@ hi cssClassName  guifg=#cda869 guibg=NONE gui=NONE
 hi cssValueLength  guifg=NONE guibg=NONE gui=NONE
 hi cssCommonAttr  guifg=#cf6a4c guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
-
 "diff
 
 hi DiffAdd        guifg=#8f9d6a          guibg=NONE
