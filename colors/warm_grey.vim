@@ -33,6 +33,7 @@ hi Underlined  guifg=#202020 gui=underline
 hi Cursor    guifg=black   guibg=#b8b4b0
 hi lCursor   guifg=black   guibg=white
 hi LineNr    guifg=#646260 guibg=#d8d4d0 gui=italic
+hi SignColumn    guifg=#646260 guibg=#d8d4d0 gui=italic
 
 hi Normal    guifg=#444240   guibg=#f0f0f0
 
@@ -88,9 +89,9 @@ hi Todo       guifg=#848280 guibg=NONE gui=bold,underline
 hi Special    guifg=#602000 gui=none
 
 
-" color of <TAB>s etc...  
-"hi SpecialKey guifg=#d8a080 guibg=#e8e8e8 gui=italic  
-hi SpecialKey guifg=#c4c2c0 guibg=#e4e2e0 gui=italic,bold  
+" color of <TAB>s etc...
+"hi SpecialKey guifg=#d8a080 guibg=#e8e8e8 gui=italic
+hi SpecialKey guifg=#c4c2c0 guibg=#e4e2e0 gui=italic,bold
 
 " Diff
 hi DiffChange guifg=NONE guibg=#e4e2e0 gui=italic

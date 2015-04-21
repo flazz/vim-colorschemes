@@ -1,5 +1,5 @@
 "%% SiSU Vim color file
-" SlateDark Maintainer: Rudra Banerjee <bnrj.rudra@yahoo.com> 
+" SlateDark Maintainer: Rudra Banerjee <bnrj.rudra@yahoo.com>
 " Originally inspired from Slate by Ralph Amissah
 :set background=dark
 highlight clear
@@ -40,7 +40,8 @@ hi Define guifg=gold gui=bold ctermfg=yellow
 hi Type guifg=CornflowerBlue ctermfg=2
 hi Function guifg=navajowhite ctermfg=brown
 hi Structure guifg=green ctermfg=green
-hi LineNr guifg=grey50 ctermfg=3
+hi LineNr guifg=grey50 guibg=#262626
+hi SignColumn guifg=grey50 guibg=#262626
 hi Ignore guifg=grey40 cterm=bold ctermfg=7
 hi Todo guifg=orangered guibg=yellow2
 hi Directory ctermfg=darkcyan

@@ -37,7 +37,7 @@ hi Statement  guifg=#7BD3D4
 hi Type		  guifg=#6CD69A
 hi PreProc    guifg=#FED678
 hi Constant	  guifg=#EFECCA
-hi Identifier guifg=#ABD585 
+hi Identifier guifg=#ABD585
 
 "highlight groups
 hi Ignore	guifg=grey40
@@ -54,7 +54,9 @@ hi ErrorMsg guifg=#FFFFFF guibg=#FF0000
 hi VertSplit	guibg=#555555 guifg=#FFFFFF gui=none
 hi Folded	guibg=#A6D5F6 guifg=#0B1317
 hi FoldColumn	guibg=#A6D5F6 guifg=#0B1317
-hi LineNr   guifg=#A6D5F6 guibg=#555555 
+"hi LineNr   guifg=#A6D5F6 guibg=#555555
+hi LineNr   guibg=#101D23 guifg=#A6D5F6
+hi SignColumn   guibg=#101D23 guifg=#A6D5F6
 hi NonText  guifg=#A6A6A6 guibg=#102E3C
 hi Search	guibg=slategrey guifg=#FFDABB
 hi IncSearch	guifg=slategrey guibg=#FFDFB0
@@ -62,5 +64,5 @@ hi StatusLine	guibg=#A6D5F6 guifg=#0B1317 gui=none
 hi StatusLineNC	guibg=#1079B0 guifg=#272334 gui=none
 hi Visual   guifg=#6D4039 guibg=#009192
 hi Pmenu	guifg=#5A5A5A guibg=#A8FF97
-hi PmenuSel	guifg=#2E2E2E guibg=#62FB44 
+hi PmenuSel	guifg=#2E2E2E guibg=#62FB44
 "vim: sw=4

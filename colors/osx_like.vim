@@ -19,6 +19,7 @@ hi Normal gui=none guifg=Black guibg=White
 
 hi Cursor guifg=White guibg=Black
 hi LineNr gui=bold guifg=#828c95 guibg=#bbbbbb
+hi SignColumn gui=bold guifg=#828c95 guibg=#ffffff
 hi NonText gui=bold guifg=DarkGray guibg=#bbbbbb
 hi SpecialKey gui=none guifg=RoyalBlue4
 hi Title gui=bold guifg=Black

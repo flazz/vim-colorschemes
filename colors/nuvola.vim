@@ -53,6 +53,7 @@ hi! link FoldColumn Folded
 " Other {{{1
 hi Directory    gui=NONE guifg=#0000ff guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 guibg=NONE
+hi SignColumn   gui=NONE guifg=#8080a0 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff guibg=#EFEFF7
 "hi SpecialKey   gui=NONE guifg=#A35B00 guibg=NONE
 hi Title        gui=BOLD guifg=#1014AD guibg=NONE

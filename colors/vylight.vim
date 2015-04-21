@@ -20,6 +20,7 @@ hi Normal        guifg=#1a1a1a  guibg=white
 hi Title         guifg=black    guibg=white
 hi Cursor        guibg=#111111
 hi LineNr        guifg=#aaaaaa  guibg=#f8f8f8
+hi SignColumn    guifg=#aaaaaa  guibg=#f8f8f8
 hi Visual        guibg=#bbddff
 hi NonText       guifg=#cccccc  guibg=#fafafa
 hi StatusLine    guifg=#222222  guibg=#eeeeee  gui=none
@@ -43,7 +44,7 @@ if version >= 700
 endif
 
 
-" Syntax highlighting 
+" Syntax highlighting
 hi Comment       guifg=#668866  gui=none
 "hi Todo          guifg=#225522  guibg=white    gui=italic
 hi Todo          guifg=#446644  guibg=#ddeecc  gui=italic

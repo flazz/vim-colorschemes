@@ -85,14 +85,15 @@ exe 'hi Normal         guifg='.s:text              .' guibg='.s:bg
 exe 'hi NonText        guifg='.s:text_very_minor   .' guibg='.s:bg
 exe 'hi SpecialKey     guifg='.s:text_very_minor              .' guibg='.s:bg
 
-exe 'hi LineNr         guifg='.s:border1_fg        .' guibg='.s:border1_bg      .' gui=none'
+exe 'hi LineNr         guifg='.s:border1_fg        .' guibg='.s:bg      .' gui=none'
 exe 'hi StatusLine     guifg='.s:text_hl           .' guibg='.s:border1_bg      .' gui=underline'
 exe 'hi StatusLineNC   guifg='.s:text_minor        .' guibg='.s:border1_bg      .' gui=underline'
 exe 'hi VertSplit      guifg='.s:border1_bg        .' guibg='.s:border1_bg      .' gui=none'
 
 exe 'hi Folded         guifg='.s:text_minor         .' guibg='.s:border1_bg  .' gui=none'
 exe 'hi FoldColumn     guifg='.s:text_minor         .' guibg='.s:border1_bg  .' gui=none'
-exe 'hi SignColumn     guifg='.s:text_minor         .' guibg='.s:border1_bg  .' gui=none'
+"exe 'hi SignColumn     guifg='.s:text_minor         .' guibg='.s:border1_bg  .' gui=none'
+exe 'hi SignColumn     guifg='.s:border1_fg         .' guibg='.s:bg  .' gui=none'
 
 exe 'hi Comment        guifg='.s:greyed            .' guibg='.s:bg        .' gui=none'
 exe 'hi TODO           guifg='.s:greyed            .' guibg='.s:bg        .' gui=bold'

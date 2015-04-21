@@ -3,7 +3,7 @@
 " License:    MIT
 
 " this is for gvim only colorscheme
-" but 
+" but
 
 
 hi clear
@@ -22,6 +22,7 @@ hi PmenuSel     guibg=#d8fa3c guifg=#010101 gui=NONE
 hi PmenuSbar    guibg=#434e56 guifg=#f8f8f8 gui=NONE
 hi PmenuThumb   guibg=#adc6ee guifg=#010101 gui=NONE
 hi LineNr       guibg=#434e56 guifg=#adc6ee gui=NONE
+hi SignColumn   guibg=#434e56 guifg=#adc6ee gui=NONE
 hi CursorLineNr guibg=#292929 guifg=#d8fa3c
 hi CursorLine   guibg=#292929
 hi StatusLine   guibg=#000000 guifg=#d8fa3c gui=bold

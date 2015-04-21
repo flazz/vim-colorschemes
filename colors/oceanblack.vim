@@ -34,6 +34,7 @@ highlight FoldColumn        gui=None guibg=#305060 guifg=#b0d0e0
 highlight IncSearch gui=reverse guifg=fg guibg=bg
 "highlight LineNr        guibg=grey6 guifg=LightSkyBlue3
 highlight LineNr        guibg=grey6 guifg=#777777
+highlight SignColumn        guibg=grey6 guifg=#777777
 highlight ModeMsg       guibg=DarkGreen guifg=LightGreen
 highlight MoreMsg       gui=bold  guifg=SeaGreen4 guibg=bg
 if version < 600
