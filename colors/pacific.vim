@@ -54,7 +54,6 @@ hi ErrorMsg guifg=#FFFFFF guibg=#FF0000
 hi VertSplit	guibg=#555555 guifg=#FFFFFF gui=none
 hi Folded	guibg=#A6D5F6 guifg=#0B1317
 hi FoldColumn	guibg=#A6D5F6 guifg=#0B1317
-"hi LineNr   guifg=#A6D5F6 guibg=#555555
 hi LineNr   guibg=#101D23 guifg=#A6D5F6
 hi SignColumn   guibg=#101D23 guifg=#A6D5F6
 hi NonText  guifg=#A6A6A6 guibg=#102E3C
