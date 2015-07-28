@@ -1,6 +1,7 @@
 require 'json'
 require 'open-uri'
 require 'fileutils'
+require 'uri'
 
 base_url = "http://vimcolors.com/api/colorschemes"
 
@@ -17,7 +18,8 @@ Dir.chdir "repos"
   # For each colorscheme, clone the git repo
   json["colorschemes"].each do |colorscheme|
     github_repo = colorscheme["github_repo"]["address"]
-    system("git clone #{github_repo}")
+    uri = URI(github_repo)
+    system("git clone git@github.com:#{uri.path}")
   end
   sleep 1
 end
