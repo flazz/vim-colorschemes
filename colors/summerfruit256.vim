@@ -248,7 +248,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("Folded", "3c78a2", "c3daea", "")
     call <SID>X("IncSearch", "708090", "f0e68c", "")
     call <SID>X("Pmenu", "ffffff", "cb2f27", "")
-    "call <SID>X("SignColumn", "", "", "")
+    call <SID>X("SignColumn", "", "", "")
     call <SID>X("CursorLine", "", "c0d9eb", "")
     call <SID>X("LineNr", "eeeeee", "438ec3", "bold")
     call <SID>X("SignColumn", "000000", "ffffff", "")

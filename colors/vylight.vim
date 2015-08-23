@@ -44,7 +44,7 @@ if version >= 700
 endif
 
 
-" Syntax highlighting
+" Syntax highlighting 
 hi Comment       guifg=#668866  gui=none
 "hi Todo          guifg=#225522  guibg=white    gui=italic
 hi Todo          guifg=#446644  guibg=#ddeecc  gui=italic

@@ -37,7 +37,7 @@ hi Statement  guifg=#7BD3D4
 hi Type		  guifg=#6CD69A
 hi PreProc    guifg=#FED678
 hi Constant	  guifg=#EFECCA
-hi Identifier guifg=#ABD585
+hi Identifier guifg=#ABD585 
 
 "highlight groups
 hi Ignore	guifg=grey40
@@ -63,5 +63,5 @@ hi StatusLine	guibg=#A6D5F6 guifg=#0B1317 gui=none
 hi StatusLineNC	guibg=#1079B0 guifg=#272334 gui=none
 hi Visual   guifg=#6D4039 guibg=#009192
 hi Pmenu	guifg=#5A5A5A guibg=#A8FF97
-hi PmenuSel	guifg=#2E2E2E guibg=#62FB44
+hi PmenuSel	guifg=#2E2E2E guibg=#62FB44 
 "vim: sw=4

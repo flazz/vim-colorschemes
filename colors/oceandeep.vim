@@ -31,7 +31,7 @@ if exists("syntax_on")
 endif
 let g:colors_name = "oceandeep"
 
-"""" GUI
+"""" GUI 
 
 highlight Cursor        gui=None guibg=PaleTurquoise3 guifg=White
 highlight CursorIM      gui=bold guifg=white guibg=PaleTurquoise3
@@ -47,10 +47,7 @@ highlight VertSplit     gui=NONE guifg=black guibg=grey60
 highlight Folded        gui=bold guibg=#305060 guifg=#b0d0e0
 highlight FoldColumn    gui=bold guibg=#305060 guifg=#b0d0e0
 highlight IncSearch     gui=reverse guifg=fg guibg=bg
-highlight LineNr        gui=bold guibg=#103040 guifg=LightSkyBlue3
-highlight SignColumn    gui=bold guibg=#103040 guifg=LightSkyBlue3
-" highlight LineNr        gui=bold guibg=grey6 guifg=LightSkyBlue3
-" highlight SignColumn    gui=bold guibg=grey6 guifg=LightSkyBlue3
+highlight LineNr        gui=bold guibg=grey6 guifg=LightSkyBlue3
 highlight ModeMsg       guibg=DarkGreen guifg=LightGreen
 highlight MoreMsg       gui=bold  guifg=SeaGreen4 guibg=bg
 if version < 600

@@ -1,5 +1,5 @@
 "%% SiSU Vim color file
-" SlateDark Maintainer: Rudra Banerjee <bnrj.rudra@yahoo.com>
+" SlateDark Maintainer: Rudra Banerjee <bnrj.rudra@yahoo.com> 
 " Originally inspired from Slate by Ralph Amissah
 :set background=dark
 highlight clear

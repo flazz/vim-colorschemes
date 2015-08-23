@@ -3,7 +3,7 @@
 " License:    MIT
 
 " this is for gvim only colorscheme
-" but
+" but 
 
 
 hi clear

@@ -49,10 +49,10 @@ else                     "Console Vim
     let s:GREEN  = '28'
     let s:YELLOW = '178'
     let s:BLUE   = '69'
-    let s:BLACK  = '0'
+    let s:BLACK  = '16'
     let s:DGREY  = '241'
     let s:LGREY  = '255'
-    let s:WHITE  = '15'
+    let s:WHITE  = '231'
   else
     "Set color palette with color names
     let s:RED    = 'red'
