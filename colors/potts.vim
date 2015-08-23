@@ -37,7 +37,7 @@ highlight DiffDelete term=bold ctermfg=13 ctermbg=11 gui=bold guifg=Magenta guib
 highlight DiffText term=reverse cterm=bold ctermfg=15 ctermbg=12 gui=bold guifg=White guibg=Red
 highlight Cursor guifg=bg guibg=fg
 highlight lCursor guifg=bg guibg=fg
-highlight Normal guifg=gray guibg=black font='6x13'
+highlight Normal guifg=gray guibg=black
 highlight Comment term=bold ctermfg=11 guifg=#80a0ff
 highlight Constant term=underline ctermfg=13 guifg=#ffa0a0
 highlight Special term=bold ctermfg=12 guifg=Orange
