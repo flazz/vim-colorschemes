@@ -29,21 +29,6 @@
 " terminfo file in `~/.terminfo/`  -or- you can be totally gross and force it
 " with `:set &t_Co=256` in vim. But don't be gross. It's uncouth.
 "
-" ## Color Choices
-"
-" As a historical note, some small effort was taken to be similar to the
-" default vim syntax highlighting where it makes sense. That is, "def" is
-" magenta in the default, so vim-detailed makes it a shade of purple (and uses
-" different shades for all the other magenta things from the default
-" colorscheme). A person could modify this idea and do better:
-"
-" - Greens - The 256 color palette itself is heavy on green variants. If you
-"   used more greens, you'd be able to group similar-but-different pieces
-"   together more closely.
-" - Coolness - If you adjusted the color choices for æﬆhetic value rather than
-"   utilitarian, you could get a more stylish theme without sacrificing much
-"   detail.
-"
 " ## Download
 "
 "  If using Pathogen,
@@ -80,8 +65,14 @@ let ruby_operators = 1
 " If you don't have this, rails.vim will zap the matchers when it resets
 " syntax for its own additions:
 au Syntax * call s:fatpacked_rainbow_parens()
+au Syntax * call s:detailed_syntax_addtions()
 
-au Syntax ruby call s:detailed_syntax_addtions()
+au Syntax ruby call s:ruby_syntax_and_highlights()
+au Syntax c    call s:c_syntax_and_highlights()
+au Syntax diff call s:diff_syntax_and_highlights()
+au Syntax vim  call s:vim_syntax_and_highlights()
+au Syntax javascript call s:javascript_syntax_and_highlights()
+au Syntax go   call s:go_syntax_and_highlights()
 
 " Show detailed syntax stack
 nmap <Leader>dets :call <SID>SynStack()<CR>
@@ -374,10 +365,13 @@ let s:c = {
   \'graygreen (TODO: use this)': 23,
   \'green22': 22,
   \'green23': 23,
+  \'green28': 28,
   \'green34': 34,
+  \'green37': 37,
   \'green71': 71,
   \'green76': 76,
   \'green84': 84,
+  \'green114': 114,
   \'green123': 123,
   \'seafoam': 30,
   \'seafoam2 (TODO: use this)': 35,
@@ -399,9 +393,11 @@ let s:c = {
   \'purple99 (TODO: use this)': 79,
   \'purple125': 125,
   \'purple126': 126,
-  \'purple127 (TODO: use this)': 127,
-  \'purple129 (TODO: use this)': 129,
+  \'purple127': 127,
   \'purple131': 131,
+  \'purple132': 132,
+  \'purple139': 139,
+  \'purple134': 134,
   \'purple141 (TODO: use this)': 141,
   \'purple161 (TODO: use this)': 161,
   \'purple201': 201,
@@ -455,8 +451,18 @@ fun! s:fgbg(group, fg, bg)
   exe 'hi '.a:group.' '.s:color_for(a:fg,'fg').' '.s:color_for(a:bg,'bg')
 endfun
 
+fun! s:bold(group)
+  exe 'hi '.a:group.' cterm=bold gui=bold'
+endfun
+
 fun! s:bold_fg(group, fg)
-  exe 'hi '.a:group.' '.s:color_for(a:fg,'fg').' cterm=bold gui=bold'
+  call s:fg(a:group, a:fg)
+  call s:bold(a:group)
+endfun
+
+fun! s:bold_fgbg(group, fg, bg)
+  call s:fgbg(a:group, a:fg, a:bg)
+  call s:bold(a:group)
 endfun
 
 fun! s:underline_fgbg(group, fg, bg)
@@ -472,9 +478,7 @@ endfun
 " For now, force darkness. If you're a big fan of white bg's, let me know, and
 " we can collaborate on a solution.
 set bg=dark
-hi Normal ctermfg=254 ctermbg=0
-call s:fgbg('Normal', 'gray254', 'basic8_black')
-" Note: ctermbg=233 was my previous value before user feedback. Any opinions?
+call s:fgbg('Normal', 'gray254', 'gray232')
 
 " Basic/Default-like Palette {{{
 hi SpecialKey     term=bold ctermfg=81 guifg=Cyan
@@ -482,43 +486,26 @@ hi NonText        term=bold ctermfg=12 gui=bold guifg=Blue
 hi Directory      term=bold ctermfg=159 guifg=Cyan
 hi ErrorMsg       term=standout ctermfg=15 ctermbg=1 guifg=White guibg=Red
 hi IncSearch      term=reverse cterm=reverse gui=reverse
-hi Search         term=reverse ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 hi MoreMsg        term=bold ctermfg=121 gui=bold guifg=SeaGreen
 hi ModeMsg        term=bold cterm=bold gui=bold
-hi LineNr         term=underline ctermfg=11 guifg=Yellow
+hi LineNr gui=NONE term=NONE guifg=#005f87 ctermfg=24
 hi CursorLineNr   term=bold ctermfg=11 gui=bold guifg=Yellow
 hi Question       term=standout ctermfg=121 gui=bold guifg=Green
 hi StatusLine     term=bold,reverse cterm=bold,reverse gui=bold,reverse
 hi StatusLineNC   term=reverse cterm=reverse gui=reverse
 hi VertSplit      term=reverse cterm=reverse gui=reverse
 hi Title          term=bold ctermfg=225 gui=bold guifg=Magenta
-hi Visual         term=reverse ctermbg=242 guibg=DarkGrey
-hi VisualNOS      term=bold,underline cterm=bold,underline gui=bold,underline
 hi WarningMsg     term=standout ctermfg=224 guifg=Red
 hi WildMenu       term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
-hi Folded         term=standout ctermfg=14 ctermbg=242 guifg=Cyan guibg=DarkGrey
 hi FoldColumn     term=standout ctermfg=14 ctermbg=242 guifg=Cyan guibg=Grey
-hi DiffAdd        term=bold ctermbg=4 guibg=DarkBlue
-hi DiffChange     term=bold ctermbg=5 guibg=DarkMagenta
-hi DiffDelete     term=bold ctermfg=12 ctermbg=6 gui=bold guifg=Blue guibg=DarkCyan
-hi DiffText       term=reverse cterm=bold ctermbg=9 gui=bold guibg=Red
-hi SignColumn     term=standout ctermfg=14 ctermbg=242 guifg=Cyan guibg=Grey
-hi Conceal        ctermfg=7 ctermbg=242 guifg=LightGrey guibg=DarkGrey
 hi SpellBad       term=reverse ctermbg=9 gui=undercurl guisp=Red
 hi SpellCap       term=reverse ctermbg=12 gui=undercurl guisp=Blue
 hi SpellRare      term=reverse ctermbg=13 gui=undercurl guisp=Magenta
 hi SpellLocal     term=underline ctermbg=14 gui=undercurl guisp=Cyan
-hi Pmenu          ctermfg=0 ctermbg=13 guibg=Magenta
-hi PmenuSel       ctermfg=0 ctermbg=242 guibg=DarkGrey
-hi PmenuSbar      ctermbg=248 guibg=Grey
-hi PmenuThumb     ctermbg=15 guibg=White
 hi TabLine        term=underline cterm=underline ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 hi TabLineSel     term=bold cterm=bold gui=bold
 hi TabLineFill    term=reverse cterm=reverse gui=reverse
 hi CursorColumn   term=reverse ctermbg=242 guibg=Grey40
-hi CursorLine     term=underline cterm=underline guibg=Grey40
-hi ColorColumn    term=reverse ctermfg=9 ctermbg=12 guifg=black guibg=lightgrey
-hi MatchParen     term=reverse ctermbg=6 guibg=DarkCyan
 hi Constant       term=underline ctermfg=13 guifg=#ffa0a0
 hi Special        term=bold ctermfg=224 guifg=Orange
 hi Identifier     term=underline cterm=bold ctermfg=14 guifg=#40ffff
@@ -533,15 +520,15 @@ hi Todo           term=standout ctermfg=0 ctermbg=11 guifg=Blue guibg=Yellow
 call s:fg('Comment', 'gray242') " In my books, comments should be quiet.
 " }}}
 
-" Default links {{{
-hi link String          Constant
+" Generic links {{{
+hi link String          detailedString
 hi link Character       Constant
-hi link Number          Constant
-hi link Boolean         Constant
-hi link Float           Number
+hi link Number          detailedInteger
+hi link Boolean         detailedBoolean
+hi link Float           detailedFloat
 hi link Function        Identifier
 hi link Conditional     Statement
-hi link Repeat          Statement
+hi link Repeat          detailedRepeat
 hi link Label           Statement
 hi link Operator        Statement
 hi link Keyword         Statement
@@ -557,25 +544,134 @@ hi link SpecialChar     Special
 hi link Delimiter       Special
 hi link SpecialComment  Special
 hi link Debug           Special
-hi link mailQuoted1     Type
-hi link GPGWarning      WarningMsg
-hi link GPGError        ErrorMsg
-hi link GPGHighlightUnknownRecipient  ErrorMsg
-
-hi link rubyConditional  Conditional
-hi link rubyExceptional  rubyConditional " No-show.
-hi link rubyMethodExceptional  rubyDefine " And another.
-hi link rubyStringEscape  Special
-hi link rubyQuoteEscape  rubyStringEscape
-" hi rubyInterpolation cleared
-hi link rubyInvalidVariable  Error
-hi link rubyNoInterpolation  rubyString " E.g. \#{} inside a string.
-hi link rubyException   Exception
-hi link rubyKeyword     Keyword
 "}}}
 
 " s:detailed_colors — the good stuff {{{
 fun! s:detailed_colors()
+  call s:diff_syntax_and_highlights() " For vimdiff, which uses other filetypes
+
+  call s:underline_fgbg('MatchParen', 'gray255', 'gray243')
+
+  " For :set colorcolumn=80
+  call s:fgbg('ColorColumn', 'gray254', 'gray233')
+
+  " For the Syntastic and quickfixsigns plugins:
+  call s:bg('SignColumn', 'gray233')
+
+  "* Distinguish between each of TODO/FIXME/XXX
+  call s:fgbg('detailedTodo', 'green76', 'gray238')
+  call s:fgbg('detailedFixme', 'gray232', 'orange208')
+  call s:fgbg('detailedXxx', 'gray235', 'red196')
+
+  call s:fgbg('Error', 'gray235', 'red196')
+  call s:underline_fgbg('Search', 'gray254', 'gray235')
+
+  call s:fgbg('Folded', 'blue37', 'gray237')
+
+  " ^P (completion) menu
+  call s:fgbg('Pmenu', 'gray232', 'gray246')
+  call s:fgbg('PmenuSel', 'gray232', 'green28')
+  call s:bg('PmenuSbar', 'gray234')
+  call s:bg('PmenuThumb', 'gray232')
+
+  " Visual selections
+  call s:bg('Visual', 'green22')
+  hi VisualNOS term=bold,underline cterm=bold,underline gui=bold,underline
+
+  " Tone this one down a bit. The color lowers contrast and is too obtrusive.
+  call s:bg('Conceal', 'gray235')
+
+  " https://github.com/bitc/vim-bad-whitespace
+  call s:fgbg('BadWhitespace', 'gray238', 'yellow58')
+
+  call s:fg('detailedConstant', 'green34')
+
+  call s:bold_fg('detailedClass', 'purple126')
+  call s:fg('detailedModule', 'purple126')
+  call s:fg('detailedDefine', 'green23')
+  call s:fg('detailedInclude', 'purple53')
+  call s:fg('detailedDeclaration', 'yellow100') " Originally for go lang
+  call s:fg('detailedDeclType', 'green37') " Originally for go lang
+
+  call s:bold_fg('detailedFunction', 'blue27')
+
+  call s:fg('detailedInstanceVariable', 'blue75')
+
+  call s:fgbg('detailedString', 'purple125', 'gray233')
+  call s:fgbg('detailedInterpolatedString', 'purple126', 'gray233')
+  call s:bold_fgbg('detailedExecutedString', 'green34', 'purple53')
+  call s:fgbg('detailedRawString', 'red160', 'gray233')
+  call s:fg('detailedStringDelimiter', 'blue33')
+  call s:fg('detailedInterpolationDelimiter', 'gray244')
+
+  call s:fg('detailedRegexpSpecial', 'seafoam')
+
+  call s:fg('detailedRegexpCharClass', 'basic8_green')
+  call s:fg('detailedRegexpQuantifier', 'yellow148')
+  call s:bold_fg('detailedRegexpEscape', 'purple90')
+  call s:fg('detailedRegexpAnchor', 'purple90')
+  call s:fg('detailedRegexpDot', 'green34')
+  call s:bold_fg('detailedRegexpDelimiter', 'red88')
+  call s:fgbg('rubyRegexp', 'red160', 'gray233')
+  call s:fg('detailedASCIICode', 'green71')
+
+  call s:fg('detailedPseudoVariable', 'purple125')
+  call s:fg('detailedInteger', 'purple134')
+  call s:fg('detailedFloat', 'purple132')
+  call s:bold_fg('detailedImaginary', 'purple139')
+
+  call s:fg('detailedBlockArgument', 'blue87')
+  call s:fg('detailedSymbol', 'lavender104')
+  call s:bold_fg('detailedBlockParameter', 'basic8_cyan')
+  call s:fg('detailedBlockParameterList', 'blue25')
+  call s:bold_fg('detailedPredefinedConstant', 'green22')
+  call s:bold_fg('detailedPredefinedVariable', 'blue37')
+  call s:fg('detailedBoolean', 'purple131')
+  call s:fg('detailedOperator', 'green123')
+  call s:fg('detailedAccess', 'yellow100')
+  call s:fg('detailedAttribute', 'orange178') " attr_{accessor,reader,writer}
+  call s:fg('detailedEval', 'yellow190')
+
+  " Blocks:
+  " (basic)
+  call s:fg('detailedMethodBlock', 'green114')
+  call s:fg('detailedBlock', 'purple225')
+  call s:fg('detailedBlockExpression', 'orange180')
+  " (conditionals)
+  call s:fg('detailedControl', 'orange178')
+  call s:bold_fg('Conditional', 'basic8_yellow')
+  call s:bold_fg('detailedConditionalModifier', 'yellow148') " 'Yoda if'
+  call s:fg('detailedConditionalExpression', 'light_yellow230')
+  " (loops)
+  call s:bold_fg('detailedRepeat', 'orange178')
+  call s:bold_fg('detailedRepeatModifier', 'yellow149') " …while/until
+  call s:fg('detailedRepeatExpression', 'orange222')
+
+  call s:fg('detailedSharpBang', 'gray251')
+  " hi rubyMultilineComment cleared
+  call s:fg('detailedDataDirective', 'purple201')
+  call s:fg('detailedData', 'gray245')
+
+  call s:bold_fg('detailedDirective', 'green22')
+
+  "* `fail`/`raise`/`exit` were yellow by default, but here a more warny orange.
+  call s:fg('Exception', 'orange208')
+  "* class `@@vars` get ugly, cautionary color: they are troublesome.
+  call s:fgbg('rubyClassVariable', 'blue75', 'red52')
+  "* global `$vars` also get a bit of ugliness. Everyone knows they're iffy.
+  call s:fgbg('rubyGlobalVariable', 'red161', 'gray234')
+
+  " rails.vim niceness:
+  call s:fg('detailedRailsARAssociationMethod', 'teal50')
+
+  " detailed.vim especialties:
+  call s:fg('detailedInitialize', 'green84')
+  hi link detailedEncodingDirective detailedDirective
+
+  hi link detailedExits Exception
+endfun
+
+fun! s:diff_syntax_and_highlights()
   " vimdiff uses Diff*
   call s:bg('DiffChange', 'gray240')
   call s:bg('DiffText', 'gray232')
@@ -585,115 +681,150 @@ fun! s:detailed_colors()
   call s:fg('diffAdded', 'green34')
   call s:fg('diffRemoved', 'yellow58')
   " diffFile
+endfun
 
-  call s:fg('rubyConstant', 'green34')
+fun! s:c_syntax_and_highlights()
+  hi link cRepeat detailedRepeat
+  hi link cUserLabel detailedRepeat
+  hi link cInclude detailedModule
+  hi link cStatement detailedControl " return goto asm continue break
+  hi link cConstant detailedConstant
+  hi link cNumber detailedInteger
+  " Since the C details came after Ruby, the names could be redone a bit:
+  hi link cIncluded detailedString
+  hi link cStructure detailedClass
+  hi link cStorageClass detailedClass
+  hi link cOperator detailedDefine
+endfun
 
-  call s:bold_fg('rubyClass', 'purple126')
-  call s:fg('rubyModule', 'purple126')
-  call s:fg('rubyDefine', 'basic8_magenta')
-  call s:fg('rubyInclude', 'purple53')
+fun! s:go_syntax_and_highlights()
 
-  call s:bold_fg('rubyFunction', 'blue27')
-  " No-show: call s:make_obvious('rubyMethodDeclaration')
+  " hi link goBlock detailedBlock
+  hi link goDirective detailedDirective
+  hi link goDeclaration detailedDeclaration
+  hi link goDeclType detailedDeclType
+  hi link goConstants detailedBoolean
+  hi link goStatement detailedControl
+  hi link goRawString detailedRawString
+  hi link goImaginary detailedImaginary
+  hi link goSpaceError BadWhitespace
+endfun
 
-  call s:fg('rubyInstanceVariable', 'blue75')
+fun! s:vim_syntax_and_highlights()
+  hi link vimFuncKey detailedDefine
+  hi link vimFunction detailedFunction
+  "hi link vimFuncBody detailedDefine
+endfun
 
-  call s:fgbg('rubyString', 'red160', 'gray233')
-  call s:fg('rubyStringDelimiter', 'blue33')
-  call s:fg('rubyInterpolationDelimiter', 'gray244')
+fun! s:javascript_syntax_and_highlights()
+  hi link javascriptFunction detailedDefine
+  hi link javascriptIdentifier Type
+  hi link javascriptRailsFunction detailedInstanceVariable
+endfun
 
-  call s:fg('rubyRegexpSpecial', 'seafoam')
-  hi link rubyRegexpComment Comment
-  " Not quite sure why these don't show up:
-  " call s:make_obvious('rubyRegexpParens')
-  " call s:make_obvious('rubyRegexpBrackets')
+fun! s:detailed_syntax_addtions()
+  call s:detailed_colors()
 
-  call s:fg('rubyRegexpCharClass', 'basic8_green')
-  call s:fg('rubyRegexpQuantifier', 'yellow148')
-  call s:bold_fg('rubyRegexpEscape', 'purple90')
-  call s:fg('rubyRegexpAnchor', 'purple90')
-  call s:fg('rubyRegexpDot', 'green34')
-  call s:bold_fg('rubyRegexpDelimiter', 'red88')
-  call s:fgbg('rubyRegexp', 'red160', 'gray233')
-  call s:fg('rubyASCIICode', 'green71')
+  " TODO - somehow make the detail{Todo,Fixme,Xxx} work for non-ruby langs.
+  " E.g., shTodo overrides them, so it will need something like:
+  " syn match   rubyComment   "#.*" contains=rubySharpBang,rubySpaceError,
+  "     \rubyFirstAndSecondCommentLine,detailedTodo,detailedFixme,detailedXxx,@Spell
+  syn keyword detailedTodo TODO contained
+  syn keyword detailedFixme FIXME contained
+  syn keyword detailedXxx XXX contained
+endfun
+call s:detailed_syntax_addtions() " Hrm, can this not be done with aucmd?
 
-  call s:fg('rubyPseudoVariable', 'purple125')
-  call s:fg('rubyInteger', 'red124')
-  call s:fg('rubyFloat', 'red160')
+fun! s:ruby_syntax_and_highlights()
+  " Steal this back from the too-generic 'rubyControl':
+  syn match detailedExits "\<\%(exit!\|\%(abort\|at_exit\|exit\|fork\|trap\)\>[?!]\@!\)"
 
-  call s:fg('rubyBlockArgument', 'blue87')
-  call s:fg('rubySymbol', 'lavender104')
-  call s:bold_fg('rubyBlockParameter', 'basic8_cyan')
-  call s:fg('rubyBlockParameterList', 'blue25')
-  call s:bold_fg('rubyPredefinedConstant', 'green22')
-  call s:bold_fg('rubyPredefinedVariable', 'blue37')
-  " XXX no clue why this wont show up: call s:make_obvious('rubyHeredocStart')
-  " TODO: fix these: call s:make_obvious('rubyAliasDeclaration2')
-  "                  call s:make_obvious('rubyAliasDeclaration')
-  call s:fg('rubyBoolean', 'purple131')
-  call s:fg('rubyOperator', 'green123')
-  hi link rubyPseudoOperator  rubyOperator " -= /= **= *= etc
-  " TODO! call s:make_obvious('rubyClassDeclaration')
-  "       call s:make_obvious('rubyDeclaration')
-  " call s:make_obvious('rubyModuleDeclaration')
-  hi link rubyBeginEnd    Statement " TODO
-  call s:fg('rubyAccess', 'yellow100')
-  call s:fg('rubyAttribute', 'orange178') " attr_{accessor,reader,writer}
-  call s:fg('rubyEval', 'yellow190')
+  " TODO: also handle %(…), etc
+  syn region detailedInterpolatedString matchgroup=detailedInterpolatedStringDelimiter start="\"" end="\"" skip="\\\\\|\\\"" contains=@rubyStringSpecial,@Spell fold
+  " TODO: Also, %x(). Anything else?
+  syn region detailedExecutedString matchgroup=detailedExecutedStringDelimiter start="`" end="`"  skip="\\\\\|\\`"  contains=@rubyStringSpecial fold
 
-  " Blocks:
-  " (basic)
-  call s:fg('rubyMethodBlock', 'purple224')
-  call s:fg('rubyBlock', 'purple225')
-  call s:fg('rubyBlockExpression', 'orange180')
-  " (conditionals)
-  call s:fg('rubyControl', 'orange178')
-  call s:bold_fg('Conditional', 'basic8_yellow')
-  call s:bold_fg('rubyConditionalModifier', 'yellow148') " 'Yoda if'
-  call s:fg('rubyConditionalExpression', 'light_yellow230')
-  hi link rubyCaseExpression rubyConditionalExpression
-  " (loops)
-  call s:fg('rubyRepeat', 'orange178')
-  call s:bold_fg('rubyRepeatModifier', 'yellow149') " …while/until
-  call s:fg('rubyRepeatExpression', 'orange222')
-  hi link rubyDoBlock rubyRepeatExpression
+  " The default syntax/ruby.vim gets this way wrong (only does 2 chars and is
+  " transparent):
+  syn match rubyBlockArgument "&[_[:lower:]][_[:alnum:]]*" contains=NONE display
+  " Bonus!
+  syn match rubyInitialize '\<initialize\>' contained containedin=rubyMethodDeclaration
 
-  " TODO: call s:make_obvious('rubyOptionalDo')
-  " TODO: call s:make_obvious('rubyOptionalDoLine')
-  call s:fg('rubySharpBang', 'gray251')
-  hi link rubyFirstAndSecondCommentLine rubySharpBang
-  hi link rubyComment Comment
-  " hi rubyMultilineComment cleared
-  hi link rubyDocumentation  Comment
-  call s:fg('rubyDataDirective', 'purple201')
-  call s:fg('rubyData', 'gray245')
+  syn match rubyEncodingDirective "\cencoding: *utf-8" contained
 
-  "* Distinguish between each of TODO/FIXME/XXX
-  call s:fgbg('detailTodo', 'green76', 'gray238')
-  call s:fgbg('detailFixme', 'gray232', 'orange208')
-  call s:fgbg('detailXxx', 'gray235', 'red196')
+  " TODO - make this more elegant.
+  syn match rubyFirstAndSecondCommentLine '\%^#.*'
+        \ contains=rubyEncodingDirective contained
+  syn match rubyFirstAndSecondCommentLine '\%^#.*\n#.*'
+        \ contains=rubyEncodingDirective contained
 
-  call s:fgbg('Error', 'gray235', 'red196')
-  call s:underline_fgbg('Search', 'gray254', 'gray235')
+  syn match   rubyComment   "#.*" contains=rubySharpBang,rubySpaceError,
+        \rubyFirstAndSecondCommentLine,detailedTodo,detailedFixme,detailedXxx,@Spell
 
-  " https://github.com/bitc/vim-bad-whitespace
-  call s:fgbg('BadWhitespace', 'gray238', 'yellow58')
+  hi link rubyConditional  Conditional
+  hi link rubyExceptional  rubyConditional " No-show.
+  hi link rubyMethodExceptional  rubyDefine " And another.
+  hi link rubyStringEscape  Special
+  hi link rubyQuoteEscape  rubyStringEscape
+  hi link rubyInvalidVariable  Error
+  hi link rubyNoInterpolation  rubyString " E.g. \#{} inside a string.
+  hi link rubyException   Exception
+  hi link rubyKeyword     Keyword
+  hi link rubyConstant detailedConstant
+  hi link rubyEncodingDirective detailedEncodingDirective
+  hi link rubyInitialize detailedInitialize
+  hi link rubyRailsARAssociationMethod detailedRailsARAssociationMethod
   hi link rubySpaceError BadWhitespace
-
-  "* `fail`/`raise`/`exit` were yellow by default, but here a more warny orange.
-  call s:fg('Exception', 'orange208')
-  hi link rubyExits Exception
-  "* class `@@vars` get ugly, cautionary color: they are troublesome.
-  call s:fgbg('rubyClassVariable', 'blue75', 'red52')
-  "* global `$vars` also get a bit of ugliness. Everyone knows they're iffy.
-  call s:fgbg('rubyGlobalVariable', 'red161', 'gray234')
-
-  " rails.vim niceness:
-  call s:fg('rubyRailsARAssociationMethod', 'teal50')
-
-  " detailed.vim especialties:
-  call s:fg('rubyInitialize', 'green84')
-  call s:bold_fg('rubyEncodingDirective', 'green22')
+  hi link rubyData detailedData
+  hi link rubyDataDirective detailedDataDirective
+  hi link rubyDocumentation  Comment
+  hi link rubyComment Comment
+  hi link rubyFirstAndSecondCommentLine rubySharpBang
+  hi link rubySharpBang detailedSharpBang
+  hi link rubyDoBlock rubyRepeatExpression
+  hi link rubyRepeatExpression detailedRepeatExpression
+  hi link rubyRepeatModifier detailedRepeatModifier
+  hi link rubyRepeat detailedRepeat
+  hi link rubyCaseExpression rubyConditionalExpression
+  hi link rubyConditionalExpression detailedConditionalExpression
+  hi link rubyConditionalModifier detailedConditionalModifier
+  hi link rubyControl detailedControl
+  hi link rubyBlockExpression detailedBlockExpression
+  hi link rubyBlock detailedBlock
+  hi link rubyMethodBlock detailedMethodBlock
+  hi link rubyEval detailedEval
+  hi link rubyAttribute detailedAttribute
+  hi link rubyAccess detailedAccess
+  hi link rubyBeginEnd    Statement " TODO
+  hi link rubyPseudoOperator  rubyOperator " -= /= **= *= etc
+  hi link rubyOperator detailedOperator
+  hi link rubyBoolean detailedBoolean
+  hi link rubyPredefinedVariable detailedPredefinedVariable
+  hi link rubyPredefinedConstant detailedPredefinedConstant
+  hi link rubyBlockParameterList detailedBlockParameterList
+  hi link rubyBlockParameter detailedBlockParameter
+  hi link rubySymbol detailedSymbol
+  hi link rubyBlockArgument detailedBlockArgument
+  hi link rubyFloat detailedFloat
+  hi link rubyInteger detailedInteger
+  hi link rubyPseudoVariable detailedPseudoVariable
+  hi link rubyASCIICode detailedASCIICode
+  hi link rubyRegexpDelimiter detailedRegexpDelimiter
+  hi link rubyRegexpDot detailedRegexpDot
+  hi link rubyRegexpAnchor detailedRegexpAnchor
+  hi link rubyRegexpEscape detailedRegexpEscape
+  hi link rubyRegexpQuantifier detailedRegexpQuantifier
+  hi link rubyRegexpCharClass detailedRegexpCharClass
+  hi link rubyRegexpComment Comment
+  hi link rubyRegexpSpecial detailedRegexpSpecial
+  hi link rubyInterpolationDelimiter detailedInterpolationDelimiter
+  hi link rubyStringDelimiter detailedStringDelimiter
+  hi link rubyInstanceVariable detailedInstanceVariable
+  hi link rubyFunction detailedFunction
+  hi link rubyInclude detailedInclude
+  hi link rubyDefine detailedDefine
+  hi link rubyModule detailedModule
+  hi link rubyClass detailedClass
 
   " Only linked highlights, not actual syntax:
   " call s:make_obvious('rubyIdentifier')
@@ -716,37 +847,21 @@ fun! s:detailed_colors()
   " call s:make_obvious('rubyNestedSquareBrackets')
   " call s:make_obvious('rubyDelimEscape')
   " call s:make_obvious('rubySymbolDelimiter')
+
+  " No-show: call s:make_obvious('rubyMethodDeclaration')
+  " Not quite sure why these don't show up:
+  " call s:make_obvious('rubyRegexpParens')
+  " call s:make_obvious('rubyRegexpBrackets')
+  " XXX no clue why this wont show up: call s:make_obvious('rubyHeredocStart')
+  " TODO: fix these: call s:make_obvious('rubyAliasDeclaration2')
+  "                  call s:make_obvious('rubyAliasDeclaration')
+  " TODO! call s:make_obvious('rubyClassDeclaration')
+  "       call s:make_obvious('rubyDeclaration')
+  " call s:make_obvious('rubyModuleDeclaration')
+  " TODO: call s:make_obvious('rubyOptionalDo')
+  " TODO: call s:make_obvious('rubyOptionalDoLine')
 endfun
 " }}}
-
-fun! s:detailed_syntax_addtions()
-  call s:detailed_colors()
-
-  " The default syntax/ruby.vim gets this way wrong (only does 2 chars and is
-  " transparent):
-  syn match rubyBlockArgument "&[_[:lower:]][_[:alnum:]]*" contains=NONE display
-  " Steal this back from the too-generic 'rubyControl':
-  syn match rubyExits "\<\%(exit!\|\%(abort\|at_exit\|exit\|fork\|trap\)\>[?!]\@!\)"
-
-  " Bonus!
-  syn match rubyInitialize '\<initialize\>' contained containedin=rubyMethodDeclaration
-
-  syn match rubyEncodingDirective "\cencoding: *utf-8" contained
-
-  " TODO - make this more elegant.
-  syn match rubyFirstAndSecondCommentLine '\%^#.*'
-    \ contains=rubyEncodingDirective contained
-  syn match rubyFirstAndSecondCommentLine '\%^#.*\n#.*'
-    \ contains=rubyEncodingDirective contained
-
-  syn keyword detailTodo TODO contained
-  syn keyword detailFixme FIXME contained
-  syn keyword detailXxx XXX contained
-  syn match   rubyComment   "#.*" contains=rubySharpBang,rubySpaceError,
-    \rubyFirstAndSecondCommentLine,detailTodo,detailFixme,detailXxx,@Spell
-  " TODO - somehow make the detail{Todo,Fixme,Xxx} work for non-ruby langs.
-endfun
-call s:detailed_syntax_addtions()
 
 " Rainbow-Parens Improved {{{
 " Inlined from v2.3 of http://www.vim.org/scripts/script.php?script_id=4176
@@ -758,10 +873,10 @@ fun! s:fatpacked_rainbow_parens()
         \ 'DarkOrange3', 'FireBrick',
         \ ]
 
+  " From Pharo Smalltalk:
+  " Black, Green, Purple, Maroon, LightGreen, Orange, Red, Blue
   let ctermfgs = exists('g:rainbow_ctermfgs')? g:rainbow_ctermfgs : [
-        \ 'darkgray', 'Darkblue', 'darkmagenta',
-        \ 'darkcyan', 'darkred', 'darkgreen',
-        \ ]
+        \ '241', '22', '56', '124', '72', '166', '126', '38', ]
 
   let max = has('gui_running')? len(guifgs) : len(ctermfgs)
 

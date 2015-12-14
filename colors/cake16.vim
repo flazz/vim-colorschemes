@@ -83,7 +83,7 @@ hi DiffText     guifg=bg        guibg=fg        ctermfg=bg     ctermbg=fg       
 " Misc
 hi Directory    guifg=fg        guibg=NONE      ctermfg=fg     ctermbg=NONE      gui=none      cterm=none
 hi ErrorMsg     guifg=#f10000   guibg=NONE      ctermfg=9      ctermbg=NONE      gui=none      cterm=none
-hi SignColumn   guifg=#afafaf   guibg=NONE      ctermfg=13     ctermbg=NONE      gui=none      cterm=none
+hi SignColumn   guifg=#678797   guibg=NONE      ctermfg=12     ctermbg=NONE      gui=none      cterm=none
 hi MoreMsg      guifg=#878787   guibg=NONE      ctermfg=8      ctermbg=NONE      gui=none      cterm=none
 hi ModeMsg      guifg=fg        guibg=NONE      ctermfg=fg     ctermbg=NONE      gui=none      cterm=none
 hi Question     guifg=fg        guibg=NONE      ctermfg=fg     ctermbg=NONE      gui=none      cterm=none

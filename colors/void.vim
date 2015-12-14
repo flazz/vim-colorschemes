@@ -1,7 +1,7 @@
 " Vim color file
 " Maintainer:	Andrew Lyon <orthecreedence@gmail.com>
-" Last Change:	$Date: 2010-11-20 12:27:30PST $
-" Version:	1.1
+" Last Change:	2012-03-21 06:01:00 PST
+" Version:	2.2
 
 " Note that this color scheme is loosely based off of desert.vim (Hans Fugal
 " <hans@fugal.net>) mixed with some of slate.vim (Ralph Amissah
@@ -18,7 +18,8 @@ if version > 580
 endif
 let g:colors_name="void"
 
-hi Normal	guifg=#f5f5f5 guibg=grey15
+
+hi Normal	guifg=#e0e0e0 guibg=grey9
 
 " highlight groups
 hi Cursor	guibg=khaki guifg=slategrey
@@ -36,7 +37,7 @@ hi IncSearch	guifg=slategrey guibg=khaki
 "hi LineNr
 hi ModeMsg	guifg=goldenrod
 hi MoreMsg	guifg=SeaGreen
-hi NonText	guifg=LightBlue guibg=grey30
+hi NonText	guifg=LightBlue guibg=grey9
 hi Question	guifg=springgreen
 hi Search	guibg=peru guifg=wheat
 hi SpecialKey	guifg=yellowgreen
@@ -52,12 +53,13 @@ hi WarningMsg	guifg=salmon
 "hi Tooltip
 
 " syntax highlighting groups
-hi Comment	guifg=grey50
-hi Constant	guifg=#e09085
-hi Identifier	guifg=#f5f5f5
-hi Statement	guifg=darkkhaki		" #bbccee
+hi Comment	guifg=grey50 ctermfg=darkcyan
+hi Constant	guifg=#e09085 ctermfg=brown
+hi Identifier	guifg=#d0d0b0
+hi Statement	guifg=#ccaa88 gui=bold cterm=bold term=bold
+"hi Statement	guifg=darkkhaki
 hi PreProc	guifg=#c8e0b0
-hi Type		guifg=darkkhaki
+hi Type		guifg=#99cccc term=NONE cterm=NONE gui=NONE
 hi Special	guifg=#bbccee cterm=bold term=bold
 hi Operator guifg=navajowhite cterm=NONE
 "hi Underlined
@@ -66,9 +68,13 @@ hi Ignore	guifg=grey40
 hi Todo		guifg=orangered guibg=yellow2
 hi Todo		guifg=orange guibg=gray40
 
+" Fuf/menu stuff
+hi Pmenu		guifg=#aadddd guibg=#333333
+hi PmenuSel		guifg=#ddeeee guibg=#335533
+
 " color terminal definitions
 hi SpecialKey	ctermfg=darkgreen
-hi NonText	guibg=grey15 cterm=bold ctermfg=darkblue
+hi NonText	guibg=grey9 cterm=bold ctermfg=darkblue
 hi Directory	ctermfg=brown  guifg=#ddbb66
 hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
@@ -91,8 +97,6 @@ hi DiffAdd	ctermbg=4
 hi DiffChange	ctermbg=5
 hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
 hi DiffText	cterm=bold ctermbg=1
-hi Comment	ctermfg=darkcyan
-hi Constant	ctermfg=brown
 hi Special	ctermfg=5
 hi Identifier	ctermfg=6
 hi Statement	ctermfg=3
@@ -103,4 +107,5 @@ hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
 hi Error	cterm=bold ctermfg=7 ctermbg=1
 
-
+" python specific highlightning
+hi link pythonOperator Statement

@@ -1,8 +1,8 @@
 set background=dark
 highlight clear
 
-let colors_name = "landscape"
-if exists("syntax_on")
+let g:colors_name = 'landscape'
+if exists('syntax_on')
   syntax reset
 endif
 
@@ -46,14 +46,13 @@ highlight Debug term=none ctermfg=183 gui=none guifg=violet
 
 highlight TabLine ctermfg=253 ctermbg=241 guifg=#dadada guibg=#606060
 highlight TabLineFill ctermfg=253 ctermbg=241 guifg=#dadada guibg=#606060
-highlight TabLineSel cterm=bold ctermfg=253 guifg=#dadada 
-highlight Visual term=none ctermbg=241 guibg=#606060
+highlight TabLineSel cterm=bold ctermfg=253 guifg=#dadada
+highlight Visual term=none ctermbg=240 guibg=#585858
 highlight default link VisualNOS Visual
 highlight Underlined term=underline ctermfg=45 gui=underline guifg=#00dfff
-highlight default link URL Underlined
-highlight URLCursor term=underline cterm=underline ctermfg=45 ctermbg=235 gui=underline guifg=#00dfff guibg=#262626
 highlight Error term=none ctermfg=15 ctermbg=124 gui=none guifg=#ffffff guibg=#af0000
 highlight WarningMsg term=none ctermfg=7 ctermbg=0 gui=none guifg=#c0c0c0 guibg=#000000
+highlight WildMenu guibg=#ffaf00 ctermbg=214
 highlight Todo cterm=reverse ctermfg=185 ctermbg=16 gui=reverse guifg=#dfdf5f guibg=#000000
 highlight DiffAdd term=none cterm=none ctermfg=none ctermbg=22 guifg=fg guibg=#005f00
 highlight DiffChange term=none cterm=none ctermfg=none ctermbg=52 guifg=fg guibg=#5f0000
@@ -73,16 +72,23 @@ highlight VertSplit term=none gui=none guifg=black guibg=darkgray gui=none cterm
 highlight Folded term=none ctermfg=247 ctermbg=235 guifg=#9e9e9e guibg=#262626
 highlight FoldColumn term=none ctermfg=247 ctermbg=235 guifg=#9e9e9e guibg=#262626
 highlight SignColumn term=none ctermfg=247 ctermbg=235 guifg=#9e9e9e guibg=#262626
-highlight SpecialKey term=underline ctermfg=darkgray gui=none guifg=darkgray
+highlight SpecialKey term=underline ctermfg=237 gui=none guifg=darkgray
 highlight NonText term=none ctermfg=black gui=none guifg=black
-highlight StatusLineNC term=none gui=none guifg=black guibg=darkgray gui=none ctermfg=black ctermbg=darkgray cterm=none gui=none
+highlight StatusLine term=none gui=none guifg=#1c1c1c guibg=#eeeeee gui=none ctermfg=234 ctermbg=255 cterm=none
+highlight StatusLineNC term=none gui=none guifg=#262626 guibg=#585858 gui=none ctermfg=235 ctermbg=240 cterm=none
 if version >= 700
-  highlight CursorLine term=none cterm=none ctermbg=235 gui=none guibg=#262626
+  if get(g:, 'landscape_cursorline', 1)
+    highlight CursorLine term=none cterm=none ctermbg=235 gui=none guibg=#262626
+    highlight CursorLineNr term=underline cterm=bold ctermfg=148 ctermbg=235 gui=bold guifg=#afdf00 guibg=#262626
+  else
+    highlight clear CursorLine
+    highlight CursorLineNr term=NONE ctermbg=NONE guibg=NONE
+  endif
   highlight ColorColumn term=none cterm=none ctermbg=239 gui=none guibg=#4e4e4e
+  highlight Cursor term=reverse cterm=reverse gui=reverse guifg=NONE guibg=NONE
   highlight CursorColumn term=none cterm=none ctermbg=235 gui=none guibg=#262626
   highlight LineNr term=none ctermfg=58 ctermbg=none guifg=#5f5f00 guibg=bg
-  highlight CursorLineNr term=underline cterm=bold ctermfg=148 ctermbg=235 gui=bold guifg=#afdf00 guibg=#262626
-  highlight MatchParen ctermfg=none ctermbg=240 guibg=#585858
+  highlight MatchParen ctermfg=none ctermbg=238 guibg=#4e4e4e
   highlight Pmenu ctermfg=233 ctermbg=249 gui=none guifg=#121212 guibg=#b2b2b2
   highlight PmenuSel ctermfg=233 ctermbg=242 gui=none guifg=#121212 guibg=#666666
   highlight PmenuSbar ctermfg=233 ctermbg=244 gui=none guifg=#121212 guibg=#808080
@@ -91,81 +97,31 @@ endif
 highlight Search cterm=reverse ctermfg=220 ctermbg=234 gui=reverse guifg=#ffdf00 guibg=#1c1c1c
 highlight IncSearch cterm=reverse ctermfg=136 ctermbg=236 gui=reverse guifg=#af8700 guibg=#303030
 
-let s:urlpattern = 
-      \'\%(\%(h\?ttps\?\|ftp\):\/\/\|git@github.com:\)\%('
-      \.'[&:#*@~%_\-=?/.0-9A-Za-z]*'
-      \.'\%(([&:#*@~%_\-=?/.0-9A-Za-z]*)\)\?'
-      \.'\%({\%([&:#*@~%_\-=?/.0-9A-Za-z]*\|{[&:#*@~%_\-=?/.0-9A-Za-z]*}\)}\)\?'
-      \.'\%(\[[&:#*@~%_\-=?/.0-9A-Za-z]*\]\)\?'
-      \.'\)*[/0-9A-Za-z]*\%(:\d\d*\/\?\)\?'
+if exists('*getmatches')
 
-function! s:newmatch()
-  if g:landscape_highlight_url ||
-   \ g:landscape_highlight_todo ||
-   \ g:landscape_highlight_full_space ||
-   \ g:landscape_highlight_url_filetype != {}
-    if exists("b:landscape_match")
-      for m in getmatches()
-        if m.group == 'URL' ||
-         \ m.group == 'URLCursor' ||
-         \ m.group == 'Todo' ||
-         \ m.group == 'FullSpace'
-          call matchdelete(m.id)
-        endif
-      endfor
+  function! s:newmatch() abort
+    if !get(g:, 'landscape_highlight_todo', 0) && !get(g:, 'landscape_highlight_full_space', 0)
+      return
     endif
-    if g:landscape_highlight_url &&
-          \ (!has_key(g:landscape_highlight_url_filetype, &l:filetype) ||
-          \ g:landscape_highlight_url_filetype[&l:filetype])
-      call matchadd('URL', s:urlpattern, 10)
-      exec "augroup MatchAddURL" . bufnr('')
-        autocmd!
-        autocmd BufEnter,WinEnter,BufWinEnter <buffer> call s:urlcursormatch(1)
-        autocmd CursorMoved,CursorMovedI <buffer> call s:urlcursormatch(0)
-        call s:urlcursormatch(1)
-      augroup END
+    for m in getmatches()
+      if m.group == 'Todo' || m.group == 'FullSpace'
+        silent! call matchdelete(m.id)
+      endif
+    endfor
+    if get(g:, 'landscape_highlight_todo', 0)
+      call matchadd('Todo', '\c\<todo\>', 10)
     endif
-    if g:landscape_highlight_todo
-      call matchadd('Todo', '\<\([tT]odo\|TODO\)\>', 10)
+    if get(g:, 'landscape_highlight_full_space', 0)
+      call matchadd('FullSpace', "\u3000", 10)
     endif
-    if g:landscape_highlight_full_space
-      call matchadd('FullSpace', '　', 10)
-    endif
-    let b:landscape_match = 1
-  endif
-endfunction
+  endfunction
 
-function! s:urlcursorhighlight()
-  let [cbg, gbg] = ['', '']
-  if &l:cursorline
-    redir => out
-      silent! highlight CursorLine
-    redir END
-    let outstrs = split(out, '\n')
-    if len(outstrs)
-      let [cbg, gbg] = [matchstr(outstrs[0], 'ctermbg=\S\+'), matchstr(outstrs[0], 'guibg=\S\+')]
-    endif
-  endif
-  silent! highlight clear URLCursor
-  exec 'highlight URLCursor cterm=underline ctermfg=45' cbg 'gui=underline guifg=#00dfff' gbg
-endfunction
+  augroup landscape-newmatch
+    autocmd!
+    autocmd VimEnter,BufNew,WinEnter,FileType,BufReadPost * call s:newmatch()
+  augroup END
 
-function! s:urlcursormatch(force)
-  if get(b:, 'landscape_cursorline') == line('.') && !a:force
-    return
-  endif
-  let b:landscape_cursorline = line('.')
-  if has_key(b:, 'landscape_cursorline_id')
-    silent! call matchdelete(b:landscape_cursorline_id)
-  endif
-  let b:landscape_cursorline_id = matchadd('URLCursor', '\%' . line('.') . 'l' . s:urlpattern, 20)
-endfunction
-
-augroup LandscapeMatch
-  autocmd!
-  autocmd BufNew,WinEnter,FileType,BufReadPost * call s:newmatch()
-  autocmd FileType,ColorScheme,BufEnter * call s:urlcursorhighlight()
-augroup END
+endif
 
 highlight SpellBad term=none cterm=none ctermbg=52 gui=none guibg=#5f0000
 highlight default link SpellCap SpellBad
@@ -198,11 +154,8 @@ highlight default link Marked StorageClass
 highlight default link Title Identifier
 
 " Conceal
-" Cursor
 " CursorIM
 " Directory
 " ModeMsg
 " MoreMsg
 " Question
-" StatusLine
-" WildMenu
