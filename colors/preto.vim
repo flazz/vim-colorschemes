@@ -6,6 +6,7 @@
 " |_|   |_|  \___|\__\___/
 "
 " A minimal dark theme for VIM
+" (https://github.com/ewilazarus/preto)
 
 " Reset -------------------------------------------------------------------{{{1
 
