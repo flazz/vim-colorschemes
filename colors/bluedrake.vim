@@ -223,13 +223,24 @@ endif
 
 
 " Pandoc
-call <SID>X("pandocUListItem", s:basecolor3, "", "")
-call <SID>X("pandocListItem", s:basecolor3, "", "")
-call <SID>X("pandocUListItemBullet", s:basecolor3, "", "")
+call <SID>X("pandocYAMLHeader", s:orange, "", "")
 call <SID>X("pandocAtxHeader", s:orange, "", "")
-call <SID>X("AtxStart", s:orange, "", "")
 call <SID>X("pandocSetexHeader", s:orange, "", "")
+call <SID>X("pandocAtxStart", s:orange, "", "")
+
+call <SID>X("pandocListItemBullet", s:basecolor3, "", "")
+call <SID>X("pandocUListItemBullet", s:basecolor3, "", "")
+call <SID>X("pandocListItemBulletId", s:basecolor3, "", "")
+
 call <SID>X("pandocPCite", s:purple, "", "")
-call <SID>X("pandocPCiteAnchor", s:purple, "", "")
+call <SID>X("pandocICite", s:purple, "", "")
+call <SID>X("pandocCiteAnchor", s:purple, "", "")
+call <SID>X("pandocCiteKey", s:purple, "", "")
+call <SID>X("pandocCiteLocator", s:cyan, "", "")
+
+call <SID>X("pandocDelimitedCodeBlockLanguage", s:basecolor3, "", "")
+call <SID>X("pandocDelimitedCodeBlockStart", s:basecolor3, "", "")
+call <SID>X("pandocDelimitedCodeBlockEnd", s:basecolor3, "", "")
+
 call <SID>X("pandocReferenceLabel", s:purple, "", "") " wrapped citations
 call <SID>X("pandocReferenceURL", s:red, "", "")

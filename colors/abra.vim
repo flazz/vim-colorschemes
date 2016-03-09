@@ -1,10 +1,10 @@
 " ----------------------------------------------------
 " Name:       abra - vim color scheme
 " Maintainer: Aydar Khabibullin <aydar.kh@gmail.com>
-" URL:        https://github.com/abra/abra
-" Version:    0.1
+" URL:        https://github.com/abra/vim-abra
+" Version:    0.2
 " Created:    01/30/2011 12:35:30 AM
-" Modified:   07/26/2014 03:30:17 AM
+" Modified:   08/20/2015 13:23:00 AM
 " ----------------------------------------------------
 
 set background=dark
@@ -53,7 +53,7 @@ execute "hi CursorColumn guifg=". s:Colors[1]  . " guibg=" . s:Colors[13] . " gu
 execute "hi Directory guifg="   . s:Colors[10] . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi ErrorMsg guifg="    . s:Colors[13] . " guibg=" . s:Colors[7]  . " gui=none"
 execute "hi FoldColumn guifg="  . s:Colors[13] . " guibg=" . s:Colors[12] . " gui=none"
-execute "hi Folded guifg="      . s:Colors[12] . " guibg=" . s:Colors[11] . " gui=none"
+execute "hi Folded guifg="      . s:Colors[12] . " guibg=" . s:Colors[0] . " gui=none"
 execute "hi IncSearch guifg="   . s:Colors[1]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi LineNr guifg="      . s:Colors[8]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi MatchParen guifg="  . s:Colors[12] . " guibg=" . s:Colors[11] . " gui=none"

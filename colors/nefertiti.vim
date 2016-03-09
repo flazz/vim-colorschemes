@@ -51,6 +51,12 @@ if !exists("g:did_nefertiti_code_setup")
     let s:nefertiti_default_brightness_level = index(s:nefertiti_brightness_levels, 0)
     let g:nefertiti_base_brightness_level = get(g:, 'nefertiti_base_brightness_level', s:nefertiti_default_brightness_level)
     let g:nefertiti_current_brightness_level = g:nefertiti_base_brightness_level
+    let g:nefertiti_base_search_highlight_intensity = get(g:, 'nefertiti_base_search_highlight_intensity', 4)
+    let g:nefertiti_current_search_highlight_intensity = g:nefertiti_base_search_highlight_intensity
+    " }}}2
+
+    " Special Case Search Highlight Intensity {{{2
+    let s:_nefertiti_search_highlight_intensity_highlight_map = ["333333", "555555", "666660", "aaaa99", "ddddbb", "ffffbb", "ffffff", "ff00ff"]
     " }}}2
 
     " Functions {{{2
@@ -82,6 +88,30 @@ if !exists("g:did_nefertiti_code_setup")
         colorscheme nefertiti
     endfunction "}}}3
 
+    function! s:_nefertiti_search_highlight_intensity(step, up) "{{{3
+        if empty(a:step)
+            let l:level_step = 1
+        else
+            let l:level_step = a:step + 0
+        endif
+        if a:up
+            let g:nefertiti_current_search_highlight_intensity += l:level_step
+        else
+            let g:nefertiti_current_search_highlight_intensity -= l:level_step
+        endif
+        call s:_nefertiti_set_search_highlight()
+        colorscheme nefertiti
+    endfunction "}}}3
+
+    function! s:_nefertiti_set_search_highlight() "{{{3
+        if g:nefertiti_current_search_highlight_intensity < 0
+            let g:nefertiti_current_search_highlight_intensity = len(s:_nefertiti_search_highlight_intensity_highlight_map) - 1
+        elseif g:nefertiti_current_search_highlight_intensity >= len(s:_nefertiti_search_highlight_intensity_highlight_map)
+            let g:nefertiti_current_search_highlight_intensity = 0
+        endif
+        execute "hi Search guibg=#" . s:_nefertiti_search_highlight_intensity_highlight_map[g:nefertiti_current_search_highlight_intensity] . " guifg=#000000 gui=bold"
+    endfunction "}}}3
+
     function! s:_nefertiti_set_stable_colors() "{{{3
         """ Cursor {{{4
         hi Cursor           guifg=NONE      guibg=#626262   gui=NONE
@@ -111,7 +141,7 @@ if !exists("g:did_nefertiti_code_setup")
         """ }}}4
         """ Search {{{4
         hi IncSearch        guifg=#000000   guibg=#ff8800   gui=BOLD
-        hi Search           guifg=#000000   guibg=#ffffbb   gui=BOLD
+        " hi Search           guifg=#000000   guibg=#ffffbb   gui=BOLD
         """ }}}4
         """ Selection {{{4
         hi Visual           guifg=#000000   guibg=#768798   gui=NONE
@@ -133,26 +163,10 @@ if !exists("g:did_nefertiti_code_setup")
         hi SpellRare        guisp=#ff00ff   gui=undercurl
         """ }}}4
         """ Diff {{{4
-        hi DiffAdd          guifg=#000000   guibg=#3cb371   gui=NONE
-        hi DiffDelete       guifg=#000000   guibg=#aa4450   gui=NONE
-        hi DiffChange       guifg=#000000   guibg=#4f94cd   gui=NONE
-        hi DiffText         guifg=#000000   guibg=#8ee5ee   gui=NONE
-        hi diffOldFile      guifg=#88afcb   guibg=NONE      gui=italic
-        hi diffNewFile      guifg=#88afcb   guibg=NONE      gui=italic
-        hi diffFile         guifg=#88afcb   guibg=NONE      gui=italic
-        hi diffLine         guifg=#88afcb   guibg=NONE      gui=italic
-        hi link             diffSubname     diffLine
-        hi diffAdded        guifg=#3cb371   guibg=NONE      gui=NONE
-        hi diffRemoved      guifg=#aa4450   guibg=NONE      gui=NONE
-        hi diffChanged      guifg=#4f94cd   guibg=NONE      gui=NONE
-        hi link             diffOnly        Constant
-        hi link             diffIdentical   Constant
-        hi link             diffDiffer      Constant
-        hi link             diffBDiffer     Constant
-        hi link             diffIsA         Constant
-        hi link             diffNoEOL       Constant
-        hi link             diffCommon      Constant
-        hi link             diffComment     Constant
+        hi DiffAdd          guibg=#445544   gui=NONE
+        hi DiffDelete       guibg=#554422   gui=NONE
+        hi DiffChange       guibg=#224455   gui=NONE
+        hi DiffText         guibg=#224455   guifg=#00ffff gui=underline
         """ }}}4
         """ Other {{{4
         hi Directory        guifg=#ddaa66   guibg=bg        gui=NONE
@@ -206,6 +220,7 @@ if !exists("g:did_nefertiti_code_setup")
     function! s:_nefertiti_set_colors() "{{{3
         call s:_nefertiti_set_stable_colors()
         call s:_nefertiti_set_dynamic_colors()
+        call s:_nefertiti_set_search_highlight()
     endfunction "}}}3
     " }}}2
 
@@ -222,17 +237,22 @@ if !exists("g:did_nefertiti_code_setup")
     command! -nargs=? NefertitiBrighten :call <SID>_nefertiti_change_brightness(<q-args>, 1)
     command! -nargs=0 NefertitiReset :call <SID>_nefertiti_reset_brightness()
     command! -nargs=0 NefertitiColors :call <SID>_nefertiti_set_colors()
+    command! -nargs=? NefertitiSearchDarken :call <SID>_nefertiti_search_highlight_intensity(<q-args>, 0)
+    command! -nargs=? NefertitiSearchBrighten :call <SID>_nefertiti_search_highlight_intensity(<q-args>, 1)
     " }}}2
 
     " Key Maps {{{2
     nnoremap <silent> <Plug>NefertitiBrighten     :NefertitiBrighten<CR>
     nnoremap <silent> <Plug>NefertitiDarken       :NefertitiDarken<CR>
     nnoremap <silent> <Plug>NefertitiReset        :NefertitiReset<CR>
-    nnoremap <silent> <Plug>NefertitiColors       :NefertitiColors<CR>
+    nnoremap <silent> <Plug>NefertitiSearchBrighten     :NefertitiSearchBrighten<CR>
+    nnoremap <silent> <Plug>NefertitiSearchDarken       :NefertitiSearchDarken<CR>
     if !exists('g:nefertiti_suppress_keymaps') || !g:nefertiti_suppress_keymaps
         map <silent> <M-1>  <Plug>NefertitiDarken
         map <silent> <M-2>  <Plug>NefertitiBrighten
         map <silent> <M-0>  <Plug>NefertitiReset
+        map <silent> <M-3>  <Plug>NefertitiSearchDarken
+        map <silent> <M-4>  <Plug>NefertitiSearchBrighten
     endif
     " }}}2
 
