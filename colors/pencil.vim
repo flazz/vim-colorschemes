@@ -41,6 +41,10 @@ if ! exists("g:pencil_higher_contrast_ui")
   let g:pencil_higher_contrast_ui = 0
 endif
 
+if ! exists("g:pencil_neutral_code_bg")
+  let g:pencil_neutral_code_bg = 0
+endif
+
 if ! exists("g:pencil_neutral_headings")
   let g:pencil_neutral_headings = 0
 endif
@@ -48,6 +52,14 @@ endif
 " not all terminals support italics properly.  If yours does, opt-in.
 if ! exists("g:pencil_terminal_italics")
   let g:pencil_terminal_italics = 0
+endif
+
+if ! exists("g:pencil_spell_undercurl")
+  let g:pencil_spell_undercurl = 1
+endif
+
+if ! exists("g:pencil_gutter_color")
+  let g:pencil_gutter_color = 0
 endif
 
 " Colors
@@ -123,6 +135,18 @@ else
   let s:head_a         = s:dark_blue
   let s:head_b         = s:blue
   let s:head_c         = s:dark_cyan
+endif
+
+if g:pencil_neutral_code_bg == 1
+  let s:code_bg        = s:bg
+else
+  let s:code_bg        = s:bg_very_subtle
+endif
+
+if g:pencil_spell_undercurl == 1
+  let s:sp_un      = 'undercurl'
+else
+  let s:sp_un      = 'underline'
 endif
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
@@ -221,15 +245,15 @@ call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 
 if has("gui_running")
-  call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
-  call s:h("SpellCap",    {"gui": "underline", "sp": s:light_green})
-  call s:h("SpellRare",   {"gui": "underline", "sp": s:pink})
-  call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
+  call s:h("SpellBad",    {"gui": s:sp_un, "sp": s:red})
+  call s:h("SpellCap",    {"gui": s:sp_un, "sp": s:light_green})
+  call s:h("SpellRare",   {"gui": s:sp_un, "sp": s:pink})
+  call s:h("SpellLocal",  {"gui": s:sp_un, "sp": s:dark_green})
 else
-  call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
-  call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
-  call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
-  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
+  call s:h("SpellBad",    {"cterm": s:sp_un, "fg": s:red})
+  call s:h("SpellCap",    {"cterm": s:sp_un, "fg": s:light_green})
+  call s:h("SpellRare",   {"cterm": s:sp_un, "fg": s:pink})
+  call s:h("SpellLocal",  {"cterm": s:sp_un, "fg": s:dark_green})
 endif
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
@@ -295,8 +319,8 @@ call s:h("markdownUrl",                 {"fg": s:medium_gray, "gui": "underline"
 call s:h("markdownUrlDelimiter",        {"fg": s:medium_gray})
 call s:h("markdownUrlTitle",            {"fg": s:norm})
 call s:h("markdownUrlTitleDelimiter",   {"fg": s:medium_gray})
-call s:h("markdownCode",                {"fg": s:norm})
-call s:h("markdownCodeDelimiter",       {"fg": s:norm})
+call s:h("markdownCode",                {"fg": s:norm, "bg": s:code_bg})
+call s:h("markdownCodeDelimiter",       {"fg": s:norm, "bg": s:code_bg})
 
 " plasticboy/vim-markdown
 call s:h("mkdBlockQuote",               {"fg": s:norm})
@@ -309,8 +333,8 @@ call s:h("mkdListItem",                 {"fg": s:norm})
 call s:h("mkdNonListItemBlock",         {"fg": s:norm})  " bug in syntax?
 call s:h("mkdRule",                     {"fg": s:norm})
 call s:h("mkdUrl",                      {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
-call s:h("mkdCode",                     {"fg": s:norm})
-call s:h("mkdIndentCode",               {"fg": s:norm})
+call s:h("mkdCode",                     {"fg": s:norm, "bg": s:code_bg})
+call s:h("mkdIndentCode",               {"fg": s:norm, "bg": s:code_bg})
 
 " gabrielelana/vim-markdown
 call s:h("markdownBlockquoteDelimiter", {"fg": s:norm})
@@ -321,8 +345,8 @@ call s:h("markdownLinkText",            {"fg": s:norm})
 call s:h("markdownLinkTextContainer",   {"fg": s:medium_gray})
 call s:h("markdownLinkUrl",             {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
 call s:h("markdownLinkUrlContainer",    {"fg": s:medium_gray})
-call s:h("markdownFencedCodeBlock",     {"fg": s:norm})
-call s:h("markdownInlineCode",          {"fg": s:norm})
+call s:h("markdownFencedCodeBlock",     {"fg": s:norm, "bg": s:code_bg})
+call s:h("markdownInlineCode",          {"fg": s:norm, "bg": s:code_bg})
 
 " mattly/vim-markdown-enhancements
 call s:h("mmdFootnoteDelimiter",        {"fg": s:medium_gray})
@@ -345,10 +369,20 @@ hi! link xmlEndTag                  xmlTag
 hi! link xmlTagName                 htmlTagName
 
 " Signify, git-gutter
-hi link SignifySignAdd              LineNr
-hi link SignifySignDelete           LineNr
-hi link SignifySignChange           LineNr
-hi link GitGutterAdd                LineNr
-hi link GitGutterDelete             LineNr
-hi link GitGutterChange             LineNr
-hi link GitGutterChangeDelete       LineNr
+if g:pencil_gutter_color == 1
+  hi link SignifySignAdd              DiffAdd
+  hi link SignifySignDelete           DiffDelete
+  hi link SignifySignChange           DiffChange
+  hi link GitGutterAdd                DiffAdd
+  hi link GitGutterDelete             DiffDelete
+  hi link GitGutterChange             DiffChange
+  hi link GitGutterChangeDelete       DiffChange
+else
+  hi link SignifySignAdd              LineNr
+  hi link SignifySignDelete           LineNr
+  hi link SignifySignChange           LineNr
+  hi link GitGutterAdd                LineNr
+  hi link GitGutterDelete             LineNr
+  hi link GitGutterChange             LineNr
+  hi link GitGutterChangeDelete       LineNr
+endif

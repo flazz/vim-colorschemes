@@ -26,7 +26,7 @@ let s:background   = "#050505"
 let s:nontext      = "#5a805a"
 let s:window       = "#4d4d4d"
 let s:divider      = "#ccc9ae"
-let s:matchparen   = "#807c6d"
+let s:matchparen   = "#00805a"
 let s:linenumber   = "#807c6d"
 let s:comment      = "#5a805a"
 let s:todo         = "#bcddbc"
@@ -224,7 +224,7 @@ call <SID>X("ModeMsg", s:yellow, "", "none")
 call <SID>X("MoreMsg", s:yellow, "", "none")
 call <SID>X("Question", s:yellow, "", "none")
 call <SID>X("WarningMsg", s:green, "", "none")
-call <SID>X("MatchParen", "", s:matchparen, "none")
+call <SID>X("MatchParen", s:mongo, s:matchparen, "none")
 call <SID>X("Folded", s:folded_fg, s:folded_bg, "none")
 call <SID>X("FoldColumn", "", s:background, "none")
 call <SID>X("Cursor", s:cursor_fg, s:cursor_bg, "none")
@@ -463,6 +463,12 @@ call <SID>X("mysqlType", s:aqua, "", "none")
 call <SID>X("mysqlKeyword", s:green, "", "none")
 call <SID>X("mysqlOperator", s:blue, "", "none")
 call <SID>X("mysqlSpecial", s:mongo, "", "none")
+
+" TeX Highlighting
+call <SID>X("texBoldStyle", s:pink, "", "none")
+call <SID>X("texItalStyle", s:pink, "", "none")
+call <SID>X("texBoldItalStyle", s:purple, "", "none")
+call <SID>X("texItalBoldStyle", s:purple, "", "none")
 
 " Vim Highlighting
 call <SID>X("vimCommand", s:green, "", "none")

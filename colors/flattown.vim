@@ -122,3 +122,6 @@ hi Structure guifg=#72aaca guibg=NONE guisp=NONE gui=NONE ctermfg=110 ctermbg=NO
 hi Underlined guifg=NONE guibg=NONE guisp=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 hi DiffAdd guifg=#f8f8f8 guibg=#487a1a guisp=#487a1a gui=bold ctermfg=15 ctermbg=2 cterm=bold
 hi TabLine guifg=#797a7b guibg=#212325 guisp=#212325 gui=NONE ctermfg=8 ctermbg=235 cterm=NONE
+
+hi IndentGuidesOdd guifg=#f6f6f6 guibg=#2f3337 guisp=#2f3337 gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
+hi IndentGuidesEven guifg=#f8f8f8 guibg=#383d41 guisp=#383d41 gui=bold ctermfg=15 ctermbg=238 cterm=NONE

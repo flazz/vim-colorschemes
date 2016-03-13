@@ -36,27 +36,27 @@ let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 " flat colors:
-let s:asphalt = { "gui": "#262e3e", "cterm": "235", "cterm16": "NONE"}
-let s:asphalt_subtle= { "gui": "#161f2f", "cterm": "236", "cterm16": "8"}
-let s:dark_asphalt = { "gui": "#4e5a75", "cterm": "234", "cterm16": "0"}
+let s:asphalt = { "gui": "#1d1f36", "cterm": "235", "cterm16": "NONE"}
+let s:asphalt_subtle= { "gui": "#101428", "cterm": "236", "cterm16": "8"}
+let s:dark_asphalt = { "gui": "#4e536b", "cterm": "234", "cterm16": "0"}
 
-let s:red = { "gui": "#ff7c7c", "cterm": "204", "cterm16": "1"}
-let s:dark_red = { "gui": "#ff5454", "cterm": "203", "cterm16": "9"}
+let s:red = { "gui": "#ff8080", "cterm": "204", "cterm16": "1"}
+let s:dark_red = { "gui": "#ff5458", "cterm": "203", "cterm16": "9"}
 
 let s:green = { "gui": "#95ffa4", "cterm": "120", "cterm16": "2"}
-let s:dark_green = { "gui": "#89ff72", "cterm": "119", "cterm16": "10"}
+let s:dark_green = { "gui": "#62d196", "cterm": "119", "cterm16": "10"}
 
-let s:yellow = { "gui": "#ffeb8f", "cterm": "228", "cterm16": "3"}
-let s:dark_yellow = { "gui": "#ffb16e", "cterm": "215", "cterm16": "11"}
+let s:yellow = { "gui": "#ffe9aa", "cterm": "228", "cterm16": "3"}
+let s:dark_yellow = { "gui": "#ffb378", "cterm": "215", "cterm16": "11"}
 
 let s:blue = { "gui": "#91ddff", "cterm": "159", "cterm16": "4"}
-let s:dark_blue = { "gui": "#6097dc", "cterm": "75", "cterm16": "12"}
+let s:dark_blue = { "gui": "#65b2ff", "cterm": "75", "cterm16": "12"}
 
-let s:purple = { "gui": "#b585ca", "cterm": "141", "cterm16": "5"}
-let s:dark_purple = { "gui": "#8d73de", "cterm": "135", "cterm16": "13"}
+let s:purple = { "gui": "#c991e1", "cterm": "141", "cterm16": "5"}
+let s:dark_purple = { "gui": "#906cff", "cterm": "135", "cterm16": "13"}
 
-let s:cyan = { "gui": "#85f9d4", "cterm": "122", "cterm16": "6"}
-let s:dark_cyan = { "gui": "#53d3d2", "cterm": "121", "cterm16": "14"}
+let s:cyan = { "gui": "#aaffe4", "cterm": "122", "cterm16": "6"}
+let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 
 let s:clouds = { "gui": "#fbfcfc", "cterm": "254", "cterm16": "NONE"}
 let s:clouds_subtle = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
@@ -175,19 +175,19 @@ call s:h("IncSearch",     {"bg": s:red, "fg": s:clouds})
 call s:h("Search",        {"bg": s:bg_dark})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:bg_dark})
-call s:h("CursorLineNr",  {"bg": s:bg_subtle, "fg": s:bg_dark})
+call s:h("LineNr",        {"fg": s:bg_dark, "bg": s:bg_subtle})
+call s:h("CursorLineNr",  {"bg": s:blue, "fg": s:bg_subtle})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_dark})
 call s:h("Conceal",       {"fg": s:norm})
 call s:h("StatusLineNC",  {"bg": s:bg_dark, "fg": s:medium_gray})
-call s:h("VertSplit",     {"bg": s:bg_dark, "fg": s:bg_dark})
+call s:h("VertSplit",     {"fg": s:bg_subtle})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:medium_gray})
-call s:h("FoldColumn",    {"fg": s:bg_subtle})
+call s:h("Folded",        {"bg": s:purple, "fg": s:bg_subtle})
+call s:h("FoldColumn",    {"fg": s:yellow})
 call s:h("DiffAdd",       {"fg": s:green})
 call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffChange",    {"fg": s:dark_yellow})
@@ -214,7 +214,7 @@ call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg_subtle, "gui": "bold", "cter
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_dark})
 call s:h("CursorColumn",  {"bg": s:bg_subtle})
 call s:h("CursorLine",    {"bg": s:bg_subtle})
-call s:h("ColorColumn",   {"bg": s:bg_dark})
+call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 " remainder of syntax highlighting
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})

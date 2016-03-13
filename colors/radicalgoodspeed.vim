@@ -1,7 +1,7 @@
 " Vim color file
 " Maintaner: sv.junic(sv.junic@gmail.com)
 " URL: http://sv.junic.jp
-" Last Change: 16-Jun-2014.
+" Last Change: 25-Jun-2015.
 " Version: 1.3
 " Changelog: 0.1 - add many color
 "            0.2 - change many color
@@ -47,6 +47,8 @@
 "   33     177     #bd7ae0
 "   34     216     #f8a077
 "   35     135     #ae5ff2
+"   36     161     #dc2677
+"   37     106     #99bb26
 
 set background=dark
 
@@ -106,7 +108,9 @@ hi FoldColumn                   ctermbg=0   guibg=#000000 guifg=#3465a4
 
 " Specials
 hi Title            ctermfg=214                           guifg=#fcaf3e
-hi Todo             ctermfg=214                           guifg=#fcaf3e
+"" I'm thinking now.
+"hi Todo             ctermfg=82  ctermbg=196 guibg=#fe2626 guifg=#5ee710 gui=underline cterm=underline
+hi Todo             ctermfg=82  ctermbg=0   guibg=#fe2626 guifg=#5ee710 gui=underline cterm=underline
 hi SpecialKey       ctermfg=197                           guifg=#ef2929 gui=underline cterm=underline
 
 " Tabs

@@ -25,7 +25,6 @@ hi Normal guifg=#f2f5e9 guibg=#201227 guisp=#201227 gui=NONE ctermfg=230 ctermbg
 "hi Union -- no settings --
 "hi TabLineFill -- no settings --
 "hi VisualNOS -- no settings --
-"hi CursorColumn -- no settings --
 "hi EnumerationName -- no settings --
 "hi SpellCap -- no settings --
 "hi SpellLocal -- no settings --
@@ -35,6 +34,8 @@ hi Normal guifg=#f2f5e9 guibg=#201227 guisp=#201227 gui=NONE ctermfg=230 ctermbg
 "hi CTagsClass -- no settings --
 "hi TabLine -- no settings --
 "hi clear -- no settings --
+hi ColorColumn guibg=#693b80 cterm=NONE
+hi CursorColumn guibg=#aa2299 cterm=NONE
 hi IncSearch guifg=#312321 guibg=#c2cd23 guisp=#c2cd23 gui=NONE ctermfg=236 ctermbg=184 cterm=NONE
 hi WildMenu guifg=#d7a7ef guibg=#883aaf guisp=#883aaf gui=NONE ctermfg=183 ctermbg=97 cterm=NONE
 hi SpecialComment guifg=#d1418e guibg=NONE guisp=NONE gui=NONE ctermfg=169 ctermbg=NONE cterm=NONE
