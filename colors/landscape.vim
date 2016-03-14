@@ -104,7 +104,7 @@ if exists('*getmatches')
       return
     endif
     for m in getmatches()
-      if m.group == 'Todo' || m.group == 'FullSpace'
+      if m.group ==# 'Todo' || m.group ==# 'FullSpace'
         silent! call matchdelete(m.id)
       endif
     endfor

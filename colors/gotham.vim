@@ -195,6 +195,10 @@ call s:Col('DiffAdd', 'base7', 'green')
 call s:Col('DiffChange', 'base7', 'blue')
 call s:Col('DiffDelete', 'base7', 'red')
 call s:Col('DiffText', 'base7', 'cyan')
+call s:Col('DiffAdded', 'green')
+call s:Col('DiffChanged', 'blue')
+call s:Col('DiffRemoved', 'red')
+call s:Col('DiffSubname', 'base4')
 
 " Directories (e.g. netrw).
 call s:Col('Directory', 'cyan')

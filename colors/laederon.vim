@@ -601,6 +601,13 @@ call s:HL('markdownCodeBlock', 'darkbark', '', 'none')
 call s:HL('mysqlSpecial', 'coldsky', '', 'bold')
 
 " }}}
+" Neovim {{{
+
+call s:HL('EndOfBuffer', 'darkbark', '')
+call s:HL('TermCursor', 'oakleaf', '')
+call s:HL('TermCursorNC', 'darkbark', '')
+
+" }}}
 " Python {{{
 
 hi def link pythonOperator Operator

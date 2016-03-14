@@ -59,7 +59,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-materialtheme"
+let g:colors_name = "material-theme"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
@@ -176,6 +176,12 @@ call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineSel",    s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 
+" Hide '~' at end of buffer in neovim
+" Set g:material_hide_endofbuffer = 0 to disable
+if has('nvim') && (!exists('g:material_hide_endofbuffer') || g:material_hide_endofbuffer == 1)
+  call <sid>hi("EndOfBuffer",s:gui00, s:gui00, s:cterm00, s:cterm00, "none")
+endif
+
 " Standard syntax highlighting
 call <sid>hi("Boolean",      s:gui0D, "", s:cterm0D, "", "none")
 call <sid>hi("Character",    s:gui08, "", s:cterm08, "", "none")
@@ -268,9 +274,22 @@ call <sid>hi("NERDTreeDirSlash",  s:gui04, "", s:cterm04, "", "")
 call <sid>hi("NERDTreeExecFile",  s:gui0D, "", s:cterm0D, "", "")
 
 " PHP highlighting
-call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "")
-call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "")
-call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "")
+call <sid>hi("phpComparison",     s:gui05, "", s:cterm05, "", "")
+call <sid>hi("phpMethodsVar",     s:gui07, "", s:cterm07, "", "")
+call <sid>hi("phpMemberSelector", s:gui04, "", s:cterm04, "", "")
+call <sid>hi("phpIdentifier",     s:gui04, "", s:cterm04, "", "")
+call <sid>hi("phpVarSelector",    s:gui04, "", s:cterm04, "", "")
+call <sid>hi("phpType",           s:gui05, "", s:cterm05, "", "")
+call <sid>hi("phpClass",          s:gui0C, "", s:cterm0C, "", "")
+call <sid>hi("phpClasses",        s:gui0C, "", s:cterm0C, "", "")
+call <sid>hi("phpParent",         s:gui02, "", s:cterm02, "", "")
+call <sid>hi("phpFunctions",      s:gui07, "", s:cterm07, "", "")
+call <sid>hi("phpFunction",       s:gui07, "", s:cterm07, "", "")
+call <sid>hi("phpOperator",       s:gui04, "", s:cterm04, "", "")
+call <sid>hi("phpKeyword",        s:gui05, "", s:cterm05, "", "")
+call <sid>hi("phpClassExtends",   s:gui0A, "", s:cterm0A, "", "")
+call <sid>hi("phpInclude",        s:gui05, "", s:cterm05, "", "")
+call <sid>hi("phpUseClass",       s:gui0A, "", s:cterm0A, "", "")
 
 " Python highlighting
 call <sid>hi("pythonOperator",  s:gui04, "", s:cterm04, "", "")

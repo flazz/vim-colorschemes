@@ -15,7 +15,7 @@ endif
 let colors_name="darth"
 
 " Default colors
-hi Normal guifg=#999999 guibg=black gui=NONE ctermfg=253 ctermbg=NONE cterm=NONE
+hi Normal guifg=#CCCCCC guibg=black gui=NONE ctermfg=250 ctermbg=NONE cterm=NONE
 
 " Top groups
 hi Comment guifg=#7C7C7C guibg=NONE gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
@@ -28,7 +28,7 @@ hi Special guifg=#FFFFB6 guibg=NONE gui=NONE ctermfg=yellow ctermbg=NONE cterm=N
 hi Underlined guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 hi Ignore guifg=NONE guibg=NONE gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 hi Error guifg=#FFFFFF guibg=#FF0000 gui=NONE ctermfg=white ctermbg=darkred cterm=NONE
-hi Todo guifg=#FFFFB6 guibg=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
+hi Todo guifg=#FFFFB6 guibg=NONE gui=NONE ctermfg=220 ctermbg=NONE cterm=NONE
 
 " Sub groups
 hi Boolean guifg=#FCB1FF guibg=NONE gui=NONE ctermfg=magenta ctermbg=NONE cterm=NONE
@@ -52,7 +52,7 @@ hi FoldColumn guifg=#222222 guibg=#666666 gui=NONE ctermfg=16 ctermbg=darkgray c
 hi SignColumn guifg=#222222 guibg=#666666 gui=NONE ctermfg=16 ctermbg=gray cterm=NONE
 hi IncSearch guifg=#111111 guibg=#FFFFAF gui=NONE ctermfg=16 ctermbg=222 cterm=NONE
 hi LineNr guifg=#333333 guibg=#BBBBBB gui=NONE ctermfg=243 ctermbg=234 cterm=NONE
-hi MatchParen guifg=#111111 guibg=#FFFFAF gui=NONE ctermfg=16 ctermbg=220 cterm=NONE
+hi MatchParen guifg=#FFFFAF guibg=NONE gui=NONE ctermfg=220 ctermbg=16 cterm=NONE
 hi ModeMsg guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi MoreMsg guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi NonText guifg=#555555 guibg=NONE gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
@@ -61,7 +61,7 @@ hi PmenuSel guifg=#111111 guibg=#FFFFAF gui=NONE ctermfg=16 ctermbg=220 cterm=NO
 hi PmenuSbar guifg=#cccccc guibg=#cccccc gui=NONE ctermfg=lightgray ctermbg=lightgray cterm=NONE
 hi PmenuThumb guifg=#777777 guibg=#777777 gui=NONE ctermfg=gray ctermbg=gray cterm=NONE
 hi Question guifg=#BCBCBC guibg=#262626 gui=NONE ctermfg=lightgray ctermbg=NONE cterm=NONE
-hi Search guifg=#262626 guibg=#FFFFB6 gui=NONE ctermfg=16 ctermbg=214 cterm=NONE
+hi Search guifg=#262626 guibg=#FFFFB6 gui=NONE ctermfg=16 ctermbg=220 cterm=NONE
 hi SpecialKey guifg=#555555 guibg=NONE gui=NONE ctermfg=darkgray ctermbg=NONE cterm=NONE
 hi SpellBad guifg=#FF0000 guibg=NONE gui=underline ctermfg=darkred ctermbg=NONE cterm=NONE
 hi SpellCap guifg=#FF0000 guibg=NONE gui=NONE ctermfg=darkred ctermbg=NONE cterm=NONE
@@ -84,6 +84,15 @@ hi link User1 Error
 hi link StorageClass Keyword
 hi link StringSpecial Special
 
+" Diff
+hi diffRemoved guifg=#FF0000 guibg=NONE gui=NONE ctermfg=darkred ctermbg=NONE cterm=NONE
+hi diffAdded guifg=#008000 guibg=NONE gui=NONE ctermfg=darkgreen ctermbg=NONE cterm=NONE
+
+" Vim
+hi link vimGroupName Type
+hi link vimFuncName Type
+hi link vimParenSep Normal
+
 " PHP
 hi link phpBackslashSequences Number
 hi link phpComparison Normal
@@ -99,28 +108,35 @@ hi link phpFunctions Type
 hi link phpInclude phpFunctions
 hi link phpSpecialFunction Type
 hi link PhpLocalVarCheckError Comment
-hi phpClasses guifg=#6c71c4 guibg=NONE gui=NONE ctermfg=36 ctermbg=NONE cterm=NONE
+hi link phpClasses Type
 
-" JavaScript
+" JavaScript from default
 hi link javaScriptFunction Statement
 hi link javaScriptNumber Number
 hi link javaScriptIdentifier Statement
+hi link javaScriptVariable Statement
 hi link javaScriptNull Type
 hi link javaScriptExceptions Type
 hi link javaScriptSpecial StringSpecial
 hi link javaScriptLabel StringSpecial
+hi link javaScriptGlobal Normal
 
-" COFFEE
-"hi link coffeeDotAccess Normal
-"hi link coffeeAssignOp Normal
-"hi link coffeeExtendedOp Normal
-hi link coffeeObjAssign Special
-hi link coffeeConstant Normal
-hi link coffeeParen Normal
-hi link coffeeBracket Normal
-hi link coffeeKeyword Keyword
-hi link coffeeInterpDelim Special
-hi coffeeSpecialVar guifg=#DDDDDD guibg=NONE
+" JavaScript from somwhere?
+hi link jsOperator Normal
+hi link jsClass Keyword
+
+" JavaScript from othree/yajs.vim
+hi link javascriptMethod Type
+hi link javascriptArrayMethod Type
+hi link javascriptObjectStaticMethod Type
+hi link javascriptDOMNodeMethod Type
+hi link javascriptProp Normal
+hi link javascriptBOMWindowProp Special
+hi link javascriptDOMDocProp Special
+hi link javascriptImport Keyword
+hi link javascriptNodeGlobal Special
+hi link javascriptOperator Keyword
+hi link javascriptEndColons Normal
 
 " CSS
 hi link cssClassName Normal
@@ -128,21 +144,9 @@ hi link cssIdentifier Normal
 hi link cssTagName Normal
 hi link cssVendor Statement
 
-" Sass
-hi link sassClass Type
-hi link sassClassChar Type
-
 " Python
 hi link pythonEscape StringSpecial
 hi link pythonValues Type
-
-" Vim
-hi link vimGroupName Type
-hi link vimFuncName Type
-hi link vimParenSep Normal
-
-" Help
-hi link helpHyperTextJump Statement
 
 " HTML
 hi link htmlEndTag Normal
@@ -152,21 +156,24 @@ hi link javaScript Normal
 hi link htmlSpecialTagName Normal
 hi link htmlTagName Normal
 
-" Todo
-hi link TodoItemAdditionalText Normal
-hi link TodoItemDone Comment
-hi link TodoItem Constant
-hi link TodoTitle Statement
-
-" Diff
-hi diffRemoved guifg=#FF0000 guibg=NONE gui=NONE ctermfg=darkred ctermbg=NONE cterm=NONE
-hi diffAdded guifg=#008000 guibg=NONE gui=NONE ctermfg=darkgreen ctermbg=NONE cterm=NONE
-
-" Jinja
-hi link jinjaTagBlock Normal
+" Sass
+hi link sassClass Type
+hi link sassClassChar Type
 
 " Smarty
 hi link smartyTagName Normal
+
+" Markdown
+hi link markdownH1 Keyword
+hi link markdownH2 Type
+hi link markdownH3 Constant
+
+"
+" Plugins
+"
+
+highlight ExtraWhitespace guibg=#ff0000 ctermbg=red
+highlight NifflerCursorLine guifg=#000000 guibg=#FFD700 ctermfg=16 ctermbg=220
 
 " VimWiki
 hi link VimwikiHeader1 Constant
@@ -174,7 +181,11 @@ hi link VimwikiHeader2 Type
 hi link VimwikiHeader3 Number
 hi VimwikiDelText guifg=#FF0000 guibg=NONE gui=NONE ctermfg=160 ctermbg=none cterm=NONE
 hi link VimwikiItalic Special
-hi link VimwikiBold Type
+hi link VimwikiBold Todo
 hi link VimwikiLink Keyword
 hi link VimwikiLinkRest Special
-hi link VimwikiCode Constant
+hi link VimwikiCode Special
+hi link VimwikiPre Special
+" hi VimwikiCode guifg=#ffff00 guibg=NONE gui=NONE ctermfg=37 ctermbg=none cterm=NONE
+" hi link VimwikiCode WarningMsg
+" hi VimwikiCode guifg=#ffff00 guibg=NONE gui=NONE ctermfg=167 ctermbg=none cterm=NONE

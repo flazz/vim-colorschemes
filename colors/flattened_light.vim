@@ -28,7 +28,7 @@ hi DiffChange                              cterm=NONE  ctermfg=3  ctermbg=7  gui
 hi DiffDelete                              cterm=NONE  ctermfg=1  ctermbg=7  gui=NONE  guifg=#dc322f  guibg=#eee8d5  gui=NONE
 hi DiffText                                cterm=NONE  ctermfg=4  ctermbg=7  gui=NONE  guifg=#268bd2  guibg=#eee8d5  guisp=#268bd2  gui=NONE
 hi Directory                               cterm=NONE  ctermfg=4  guifg=#268bd2  gui=NONE
-hi Error                                   cterm=NONE  ctermfg=1  gui=NONE  guifg=#dc322f  gui=NONE
+hi Error                                   cterm=NONE  ctermfg=1  gui=NONE  guifg=#dc322f  guibg=#fdf6e3  gui=NONE
 hi ErrorMsg                                cterm=reverse  ctermfg=1  cterm=NONE  gui=reverse  guifg=#dc322f  guibg=NONE  cterm=NONE
 hi FoldColumn                              cterm=NONE  ctermfg=11  ctermbg=7  guifg=#657b83  guibg=#eee8d5  gui=NONE
 hi Folded                                  cterm=NONE,underline  ctermfg=11  ctermbg=7  gui=NONE,underline  guifg=#657b83  guibg=#eee8d5  guisp=#fdf6e3  gui=NONE

@@ -42,7 +42,7 @@ hi Folded         guibg=#585858 guifg=#c5dcdc gui=bold term=NONE cterm=bold cter
 
 " -> Line info
 "hi LineNr         guibg=#121212 guifg=#1F1F1F gui=none term=underline cterm=NONE ctermbg=233 ctermfg=236
-hi LineNr         guibg=#121212 guifg=#1F1F1F gui=none term=underline cterm=NONE ctermbg=233 ctermfg=236
+hi LineNr         guibg=#121212 guifg=#3F3F3F gui=none term=underline cterm=NONE ctermbg=233 ctermfg=236
 hi StatusLine     guibg=#121212 guifg=fg      gui=bold term=reverse,bold cterm=reverse,bold ctermbg=60 ctermfg=252
 hi StatusLineNC   guibg=#25365a guifg=#696567 gui=none term=reverse cterm=reverse ctermbg=60 ctermfg=53  "alt: guibg=#4d5074 guifg=#5F005F
 hi ColorColumn    guibg=#121212 guifg=fg      gui=none term=reverse cterm=NONE ctermbg=233 ctermfg=fg "alt: guibg=#5F005F guifg=#d0d0d0

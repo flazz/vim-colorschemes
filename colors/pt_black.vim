@@ -1,10 +1,12 @@
+" putty_tmux_black color setting
 " author : yantze@126.com
-" full name : putty_tmux_black
+" repo: github.com/yantze/pt_black
 
-" Based on ir_black
+" Base on ir_black
 " runtime colors/ir_black.vim
 " runtime globpath(&rtp, 'colors\ir_black.vim')
-" and base-cn on grb256
+
+" Base on grb256
 " From https://github.com/garybernhardt/destroy-all-software-extras/blob/master/das-0030-some-vim-tips/grb256.vim
 
 set background=dark

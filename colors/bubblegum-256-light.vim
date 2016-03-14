@@ -68,14 +68,14 @@ hi StatusLine ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui
 hi StatusLineNC ctermfg=246 ctermbg=254 cterm=none guifg=#949494 guibg=#E4E4E4 gui=none
 hi TabLine ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui=none
 hi TabLineSel ctermfg=238 ctermbg=188 cterm=none guifg=#444444 guibg=#D7D7D7 gui=none
-hi TabLineFill ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui=none
+hi TabLineFill ctermbg=254 cterm=none guibg=#E4E4E4 gui=none
 hi VertSplit ctermfg=254 ctermbg=254 cterm=none guifg=#E4E4E4 guibg=#E4E4E4 gui=none
 
 " Menu
 hi Pmenu ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui=none
-hi PmenuSel ctermfg=235 ctermbg=246 cterm=none guifg=#262626 guibg=#949494 gui=none
-hi PmenuSbar ctermfg=235 ctermbg=246 cterm=none guifg=#262626 guibg=#949494 gui=none
-hi PmenuThumb ctermfg=137 ctermbg=137 cterm=none guifg=#AF875F guibg=#AF875F gui=none
+hi PmenuSel ctermfg=235 ctermbg=145 cterm=none guifg=#262626 guibg=#AFAFAF gui=none
+hi PmenuSbar ctermbg=250 cterm=none guibg=#BCBCBC gui=none
+hi PmenuThumb ctermbg=102 cterm=none guibg=#878787 gui=none
 hi WildMenu ctermfg=231 ctermbg=98 cterm=none guifg=#FFFFFF guibg=#875FD7 gui=none
 
 " Selection
@@ -92,14 +92,14 @@ hi Question ctermfg=38 ctermbg=231 cterm=none guifg=#00AFD7 guibg=#FFFFFF gui=no
 " Mark
 hi Folded ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
 hi FoldColumn ctermfg=29 ctermbg=254 cterm=none guifg=#00875F guibg=#E4E4E4 gui=none
-hi SignColumn ctermfg=29 ctermbg=254 cterm=none guifg=#00875F guibg=#E4E4E4 gui=none
-hi ColorColumn ctermfg=29 ctermbg=254 cterm=none guifg=#00875F guibg=#E4E4E4 gui=none
+hi SignColumn ctermfg=130 ctermbg=254 cterm=none guifg=#AF5F00 guibg=#E4E4E4 gui=none
+hi ColorColumn ctermbg=254 cterm=none guibg=#E4E4E4 gui=none
 hi LineNr ctermfg=246 ctermbg=254 cterm=none guifg=#949494 guibg=#E4E4E4 gui=none
 hi MatchParen ctermfg=231 ctermbg=166 cterm=none guifg=#FFFFFF guibg=#D75F00 gui=none
 
 " Cursor
-hi CursorColumn ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui=none
-hi CursorLine ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui=none
+hi CursorColumn ctermbg=254 cterm=none guibg=#E4E4E4 gui=none
+hi CursorLine ctermbg=254 cterm=none guibg=#E4E4E4 gui=none
 hi CursorLineNr ctermfg=241 ctermbg=254 cterm=none guifg=#626262 guibg=#E4E4E4 gui=none
 
 " Search
@@ -122,7 +122,7 @@ hi SpellLocal ctermfg=94 ctermbg=231 cterm=underline guifg=#875F00 guibg=#FFFFFF
 hi SpecialKey ctermfg=74 ctermbg=231 cterm=none guifg=#5FAFD7 guibg=#FFFFFF gui=none
 hi NonText ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
 hi Directory ctermfg=104 ctermbg=231 cterm=none guifg=#8787D7 guibg=#FFFFFF gui=none
-hi Title ctermfg=30 ctermbg=231 cterm=none guifg=#008787 guibg=#FFFFFF gui=none
+hi Title ctermfg=30 cterm=none guifg=#008787 gui=none
 hi Conceal ctermfg=103 ctermbg=231 cterm=none guifg=#8787AF guibg=#FFFFFF gui=none
 hi Noise ctermfg=243 ctermbg=231 cterm=none guifg=#767676 guibg=#FFFFFF gui=none
 hi helpHyperTextJump ctermfg=31 ctermbg=231 cterm=none guifg=#0087AF guibg=#FFFFFF gui=none
@@ -135,7 +135,7 @@ hi javaScriptNumber ctermfg=136 ctermbg=231 cterm=none guifg=#AF8700 guibg=#FFFF
 hi htmlTag ctermfg=26 ctermbg=231 cterm=none guifg=#005FD7 guibg=#FFFFFF gui=none
 hi htmlEndTag ctermfg=26 ctermbg=231 cterm=none guifg=#005FD7 guibg=#FFFFFF gui=none
 hi htmlTagName ctermfg=169 ctermbg=231 cterm=none guifg=#D75FAF guibg=#FFFFFF gui=none
-hi htmlString ctermfg=58 ctermbg=231 cterm=none guifg=#5F5F00 guibg=#FFFFFF gui=none
+hi htmlString ctermfg=136 ctermbg=231 cterm=none guifg=#AF8700 guibg=#FFFFFF gui=none
 
 " Vim
 hi vimFold ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
@@ -143,10 +143,11 @@ hi vimCommentTitle ctermfg=241 ctermbg=231 cterm=none guifg=#626262 guibg=#FFFFF
 
 " Diff File
 hi diffFile ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
-hi diffLine ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
+hi diffLine ctermfg=241 ctermbg=231 cterm=none guifg=#626262 guibg=#FFFFFF gui=none
 hi diffAdded ctermfg=28 ctermbg=231 cterm=none guifg=#008700 guibg=#FFFFFF gui=none
 hi diffRemoved ctermfg=169 ctermbg=231 cterm=none guifg=#D75FAF guibg=#FFFFFF gui=none
 hi diffChanged ctermfg=136 ctermbg=231 cterm=none guifg=#AF8700 guibg=#FFFFFF gui=none
+hi diffSubname ctermfg=239 ctermbg=231 cterm=none guifg=#4E4E4E guibg=#FFFFFF gui=none
 hi diffOldLine ctermfg=69 ctermbg=231 cterm=none guifg=#5F87FF guibg=#FFFFFF gui=none
 
 " Mail

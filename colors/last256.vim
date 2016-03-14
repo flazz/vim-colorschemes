@@ -8,7 +8,7 @@
 "  /_____/\__,_/____/\__/   /____/_____/\____/  
 "                                                               "
 " License: {{{
-" Copyright (c) 2013 Kai Yuan
+" Copyright (c) 2013-2016 Kai Yuan
 "
 " Permission is hereby granted, free of charge, to any per‐ son obtaining a
 " copy of this software and associated doc‐ umentation files (the “Software”),
@@ -109,7 +109,7 @@ else
   let s:addfg      = "193"
   let s:changebg   = "60"
   let s:changefg   = "189"
-  let s:brown      = "101"    
+  let s:brown      = "101"
   let s:foreground = "244"
   let s:selection  = "240"
   let s:visual     = "66"
@@ -117,7 +117,7 @@ else
   let s:comment    = "240"
   let s:red        = "167"
   let s:orange     = "172"
-  let s:yellow     = "221"
+  let s:yellow     = "178"
   let s:green      = "71"
   let s:aqua       = "111"
   let s:blue       = "69"

@@ -313,6 +313,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("rubyKeyword", "ff6666", "", "bold")
     " }}}
 
+    " for IndentGuides {{{
+    call <SID>X("IndentGuidesOdd",  "666699", "333333", "")
+    call <SID>X("IndentGuidesEven", "9999CC", "666666", "")
+    " }}}
+
     " delete functions {{{
     delf <SID>X
     delf <SID>rgb
