@@ -1,6 +1,6 @@
 " Author: 'Christopher MCA'
 " Site: https:/github.com/christophermca/meta5
-" Version:      0.11.0
+" Version:      0.14.0
 
 "Note: a TRON inspired theme
 
@@ -28,12 +28,17 @@ endif
 hi Cursor         guifg=#000000 guibg=#d0d0d0 ctermfg=0 ctermbg=252
 hi NonText        guifg=#5f5fff ctermfg=63
 hi Normal         guifg=#bcbcbc guibg=#1c1c1c ctermfg=250 ctermbg=233
+hi CursorLineNr   guifg=#ffff00 guibg=NONE ctermfg=11 ctermbg=NONE
+hi colorColumn    guibg=#000080 ctermbg=4
+hi Directory      guifg=#00ffff guibg=NONE ctermfg=14 ctermbg=NONE
 hi LineNr         guifg=#808080 guibg=NONE ctermfg=244 ctermbg=NONE
-hi StatusLine     guifg=#080808 guibg=#585858 gui=bold ctermfg=232 ctermbg=240 cterm=bold term=bold
-hi StatusLineNC   guifg=#080808 guibg=#585858 ctermfg=232 ctermbg=240
+hi StatusLine     guifg=#005f5f guibg=#080808 gui=underline ctermfg=23 ctermbg=232 cterm=underline term=underline
+hi StatusLineNC   guifg=#585858 guibg=#080808 ctermfg=240 ctermbg=232
 hi VertSplit      guifg=#444444 guibg=#585858 ctermfg=238 ctermbg=240
-hi Folded         guifg=#a8a8a8 guibg=#000080 ctermfg=248 ctermbg=4
+hi Folded         guifg=#005f5f guibg=#080808 ctermfg=23 ctermbg=0
 hi Title          guifg=#df8700 ctermfg=172
+hi ErrorMsg       guifg=#ffffff guibg=#ff0000 gui=NONE ctermfg=15 ctermbg=9 cterm=NONE
+hi Error          guifg=#ffffff guibg=#ff0000 gui=underline ctermfg=15 ctermbg=9 cterm=underline
 hi Visual         guifg=#afffff guibg=#4e4e4e gui=bold ctermfg=159 ctermbg=239 cterm=bold
 hi SpecialKey     guifg=#808080 ctermfg=244 guibg=NONE ctermbg=NONE
 hi WarningMsg     guifg=#afffff ctermfg=159
@@ -67,20 +72,18 @@ hi Define         guifg=#ff8700 ctermfg=208
 
 "Coffeescript
 hi coffeeEmbed          guifg=#87ffaf ctermfg=121
-hi coffeeParens         guifg=#5fdf5f gui=bold ctermfg=77 cterm=bold
-hi coffeeCurlies        guifg=#00dfdf ctermfg=44
 
 hi link coffeeSemicolonError NONE
 hi link coffeeSpaceError NONE
 hi link coffeeReservedError NONE
 
-"diff
+"Diff
 hi DiffAdd        guifg=#00ff00 guibg=#005f00 cterm=NONE ctermfg=46 ctermbg=22 gui=NONE
 hi DiffDelete     guifg=#df0000 guibg=#5f0000 cterm=NONE ctermfg=9 ctermbg=52 gui=NONE
 hi DiffChange     cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE guifg=NONE guibg=NONE
 hi difftext       guifg=#00ff00 guibg=#4e4e4e cterm=underline ctermfg=10 ctermbg=239 gui=underline
 
-"spell
+"Spell
 if has("spell")
    hi spellBad       cterm=NONE ctermfg=9 ctermbg=52 gui=NONE guifg=#df0000 guibg=#5f0000
    hi spellCap       cterm=NONE ctermfg=46 ctermbg=22 gui=NONE guifg=#00ff00 guibg=#005f00
