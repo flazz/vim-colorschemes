@@ -31,7 +31,7 @@ hi  Directory                               ctermfg=4  guifg=#268bd2  gui=NONE
 hi  Error                                   cterm=NONE  ctermfg=1  ctermbg=NONE  guifg=#dc322f  guibg=#002b36  gui=NONE
 hi  ErrorMsg                                cterm=reverse  ctermfg=1  ctermbg=NONE  guifg=#dc322f  guibg=NONE gui=reverse
 hi  FoldColumn                              ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  gui=NONE
-hi  Folded                                  cterm=NONE,underline  ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  guisp=#002b36  gui=NONE,underline
+hi  Folded                                  cterm=NONE,underline  ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  guisp=#002b36  gui=NONE
 hi  HelpExample                             ctermfg=14  guifg=#93a1a1  gui=NONE
 hi  Identifier                              ctermfg=4  guifg=#268bd2  gui=NONE
 hi  IncSearch                               cterm=standout  ctermfg=9  guifg=#cb4b16  gui=standout
@@ -61,7 +61,7 @@ hi  TabLine                                 cterm=underline  ctermfg=12  ctermbg
 hi  TabLineFill                             cterm=underline  ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  guisp=#839496  gui=underline
 hi  TabLineSel                              cterm=underline,reverse  ctermfg=10  ctermbg=7  guifg=#586e75  guibg=#eee8d5  guisp=#839496  gui=underline,reverse
 hi  Title                                   cterm=NONE  ctermfg=9  guifg=#cb4b16  gui=NONE
-hi  Todo                                    cterm=NONE  ctermfg=5  guifg=#d33682  gui=NONE
+hi  Todo                                    cterm=NONE  ctermfg=5  guifg=#d33682  guibg=NONE  gui=bold
 hi  Type                                    ctermfg=3  guifg=#b58900  gui=NONE
 hi  Underlined                              ctermfg=13  guifg=#6c71c4  gui=NONE
 hi  VarId                                   ctermfg=4  guifg=#268bd2  gui=NONE
@@ -304,3 +304,22 @@ hi clear SyntasticWarningLine
 hi clear helpLeadBlank
 hi clear helpNormal
 hi clear pandocTableStructre
+
+if has('nvim')
+  let g:terminal_color_0  = '#073642'
+  let g:terminal_color_1  = '#dc322f'
+  let g:terminal_color_2  = '#859900'
+  let g:terminal_color_3  = '#b58900'
+  let g:terminal_color_4  = '#268bd2'
+  let g:terminal_color_5  = '#d33682'
+  let g:terminal_color_6  = '#2aa198'
+  let g:terminal_color_7  = '#eee8d5'
+  let g:terminal_color_8  = '#002b36'
+  let g:terminal_color_9  = '#cb4b16'
+  let g:terminal_color_10 = '#586e75'
+  let g:terminal_color_11 = '#657b83'
+  let g:terminal_color_12 = '#839496'
+  let g:terminal_color_13 = '#6c71c4'
+  let g:terminal_color_14 = '#93a1a1'
+  let g:terminal_color_15 = '#fdf6e3'
+endif

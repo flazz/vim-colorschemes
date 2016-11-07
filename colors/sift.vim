@@ -1,5 +1,5 @@
 " Vim color file
-" sift v1.3c
+" sift v2.0
 " http://www.vim.org/scripts/script.php?script_id=1454
 " 
 " Maintainer:	Shawn Axsom <axs221@gmail.com>
@@ -10,6 +10,18 @@
 "   - Thanks to Desert and OceanDeep for their color scheme 
 "     file layouts
 "   - Thanks to Raimon Grau for his feedback
+" 
+" Tips for updating color schemes:
+" map <F1> <c-a>:w <BAR> :colo sift<CR>
+" map <F2> :highlight<CR>
+" map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+"
+" To get a reasonably similar look between GUI and CTERM:
+" CSApprox
+" redir > highlightfile
+" highlight
+" redir END
+
 
 set background=dark
 if version > 580
@@ -37,7 +49,7 @@ hi Type			guifg=#60e5bf  gui=none
 hi Constant		guifg=#0ad8ff
 hi Number		guifg=#eabaff
 hi PreProc      guifg=#f085b4
-hi Identifier   guifg=#50f0b4
+hi Identifier   guifg=#50f0b4 gui=bold
 hi Special		guifg=#88a0d4 
 hi Operator		guifg=#f0da00 
 "hi Keyword		guifg=green
@@ -59,10 +71,12 @@ hi Exception	guifg=#dfff80
 " highlight groups
 "hi CursorIM
 hi Directory	guifg=#bbd0df
-"hi DiffAdd
-"hi DiffChange
-"hi DiffDelete
-"hi DiffText
+
+hi DiffAdd      guibg=#9af5c0 guifg=#05293d
+hi DiffDelete   guibg=#aa0500 guifg=#a5293d
+hi DiffChange   guibg=#0ab5c0 guifg=#05293d 
+hi DiffText     guibg=#aae5d0 guifg=#05293d 
+
 hi ErrorMsg     guibg=#ff4545
 
 hi Cursor       guibg=#cad5c0 guifg=#05293d
@@ -91,6 +105,12 @@ hi WarningMsg	guifg=salmon
 "hi Scrollbar  guibg=grey30 guifg=tan
 "hi Tooltip
 
+hi Matchmaker               guifg=#FFFFFF guibg=#3364b5
+
+hi SignColumn        guibg=#112121
+hi GitGutterAdd      guifg=#003000 guibg=#33a333 gui=bold ctermfg=2 ctermbg=4
+hi GitGutterChange   guifg=#000050 guibg=#0383f3 gui=bold ctermfg=3 ctermbg=4
+hi GitGutterDelete   guifg=#000000 guibg=#a33333 gui=bold ctermfg=1 ctermbg=4
 
 " new Vim 7.0 items
 hi Pmenu        guibg=#3a6595 guifg=#9aadd5
@@ -101,67 +121,47 @@ hi MatchParen   guibg=#200080 guifg=#f0f080
 
 
 
-" color terminal definitions
-hi Normal ctermfg=grey
-hi Number ctermfg=blue
-highlight Operator ctermfg=yellow
-highlight Conditional ctermfg=darkred
-highlight Repeat ctermfg=darkred
-hi Exception ctermfg=red
-hi function ctermfg=darkyellow
-hi SpecialKey	ctermfg=darkgreen
-hi NonText	cterm=bold ctermfg=darkgrey
-hi Directory	ctermfg=darkcyan
-hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
-hi IncSearch	ctermfg=yellow ctermbg=darkyellow cterm=NONE
-hi Search	ctermfg=black ctermbg=darkyellow cterm=NONE
-hi MoreMsg	ctermfg=darkgreen
-hi ModeMsg	cterm=NONE ctermfg=brown
-hi LineNr	ctermfg=darkcyan ctermbg=NONE
-hi Question	ctermfg=green
-hi StatusLine	ctermfg=blue ctermbg=grey cterm=NONE
-hi StatusLineNC ctermfg=black ctermbg=grey cterm=NONE
-hi VertSplit	ctermfg=black ctermbg=grey cterm=NONE
-hi Title	ctermfg=Yellow cterm=NONE
-hi Visual	ctermbg=darkcyan ctermfg=black cterm=NONE
-hi VisualNOS	ctermbg=darkcyan ctermfg=black cterm=NONE
-hi WarningMsg	ctermfg=1
-hi WildMenu	ctermfg=0 ctermbg=3
-hi Folded	ctermfg=darkgreen ctermbg=NONE cterm=NONE
-hi FoldColumn	ctermfg=green ctermbg=black
-hi DiffAdd	ctermbg=4
-hi DiffChange	ctermbg=5
-hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
-hi DiffText	cterm=bold ctermbg=1
-hi identifier   ctermfg=darkmagenta
-
-"set comments to grey on non-Windows OS's to make sure
-"it is readable
-if &term == "builtin_gui" || &term == "win32"
-	hi Comment		ctermfg=darkgrey  ctermbg=darkblue
-	hi IncSearch	ctermfg=black ctermbg=grey cterm=NONE
-	hi Search	ctermfg=black ctermbg=darkgrey cterm=NONE
-else
-	hi Comment		ctermfg=grey  ctermbg=darkblue
-	hi IncSearch	ctermfg=yellow ctermbg=darkyellow cterm=NONE
-	hi Search	ctermfg=black ctermbg=darkyellow cterm=NONE
-endif
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-hi Constant	ctermfg=blue
-hi Special	ctermfg=darkmagenta
-hi Statement	ctermfg=red
-hi PreProc	ctermfg=magenta
-hi Type		ctermfg=darkblue " ctermbg=darkblue
-hi Underlined	ctermfg=yellow cterm=NONE
-hi Ignore	cterm=bold ctermfg=7
-hi Ignore	ctermfg=darkgrey
-hi Error	cterm=bold ctermfg=7 ctermbg=1
-
-" new Vim 7.0 items
-hi Pmenu        ctermbg=darkblue ctermfg=lightgrey
-hi PmenuSel     ctermbg=lightblue ctermfg=white                    
-
-"vim: sw=4
 
 
+" terminal colors
+hi Normal         ctermbg=16 ctermfg=194
+hi SpecialKey     term=bold ctermfg=115 
+hi NonText        term=bold cterm=bold ctermfg=52 ctermbg=16 
+hi Directory      term=bold ctermfg=152 
+hi ErrorMsg       term=standout ctermfg=231 ctermbg=203 
+hi IncSearch      term=reverse cterm=reverse ctermfg=58 ctermbg=187 
+hi Search         term=reverse ctermfg=58 ctermbg=108 
+hi MoreMsg        term=bold cterm=bold ctermfg=29 
+hi ModeMsg        term=bold cterm=bold ctermfg=38 
+hi LineNr         term=underline cterm=bold ctermfg=30 ctermbg=16 
+hi CursorLineNr   term=bold cterm=bold ctermfg=226 
+hi Question       term=standout cterm=bold ctermfg=146 
+hi StatusLine     term=bold,reverse cterm=bold ctermfg=17 ctermbg=38 
+hi StatusLineNC   term=reverse cterm=bold ctermfg=23 ctermbg=31 
+hi VertSplit      term=reverse ctermfg=244 ctermbg=60 
+hi Title          term=bold ctermfg=46 
+hi Visual         term=reverse ctermfg=68 ctermbg=17 
+hi VisualNOS      term=bold,underline cterm=bold,underline 
+hi WarningMsg     term=standout ctermfg=209 
+hi WildMenu       term=standout ctermfg=16 ctermbg=226 
+hi Folded         term=standout ctermfg=2 ctermbg=0 
+hi Statement      term=bold cterm=bold
+hi Constant		    ctermfg=45
+hi Function       term=bold cterm=bold ctermfg=173
+hi Special		    term=bold cterm=bold ctermfg=12
+hi Conditional	  term=bold cterm=bold ctermfg=11 
+hi Operator		    term=bold cterm=bold ctermfg=178
+hi Repeat		      term=bold cterm=bold ctermfg=214
+hi Identifier     term=none cterm=none ctermfg=50
+hi Comment		    ctermfg=23
+
+hi DiffAdd        ctermfg=11 ctermbg=22
+hi DiffDelete     ctermfg=3 ctermbg=88
+hi DiffChange     ctermfg=12 ctermbg=25
+hi DiffText       term=bold cterm=bold ctermfg=85 ctermbg=32
+
+hi Matchmaker        ctermfg=16 ctermbg=32
+hi SignColumn        ctermbg=234         
+hi GitGutterAdd      ctermfg=3 ctermbg=28 cterm=bold
+hi GitGutterChange   ctermfg=7 ctermbg=26 cterm=bold
+hi GitGutterDelete   ctermfg=2 ctermbg=1 cterm=bold

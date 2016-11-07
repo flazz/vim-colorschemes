@@ -64,7 +64,7 @@ let s:ubc.coal = ['000000', 16]
 
 let s:ubc.bleaksand   = ['c7b386', 252]
 let s:ubc.darksand    = ['998f84', 245]
-let s:ubc.gravel         = ['857f78', 243]
+let s:ubc.gravel         = ['989189', 246]
 let s:ubc.mediumsand   = ['666462', 241]
 let s:ubc.deepgravel     = ['45413b', 238]
 let s:ubc.deepergravel   = ['35322d', 236]

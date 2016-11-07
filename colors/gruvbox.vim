@@ -99,7 +99,7 @@ let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
 let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
 
 let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
-let s:gb.light0      = ['#fdf4c1', 229]     " 253-244-193
+let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193
 let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
 let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
 let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
@@ -277,7 +277,11 @@ if exists('g:gruvbox_hls_cursor')
   let s:hls_cursor = get(s:gb, g:gruvbox_hls_cursor)
 endif
 
-let s:number_column = s:bg4
+let s:number_column = s:none
+if exists('g:gruvbox_number_column')
+  let s:number_column = get(s:gb, g:gruvbox_number_column)
+endif
+
 let s:sign_column = s:bg1
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
@@ -474,8 +478,8 @@ hi! link SpecialKey GruvboxBg2
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
 
-call s:HL('Search',    s:bg0, s:yellow)
-call s:HL('IncSearch', s:bg0, s:hls_cursor)
+call s:HL('Search',    s:yellow, s:bg0, s:inverse)
+call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
@@ -495,7 +499,7 @@ hi! link Directory GruvboxGreenBold
 hi! link Title GruvboxGreenBold
 
 " Error messages on the command line
-call s:HL('ErrorMsg',   s:vim_bg, s:red, s:bold)
+call s:HL('ErrorMsg',   s:bg0, s:red, s:bold)
 " More prompt: -- More --
 hi! link MoreMsg GruvboxYellowBold
 " Current mode message: -- INSERT --
@@ -509,7 +513,7 @@ hi! link WarningMsg GruvboxRedBold
 " Gutter: {{{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:number_column)
+call s:HL('LineNr', s:bg4, s:number_column)
 
 " Column where signs are displayed
 call s:HL('SignColumn', s:none, s:sign_column)
@@ -1035,6 +1039,21 @@ hi! link javascriptDocParamType GruvboxFg4
 hi! link javascriptDocNamedParamType GruvboxFg4
 
 " }}}
+" TypeScript: {{{
+
+hi! link typeScriptReserved GruvboxAqua
+hi! link typeScriptLabel GruvboxAqua
+hi! link typeScriptIdentifier GruvboxOrange
+hi! link typeScriptBraces GruvboxFg1
+hi! link typeScriptEndColons GruvboxFg1
+hi! link typeScriptDOMObjects GruvboxFg1
+hi! link typeScriptAjaxMethods GruvboxFg1
+hi! link typeScriptLogicSymbols GruvboxFg1
+hi! link typeScriptDocSeeTag Comment
+hi! link typeScriptDocParam Comment
+hi! link typeScriptDocTags vimCommentTitle
+
+" }}}
 " CoffeeScript: {{{
 
 hi! link coffeeExtendedOp GruvboxFg3
@@ -1102,6 +1121,8 @@ hi! link elixirDocString Comment
 
 hi! link elixirStringDelimiter GruvboxGreen
 hi! link elixirInterpolationDelimiter GruvboxAqua
+
+hi! link elixirModuleDeclaration GruvboxYellow
 
 " }}}
 " Scala: {{{

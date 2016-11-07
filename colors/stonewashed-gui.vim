@@ -18,7 +18,7 @@ hi CursorLine guibg=#ffffff gui=none
 hi Delimiter guifg=#000000
 hi Define guifg=#5f0000 gui=underline
 hi Error guifg=#af0000 guibg=#f7f7f7 gui=bold,undercurl
-hi Exception guifg=#5f0000 gui=underline
+hi Exception guifg=#5f0000 gui=none
 hi Float guifg=#5f0000
 hi Function guifg=#5f5fd7
 hi Identifier guifg=#5f5fd7  gui=none

@@ -109,9 +109,9 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi link jsTypes Number
 hi jsContext ctermfg=195
-hi SneakPluginTarget ctermfg=88 guifg=232
+hi SneakPluginTarget ctermfg=88 guifg=red
 hi SneakStreakMask guifg=#737373 ctermfg=243 guibg=Black ctermbg=16 gui=NONE cterm=NONE term=NONE
-hi SneakStreakTarget ctermfg=88 guifg=232
+hi SneakStreakTarget ctermfg=88 guifg=red
 hi link SneakStreakStatusLine StatusLineNC
 hi link netrwMarkFile string
 hi signcolumn ctermbg=234

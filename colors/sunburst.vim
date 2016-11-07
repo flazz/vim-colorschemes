@@ -1,103 +1,146 @@
-" Vim color file
-" Converted from Textmate theme Sunburst using Coloration v0.3.2 (http://github.com/sickill/coloration)
+" sunburst.vim by AlexMax
+"
+" A theme based on the Sunburst theme for Textmate.
+"
+" Supports 16-color terminals, 256-color xterms and GUI.  It's most likely
+" broken on 88-color rxvt and non-recent versions of vim, patches welcome.
+"
+" Color names courtesy of http://chir.ag/projects/name-that-color
 
 set background=dark
 highlight clear
-
 if exists("syntax_on")
-  syntax reset
+	syntax reset
+endif
+let g:colors_name = "sunburst"
+
+" Color definitions.
+let s:G_Black='#000000'
+let s:G_DarkBlue='#0000bb'
+let s:G_DarkGreen='#00bb00'
+let s:G_DarkGray='#555555'
+let s:G_DarkCyan='#00bbbb'
+let s:G_DarkRed='#bb0000'
+let s:G_DarkMagenta='#bb00bb'
+let s:G_DarkYellow='#bbbb00'
+let s:G_Gray='#bbbbbb'
+let s:G_Blue='#5555ff'
+let s:G_Green='#55ff55'
+let s:G_Cyan='#55ffff'
+let s:G_Red='#ff5555'
+let s:G_Magenta='#ff55ff'
+let s:G_Yellow='#ffff55'
+let s:G_White='#ffffff'
+
+let s:G_Alabaster='#F8F8F8'     " Foreground
+let s:G_OuterSpace='#30363C'    " Invisibles
+let s:G_CodGray='#0D0D0D'       " Line Highlight
+let s:G_Shark='#2C3033'         " Selection
+let s:G_SilverChalice='#AEAEAE' " Comment
+let s:G_Mariner='#3387CC'       " Constant
+let s:G_Malibu='#89BDFF'        " Entity
+let s:G_Terracotta='#E28964'    " Keyword
+let s:G_Conifer='#99CF50'       " Storage
+let s:G_Apple='#65B042'         " String
+let s:G_Mamba='#9B859D'         " Support
+let s:G_RoyalBlue='#3E87E3'     " Variable
+let s:G_Primrose='#DDF2A4'      " String Constant
+let s:G_Porsche='#CF7D34'       " String Regex
+let s:G_Brandy='#DAD085'        " Support (Function)
+let s:G_PigeonPost='#AFC4DB'    " Preprocessor Directive
+
+let s:T_Black='0'
+let s:T_DarkBlue='1'
+let s:T_DarkGreen='2'
+let s:T_DarkGray='3'
+let s:T_DarkCyan='4'
+let s:T_DarkRed='5'
+let s:T_DarkMagenta='6'
+let s:T_DarkYellow='7'
+let s:T_Gray='8'
+let s:T_Blue='9'
+let s:T_Green='10'
+let s:T_Cyan='11'
+let s:T_Red='12'
+let s:T_Magenta='13'
+let s:T_Yellow='14'
+let s:T_White='15'
+
+if &t_Co == 256
+	let s:T_Alabaster='231'
+	let s:T_OuterSpace='59'
+	let s:T_CodGray='233'
+	let s:T_Shark='23'
+	let s:T_SilverChalice='145'
+	let s:T_Mariner='68'
+	let s:T_Malibu='111'
+	let s:T_Terracotta='173'
+	let s:T_Conifer='113'
+	let s:T_Apple='71'
+	let s:T_Mamba='139'
+	let s:T_RoyalBlue='68'
+	let s:T_Primrose='193'
+	let s:T_Porsche='179'
+	let s:T_Brandy='186'
+	let s:T_PigeonPost='152'
+else
+	let s:T_Alabaster='White'
+	let s:T_OuterSpace='DarkGray'
+	let s:T_CodGray='Black'
+	let s:T_Shark='DarkCyan'
+	let s:T_SilverChalice='Gray'
+	let s:T_Mariner='Blue'
+	let s:T_Malibu='Cyan'
+	let s:T_Terracotta='Red'
+	let s:T_Conifer='Green'
+	let s:T_Apple='DarkGreen'
+	let s:T_Mamba='Magenta'
+	let s:T_RoyalBlue='Blue'
+	let s:T_Primrose='Green'
+	let s:T_Porsche='Yellow'
+	let s:T_Brandy='Yellow'
+	let s:T_PigeonPost='Blue'
 endif
 
-let g:colors_name = "Sunburst"
+" Base vim color scheme
+exe 'hi Normal ctermfg='.s:T_Alabaster.' guifg='.s:G_Alabaster.' guibg='.s:G_Black
+exe 'hi ColorColumn guibg='.s:G_CodGray
+exe 'hi Cursor guibg=#A7A7A7'
+exe 'hi CursorLine guibg='.s:G_CodGray
+hi clear MatchParen
+exe 'hi MatchParen cterm=underline gui=underline'
+hi clear Search
+exe 'hi Search cterm=underline gui=underline'
+exe 'hi Visual ctermbg='.s:T_Shark.' guibg='.s:G_Shark
 
-hi Cursor ctermfg=NONE ctermbg=248 cterm=NONE guifg=NONE guibg=#a7a7a7 gui=NONE
-hi Visual ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#2c3033 gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#191919 gui=NONE
-hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#191919 gui=NONE
-hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#191919 gui=NONE
-hi LineNr ctermfg=244 ctermbg=234 cterm=NONE guifg=#7c7c7c guibg=#191919 gui=NONE
-hi VertSplit ctermfg=238 ctermbg=238 cterm=NONE guifg=#484848 guibg=#484848 gui=NONE
-hi MatchParen ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi StatusLine ctermfg=231 ctermbg=238 cterm=bold guifg=#f8f8f8 guibg=#484848 gui=bold
-hi StatusLineNC ctermfg=231 ctermbg=238 cterm=NONE guifg=#f8f8f8 guibg=#484848 gui=NONE
-hi Pmenu ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi PmenuSel ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#2c3033 gui=NONE
-hi IncSearch ctermfg=234 ctermbg=220 cterm=NONE guifg=#191919 guibg=#f1c40f gui=NONE
-hi Search ctermfg=234 ctermbg=220 cterm=NONE guifg=#191919 guibg=#f1c40f gui=NONE
-hi Directory ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi Folded ctermfg=249 ctermbg=0 cterm=NONE guifg=#aeaeae guibg=#000000 gui=NONE
+" Base vim syntax highlighting
+exe 'hi Comment ctermfg='.s:T_SilverChalice.' gui=Italic guifg='.s:G_SilverChalice
+exe 'hi link Character String'
+exe 'hi Constant ctermfg='.s:T_Mariner.' guifg='.s:G_Mariner
+exe 'hi link Delimiter Normal'
+exe 'hi Function ctermfg='.s:T_Malibu.' guifg='.s:G_Malibu
+exe 'hi Identifier cterm=NONE ctermfg='.s:T_RoyalBlue.' guifg='.s:G_RoyalBlue
+exe 'hi PreProc ctermfg='.s:T_PigeonPost.' guifg='.s:G_PigeonPost
+exe 'hi String ctermfg='.s:T_Apple.' guifg='.s:G_Apple
+exe 'hi Special ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
+exe 'hi Statement gui=NONE ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
+exe 'hi Type gui=NONE ctermfg='.s:T_Conifer.' guifg='.s:G_Conifer
 
-hi Normal ctermfg=231 ctermbg=0 cterm=NONE guifg=#f8f8f8 guibg=#000000 gui=NONE
-hi Boolean ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi Character ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi Comment ctermfg=249 ctermbg=NONE cterm=NONE guifg=#aeaeae guibg=NONE gui=italic
-hi Conditional ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi Define ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi Float ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi Function ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi Keyword ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi Label ctermfg=71 ctermbg=NONE cterm=NONE guifg=#65b042 guibg=NONE gui=NONE
-hi NonText ctermfg=23 ctermbg=232 cterm=NONE guifg=#2e343a guibg=#0c0c0c gui=NONE
-hi Number ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi Operator ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE
-hi SpecialKey ctermfg=23 ctermbg=234 cterm=NONE guifg=#2e343a guibg=#191919 gui=NONE
-hi Statement ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi String ctermfg=71 ctermbg=NONE cterm=NONE guifg=#65b042 guibg=NONE gui=NONE
-hi Tag ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f8 guibg=NONE gui=bold
-hi Todo ctermfg=249 ctermbg=NONE cterm=inverse,bold guifg=#aeaeae guibg=NONE gui=inverse,bold,italic
-hi Type ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
-hi rubyClass ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi rubyFunction ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubySymbol ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi rubyConstant ctermfg=103 ctermbg=NONE cterm=NONE guifg=#9b859d guibg=NONE gui=NONE
-hi rubyStringDelimiter ctermfg=71 ctermbg=NONE cterm=NONE guifg=#65b042 guibg=NONE gui=NONE
-hi rubyBlockParameter ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi rubyInstanceVariable ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi rubyInclude ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi rubyGlobalVariable ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi rubyRegexp ctermfg=179 ctermbg=NONE cterm=NONE guifg=#e9c062 guibg=NONE gui=NONE
-hi rubyRegexpDelimiter ctermfg=179 ctermbg=NONE cterm=NONE guifg=#e9c062 guibg=NONE gui=NONE
-hi rubyEscape ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi rubyControl ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi rubyClassVariable ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi rubyOperator ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi rubyException ctermfg=173 ctermbg=NONE cterm=NONE guifg=#e28964 guibg=NONE gui=NONE
-hi rubyPseudoVariable ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi rubyRailsUserClass ctermfg=103 ctermbg=NONE cterm=NONE guifg=#9b859d guibg=NONE gui=NONE
-hi rubyRailsARAssociationMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi rubyRailsARMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi rubyRailsRenderMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi rubyRailsMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi erubyComment ctermfg=249 ctermbg=NONE cterm=NONE guifg=#aeaeae guibg=NONE gui=italic
-hi erubyRailsMethod ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi htmlTag ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlEndTag ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlTagName ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlArg ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi htmlSpecialChar ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi javaScriptFunction ctermfg=113 ctermbg=NONE cterm=NONE guifg=#99cf50 guibg=NONE gui=NONE
-hi javaScriptRailsFunction ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi yamlKey ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi yamlAnchor ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi yamlAlias ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi yamlDocumentHeader ctermfg=71 ctermbg=NONE cterm=NONE guifg=#65b042 guibg=NONE gui=NONE
-hi cssURL ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3e87e3 guibg=NONE gui=NONE
-hi cssFunctionName ctermfg=186 ctermbg=NONE cterm=NONE guifg=#dad085 guibg=NONE gui=NONE
-hi cssColor ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi cssPseudoClassId ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi cssClassName ctermfg=111 ctermbg=NONE cterm=NONE guifg=#89bdff guibg=NONE gui=NONE
-hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE guifg=#3387cc guibg=NONE gui=NONE
-hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
-hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+" Mode-specific syntax highlighting
+exe 'hi phpFunctions ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
+exe 'hi pythonBuiltin ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy
+exe 'hi rubyClass ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
+exe 'hi rubyDefine ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
+exe 'hi rubyInclude ctermfg='.s:T_Terracotta.' guifg='.s:G_Terracotta
+exe 'hi rubyInterpolation ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
+exe 'hi rubyInterpolationDelimiter ctermfg='.s:T_Primrose.' guifg='.s:G_Primrose
+exe 'hi rubyRegexp ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpAnchor ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpCharClass ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpDelimiter ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyRegexpQuantifier ctermfg='.s:T_Porsche.' guifg='.s:G_Porsche
+exe 'hi rubyStringDelimiter ctermfg='.s:T_Apple.' guifg='.s:G_Apple
+
+" Plugin-specific syntax highlighting
+"   vim-cpp-enhanced-highlight by Jon Haggblad
+exe 'hi cAnsiFunction ctermfg='.s:T_Brandy.' guifg='.s:G_Brandy

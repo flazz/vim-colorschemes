@@ -11,6 +11,14 @@ if exists('syntax_on')
   syntax reset
 endif
 
+if !exists('g:spacegray_underline_search')
+  let g:spacegray_underline_search = 0
+endif
+
+if !exists('g:spacegray_italicize_comments')
+  let g:spacegray_italicize_comments = 0
+endif
+
 set background=dark
 let colors_name = 'spacegray'
 
@@ -18,7 +26,11 @@ let colors_name = 'spacegray'
 hi Normal          ctermbg=233  ctermfg=250    guibg=#111314  guifg=#B3B8C4  cterm=NONE      gui=NONE
 hi Conceal         ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#B3B8C4  cterm=NONE      gui=NONE
 
-hi Comment         ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=NONE      gui=NONE
+if g:spacegray_italicize_comments
+  hi Comment       ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=italic    gui=italic
+else
+  hi Comment       ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#515F6A  cterm=NONE      gui=NONE
+endif
 hi NonText         ctermbg=NONE ctermfg=8      guibg=NONE     guifg=#3E4853  cterm=NONE      gui=NONE
 hi Title           ctermbg=NONE ctermfg=231    guibg=NONE     guifg=#FFFFFF  cterm=NONE      gui=NONE
 
@@ -78,7 +90,11 @@ hi Folded          ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cte
 hi VertSplit       ctermbg=238  ctermfg=238    guibg=#444444  guifg=#444444  cterm=NONE      gui=NONE
 
 hi IncSearch       ctermbg=9    ctermfg=0      guibg=#AF5F5F  guifg=#141617  cterm=NONE      gui=NONE
-hi Search          ctermbg=2    ctermfg=232    guibg=#919652  guifg=#141617  cterm=NONE      gui=NONE
+if g:spacegray_underline_search
+  hi Search        ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=underline,bold gui=underline,bold
+else
+  hi Search        ctermbg=2    ctermfg=232    guibg=#919652  guifg=#141617  cterm=NONE      gui=NONE
+endif
 
 hi TabLine         ctermbg=232  ctermfg=249    guibg=#141617  guifg=#B3B8C4  cterm=NONE      gui=NONE
 hi TabLineFill     ctermbg=235  ctermfg=239    guibg=#303537  guifg=#303537  cterm=NONE      gui=NONE

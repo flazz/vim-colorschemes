@@ -87,6 +87,24 @@ let s:colors.blue    = { 'gui': '#195466', 'cterm': 24  }
 let s:colors.cyan    = { 'gui': '#33859E', 'cterm': 44  }
 let s:colors.green   = { 'gui': '#2aa889', 'cterm': 78  }
 
+" Neovim :terminal colors.
+let g:terminal_color_0  = get(s:colors.base0, 'gui')
+let g:terminal_color_8  = g:terminal_color_0
+let g:terminal_color_1  = get(s:colors.red, 'gui')
+let g:terminal_color_9  = g:terminal_color_1
+let g:terminal_color_2  = get(s:colors.green, 'gui')
+let g:terminal_color_10 = g:terminal_color_2
+let g:terminal_color_3  = get(s:colors.yellow, 'gui')
+let g:terminal_color_11 = g:terminal_color_3
+let g:terminal_color_4  = get(s:colors.blue, 'gui')
+let g:terminal_color_12 = g:terminal_color_4
+let g:terminal_color_5  = get(s:colors.violet, 'gui')
+let g:terminal_color_13 = g:terminal_color_5
+let g:terminal_color_6  = get(s:colors.cyan, 'gui')
+let g:terminal_color_14 = g:terminal_color_6
+let g:terminal_color_7  = get(s:colors.base6, 'gui')
+let g:terminal_color_15 = g:terminal_color_7
+
 
 " Native highlighting ==========================================================
 
@@ -169,7 +187,9 @@ call s:Col('PmenuThumb', '', 'base4')
 
 " Command line stuff.
 call s:Col('ErrorMsg', 'red', 'base1')
+call s:Col('Error', 'red', 'base1')
 call s:Col('ModeMsg', 'blue')
+call s:Col('WarningMsg', 'red')
 
 " Wild menu.
 " StatusLine determines the color of the non-active entries in the wild menu.

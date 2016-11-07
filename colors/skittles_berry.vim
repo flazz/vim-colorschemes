@@ -87,3 +87,8 @@ hi Normal         ctermfg=230 ctermbg=233 guifg=#ffffd7 guibg=#121212
 hi Identifier     cterm=none term=none ctermfg=228 guifg=#ffff87
 hi clear Cursor
 hi Cursor         ctermbg=26 ctermfg=7 guifg=#e5e5e5 guibg=#005fd7
+
+hi GitGutterChange ctermfg=202 ctermbg=233 cterm=bold
+hi GitGutterDelete ctermfg=125 ctermbg=233 cterm=bold
+hi GitGutterAdd    ctermfg=190 ctermbg=233 cterm=bold
+hi link TagbarSignature Type

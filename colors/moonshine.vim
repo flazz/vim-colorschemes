@@ -4,7 +4,7 @@
 "
 " VIM COLOR SCHEME
 "
-" Maintainer:   Karolis Koncevicius (karolis@koncevicius.lt)
+" Maintainer:   Karolis Koncevicius
 
 " Inspirations: Apprentice, Twilight, Gruvbox
 

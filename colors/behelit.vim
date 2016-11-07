@@ -1,20 +1,20 @@
 " Theme: behelit
 " Version: 0.3
 " Maintainer: oblique <psyberbits@gmail.com>
-" 
+"
 " Copyright (c) 2014, oblique
 " All rights reserved.
-" 
+"
 " Redistribution and use in source and binary forms, with or without
 " modification, are permitted provided that the following conditions are met:
-" 
+"
 " * Redistributions of source code must retain the above copyright notice, this
 "   list of conditions and the following disclaimer.
-" 
+"
 " * Redistributions in binary form must reproduce the above copyright notice,
 "   this list of conditions and the following disclaimer in the documentation
 "   and/or other materials provided with the distribution.
-" 
+"
 " THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 " AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 " IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -36,7 +36,7 @@ let g:colors_name="behelit"
 highlight Normal          guifg=#5fff5f    guibg=#101010    gui=NONE
 highlight SpecialKey      guifg=#5f87d7    guibg=NONE       gui=NONE
 highlight NonText         guifg=#444444    guibg=#101010    gui=NONE
-highlight Directory       guifg=#af87ff    guibg=NONE       gui=NONE
+highlight Directory       guifg=#5f87d7    guibg=NONE       gui=NONE
 highlight IncSearch       guifg=#101010    guibg=#ff875f    gui=NONE
 highlight LineNr          guifg=#5f87af    guibg=#101010    gui=NONE
 highlight StatusLine      guifg=#5f5faf    guibg=#1c1c1c    gui=NONE
@@ -96,11 +96,32 @@ highlight diffRemoved     guifg=#d7005f    guibg=NONE       gui=NONE
 highlight diffAdded       guifg=#5f87ff    guibg=NONE       gui=NONE
 highlight diffFile        guifg=#af87ff    guibg=NONE       gui=NONE
 
+" vim-markdown
+highlight mkdRule         guifg=#af87ff    guibg=NONE     gui=NONE
+highlight htmlH1          guifg=#5f87ff    guibg=NONE     gui=NONE
+highlight htmlH2          guifg=#d7005f    guibg=NONE     gui=NONE
+highlight htmlH3          guifg=#af87ff    guibg=NONE     gui=NONE
+highlight htmlH4          guifg=#00ff87    guibg=NONE     gui=NONE
+highlight htmlH5          guifg=#ffd787    guibg=NONE     gui=NONE
+highlight htmlH6          guifg=#ff5f87    guibg=NONE     gui=NONE
+
+highlight mkdCode         guifg=#5f87ff    guibg=NONE     gui=bold
+highlight mkdIndentCode   guifg=#5f87ff    guibg=NONE     gui=bold
+highlight mkdListItem     guifg=#5f87ff    guibg=NONE     gui=bold
+
+highlight htmlLink        guifg=#5f87ff    guibg=NONE     gui=underline
+highlight mkdLink         guifg=#af87ff    guibg=NONE     gui=NONE
+highlight mkdURL          guifg=#5f87ff    guibg=NONE     gui=underline
+highlight mkdID           guifg=#d7005f    guibg=NONE     gui=bold
+highlight mkdLinkDef      guifg=#d7005f    guibg=NONE     gui=bold
+highlight mkdLinkDefTarget guifg=#5f87ff   guibg=NONE     gui=underline
+highlight mkdLinkTitle    guifg=#af87ff    guibg=NONE     gui=NONE
+
 if &t_Co > 255
   highlight Normal          ctermfg=83      ctermbg=233     cterm=NONE
   highlight SpecialKey      ctermfg=68      ctermbg=NONE    cterm=NONE
   highlight NonText         ctermfg=237     ctermbg=233     cterm=NONE
-  highlight Directory       ctermfg=141     ctermbg=NONE    cterm=NONE
+  highlight Directory       ctermfg=68      ctermbg=NONE    cterm=NONE
   highlight IncSearch       ctermfg=0       ctermbg=209     cterm=NONE
   highlight LineNr          ctermfg=67      ctermbg=233     cterm=NONE
   highlight StatusLine      ctermfg=61      ctermbg=234     cterm=NONE
@@ -159,4 +180,25 @@ if &t_Co > 255
   highlight diffRemoved     ctermfg=161     ctermbg=NONE    cterm=NONE
   highlight diffAdded       ctermfg=69      ctermbg=NONE    cterm=NONE
   highlight diffFile        ctermfg=141     ctermbg=NONE    cterm=NONE
+
+" vim-markdown
+  highlight mkdRule        ctermfg=141     ctermbg=NONE    cterm=NONE
+  highlight htmlH1         ctermfg=69      ctermbg=NONE    cterm=NONE
+  highlight htmlH2         ctermfg=161     ctermbg=NONE    cterm=NONE
+  highlight htmlH3         ctermfg=141     ctermbg=NONE    cterm=NONE
+  highlight htmlH4         ctermfg=48      ctermbg=NONE    cterm=NONE
+  highlight htmlH5         ctermfg=222     ctermbg=NONE    cterm=NONE
+  highlight htmlH6         ctermfg=204     ctermbg=NONE    cterm=NONE
+
+  highlight mkdCode        ctermfg=69      ctermbg=NONE    cterm=bold
+  highlight mkdIndentCode  ctermfg=69      ctermbg=NONE    cterm=bold
+  highlight mkdListItem    ctermfg=69      ctermbg=NONE    cterm=bold
+
+  highlight htmlLink       ctermfg=69      ctermbg=NONE    cterm=underline
+  highlight mkdLink        ctermfg=141     ctermbg=NONE    cterm=NONE
+  highlight mkdURL         ctermfg=69      ctermbg=NONE    cterm=underline
+  highlight mkdID          ctermfg=161     ctermbg=NONE    cterm=bold
+  highlight mkdLinkDef     ctermfg=161     ctermbg=NONE    cterm=bold
+  highlight mkdLinkDefTarget ctermfg=69    ctermbg=NONE    cterm=underline
+  highlight mkdLinkTitle   ctermfg=141     ctermbg=NONE    cterm=NONE
 end

@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-02-22 15:35+0900
+" Modified:   2016-10-11 13:31+0900
 " License:    MIT
 
 
@@ -34,14 +34,17 @@ hi! Constant ctermfg=140 guifg=#a093c7
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
 hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
 hi! Delimiter ctermfg=252 guifg=#c6c8d1
-hi! DiffAdd ctermbg=108 ctermfg=234 guibg=#555a47 guifg=#bec4b1
-hi! DiffChange ctermbg=66 ctermfg=234 guibg=#445861 guifg=#adc1cb
-hi! DiffDelete ctermbg=95 ctermfg=234 guibg=#673e43 guifg=#d1a8ad
-hi! DiffText cterm=NONE ctermbg=116 ctermfg=234 gui=NONE guibg=#89b8c2 guifg=#161821
+hi! DiffAdd ctermbg=29 ctermfg=158 guibg=#45493e guifg=#c0c5b9
+hi! DiffChange ctermbg=23 ctermfg=159 guibg=#384851 guifg=#b3c3cc
+hi! DiffDelete ctermbg=95 ctermfg=224 guibg=#53343b guifg=#ceb0b6
+hi! DiffText cterm=NONE ctermbg=30 ctermfg=195 gui=NONE guibg=#5b7881 guifg=#c6c8d1
 hi! Directory ctermfg=109 guifg=#89b8c2
 hi! Error ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
+hi! EndOfBuffer ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
+hi! NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
+hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
 hi! Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=216 guifg=#e2a478
@@ -49,8 +52,6 @@ hi! Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
 hi! LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg ctermfg=150 guifg=#b4be82
-hi! NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
 hi! Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1
 hi! Operator ctermfg=110 guifg=#84a0c6
 hi! Pmenu ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
@@ -87,11 +88,17 @@ hi! diffAdded ctermfg=150 guifg=#b4be82
 hi! diffRemoved ctermfg=203 guifg=#e27878
 
 hi! link cssBraces Delimiter
+hi! link cssTagName Statement
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
 hi! link jsFunction Function
+hi! link jsGlobalObjects Statement
+hi! link jsModuleDefault Statement
+hi! link jsModuleKeywords Statement
+hi! link jsModuleOperators Statement
+hi! link jsSuper Statement
 hi! link markdownCode String
 hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment

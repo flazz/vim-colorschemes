@@ -6,7 +6,7 @@
 " Dark vim colorscheme based on colors from Wes Anderson films
 "
 " File:         anderson.vim
-" URL:          github.com/gilgigilgil/anderson.vim
+" URL:          github.com/tlhr/anderson.vim
 " Author:       Thomas Löhr
 " License:      MIT
 "
