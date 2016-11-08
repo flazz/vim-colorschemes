@@ -1,8 +1,6 @@
 " Vim color file
 " Name:       inkpot.vim
-" Maintainer: Ciaran McCreesh <ciaran.mccreesh@googlemail.com>
-" Homepage:   http://github.com/ciaranm/inkpot/
-"
+" Maintainer: Ciaran McCreesh <ciaran.mccreesh@blueyonder.co.uk>
 " This should work in the GUI, rxvt-unicode (88 colour mode) and xterm (256
 " colour mode). It won't work in 8/16 colour terminals.
 "
@@ -53,10 +51,8 @@ if has("gui_running")
         hi Normal         gui=NONE   guifg=#cfbfad   guibg=#000000
     endif
 
-    hi CursorLine         guibg=#2e2e37
-
     hi IncSearch      gui=BOLD   guifg=#303030   guibg=#cd8b60
-    hi Search         gui=NONE   guifg=#303030   guibg=#ad7b57
+    hi Search         gui=NONE   guifg=#303030   guibg=#cd8b60
     hi ErrorMsg       gui=BOLD   guifg=#ffffff   guibg=#ce4e4e
     hi WarningMsg     gui=BOLD   guifg=#ffffff   guibg=#ce8e4e
     hi ModeMsg        gui=BOLD   guifg=#7e7eae   guibg=NONE
@@ -138,7 +134,7 @@ if has("gui_running")
         hi SpellLocal   gui=undercurl guisp=#cccc66
         hi SpellCap     gui=undercurl guisp=#66cccc
 
-        hi MatchParen   gui=NONE      guifg=#cfbfad   guibg=#4e4e8f
+        hi MatchParen   gui=NONE      guifg=#404040   guibg=#8fff8b
     endif
 else
     if ! g:inkpot_black_background
@@ -148,7 +144,7 @@ else
     endif
 
     exec "hi IncSearch      cterm=BOLD   ctermfg=" . <SID>X(80) . " ctermbg=" . <SID>X(73)
-    exec "hi Search         cterm=NONE   ctermfg=" . <SID>X(80) . " ctermbg=" . <SID>X(52)
+    exec "hi Search         cterm=NONE   ctermfg=" . <SID>X(80) . " ctermbg=" . <SID>X(73)
     exec "hi ErrorMsg       cterm=BOLD   ctermfg=" . <SID>X(16) . " ctermbg=" . <SID>X(48)
     exec "hi WarningMsg     cterm=BOLD   ctermfg=" . <SID>X(16) . " ctermbg=" . <SID>X(68)
     exec "hi ModeMsg        cterm=BOLD   ctermfg=" . <SID>X(38) . " ctermbg=" . "NONE"

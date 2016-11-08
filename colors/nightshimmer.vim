@@ -1,9 +1,8 @@
-" Vim colorscheme
-"
-" Maintainer: Niklas Lindström <lindstream@gmail.com>
-" Last Change: 2007-11-26
-" Version: 1.1
-" URL: http://www.vim.org/scripts/script.php?script_id=328
+" Vim color file
+" Maintainer: Niklas Lindström <nlm@valtech.se>
+" Last Change: 2002-03-22
+" Version: 0.3
+" URI: http://localhost/
 
 
 """ Init
@@ -20,23 +19,21 @@ let g:colors_name = "nightshimmer"
 
 """" GUI Colors
 
-highlight Cursor        gui=None guibg=Green1 guifg=White
+highlight Cursor        gui=None guibg=Green guifg=White
 highlight CursorIM gui=bold guifg=white guibg=Green1
-hi CursorColumn     guifg=NONE      guibg=#204050   gui=NONE
-hi CursorLine       guifg=NONE      guibg=#204050   gui=NONE
 highlight Directory     guifg=LightSeaGreen guibg=bg
 highlight DiffAdd gui=None guifg=fg guibg=DarkCyan
 highlight DiffChange gui=None guifg=fg guibg=Green4
 highlight DiffDelete gui=None guifg=fg guibg=black
 highlight DiffText gui=bold guifg=fg guibg=bg
 highlight ErrorMsg      guifg=LightYellow  guibg=FireBrick
-" FillColumn is renamed to VertSplit:"
+" previously 'FillColumn':
 "highlight FillColumn    gui=NONE guifg=black guibg=grey60
 highlight VertSplit    gui=NONE guifg=black guibg=grey60
-highlight Folded        gui=bold guibg=#305060 guifg=honeydew
+highlight Folded        gui=bold guibg=#305060 guifg=#b0d0e0
 highlight FoldColumn        gui=bold guibg=#305060 guifg=#b0d0e0
 highlight IncSearch gui=reverse guifg=fg guibg=bg
-highlight LineNr        gui=bold guibg=grey6 guifg=Purple1
+highlight LineNr        gui=bold guibg=grey6 guifg=Purple3
 highlight ModeMsg       guibg=DarkGreen guifg=LightGreen
 highlight MoreMsg       gui=bold  guifg=SeaGreen4 guibg=bg
 if version < 600
@@ -61,20 +58,14 @@ highlight WildMenu      gui=bold guibg=Chartreuse guifg=Black
 
 """" Syntax Colors
 
-if exists("colors_nightshimmer_reverse_comment")
-            \ && colors_nightshimmer_reverse_comment == 1
-    highlight Comment       gui=reverse guifg=#507080
-    highlight Todo          guifg=Cyan guibg=#507080
-else
-    highlight Comment       gui=None guifg=#608090
-    highlight Todo          guifg=Cyan2 guibg=#305060
-endif
+highlight Comment       gui=reverse guifg=#507080
+"highlight Comment       gui=None guifg=#507080
 
-highlight Constant      guifg=Cyan3 guibg=bg
-    hi String gui=None guifg=Cyan2 guibg=#1a3a4a
+highlight Constant      guifg=Cyan guibg=bg
+    "hi String gui=None guifg=Cyan guibg=bg
     "hi Character gui=None guifg=Cyan guibg=bg
-    highlight Number gui=None guifg=Cyan2 guibg=bg
-    highlight Boolean gui=bold guifg=Cyan1 guibg=bg
+    highlight Number gui=None guifg=Cyan guibg=bg
+    highlight Boolean gui=bold guifg=Cyan guibg=bg
     "hi Float gui=None guifg=Cyan guibg=bg
 
 highlight Identifier    guifg=orchid1
@@ -107,10 +98,14 @@ highlight Special       gui=bold guifg=White
     "hi Debug gui=bold guifg=White guibg=bg
 
 highlight Underlined gui=underline guifg=honeydew4 guibg=bg
-hi TaglistTagName   guifg=green1    guibg=bg        gui=bold
 
 highlight Ignore    guifg=#204050
 
 highlight Error      guifg=LightYellow  guibg=FireBrick
+
+highlight Todo          guifg=Cyan guibg=#507080
+
+""" OLD COLORS
+
 
 

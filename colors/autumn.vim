@@ -1,329 +1,88 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+" Vim colour file
+" Maintainer:   Antony Scriven <ad_scriven@postmaster.co.uk>
+" Last Change:  2003-06-12
+"
+set background=light
+hi clear
+if exists("syntax_on")
+        syntax reset
+endif
 
-<head>
-  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>Error : vim online</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
-  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
-</head>
+let colors_name = "autumn"
 
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+hi Normal       term=none      cterm=none ctermfg=black         ctermbg=White           gui=none guifg=Black            guibg=#f0f2f0
+hi Cursor       term=none      cterm=none ctermfg=white         ctermbg=darkgrey        gui=none guifg=black            guibg=red
+hi DiffAdd      term=bold       cterm=none      ctermfg=white   ctermbg=DarkBlue        gui=none guifg=#aaeeaa          guibg=#447744
+hi DiffChange   term=bold       cterm=none      ctermfg=white   ctermbg=DarkMagenta     gui=none guifg=lightyellow      guibg=#ddbb55
+hi DiffDelete   term=bold       cterm=none      ctermfg=blue    ctermbg=darkcyan        gui=none guifg=#336633          guibg=#aaccaa
+hi difftext     term=reverse    cterm=bold      ctermfg=white   ctermbg=red             gui=none guifg=lightyellow      guibg=#cc7733
+hi Directory    term=none      cterm=none ctermfg=Red           ctermbg=white           gui=none guifg=Red              guibg=bg
+hi ErrorMsg     term=standout  cterm=none ctermfg=white         ctermbg=DarkRed         gui=none guifg=white            guibg=DarkRed
+hi Folded       term=reverse   cterm=none ctermfg=darkblue      ctermbg=lightgrey       gui=none guifg=darkblue         guibg=lightgrey
+"8 col term
+hi FoldColumn   term=reverse   cterm=none ctermfg=darkblue      ctermbg=grey            gui=none guifg=darkblue         guibg=grey
+hi IncSearch    term=reverse   cterm=none ctermfg=yellow        ctermbg=darkgreen       gui=none guifg=yellow           guibg=#449944 
+hi lCursor      term=reverse   cterm=none ctermfg=black         ctermbg=cyan            gui=none guifg=black            guibg=Cyan
+hi LineNr       term=reverse   cterm=none ctermfg=darkred       ctermbg=grey            gui=none guifg=brown            guibg=lightgrey 
+hi ModeMsg      term=bold      cterm=none ctermfg=green         ctermbg=darkgreen       gui=none guifg=#007700          guibg=#aaccaa
+hi MoreMsg      term=bold      cterm=none ctermfg=darkGreen     ctermbg=white           gui=none guifg=darkgreen        guibg=bg
+hi Question     term=bold      cterm=none ctermfg=darkGreen     ctermbg=white           gui=none guifg=darkgreen        guibg=bg
+hi Search       term=reverse   cterm=none ctermfg=black         ctermbg=yellow          gui=none guifg=black            guibg=yellow
+hi SpecialKey   term=italic    cterm=none ctermfg=lightgrey     ctermbg=white           gui=none guifg=lightblue        guibg=bg
+hi NonText      term=bold      cterm=none ctermfg=lightgrey     ctermbg=white           gui=none guifg=#c6c6c6          guibg=bg
+hi StatusLine   term=reverse   cterm=none ctermfg=white         ctermbg=black           gui=none guifg=#80624d          guibg=#ddd9b8
+hi Title        term=bold      cterm=none ctermfg=DarkMagenta   ctermbg=white           gui=none guifg=DarkMagenta      guibg=bg
+if has("gui_running") || &t_Co > 8
+        hi Visual       term=reverse   cterm=none ctermfg=black         ctermbg=lightgrey       gui=none guifg=black       guibg=lightgreen
+        hi VertSplit    term=reverse   cterm=none ctermfg=darkgrey      ctermbg=darkgrey        gui=none guifg=#c7c7c2     guibg=#d7d7d2 
+        hi StatusLineNC term=reverse   cterm=none ctermfg=white         ctermbg=darkgrey        gui=none guifg=darkgrey    guibg=#d7d7d2
+        hi Comment      term=italic    cterm=none ctermfg=grey          ctermbg=white           gui=none guifg=#ccaaaa     guibg=bg
+else
+        hi Visual       term=reverse   cterm=none ctermfg=green         ctermbg=darkgreen       gui=none guifg=black    guibg=lightgreen
+        hi VertSplit    term=reverse   cterm=none ctermfg=darkcyan      ctermbg=darkblue        gui=none guifg=darkgrey guibg=darkgrey 
+        hi StatusLineNC term=reverse   cterm=none ctermfg=white         ctermbg=darkblue        gui=none guifg=white    guibg=darkgrey
+        hi Comment      term=italic    cterm=none ctermfg=darkcyan      ctermbg=white           gui=none guifg=#ccaaaa  guibg=bg
+endif
+hi VisualNOS    term=bold      cterm=none ctermfg=grey         ctermbg=black        gui=none guifg=grey         guibg=black
+hi WarningMsg   term=standout  cterm=none ctermfg=Red          ctermbg=white        gui=none guifg=Red          guibg=bg
+hi WildMenu     term=bold      cterm=none ctermfg=darkblue     ctermbg=yellow       gui=none guifg=black        guibg=lightyellow
 
-<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-  <tr>
-    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  </tr>
-  <tr>
-  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
-  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
-    <td class="lightbg" align="center"><a href="/"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
-    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
-  </tr>
-  <tr>
-    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  </tr>
-  <tr>
-    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
-  </tr>
-</table>
-<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+hi Constant     term=underline  cterm=none      ctermfg=darkred         ctermbg=bg      gui=none guifg=#bb6666  guibg=bg
+hi Special      term=bold       cterm=none      ctermfg=darkcyan        ctermbg=white   gui=none guifg=darkcyan guibg=bg
+hi identifier   term=underline  cterm=none      ctermfg=darkmagenta     ctermbg=white   gui=none guifg=darkcyan guibg=bg
+hi statement    term=bold       cterm=none      ctermfg=darkgreen       ctermbg=white   gui=none guifg=#44aa44  guibg=bg
+hi preproc      term=underline  cterm=none      ctermfg=darkgrey        ctermbg=white   gui=none guifg=darkgrey guibg=bg
+hi type         term=none       cterm=none      ctermfg=brown           ctermbg=white   gui=none guifg=#bb9900  guibg=bg
+hi underlined   term=underline  cterm=underline ctermfg=darkmagenta     ctermbg=white   gui=underline guifg=darkmagenta guibg=bg
+hi Ignore       term=italic     cterm=none      ctermfg=lightgrey       ctermbg=white   gui=none guifg=grey     guibg=bg
+"hi todo         term=underline  cterm=bold      ctermfg=yellow          ctermbg=brown   gui=none guifg=#333333     guibg=#ddee33
+hi todo   term=bold       cterm=none      ctermfg=yellow   ctermbg=brown     gui=bold guifg=#229900      guibg=#ddd9b8
+hi function     term=bold       cterm=none      ctermfg=blue            ctermbg=white   gui=none guifg=#0055cc  guibg=bg
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-  <col width="180">
-  <col width="1">
+hi link String          Constant
+hi link Character       Constant
+hi link Number          Constant
+hi link Boolean         Constant
+hi link Float           Number
+hi link Conditional     Statement
+hi link Repeat          Statement
+hi link Label           Statement
+hi link Operator        Statement
+hi link Keyword         Statement
+hi link Exception       Statement
+hi link Include         PreProc
+hi link Define          PreProc
+hi link Macro           PreProc
+hi link PreCondit       PreProc
+hi link StorageClass    Type
+hi link Structure       Type
+hi link Typedef         Type
+hi link Tag             Special
+hi link SpecialChar     Special
+hi link Delimiter       Special
+hi link SpecialComment  Special
+hi link Debug           Special
+hi link vimfunction     function
 
-  <tr valign="top">
-    <td class="sidebar">
-      <table width="180" cellpadding="4" cellspacing="0" border="0">
-        <tr valign="top">
-          <td class="sidebar">
 
-<!-- INCLUDE THE PAGE NAVIGATION -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-    <tr>
-        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
-    </tr>
-    <tr><td>
-<small>&nbsp;</small>
-<form action="http://www.google.com/cse" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="20" />
-    <br>
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-    </td></tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
-    </tr>
-    <tr>
-        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/">Home</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/community.php">Community</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader download"><a href="/download.php">Download</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
-        </tr>
-</table>
-<br>
-<g:plusone></g:plusone>
-
-            <table width="172" cellpadding="0" cellspacing="0" border="0">
-              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
-              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
-            </table>
-            <br>
-
-<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
-&nbsp;
-
-          </td>
-        </tr>
-      </table>
-    </td>
-
-    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
-    <td>
-      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
-        <tr>
-          <td valign="top">
-
-<p class="errorheader">
-<b>Vim Online Error</b><br><br>
-</p>
-<p>
-download: I couldn't find the file you requested (src_id=2065), are you sure it exists?</p>
-<p>
-
-<!-- fill up with spaces to make the main field wide enough -->
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<!-- finish off the framework -->
-          </td>
-        </tr>
-      </table>
-    </td>
-
-  </tr>
-</table>
-
-<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
-
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr>
-    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
-
-    <td align="left" valign="top"><small>
-      If you have questions or remarks about this site, visit the
-      <a href="http://vimonline.sf.net">vimonline development</a> pages.
-      Please use this site responsibly.
-      <br> 
-      
-      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
-      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
-      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
-      </small>
-	&nbsp;
-	&nbsp;
-
-    </td>
-
-    <td align="right" valign="top">
-      	<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
-    </td>
-
-    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
-  </tr>
-
-    
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  
-  </tr>
-</table>
-
-<!-- for Google +1 button -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-</body>
-</html>
-
+" vim: set ts=8 sw=8 et sts=8 tw=72 fo-=t ff=unix :
