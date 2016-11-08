@@ -1,0 +1,20 @@
+#! /usr/local/bin/ctheme
+#xterm16 (CRTColors, default brightness)
+set {
+0 000000
+1 cd0000
+2 00cd00
+3 cdcd00
+4 0000ff
+5 cd00cd
+6 00cdcd
+7 c0c0c0
+8 808080
+9 ff0000
+a 00ff00
+b ffff00
+c 007fff
+d ff00ff
+e 00ffff
+f ffffff
+}

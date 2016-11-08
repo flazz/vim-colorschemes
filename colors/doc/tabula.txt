@@ -1,0 +1,202 @@
+*tabula.txt*	Tabula Colorscheme Options	      Last Change: 2010-04-05
+
+	       Option Settings for the Tabula Vim Colorscheme~
+				 Version 1.4.2~
+								
+		    Copyright (c) 2006..2010 by Bernd Pol
+			    <bernd.pol@online.de>
+
+This material may be distributed only subject to the terms and conditions set
+forth in the Open Publication License, v1.0 or later (the latest version is
+presently available at http://www.opencontent.org/openpub/).
+
+-----------------------------------------------------------------------------
+CONTENTS					   *tabula* *tabula-contents* 
+
+Tabula is a so-called green chalkboard Vim colorscheme for soft contrast, yet
+easily readable display on GUI and a 256 color xterms.  It is based on the
+marklar.vim colorscheme by SM Smithfield (vimscript #1483).
+
+|tabula-use|		How to use tabula
+|tabula-xterm|		How to force the full xterm color range
+|tabula-options|	Available options
+
+-----------------------------------------------------------------------------
+HOW TO USE TABULA						 *tabula-use*
+
+To permanently redefine the defaults put these settings in your .vimrc file
+before the >
+	:colorscheme tabula
+line, e.g.: >
+	:let g:Tabula_ColorPre = "red"
+
+To redefine them on the fly call the built-in options dialog: >
+	:call Tabula()
+The new settings will be immediately effective once the specific dialog option
+is closed (back in the Tabula() main menu).
+
+To get the defaults back call >
+	:colorscheme tabula
+again. (This has changed from earlier tabula versions where this call was
+necessary to make the settings changes effective.)
+
+NOTE The Tabula() dialog works well with the keyboard. Yet there may be issues
+     using the mouse because the selection is dependent on the proper
+     positions of the dialog lines. This means, option number 1 in a dialog
+     must be on the second line (the first line counts as zero), option number
+     2 on the third line, and so on.
+
+     Thus if you want to use mouseclicks in the Tabula() dialog make sure the
+     dialog lines do not wrap around because of a too narrow vim editor
+     window.
+
+If you want to see how the currently avalable colors look like, issue >
+	:so $VIMRUNTIME/syntax/hitest.vim
+
+-----------------------------------------------------------------------------
+HOW TO FORCE THE FULL XTERM COLOR RANGE			       *tabula-xterm*
+
+It may be necessary to force Vim to really use 256 colors in your xterm.
+Enter these lines into your .vimrc file before the "colorscheme" command,
+if necessary:
+>
+	au VimEnter *
+	      \ if &term == 'xterm' || &term == 'xterm-color' |
+	      \    set t_Co=256     |
+	      \ endif
+<
+-----------------------------------------------------------------------------
+AVAILABLE OPTIONS					     *tabula-options*
+
+|Tabula_BoldStatement|		Display statements in bold format
+|Tabula_CurColor|		Set GUI cursor color
+|Tabula_ColorPre|		Set color for preprocessor statements
+|Tabula_DarkError|		Use dark background for error display
+|Tabula_FlatConstants|		Use multiple colors for constant values
+|Tabula_InvisibleIgnore|	Show ignore and non-text characters
+|Tabula_LNumUnderline|		Show line numbers underlined
+|Tabula_SearchStandOut|		How to display search occurrences
+|Tabula_TodoUnderline|		How to display TODOs and similar
+|Tabula_CharValuesColored|	How To Display Typographic Character Values
+				(i.e. bold, italic, underlined characters)
+
+-----------------------------------------------------------------------------
+DISPLAY STATEMENTS IN BOLD FORMAT		       *Tabula_BoldStatement*
+>
+	Tabula_BoldStatement = 0	statements display not bold
+	Tabula_BoldStatement = 1	statements display bold
+
+Defaults to non-bold display.
+
+-----------------------------------------------------------------------------
+SET GUI CURSOR COLOR					    *Tabula_CurColor*
+>
+	Tabula_CurColor = 'blue'
+	Tabula_CurColor = 'red'
+	Tabula_CurColor = 'yellow'
+	Tabula_CurColor = 'white'
+
+Defaults to 'blue'.
+
+-----------------------------------------------------------------------------
+SET COLOR FOR PREPROCESSOR STATEMENTS			    *Tabula_ColorPre*
+>
+	Tabula_ColorPre = 'blue'	purple-blue
+	Tabula_ColorPre = 'red'		orange-red
+	Tabula_ColorPre = 'yellow'	lightgreen-yellow
+
+Defaults to 'blue'.
+
+-----------------------------------------------------------------------------
+USE DARK BACKGROUND FOR ERROR DISPLAY			   *Tabula_DarkError*
+
+Standard is a prominent error display featuring white characters on a red
+background. This is for example quite useful for programming tasks where
+errors are distributed throughout a long text.
+
+But there are situations where a fairly non-distracting error display will be
+in order. Think of actually typing a program where you want to concentrate on
+the code you type and just be mildly reminded something was not in order.
+
+In this case the other option may proof useful. It merely changes the
+background to black signalling there is an error but keeping the line easily
+readable as well.
+>
+	Tabula_DarkError = 0		light red error background
+	Tabula_DarkError = 1		dark error background
+
+Defaults to light error background.
+-----------------------------------------------------------------------------
+USE MULTIPLE COLORS FOR CONSTANT VALUES		       *Tabula_FlatConstants*
+>
+	Tabula_FlatConstants = 1	use common color for all constants
+	Tabula_FlatConstants = 0	use different color for each constant
+
+Defaults to using common colors.
+
+-----------------------------------------------------------------------------
+SHOW IGNORE AND NONTEXT CHARACTERS	     *Tabula_InvisibleIgnore*
+
+Set this to visible mode if you want to edit a Vim documentation file.
+>
+	Tabula_InvisibleIgnore = 0	slightly visible
+	Tabula_InvisibleIgnore = 1	invisible on standard background
+
+Defaults to invisible display.
+
+-----------------------------------------------------------------------------
+SHOW LINE NUMBERS UNDERLINED			       *Tabula_LNumUnderline*
+
+Sometimes useful to spot a line more easily.
+>
+	Tabula_LNumUnderline = 0	not underlined
+	Tabula_LNumUnderline = 1	line numbers are underlined
+
+Defaults to not underlined.
+
+-----------------------------------------------------------------------------
+HOW TO DISPLAY SEARCH OCCURRENCES		      *Tabula_SearchStandOut*
+>
+	Tabula_SearchStandOut = 0	normal dark background display
+	Tabula_SearchStandOut = 1	prominent underlined display
+	Tabula_SearchStandOut = 2	very prominent display
+
+Defaults to normal dark background display.
+
+-----------------------------------------------------------------------------
+HOW TO DISPLAY TODOS AND SIMILAR		       *Tabula_TodoUnderline*
+>
+      Tabula_TodoUnderline = 0		display on a blue background
+      Tabula_TodoUnderline = 1		display them underlined white
+      Tabula_TodoUnderline = 2		display them bold
+      Tabula_TodoUnderline = 3		do not enhance them at all
+
+Defaults to underlined white display.
+
+-----------------------------------------------------------------------------
+HOW TO DISPLAY TYPOGRAPHIC CHARACTER VALUES	   *Tabula_CharValuesColored*
+>
+      Tabula_CharValuesColored = 0	colored in addition to typographics
+      Tabula_CharValuesColored = 1	not colored, term. italics enhanced
+      Tabula_CharValuesColored = 2	not colored, term. underlined enhanced
+
+Defaults to a colored typographics character values display.
+
+NOTE: "Colored" is to be preferred in terminal-based vim because there is no
+      easy way to distinguish italic from underline. In this mode italics and 
+      underlined characters are distinguished by differnt color shades, both 
+      displaying not reversed (usually black on a white background field) 
+      which is easier to read.
+
+      Otherwise there are two non-colored modes: >
+        italics are shown reversed, underlines are shown underlined 
+      or: >
+        italics are shown underlined, underlines are shown reversed.
+
+      These sub-modes do not affect the GUI display, however, where italics
+      and underlined always display as usual, only color coded or using the
+      common text color.
+
+-----------------------------------------------------------------------------
+
+ vim:tw=78:sw=4:ts=8:ft=help:norl:

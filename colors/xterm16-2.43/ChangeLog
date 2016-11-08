@@ -1,0 +1,49 @@
+# ChangeLog for xterm16.vim
+xterm16-2.43
+    2006-09-12 Gautam Iyer <gautam@math.stanford.edu>
+    - Added highlighting groups for the Tab line (thanks to Paddy Newman).
+
+xterm16-2.42
+    2006-05-18 Gautam Iyer <gautam@math.uchicago.edu>
+    - Removed "tags" file from distribution (duh) (Thanks to Suresh
+      Govindachar / "cga2000" for pointing it out).
+    - Glaring error in documentation: Old version asked you to set t_Co=16
+      instead of 256 (thanks to Zdenek Sekera for pointing it out).
+    - Minor highlighting group bug fixes.
+
+xterm16-2.41
+    2006-04-16 Gautam Iyer <gautam@math.uchicago.edu>
+    - Forgot to add highlighting groups for 'cursorrow' and 'cursorcollumn' in
+      some color maps. Thanks to Georg Dahn for pointing this out.
+
+    - In the all blue colormap, Comment and Identifier were similar colors.
+      This is especially bad in perl programs say. Changed it so that no other
+      color is similar to Comment, thus comments can easily be found.
+
+xterm16-2.4
+    2006-04-03 Gautam Iyer <gautam@math.uchicago.edu>
+    - Added an "allblue" colormap: This makes most foreground colors a shade
+      of blue for least eyestrain.
+
+    - Added a "softlight" colormap: This has a white background for web
+      hosting / etc.
+
+    - Added extra highlighting groups from Vim-7 (is still backward compatible
+      to Vim-6.4)
+
+xterm16-2.2
+    2005-05-26 Gautam Iyer <gautam@math.uchicago.edu>
+    - Added mrxvt and rxvt 256 color support (options xterm16_termtype and
+      xterm16_ccube).
+
+    - Added the program rgb_level to get the intensities of a uniform rgbi
+      color cube and a patch to set the mrxvt color cube.
+
+    - Allowed xterm16bg_Group & xterm16fg_Group to contain color names (from
+      this colorscheme). Thus setting xterm16bg_Normal='none' gives
+      transparency in mrxvt :)
+
+    - A trivial perl script to generate a custom terminal 6x6x6 color cube,
+      the Xresources file from xterm16_palette, and CSS files for web hosting.
+
+    - Few minor color modifications to the soft colormap.

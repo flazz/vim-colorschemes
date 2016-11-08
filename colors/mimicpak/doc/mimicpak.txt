@@ -1,0 +1,1029 @@
+*mimicpak.txt*	colorschemes from other Editors/IDEs, plus originals
+
+						*mimicpak* *mimicpak.vim*
+
+  __________                                        Last Change:  2009-10-28 ~
+ |Hadou-ken!|                                           Version:  130         ~
+ |__________|  _,------------------------------------------------------------~
+  \  _      _/       __  __       __  __   _____   ______   ___  __ ___      ~
+    (_)___,/        /  \/  \___  /  \/  \__\   _\  \  _  \ / _ \|  /  /      ~
+    |===={(        /   _   \   \/   _   \   \  \__  \   _//     |     \      ~
+    ||_    \_     /___/ \___\__/___/ \___\___\____\  \__\/__/\__|__\___\     ~
+  _// \\     \_                                                              ~
+ //   //       '-------------------------------------------------------------~
+
+==============================================================================
+TABLE OF CONTENTS					*mimic-toc*
+
+1. Introduction ................................|mimic-intro|
+2. Overview ....................................|mimic-overview|
+   2.1. Dark Colorschemes ..............................|mimic-dark-schemes|
+   2.2. Light Colorschemes .............................|mimic-light-schemes|
+3. Options .....................................|mimic-options|
+   3.1. Font Style .....................................|mimic_font_style|
+   3.2. Colorize GUI ...................................|mimic_colorize_gui|
+4. Converted Colorschemes ......................|mimic-converted|
+   4.1. Emacs ..................................|mimic-emacs|
+	   Default .....................................|scame.vim|
+   4.2. J ......................................|mimic-j|
+	   Anokha ......................................|anokha.vim|
+   4.3. MAsmEd .................................|mimic-masmed|
+	   Grey House ..................................|greyhouse.vim|
+	   MAsmEd ......................................|masmed.vim|
+	   Paradox .....................................|paradox.vim|
+   4.4. IntelliJ IDEA ..........................|mimic-intellij|
+	   Default .....................................|intellij.vim|
+5. Original Colorschemes .......................|mimic-originals|
+	   Big Bang ....................................|bigbang.vim|
+	   Deep Blue ...................................|deepblue.vim|
+	   Deja Vu .....................................|dejavu.vim|
+	   Gaea ........................................|gaea.vim|
+	   Imperial ....................................|imperial.vim|
+	   Omen ........................................|omen.vim|
+	   Zen DNB .....................................|zendnb.vim|
+6. Cloned Colorschemes .......................|mimic-cloned|
+	   Astro Boy ...................................|astroboy.vim|
+	   MickeySoft ..................................|mickeysoft.vim|
+	   PS Clone ....................................|psclone.vim|
+	   Vim Hut .....................................|vimhut.vim|
+7. License .....................................|mimic-license|
+8. Credits .....................................|mimic-credits|
+9. Links .......................................|mimic-links|
+A. TODO ........................................|mimic-todo|
+B. FAQ .........................................|mimic-faq|
+
+{Vi has none of this}
+
+==============================================================================
+1. Introduction						*mimic-intro*
+
+The MimicPak is a set of colorschemes which were converted from other editors
+and IDEs and that share some common tweaking options (see: |mimic-options|).
+Some original, personal, invented and/or cloned colorschemes are included too
+(see: |mimic-converted|, |mimic-originals|, |mimic-cloned|).
+
+Most of the IDEs/Editors may have had more colorschemes, but only some are
+included.  Note that most of the colorschemes are only for |gvim|, this is so,
+because of time reasons and available number of colors.  Although some of them
+have the cterm colors for 16 color terminals (see: |mimic-overview| to know
+which ones).
+
+Most of the included colorschemes are intended to be "easy on the eyes", and I
+hope that you might find at least 2 or 3 colorschemes from this pack that you
+could use for every day coding :).  For an overview of colorschemes by
+background color see: |mimic-dark-schemes| and |mimic-light-schemes|.
+
+For a fast way to try out these schemes, the included "mimicpak.vim" script
+creates a submenu "MimicPak" under the "Themes" menu on the main menubar, and
+which is {only available for Vim version >= 6.0}, and {only if Vim is compiled
+with the |+menu| feature}.
+
+You can avoid loading the menu by setting the variable: >
+	:let  g:loaded_mimicpak = 1	" or any other value that you like.
+somewhere in your |.vimrc|.
+
+==============================================================================
+2. Overview						*mimic-overview*
+
+	,--------------------,--------,-------,-------------. ~
+	|  Colorscheme       |  gVim  |  Vim  |  'bg' type  | ~
+	+--------------------+--------+-------+-------------+ ~
+	| |anokha.vim|       |  Yes   |  No   |  DJ is a text editor written in Java and distributed under the GNU General Public License. ark       |
+	| |astroboy.vim|     |  Yes   |  No   |  Dark       |
+	| |bigbang.vim|      |  Yes   |  Yes  |  Dark       |
+	| |deepblue.vim|     |  Yes   |  No   |  Dark       |
+	| |dejavu.vim|       |  Yes   |  Yes  |  Dark/Light |
+	| |gaea.vim|         |  Yes   |  No   |  Light      |
+	| |greyhouse.vim|    |  Yes   |  Yes  |  Light      |
+	| |imperial.vim|     |  Yes   |  Yes  |  Light      |
+	| |intellij.vim|     |  Yes   |  Yes  |  Light      |
+	| |masmed.vim|       |  Yes   |  No   |  Dark       |
+	| |mickeysoft.vim|   |  Yes   |  No   |  Light      |
+	| |omen.vim|         |  Yes   |  Yes  |  Light      |
+	| |paradox.vim|      |  Yes   |  No   |  Dark       |
+	| |psclone.vim|      |  Yes   |  No   |  Dark       |
+	| |scame.vim|        |  Yes   |  Yes  |  Light      |
+	| |vimhut.vim|       |  Yes   |  No   |  Dark/Light |
+	| |zendnb.vim|       |  Yes   |  Yes  |  Dark       |
+	'--------------------'--------'-------'-------------'
+
+	NOTE:
+	in the following sections, the expression "without other options"
+	means "without other colorscheme specific options".
+	In other words:  options that are NOT the shared |mimic-options|.
+
+2.1. Dark Colorschemes					*mimic-dark-schemes*
+------------------------------------------------------------------------------
+
+   o  Almost Black backgrounds (Grey20 == #333333 == "a la Desert"): ~
+	* |astroboy.vim|, without other options.
+	* |bigbang.vim|, without other options.
+	* |dejavu.vim|, by setting 'bg' to "dark", without other options.
+	* |masmed.vim|, by setting |mimic_masmed_alt| to a non-Zero value.
+	* |paradox.vim|, by setting |mimic_paradox_alt| to a non-Zero value.
+	* |psclone.vim|.
+	* |vimhut.vim|, by setting 'bg' to "dark".
+
+   o  Black backgrounds: ~
+	* |astroboy.vim|, by setting |mimic_astroboy_dark| to non-Zero value.
+	* |bigbang.vim|, by setting |mimic_bigbang_dark| to non-Zero value.
+	* |dejavu.vim|, by setting 'bg' to "dark" and
+			the |mimic_dejavu_dark| option to non-Zero.
+	* |zendnb.vim|.
+
+   o  Blue backgrounds: ~
+	* |astroboy.vim|, by setting |mimic_astroboy_alt| to a non-Zero value.
+	* |bigbang.vim|, by setting |mimic_bigbang_alt| to a non-Zero value.
+	* |dejavu.vim|, by setting 'bg' to "dark" and
+			the |mimic_dejavu_alt| option to non-Zero.
+
+   o  Dark Blue backgrounds: ~
+	* |astroboy.vim|, by setting the options |mimic_astroboy_alt| and
+			|mimic_astroboy_dark| to non-Zero values.
+	* |bigbang.vim|, by setting the options |mimic_bigbang_alt| and
+			|mimic_bigbang_dark| to non-Zero values.
+	* |deepblue.vim|.
+	* |dejavu.vim|, by setting 'bg' to "dark", the |mimic_dejavu_dark|
+			and the |mimic_dejavu_alt| option to non-Zero.
+
+   o  Dark Purple backgrounds: ~
+	* |masmed.vim|, without other options.
+
+   o  Dark Teal/Cyan backgrounds: ~
+	* |anokha.vim|, without other options.
+	* |paradox.vim|, without other options.
+
+   o  Dark Green backgrounds: ~
+	* |anokha.vim|, with |mimic_anokha_alt|option  set to non-Zero.
+
+	NOTE:
+	most of these colorschemes look nice with italic fonts, try this: >
+		let  mimic_font_style  = 2
+<	before loading them (see: |mimic_font_style|).
+
+2.2. Light Colorschemes					*mimic-light-schemes*
+------------------------------------------------------------------------------
+
+   o  Grey/LightGrey backgrounds: ~
+	* |dejavu.vim|, by setting 'bg' to "light",
+			and the |mimic_dejavu_dark| option to non-Zero.
+	* |greyhouse.vim|.
+	* |imperial.vim|.
+	* |omen.vim|.
+	* |vimhut.vim|, by setting 'bg' to "light".
+
+   o  White backgrounds: ~
+	* |dejavu.vim|, by setting 'bg' to "light", without other options.
+	* |gaea.vim|.
+	* |intellij.vim|.
+	* |mickeysoft.vim|.
+	* |scame.vim|, (emacs)
+
+	NOTE:
+	most of these colorschemes look nice with bold fonts, try this: >
+		let  mimic_font_style  = 1
+<	or if you like bold & italics then do this: >
+		let  mimic_font_style  = 3
+<	before loading the colorscheme (see: |mimic_font_style|).
+
+==============================================================================
+3. Options						*mimic-options*
+
+All the included colorschemes use/share the following common option variables:
+	* |mimic_font_style|
+	* |mimic_colorize_gui|
+
+	NOTE:
+	You can set the scope for any of these and additional colorscheme
+	specific option variables to either:  buffer (|b:var|), window
+	(|w:var|), tabpage (|t:var|) or global (|g:var|).
+	The values are looked-up in that order, and the first one that is
+	found is used.
+
+If an option is either NOT set, OR set to 0, the default values from the
+colorscheme are used.  To use any of the available options, you need to set it
+BEFORE loading any of the included colorschemes; that is, before doing: >
+	:colorscheme name_of_scheme
+<
+An Example: >
+	:let mimic_font_style = 2
+	:let mimic_colorize_gui = 1
+	:color scame
+<
+	This will load a colorscheme that looks like the default of Emacs and
+	sets italic fonts (so that the comments will be cursive) and also sets
+	the GUI colors for the menu and toolbar to the colors that Emacs uses
+	(only for non-Windows GUIs).
+
+------------------------------------------------------------------------------
+3.1. Font Style						*mimic_font_style*
+
+By default, all colorschemes are designed to use a plain font style (and they
+may use some underline too) but not bold nor italics.  To use such styles you
+need to set the |mimic_font_style| variable: >
+
+	let mimic_font_style = numeric_value
+<
+	Valid values	Description			Notes ~
+	------------	-----------			----- ~
+		<=0	no bold, no italic fonts.	the DEFAULT.
+		  1	use bold fonts.			nice for light bg.
+		  2	use italic fonts.		fancy italic comments.
+		>=3	use bold and italic fonts.	ok for light bg.
+
+The font styles are only applied to some carefully selected elements, which
+each colorscheme does set individually according to ITS idea of beauty and
+readability.
+
+------------------------------------------------------------------------------
+3.2. Colorize GUI					*mimic_colorize_gui*
+
+By setting the |mimic_colorize_gui| variable the GUI colors for the Menu,
+Toolbar, Scrollbar and Tooltip will also be colored by the chosen colorscheme.
+Works for all GUIs except for Windows (and for GTK 2 too? why?...): >
+
+	let mimic_colorize_gui = value
+<
+	Valid values	Description ~
+	------------	----------- ~
+		  0	do not change anything.			(the DEFAULT)
+		any	set colors for GUI Menu, Toolbar, Scrollbar & Tooltip.
+
+By default, NONE of the included colorscheme does set the colors for the GUI
+elements.  Also see: |hl-Menu|, |hl-Scrollbar|, |hl-Tooltip|.
+
+==============================================================================
+4. Converted Colorschemes				*mimic-converted*
+
+Under this section are the "ripped-off" ones, with their respective individual
+options (if any).  Any colorscheme that is here debuted on another editor or
+IDE first.
+
+Note that some of the original colorschemes from other editors or IDEs might
+not be easy on the eyes, especially if used for long periods of time.
+
+------------------------------------------------------------------------------
+4.1. Emacs						*mimic-emacs*
+
+From the GNU Emacs Info manual: "Emacs is the extensible, customizable,
+self-documenting real-time display editor".  Get it from:
+http://www.gnu.org/software/emacs
+
+The name Emacs originally stands for "Editor MACroS", but other widely
+accepted interpretations of the name are: >
+	EMACS			EMACS			EDIT
+	Makes			Makes			META
+	All			All			ALT
+	Computing		Computers		CTRL
+	Simple			Slow			SHIFT
+<	(hah, hah, sure...)	(this is constant)
+
+
+DEFAULT							*scame.vim*
+
+SCAME == EMACS (typed backwards).  Emacs look-alike colorscheme for Vim/Gvim.
+SCAME may also stand for any of these: >
+	Simple			Shiny			*Stallman*
+	Colorscheme		Colors			 Cries
+	Aims-to			Are			 After-seeing
+	Mimic			More			 Moolenaar's
+	EMACS			Enlightening		 Editor
+<							(my favorite ;) ~
+There are several other EMACS look-alike colorschemes for GVim, but this one
+tries to be "the frue and only" one.  And in order to achieve that, the colors
+of this scheme were DIRECTLY TAKEN FROM GNU EMACS' Face Customization Buffer
+(and, as every Vi[M] user knows:  using EMACS is one *hell* of a task!).
+
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) use it like it is (with plain fonts), to get the same EMACS look.
+  2) but with bold and italic fonts it may look a lot better: >
+	:let mimic_font_style = 3
+<
+------------------------------------------------------------------------------
+4.2. J							*mimic-j*
+
+J is a small and lightweight editor written in Java.  It also has built-in
+lisp evaluation (easiest way to avoid Emacs :).  Get it from:
+http://armedbear-j.sourceforge.net/
+
+
+ANOKHA							*anokha.vim*
+
+A colorscheme with a dark teal background.  The colors have been slightly
+modified for GVim (J doesn't have folding, tab colors, etc).
+
+Difference: ~
+   The original scheme for J uses a lot of "Yellow" colors for the highlights.
+And after trying it like that for a while on GVim, I noticed that it hurts too
+much the eyes;  and thus, I changed the "PreProc" (includes, macros, etc.)
+highlight group to a "Green" color.
+							*anokha-options*
+Besides the |mimic-options|, this scheme has the following additional option:
+
+Option			Value	Description ~
+------			-----	-----------
+*mimic_anokha_alt*	0, or	if not 0, a darkgreen background color is
+			  any	   used; else it uses the default color.
+
+Recommended settings: ~
+  1) use it like it is (with plain font style).
+  2) try it with italics and with a darkgreen background: >
+	:let mimic_font_style = 2		" uses italic fonts (comments)
+	:let mimic_anokha_alt = 1		" use the alternative colors
+
+------------------------------------------------------------------------------
+4.3. MAsmEd						*mimic-masmed*
+
+MAsmEd is (was) a freeware IDE for Assembler (mainly for MASM) for Windows
+developed by Frank Charlet.  Now this IDE is called Chrome.  Get it from:
+http://pagesperso-orange.fr/franck.charlet/links.html
+
+	NOTE:
+	this IDE was called MAsmEd (up to version 0.33 or 0.34), but now it is
+	called Chrome (v.1.2).  Old MasmEd link:
+	http://hitchhikr.multimania.com/masmed.html
+
+
+GREY HOUSE						*greyhouse.vim*
+
+This colorscheme from MAsmEd uses a lightgray background, works for Vim/GVim.
+This scheme has no extra options besides |mimic-options|.
+
+Difference: ~
+   On MAsmEd's original greyhouse scheme, the normal background color is NOT
+"lightgray" (#d3d3d3) but more something like a "bluegray" (#C8C8D3).  I've
+tried it like that for some hours on GVim, didn't like it (colors get pretty
+sick when looking something on a white background after using it); and thus
+I've changed it to the former color.
+
+Recommended settings: ~
+  1) to get MAsmEd's Greyhouse look and feel: >
+	:let mimic_font_style = 2		" it uses italic comments
+< 2) try it with bold fonts (or bold + italic fonts): >
+	:let mimic_font_style = 1		" with bolds it looks nice
+<
+
+MASMED							*masmed.vim*
+
+The colors of this scheme are based upon MAsmEd's originals.  This colorscheme
+uses a "dark purple" background color.
+							*masmed-options*
+Besides the |mimic-options|, this scheme has the following additional option:
+
+Option			Value	Description ~
+------			-----	-----------
+*mimic_masmed_alt*	0, or	if not 0, an almost black background color is
+			  any	   used (Grey20=#333333); else it uses the
+				   default color (a dark purple).
+
+Recommended settings: ~
+  1) use it like it is (with plain font style), to get MAsmEd's look.
+  2) looks nice with italics and alternative background: >
+	:let mimic_font_style = 2			" use italics
+	:let mimic_masmed_alt = 1			" use alternative bg
+<
+
+PARADOX							*paradox.vim*
+
+The green Alien look-alike colorscheme from MAsmEd, now for GVim.  It uses a
+"dark teal" background, and quite resembles the look of old Emacs.
+							*paradox-options*
+Besides the |mimic-options|, this scheme has the following additional option:
+
+Option			Value	Description ~
+------			-----	-----------
+*mimic_paradox_alt*	0, or	if not 0, an almost black background will be
+			  any	   used, else the default (darkteal) is used.
+
+Recommended settings: ~
+  1) to get MAsmEd's Paradox look and feel: >
+	:let mimic_font_style = 2		" it uses italic comments
+< 2) use the alternative background + italics, for every day coding: >
+	:let mimic_paradox_alt = 1		" use alternative background
+	:let mimic_font_style  = 2		" use italic fonts
+<
+------------------------------------------------------------------------------
+4.4. IntelliJ IDEA					*mimic-intellij*
+
+IntelliJIDEA is a very powerful and smart IDE for Java.  From its home page: >
+	"IntelliJ IDEA lets you code without a hitch. It practices a
+	non-intrusive, intuitive approach to help you write, debug, refactor,
+	test and learn your code. Thanks to its deep understanding of
+	languages and technologies, IntelliJ IDEA provides a second pair of
+	hands for you when you need them. Playing the game by your rules
+	without ever getting in your way — that's our idea of a productive and
+	pleasant development."
+<
+You can get it from: http://www.jetbrains.com/idea/index.html
+
+
+DEFAULT							*intellij.vim*
+
+IntelliJIDEA's default colors as of version 4.5.3.
+This scheme has no extra options besides |mimic-options|.
+
+Difference: ~
+   IntelliJ uses a "DarkBlue" color for almost all the relevant syntax
+highlights.  After trying it like that, for two days, I found that it looks
+too boring blue.  And thus I changed at least the "PreProc" (imports,
+includes, etc.) highlights to "DarkPurple".
+
+Recommended settings: ~
+  1) to get IDEA's look and feel. >
+	:let mimic_font_style = 3		" it uses bold and italics
+<
+==============================================================================
+5. Original Colorschemes				*mimic-originals*
+
+In this section are the "original" ones.  Any colorscheme that is here was
+handcrafted and designed from scratch by me (|mimic-credits|).
+
+
+BIG BANG						*bigbang.vim*
+
+This is a another ASTRO-like colorscheme for Vim and GVim.  It is inspired
+from DrChip's "Astronaut.vim", and from my clone |Astroboy.vim| colorscheme.
+
+This colorscheme uses darker backgrounds for the main syntax elements
+(keywords, statements, preprocessor, special, delimiter, etc.) so that
+when one looks at any source file it becomes immediately CLEAR what is
+being done.
+
+Common language keywords such as: if, else, while, for, etc. are clearly
+and very visibly highlighted, and they stand-out among other syntax "
+elements.
+
+By default it uses an almost black background color (Grey20 == #333333)
+for the GUI; and black for the console.  It may look weird at first, but once
+you get used to it you'll like it.  Believe me.
+
+							*bigbang-options*
+Besides the |mimic-options|, this scheme has the following additional options:
+
+Option			Value	Description ~
+------			-----	-----------
+*mimic_bigbang_alt*	0, or	if not 0, a blue background will be used;
+			  any	   else it uses the default color (grey20 for
+				   the GUI and black for console).
+*mimic_bigbang_dark*	0, or	if not 0, a black background color is used.
+			  any	   If |mimic_bigbang_alt| is also set, then a
+				   darkblue color is used.
+
+   Notes: ~
+      * To stop using the darker colors or the blue background either |:unlet|
+	the variables or set them to 0, and reload the scheme.
+      * CAREFUL with the |mimic_bigbang_alt|option...
+	it may create alternative universes...
+
+							*bigbang-variants*
+You can get a total of 4 different background colors with this colorscheme,
+according to how you set the option variables.  Here is an overview of them: >
+
+ alt	dark	GUI main/syntax bgs	Console main/syntax bgs
+ ---	----	-------------------	-----------------------
+< 0	 0	  grey20 / black	   black / blue
+  0	 1	   black / grey20	   black / darkblue
+  1	 0	    blue / darkblue	    blue / darkblue
+  1	 1	darkblue / blue		darkblue / black(*)
+
+   Notes:
+	 alt = |mimic_bigbang_alt|
+	dark = |mimic_bigbang_dark|
+	   * =  black looks better than blue, on darkblue in Vim.
+
+Recommended settings: ~
+  1) Default bg in Gvim using italics: >
+	:let mimic_font_style = 2
+< 2) To use Darkblue/Blue in GVim and Darkblue/Black in Console for the
+     main and syntax groups backgrounds respectively: >
+	:let mimic_bigbang_alt = 1
+	:let mimic_bigbang_dark = 1
+< 3) To use Black/Grey20 in GVim and Black/Darkblue in Vim for the
+     main and syntax groups backgrounds respectively: >
+	:let mimic_bigbang_dark = 1
+< 4) To get a look like Astronaut.vim but using italic fonts: >
+	:let mimic_bigbang_alt = 1
+	:let mimic_bigbang_dark = 1
+	:let mimic_font_style = 2
+< 5) For something exotic (in GVim) try this: >
+	:let mimic_bigbang_alt = 1
+	:let mimic_bigbang_dark = 1
+	:let mimic_font_style = 2
+	:color bigbang
+	:hi Normal guibg=black
+<
+
+DEEP BLUE						*deepblue.vim*
+
+My very own vision of a "DarkBlue" colorscheme, but only for |GVim|.
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) use it like it is (with plain font style).
+
+
+DEJA VU							*dejavu.vim*
+
+Original colorscheme for Vim/GVim.  Very customizable, uses colors according
+to the value of the 'background' option.  Mainly intended to be used for night
+coding/hacks (if you work at some Astronomic Observatory :).
+
+Inspired and powered by DnB (Drum & Bass) music (Spor, Break, Andy C, Sub
+focus, Prodigy ;).  Try out it with: >
+	:set bg=dark    |   color dejavu
+	:set bg=light   |   color dejavu
+<
+							*dejavu-features*
+Features: ~
+   * Appealing and easy-on-the-eyes colors.
+   * Colors are set according to the current 'background' type (in Vim/GVim).
+   * 6 different background color variants for GUI and Cterm with foreground
+        colors looking the same on them (see |dejavu-variants|).
+   * GUI font styles can be easily changed with the |mimic_font_style|
+	option (just like with any other colorscheme from the |mimicpak|).
+
+							*dejavu-options*
+Besides the |mimic-options|, this scheme has the following additional options:
+
+Option			Value	Description ~
+------			-----	-----------
+*mimic_dejavu_alt*	0, or	if not 0, a dark blue background will be used
+			  any	   (only for dark 'background').
+*mimic_dejavu_dark*	0, or	if not 0, a more darker background color will
+			  any	   be used.  For dark 'background' "black" is
+				   used and for light 'background' LightGray
+				   (or similar color) is used.
+				   And if |mimic_dejavu_alt| is not 0, then
+				   a very "darkblue" color is used.
+   Notes: ~
+      * To stop using the darker colors or the blue background either |:unlet|
+	the variables or set them to 0, and reload the scheme.
+      * To get the best look, leave the |mimic_font_style| variable like it
+	is if you use a "dark" 'background', but use Bold and/or Italics for
+	"light" 'background'.
+
+							*dejavu-variants*
+You can get a total of 6 different color variations with this colorscheme,
+according to how you set the option variables and Vim's 'background' option.
+Here is an overview of them:
+>
+   'background'		alt	dark	What the background looks like
+   ------------		---	----	------------------------------
+<	dark		0	0	dark background similar to Desert.vim
+	dark		0	1	real black background
+	dark		1	0	blue background similar to darkblue
+	dark		1	1	a very dark blue background.
+	light		*	0	a white background.
+	light		*	1	a light gray background.
+
+   Notes:
+	   * = not used if 'background' is light
+	 alt = |mimic_dejavu_alt|
+	dark = |mimic_dejavu_dark|
+
+Recommended settings: ~
+  1) Default colors for "dark" 'background', using default fonts >
+	:set bg = dark
+< 2) Dark Defaults for "dark" 'background', using default fonts. >
+	:let mimic_dejavu_dark = 1
+	:set bg = dark
+< 3) Alternative blue defaults for "dark" 'background', using default fonts. >
+	:let mimic_dejavu_dark = 1
+	:set bg = dark
+< 4) Defaults for "light" 'background', using bold fonts. >
+	:let mimic_font_style = 1
+	:set bg = light
+< 5) Darker colors for "light" 'background', using bold and italic fonts. >
+	:let mimic_dejavu_dark = 1
+	:let mimic_font_style = 3
+	:set background = light
+<
+
+GAEA							*gaea.vim*
+
+Gaea AKA "Mother Earth", uses a white background and nature-like colors.
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) looks very nice with bold and italics fonts: >
+	:let mimic_font_style = 3		" use bolds and italics
+<
+
+IMPERIAL						*imperial.vim*
+
+This colorscheme uses King-like colors (gold comments, royal-blue look-alike
+statements, etc.) on a light grey background for Vim/GVim.
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) looks very nice with bold and italics fonts: >
+	:let mimic_font_style = 3		" use bolds and italics
+<
+
+OMEN							*omen.vim*
+
+Simple and clean red/black colors for both, Vim and GVim.  >
+	Inspiriert in die Farben von die Uhr-alte Deutsche Fahne,
+	aber nur mit weniger Rot; und also auch von The Prodigy's songs:
+	"Omen" und "Invaders Must Die!"(2009).
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) looks very nice with bold and italics fonts: >
+	:let mimic_font_style = 3		" use bolds and italics
+<
+
+ZEN DNB							*zendnb.vim*
+
+Zen meets DNB, a dark colorscheme for GVim and Vim.  On Vim it looks best with
+16 colors, and it uses a transparent background.
+
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) it looks nice with italic fonts: >
+	:let mimic_font_style = 2
+<
+==============================================================================
+6. Cloned Colorschemes					*mimic-cloned*
+
+In this section are some "cloned" schemes.  The colorschemes itself were made
+from scratch, but the colors are BASED from other existing colorschemes which
+I liked.
+
+The purpose of these cloned schemes is: >
+	provide EASIER ON THE EYES colors (better contrast),
+	and still look like the original.
+<
+
+ASTRO BOY						*astroboy.vim*
+
+GVim only colorscheme.  The colors of this scheme are based on DrChip's
+(Dr. Charles E. Campbell, Jr., Ph.D.) cool Astronaut colorscheme, except that
+it uses an almost black background color (Grey20 == #333333) by default;
+and it uses smoother (not so bright) colors.
+
+You can get the original Astronaut scheme here:
+	http://www.vim.org/scripts/script.php?script_id=122
+
+							*astroboy-options*
+Besides the |mimic-options|, this scheme has the following additional options:
+
+Option			Value	Description ~
+------			-----	-----------
+*mimic_astroboy_alt*	0, or	if not 0, a blue background will be used;
+			  any	   else it uses the default color (grey20).
+*mimic_astroboy_dark*	0, or	if not 0, a black background color is used.
+			  any	   If |mimic_astroboy_alt| is also set, then a
+				   darkblue color is used.
+
+   Notes: ~
+      * To stop using the darker colors or the blue background either |:unlet|
+	the variables or set them to 0, and reload the scheme.
+
+							*astroboy-variants*
+You can get a total of 4 different background colors with this colorscheme,
+according to how you set the option variables.  Here is an overview of them: >
+
+	alt	dark	What the background looks like
+ 	---	----	------------------------------
+<	0	0	almost black background similar to Desert.vim
+	0	1	real black background
+	1	0	blue background similar to Astronaut.vim
+	1	1	dark blue background, similar to darkblue.vim
+
+   Notes:
+	 alt = |mimic_astroboy_alt|
+	dark = |mimic_astroboy_dark|
+
+Recommended settings: ~
+  1) use it like it is (with plain font style), or
+  2) to get the same look as Astronaut.vim (uses blue background) >
+	:let mimic_astroboy_alt = 1
+< 3) or try Black background color and italic fonts. >
+	:let mimic_astroboy_dark = 1
+	:let mimic_font_style = 2
+< 4) Alternative Dark Blue background with italic fonts. >
+	:let mimic_astroboy_alt = 1
+	:let mimic_astroboy_dark = 1
+	:let mimic_font_style = 2
+<
+
+MICKEYSOFT						*mickeysoft.vim*
+
+YAMC == Yet Another Mickey$oft Colorscheme... for GVim.
+Colors look (more or less) like those used in M$ IDEs.
+
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) looks nice with bold and italics fonts: >
+	:let mimic_font_style = 3		" use bolds and italics
+<
+
+PS CLONE						*psclone.vim*
+
+This scheme is based on the popular peaksea.vim (aka "ps_color.vim") made by
+Pan, Shizhu and which is in the Top 10 colorschemes on: http://vim.sf.net/.
+
+I like and have used the peaksea colorscheme a lot...  However I wanted to
+have more smoother (read: not so bright) colors.  So I decided to make this
+clone scheme with a background color similar to the desert.vim colorscheme and
+a lighter cast of colors based on the ones of peaksea.
+
+It may look very dull at first but it is very, very easy on the eyes
+(and perhaps even better than the original peaksea ;).
+
+Differences: ~
+   The main differences between  peaksea  and this clone scheme are:
+      * it is {only for GVim} (no cterm colors);
+      * it does NOT have/use any of the peaksea options;
+      * it does NOT have different set of colors (i.e. cool/warm/whatever);
+      * it uses the |mimic-options|, and so the font styles can easily be
+	   changed via the |mimic_font_style| option.
+
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) looks nice with italic fonts: >
+	:let mimic_font_style = 2		" use italics
+<
+
+VIM HUT							*vimhut.vim*
+
+This colorscheme uses very similar colors to GVim's defaults but with a darker
+tone and with more gray.  Furthermore, it uses a different set of colors
+according to the current 'background'.  Try them with: >
+	:set bg=dark    |   color vimhut
+	:set bg=light   |   color vimhut
+
+This scheme is only included in this pack because I wondered how the GVim
+default colors may look on a dark 'background'.
+
+This scheme has no extra options besides |mimic-options|.
+
+Recommended settings: ~
+  1) on dark 'background', it looks nice with italic fonts: >
+	:let mimic_font_style = 2
+< 2) on light 'background', it looks nice with bold fonts: >
+	:let mimic_font_style = 1
+<
+
+==============================================================================
+7. License						*mimic-license*
+
+MimicPak and all its accompanying files are placed in the Public Domain.
+It is Free / Frei / Gratis / Libre.  But in order to avoid any possibly messy
+situation, two small prints are included.
+
+All the following said in short words: >
+	use the files as you like...  and
+	don't come to me crying if something is wrong.
+<
+=== begin of first small print ===
+>
+    THE AUTHOR, MAINTAINER, CONTRIBUTOR AND/OR OTHER PARTIES PROVIDE
+    THIS SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+    OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE
+    RISK AS TO THE QUALITY AND PERFORMANCE OF THIS SOFTWARE IS WITH YOU.
+    SHOULD THIS SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
+    NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+    THERE IS NO WARRANTY FOR THIS SOFTWARE AND IN NO EVENT WILL ANY
+    AUTHOR, MAINTAINER, CONTRIBUTOR, OR ANY OTHER PARTY WHO MAY
+    REDISTRIBUTE THIS SOFTWARE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING
+    ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING
+    OUT OF THE USE OR INABILITY TO USE THIS SOFTWARE (INCLUDING BUT NOT
+    LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES
+    SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THIS SOFTWARE TO
+    OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY
+    HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+    BY USING ANY OF THE MIMICPAK FILES YOU AGREE WITH THESE TERMS.
+<
+=== end of first small print ===
+
+The following is for any trademarks, registered and/or copyrighted names that
+appear in this pack.
+
+=== begin of second small print ===
+>
+    ANY BRAND, PRODUCT, COMPANY, ENTITY, INDIVIDUAL, PET AND/OR THING
+    NAME, BEING COMMERCIAL OR NON-COMMERCIAL THAT APPEARS IN THIS
+    DOCUMENTATION FILE OR ANY OF ITS ACCOMPANYING FILES MAY OR MAY NOT
+    HAVE TRADEMARKS AND/OR COPYRIGHTS AND/OR BE REGISTERED BY THEIR
+    RESPECTIVE NAME OWNERS OR AUTHORS.  IN ANY EVENT, THEY ARE USED IN
+    THIS DOCUMENT AND ITS ACCOMPANYING FILES AS A SYMBOLIC REFERENCE FOR
+    THE NON-COMMERCIAL PURPOSE OF CONTENT CLASSIFICATION ONLY.  THE
+    AUTHOR, MAINTAINER, CONTRIBUTOR AND/OR OTHER PARTIES HAVE NO RIGHTS
+    OVER AND/OR ASSOCIATION OF ANY KIND WITH THEM.
+<
+=== end of second small print ===
+
+==============================================================================
+8. Credits						*mimic-credits*
+
+The author of the |mimicpak| is Jaime Wottrich, you can reach him at:
+
+               <jaime> 0x2E <wottrich> 0x40 <gmail> 0x2E <com>
+
+If you want to ask him something, please take a look first at the |mimic-faq|
+and perhaps you might find the answer...
+
+==============================================================================
+9. Links						*mimic-links*
+
+Some links to some very nice colorschemes and plugins related to schemes
+(not included in the Vim runtime by default) and that you might find useful:
+
+   *  hicolors			by Charles E. Campbell, Jr. (aka DrChip) >
+	Very useful colorscheme editor.  Supports editing of GUI and cterm
+	(8/16/256) colors in a WYSIWYG-like mode with a simple interface.
+<	http://www.vim.org/scripts/script.php?script_id=1081
+
+   *  CSApprox.vim		by Matt Woznisky >
+	Another very useful plugin for terminal refugees.  It allows you to
+	use GVim-only colorschemes (like the included ones in this pack) with
+	Vim on 88/256 color terminals (xterm, rxvt, konsole, eterm, etc.)
+<	http://www.vim.org/scripts/script.php?script_id=2390
+
+   *  astronaut.vim		by Charles E. Campbell, Jr. (aka DrChip) >
+	This scheme is great for Vim, especially when using it on a terminal
+	emulator that supports (pseudo)transparent backgrounds such as
+	Konsole.
+<	http://www.vim.org/scripts/script.php?script_id=122
+
+	Also, if you like this colorscheme you may want to try the included
+	clone from this Pack |astroboy.vim| (which is only for GVim and it
+	uses smoother [not so sharp] colors and has options to use different
+	background colors).  The |bigbang.vim| colorscheme can also be good
+	alternative.
+
+   *  peaksea.vim		by Pan Shizhu >
+	This colorscheme uses different sets of colors (dark/light) according
+	to the current value of the 'background' option.  The colors for
+	'dark' backgrounds are really good and easy-on-the-eyes.  However, the
+	colors for 'light' backgrounds are another story...
+<	http://www.vim.org/scripts/script.php?script_id=760
+
+	Also, if you like this colorscheme you may want to try the included
+	clone from this Pack |psclone.vim| (which uses similar colors based on
+	the dark colors of peaksea, but with a smoother tones, a la "desert").
+
+   *  zenburn.vim		by Jani Nurminen >
+	This one is one of my favorites, very good for late night coding in
+	the dark.
+<	http://www.vim.org/scripts/script.php?script_id=415
+
+==============================================================================
+B. TODO							*mimic-todo*
+
+Things that may be added(+), changed(*) or deleted(-) ~
+in a possible future update: ~
+	* Use the font style option also for term/cterm.
+	* Instead of using numbers for the font style, use a string of
+	  words/chars (example: 'b,i' to use bold and italic; or
+	  'bold und ital' to use bold, underline, and italics...
+	  this isn't hard to do.)
+	* Change the way that font styles are set.  The current way is
+	  practical but is also slow and stupid  (the schemes first set the
+	  highlights with gui=NONE; and after all are set, they set again
+	  the gui option to the chosen font style for all groups...)
+	* I need to create a better template for future schemes.
+	+ Add colorschemes from other vim users?
+	+ Include my template scheme? (so that others can use it?)
+>
+	All these may take a GOOD TIME...  Because they imply, that I need to
+	change all the 17 colorschemes again and the entire documentation as
+	well.
+<
+==============================================================================
+B. FAQ							*mimic-faq*
+
+Questions that Vim users have asked: ~
+   NONE, so far.
+
+Questions that some Vim users MIGHT want to ask: ~
+   Q:  Why did you do all this stuff?  WHYYYYYY?!
+   A: >
+	I have used the IDEs/Editors mentioned above and I was waiting for
+	somebody else to convert the colors to GVim (particularly the ones
+	from MAsmEd: Paradox, Greyhouse)...  Sure, the colors of Emacs already
+	existed for GVim; but I wanted to have the very same ones (if possible).
+
+	Since nobody else did this, I decided to start doing it.
+
+	I have also tried ALL (yes ALL, one by one) of the colorschemes from
+	Robert Melton's ColorSamplerPack, and I was looking for GVim
+	colorschemes that use easy on the eyes colors.  Well, I found less
+	than 10 of them:
+
+		* camo.vim
+		* desert.vim (already distributed with vim).
+		* jellybeans.vim
+		* metacosm.vim
+		* peaksea.vim (only the colors for dark backgrounds)
+		* zenburn.vim
+
+	just to mention some.  This was clearly not enough for me, and thus I
+	decided to make my own easy-on-the-eyes colorschemes for GVIM:
+
+		* astroboy.vim, (astronaut.vim enhanced GVIM clone)
+		* dejavu.vim,
+		* imperial.vim,
+		* omen.vim,
+		* psclone.vim, (peaksea.vim [aka ps_color] clone)
+		* vimhut.vim,
+		* zendnb.vim.
+
+	Furthermore, I like to use different font styles every now and then...
+	So I've added the shared mimic-options, an easy way to switch font
+	styles and get the same look on all the included colorschemes.
+<
+
+   Q:  Will you add more colorschemes to this pack?
+   A: >
+	NOPE.  With these I have enough (for the moment).
+<
+
+   Q:  Seeing the Hadou-ken at the top of this file, I know that you're a
+	M.U.G.E.N master, so please tell me:
+	How can I DO a *SHINKUU-TATSUMAKI-SENPUU-KYAKU* in real life ?
+
+   A:	Follow these simple steps, as shown in the pictures:
+       ,------------------+--------------------+----------------------------.~
+       | 1  __________    | 2   ___________    | 3            __________    |~
+       |   |SHINKUUUUU|   |    |TATSUMAKI..|   |      _,---> /   |SENPUU|   |~
+       |   |__________|   |    |___________|   |    ,"    _ / _  |______|   |~
+       |    \ _           |        \ _         |   /     (_} ||             |~
+       |     (_}          |         {_)        |   |    // |//              |~
+       |    /|\\__        |         |\\        |    \   \\__/               |~
+       |   //| '--'       |  ,->   _|//        |     '  _/_/                |~
+       |     /\\          | /    _|/ ||        |       ||/                  |~
+       |    // ||_  \     | |   '-'  ||        |       ""                   |~
+       |           _/     |  \_      ""        |          ^^^               |~
+       |      <---'       |    '--             |                            |~
+       +------------------+----+---------------+---+------------------------+~
+       | 4   ________          | 5                 | 6                      |~
+       |    |KYAKUUU!|         |                   |                        |~
+       |    |________| _       |                   |                        |~
+       |     \ _        \_     |         _         |              _         |~
+       |      (_}         \    |        {_)        |    ,->      {_)        |~
+       |     // |\         |   |       /|\\        |   /        /| \\       |~
+       |    //| ===,==/|   v   |      ,,|_\\       |  |   |\==,==' |\\      |~
+       |      |"^^^^^^^'       |      ||__)        |  |   '^^^^^^\"|        |~
+       |      //               |         \\        |  |           \\        |~
+       |      ""               |          ""   |   |   \          ""        |~
+       |           ^^^         |      ^^^    _/    |    '-_  ^^^            |~
+       |                       |         <--'      |       '---             |~
+       '-----------------------+-------------------+------------------------'~
+
+	NOTE: the  ^^^  means that the action is performed while airbone.
+
+	Details: ~
+	*  Step 1: charging energy. >
+		This is the MOST important step, so take ALL the time you need
+		to charge YOUR ENERGY while you say the word "SHINKUU" and keep
+		those "U"s sounding...  People will panic and flee away in
+		fear once they notice your intimidating pose.
+<
+	*  Step 2: going airbone. >
+		After you have charged fully YOUR ENERGY (i.e. once you notice
+		EARTHQUAKES and SMALL ROCKS FLOATING), you need to:
+		spin-180-degrees-quickly-and-hit-the-ground-with-your-foot-as-
+		hard-as-possible-while-saying-TATSUMAKI...
+		(all that in less than 1 sec).  This will allow you to jump
+		more higher than otherwise you would.
+<
+	*  Step 3: begin to spin in mid-air. >
+		Once in mid-air, open your legs to 90~100 degrees (as shown in
+		picture 3) and start to spin imitating a helix...
+		Steps 2 and 3 should take you no longer than 2 secs!
+<
+	*  Step 4, 5 and 6: keep spinning. >
+		This is the easiest part, you ONLY NEED TO KEEP SPINNING LIKE
+		A HELICOPTER IN MID-AIR, IGNORING GRAVITY as shown in the
+		pictures.  Once you reach step 6, repeat again from step 3.
+
+		After the 10th. spin you should see a HEAVY TORNADO with
+		CLOUDS and THUNDER around yourself...  Every Vim user, that is
+		worth of being named as such, should see it!
+
+		If you SOMEHOW just can't do this, then PRACTICE more!
+		Practice makes perfection! ;)
+
+		Additionally you could try to jump-off from a skyscrapper
+		(or cliff), and see how many spins you can do in mid-air
+		before you hit the ground... if you manage to get to 10,
+		e-mail me! ;)
+<
+	[And if you still don't know what a |SHINKUU-TATSUMAKI-SENPUU-KYAKU|
+	 is all about, don't ask me!  Ask google, google is your friend.]
+
+	OK, enough silliness and stupidity for now :-S
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
