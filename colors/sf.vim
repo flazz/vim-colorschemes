@@ -1,4 +1,4 @@
-" GUI-only vim color file, based on colors from vim.sf.net
+
 " Author:      Christian MICHON
 " Email:       christian_michon@yahoo.fr
 " Version:     1.1
@@ -11,6 +11,13 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "sf"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Boolean        guifg=#007f00 guibg=#f0f0dd gui=none
 hi Character      guifg=#007f00 guibg=#f0f0dd gui=none

@@ -1,4 +1,4 @@
-" Vim color file
+
 " Maintainer:   TaQ <eustaquiorangel@yahoo.com>
 " Last Change:  18 March 2003
 " URL: http://taq.cjb.net		
@@ -14,6 +14,13 @@ if exists("syntax_on")
     syntax reset
 endif
 let colors_name="taqua"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Normal  gui=NONE guifg=#303030 guibg=#FFFFFF
 hi NonText gui=BOLD guifg=#303030 guibg=#FFFFFF
@@ -56,14 +63,13 @@ hi Visual       gui=NONE guifg=#404060 guibg=#dddde8
 " Syntax group
 " purple was #8000FF
 hi Comment    gui=NONE guifg=#0E8ED3 guibg=#DBF2FF 
-hi Constant	  gui=BOLD guifg=#0384F6 guibg=#DBF2FF
+hi Constant	  gui=NONE guifg=#303030 guibg=#F5F5F5
 hi Error      gui=BOLD guifg=#FF0000 guibg=#FFFFFF
-" hi Identifier gui=NONE guifg=#1F89E0 guibg=#FFFFFF 
-hi Identifier gui=NONE guifg=#000000 guibg=#FFFFFF 
+hi Identifier gui=NONE guifg=#1F89E0 guibg=#FFFFFF 
 hi Ignore     gui=NONE guifg=#f8f8f8 guibg=#FFFFFF
 hi PreProc	  gui=BOLD guifg=#0BBF20 guibg=#FFFFFF
 hi Special    gui=NONE guifg=#0E8ED3 guibg=#DBF2FF
-hi Statement  gui=BOLD guifg=#F36CE5 guibg=#FFFFFF
+hi Statement  gui=BOLD guifg=#2E9BF4 guibg=#FFFFFF
 hi Todo       gui=NONE guifg=#FF0070 guibg=#FFE0F4
 hi Type		  gui=BOLD guifg=#0971F9 guibg=#FFFFFF
 hi Underlined gui=UNDERLINE guifg=#0000ff guibg=NONE
@@ -82,3 +88,5 @@ hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
 hi Scrollbar  gui=BOLD guifg=#00C0FF guibg=#FFFFFF
 hi VertSplit  gui=BOLD guifg=#FFFFFF guibg=#0E8ED3
 hi Visual	  gui=BOLD guifg=#FFFFFF guibg=#1679F9
+
+

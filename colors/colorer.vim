@@ -1,4 +1,4 @@
-" local syntax file - set colors on a per-machine basis:
+
 " vim: tw=0 ts=4 sw=4
 " Vim color file
 " Maintainer:	Sergey V. Beduev <shaman@interdon.net>
@@ -11,6 +11,13 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "colorer"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Normal	        ctermfg=Gray guifg=DarkGray guibg=black
 hi Visual	        ctermfg=DarkCyan guibg=black guifg=DarkCyan

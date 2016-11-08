@@ -1,7 +1,9 @@
+" vim: set tw=0 sw=4 sts=4 et:
+
 " Vim color file
-" Maintainer: Datila Carvalho <datila@hotmail.com>
-" Last Change: May, 19, 2005
-" Version: 0.2
+" Maintainer: Datila Carvalho <datila@saci.homeip.net>
+" Last Change: November, 3, 2003
+" Version: 0.1
 
 " This is a VIM's version of the emacs color theme
 " _Robin Hood_ created by Alex Schroede.
@@ -13,6 +15,13 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "robinhood"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 
 """ Colors
@@ -25,32 +34,26 @@ hi CursorIM             guifg=NONE guibg=gray
 "hi DiffChange
 "hi DiffDelete
 "hi DiffText
-hi ErrorMsg             gui=bold guifg=white guibg=Red
+hi ErrorMsg             gui=bold guifg=White guibg=Red
 "hi VertSplit
 "hi Folded
 "hi FoldColumn
 "hi IncSearch
-hi LineNr               gui=bold guifg=yellowgreen guibg=#203010
+"hi LineNr
 "hi ModeMsg
 "hi MoreMsg
 "hi NonText
-hi Normal               guibg=#304020 guifg=wheat
+hi Normal               guibg=#304020 guifg=navajowhite
 "hi Question
-hi Search               gui=bold guifg=black guibg=gray
+hi Search               gui=bold guifg=Black guibg=gray
 "hi SpecialKey
-hi StatusLine           guifg=darkolivegreen guibg=wheat
-hi StatusLineNC         guifg=olivedrab guibg=wheat
+hi StatusLine           guifg=palegreen
+hi StatusLineNC         guifg=yellowgreen
 "hi Title
 hi Visual               guifg=darkslategrey guibg=fg
 hi VisualNOS            gui=bold guifg=Black guibg=fg
 hi WarningMsg           guifg=White guibg=Tomato
 "hi WildMenu
-
-hi User2                guifg=yellowgreen guibg=#091900 gui=bold
-
-" If using Motif/Athena
-hi Menu                 guibg=#304020 guifg=wheat
-hi Scrollbar            guibg=bg
 
 " Colors for syntax highlighting
 hi Comment              guifg=lightblue
@@ -79,7 +82,7 @@ hi PreProc              guifg=palegreen
     hi Macro            guifg=aquamarine
     hi PreCondit        guifg=palegreen
 
-hi Type                 gui=bold guifg=yellowgreen
+hi Type                 gui=bold guifg=palegreen
     hi StorageClass     gui=bold guifg=aquamarine
     hi Structure        gui=bold guifg=aquamarine
     hi Typedef          gui=bold guifg=aquamarine

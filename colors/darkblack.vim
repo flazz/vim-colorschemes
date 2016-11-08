@@ -1,4 +1,4 @@
-" Vim color file
+
 " Maintainer:	Matthew Jimenez	<mjimenez@ersnet.net>
 " Last Change:	2005 Feb 25
 
@@ -12,6 +12,13 @@ if exists("syntax_on")
 endif
 
 let colors_name = "darkblack"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Normal	guifg=lightgrey guibg=black	ctermfg=lightgray ctermbg=black
 hi ErrorMsg	guifg=white guibg=lightblue	ctermfg=white ctermbg=lightblue

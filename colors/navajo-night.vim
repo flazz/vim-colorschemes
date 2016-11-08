@@ -1,3 +1,4 @@
+
 " Vim colour file
 " Maintainer: Matthew Hawkins <matt@mh.dropbear.id.au>
 " Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
@@ -15,6 +16,13 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "navajo-night"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 " This is the list of colour changes from Navajo that
 " weren't a simple mathematical subtraction from 0xffffff

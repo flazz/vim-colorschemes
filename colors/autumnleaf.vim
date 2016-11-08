@@ -1,3 +1,4 @@
+
 " Vim color file
 " Maintainer: Anders Korte
 " Last Change: 17 Oct 2004
@@ -13,6 +14,13 @@ if exists("syntax_on")
 endif
 
 let colors_name="AutumnLeaf"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 
 " Colors for the User Interface.

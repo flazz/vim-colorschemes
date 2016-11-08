@@ -1,0 +1,11 @@
+=== Introduction ===
+I wrote this colorscheme, because I did not find one which pleased me. I also wished to have fun a little. I tried to be in a sence original and I could help myself to use many colors, and I couldn't help to wink at to my colors' country. Mahewincs is actually in his first version, it would change again, but the base will remain the same. I will also add definitions of colors for gui(Gvim) and some little things to fix for next version. 
+
+=== Install ===
+Decompress archive: tar -zxvf Mahewincs.tar.gz,
+Move the colorscheme in $HOME/.vim /colors 
+Add on this line, in your .vimrc:
+colorscheme Mahewincs
+
+=== Conclusion ===
+I hope it will be use by the other persons than myself, I will so be pleased. 

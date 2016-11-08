@@ -1,4 +1,4 @@
-" Name Of File: darkocean.vim
+
 "  Description: Gvim colorscheme, works best with version 6.0.
 "   Maintainer: Naveen Chandra R <ncr AT iitbombay DOT org>
 "  Last Change: Thursday, August 15, 2002
@@ -11,6 +11,13 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name="darkocean"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Cursor         gui=None            guibg=#add8e6    guifg=#000000
 hi CursorIM       gui=None            guibg=#add8e6    guifg=#000000

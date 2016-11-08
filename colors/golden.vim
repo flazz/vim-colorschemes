@@ -1,4 +1,4 @@
-" vim: tw=0 ts=4 sw=4
+
 " Vim color file
 "
 " Creator: Ryan Phillips <ryan@trolocsis.com>
@@ -13,6 +13,13 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "golden"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 hi Normal		  ctermfg=yellow guifg=#ddbb00  guibg=black
 hi Scrollbar	  ctermfg=Yellow guifg=#ddbb00  guibg=black
 hi Menu			  ctermfg=darkyellow guifg=#ffddaa  guibg=black
