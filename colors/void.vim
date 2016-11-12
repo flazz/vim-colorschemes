@@ -69,8 +69,8 @@ hi Todo		guifg=orangered guibg=yellow2
 hi Todo		guifg=orange guibg=gray40
 
 " Fuf/menu stuff
-hi Pmenu		guifg=#aadddd guibg=#333333
-hi PmenuSel		guifg=#ddeeee guibg=#335533
+hi Pmenu		ctermfg=white ctermbg=black guifg=#aadddd guibg=#333333
+hi PmenuSel		ctermfg=darkcyan ctermbg=black guifg=#ddeeee guibg=#335533
 
 " color terminal definitions
 hi SpecialKey	ctermfg=darkgreen
