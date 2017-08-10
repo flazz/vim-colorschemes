@@ -16,7 +16,6 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-
 let colors_name = "sourcerer"
 
 
@@ -41,10 +40,11 @@ hi ModeMsg      guifg=#afafaf guibg=#222222 gui=bold
 hi MoreMsg      guifg=#2e8b57 guibg=NONE    gui=bold
 hi NonText      guifg=#404050 guibg=NONE    gui=NONE
 
-hi Pmenu        guifg=#ffffff guibg=#444444
-hi PmenuSel     guifg=#000000 guibg=#b1d631
-"  hi           PmenuSbar     guifg=#ffffff guibg=#c1cdc1 gui=NONE
-"  hi           PmenuThumb    guifg=#ffffff guibg=#838b83 gui=NONE
+" completions
+hi Pmenu        guifg=#A8A8A8 guibg=#3A3A3A
+hi PmenuSel     guifg=#000000 guibg=#528B8B
+hi PmenuSbar    guifg=#000000 guibg=#528B8B
+hi PmenuThumb   guifg=#000000 guibg=#528B8B
 
 hi Question     guifg=#00ee00 guibg=NONE    gui=bold
 hi Search       guifg=#000000 guibg=#d6e770 gui=bold
@@ -208,3 +208,7 @@ hi lCursor                cterm=NONE             ctermbg=145   ctermfg=234
 hi nCursor                cterm=NONE             ctermbg=NONE  ctermfg=145
 hi vCursor                cterm=NONE             ctermbg=201   ctermfg=16
 
+hi Pmenu                  cterm=NONE             ctermfg=248   ctermbg=237
+hi PmenuSel               cterm=NONE             ctermfg=16    ctermbg=66
+hi PmenuSbar              cterm=NONE             ctermfg=16    ctermbg=66
+hi PmenuThumb             cterm=NONE             ctermfg=16    ctermbg=66
