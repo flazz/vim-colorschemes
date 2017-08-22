@@ -7,10 +7,18 @@ Vim colorschemes
 
 one stop shop for vim colorschemes.
 
-this is harvested from vim.org. only colorschemes downloaded in a single `.vim`
+this was [originally] harvested from vim.org. only colorschemes downloaded in a single `.vim`
 file are included.
 
 for hacking on vim.org harvesting see the branch [prep](https://github.com/flazz/vim-colorschemes/tree/prep).
+
+Policy
+------
+- honor system is in effect!
+- new schemes are welcome!
+- upstream updates are accepted!
+- non-upstream updates are accepted as derivitive schemes: pick a new filename; cite the original!
+- housekeeping updates are accepted too!
 
 Installation
 ------------
