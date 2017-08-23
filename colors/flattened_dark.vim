@@ -22,7 +22,7 @@ hi  Constant                                ctermfg=6  guifg=#2aa198  gui=NONE
 hi  Cursor                                  ctermfg=8  ctermbg=12  guifg=#002b36  guibg=#839496  gui=NONE
 hi  CursorColumn                            ctermbg=0  guibg=#073642  gui=NONE
 hi  CursorLine                              cterm=NONE  ctermbg=0  guibg=#073642  guisp=#93a1a1  gui=NONE
-hi  CursorLineNr                            ctermfg=11  guifg=yellow  gui=NONE
+hi  CursorLineNr                            cterm=NONE ctermfg=11  guifg=yellow  gui=NONE
 hi  DiffAdd                                 ctermfg=2  ctermbg=0  guifg=#719e07  guibg=#073642  guisp=#719e07  gui=NONE
 hi  DiffChange                              ctermfg=3  ctermbg=0  guifg=#b58900  guibg=#073642  guisp=#b58900  gui=NONE
 hi  DiffDelete                              ctermfg=1  ctermbg=0  guifg=#dc322f  guibg=#073642  gui=NONE
@@ -31,7 +31,7 @@ hi  Directory                               ctermfg=4  guifg=#268bd2  gui=NONE
 hi  Error                                   cterm=NONE  ctermfg=1  ctermbg=NONE  guifg=#dc322f  guibg=#002b36  gui=NONE
 hi  ErrorMsg                                cterm=reverse  ctermfg=1  ctermbg=NONE  guifg=#dc322f  guibg=NONE gui=reverse
 hi  FoldColumn                              ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  gui=NONE
-hi  Folded                                  cterm=NONE,underline  ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  guisp=#002b36  gui=NONE,underline
+hi  Folded                                  cterm=NONE,underline  ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  guisp=#002b36  gui=NONE
 hi  HelpExample                             ctermfg=14  guifg=#93a1a1  gui=NONE
 hi  Identifier                              ctermfg=4  guifg=#268bd2  gui=NONE
 hi  IncSearch                               cterm=standout  ctermfg=9  guifg=#cb4b16  gui=standout
@@ -47,13 +47,13 @@ hi  PmenuThumb                              cterm=reverse  ctermfg=12  ctermbg=8
 hi  PreProc                                 cterm=NONE  ctermfg=1  guifg=#cb4b16  gui=NONE
 hi  Question                                cterm=NONE  ctermfg=6  guifg=#2aa198  gui=NONE
 hi  Search                                  cterm=reverse  ctermfg=3 ctermbg=NONE  guifg=#b58900  guibg=NONE  gui=reverse
-hi  SignColumn                              ctermfg=12  ctermbg=242  guifg=#839496  guibg=Grey  gui=NONE
-hi  Special                                 ctermfg=1  guifg=#dc322f  gui=NONE
+hi  SignColumn                              cterm=NONE  ctermfg=12  ctermbg=NONE  guifg=#839496  guibg=NONE  gui=NONE
+hi  Special                                 cterm=NONE  ctermfg=1  guifg=#dc322f  gui=NONE
 hi  SpecialKey                              cterm=NONE  ctermfg=11  ctermbg=0  guifg=#657b83  guibg=#073642  gui=NONE
-hi  SpellBad                                cterm=undercurl  guisp=#dc322f  gui=undercurl
-hi  SpellCap                                cterm=undercurl  guisp=#6c71c4  gui=undercurl
-hi  SpellLocal                              cterm=undercurl  guisp=#b58900  gui=undercurl
-hi  SpellRare                               cterm=undercurl  guisp=#2aa198  gui=undercurl
+hi  SpellBad                                cterm=undercurl  ctermfg=NONE  ctermbg=NONE  guisp=#dc322f  gui=undercurl
+hi  SpellCap                                cterm=undercurl  ctermfg=NONE  ctermbg=NONE  guisp=#6c71c4  gui=undercurl
+hi  SpellLocal                              cterm=undercurl  ctermfg=NONE  ctermbg=NONE  guisp=#b58900  gui=undercurl
+hi  SpellRare                               cterm=undercurl  ctermfg=NONE  ctermbg=NONE  guisp=#2aa198  gui=undercurl
 hi  Statement                               ctermfg=2  guifg=#719e07  gui=NONE
 hi  StatusLine                              cterm=reverse  ctermfg=14  ctermbg=0  guifg=#93a1a1  guibg=#073642  gui=reverse
 hi  StatusLineNC                            cterm=reverse  ctermfg=11  ctermbg=0  guifg=#657b83  guibg=#073642  gui=reverse
@@ -61,14 +61,14 @@ hi  TabLine                                 cterm=underline  ctermfg=12  ctermbg
 hi  TabLineFill                             cterm=underline  ctermfg=12  ctermbg=0  guifg=#839496  guibg=#073642  guisp=#839496  gui=underline
 hi  TabLineSel                              cterm=underline,reverse  ctermfg=10  ctermbg=7  guifg=#586e75  guibg=#eee8d5  guisp=#839496  gui=underline,reverse
 hi  Title                                   cterm=NONE  ctermfg=9  guifg=#cb4b16  gui=NONE
-hi  Todo                                    cterm=NONE  ctermfg=5  guifg=#d33682  gui=NONE
+hi  Todo                                    cterm=NONE  ctermfg=5  guifg=#d33682  guibg=NONE  gui=bold
 hi  Type                                    ctermfg=3  guifg=#b58900  gui=NONE
 hi  Underlined                              ctermfg=13  guifg=#6c71c4  gui=NONE
 hi  VarId                                   ctermfg=4  guifg=#268bd2  gui=NONE
 hi  VertSplit                               ctermfg=11  ctermbg=11  guifg=#657b83  guibg=#657b83  gui=NONE
 hi  Visual                                  cterm=reverse  ctermfg=10  ctermbg=8  guifg=#586e75  guibg=#002b36  gui=reverse
 hi  VisualNOS                               cterm=reverse  ctermbg=0  ctermbg=NONE  guibg=#073642  guifg=NONE  gui=reverse
-hi  WarningMsg                              cterm=NONE  ctermfg=1  guifg=#dc322f  gui=NONE
+hi  WarningMsg                              cterm=NONE  ctermfg=9  guifg=#dc322f  gui=NONE
 hi  WildMenu                                cterm=reverse  ctermfg=7  ctermbg=0  guifg=#eee8d5  guibg=#073642 gui=reverse
 
 hi  cPreCondit                              ctermfg=9  guifg=#cb4b16  gui=NONE
@@ -304,3 +304,22 @@ hi clear SyntasticWarningLine
 hi clear helpLeadBlank
 hi clear helpNormal
 hi clear pandocTableStructre
+
+if has('nvim')
+  let g:terminal_color_0  = '#073642'
+  let g:terminal_color_1  = '#dc322f'
+  let g:terminal_color_2  = '#859900'
+  let g:terminal_color_3  = '#b58900'
+  let g:terminal_color_4  = '#268bd2'
+  let g:terminal_color_5  = '#d33682'
+  let g:terminal_color_6  = '#2aa198'
+  let g:terminal_color_7  = '#eee8d5'
+  let g:terminal_color_8  = '#002b36'
+  let g:terminal_color_9  = '#cb4b16'
+  let g:terminal_color_10 = '#586e75'
+  let g:terminal_color_11 = '#657b83'
+  let g:terminal_color_12 = '#839496'
+  let g:terminal_color_13 = '#6c71c4'
+  let g:terminal_color_14 = '#93a1a1'
+  let g:terminal_color_15 = '#fdf6e3'
+endif

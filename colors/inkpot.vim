@@ -91,7 +91,7 @@ if has("gui_running")
     hi Directory      gui=NONE   guifg=#00ff8b   guibg=NONE
     hi LineNr         gui=NONE   guifg=#8b8bcd   guibg=#2e2e2e
     hi NonText        gui=BOLD   guifg=#8b8bcd   guibg=NONE
-    hi SpecialKey     gui=BOLD   guifg=#ab60ed   guibg=NONE
+    hi SpecialKey     gui=BOLD   guifg=#3b205d   guibg=NONE
     hi Title          gui=BOLD   guifg=#af4f4b   guibg=NONE
     hi Visual         gui=NONE   guifg=#eeeeee   guibg=#4e4e8f
 
@@ -139,6 +139,10 @@ if has("gui_running")
         hi SpellCap     gui=undercurl guisp=#66cccc
 
         hi MatchParen   gui=NONE      guifg=#cfbfad   guibg=#4e4e8f
+    endif
+    if v:version >= 703
+        hi Conceal      gui=NONE      guifg=#c080d0   guibg=NONE
+        hi ColorColumn  gui=NONE                      guibg=#2e2e2e
     endif
 else
     if ! g:inkpot_black_background
@@ -210,6 +214,10 @@ else
         exec "hi SpellLocal     cterm=NONE ctermbg=" . <SID>X(36)
         exec "hi SpellCap       cterm=NONE ctermbg=" . <SID>X(21)
         exec "hi MatchParen     cterm=NONE ctermbg=" . <SID>X(14) . "ctermfg=" . <SID>X(25)
+    endif
+    if v:version >= 703
+        exec "hi Conceal      cterm=NONE      ctermfg=" . <SID>X(55) . " ctermbg=" . "NONE"
+        exec "hi ColorColumn  cterm=NONE      ctermbg=" . <SID>X(81)
     endif
 endif
 

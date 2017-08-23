@@ -1,80 +1,97 @@
-" vim:set ts=8 sts=2 sw=2 tw=0:
-"
-" matrix.vim - MATRIX like colorscheme.
-"
-" Maintainer:	MURAOKA Taro <koron@tka.att.ne.jp>
-" Last Change:  10-Jun-2003.
+" local syntax file - set colors on a per-machine basis:
+" vim: tw=0 ts=4 sw=4
+" Vim color file
+" Maintainer:	Ron Aaron <ron@ronware.org>
+" Last Change:	2003 May 02
 
-set background=dark
 hi clear
+set background=dark
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = 'matrix'
+let g:colors_name = "matrix"
+"colors:
+"	Black	16
+"	Red		196
+"	Green	46
+"	Blue	21
+"	Yellow	226
+"	Purple	201
+"	Cyan	51
+"	White	231
+"	Gray95	59
+"
+highlight clear
 
-" the character under the cursor
-hi Cursor	guifg=#226622 guibg=#55ff55
-hi lCursor	guifg=#226622 guibg=#55ff55
-" like Cursor, but used when in IME mode |CursorIM|
-hi CursorIM	guifg=#226622 guibg=#55ff55
-" directory names (and other special names in listings)
-hi Directory	guifg=#55ff55 guibg=#000000
-" diff mode: Added line |diff.txt|
-hi DiffAdd	guifg=#55ff55 guibg=#226622 gui=none
-" diff mode: Changed line |diff.txt|
-hi DiffChange	guifg=#55ff55 guibg=#226622 gui=none
-" diff mode: Deleted line |diff.txt|
-hi DiffDelete	guifg=#113311 guibg=#113311 gui=none
-" diff mode: Changed text within a changed line |diff.txt|
-hi DiffText	guifg=#55ff55 guibg=#339933 gui=bold
-" error messages on the command line
-hi ErrorMsg	guifg=#55ff55 guibg=#339933
-" the column separating vertically split windows
-hi VertSplit	guifg=#339933 guibg=#339933
-" line used for closed folds
-hi Folded	guifg=#44cc44 guibg=#113311
-" 'foldcolumn'
-hi FoldColumn	guifg=#44cc44 guibg=#226622
-" 'incsearch' highlighting; also used for the text replaced with
-hi IncSearch	guifg=#226622 guibg=#55ff55 gui=none
-" line number for ":number" and ":#" commands, and when 'number'
-hi LineNr	guifg=#44cc44 guibg=#000000
-" 'showmode' message (e.g., "-- INSERT --")
-hi ModeMsg	guifg=#44cc44 guibg=#000000
-" |more-prompt|
-hi MoreMsg	guifg=#44cc44 guibg=#000000
-" '~' and '@' at the end of the window, characters from
-hi NonText	guifg=#44cc44 guibg=#113311
-" normal text
-hi Normal	guifg=#44cc44 guibg=#000000
-" |hit-enter| prompt and yes/no questions
-hi Question	guifg=#44cc44 guibg=#000000
-" Last search pattern highlighting (see 'hlsearch').
-hi Search	guifg=#113311 guibg=#44cc44 gui=none
-" Meta and special keys listed with ":map", also for text used
-hi SpecialKey	guifg=#44cc44 guibg=#000000
-" status line of current window
-hi StatusLine	guifg=#55ff55 guibg=#339933 gui=none
-" status lines of not-current windows
-hi StatusLineNC	guifg=#113311 guibg=#339933 gui=none
-" titles for output from ":set all", ":autocmd" etc.
-hi Title	guifg=#55ff55 guibg=#113311 gui=bold
-" Visual mode selection
-hi Visual	guifg=#55ff55 guibg=#339933 gui=none
-" Visual mode selection when vim is "Not Owning the Selection".
-hi VisualNOS	guifg=#44cc44 guibg=#000000
-" warning messages
-hi WarningMsg	guifg=#55ff55 guibg=#000000
-" current match in 'wildmenu' completion
-hi WildMenu	guifg=#226622 guibg=#55ff55
+"Basic text
+highlight Comment			ctermfg=102				cterm=none
+highlight Normal			ctermfg=46				cterm=none
 
-hi Comment	guifg=#226622 guibg=#000000
-hi Constant	guifg=#55ff55 guibg=#226622
-hi Special	guifg=#44cc44 guibg=#226622
-hi Identifier	guifg=#55ff55 guibg=#000000
-hi Statement	guifg=#55ff55 guibg=#000000 gui=bold
-hi PreProc	guifg=#339933 guibg=#000000
-hi Type		guifg=#55ff55 guibg=#000000 gui=bold
-hi Underlined	guifg=#55ff55 guibg=#000000 gui=underline
-hi Error	guifg=#55ff55 guibg=#339933
-hi Todo		guifg=#113311 guibg=#44cc44 gui=none
+"Basic Types
+highlight Constant			ctermfg=226				cterm=none 
+highlight Number			ctermfg=226				cterm=none
+highlight Float				ctermfg=226				cterm=none
+highlight Boolean			ctermfg=201				cterm=none
+highlight String			ctermfg=51				cterm=none
+highlight Character			ctermfg=51				cterm=none
+
+"Variables and Functions
+highlight Identifier 		ctermfg=21				cterm=none
+highlight Function			ctermfg=21				cterm=none
+
+"Code
+highlight Statement  		ctermfg=21				cterm=none
+highlight Conditional		ctermfg=21				cterm=none
+highlight Repeat			ctermfg=21				cterm=none
+highlight Label				ctermfg=21				cterm=none
+highlight Operator			ctermfg=226				cterm=none
+highlight Keyword			ctermfg=21				cterm=none
+highlight Exception			ctermfg=21				cterm=none
+
+"Pre processed code
+highlight PreProc			ctermfg=46				cterm=none
+highlight Include			ctermfg=46				cterm=none
+highlight Define			ctermfg=46				cterm=none
+highlight Macro				ctermfg=46				cterm=none
+highlight Precondit			ctermfg=46				cterm=none
+
+"Classes and Structures
+highlight Type				ctermfg=46				cterm=none
+highlight StorageClass		ctermfg=46				cterm=none
+highlight Structure			ctermfg=46				cterm=none
+highlight Typedef			ctermfg=46				cterm=none
+
+"Special Text
+highlight Special			ctermfg=21				cterm=none
+highlight SpecialChar		ctermfg=21				cterm=none
+highlight Tag				ctermfg=21				cterm=none
+highlight Delimiter			ctermfg=21				cterm=none
+highlight SpecialComment	ctermfg=21				cterm=none
+highlight Debug				ctermfg=21				cterm=none
+
+"Others
+highlight Underlined		ctermfg=21				cterm=none
+highlight Ignore			ctermfg=21				cterm=none
+highlight Error				ctermfg=16	ctermbg=196	cterm=none
+highlight Todo				ctermfg=51	ctermbg=16	cterm=none
+
+"Vi-related
+highlight Cursor			ctermfg=231	ctermbg=59	cterm=none
+highlight SpecialKey		ctermfg=201				cterm=none
+highlight ErrorMsg			ctermfg=231	ctermbg=196	cterm=none
+highlight Directory  		ctermfg=21				cterm=bold
+highlight Search			ctermfg=16	ctermbg=51	cterm=none
+highlight Visual			ctermbg=59				cterm=none
+highlight WildMenu			ctermfg=231				cterm=none
+
+"Pmenu
+highlight Pmenu				ctermfg=16	ctermbg=46	cterm=bold
+highlight PmenuSel			ctermfg=16	ctermbg=21	cterm=bold
+
+" Links:
+
+highlight link TermCursor Cursor	
+highlight link CursorIM Cursor
+highlight link CursorColumn Cursor
+"highlight link CursorLine Cursor
+highlight link lCursor ursor

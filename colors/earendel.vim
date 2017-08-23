@@ -9,7 +9,7 @@ let colors_name = "earendel"
 execute "command! -nargs=1 Colo set background=<args>"
 
 if &background == "light"
-    hi Normal ctermbg=15 ctermfg=0 guibg=#f5f5f5 guifg=#2d2d2d gui=none
+    hi Normal ctermbg=15 ctermfg=0 guibg=#fafafa guifg=#2d2d2d gui=none
 
     hi ColorColumn ctermbg=7 ctermfg=fg guibg=#d5d5d5 gui=none
     hi Cursor guibg=#000000 guifg=#ffffff gui=none
@@ -81,7 +81,7 @@ if &background == "light"
     hi htmlUnderline ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=underline
     hi htmlUnderlineItalic ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=underline,italic
 else
-    hi Normal ctermbg=0 ctermfg=7 guibg=#303030 guifg=#cacaca gui=none
+    hi Normal ctermbg=0 ctermfg=7 guibg=#2a2a2a guifg=#cacaca gui=none
 
     hi ColorColumn ctermbg=8 ctermfg=15 guibg=#4a4a4a gui=none
     hi Cursor guibg=#e5e5e5 guifg=#000000 gui=none

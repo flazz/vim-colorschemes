@@ -8,7 +8,7 @@ if version > 580
     syntax reset
   endif
 endif
-let g:colors_name = ""
+let g:colors_name = "stonewashed-256"
 
 hi ColorColumn ctermbg=250
 hi Comment ctermfg=242
@@ -18,7 +18,7 @@ hi CursorColumn ctermbg=231
 hi CursorLine ctermbg=231 cterm=none
 hi Define ctermfg=94 cterm=underline
 hi Error ctermfg=124 ctermbg=255 cterm=bold,undercurl
-hi Exception ctermfg=94 cterm=underline
+hi Exception ctermfg=94 cterm=none
 hi Float ctermfg=94
 hi Function ctermfg=62
 hi Identifier ctermfg=62
@@ -48,8 +48,8 @@ hi Todo ctermbg=226 ctermfg=238 cterm=bold
 hi Type ctermfg=17
 hi Typedef ctermfg=64 cterm=underline
 hi Underlined ctermfg=40 cterm=underline
-hi VertSplit ctermfg=195 ctermbg=195
-hi Visual  ctermbg=117 
+hi VertSplit ctermfg=232 ctermbg=195
+hi Visual ctermbg=117 ctermfg=0 cterm=none 
 hi Wildmenu ctermbg=120 cterm=underline
 
 """ REFERENCE

@@ -4,7 +4,7 @@
 " (see this url for latest release & screenshots)
 " License: MIT (see LICENSE.rst in the root of project)
 " Created: In the middle of Earth's Rotation
-" Version: 0.0.6
+" Version: 0.0.7
 "
 "
 " TODO: {{{
@@ -239,6 +239,14 @@ hi StartifySlash    guifg=#474747 guibg=NONE gui=NONE
 hi StartifyFile     guifg=#fa8072 guibg=NONE gui=NONE
 hi StartifyHeader   guifg=#f0e68c guibg=NONE gui=NONE
 hi StartifyFooter   guifg=#a0522d guibg=NONE gui=NONE
+"
+" ---------------------------------------------------------------------
+"
+" Signify (https://github.com/mhinz/vim-signify)
+"
+hi SignifySignAdd    guifg=#00ff00 guibg=#212121 gui=NONE
+hi SignifySignChange guifg=#ff5f00 guibg=#212121 gui=NONE
+hi SignifySignDelete guifg=#ff0000 guibg=#212121 gui=NONE
 "
 " ---------------------------------------------------------------------
 " }}}

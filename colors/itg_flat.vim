@@ -14,7 +14,7 @@ hi Comment	    	guifg=#606a74    ctermfg=240    gui=none   		cterm=none
 hi Constant	    	guifg=#92e4c0    ctermfg=115    gui=none    	cterm=none
 hi Cursor	   	 	guibg=#f0e68c    ctermbg=255    guifg=#708090   ctermfg=242    	gui=none    cterm=none
 hi CursorLine					   	 ctermfg=none   guibg=#404040   ctermbg=237    	gui=none    cterm=none
-hi ColorColumn	    guifg=#e4e4e4    ctermfg=254    guibg=#cc4040   ctermbg=252    	gui=none    cterm=none
+hi ColorColumn      guifg=#e4e4e4    ctermfg=254    guibg=#606a74 ctermbg=240 gui=none    cterm=none
 hi Directory	    guifg=#008b8b    ctermfg=33    	gui=none    	cterm=none
 hi Folded	    	guibg=#262626    ctermbg=235    guifg=#8a8a8a   ctermfg=245    	gui=none    cterm=none
 hi Function	    	guifg=#92e4c0    ctermfg=115    gui=none    	cterm=none

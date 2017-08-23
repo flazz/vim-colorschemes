@@ -47,3 +47,6 @@ hi Special        guifg=#e7f6da gui=none
 
 " My new stuff starts here
 hi Label          guifg=#47e0c3 gui=none
+hi StartifyPath   guifg=#95e454 gui=none
+hi diffRemoved    guifg=#e5786d gui=none
+hi diffAdded      guifg=#95e454 gui=none

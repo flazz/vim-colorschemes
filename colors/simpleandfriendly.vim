@@ -1,13 +1,14 @@
 " Vim color file
-" Maintainer:	Thomas Schmall <ts_nowhere@NOSPAM_yahoo.com>
-" Last Change:	2004 Nov 20
+" Maintainer:	Thomas Schmall www.oxpal.com
+" Last Change:	Nov 2 2009 
 " URL: http://www.vim.org/scripts/script.php?script_id=792
-" Version: 1.3
+" Version: 1.4
 
 " This color scheme uses a light grey background.
 
 " Last Changes:
 " *line number colors changed
+" *current line highlighting
 
 
 " First remove all existing highlighting.
@@ -18,6 +19,14 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "simpleandfriendly"
+
+"set the highlighting of the current line to true - then give it a color
+"delete next line to turn off current line highlighting for this color scheme
+set cul
+hi cursorline gui=underline 
+"guibg=grey91 
+hi visual guibg=grey80 guifg=black
+
 
 "Set nice colors #DC6210
 "Cursor is Cyan when ":lmap" mappings are active

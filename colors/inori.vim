@@ -55,7 +55,7 @@ endfunction
 
 
 " General colors
-call s:highlight("Normal", "WHITE", "GREY", "NONE")
+call s:highlight("Normal", "WHITE", "NONE", "NONE")
 call s:highlight("NonText", "BRIGHT_BLACK", "NONE", "NONE")
 call s:highlight("SpecialKey", "NONE", "BRIGHT_BLACK", "NONE")
 

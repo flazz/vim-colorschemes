@@ -8,11 +8,9 @@
 " File:         seoul256.vim
 " URL:          github.com/junegunn/seoul256.vim
 " Author:       Junegunn Choi (junegunn.c@gmail.com)
-" Version:      1.5.3
-" Last Updated: Aug 4, 2014
 " License:      MIT
 "
-" Copyright (c) 2013 Junegunn Choi
+" Copyright (c) 2017 Junegunn Choi
 "
 " MIT License
 "
@@ -36,57 +34,106 @@
 " WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 if !exists('s:rgb_map')
-  let s:rgb_map = {
-  \ 'NONE': 'NONE',
-  \ 16: "#000000", 17: "#0C0077", 18: "#14009F", 19: "#1B00C5", 20: "#2200E8",
-  \ 21: "#2900FF", 22: "#007600", 23: "#007475", 24: "#00739E", 25: "#0071C3",
-  \ 26: "#006EE7", 27: "#006BFF", 28: "#009E00", 29: "#009D72", 30: "#009C9C",
-  \ 31: "#009AC2", 32: "#0098E6", 33: "#0096FF", 34: "#00C300", 35: "#00C26F",
-  \ 36: "#00C19A", 37: "#00C0C1", 38: "#00BFE5", 39: "#00BDFF", 40: "#00E600",
-  \ 41: "#00E56B", 42: "#00E497", 43: "#00E3BF", 44: "#00E2E3", 45: "#00E1FF",
-  \ 46: "#00FF00", 47: "#00FF66", 48: "#00FF94", 49: "#00FFBC", 50: "#00FFE1",
-  \ 51: "#00FFFF", 52: "#7F0000", 53: "#800075", 54: "#81009E", 55: "#8200C3",
-  \ 56: "#8300E7", 57: "#8500FF", 58: "#717400", 59: "#727272", 60: "#73709C",
-  \ 61: "#746EC2", 62: "#766CE6", 63: "#7868FF", 64: "#629C00", 65: "#639B6F",
-  \ 66: "#649A9A", 67: "#6698C1", 68: "#6897E5", 69: "#6A95FF", 70: "#49C200",
-  \ 71: "#4BC16C", 72: "#4DC098", 73: "#4FBFBF", 74: "#52BDE3", 75: "#54BCFF",
-  \ 76: "#07E500", 77: "#12E468", 78: "#18E395", 79: "#1EE2BD", 80: "#25E1E2",
-  \ 81: "#2BE0FF", 82: "#00FF00", 83: "#00FF63", 84: "#00FF92", 85: "#00FFBB",
-  \ 86: "#00FFE0", 87: "#00FFFF", 88: "#AA0000", 89: "#AA0072", 90: "#AB009C",
-  \ 91: "#AC00C2", 92: "#AD00E6", 93: "#AE00FF", 94: "#A07200", 95: "#A1706F",
-  \ 96: "#A16E9A", 97: "#A26CC1", 98: "#A369E5", 99: "#A566FF", 100: "#979B00",
-  \ 101: "#989A6D", 102: "#989898", 103: "#9997BF", 104: "#9A95E4", 105: "#9C93FF",
-  \ 106: "#8AC000", 107: "#8BC06A", 108: "#8CBF96", 109: "#8DBEBE", 110: "#8EBCE2",
-  \ 111: "#90BBFF", 112: "#79E400", 113: "#7AE365", 114: "#7BE294", 115: "#7CE1BC",
-  \ 116: "#7DE0E1", 117: "#7FDFFF", 118: "#5FFF00", 119: "#60FF60", 120: "#62FF90",
-  \ 121: "#63FFBA", 122: "#65FFDF", 123: "#67FFFF", 124: "#D10000", 125: "#D2006F",
-  \ 126: "#D2009A", 127: "#D300C1", 128: "#D300E5", 129: "#D400FF", 130: "#CA6F00",
-  \ 131: "#CA6D6C", 132: "#CB6B98", 133: "#CC69BF", 134: "#CC66E3", 135: "#CD63FF",
-  \ 136: "#C39900", 137: "#C4986A", 138: "#C49796", 139: "#C595BE", 140: "#C693E2",
-  \ 141: "#C791FF", 142: "#BABF00", 143: "#BBBE66", 144: "#BCBD94", 145: "#BCBCBC",
-  \ 146: "#BDBBE1", 147: "#BEB9FF", 148: "#AFE300", 149: "#B0E262", 150: "#B0E191",
-  \ 151: "#B1E0BA", 152: "#B2DFE0", 153: "#B3DEFF", 154: "#A0FF00", 155: "#A1FF5C",
-  \ 156: "#A2FF8E", 157: "#A2FFB8", 158: "#A3FFDE", 159: "#A5FFFF", 160: "#F60000",
-  \ 161: "#F7006B", 162: "#F70097", 163: "#F800BF", 164: "#F800E3", 165: "#F900FF",
-  \ 166: "#F16C00", 167: "#F16A68", 168: "#F16895", 169: "#F265BD", 170: "#F363E2",
-  \ 171: "#F35FFF", 172: "#EB9700", 173: "#EC9565", 174: "#EC9494", 175: "#ED93BC",
-  \ 176: "#ED91E1", 177: "#EE8FFF", 178: "#E4BD00", 179: "#E5BC62", 180: "#E5BC91",
-  \ 181: "#E6BBBA", 182: "#E7B9E0", 183: "#E7B8FF", 184: "#DCE100", 185: "#DCE15D",
-  \ 186: "#DDE08F", 187: "#DDDFB8", 188: "#DEDEDE", 189: "#DFDDFF", 190: "#D1FF00",
-  \ 191: "#D2FF57", 192: "#D2FF8B", 193: "#D3FFB6", 194: "#D4FFDC", 195: "#D4FFFF",
-  \ 196: "#FF0000", 197: "#FF0066", 198: "#FF0094", 199: "#FF00BC", 200: "#FF00E1",
-  \ 201: "#FF00FF", 202: "#FF6700", 203: "#FF6563", 204: "#FF6392", 205: "#FF61BB",
-  \ 206: "#FF5EE0", 207: "#FF5AFF", 208: "#FF9400", 209: "#FF9360", 210: "#FF9291",
-  \ 211: "#FF90BA", 212: "#FF8EDF", 213: "#FF8CFF", 214: "#FFBB00", 215: "#FFBA5C",
-  \ 216: "#FFBA8E", 217: "#FFB9B8", 218: "#FFB7DE", 219: "#FFB6FF", 220: "#FFE000",
-  \ 221: "#FFDF57", 222: "#FFDE8B", 223: "#FFDDB6", 224: "#FFDCDC", 225: "#FFDBFF",
-  \ 226: "#FCFF00", 227: "#FCFF51", 228: "#FDFF88", 229: "#FDFFB4", 230: "#FEFFDA",
-  \ 231: "#FEFEFE", 232: "#060606", 233: "#171717", 234: "#252525", 235: "#323232",
-  \ 236: "#3F3F3F", 237: "#4A4A4A", 238: "#565656", 239: "#606060", 240: "#6B6B6B",
-  \ 241: "#757575", 242: "#7F7F7F", 243: "#888888", 244: "#929292", 245: "#9B9B9B",
-  \ 246: "#A4A4A4", 247: "#ADADAD", 248: "#B6B6B6", 249: "#BFBFBF", 250: "#C7C7C7",
-  \ 251: "#D0D0D0", 252: "#D8D8D8", 253: "#E0E0E0", 254: "#E9E9E9", 255: "#F1F1F1"
-  \ }
+    if get(g:, 'seoul256_srgb', 0)
+        let s:rgb_map =
+        \{ 16: '#000000',  17: '#00005f',  18: '#000087',
+        \  19: '#0000af',  20: '#0000d7',  21: '#0000ff',
+        \  22: '#005f00',  23: '#005f5f',  24: '#005f87',
+        \  25: '#005faf',  26: '#005fd7',  27: '#005fff',
+        \  28: '#008700',  29: '#00875f',  30: '#008787',
+        \  31: '#0087af',  32: '#0087d7',  33: '#0087ff',
+        \  34: '#00af00',  35: '#00af5f',  36: '#00af87',
+        \  37: '#00afaf',  38: '#00afd7',  39: '#00afff',
+        \  40: '#00d700',  41: '#00d75f',  42: '#00d787',
+        \  43: '#00d7af',  44: '#00d7d7',  45: '#00d7ff',
+        \  46: '#00ff00',  47: '#00ff5f',  48: '#00ff87',
+        \  49: '#00ffaf',  50: '#00ffd7',  51: '#00ffff',
+        \  52: '#5f0000',  53: '#5f005f',  54: '#5f0087',
+        \  55: '#5f00af',  56: '#5f00d7',  57: '#5f00ff',
+        \  58: '#5f5f00',  59: '#5f5f5f',  60: '#5f5f87',
+        \  61: '#5f5faf',  62: '#5f5fd7',  63: '#5f5fff',
+        \  64: '#5f8700',  65: '#5f875f',  66: '#5f8787',
+        \  67: '#5f87af',  68: '#5f87d7',  69: '#5f87ff',
+        \  70: '#5faf00',  71: '#5faf5f',  72: '#5faf87',
+        \  73: '#5fafaf',  74: '#5fafd7',  75: '#5fafff',
+        \  76: '#5fd700',  77: '#5fd75f',  78: '#5fd787',
+        \  79: '#5fd7af',  80: '#5fd7d7',  81: '#5fd7ff',
+        \  82: '#5fff00',  83: '#5fff5f',  84: '#5fff87',
+        \  85: '#5fffaf',  86: '#5fffd7',  87: '#5fffff',
+        \  88: '#870000',  89: '#87005f',  90: '#870087',
+        \  91: '#8700af',  92: '#8700d7',  93: '#8700ff',
+        \  94: '#875f00',  95: '#875f5f',  96: '#875f87',
+        \  97: '#875faf',  98: '#875fd7',  99: '#875fff',
+        \ 100: '#878700', 101: '#87875f', 102: '#878787',
+        \ 103: '#8787af', 104: '#8787d7', 105: '#8787ff',
+        \ 106: '#87af00', 107: '#87af5f', 108: '#87af87',
+        \ 109: '#87afaf', 110: '#87afd7', 111: '#87afff',
+        \ 112: '#87d700', 113: '#87d75f', 114: '#87d787',
+        \ 115: '#87d7af', 116: '#87d7d7', 117: '#87d7ff',
+        \ 118: '#87ff00', 119: '#87ff5f', 120: '#87ff87',
+        \ 121: '#87ffaf', 122: '#87ffd7', 123: '#87ffff',
+        \ 124: '#af0000', 125: '#af005f', 126: '#af0087',
+        \ 127: '#af00af', 128: '#af00d7', 129: '#af00ff',
+        \ 130: '#af5f00', 131: '#af5f5f', 132: '#af5f87',
+        \ 133: '#af5faf', 134: '#af5fd7', 135: '#af5fff',
+        \ 136: '#af8700', 137: '#af875f', 138: '#af8787',
+        \ 139: '#af87af', 140: '#af87d7', 141: '#af87ff',
+        \ 142: '#afaf00', 143: '#afaf5f', 144: '#afaf87',
+        \ 145: '#afafaf', 146: '#afafd7', 147: '#afafff',
+        \ 148: '#afd700', 149: '#afd75f', 150: '#afd787',
+        \ 151: '#afd7af', 152: '#afd7d7', 153: '#afd7ff',
+        \ 154: '#afff00', 155: '#afff5f', 156: '#afff87',
+        \ 157: '#afffaf', 158: '#afffd7', 159: '#afffff',
+        \ 160: '#d70000', 161: '#d7005f', 162: '#d70087',
+        \ 163: '#d700af', 164: '#d700d7', 165: '#d700ff',
+        \ 166: '#d75f00', 167: '#d75f5f', 168: '#d75f87',
+        \ 169: '#d75faf', 170: '#d75fd7', 171: '#d75fff',
+        \ 172: '#d78700', 173: '#d7875f', 174: '#d78787',
+        \ 175: '#d787af', 176: '#d787d7', 177: '#d787ff',
+        \ 178: '#d7af00', 179: '#d7af5f', 180: '#d7af87',
+        \ 181: '#d7afaf', 182: '#d7afd7', 183: '#d7afff',
+        \ 184: '#d7d700', 185: '#d7d75f', 186: '#d7d787',
+        \ 187: '#d7d7af', 188: '#d7d7d7', 189: '#d7d7ff',
+        \ 190: '#d7ff00', 191: '#d7ff5f', 192: '#d7ff87',
+        \ 193: '#d7ffaf', 194: '#d7ffd7', 195: '#d7ffff',
+        \ 196: '#ff0000', 197: '#ff005f', 198: '#ff0087',
+        \ 199: '#ff00af', 200: '#ff00d7', 201: '#ff00ff',
+        \ 202: '#ff5f00', 203: '#ff5f5f', 204: '#ff5f87',
+        \ 205: '#ff5faf', 206: '#ff5fd7', 207: '#ff5fff',
+        \ 208: '#ff8700', 209: '#ff875f', 210: '#ff8787',
+        \ 211: '#ff87af', 212: '#ff87d7', 213: '#ff87ff',
+        \ 214: '#ffaf00', 215: '#ffaf5f', 216: '#ffaf87',
+        \ 217: '#ffafaf', 218: '#ffafd7', 219: '#ffafff',
+        \ 220: '#ffd700', 221: '#ffd75f', 222: '#ffd787',
+        \ 223: '#ffd7af', 224: '#ffd7d7', 225: '#ffd7ff',
+        \ 226: '#ffff00', 227: '#ffff5f', 228: '#ffff87',
+        \ 229: '#ffffaf', 230: '#ffffd7', 231: '#ffffff',
+        \ 232: '#080808', 233: '#121212', 234: '#1c1c1c',
+        \ 235: '#262626', 236: '#303030', 237: '#3a3a3a',
+        \ 238: '#444444', 239: '#4e4e4e', 240: '#585858',
+        \ 241: '#626262', 242: '#6c6c6c', 243: '#767676',
+        \ 244: '#808080', 245: '#8a8a8a', 246: '#949494',
+        \ 247: '#9e9e9e', 248: '#a8a8a8', 249: '#b2b2b2',
+        \ 250: '#bcbcbc', 251: '#c6c6c6', 252: '#d0d0d0',
+        \ 253: '#dadada', 254: '#e4e4e4', 255: '#eeeeee' }
+    else
+        let s:rgb_map =
+        \{ 22: '#006F00', 23: '#007173', 24: '#007299', 25: '#0074BE', 30: '#009799',
+        \  31: '#0099BD', 38: '#00BDDF', 52: '#730B00', 58: '#727100', 59: '#727272',
+        \  65: '#719872', 66: '#719899', 67: '#7299BC', 68: '#719CDF', 73: '#6FBCBD',
+        \  74: '#70BDDF', 88: '#9B1300', 89: '#9B1D72', 94: '#9A7200', 95: '#9A7372',
+        \  96: '#9A7599', 101: '#999872', 103: '#999ABD', 108: '#98BC99', 109: '#98BCBD',
+        \ 110: '#98BEDE', 116: '#97DDDF', 125: '#BF2172', 131: '#BE7572', 137: '#BE9873',
+        \ 143: '#BDBB72', 144: '#BDBC98', 145: '#BDBDBD', 151: '#BCDDBD', 152: '#BCDEDE',
+        \ 153: '#BCE0FF', 161: '#E12672', 168: '#E17899', 173: '#E19972', 174: '#E09B99',
+        \ 179: '#DFBC72', 181: '#E0BEBC', 184: '#DEDC00', 186: '#DEDD99', 187: '#DFDEBD',
+        \ 189: '#DFDFFF', 216: '#FFBD98', 217: '#FFBFBD', 218: '#FFC0DE', 220: '#FFDD00',
+        \ 222: '#FFDE99', 224: '#FFDFDF', 230: '#FFFFDF', 231: '#FFFFFF', 232: '#060606',
+        \ 233: '#171717', 234: '#252525', 235: '#333233', 236: '#3F3F3F', 237: '#4B4B4B',
+        \ 238: '#565656', 239: '#616161', 240: '#6B6B6B', 241: '#757575', 249: '#BFBFBF',
+        \ 250: '#C8C8C8', 251: '#D1D0D1', 252: '#D9D9D9', 253: '#E1E1E1', 254: '#E9E9E9',
+        \ 255: '#F1F1F1' }
+    endif
 endif
 
 let s:background  = &background
@@ -138,10 +185,10 @@ function! s:hi(item, fg, bg)
   let bg = a:bg[s:style_idx] > 255 ? 231 : a:bg[s:style_idx]
 
   if !empty(fg)
-    execute printf("highlight %s ctermfg=%s guifg=%s", a:item, fg, s:rgb_map[fg])
+    execute printf("highlight %s ctermfg=%s guifg=%s", a:item, fg, get(s:rgb_map, fg, 'NONE'))
   endif
   if !empty(bg)
-    execute printf("highlight %s ctermbg=%s guibg=%s", a:item, bg, s:rgb_map[bg])
+    execute printf("highlight %s ctermbg=%s guibg=%s", a:item, bg, get(s:rgb_map, bg, 'NONE'))
   endif
 endfunction
 
@@ -248,7 +295,7 @@ call s:hi('MatchParen', ['', ''], [s:dark_bg + 3, s:light_bg - 3])
 call s:hi('ModeMsg', [173, 173], ['', ''])
 
 " let &showbreak = '> '
-call s:hi('NonText', [101, 101], ['', ''])
+call s:hi('NonText', [59, 145], ['', ''])
 
 call s:hi('MoreMsg', [173, 173], ['', ''])
 
@@ -286,15 +333,15 @@ if !s:gui
   endif
 else
   if s:style_idx == 0
-    execute 'hi SpellBad   gui=underline guisp=' . s:rgb_map[168]
-    execute 'hi SpellCap   gui=underline guisp=' . s:rgb_map[110]
-    execute 'hi SpellLocal gui=underline guisp=' . s:rgb_map[153]
-    execute 'hi SpellRare  gui=underline guisp=' . s:rgb_map[218]
+    execute 'hi SpellBad   gui=undercurl guisp=' . s:rgb_map[168]
+    execute 'hi SpellCap   gui=undercurl guisp=' . s:rgb_map[110]
+    execute 'hi SpellLocal gui=undercurl guisp=' . s:rgb_map[153]
+    execute 'hi SpellRare  gui=undercurl guisp=' . s:rgb_map[218]
   else
-    execute 'hi SpellBad   gui=underline guisp=' . s:rgb_map[125]
-    execute 'hi SpellCap   gui=underline guisp=' . s:rgb_map[25]
-    execute 'hi SpellLocal gui=underline guisp=' . s:rgb_map[31]
-    execute 'hi SpellRare  gui=underline guisp=' . s:rgb_map[96]
+    execute 'hi SpellBad   gui=undercurl guisp=' . s:rgb_map[125]
+    execute 'hi SpellCap   gui=undercurl guisp=' . s:rgb_map[25]
+    execute 'hi SpellLocal gui=undercurl guisp=' . s:rgb_map[31]
+    execute 'hi SpellRare  gui=undercurl guisp=' . s:rgb_map[96]
   endif
 endif
 
@@ -338,10 +385,22 @@ call s:hi('IndentGuidesEven', ['', ''], [s:dark_bg + 1, s:light_bg - 1])
 
 " vim-gitgutter
 " -------------
-call s:hi('GitGutterAdd', [108, 65], ['', ''])
-call s:hi('GitGutterChange', [68, 68], ['', ''])
-call s:hi('GitGutterDelete', [161, 161], ['', ''])
-call s:hi('GitGutterChangeDelete', [168, 168], ['', ''])
+call s:hi('GitGutterAdd', [108, 65], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('GitGutterChange', [68, 68], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('GitGutterDelete', [161, 161], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('GitGutterChangeDelete', [168, 168], [s:dark_bg + 1, s:light_bg - 2])
+
+" ale
+" ---
+call s:hi('ALEErrorSign', [161, 161], [s:dark_bg, s:light_bg])
+call s:hi('ALEWarningSign', [174, 131], [s:dark_bg, s:light_bg])
+
+" vim-signify
+" -----------
+call s:hi('SignifySignAdd', [108, 65], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('SignifySignChange', [68, 68], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('SignifySignDelete', [161, 161], [s:dark_bg + 1, s:light_bg - 2])
+
 
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces     
 " ---------------------------------------------------^^^^^

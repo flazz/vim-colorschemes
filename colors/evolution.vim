@@ -24,6 +24,7 @@ hi Normal         guibg=#1F1F1F guifg=#D0D0D0 gui=none term=NONE cterm=NONE cter
 hi SpecialKey     guibg=#1F1F1F guifg=#E783E9 gui=none term=bold cterm=NONE ctermbg=NONE ctermfg=176
 hi VertSplit      guibg=#121212 guifg=#121212 gui=none term=reverse cterm=NONE ctermbg=233 ctermfg=233 "alt: guibg=#4d5074 guifg=#4d5074
 hi SignColumn     guibg=#1F1F1F guifg=#BF81FA gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=141
+hi SyntasticErrorSign guibg=#BF81FA ctermbg=233
 hi NonText        guibg=#1F1F1F guifg=#FC6984 gui=none term=bold cterm=NONE ctermbg=NONE ctermfg=204
 hi Directory      guibg=#1F1F1F guifg=#FFEE68 gui=none term=bold cterm=bold ctermbg=NONE ctermfg=227
 hi Title          guibg=#1F1F1F guifg=#6DF584 gui=bold term=bold cterm=bold ctermbg=NONE ctermfg=84
@@ -55,7 +56,7 @@ hi WarningMsg     guibg=#FFA500 guifg=#000000 gui=none term=bold cterm=bold cter
 hi MoreMsg        guibg=#1F1F1F guifg=#FFA500 gui=none term=bold cterm=NONE ctermbg=NONE ctermfg=214
 hi ModeMsg        guibg=#1F1F1F guifg=#FFA500 gui=none term=bold cterm=NONE ctermbg=NONE ctermfg=214
 
-" -> Search 
+" -> Search
 hi Search         guibg=#696567 guifg=#FFEE68 gui=none term=reverse cterm=NONE ctermbg=59 ctermfg=227
 hi IncSearch      guibg=#696567 guifg=#FFEE68 gui=none term=reverse cterm=NONE ctermbg=59 ctermfg=227
 
@@ -83,14 +84,14 @@ hi VisualNOS      guibg=#000000 guifg=#696567 gui=none term=bold,underline cterm
 
 " -> Code
 hi Comment        guibg=#1F1F1F guifg=#696567 gui=italic term=italic cterm=italic ctermbg=NONE ctermfg=59 "alt: guifg=#5f5f5f
-hi Constant       guibg=#1F1F1F guifg=#6DF584 gui=none term=underline cterm=NONE ctermbg=NONE ctermfg=83
+hi Constant       guibg=#1F1F1F guifg=#6DF584 gui=none term=underline cterm=bold,underline ctermbg=NONE ctermfg=83
 hi String         guibg=#1F1F1F guifg=#FFB539 gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=48
 hi Error          guibg=#1F1F1F guifg=#FC4234 gui=none term=reverse cterm=NONE ctermbg=NONE ctermfg=203 "alt: guifg=#0fc416
-hi Identifier     guibg=#1F1F1F guifg=#70BDF1 gui=none term=underline cterm=NONE ctermbg=NONE ctermfg=75
+hi Identifier     guibg=#1F1F1F guifg=#70BDF1 gui=none term=underline cterm=bold ctermbg=NONE ctermfg=75
 hi Function       guibg=#1F1F1F guifg=#90CBF1 gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=117
 hi Ignore         guibg=#1F1F1F guifg=#1F1F1F gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=16
 hi MatchParen     guibg=#226600 guifg=#FFA500 gui=none term=reverse cterm=bold ctermbg=129 ctermfg=16
-hi PreProc        guibg=#1F1F1F guifg=#BF81FA gui=none term=underline cterm=NONE ctermbg=NONE ctermfg=141
+hi PreProc        guibg=#1F1F1F guifg=#BF81FA gui=none term=underline cterm=bold ctermbg=NONE ctermfg=141
 
 hi Special        guibg=#1F1F1F guifg=#FFEE68 gui=none term=bold cterm=bold ctermbg=NONE ctermfg=227
 hi Todo           guibg=#1F1F1F guifg=#FC4234 gui=bold term=bold cterm=bold ctermbg=NONE ctermfg=190 "alt guibg=#0f0f0f guifg=#0fc416
@@ -99,7 +100,7 @@ hi Statement      guibg=#1F1F1F guifg=#E783E9 gui=none term=bold cterm=bold cter
 
 hi Operator       guibg=#1F1F1F guifg=#FC6984 gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=204
 hi Delimiter      guibg=#1F1F1F guifg=#FC6984 gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=204
-hi Type           guibg=#1F1F1F guifg=#FFEE68 gui=none term=underline cterm=NONE ctermbg=NONE ctermfg=46
+hi Type           guibg=#1F1F1F guifg=#FFEE68 gui=none term=underline cterm=bold ctermbg=NONE ctermfg=46
 hi Exception      guibg=#1F1F1F guifg=#FC4234 gui=none term=NONE cterm=NONE ctermbg=NONE ctermfg=203 " alt: guifg=#0fc416
 
 
