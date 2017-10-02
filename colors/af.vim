@@ -1,4 +1,4 @@
-
+" Vim color file
 " Maintainer: Stanislav Lechev [AngelFire] <af@mis.bg>
 " Last Change: 2004/03/31
 " URL: http://af.mis.bg/vim/af.vim
@@ -14,15 +14,13 @@ if version > 580
     endif
 endif
 let g:colors_name="af"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
 hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
-
-"set statusline=%<%1*===\ %5*%f%1*%(\ ===\ %4*%h%1*%)%(\ ===\ %4*%m%1*%)%(\ ===\ %4*%r%1*%)\ ===%====\ %2*%b(0x%B)%1*\ ===\ %3*%l,%c%V%1*\ ===\ %5*%P%1*\ ===%0* laststatus=2
+set statusline=%<%1*===\ %5*%f%1*%(\ ===\ %4*%h%1*%)%(\ ===\ %4*%m%1*%)%(\ ===\ %4*%r%1*%)\ ===%====\ %2*%b(0x%B)%1*\ ===\ %3*%l,%c%V%1*\ ===\ %5*%P%1*\ ===%0* laststatus=2
 
 
 hi Normal		guifg=#dfdfdf	guibg=#000000

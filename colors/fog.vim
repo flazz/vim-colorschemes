@@ -1,4 +1,3 @@
-
 " Vim color file
 " vim: tw=0 ts=4 sw=4
 " Maintainer:	Thomas R. Kimpton <tomk@emcity.net>
@@ -17,13 +16,6 @@ if exists("syntax_on")
 endif
 
 let colors_name = "fog"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 hi Normal		ctermbg=White		ctermfg=Black
 " 660066 = darkish purple

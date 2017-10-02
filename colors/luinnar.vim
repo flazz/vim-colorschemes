@@ -1,6 +1,6 @@
 " Vim color file -- Luinnar
 " Maintainer: Luinnar
-" Last Change: 09-Nov-2010
+" Last Change: 11-Nov-2010
 
 set background=dark
 highlight clear
@@ -18,7 +18,7 @@ set cpo&vim
 
 " text
 
-hi Normal       guifg=#00ffff  ctermfg=darkcyan       guibg=#000000 ctermbg=black
+hi Normal       guifg=#00ffff  ctermfg=darkcyan   guibg=#000000 ctermbg=black
 hi Folded       guifg=#c2bfa5  ctermfg=lightgray  guibg=#202020 ctermbg=black  gui=underline cterm=underline
 hi LineNr       guifg=#928c75  ctermfg=darkgray   guibg=#000000 ctermbg=black
 hi Directory    guifg=#00bbdd  ctermfg=cyan       guibg=#000000 ctermbg=black
@@ -28,10 +28,10 @@ hi SpellBad     guifg=NONE     ctermfg=white                    ctermbg=darkred
 hi SpellCap     guifg=NONE     ctermfg=white                    ctermbg=darkblue
 hi SpellLocal   guifg=NONE     ctermfg=black                    ctermbg=cyan
 hi SpellRare    guifg=NONE     ctermfg=white                    ctermbg=darkmagenta
-hi DiffAdd      guifg=#ffa000  ctermfg=darkred    guibg=#002830 ctermbg=black
 hi DiffChange                                     guibg=#002830 ctermbg=black
-hi DiffDelete   guifg=#b0b0b0  ctermfg=cyan       guibg=#202020 ctermbg=black  gui=bold cterm=bold
+hi DiffDelete   guifg=#b0b0b0  ctermfg=gray       guibg=#202020 ctermbg=black  gui=bold cterm=NONE
 hi DiffText     guifg=#ffa000  ctermfg=darkred    guibg=#002830 ctermbg=black  gui=NONE cterm=NONE
+hi DiffAdd      guifg=#ffa000  ctermfg=darkred    guibg=#002830 ctermbg=black
 
 " borders / separators / menus
 

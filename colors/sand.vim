@@ -1,4 +1,3 @@
-
 " Vim color file
 " Maintainer:   Tim Alexeevsky <realtim@mail.ru>
 " Last Change:  2002-03-14 
@@ -13,13 +12,6 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name="sand"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 highlight Normal guibg=cornsilk guifg=NONE
 highlight PreProc guibg=NONE guifg=Maroon4

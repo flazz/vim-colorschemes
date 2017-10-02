@@ -1,4 +1,4 @@
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File: "/home/caciano/.vim/dante.vim"
 " Created: "Thu, 23 May 2002 00:12:20 -0300 (caciano)"
 " Updated: "Sat, 24 Aug 2002 14:04:21 -0300 (caciano)"
@@ -11,13 +11,6 @@ if exists("syntax on")
 	syntax reset
 endif
 let g:colors_name = "dante"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 " General colors
 hi Normal	ctermfg=gray guifg=peachpuff3 guibg=black

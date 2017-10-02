@@ -1,9 +1,11 @@
-
-" desertedocean v0.2b
-" Maintainer:	Shawn Axsom <axm285@gmail.com>
-"               [axm285.xena-free.com]
+" Vim color file
+" desertedocean v0.5
+" Maintainer:	Shawn Axsom <axs221@gmail.com>
+"               [axs221.1l.com]
 
 " desertedocean, a colorscheme using the desert colorscheme as a template, based loosely off of desert, oceandeep, and zenburn.
+"
+" With thanks to Panos Laganakos
 
 " cool help screens
 " :he group-name
@@ -21,21 +23,28 @@ if version > 580
 endif
 
 let g:colors_name="desertedocean"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
-hi Normal	guifg=#FFE9E0 guibg=#102D33
+hi Normal	guifg=#FFE0FA guibg=#122130
+
+" syntax highlighting
+hi Comment	  guifg=#6Aa0e0
+hi Title	guifg=#00aBdF
+hi Underlined guifg=#20b0eF gui=none
+hi Statement  guifg=#eF7a7a
+hi Type		  guifg=#dAa0b0
+hi PreProc    guifg=#FF7A9a 
+hi Constant	  guifg=#EE8aB5 " or #FF707A 
+hi Identifier guifg=#FFe0bd 
+hi Special	  guifg=#8cf0ff
+hi Ignore	guifg=grey40
+hi Todo		guifg=orangered guibg=yellow2
+"hi Error
+"end syntax highlighting
 
 " highlight groups
-"hi Cursor	guibg=#660000 guifg=#AA5522
-hi Cursor	guibg=#007799 guifg=#00D6CC
+hi Cursor	guibg=#007799 guifg=#00D0D0
 "hi CursorIM
-"hi Directory
+hi Directory guifg=#bbd0df
 "hi DiffAdd
 "hi DiffChange
 "hi DiffDelete
@@ -47,14 +56,13 @@ hi FoldColumn	guibg=#337799 guifg=#00CCFF
 hi LineNr   guifg=#CCF0FF guibg=#006688 
 hi ModeMsg	guifg=#00AACC
 hi MoreMsg	guifg=SeaGreen
-hi NonText  guifg=#283940 guibg=#253F49 "same as background """"""""""""""""  """""""""""""""  """""""""""""""  """""""""""""""  """""""""""""""  """""""""""""""  """"""""""""""""""""""
-hi Question	guifg=springgreen
+hi NonText  guifg=#285960 guibg=#2A374A
+hi Question	guifg=#AABBCC
 hi Search	guibg=slategrey guifg=#FFDABB
 hi IncSearch	guifg=slategrey guibg=#FFDFB0
 hi SpecialKey	guifg=#00CCBB " blue green
-hi StatusLine	guibg=#00A0D0 guifg=#050709 gui=none
-hi StatusLineNC	guibg=#0595c0 guifg=#272324 gui=none
-hi Title	guifg=#33AAFF
+hi StatusLine	guibg=#00A5EA guifg=#050709 gui=none
+hi StatusLineNC	guibg=#1079B0 guifg=#272334 gui=none
 hi Visual   guifg=#008FBF guibg=#33DFEF
 "hi VisualNOS
 hi WarningMsg	guifg=salmon
@@ -63,18 +71,8 @@ hi WarningMsg	guifg=salmon
 "hi Scrollbar  guibg=grey30 guifg=tan
 "hi Tooltip
 
-" syntax highlighting groups
-hi Comment	  guifg=#69B9DA
-hi Underlined guifg=#33BBFF
-hi Statement  guifg=#FF836E
-hi PreProc    guifg=#FF8076 gui=NONE
-hi Constant	  guifg=#FF6B5B " or #FF707A 
-hi Identifier guifg=#FFDDEE
-hi Type		  guifg=#FFB592
-hi Special	  guifg=navajowhite
-hi Ignore	guifg=grey40
-"hi Error
-hi Todo		guifg=orangered guibg=yellow2
+hi Pmenu	guifg=#6Aa0e0 guibg=#222f3d
+hi PmenuSel	guifg=#FFFFFF guibg=#0088bb 
 
 " color terminal definitions
 hi SpecialKey	ctermfg=darkgreen

@@ -1,84 +1,41 @@
-" local syntax file - set colors on a per-machine basis:
-" vim: tw=0 ts=4 sw=4
 " Vim color file
-" Maintainer:	Steven Vertigan <steven@vertigan.wattle.id.au>
-" Last Change:	2003 May 11
-" Revision #4: Support for new "Underline" group. Removed superfluous html
-"			   formatting.
+" Maintainer:   TaQ <taq@taq.cjb.net>
+" Last Change:  10 October 2001 - 0.2
+" URL: http://taq.cjb.net		
 
-set background=dark
+" cool help screens
+" :he group-name
+" :he highlight-groups
+" :he cterm-colors
+
+set background=dark	" or light
 hi clear
 if exists("syntax_on")
-  syntax reset
+    syntax reset
 endif
-let g:colors_name = "blue"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
-hi Normal		guifg=white		guibg=darkBlue
-hi Normal		ctermfg=white	ctermbg=darkBlue
-hi NonText		guifg=magenta	ctermfg=lightMagenta
-hi comment		guifg=gray		gui=bold
-hi comment		ctermfg=gray
-hi constant		guifg=cyan		ctermfg=cyan
-hi identifier	guifg=gray		ctermfg=gray
-hi statement	guifg=yellow	gui=none	ctermfg=yellow
-hi preproc		guifg=green		ctermfg=green
-hi type			guifg=orange	ctermfg=darkYellow
-hi special		guifg=magenta	ctermfg=lightMagenta
-hi Underlined	guifg=cyan		ctermfg=cyan
-hi Underlined	gui=underline	cterm=underline
+let g:colors_name="blue"
 
-hi ErrorMsg		guifg=orange	guibg=darkBlue
-hi ErrorMsg		ctermfg=lightRed
-hi WarningMsg	guifg=cyan		guibg=darkBlue	gui=bold
-hi WarningMsg	ctermfg=cyan
-hi ModeMsg		guifg=yellow	gui=NONE
-hi ModeMsg		ctermfg=yellow
-hi MoreMsg		guifg=yellow	gui=NONE
-hi MoreMsg		ctermfg=yellow
-hi Error		guifg=red		guibg=darkBlue	gui=underline
-hi Error		ctermfg=red
+hi Normal	  ctermfg=Gray  ctermbg=Black guifg=#CCCCCC guibg=#000040
+hi NonText    ctermfg=Gray  ctermbg=Black guifg=#0050EE guibg=#000040
 
-hi Todo			guifg=black		guibg=orange
-hi Todo			ctermfg=black	ctermbg=darkYellow
-hi Cursor		guifg=black		guibg=white
-hi Cursor		ctermfg=black	ctermbg=white
-hi Search		guifg=black		guibg=orange
-hi Search		ctermfg=black	ctermbg=darkYellow
-hi IncSearch	guifg=black		guibg=yellow
-hi IncSearch	ctermfg=black	ctermbg=darkYellow
-hi LineNr		guifg=pink		ctermfg=lightMagenta
-hi title		guifg=white	gui=bold	cterm=bold
+hi Statement  ctermfg=White ctermbg=Black guifg=#007FFF guibg=#000040 gui=BOLD
+hi Comment    ctermfg=Blue  ctermbg=Black guifg=#00A0FF guibg=#000090 gui=NONE
+hi Constant	  ctermfg=White ctermbg=Black guifg=#0050EE guibg=#000040 gui=NONE
+hi Identifier ctermfg=Cyan  ctermbg=Black guifg=#FFFFFF guibg=#000040 gui=NONE
+hi Type		  ctermfg=Cyan  ctermbg=Black guifg=#5050FF guibg=#000040 gui=NONE
+hi Folded	  ctermfg=White ctermbg=Blue  guifg=#00A0FF guibg=#000050 gui=BOLD
+hi Special    ctermfg=Blue  ctermbg=Black guifg=#00A0FF guibg=#000090 gui=NONE
+hi PreProc	  ctermfg=Blue  ctermbg=Black guifg=#00FF00 guibg=#000040 gui=BOLD
+hi Scrollbar  ctermfg=Blue  ctermbg=Black guifg=#00C0FF guibg=#000040
+hi Cursor     ctermfg=white ctermbg=Black guifg=#FFFFFF guibg=#5050FF
+hi ErrorMsg   ctermfg=white ctermbg=Red   guifg=#FFFFFF guibg=#FF0000
+hi WarningMsg ctermfg=Black ctermbg=Yellow   guifg=#000000 guibg=#FFFF00
+hi VertSplit  ctermfg=White ctermbg=Blue     guifg=#000090 guibg=#000090
+hi Directory  ctermfg=Cyan  ctermbg=DarkBlue guifg=#00A0F0 guibg=#000040
+hi Visual	  ctermfg=Black ctermbg=Cyan     guifg=#5050FF guibg=#FFFFFF 
+hi Title      ctermfg=White ctermbg=Blue     guifg=#FFFFFF guibg=#0050EE gui=NONE
 
-hi StatusLineNC	gui=NONE	guifg=black guibg=blue
-hi StatusLineNC	ctermfg=black  ctermbg=blue
-hi StatusLine	gui=bold	guifg=cyan	guibg=blue
-hi StatusLine	ctermfg=cyan   ctermbg=blue
-
-hi label		guifg=yellow	ctermfg=yellow
-hi operator		guifg=orange	gui=bold	ctermfg=darkYellow
-hi clear Visual
-hi Visual		term=reverse
-hi Visual		ctermfg=black	ctermbg=darkCyan
-hi Visual		guifg=black		guibg=darkCyan
-
-hi DiffChange	guibg=darkGreen		guifg=black
-hi DiffChange	ctermbg=darkGreen	ctermfg=black
-hi DiffText		guibg=olivedrab		guifg=black
-hi DiffText		ctermbg=lightGreen	ctermfg=black
-hi DiffAdd		guibg=slateblue		guifg=black
-hi DiffAdd		ctermbg=blue		ctermfg=black
-hi DiffDelete   guibg=coral			guifg=black
-hi DiffDelete	ctermbg=cyan		ctermfg=black
-
-hi Folded		guibg=orange		guifg=black
-hi Folded		ctermbg=yellow		ctermfg=black
-hi FoldColumn	guibg=gray30		guifg=black
-hi FoldColumn	ctermbg=gray		ctermfg=black
-hi cIf0			guifg=gray			ctermfg=gray
+hi StatusLine   term=bold cterm=bold ctermfg=White ctermbg=Blue		gui=bold guifg=#FFFFFF guibg=#0050EE
+hi StatusLineNC term=bold cterm=bold ctermfg=Gray  ctermbg=Blue      gui=bold guifg=#AAAAAA guibg=#000090
+hi LineNr		 term=bold cterm=bold ctermfg=White ctermbg=DarkBlue  gui=bold guifg=#00A0FF guibg=#000050
 

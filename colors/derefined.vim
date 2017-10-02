@@ -1,5 +1,5 @@
 " Vim color file
-" derefined v1.0b
+" derefined v1.1b
 " http://www.vim.org/scripts/script.php?script_id=1454
 " 
 " Maintainer:	Shawn Axsom <axs221@gmail.com>
@@ -19,15 +19,15 @@ endif
 
 let g:colors_name="derefined"
 
-hi Normal       guifg=green guibg=darkblue ctermfg=green ctermbg=darkblue 
+hi Normal       guifg=green guibg=darkcyan ctermfg=green ctermbg=darkcyan 
 hi NonText      guifg=red guibg=black ctermfg=red ctermbg=black
 
-hi Folded       guibg=blue guifg=grey ctermbg=blue ctermfg=grey
+hi Folded       guibg=black guifg=green gui=bold ctermbg=black ctermfg=green
 hi FoldColumn	guibg=black guifg=yellow ctermbg=black ctermfg=yellow
-hi LineNr       guibg=black guifg=cyan gui=bold ctermbg=black ctermfg=cyan
-hi StatusLine	guibg=yellow guifg=blue gui=none ctermbg=yellow ctermfg=blue
-hi StatusLineNC	guibg=darkyellow guifg=black gui=none ctermbg=darkyellow ctermfg=black 
-hi VertSplit	guibg=darkcyan guifg=darkblue  gui=none ctermbg=darkcyan ctermfg=darkblue
+hi LineNr       guibg=black guifg=cyan gui=none ctermbg=black ctermfg=cyan
+hi StatusLine	guibg=grey guifg=blue gui=bold ctermbg=white ctermfg=blue
+hi StatusLineNC	guibg=grey guifg=black gui=bold ctermbg=grey ctermfg=black 
+hi VertSplit	guibg=darkgreen guifg=darkblue  gui=none ctermbg=darkgrey ctermfg=darkblue
 
 hi tablinesel   guibg=#515a71 guifg=#50aae5 gui=none
 hi tabline      guibg=#4d4d5f guifg=#5b7098 gui=none
@@ -43,21 +43,21 @@ hi MatchParen	guibg=#7b5a55 guifg=#001122
 " syntax highlighting """"""""""""""""""""""""""""""""""""""""
 
 
-hi Comment		guifg=cyan  guibg=blue ctermfg=cyan ctermbg=blue
-hi Title	    guifg=yellow guibg=black gui=none  ctermfg=yellow ctermbg=black cterm=none 
-hi Underlined   guifg=cyan guibg=black gui=none    ctermfg=cyan ctermbg=black cterm=none   
+hi Comment		guifg=black  guibg=bg ctermfg=black ctermbg=bg gui=bold
+hi Title	    guifg=green guibg=darkblue gui=none  ctermfg=green ctermbg=darkblue cterm=none 
+hi Underlined   guifg=cyan guibg=darkblue gui=none    ctermfg=cyan ctermbg=darkblue cterm=none   
 
 hi Statement    guifg=yellow gui=none ctermfg=yellow cterm=none
 hi Type		    guifg=cyan  gui=none ctermfg=cyan  cterm=none
 hi Constant	    guifg=white ctermfg=white
 hi Number       guifg=white ctermfg=white
-hi PreProc      guifg=magenta ctermfg=magenta
-hi Special	    guifg=magenta ctermfg=green
+hi PreProc      guifg=grey ctermfg=grey
+hi Special	    guifg=grey ctermfg=grey
 hi Ignore       guifg=grey40  ctermfg=grey
 hi Todo		    guifg=orangered guibg=yellow2 ctermfg=red ctermbg=yellow
 hi Error        guifg=yellow guibg=red ctermfg=yellow ctermbg=red
 hi Function     guifg=yellow guibg=bg gui=None ctermfg=yellow ctermbg=bg cterm=none
-hi Identifier   guifg=cyan ctermfg=cyan gui=none cterm=none
+hi Identifier   guifg=cyan ctermfg=cyan guibg=bg ctermbg=bg gui=none cterm=none
 """""this section borrowed from OceanDeep/Midnight"""""
 highlight Conditional gui=None guifg=yellow guibg=bg cterm=None ctermfg=yellow ctermbg=bg
 highlight Repeat gui=None guifg=yellow guibg=bg cterm=None ctermfg=yellow ctermbg=bg
@@ -80,8 +80,8 @@ hi ErrorMsg     guibg=#ff4545
 hi Cursor       guibg=yellow guifg=black
 
 
-hi Search       guibg=grey guifg=black  ctermbg=grey ctermfg=black
-hi IncSearch	guifg=grey guibg=blue   ctermfg=grey ctermbg=blue 
+hi Search       guibg=darkgreen guifg=darkyellow  ctermbg=darkgreen ctermfg=darkyellow
+hi IncSearch	guifg=darkyellow guibg=darkgreen   ctermfg=darkyellow ctermbg=darkgreen 
 
 hi ModeMsg    	guifg=#00AACC
 hi MoreMsg      guifg=SeaGreen

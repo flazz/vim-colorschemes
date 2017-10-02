@@ -2,7 +2,7 @@
 " Author: josuegaleas
 " License: MIT License
 " Source: https://github.com/josuegaleas/jay
-" Last Edit: October 25th, 2016
+" Last Edit: November 3rd, 2016
 " Description: Yet another colorscheme for Vim.
 " =============================================================================
 
@@ -44,21 +44,23 @@ let s:unknown2 = ['#ffff00', 11]
 
 " 16 color terminal support
 if &t_Co == 16
-	let s:back0[1] = 'NONE'
-	let s:back[1] = 'NONE'
+	let s:red[1] = 1
+	let s:orange[1] = 7
+	let s:yellow[1] = 3
+	let s:green[1] = 2
+	let s:aqua[1] = 6
+	let s:blue[1] =  4
+	let s:purple[1] = 5
+	let s:back0[1] = 0
+	let s:back[1] = 0
 	let s:back2[1] = 0
 	let s:back3[1] = 8
 	let s:back4[1] = 8
+	let s:fore0[1] = 15
 	let s:fore[1] = 15
-	let s:fore2[1] = 7
+	let s:fore2[1] = 15
 	let s:fore3[1] = 7
-	let s:red[1] = 1
-	let s:green[1] = 2
-	let s:yellow[1] = 3
-	let s:blue[1] =  4
-	let s:purple[1] = 5
-	let s:aqua[1] = 6
-	let s:orange[1] = 7
+	let s:fore4[1] = 7
 endif
 
 " Emphasis:
@@ -95,7 +97,7 @@ function! s:HF(group, fg, ...)
 		\ 'term=' . emstr[:-2]], ' ')
 endfunction
 
-" General:
+" Highlighting:
 call s:HF('Normal', s:fore, s:back)
 call s:HF('CursorLine', s:none, s:back2)
 call s:HF('CursorLineNr', s:orange)

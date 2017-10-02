@@ -1,4 +1,4 @@
-
+" Vim color file
 " desertedoceanburnt v0.1
 " Maintainer:	Shawn Axsom <axs221@gmail.com>
 "               [axs221.1l.com]
@@ -23,13 +23,6 @@ if version > 580
 endif
 
 let g:colors_name="desertedoceanburnt"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 hi Normal	guifg=#FFFAFD guibg=#13232d
 hi Cursor	guibg=#204769 guifg=#A0BaBa

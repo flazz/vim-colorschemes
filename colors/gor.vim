@@ -10,13 +10,6 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "gor"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 hi Normal		guifg=white	guibg=#005856
 hi NonText		guifg=white	guibg=#005856
 hi comment		guifg=darkgrey

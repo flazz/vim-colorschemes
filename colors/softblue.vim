@@ -10,14 +10,6 @@ if version > 580
     endif
 endif
 let g:colors_name="softblue"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
-
 
 hi Normal	    guibg=#183058   guifg=#b0b0e0
 
@@ -46,7 +38,7 @@ hi Identifier	guifg=#00ac55
 hi Statement	guifg=SkyBlue2
 hi PreProc	    guifg=#20a0d0
 hi Type		    guifg=#8070ff
-hi Special	    guifg=#7c9cf5"a2b9e0
+hi Special	    guifg=#b6a040"wheat4"#7c9cf5"a2b9e0
 hi Ignore 	    guifg=grey40
 hi Error        guifg=white     guibg=#b2377a
 hi Todo		    guifg=#54b900   guibg=#622098   gui=bold

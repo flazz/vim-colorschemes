@@ -148,41 +148,40 @@ hi TabLineSel       ctermfg=187         guifg=#dfdfaf       ctermbg=235       gu
 
 " File Navigation:
 hi Directory        ctermfg=216         guifg=#ffaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Search           ctermfg=187         guifg=#dfdfaf       ctermbg=130       guibg=#af5f00      cterm=NONE     gui=NONE
+hi Search           ctermfg=130         guifg=#af5f00       ctermbg=187       guibg=#dfdfaf      cterm=NONE     gui=NONE
 
 " Prompt Status:
 hi Title             ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi ModeMsg           ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi MoreMsg           ctermfg=179        guifg=#dfaf5f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Question          ctermfg=179        guifg=#dfaf5f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-
-hi StatusLine        ctermfg=236        guifg=#303030       ctermbg=137       guibg=#af875f      cterm=NONE     gui=NONE
+hi ModeMsg           ctermfg=230        guifg=#ffffdf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
+hi MoreMsg           ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
+hi Question          ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
+hi StatusLine        ctermfg=230        guifg=#ffffdf       ctermbg=137       guibg=#af875f      cterm=NONE     gui=NONE
 hi StatusLineNC      ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE      cterm=underline gui=underline
 
-hi WildMenu          ctermfg=187        guifg=#dfdfaf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
+hi WildMenu          ctermfg=230        guifg=#ffffdf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
 
 " Visual Aid:
 hi NonText           ctermfg=239        guifg=#4e4e4e       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi SpecialKey        ctermfg=66         guifg=#5f8787       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi Underlined        ctermfg=66         guifg=#5f8787       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi WarningMsg        ctermfg=130        guifg=#af5f00       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi MatchParen        ctermfg=187        guifg=#dfdfaf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
-hi Visual            ctermfg=187        guifg=#dfdfaf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
+hi WarningMsg        ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
+hi MatchParen        ctermfg=230        guifg=#ffffdf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
+hi Visual            ctermfg=230        guifg=#ffffdf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
 hi Todo              ctermfg=209        guifg=#ff875f       ctermbg=236       guibg=#303030      cterm=reverse  gui=reverse
-hi Error             ctermfg=160        guifg=#d70000       ctermbg=233       guibg=#121212      cterm=reverse  gui=reverse
-hi ErrorMsg          ctermfg=160        guifg=#d70000       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE 
+hi Error             ctermfg=167        guifg=#d75f5f       ctermbg=233       guibg=#121212      cterm=reverse  gui=reverse
+hi ErrorMsg          ctermfg=167        guifg=#d75f5f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE 
 
 " Variable Types:
 hi Constant          ctermfg=166        guifg=#d75f00       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi String            ctermfg=230        guifg=#ffffdf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi Identifier        ctermfg=223        guifg=#ffdfaf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi Function          ctermfg=223        guifg=#ffdfaf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi StorageClass      ctermfg=222        guifg=#ffdf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
+hi StorageClass      ctermfg=180        guifg=#dfaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 
 " Language Constructs:
 hi Label             ctermfg=180        guifg=#dfaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi Statement         ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Operator          ctermfg=222        guifg=#ffdf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
+hi Operator          ctermfg=180        guifg=#dfaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi Comment           ctermfg=241        guifg=#626262       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi Special           ctermfg=216        guifg=#ffaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 
@@ -192,9 +191,10 @@ hi Type              ctermfg=223        guifg=#ffdfaf       ctermbg=NONE      gu
 
 " HTML:
 hi htmlStatement     ctermfg=223        guifg=#ffdfaf        ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi htmlItalic        ctermfg=167        guifg=#d75f5f        ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+hi htmlItalic        ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
 hi htmlArg           ctermfg=166        guifg=#d75f00        ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
 
+"FIXME:
 " Diff:
 hi DiffAdd           ctermfg=234        guifg=#1c1c1c        ctermbg=223      guibg=#ffdfaf      cterm=NONE     gui=NONE
 hi DiffChange        ctermfg=234        guifg=#1c1c1c        ctermbg=137      guibg=#af875f      cterm=NONE     gui=NONE
@@ -203,12 +203,12 @@ hi DiffDelete        ctermfg=187        guifg=#dfdfaf        ctermbg=131      gu
 
 " Completion Menu:
 hi Pmenu             ctermfg=187        guifg=#dfdfaf        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi PmenuSel          ctermfg=187        guifg=#dfdfaf        ctermbg=66       guibg=#5f8787      cterm=NONE     gui=NONE
+hi PmenuSel          ctermfg=230        guifg=#ffffdf        ctermbg=66       guibg=#5f8787      cterm=NONE     gui=NONE
 hi PmenuSbar         ctermfg=235        guifg=#262626        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
 hi PmenuThumb        ctermfg=235        guifg=#262626        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
 
 " Spelling:
-hi SpellBad          ctermfg=196        guifg=#ff0000        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
+hi SpellBad          ctermfg=167        guifg=#d75f5f        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
 hi SpellLocal        ctermfg=65         guifg=#5f875f        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
 hi SpellCap          ctermfg=111        guifg=#87afff        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
 hi SpellRare         ctermfg=208        guifg=#ff8700        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
@@ -234,9 +234,6 @@ if g:despacio_Sunset
     hi TabLineFill       ctermfg=NONE       guifg=NONE            ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
     hi TabLine           ctermfg=240        guifg=#585858         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
     hi TabLineSel        ctermfg=187        guifg=#dfdfaf         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-
-    " Prompt Status:
-    hi StatusLine        ctermfg=235        guifg=#262626         ctermbg=137      guibg=#af875f      cterm=NONE       gui=NONE
 
     "Visual Aid:
     hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
@@ -273,9 +270,6 @@ if g:despacio_Twilight
     hi TabLine           ctermfg=240        guifg=#585858         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
     hi TabLineSel        ctermfg=187        guifg=#dfdfaf         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
 
-    " Prompt Status:
-    hi StatusLine        ctermfg=234        guifg=#1c1c1c         ctermbg=137      guibg=#af875f      cterm=NONE     gui=NONE
-
     "Visual Aid:
     hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=234      guibg=#1c1c1c      cterm=reverse  gui=reverse
     
@@ -310,9 +304,6 @@ if g:despacio_Midnight
     hi TabLine          ctermfg=240         guifg=#585858         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
     hi TabLineSel       ctermfg=187         guifg=#dfdfaf         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
 
-    " Prompt Status:
-    hi StatusLine        ctermfg=233        guifg=#121212         ctermbg=137      guibg=#af875f      cterm=NONE     gui=NONE
-
     "Visual Aid:
     hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=233      guibg=#121212      cterm=reverse  gui=reverse
 
@@ -346,9 +337,6 @@ if g:despacio_Pitch
     hi TabLineFill      ctermfg=NONE        guifg=NONE            ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
     hi TabLine          ctermfg=240         guifg=#585858         ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
     hi TabLineSel       ctermfg=187         guifg=#dfdfaf         ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
-
-    " Prompt Status:
-    hi StatusLine        ctermfg=232        guifg=#080808         ctermbg=137      guibg=#af875f      cterm=NONE     gui=NONE
 
     "Visual Aid:
     hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=232      guibg=#080808      cterm=reverse  gui=reverse

@@ -1,4 +1,4 @@
-
+" Vim color file
 " Maintainer:	Glenn T. Norton <gtnorton@adaryn.com>
 " Last Change:	2003-04-11
 
@@ -15,13 +15,6 @@ if exists("syntax_on")
 endif
 
 let colors_name = "adaryn"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 hi Normal   guifg=#fffff0 guibg=#00003F ctermfg=white ctermbg=Black
 hi ErrorMsg guifg=#ffffff guibg=#287eff	ctermfg=white ctermbg=red

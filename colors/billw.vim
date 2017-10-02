@@ -1,9 +1,7 @@
-" vim: set tw=0 sw=4 sts=4 et:
-
 " Vim color file
-" Maintainer: Datila Carvalho <datila@saci.homeip.net>
-" Last Change: November, 3, 2003
-" Version: 0.1
+" Maintainer: Datila Carvalho <datila@hotmail.com>
+" Last Change: May, 19, 2005
+" Version: 0.2
 
 " This is a VIM's version of the emacs color theme
 " _Billw_ created by Bill White.
@@ -15,13 +13,6 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "billw"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 
 """ Colors
@@ -39,7 +30,7 @@ hi ErrorMsg             gui=bold guifg=White guibg=Red
 "hi Folded
 "hi FoldColumn
 "hi IncSearch
-"hi LineNr
+hi LineNr               gui=bold guifg=yellow4 guibg=gray10
 hi ModeMsg              gui=bold
 "hi MoreMsg
 "hi NonText
@@ -47,13 +38,19 @@ hi Normal               guibg=black guifg=cornsilk
 "hi Question
 hi Search               gui=bold guifg=Black guibg=cornsilk
 "hi SpecialKey
-hi StatusLine           guifg=orange1
-hi StatusLineNC         guifg=yellow4
+hi StatusLine           guifg=tan1 guibg=gray10
+hi StatusLineNC         guifg=orange3
 "hi Title
 hi Visual               guifg=gray35 guibg=fg
 hi VisualNOS            gui=bold guifg=black guibg=fg
 hi WarningMsg           guifg=White guibg=Tomato
 "hi WildMenu
+
+hi User2                guifg=lightgoldenrod guibg=gray15 gui=bold
+
+"If using Motif/Athena
+hi Menu                 guifg=fg guibg=gray35
+hi Scrollbar            guibg=gray35
 
 " Colors for syntax highlighting
 hi Comment              guifg=gold

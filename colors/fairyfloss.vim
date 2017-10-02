@@ -7,28 +7,28 @@ endif
 
 let g:colors_name = 'fairyfloss'
 
-"hi ColorColumn
+hi ColorColumn guifg=fg guibg=#a8a4b1 gui=NONE ctermfg=0
 "hi Conceal
 "hi Cursor
 "hi CursorIM
-hi CursorColumn guifg=NONE guibg=#8076aa gui=NONE ctermfg=0
-hi CursorLine guifg=NONE guibg=#8076aa gui=NONE ctermfg=0
-hi CursorLineNr guifg=#8076aa guibg=NONE gui=bold ctermfg=0
+hi CursorColumn guifg=NONE guibg=#716799 gui=NONE ctermfg=0
+hi! link CursorLine CursorColumn
+hi CursorLineNr guifg=#a8a4b1 guibg=#716799 gui=bold ctermfg=0 " fg is not defined on the original theme. It was taken using Digital Color Meter
 hi Directory guifg=#c5a3ff guibg=NONE gui=NONE ctermfg=0
-hi DiffAdd guifg=#5a5475 guibg=#c2ffdf gui=NONE ctermfg=0
+hi DiffAdd guifg=bg guibg=#c2ffdf gui=NONE ctermfg=0
 hi DiffChange guifg=#f92672 guibg=#f8f8f0 gui=NONE ctermfg=0
 hi DiffDelete guifg=#f92672 guibg=bg gui=NONE ctermfg=0
 hi DiffText guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
-hi EndOfBuffer guifg=#5a5475 guibg=bg gui=NONE ctermfg=0
+"hi EndOfBuffer guifg=bg guibg=bg gui=NONE ctermfg=0
 hi ErrorMsg guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
 "hi FoldColumn
-hi Folded guifg=#5a5475 guibg=#c5a3ff gui=NONE ctermfg=0
-hi IncSearch guifg=#5a5475 guibg=#c2ffdf gui=NONE ctermfg=0
-hi LineNr guifg=#8076aa guibg=NONE gui=NONE ctermfg=0
+hi Folded guifg=#8076aa guibg=NONE gui=NONE ctermfg=0
+hi IncSearch guifg=bg guibg=#c2ffdf gui=NONE ctermfg=0
+hi LineNr guifg=#a8a4b1 guibg=NONE gui=NONE ctermfg=0 " fg is not defined on the original theme. It was taken using Digital Color Meter
 hi MatchParen guifg=#f8f8f0 guibg=#e6c000 gui=NONE ctermfg=0
 "hi ModeMsg
 hi MoreMsg guifg=#c2ffdf guibg=bg gui=NONE ctermfg=0
-hi NonText guifg=#3b3a32 guibg=NONE gui=NONE ctermfg=0
+hi NonText guifg=#a8a4b1 guibg=NONE gui=NONE ctermfg=0 " fg is not defined on the original theme. It was taken using Digital Color Meter
 hi Normal guifg=#f8f8f2 guibg=#5a5475 gui=NONE ctermfg=0
 hi Pmenu guifg=fg guibg=#ff857f gui=NONE ctermfg=0
 hi PmenuSel guifg=fg guibg=#ae81ff gui=NONE ctermfg=0
@@ -36,26 +36,25 @@ hi PmenuSel guifg=fg guibg=#ae81ff gui=NONE ctermfg=0
 "hi PmenuThumb
 hi Question guifg=#c2ffdf guibg=bg gui=NONE ctermfg=0
 "hi QuickFixLine
-hi Search guifg=#5a5475 guibg=#c5a3ff gui=NONE ctermfg=0
+hi Search guifg=bg guibg=#c5a3ff gui=NONE ctermfg=0
 "hi SignColumn
 "hi SpecialKey
 hi SpellBad guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
 "hi SpellCap
 "hi SpellLocal
 "hi SpellRare
-hi StatusLine guifg=#5a5475 guibg=#ae81ff gui=NONE ctermfg=0
-hi StatusLineNC guifg=#5a5475 guibg=#ae81ff gui=NONE ctermfg=0
-hi TabLine guifg=fg guibg=#ae81ff gui=NONE ctermfg=0
-hi TabLineFill guifg=fg guibg=#ae81ff gui=NONE ctermfg=0
+hi StatusLine guifg=fg guibg=#373348 gui=NONE ctermfg=0
+hi StatusLineNC guifg=fg guibg=#373348 gui=NONE ctermfg=0
+hi TabLine guifg=fg guibg=#373348 gui=NONE ctermfg=0
+hi TabLineFill guifg=fg guibg=#373348 gui=NONE ctermfg=0
 "hi TabLineSel
 "hi TermCursor
 "hi TermCursorNC
 hi Title guifg=fg guibg=NONE gui=bold ctermfg=0
-"hi TooLong
-hi VertSplit guifg=#ae81ff guibg=#ae81ff gui=NONE ctermfg=0
-hi Visual guifg=NONE guibg=#49483e gui=NONE ctermfg=0
+hi VertSplit guifg=#373348 guibg=#373348 gui=NONE ctermfg=0
+hi Visual guifg=NONE guibg=#8077A8 gui=NONE ctermfg=0
 hi WarningMsg guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
-hi WildMenu guifg=#5a5475 guibg=#c2ffdf gui=bold ctermfg=0
+hi WildMenu guifg=bg guibg=#c2ffdf gui=bold ctermfg=0
 
 hi Comment guifg=#e6c000 guibg=NONE gui=NONE ctermfg=0
 
@@ -67,7 +66,7 @@ hi Boolean guifg=#c5a3ff guibg=NONE gui=NONE ctermfg=0
 hi Float guifg=#c5a3ff guibg=NONE gui=NONE ctermfg=0
 
 hi Identifier guifg=#c2ffdf guibg=NONE gui=italic ctermfg=0
-hi Function guifg=#ff857f guibg=NONE gui=NONE ctermfg=0
+hi Function guifg=#fff352 guibg=NONE gui=NONE ctermfg=0
 
 hi Statement guifg=#ffb8d1 guibg=NONE gui=NONE ctermfg=0
 hi Conditional guifg=#ffb8d1 guibg=NONE gui=NONE ctermfg=0
@@ -84,11 +83,11 @@ hi Define guifg=#ffb8d1 guibg=NONE gui=NONE ctermfg=0
 "hi PreCondit
 
 hi Type guifg=#fff352 guibg=NONE gui=NONE ctermfg=0
-hi StorageClass guifg=#c2ffdf guibg=NONE gui=italic ctermfg=0
-"hi Structure
+hi StorageClass guifg=#ffb8d1 guibg=NONE gui=italic ctermfg=0
+hi Structure guifg=#fff352 guibg=NONE gui=NONE ctermfg=0
 "hi Typedef
 
-hi Special guifg=fg guibg=NONE gui=NONE ctermfg=0
+hi Special guifg=#ff857f guibg=NONE gui=NONE ctermfg=0
 "hi SpecialChar
 hi Tag guifg=#ffb8d1 guibg=NONE gui=NONE ctermfg=0
 "hi Delimiter

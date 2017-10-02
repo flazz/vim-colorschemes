@@ -1,4 +1,4 @@
-
+" Vim color file
 " Maintainer:   Tim Aldrich <aldy0169@yahoo.com>
 " Last Change:  19 January 2002
 
@@ -8,13 +8,6 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name="camo"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 hi Normal       guifg=bisque            guibg=grey15
 hi Cursor       guifg=snow              guibg=bisque3
 hi CursorIM     guifg=OliveDrab4        guibg=bisque

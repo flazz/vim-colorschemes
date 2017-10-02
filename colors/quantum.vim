@@ -7,7 +7,6 @@ highlight clear
 syntax reset
 
 set background=dark
-
 let g:colors_name = 'quantum'
 
 if !exists('g:quantum_italics')
@@ -19,17 +18,17 @@ if !exists('g:quantum_black')
 endif
 
 if g:quantum_black
-    let s:gray1     = ['#212121', 233]
-    let s:gray2     = ['#2b2b2b', 235]
-    let s:gray3     = ['#444444', 239]
-    let s:gray4     = ['#616161', 241]
-    let s:gray5     = ['#aaaaaa', 249]
+    let s:gray1 = ['#212121', 233]
+    let s:gray2 = ['#2b2b2b', 235]
+    let s:gray3 = ['#444444', 239]
+    let s:gray4 = ['#616161', 241]
+    let s:gray5 = ['#aaaaaa', 249]
 else
-    let s:gray1     = ['#263238', 235]
-    let s:gray2     = ['#2e3c44', 236]
-    let s:gray3     = ['#445864', 238]
-    let s:gray4     = ['#658595', 243]
-    let s:gray5     = ['#aabbc4', 249]
+    let s:gray1 = ['#263238', 235]
+    let s:gray2 = ['#2e3c44', 236]
+    let s:gray3 = ['#445864', 238]
+    let s:gray4 = ['#658595', 243]
+    let s:gray5 = ['#aabbc4', 249]
 endif
 
 let s:red       = ['#e16881', 204]
@@ -61,7 +60,7 @@ function! s:HL(group, fg, bg, attr)
 endfun
 
 " Vim Editor
-call s:HL('ColorColumn',                    '',         s:gray2,    '')
+call s:HL('ColorColumn',                    '',         s:gray3,    '')
 call s:HL('Cursor',                         s:gray2,    s:gray5,    '')
 call s:HL('CursorColumn',                   '',         s:gray2,    '')
 call s:HL('CursorLine',                     '',         s:gray2,    'none')
@@ -70,13 +69,13 @@ call s:HL('Directory',                      s:blue,     '',         '')
 call s:HL('DiffAdd',                        s:green,    s:gray2,    'none')
 call s:HL('DiffChange',                     s:yellow,   s:gray2,    'none')
 call s:HL('DiffDelete',                     s:red,      s:gray2,    'none')
-call s:HL('DiffText',                       s:blue,     s:gray1,    'none')
+call s:HL('DiffText',                       s:blue,     s:gray2,    'none')
 call s:HL('ErrorMsg',                       s:red,      s:gray1,    'bold')
-call s:HL('FoldColumn',                     s:gray4,    s:gray2,    '')
+call s:HL('FoldColumn',                     s:gray4,    s:gray1,    '')
 call s:HL('Folded',                         s:gray3,    s:gray1,    '')
 call s:HL('IncSearch',                      s:yellow,   '',         '')
 call s:HL('LineNr',                         s:gray3,    '',         '')
-call s:HL('MatchParen',                     s:gray2,    s:yellow,   'bold')
+call s:HL('MatchParen',                     s:gray2,    s:cyan,     'bold')
 call s:HL('ModeMsg',                        s:green,    '',         '')
 call s:HL('MoreMsg',                        s:green,    '',         '')
 call s:HL('NonText',                        s:gray4,    '',         'none')
@@ -89,8 +88,6 @@ call s:HL('Question',                       s:blue,     '',         'none')
 call s:HL('Search',                         s:gray1,    s:yellow,   '')
 call s:HL('SignColumn',                     s:gray5,    s:gray1,    '')
 call s:HL('SpecialKey',                     s:gray4,    '',         '')
-call s:HL('SpellCap',                       s:blue,     '',         'undercurl')
-call s:HL('SpellBad',                       s:red,      '',         'undercurl')
 call s:HL('StatusLine',                     s:gray5,    s:gray3,    'none')
 call s:HL('StatusLineNC',                   s:gray2,    s:gray4,    '')
 call s:HL('TabLine',                        s:gray4,    s:gray2,    'none')

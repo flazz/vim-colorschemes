@@ -65,6 +65,7 @@
 "================================================================================
 "Flats          144      #afaf87      http://www.colorhexa.com/afaf87
 "Dune           187      #dfdfaf      http://www.colorhexa.com/dfdfaf
+"Firefly        230      #ffffdf      http://www.colorhexa.com/ffffdf
 
 "Cyan:
 "================================================================================
@@ -150,10 +151,9 @@ endif
 "================================================================================
 
 " Editor Settings:
-"TODO change normal foreground to Stars
 hi Normal           ctermfg=254        guifg=#e4e4e4     ctermbg=236      guibg=#303030      cterm=NONE     gui=NONE
-hi LineNr           ctermfg=243        guifg=#767676     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi CursorLineNR     ctermfg=187        guifg=#dfdfaf     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+hi LineNr           ctermfg=241        guifg=#626262     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
+hi CursorLineNr     ctermfg=187        guifg=#dfdfaf     ctermbg=235     guibg=#262626         cterm=NONE     gui=NONE
 hi CursorLine       ctermfg=NONE       guifg=NONE        ctermbg=237      guibg=#3a3a3a      cterm=NONE     gui=NONE
 
 " Number Column:
@@ -192,7 +192,7 @@ hi MatchParen        ctermfg=233      guifg=#121212      ctermbg=245      guibg=
 hi Visual            ctermfg=187      guifg=#dfdfaf      ctermbg=95       guibg=#875f5f      cterm=NONE     gui=NONE
 hi Todo              ctermfg=144      guifg=#afaf87      ctermbg=234      guibg=#1c1c1c      cterm=italic   gui=italic
 hi Error             ctermfg=131      guifg=#af5f5f      ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
-hi ErrorMsg          ctermfg=131      guifg=#af5f5f      ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
+hi ErrorMsg          ctermfg=131      guifg=#af5f5f      ctermbg=NONE      guibg=NONE      cterm=NONE  gui=NONE
 
 
 " Variable Types:
@@ -204,8 +204,8 @@ hi Function          ctermfg=152      guifg=#afd7d7      ctermbg=NONE     guibg=
 
 " Language Constructs:
 hi Statement         ctermfg=66       guifg=#5f8787      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Operator          ctermfg=187      guifg=#dfdfaf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Comment           ctermfg=243      guifg=#767676      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+hi Operator          ctermfg=230      guifg=#ffffdf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+hi Comment           ctermfg=241      guifg=#626262      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
 hi Special           ctermfg=179      guifg=#dfaf5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
 
 " C Like:
@@ -215,7 +215,7 @@ hi Type              ctermfg=138      guifg=#af8787      ctermbg=NONE     guibg=
 
 " HTML:
 hi htmlItalic        ctermfg=167      guifg=#d75f5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi htmlArg           ctermfg=187      guifg=#dfdfaf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+hi htmlArg           ctermfg=230      guifg=#ffffdf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
 
 
 " Diff:
@@ -276,7 +276,8 @@ hi SpellRare        ctermfg=208     guifg=#ff8700     ctermbg=NONE     guibg=NON
 if g:sierra_Sunset
     " Editor Settings:
     hi Normal           ctermfg=188        guifg=#dfdfdf     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+    hi LineNr           ctermfg=240        guifg=#585858     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
+    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
     hi CursorLine       ctermfg=NONE       guifg=NONE        ctermbg=236      guibg=#303030      cterm=NONE     gui=NONE
 
     " Number Column:
@@ -295,7 +296,6 @@ if g:sierra_Sunset
     " Visual Aid:
     hi NonText          ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
     hi Error            ctermfg=131        guifg=#af5f5f     ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
-    hi ErrorMsg         ctermfg=131        guifg=#af5f5f     ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
 
     " Language Constructs:
     hi Comment          ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
@@ -311,7 +311,8 @@ end
 if g:sierra_Twilight
     " Editor Settings:
     hi Normal           ctermfg=188        guifg=#dfdfdf     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
+    hi LineNr           ctermfg=240        guifg=#585858     ctermbg=233      guibg=#121212      cterm=NONE     gui=NONE
+    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf     ctermbg=233      guibg=#121212      cterm=NONE     gui=NONE
     hi CursorLine       ctermfg=NONE       guifg=NONE        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
 
     " Number Column:
@@ -330,7 +331,6 @@ if g:sierra_Twilight
     " Visual Aid:
     hi NonText          ctermfg=239        guifg=#4e4e4e     ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
     hi Error            ctermfg=131        guifg=#af5f5f     ctermbg=234      guibg=#1c1c1c      cterm=reverse gui=reverse
-    hi ErrorMsg         ctermfg=131        guifg=#af5f5f     ctermbg=234      guibg=#1c1c1c      cterm=reverse gui=reverse
 
     " Language Constructs:
     hi Comment          ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
@@ -346,7 +346,8 @@ end
 if g:sierra_Midnight
     " Editor Settings:
     hi Normal           ctermfg=188        guifg=#dfdfdf      ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
+    hi LineNr           ctermfg=240        guifg=#585858      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
+    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
     hi CursorLine       ctermfg=NONE       guifg=NONE         ctermbg=234     guibg=#1c1c1c      cterm=NONE    gui=NONE
 
     " Number Column:
@@ -365,7 +366,6 @@ if g:sierra_Midnight
     " Visual Aid:
     hi NonText          ctermfg=238        guifg=#444444      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
     hi Error            ctermfg=131        guifg=#af5f5f      ctermbg=233     guibg=#121212      cterm=reverse gui=reverse
-    hi ErrorMsg         ctermfg=131        guifg=#af5f5f      ctermbg=233     guibg=#121212      cterm=reverse gui=reverse
 
     " Language Constructs:
     hi Comment          ctermfg=240        guifg=#585858      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
@@ -381,7 +381,8 @@ end
 if g:sierra_Pitch
     " Editor Settings:
     hi Normal           ctermfg=188        guifg=#dfdfdf      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
+    hi LineNr           ctermfg=240        guifg=#585858      ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
+    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf      ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
     hi CursorLine       ctermfg=NONE       guifg=NONE         ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
 
     " Number Column:
@@ -400,7 +401,6 @@ if g:sierra_Pitch
     " Visual Aid:
     hi NonText          ctermfg=238        guifg=#444444      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
     hi Error            ctermfg=131         guifg=#af5f5f     ctermbg=16      guibg=#000000      cterm=reverse gui=reverse
-    hi ErrorMsg         ctermfg=131         guifg=#af5f5f     ctermbg=16      guibg=#000000      cterm=reverse gui=reverse
 
     " Language Constructs:
     hi Comment          ctermfg=240        guifg=#585858      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE

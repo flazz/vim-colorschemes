@@ -1,6 +1,6 @@
 " Vim Farben-Datei
 " Ersteller:	Ingo Fabbri <vim@tcsoft.net>
-" Letzte Änderung:	2003 May 13
+" Letzte Änderung:	2007 Jan 19
 
 " Mein persönliches Farbschema. Es schont die Augen, da es keine grellen Farben verwendet.
 " Am Besten geignet für PHP
@@ -11,13 +11,23 @@ if exists("syntax_on")
   syntax reset
 endif
 let colors_name = "TCSoft"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
+
+if version >= 700
+  hi CursorLine                 guibg=#FFFF33  gui=NONE  "hellgelb
+  hi CursorColumn               guibg=#EAEAEA
+  hi MatchParen guifg=white     guibg=#99CC00  gui=bold
+
+  "Tabpages
+  hi TabLine    guifg=black     guibg=#B0B8C0 gui=italic
+  hi TabLineFill guifg=#9098A0
+  hi TabLineSel guifg=black     guibg=#F0F0F0 gui=italic,bold
+
+  "P-Menu (auto-completion)
+  hi Pmenu      guifg=white     guibg=#808080
+  "PmenuSel
+  "PmenuSbar
+  "PmenuThumb
+endif
 
 " Farb-Einstellungen für das GUI
 hi Normal       guifg=#000000   guibg=#FFFFFF "Schwarze Schrift auf weißem Hintergrund
@@ -32,8 +42,12 @@ hi Statement    guifg=#FF9900   gui=NONE    "orange
 hi PreProc      guifg=#009900   gui=NONE    "dunkelgrün
 hi Type         guifg=#FF9900   gui=bold    "orange
 hi Cursor       guifg=#000000   gui=reverse "schwarz
-hi LineNr       guifg=#000000   gui=NONE    "schwarz
+hi LineNr       guifg=#000000   guibg=#EFEFEF  gui=NONE    "schwarz
 hi StatusLine   guifg=#000000   gui=reverse,bold "schwarz
+
+hi Todo	        guifg=Blue      guibg=Yellow
+syn keyword	Todo		TODO FIXME XXX
+syn keyword Error    FEHLER
 
 hi link   Function    PreProc
 hi link   String	    Constant

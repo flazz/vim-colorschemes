@@ -1,4 +1,4 @@
-
+" Vim color file
 " Maintainer: R. Edward Ralston <eralston@techsan.org>
 " Last Change: 2002-01-24 09:56:48
 " URI: http://eralston.tripod.com/navajo.png
@@ -13,13 +13,6 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "navajo"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 " looks good on Linux
 "hi Normal ctermfg=Black guifg=Black guibg=#b39674

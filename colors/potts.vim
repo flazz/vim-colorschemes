@@ -1,4 +1,4 @@
-
+" -*- vim -*-
 " FILE: "/home/dp/.vim/colors/potts2.vim" {{{
 " LAST MODIFICATION: "Fri, 08 Feb 2002 09:47:10 (dp)"
 " (C) 2001 by Douglas L. Potts, <dlpotts@spectral-sys.com>
@@ -10,13 +10,6 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name="potts2"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 highlight SpecialKey term=bold ctermfg=9 guifg=Cyan
 highlight NonText term=bold ctermfg=9 gui=bold guifg=green

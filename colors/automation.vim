@@ -1,4 +1,4 @@
-
+" Vim color file (automation.vim)                                            
 " Maintainer:	Ken McConnell <nacer@yahoo.com>                                
 " Last Change:	2004 Jan 15                                                  
 "                                                                            
@@ -14,13 +14,6 @@ if exists("syntax_on")
 endif
 
 let colors_name = "automation"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
 
 hi Normal ctermbg=Black ctermfg=LightGrey guifg=Black guibg=Grey96
 
