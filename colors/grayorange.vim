@@ -1,7 +1,14 @@
+<<<<<<< HEAD:colors/colorscheme_template.vim
 "" Vim color file
 " Maintainer:   Your name <youremail@something.com>
 " Last Change:  
 " URL:		
+=======
+" Vim color file
+" Maintainer:   Charles <cherry_avium@yahoo.com>
+" Last Change:  11 June 2004
+" URL:		http://
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786:colors/grayorange.vim
 
 " cool help screens
 " :he group-name
@@ -9,11 +16,13 @@
 " :he cterm-colors
 
 " your pick:
-set background=dark	" or light
+" set background=light
+set background=dark
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
+<<<<<<< HEAD:colors/colorscheme_template.vim
 let g:colors_name="mycolorscheme"
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
@@ -24,6 +33,9 @@ hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
 
 "hi Normal
+=======
+let g:colors_name="GrayOrange"
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786:colors/grayorange.vim
 
 " OR
 
@@ -48,10 +60,12 @@ hi User5 guibg=darkblue guifg=lightgreen
 " gives
 "	Cursor         xxx guifg=bg guibg=fg 
  	
+
+hi Normal guifg=beige guibg=#204040
 " Uncomment and complete the commands you want to change from the default.
 
-"hi Cursor		
-"hi CursorIM	
+"hi Cursor		guibg=red
+"hi CursorIM		gui=inverse
 "hi Directory	
 "hi DiffAdd		
 "hi DiffChange	
@@ -62,10 +76,10 @@ hi User5 guibg=darkblue guifg=lightgreen
 "hi Folded		
 "hi FoldColumn	
 "hi IncSearch	
-"hi LineNr		
+hi LineNr guifg=gray80 "guibg=black guibg=gray50
 "hi ModeMsg		
 "hi MoreMsg		
-"hi NonText		
+"hi NonText		guibg=gray50
 "hi Question	
 "hi Search		
 "hi SpecialKey	
@@ -81,15 +95,22 @@ hi User5 guibg=darkblue guifg=lightgreen
 "hi Tooltip		
 
 " syntax highlighting groups
-"hi Comment
-"hi Constant	
-"hi Identifier	
-"hi Statement	
-"hi PreProc	
-"hi Type		
-"hi Special	
-"hi Underlined	
-"hi Ignore		
-"hi Error		
-"hi Todo		
+hi Comment	guifg=darkkhaki	gui=underline guibg=gray30
+" hi Comment	guifg=darkkhaki	guibg=gray30
+hi Constant	guifg=navajowhite
+hi Identifier	guifg=lavender	
+" hi Function	guibg=gray60
+hi Statement	guifg=darkseagreen			    gui=bold
+hi PreProc	guifg=darkseagreen
+hi Type		guifg=goldenrod
+hi Special	guifg=navajowhite			    gui=underline
+hi Underlined	gui=underline
+hi Ignore	guifg=black
+hi Error	guifg=white
+hi Todo		guibg=gold guifg=black			    gui=NONE
+hi Operator	guifg=gold
+hi Title	guifg=white
+
+hi VimError	guifg=orange				    gui=bold
+hi SpecialKey	guifg=gold
 

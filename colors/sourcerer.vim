@@ -16,7 +16,6 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-
 let colors_name = "sourcerer"
 
 
@@ -213,4 +212,7 @@ hi Pmenu                  cterm=NONE             ctermfg=248   ctermbg=237
 hi PmenuSel               cterm=NONE             ctermfg=16    ctermbg=66
 hi PmenuSbar              cterm=NONE             ctermfg=16    ctermbg=66
 hi PmenuThumb             cterm=NONE             ctermfg=16    ctermbg=66
+<<<<<<< HEAD
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786

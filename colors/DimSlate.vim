@@ -4,6 +4,7 @@ runtime colors/Dim.vim
 
 let g:colors_name = "DimSlateBG"
 
+<<<<<<< HEAD
 "hi Normal guibg=#002020
 "hi NonText guibg=#001818
 " The above was just too dark.  It almost looked black on this monitor
@@ -16,4 +17,8 @@ if version >= 700
     hi CursorLine   guibg=#224040
     hi CursorColumn guibg=#224040
 endif
+=======
+hi Normal guibg=#002020
+hi NonText guibg=#001818
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 

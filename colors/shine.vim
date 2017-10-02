@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+" Vim color file
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " Maintainer:	Yasuhiro Matsumoto <mattn@mail.goo.ne.jp>
 " Last Change:	2001 May 25
 
@@ -13,6 +17,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = "shine"
+<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -20,6 +25,8 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 hi Normal ctermbg=White ctermfg=Black guifg=Black guibg=White
 

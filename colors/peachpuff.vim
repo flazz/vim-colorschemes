@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 
 
 " Maintainer: David Ne\v{c}as (Yeti) <yeti@physics.muni.cz>
 " Last Change: 2003-04-23
 " URL: http://trific.ath.cx/Ftp/vim/colors/peachpuff.vim
+=======
+" Vim color file
+" Maintainer: David Ne\v{c}as (Yeti) <yeti@physics.muni.cz>
+" Last Change: 2001 May 21
+" URI: http://physics.muni.cz/~yeti/download/peachpuff.vim
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 " This color scheme uses a peachpuff background (what you've expected when it's
 " called peachpuff?).
@@ -17,6 +24,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = "peachpuff"
+<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -24,6 +32,8 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 hi Normal guibg=PeachPuff guifg=Black
 
@@ -65,4 +75,7 @@ hi Type term=underline ctermfg=2 gui=bold guifg=SeaGreen
 hi Ignore cterm=bold ctermfg=7 guifg=bg
 hi Error term=reverse cterm=bold ctermfg=7 ctermbg=1 gui=bold guifg=White guibg=Red
 hi Todo term=standout ctermfg=0 ctermbg=3 guifg=Blue guibg=Yellow
+<<<<<<< HEAD
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786

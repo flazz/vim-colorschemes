@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 " Maintainer:	Pan Shizhu <dicpan@hotmail.com>
 " Last Change:	17 November 2004
 " Version:	2.82
@@ -9,6 +10,100 @@
 "	See the help document for all details, the help document will be
 "	installed after the script has been sourced once, do not open the
 "	script when you source it for the first time.
+=======
+" Vim colour file --- PSC
+" Maintainer:	Pan Shizhu <dicpan@hotmail.com>
+" Last Change:	25 June 2004
+" Version:	2.8
+" URL:		http://vim.sourceforge.net/scripts/script.php?script_id=760
+"
+"	Please append [VIM] in the title when writing e-mail to me, or it will
+"	be automatically treated as spam and removed. 
+"
+"	See the separated help document for configurable options.
+"
+" V28 Release Note:
+"
+"	Bugfix : when psc_style=='mixed', the visual got reversed wrong.
+"
+"	'mixed' is now the default for 'warm style.
+"
+"	changed the function name to lower case.
+"
+"	removed pre-2.0 compatibility, (the non-psc version of s-d-f-t).
+"
+"	Added variable psc_cterm_style, see :h psc_cterm_style
+"
+"	Added group Underline
+"
+"	Tuned the function call.
+"
+" Previous Release Notes {{{2
+" V27 Release Note:
+"
+"	Now it is possible to change the Background, 
+"		see :h psc-change-background for details.
+"
+"	Linked the Tag group to Identifier.
+"
+"	NonText as Notice is not good for 'warm', changed to Constant.
+"
+"	Added links for the most popular plugins: taglist, calendar
+"
+"	Tuned the 'Statement' color when different from Type (gui only).
+"
+"	Re-adjusted cterm scheme according to syntax/hitest.vim
+"
+"	The 'defdark' style for cterm is not functioning, fixed.
+"
+"	Many 'cosmetic' changes, makes no difference for functionality.
+"
+"	Use of DrChip's help extractor to auto-install help document.
+"
+"	Added command define, :Colo
+"
+" V26 Release Note:
+"
+"	As stated in the v2.3, the only 'todo' thing seems to be the 'warm'
+"	style, now in this version I had been working on it. 
+"
+"	There also are some minor fixes for the document, to be more friendly
+"	for new readers.
+"
+"	The 'StatusLine' of 'cold' style is modified by mistake in the v2.3,
+"	this time the bug is fixed.
+"
+"	The 'Directory' in GUI 'cold' style is different from 'cterm' one,
+"	now fixed.
+"
+" V23 Release Note:
+"
+"	This is an incompatible update, main changes are in 'cterm'.
+"	A new group 'SignColumn' had been added, new links added for engspchk
+"	v52, hundreds of typos fixed in the document, thanks to the engspchk.
+"
+"	The support for 8-color cterm is slightly better now, but the mappings
+"	of the DarkYellow and Yellow are exchanged, you need to update the
+"	.Xdefaults or your terminal configuration before apply this update if
+"	you are using v2.0.  Guide for redefinition the color value is
+"	available in the document, make sure you had updated the ps_color.txt,
+"	then see 
+"
+"		:help psc-cterm-color-table
+"
+" V20 Release Note:
+"
+"	There've been great enhancement since this version, so I'd choose to
+"	bump the version number to 2. This version comes with Vim online help,
+"	if you had installed ps_color.txt, you can see for details in 
+"
+"		:help pscolor
+"
+" Vna Release Note:
+"
+"	The initial release note had been moved into the help document. 
+"	}}}2
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 "
 
 " Initializations: {{{1
@@ -17,7 +112,11 @@ function! s:init_option(var, value)
   if !exists("g:psc_".a:var)
     execute "let s:".a:var." = ".a:value
   else
+<<<<<<< HEAD
     let s:{a:var} = g:psc_{a:var}
+=======
+    execute "let s:".a:var." = g:psc_".a:var
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   endif
 endfunction
 command! -nargs=+ InitOpt call s:init_option(<f-args>)
@@ -25,7 +124,11 @@ command! -nargs=+ InitOpt call s:init_option(<f-args>)
 function! s:multi_hi(setting, ...)
   let l:idx = a:0
   while l:idx > 0
+<<<<<<< HEAD
     let l:hlgroup = a:{l:idx}
+=======
+    execute "let l:hlgroup = a:".l:idx
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
     execute "highlight ".l:hlgroup." ".a:setting
     let l:idx = l:idx - 1
   endwhile
@@ -45,31 +148,57 @@ endif
 if !has("gui_running")
   call s:init_option("cterm_style", "'".s:style."'")
 
+<<<<<<< HEAD
   " Forces 'cool' style when gui is not present Since the 'warm' style for
   " terminal isn't available now, and probably never will be.
   if s:cterm_style=='warm' | let s:cterm_style = 'cool'
   endif
   if s:use_default_for_cterm==1 | let s:cterm_style = 'default'
   elseif s:use_default_for_cterm==2 | let s:cterm_style = 'defdark'
+=======
+  if s:cterm_style=='warm'
+    " Forces 'cool' style when gui is not present Since the 'warm' style for
+    " terminal isn't available now, and probably never will be.
+    let s:cterm_style = 'cool'	
+  endif
+  if s:use_default_for_cterm==1
+    let s:cterm_style = 'default'
+  elseif s:use_default_for_cterm==2
+    let s:cterm_style = 'defdark'
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   endif
 endif
 
 
+<<<<<<< HEAD
 InitOpt other_style 0
+=======
+let s:other_style = 0
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 if has("gui_running")
   if s:style=='warm' || s:style=='default'
     set background=light
   elseif s:style=='cool' || s:style=='defdark'
     set background=dark
+<<<<<<< HEAD
   else | let s:other_style = 1
+=======
+  else
+    let s:other_style = 1
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   endif
 else
   if s:cterm_style=='cool' || s:cterm_style=='defdark'
     set background=dark
   elseif s:cterm_style=='default'
     set background=light
+<<<<<<< HEAD
   else | let s:other_style = 1
+=======
+  else
+    let s:other_style = 1
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   endif
 endif
 
@@ -82,6 +211,7 @@ endif
 
 let s:color_name = expand("<sfile>:t:r")
 
+<<<<<<< HEAD
 if s:other_style==0 | let g:colors_name = s:color_name
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
@@ -92,6 +222,12 @@ hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
   " Go from console version to gui, the color scheme should be sourced again
   execute "autocmd TermChanged * if g:colors_name == '".s:color_name."' | "
+=======
+if s:other_style==0
+  let g:colors_name = s:color_name
+  " Go from console version to gui, the color scheme should be sourced again
+  execute "autocmd TermChanged *	if g:colors_name == '".s:color_name."' | "
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 	\."colo ".s:color_name." | endif"
 else
   execute "runtime colors/".s:style.".vim"
@@ -99,7 +235,11 @@ endif
 
 " Command to go different schemes easier.
 execute "command! -nargs=1 Colo if '".s:color_name."'!=\"<args>\" | "
+<<<<<<< HEAD
 	\'let g:psc_style = "<args>"| endif | colo '.s:color_name
+=======
+	\"let g:psc_style = \"<args>\"| endif | colo ".s:color_name
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 " Give control to 'reloaded' scheme if possible
 if s:style == 'reloaded'
@@ -117,6 +257,25 @@ endif
 " #aabbcc = Red aa, Green bb, Blue cc
 " we must use hard-coded colours to get more 'tender' colours
 "
+<<<<<<< HEAD
+=======
+" Grey Scales :
+" #b0b0b0 = Grey 11/16	#d0d0d0 = Grey 13/16	#e0e0e0 = Grey 7/8 (=14/16)
+" #404040 = Grey 1/4	#808080 = Grey 1/2	Black	= Grey 0
+"
+" Red & Magenta Scales:
+" #800000 = Blood Red	#e0c060 = Tender Orange	#f08060 = Bright Red
+" #f0c0f0 = Tender Pink	#800080 = Purple
+"
+" Green & Yellow Scales:
+" #00f000 = Cursor	#d0d090 = Rice Yellow	#c0e080 = Tree Green
+" #60f080 = Bright Green
+"
+" Blue & Cyan Scales:
+" #80c0e0 = Sea Blue	#6080f0 = Gem Blue	#000080 = Indigo Blue
+" #a6caf0 = Sky Cyan	#b0d0f0 = Bright Cyan	#c0d8f8 = Br. Cyan Variant
+"
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 
 " GUI:
@@ -124,6 +283,7 @@ endif
 " I don't want to abuse folding, but here folding is used to avoid confusion. 
 if s:style=='warm' 
   " Warm style for gui here {{{2
+<<<<<<< HEAD
   " LIGHT COLOR DEFINE START
 
   highlight Normal		guifg=#000000	guibg=#e0e0e0
@@ -132,6 +292,14 @@ if s:style=='warm'
   highlight Cursor		guifg=#f0f0f0	guibg=#008000
   " The idea of CursorIM is pretty good, however, the feature is still buggy
   " in the current version (Vim 6.3). 
+=======
+  highlight Normal		guifg=Black	guibg=#e0e0e0
+  highlight Search		guifg=#902000	guibg=#f8f8f8
+  highlight Visual		guifg=fg	guibg=#a6caf0
+  highlight Cursor		guifg=#f0f0f0	guibg=#008000
+  " The idea of CursorIM is pretty good, however, the feature is buggy in
+  " the current version (Vim 6.2). 
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   " The following line will be kept commented until the bug fixed.
   "
   " highlight CursorIM		guifg=#f0f0f0	guibg=#800080
@@ -178,6 +346,7 @@ if s:style=='warm'
   highlight StatusLineNC	guifg=fg	guibg=#c0c0c0
   highlight VertSplit		guifg=fg	guibg=#c0c0c0
   highlight Underlined		guifg=#6a5acd	guibg=bg	gui=underline
+<<<<<<< HEAD
   highlight Ignore		guifg=bg	guibg=bg
 
   " LIGHT COLOR DEFINE END
@@ -187,6 +356,13 @@ elseif s:style=='cool'
   " DARK COLOR DEFINE START
 
   highlight Normal		guifg=#d0d0d0	guibg=#202020
+=======
+  " }}}2
+elseif s:style=='cool' 
+  " Cool style for gui here {{{2
+
+  highlight Normal		guifg=#d0d0d0	guibg=Black
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   highlight Comment		guifg=#d0d090	guibg=bg
   highlight Constant		guifg=#80c0e0	guibg=bg
   highlight Number		guifg=#e0c060	guibg=bg
@@ -200,6 +376,7 @@ elseif s:style=='cool'
   highlight Type		guifg=#b0d0f0	guibg=bg
   highlight Special		guifg=#e0c060	guibg=bg
   highlight Error		guifg=#f08060	guibg=bg
+<<<<<<< HEAD
   if s:inversed_todo==1
     highlight Todo		guifg=#d0d090	guibg=#000080
   else
@@ -217,17 +394,41 @@ elseif s:style=='cool'
   highlight VisualNOS		guifg=fg	guibg=#000080
   highlight SpecialKey		guifg=#b0d0f0	guibg=bg
   highlight NonText		guifg=#6080f0	guibg=#101010
+=======
+  if s:inversed_todo==0
+    highlight Todo		guifg=#800000	guibg=#d0d090
+  else
+    highlight Todo		guifg=#d0d090	guibg=#000080
+  endif
+  highlight Search		guifg=#e0e0e0	guibg=#800000
+  highlight Visual		guifg=bg	guibg=#a6caf0
+  highlight Cursor		guifg=bg	guibg=#00f000
+  " NOTE THIS IS IN THE COOL SECTION
+  " highlight CursorIM		guifg=bg	guibg=#f000f0
+  highlight StatusLine		guifg=bg	guibg=#a6caf0
+  highlight LineNr		guifg=#b0b0b0	guibg=bg
+  highlight Question		guifg=bg	guibg=#d0d090
+  highlight ModeMsg		guifg=fg	guibg=#000080
+  highlight VisualNOS		guifg=fg	guibg=#000080
+  highlight SpecialKey		guifg=#b0d0f0	guibg=bg
+  highlight NonText		guifg=#6080f0	guibg=bg
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   highlight Directory		guifg=#80c0e0	guibg=bg
   highlight ErrorMsg		guifg=#d0d090	guibg=#800000
   highlight MoreMsg		guifg=#c0e080	guibg=bg
   highlight Title		guifg=#f0c0f0	guibg=bg
   highlight WarningMsg		guifg=#f08060	guibg=bg
+<<<<<<< HEAD
   highlight WildMenu		guifg=#000000	guibg=#d0d090
+=======
+  highlight WildMenu		guifg=bg	guibg=#d0d090
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   highlight Folded		guifg=#d0d0d0	guibg=#004000
   highlight FoldColumn		guifg=#e0e0e0	guibg=#008000
   highlight DiffAdd		guifg=fg	guibg=#000080
   highlight DiffChange		guifg=fg	guibg=#800080
   highlight DiffDelete		guifg=#6080f0	guibg=#202020
+<<<<<<< HEAD
   highlight DiffText		guifg=#000000	guibg=#c0e080
   highlight SignColumn		guifg=#e0e0e0	guibg=#008000
   highlight IncSearch		guifg=#000000	guibg=#d0d0d0
@@ -240,6 +441,17 @@ elseif s:style=='cool'
   " }}}2
 elseif s:style=='defdark'
   highlight Normal		guifg=#f0f0f0	guibg=#000000
+=======
+  highlight DiffText		guifg=bg	guibg=#c0e080
+  highlight SignColumn		guifg=#e0e0e0	guibg=#008000
+  highlight IncSearch		guifg=bg	guibg=#d0d0d0
+  highlight StatusLineNC	guifg=bg	guibg=#c0c0c0
+  highlight VertSplit		guifg=bg	guibg=#c0c0c0
+  highlight Underlined		guifg=#80a0ff	guibg=bg	gui=underline 
+  " }}}2
+elseif s:style=='defdark'
+  highlight Normal		guifg=#d0d0d0	guibg=Black
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 endif
 
 " Take NT gui for example, If you want to use a console font such as
@@ -247,6 +459,7 @@ endif
 " and the bold font for that will be too thick, you may not want it be bolded.
 " The following code does this.
 "
+<<<<<<< HEAD
 " All of the bold font may be disabled, since continuously switching between
 " bold and plain font hurts consistency and will inevitably fatigue your eye!
 
@@ -275,11 +488,28 @@ endif
 " Enable the bold style
 if s:fontface=="mixed"
   MultiHi gui=bold Question DiffText Statement Type MoreMsg ModeMsg NonText Title VisualNOS DiffDelete
+=======
+" I disabled all of the bold font for the same reason: continuously switching
+" between bold and plain font hurts consistency and will inevitably fatigue
+" your eye!
+
+" Maximum 20 parameters for vim script function
+MultiHi gui=NONE ModeMsg Search Visual Cursor Special Comment Constant Number StatusLine LineNr Question PreProc Statement Type Todo Error Identifier Normal
+
+MultiHi gui=NONE VisualNOS SpecialKey NonText Directory ErrorMsg MoreMsg Title WarningMsg WildMenu Folded FoldColumn DiffAdd DiffChange DiffDelete DiffText SignColumn IncSearch StatusLineNC VertSplit
+
+" Enable the bold style
+if s:fontface=="mixed"
+  MultiHi gui=bold Question StatusLine DiffText Statement Type MoreMsg ModeMsg NonText Title VisualNOS DiffDelete
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 endif
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " Color Term:
 
 " It's not quite possible to support 'cool' and 'warm' simultaneously, since
@@ -374,8 +604,11 @@ endif
 " Links:
 "
 if (s:style=='cool') || (s:style == 'warm')
+<<<<<<< HEAD
   " COLOR LINKS DEFINE START
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
   highlight link		String		Constant
   " Character must be different from strings because in many languages
   " (especially C, C++) a 'char' variable is scalar while 'string' is pointer,
@@ -392,8 +625,11 @@ if (s:style=='cool') || (s:style == 'warm')
   " these are used by TagList
   highlight link		MyTagListTagName	IncSearch
   highlight link		MyTagListTagScope	Constant
+<<<<<<< HEAD
 
   " COLOR LINKS DEFINE END
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 endif
 
 

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " Vim color file
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last Change:	2001 Jul 23
@@ -21,6 +24,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = "default"
+<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -28,5 +32,7 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 " vim: sw=2

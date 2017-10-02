@@ -14,6 +14,7 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name="midnight"
+<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -21,6 +22,8 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 hi Normal guifg=lightsteelblue guibg=#00006f ctermfg=14
 

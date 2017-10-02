@@ -24,6 +24,7 @@ let g:colors_name = "Light"
 hi Cursor guibg=IndianRed
 
 hi Normal  guibg=grey78   guifg=black
+<<<<<<< HEAD
 hi NonText guibg=grey74   guifg=grey50
 
 if version >= 700
@@ -31,16 +32,22 @@ if version >= 700
     hi CursorLine   guibg=grey85
     hi CursorColumn guibg=grey85
 endif
+=======
+hi NonText guibg=grey75
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 hi Visual     guibg=palegreen3 guifg=fg   gui=NONE
 hi Search     guibg=LightBlue
 hi IncSearch  guibg=yellow2    guifg=fg   gui=none
 hi WarningMsg guibg=white      guifg=red3 gui=bold
 
+<<<<<<< HEAD
 " Outline mode highlighting
 hi Outline_2_match guifg=blue3 guibg=grey83
 
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 "
 " Brown / Tan
 "
@@ -119,7 +126,11 @@ hi String guifg=darkorange4 gui=none
 
 hi! link SpecialKey Identifier
 hi! link Directory Identifier
+<<<<<<< HEAD
 hi! link MatchParen Search
+=======
+
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 
 

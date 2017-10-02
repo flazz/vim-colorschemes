@@ -14,6 +14,7 @@ endif
 
 if has("gui_running")
   let colors_name = "lanzarotta"
+<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -22,6 +23,8 @@ hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
 
+=======
+>>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
   hi Boolean      guifg=LightMagenta
   hi Character    guifg=LightRed
