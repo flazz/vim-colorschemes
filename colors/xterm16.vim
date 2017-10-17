@@ -237,7 +237,7 @@ function! Brightness(...)
 	echo "Brightness: ".s:brightness.", Colormap: ".s:colormap
 	return 0
     elseif a:0 > 2
-	echoerr 'Too many arguements.'
+	echoerr 'Too many arguments.'
 	return 0
     endif
 
