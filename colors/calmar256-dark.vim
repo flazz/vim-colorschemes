@@ -25,7 +25,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name = "calmar256"
+let g:colors_name = "calmar256-dark"
 
 let s:save_cpo = &cpo
 set cpo&vim
