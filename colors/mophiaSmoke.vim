@@ -1,332 +1,91 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+" Vim color file
+" Maintainer:	Om Narasimhan<om.nara@bluehatsoft.com>
+" Last Change:	Fri Jan 14 14:23:03 PST 2011
+" Version:	0.9a
+" cool help screens
+" :he group-name
+" :he highlight-groups
+" :he cterm-colors
 
-<head>
-  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>Error : vim online</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
-  <meta name="viewport" content="width=1000, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
-</head>
+if version > 580
+    " no guarantees for version 5.8 and below, but this makes it stop
+    " complaining
+    hi clear
+    if exists("syntax_on")
+	syntax reset
+    endif
+endif
+let g:colors_name="mophiaSmoke"
 
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+if has("gui_running")
+set background=light
+highlight	Normal		guibg=WhiteSmoke	guifg=MidnightBlue
+highlight	NonText		gui=bold	guibg=grey90	guifg=Blue
+highlight	Directory	guifg=Blue
+highlight	ErrorMsg	guifg=White	guibg=Red
+highlight	IncSearch	gui=reverse
+highlight	Search		guibg=Yellow
+highlight	LineNr		guifg=Brown	guibg=lavender
+highlight	StatusLineNC	gui=NONE	guibg=LightSteelBlue	guifg=MidNightBlue
+highlight	StatusLine	gui=NONE	guibg=MediumOrchid guifg=White gui=bold
+highlight	VertSplit	gui=NONE	guibg=peachpuff	guifg=blue
+highlight	Visual		guibg=LightGrey
+highlight	Folded		guifg=Yellow	guibg=RoyalBlue
+highlight	CursorLine	guibg=honeydew
+highlight	Cursor		guibg=DarkViolet guifg=bg
+highlight	MatchParen	guibg=MediumSpringGreen
+highlight	Comment		guifg=RoyalBlue3	gui=italic
+highlight	Constant	guifg=Blue3
+highlight	Identifier	guifg=DodgerBlue4
+highlight	Statement	gui=bold	guifg=Brown
+highlight	PreProc		guifg=Purple
+highlight	Type		guifg=BlueViolet	gui=bold
+highlight	Underlined	gui=underline	guifg=SlateBlue
+highlight	Ignore		guifg=grey85
+highlight	Error		guifg=White	guibg=Red
+highlight	Todo		guifg=Blue	guibg=Yellow
+highlight	DiffText	gui=bold	guibg=DarkOrange
+highlight	DiffDelete	gui=bold	guifg=Blue	guibg=IndianRed
+highlight	DiffChange	guibg=Orchid
+highlight	DiffAdd		guibg=HotPink
+highlight	WarningMsg	guifg=Red	gui=bold
+highlight	MoreMsg		gui=bold	guifg=DeepPink4
+highlight	String		gui=italic	guibg=AntiqueWhite	guifg=blue1
 
-<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-  <tr>
-    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  </tr>
-  <tr>
-  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
-  <td class="lightbg" align="left"><a href="https://www.vim.org/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
-  <td class="lightbg" align="center">
-	 <a href="/"><img src="/images/vim_header.gif" border="0" alt="Vim logo" class="align-middle"></a>
-	  </td>
-  <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
-  </tr>
-  <tr>
-    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  </tr>
-  <tr>
-    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
-  </tr>
-</table>
-<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+" highlight	TabLine		gui=underline	guibg=LightGrey
+" highlight	TabLineSel	gui=bold
+" highlight	TabLineFill	gui=reverse
+" highlight	lCursor		guifg=bg	guibg=fg
+" highlight	Special		guifg=SlateBlue
+"
+highlight	link	FoldColumn	Folded
+highlight	link	String		Constant
+highlight	link	Character	Constant
+highlight	link	Number		Constant
+highlight	link	Boolean		Constant
+highlight	link	Float		Number
+highlight	link	Function	Identifier
+highlight	link	Conditional	Statement
+highlight	link	Repeat		Statement
+highlight	link	Label		Statement
+highlight	link	Operator	Statement
+highlight	link	Keyword		Statement
+highlight	link	Exception	Statement
+highlight	link	Include	PreProc
+highlight	link	Define	PreProc
+highlight	link	Macro	PreProc
+highlight	link	PreCondit	PreProc
+highlight	link	StorageClass	Type
+highlight	link	Structure	Type
+highlight	link	Typedef	Type
+highlight	link	Tag	Special
+highlight	link	SpecialChar	Special
+highlight	link	Delimiter	Special
+highlight	link	SpecialComment	Special
+highlight	link	Debug	Special
+highlight	link	Title	MoreMsg
+highlight	link	ModeMsg	Moremsg
+highlight	link	CursorColumn	CursorLine
+highlight	link	Question	WarningMsg
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-  <col width="180">
-  <col width="1">
-
-  <tr valign="top">
-    <td class="sidebar">
-      <table width="180" cellpadding="4" cellspacing="0" border="0">
-        <tr valign="top">
-          <td class="sidebar">
-
-<!-- INCLUDE THE PAGE NAVIGATION -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-    <tr>
-        <td><small>not logged in (<a href="https://www.vim.org/login.php">login</a>)</small></td>
-    </tr>
-    <tr><td>
-<small>&nbsp;</small>
-<form action="https://www.google.com/cse" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="20" />
-    <br>
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
-<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-    </td></tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
-    </tr>
-    <tr>
-        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/">Home</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/search.php">Advanced search</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/about.php">About Vim</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/community.php">Community</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/news/news.php">News</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/sponsor/index.php">Sponsoring</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/trivia.php">Trivia</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/docs.php">Documentation</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader download"><a href="https://www.vim.org/download.php">Download</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/scripts/index.php">Scripts</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/tips/index.php">Tips</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/account/index.php">My Account</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/huh.php">Site Help</a></td>
-        </tr>
-</table>
-<br>
-<g:plusone></g:plusone>
-
-            <table width="172" cellpadding="0" cellspacing="0" border="0">
-              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
-              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
-            </table>
-            <br>
-
-<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
-&nbsp;
-
-          </td>
-        </tr>
-      </table>
-    </td>
-
-    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
-    <td>
-      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
-        <tr>
-          <td valign="top">
-
-<p class="errorheader">
-<b>Vim Online Error</b><br><br>
-</p>
-<p>
-download: I couldn't find the file you requested (src_id=14892), are you sure it exists?</p>
-<p>
-
-<!-- fill up with spaces to make the main field wide enough -->
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<!-- finish off the framework -->
-          </td>
-        </tr>
-      </table>
-    </td>
-
-  </tr>
-</table>
-
-<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
-
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr>
-    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
-
-    <td align="left" valign="top"><small>
-      If you have questions or remarks about this site, visit the
-      <a href="http://vimonline.sf.net">vimonline development</a> pages.
-      Please use this site responsibly.
-      <br> 
-      
-      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
-      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
-      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
-      </small>
-	&nbsp;
-	&nbsp;
-
-    </td>
-
-    <td align="right" valign="top">
-      	<a href="//sourceforge.net/projects/vim" rel="nofollow"><img src="//sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
-    </td>
-
-    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
-  </tr>
-
-    
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  
-  </tr>
-</table>
-
-<!-- for Google +1 button -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-</body>
-</html>
-
+endif

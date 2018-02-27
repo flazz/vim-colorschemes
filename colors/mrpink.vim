@@ -1,48 +1,52 @@
-ipts/download_script.php?src_id=11222
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:56:52 GMT
-Vary: Accept-Encoding
+" Maintainer: mgutz - Mario Gutierrez
+" Last Change: 20090705
+"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11222">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:56:51 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=11223
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:56:54 GMT
-Vary: Accept-Encoding
+set background=dark
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11223">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:56:51 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=11249
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:56:52 GMT
-Vary: Accept-Encoding
+hi clear
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11249">here</a>.</p>
-</body></html>
+if exists("syntax_on")
+  syntax reset
+endif
+
+let colors_name = "mrpink"
+
+" Vim >= 7.0 specific colors
+if version >= 700
+  hi CursorLine guibg=#303030
+  hi CursorColumn guibg=#303030
+  hi MatchParen guifg=#f6f3e8 guibg=#857b6f gui=bold
+  hi Pmenu guifg=#f6f3e8 guibg=#444444
+  hi PmenuSel guifg=#000000 guibg=#cae682
+endif
+
+" General colors
+hi Cursor   	guifg=NONE    guibg=#666666 gui=none
+hi Normal 		guifg=#e0e0e0 guibg=#242424 gui=none
+hi NonText 		guifg=#383838 guibg=#242424 gui=none
+hi LineNr 		guifg=#383838 guibg=#242424 gui=none
+hi StatusLine 	guifg=#a0a0a0 guibg=#1c1c1c gui=none
+hi StatusLineNC guifg=#857b6f guibg=#1c1c1c gui=none
+hi VertSplit 	guifg=#1c1c1c guibg=#1c1c1c gui=none
+hi Folded 		guibg=#384048 guifg=#a0a8b0 gui=none
+hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold
+hi Visual		guifg=NONE    guibg=#000000 gui=none
+hi SpecialKey	guifg=#808080 guibg=#242424 gui=none
+hi Special		guifg=#e7f6da gui=none
+
+" Syntax highlighting
+hi Comment 		guifg=#99968b gui=italic
+hi Todo 		guifg=#8f8f8f gui=italic
+hi String 		guifg=#98FF85 gui=italic
+
+hi Identifier 	guifg=#ffff99 gui=none
+hi Function 	guifg=#ffff99 gui=none
+hi Type 		guifg=#ffff99 gui=none
+
+hi PreProc 		guifg=#FFA1CF gui=none
+hi Number		guifg=#FFA1CF gui=none
+hi Constant 	guifg=#FFA1CF gui=none
+
+hi Statement 	guifg=#8ac6f2 gui=none
+hi Keyword		guifg=#8ac6f2 gui=none

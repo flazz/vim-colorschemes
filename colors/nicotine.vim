@@ -1,66 +1,33 @@
-/download_script.php?src_id=6922
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:45:32 GMT
-Vary: Accept-Encoding
+" Vim color file
+" Maintainer:  Tuomas Kasmra <kasmra@gmail.com>
+" Last Change:  2007 March 28
+" Version: 1.0
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6922">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:45:29 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=7017
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:45:29 GMT
-Vary: Accept-Encoding
+set background=light
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+let g:colors_name="nicotine"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=7017">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:45:29 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=12437
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:45:32 GMT
-Vary: Accept-Encoding
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=12437">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:45:29 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=11157
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:45:29 GMT
-Vary: Accept-Encoding
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11157">here</a>.</p>
-</body></html>
+hi Normal		guifg=#000000	guibg=#ffffcc
+hi Title		guifg=#000000	guibg=#ffffcc	gui=BOLD
+hi lCursor		guibg=#000000	guifg=NONE
+hi LineNr		guifg=#ffffcc	guibg=#6f8b17
+hi Comment		guifg=#ec0904	gui=NONE
+hi Identifier	guifg=#000000	gui=NONE
+hi Visual		guifg=NONE		guibg=#00ccff	gui=NONE
+hi Directory    guifg=#8b8b8b
+hi NonText      guifg=#6f8b17
+hi Special      guifg=#ff8100
+hi Operator		guifg=#006600	gui=NONE
+hi Statement	guifg=#006600	gui=NONE
+hi TypeDef		guifg=#669900	gui=NONE
+hi Type			guifg=#669900	gui=NONE
+hi Boolean		guifg=#669900	gui=NONE
+hi String       guifg=#9d7d4a	gui=NONE
+hi Number       guifg=#9d7d4a	gui=NONE
+hi Constant     guifg=#9d7d4a	gui=NONE
+hi Function		guifg=#6f8b17	gui=NONE
+hi PreProc		guifg=#6f8b17	gui=NONE
+hi Keyword		guifg=#6f8b17	gui=NONE
