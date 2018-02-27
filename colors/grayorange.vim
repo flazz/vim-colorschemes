@@ -1,14 +1,7 @@
-<<<<<<< HEAD:colors/colorscheme_template.vim
-"" Vim color file
-" Maintainer:   Your name <youremail@something.com>
-" Last Change:  
-" URL:		
-=======
 " Vim color file
 " Maintainer:   Charles <cherry_avium@yahoo.com>
 " Last Change:  11 June 2004
 " URL:		http://
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786:colors/grayorange.vim
 
 " cool help screens
 " :he group-name
@@ -22,20 +15,7 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-<<<<<<< HEAD:colors/colorscheme_template.vim
-let g:colors_name="mycolorscheme"
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
-
-"hi Normal
-=======
 let g:colors_name="GrayOrange"
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786:colors/grayorange.vim
 
 " OR
 
