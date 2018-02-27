@@ -1,66 +1,56 @@
-/download_script.php?src_id=6066
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:43:07 GMT
-Vary: Accept-Encoding
+" Vim color file
+" Maintainer:   Alex Esplin (alex.esplin@gmail.com)
+" Last Change:  
+" URL:          
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6066">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:43:07 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=6238
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:43:09 GMT
-Vary: Accept-Encoding
+set background=dark
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+let g:colors_name="doriath"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6238">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:43:07 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=6259
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:43:09 GMT
-Vary: Accept-Encoding
+hi Normal               guifg=#d2ffc6 guibg=#0e2a1a
+hi Cursor               guibg=#54ff9f guifg=#0e2a1a
+"hi CursorIM    
+"hi Directory   
+"hi DiffAdd             
+"hi DiffChange  
+"hi DiffDelete  
+"hi DiffText    
+"hi ErrorMsg    
+hi VertSplit            guibg=#c2bfa5 guifg=grey50 gui=none
+hi Folded               guibg=#4e9271 guifg=#0e2a1a
+hi FoldColumn           guibg=grey30 guifg=tan
+hi IncSearch            guibg=khaki guifg=slategrey
+hi LineNr               guifg=khaki
+hi ModeMsg              guifg=goldenrod
+hi MoreMsg              guifg=SeaGreen
+hi NonText              guibg=LightBlue guibg=SeaGreen
+hi Question             guifg=springgreen
+hi Search               guibg=DarkRed guifg=DarkSeaGreen4
+hi SpecialKey           guifg=yellowgreen
+hi StatusLine           guibg=#c2dfa5 guifg=black gui=none
+hi StatusLineNC         guibg=#c2dfa5 guifg=grey50 gui=none
+hi Title                guifg=IndianRed 
+hi Visual               guibg=olivedrab guifg=khaki gui=none
+"hi VisualNOS   
+hi WarningMsg           guifg=salmon
+"hi WildMenu    
+"hi Menu                
+hi Scrollbar            guibg=#0e2a1a
+"hi Tooltip             
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6259">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:43:07 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=6252
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:43:07 GMT
-Vary: Accept-Encoding
+" syntax highlighting groups
+hi Comment              guifg=#1d96e7
+hi Constant             guifg=#00ff62
+hi Identifier           guifg=#28dbd2
+hi Statement            guifg=#ffff5b
+hi PreProc              guifg=IndianRed
+hi Type                 guifg=#ff3636
+hi Special              guifg=navajowhite
+"hi Underlined  
+hi Ignore               guifg=grey40
+"hi Error               
+hi Todo                 guifg=orangered guibg=yellow2
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6252">here</a>.</p>
-</body></html>

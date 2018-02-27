@@ -1,66 +1,52 @@
-/download_script.php?src_id=6962
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:33:46 GMT
-Vary: Accept-Encoding
+" Vim color - Clarity
+"  
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6962">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:33:46 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=9575
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:33:49 GMT
-Vary: Accept-Encoding
+set background=dark
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+let g:colors_name="clarity"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=9575">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:33:46 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=9704
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:33:49 GMT
-Vary: Accept-Encoding
+highlight Normal         gui=NONE guifg=LightBlue2   guibg=#1F3055
+highlight Comment        gui=NONE guifg=Grey62       guibg=bg 
+highlight PreProc        gui=NONE guifg=Salmon       guibg=bg 
+highlight Precondit      gui=NONE guifg=Khaki3       guibg=bg
+highlight Identifier     gui=NONE guifg=Khaki3       guibg=bg 
+highlight Type           gui=BOLD guifg=Orange       guibg=bg 
+highlight StorageClass   gui=BOLD guifg=Cornsilk2    guibg=bg
+highlight Todo           gui=BOLD guifg=#1F3055      guibg=White 
+highlight NonText        gui=NONE guifg=#334C51      guibg=SteelBlue4 
+highlight LineNr         gui=NONE guifg=HoneyDew2    guibg=Grey25 
+highlight StatusLineNC   gui=NONE guifg=Grey80       guibg=LightBlue4 
+highlight StatusLine     gui=NONE guifg=DarkBlue     guibg=#FFFFCA 
+highlight IncSearch      gui=NONE guifg=Black        guibg=#FFE568
+highlight Search         gui=UNDERLINE,BOLD          guifg=#FFE568 guibg=bg
+highlight Cursor         gui=NONE guifg=Grey50       guibg=#FFE568
+highlight CursorIM       gui=NONE guifg=Grey50       guibg=#FFE568
+highlight Title          gui=BOLD guifg=OliveDrab3   guibg=bg
+highlight WarningMsg     gui=BOLD guifg=White        guibg=Red4
+highlight String         gui=NONE guifg=Grey80       guibg=bg      
+highlight Number         gui=NONE guifg=OliveDrab2   guibg=bg
+highlight Constant       gui=NONE guifg=#ACEDAB      guibg=bg 
+highlight Visual         gui=BOLD guifg=White        guibg=bg
+highlight Directory      gui=NONE guifg=PeachPuff    guibg=bg
+highlight DiffAdd        gui=NONE guifg=white        guibg=SeaGreen
+highlight DiffChange     gui=BOLD guifg=white        guibg=Blue
+highlight DiffDelete     gui=NONE guifg=Grey40       guibg=Grey20 
+highlight DiffText       gui=BOLD guifg=HoneyDew1    guibg=FireBrick 
+highlight Typedef        gui=NONE guifg=Cornsilk     guibg=bg
+highlight Define         gui=NONE guifg=White        guibg=bg
+highlight Tag            gui=NONE guifg=LightBlue2   guibg=bg
+highlight Debug          gui=BOLD guifg=Green        guibg=bg
+highlight Special        gui=NONE guifg=NavajoWhite  guibg=bg         
+highlight SpecialChar    gui=NONE guifg=NavajoWhite  guibg=bg         
+highlight Delimiter      gui=NONE guifg=NavajoWhite  guibg=bg         
+highlight SpecialComment gui=NONE guifg=NavajoWhite3 guibg=bg         
+highlight Conditional    gui=BOLD guifg=Wheat2       guibg=bg         
+highlight Statement      gui=BOLD guifg=Pink3        guibg=bg 
+highlight WildMenu       gui=NONE guifg=White        guibg=FireBrick
+highlight browseSuffixes gui=NONE guifg=Cornsilk3    guibg=bg
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=9704">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:33:46 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=12201
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:33:47 GMT
-Vary: Accept-Encoding
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=12201">here</a>.</p>
-</body></html>
+

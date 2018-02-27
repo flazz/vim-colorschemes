@@ -1,66 +1,32 @@
-ipts/download_script.php?src_id=11221
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:57:12 GMT
-Vary: Accept-Encoding
+" Vim color file
+" d8g_01 - Martin Kopta (http://martin.kopta.eu)
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11221">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:57:12 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=11248
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:57:12 GMT
-Vary: Accept-Encoding
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+"colorscheme default
+let g:colors_name = "d8g_01"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11248">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:57:12 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=11274
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:57:13 GMT
-Vary: Accept-Encoding
+" Console
+hi Normal     ctermfg=white  ctermbg=Black
+hi Cursor     ctermfg=Black  ctermbg=LightGrey      cterm=NONE
+hi Search     ctermfg=Black ctermbg=Cyan            cterm=NONE
+hi Visual                                           cterm=reverse
+hi Special    ctermfg=darkgrey
+hi Comment    ctermfg=darkgrey
+hi StatusLine ctermfg=white  ctermbg=black
+hi Identifier ctermfg=Cyan
+hi Statement  ctermfg=Cyan                          cterm=NONE
+hi Constant   ctermfg=Grey                          cterm=NONE
+hi Type       ctermfg=Cyan                          cterm=NONE
+hi LineNr     ctermfg=grey   ctermbg=black
+hi Line       ctermfg=white                         term=underline
+hi Preproc    ctermfg=Cyan
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11274">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:57:12 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=11294
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:57:12 GMT
-Vary: Accept-Encoding
+hi Pmenu      ctermfg=black  ctermbg=gray
+hi PmenuSel   ctermfg=black  ctermbg=yellow
+hi PmenuSbar  ctermfg=white  ctermbg=black
+hi PmenuThumb ctermfg=white  ctermbg=gray
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=11294">here</a>.</p>
-</body></html>
