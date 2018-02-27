@@ -1,66 +1,42 @@
-ts/download_script.php?src_id=8342
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:44:08 GMT
-Vary: Accept-Encoding
+" local syntax file - set colors on a per-machine basis:
+" vim: tw=0 ts=4 sw=4
+" Vim color file
+"
+" by Victor Hugo Soliz Kuncar
+" maintainer: Victor Hugo Soliz Kuncar
+" Last Change: 2004 July
+"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=8342">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:44:08 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=6431
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:44:10 GMT
-Vary: Accept-Encoding
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=6431">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:44:08 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 268
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=12787
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:44:08 GMT
-Vary: Accept-Encoding
+set background=light
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+let g:colors_name = "ColorSchemeCreator"  
+hi Normal		guifg=#000000 guibg=#FFFFFF  
+hi comment		guifg=#008800
+hi constant		guifg=#0000AA
+hi statement	guifg=#000000 gui=bold  
+hi preproc		guifg=#777777
+hi type			guifg=#0055AA gui=bold  
+hi special		guifg=#0000AA gui=bold
+hi String       guifg=#0000AA gui=italic
+hi Operator		guifg=#AA5500 gui=bold
+hi clear Visual 
+hi Visual		term=reverse cterm=reverse gui=reverse  
+hi Exception    guifg=#220000
+hi Boolean      guifg=#0000AA
+hi StorageClass guifg=#000000
+hi Define       guifg=#777777
+hi Include       guifg=#777777
+hi Number       guifg=#0000AA
+hi Float        guifg=#0000AA
+hi Function     guifg=#000000
+hi Conditional  guifg=#000000
+hi Statement    guifg=#000000
+hi SpecialChar  guifg=#AA5500 gui=italic
+hi Todo		    guifg=#008800
+hi Structure     guifg=#000000
+hi Identifier     guifg=#000000
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=12787">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:44:08 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=7293
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:44:09 GMT
-Vary: Accept-Encoding
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=7293">here</a>.</p>
-</body></html>
