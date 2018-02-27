@@ -1,111 +1,155 @@
-" Vim color file
-" Maintainer:	Andrew Lyon <orthecreedence@gmail.com>
-" Last Change:	2012-03-21 06:01:00 PST
-" Version:	2.2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Author: Mario Gutierrez (mario@mgutz.com)
+" Last Change: Dececember 6, 2010 
+" Version: 0.1.2
+"
+" removed italics on string
+" ruby interpolation color
+" identifier color
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Note that this color scheme is loosely based off of desert.vim (Hans Fugal
-" <hans@fugal.net>) mixed with some of slate.vim (Ralph Amissah
-" <ralph@amissah.com>) but with much of my own modification.
 
 set background=dark
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-	syntax reset
-    endif
+hi clear
+if exists("syntax_on")
+  syntax reset
 endif
-let g:colors_name="void"
+let colors_name = "chance-of-storm"
 
 
-hi Normal	guifg=#e0e0e0 guibg=grey9
+"""""""""" General
 
-" highlight groups
-hi Cursor	guibg=khaki guifg=slategrey
-"hi CursorIM
-"hi Directory
-"hi DiffAdd
-"hi DiffChange
-"hi DiffDelete
-"hi DiffText
-"hi ErrorMsg
-hi VertSplit	guibg=black guifg=black gui=none
-hi Folded	guibg=grey30 guifg=gold
-hi FoldColumn	guibg=grey30 guifg=tan
-hi IncSearch	guifg=slategrey guibg=khaki
-"hi LineNr
-hi ModeMsg	guifg=goldenrod
-hi MoreMsg	guifg=SeaGreen
-hi NonText	guifg=LightBlue guibg=grey9
-hi Question	guifg=springgreen
-hi Search	guibg=peru guifg=wheat
-hi SpecialKey	guifg=yellowgreen
-hi StatusLine	guibg=black guifg=#cccccc gui=none
-hi StatusLineNC	guibg=black guifg=grey40 gui=none
-hi Title	guifg=indianred
-hi Visual	gui=none guifg=khaki guibg=olivedrab
-"hi VisualNOS
-hi WarningMsg	guifg=salmon
-"hi WildMenu
-"hi Menu
-"hi Scrollbar
-"hi Tooltip
+hi Normal 		guifg=#cacfd3   guibg=#181c20 gui=none
 
-" syntax highlighting groups
-hi Comment	guifg=grey50 ctermfg=darkcyan
-hi Constant	guifg=#e09085 ctermfg=brown
-hi Identifier	guifg=#d0d0b0
-hi Statement	guifg=#ccaa88 gui=bold cterm=bold term=bold
-"hi Statement	guifg=darkkhaki
-hi PreProc	guifg=#c8e0b0
-hi Type		guifg=#99cccc term=NONE cterm=NONE gui=NONE
-hi Special	guifg=#bbccee cterm=bold term=bold
-hi Operator guifg=navajowhite cterm=NONE
-"hi Underlined
-hi Ignore	guifg=grey40
-"hi Error
-hi Todo		guifg=orangered guibg=yellow2
-hi Todo		guifg=orange guibg=gray40
+" Vim >= 7.0
+if version >= 700
+  hi CursorLine         guibg=#2a2e31
+  hi MatchParen         guifg=magenta   guibg=black   gui=bold,italic
+  hi Pmenu 		guifg=#dfeff6   guibg=#1E415E
+  hi PmenuSel 	        guifg=#dfeff6   guibg=#2D7889
 
-" Fuf/menu stuff
-hi Pmenu		guifg=#aadddd guibg=#333333
-hi PmenuSel		guifg=#ddeeee guibg=#335533
+  hi IncSearch          guifg=bg        guibg=#AF81F4 gui=bold
+  hi Search             guifg=bg        guibg=#AF81F4 gui=none
+endif
 
-" color terminal definitions
-hi SpecialKey	ctermfg=darkgreen
-hi NonText	guibg=grey9 cterm=bold ctermfg=darkblue
-hi Directory	ctermfg=brown  guifg=#ddbb66
-hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
-hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
-hi Search	cterm=NONE ctermfg=grey ctermbg=blue
-hi MoreMsg	ctermfg=darkgreen
-hi ModeMsg	cterm=NONE ctermfg=brown
-hi LineNr guifg=grey50 ctermfg=3
-hi Question	ctermfg=green
-hi StatusLine	cterm=bold,reverse
-hi StatusLineNC cterm=reverse
-hi VertSplit	cterm=reverse
-hi Title	ctermfg=5
-hi Visual	cterm=reverse
-hi VisualNOS	cterm=bold,underline
-hi WarningMsg	ctermfg=1
-hi WildMenu	ctermfg=0 ctermbg=3
-hi Folded	ctermfg=darkgrey ctermbg=NONE
-hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
-hi DiffAdd	ctermbg=4
-hi DiffChange	ctermbg=5
-hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
-hi DiffText	cterm=bold ctermbg=1
-hi Special	ctermfg=5
-hi Identifier	ctermfg=6
-hi Statement	ctermfg=3
-hi PreProc	ctermfg=5
-hi Type		ctermfg=2
-hi Underlined	cterm=underline ctermfg=5
-hi Ignore	cterm=bold ctermfg=7
-hi Ignore	ctermfg=darkgrey
-hi Error	cterm=bold ctermfg=7 ctermbg=1
+hi Cursor 		guifg=bg        guibg=#8fdef9 gui=none
+hi Folded 		guifg=#68CEE8   guibg=#1A3951 gui=none
+hi FoldColumn           guifg=#1E415E   guibg=#1A3951 gui=none
+hi LineNr 		guifg=#2e363d   guibg=bg      gui=none
+" e.g. tildes at the end of file
+hi NonText 		guifg=#2e363d   guibg=bg      gui=none
+hi Question             guifg=#6dbb6d   guibg=bg      gui=none
+hi StatusLine 	        guifg=lightmagenta   guibg=#060809 gui=none
+hi StatusLineNC         guifg=#69839a   guibg=#060809 gui=none
+hi TabLine              guifg=#555555   guibg=#dddddd gui=none
+hi TabLineFill 		guifg=fg        guibg=#dddddd gui=none
+hi TabLineSel           guifg=#101010   guibg=#b0b0b0 gui=none
+hi Title 		guifg=#ef7760   guibg=bg      gui=none
+hi VertSplit 	        guifg=#060809   guibg=#060809 gui=bold
+ " Selected text color
+hi Visual		guifg=#dfeff6   guibg=#24557A gui=none
+hi WarningMsg           guifg=#bb6d6d   guibg=bg      gui=none
 
-" python specific highlightning
-hi link pythonOperator Statement
+
+"""""""""" Syntax highlighting
+
+hi Comment 		guifg=#69839a   guibg=bg      gui=italic
+hi Constant 	        guifg=#96defa   gui=none
+hi Function 	        guifg=#9e7cd7   gui=none
+hi Identifier 	        guifg=#2ed6d7   gui=none
+hi Ignore 		guifg=bg        guibg=bg      gui=none
+hi Keyword		guifg=#8ac6f2   gui=none
+hi Number		guifg=#e1d4a8   gui=none
+hi PreProc 		guifg=#f99d71   gui=none
+hi Special		guifg=#ffcde4   gui=none
+hi Statement 	        guifg=#8ac6f2   gui=none
+hi String 		guifg=#89e14b   gui=none
+hi Todo 		guifg=#ADED80   guibg=bg      gui=bold
+hi Type 		guifg=#489fd7   gui=none
+hi Underlined 	        guifg=#8ac6f2   gui=underline
+
+
+""""""""""" ERB
+
+hi link erubyDelimiter      PreProc 
+
+
+""""""""""" HAML
+
+hi link hamlAttributes      htmlArg
+hi link hamlTag             htmlTag 
+hi link hamlTagName         htmlTagName 
+hi link hamlIdChar          hamlId
+hi link hamlClassChar       hamlClass
+
+
+""""""""""" HELP
+
+hi link helpSectionDelim    NonText
+hi link helpExample         Statement
+
+
+""""""""""" HTML
+
+hi link htmlTag             Statement
+hi link htmlEndTag          Statement
+hi link htmlTagName         Statement 
+
+
+"""""""""" JavaScript
+
+hi link javaScriptFunction  Statement
+hi link javaScriptFuncName  Function
+hi link javaScriptLabel     PreProc 
+
+
+"""""""""" MAKE
+
+hi link makeCommands        Statement
+
+
+"""""""""" MARKDOWN (tpope's vim-markdown)
+
+hi link markdownCodeBlock           Statement
+hi link markdownCode                Statement 
+hi link markdownCodeDelimiter       Statement
+hi link markdownHeadingDelimiter    Title
+hi      markdownLinkText 	    guifg=#489fd7   gui=underline
+hi      markdownUrl                 guifg=#69839a   guibg=bg        gui=none
+hi link markdownLinkTextDelimiter   markdownUrl 
+hi link markdownLinkDelimiter       markdownUrl 
+
+
+""""""""""" NERDTree
+
+hi link treePart            NonText
+hi link treePartFile        treePart 
+hi link treeDirSlash        treePart
+hi link treeDir             Statement 
+hi link treeClosable        PreProc
+hi link treeOpenable        treeClosable
+hi link treeUp              treeClosable 
+hi      treeFlag            guifg=#3e71a1 guibg=bg gui=none
+hi link treeHelp            Comment
+hi link treeLink            Type
+hi link treeExecFile        Type
+
+
+"""""""""" PHP 
+
+hi link phpVarSelector      Identifier
+
+
+"""""""""" Ruby
+
+hi      rubyAccess                  guifg=#ef7760 guibg=bg gui=italic
+hi      rubyInterpolation           guifg=#c2f0a2 guibg=bg 
+hi link rubyInterpolationDelimiter  rubyInterpolation
+hi link rubyStringDelimiter         String
+
+
+""""""""""" XML
+
+hi link xmlTag              htmlTag
+hi link xmlEndTag           htmlEndTag
+hi link xmlTagName          htmlTagName

@@ -1,5 +1,5 @@
 " Vim color file
-" sift v1.3c
+" sift v1.0
 " http://www.vim.org/scripts/script.php?script_id=1454
 " 
 " Maintainer:	Shawn Axsom <axs221@gmail.com>
@@ -22,30 +22,45 @@ if version > 580
 endif
 
 let g:colors_name="sift"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
-hi Normal       guifg=#b4dcbc guibg=#0c121c
-hi NonText      guifg=#382920 guibg=#041328
+
+hi Normal       guifg=#cbdcef guibg=#13151c   "1a1823
+hi NonText      guifg=#382920 guibg=#1d1b25
+
+hi Folded       guibg=#201f32 guifg=#BBDDCC
+hi FoldColumn	guibg=#20202f guifg=#dbcaa5
+hi LineNr       guibg=#22202a guifg=#8095d5 
+hi StatusLine	guibg=#2a2a3a guifg=#6a65fd gui=none
+hi StatusLineNC	guibg=#252535 guifg=#151318 gui=none
+hi VertSplit	guibg=#22253a guifg=grey50 gui=none
 
 " syntax highlighting """"""""""""""""""""""""""""""""""""""""
 
-hi Comment		guifg=#007868
-hi Title		guifg=#09f909  gui=none
-hi Underlined   guifg=#49f95f gui=none
+hi Comment		guifg=#3a4a4a guibg=#0a1118
+hi Title		guifg=#fb4c2f  gui=none
+hi Underlined   guifg=#fb4c5a gui=none
 
-hi Statement    guifg=#efef70  "gui=none
-hi Type			guifg=#60e5bf  gui=none
-hi Constant		guifg=#0ad8ff
-hi Number		guifg=#eabaff
-hi PreProc      guifg=#f085b4
-hi Identifier   guifg=#50f0b4
-hi Special		guifg=#88a0d4 
-hi Operator		guifg=#f0da00 
+hi Statement    guifg=#fa5a75  gui=none
+hi Type			guifg=#d080a0  gui=none
+hi Constant		guifg=#d0aaa0
+hi Number		guifg=#d0aaca
+hi PreProc      guifg=#d045a3
+hi Identifier   guifg=#b08aaa
+hi Special		guifg=#a07ab5
+hi Operator		guifg=#4a4a50
 "hi Keyword		guifg=green
 "hi Error        guibg=#408452
-hi Function     guifg=#c08a50 guibg=bg gui=bold "or green 50b3b0 
-hi Conditional	guifg=#f8f024 guibg=bg
-hi Repeat		guifg=#ffa400 guibg=bg gui=bold
-hi Exception	guifg=#dfff80
+hi Function     guifg=#c05a3a guibg=bg "or green 50b3b0 
+hi Conditional	guifg=#f5a05a guibg=bg
+hi Repeat		guifg=#f5705a guibg=bg
+hi Exception	guifg=#ffff30
 "hi Ignore       guifg=grey40
 "hi Todo			guifg=orangered guibg=yellow2
 """""this section borrowed from OceanDeep/Midnight"""""
@@ -67,23 +82,15 @@ hi ErrorMsg     guibg=#ff4545
 
 hi Cursor       guibg=#cad5c0 guifg=#05293d
 
-hi Folded       guibg=#201328 guifg=#BBDDCC
-hi FoldColumn	guibg=#130014 guifg=#dbcaa5
-"hi FoldColumn	guibg=#83a5cd guifg=#70459F
-hi LineNr       guibg=bg guifg=#207585 gui=bold
-"hi LineNr       guibg=#081c30 guifg=#80a0dA 
-hi StatusLine	guibg=#20aaea guifg=#202050 gui=bold
-hi StatusLineNC	guibg=#2a90c0 guifg=#204050 gui=bold
 
 hi Search       guibg=#9a9d8d guifg=#3a4520
 hi IncSearch	guifg=#caceba guibg=#3a4520 
 
-hi VertSplit	guibg=#325f95 guifg=grey50 gui=none
 hi ModeMsg    	guifg=#00AACC
 hi MoreMsg      guifg=SeaGreen
 hi Question    	guifg=#AABBCC
 hi SpecialKey	guifg=#90dcb0
-hi Visual       guifg=#4a8FcF guibg=#032F5F
+hi Visual       guifg=#4a2F3F guibg=#935FdF
 "hi VisualNOS
 hi WarningMsg	guifg=salmon
 "hi WildMenu
@@ -95,7 +102,6 @@ hi WarningMsg	guifg=salmon
 " new Vim 7.0 items
 hi Pmenu        guibg=#3a6595 guifg=#9aadd5
 hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0                    
-hi MatchParen   guibg=#200080 guifg=#f0f080
 
 
 

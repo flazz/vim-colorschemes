@@ -1,7 +1,7 @@
 " Vim colorscheme
 " Name:         bclear
-" Maintainer:   Ricky Cintron 'borosai' [borosai at gmail dot com]
-" Last Change:  2009-08-04
+" Maintainer:   Ricky Cintron 'borosai' <borosai at gmail dot com>
+" Last Change:  2010-10-17
 
 hi clear
 set background=light
@@ -36,6 +36,7 @@ hi DiffChange                   guibg=#dad7ff
 hi DiffDelete   guifg=#c8c8c8   guibg=#ffffff   gui=none
 hi DiffText     guifg=#ffffff   guibg=#767396   gui=none
 hi SignColumn   guifg=#969696   guibg=#f0f0f0
+hi Conceal      guifg=#969696   guibg=#f0f0f0
 hi SpellBad     guifg=#000000   guibg=#fff5c3   guisp=#f01818   gui=undercurl
 hi SpellCap     guifg=#000000   guibg=#fff5c3   guisp=#14b9c8   gui=undercurl
 hi SpellRare    guifg=#000000   guibg=#fff5c3   guisp=#4cbe13   gui=undercurl
@@ -49,6 +50,7 @@ hi TabLineSel   guifg=#ffffff   guibg=#323232   gui=none
 hi TabLineFill  guifg=#646464   guibg=#646464   gui=none
 hi CursorColumn                 guibg=#e1f5ff
 hi CursorLine                   guibg=#e1f5ff   gui=none
+hi ColorColumn                  guibg=#b8ddf0
 hi Cursor       guifg=#ffffff   guibg=#323232
 hi lCursor      guifg=#ffffff   guibg=#004364
 hi MatchParen   guifg=#ffffff   guibg=#f00078

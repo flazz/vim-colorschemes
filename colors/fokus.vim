@@ -1,168 +1,187 @@
-" Vim color file
-"
-" Name: fokus
-" Maintainer: Mohammad Satrio <http://tyok.org>
-" Version: 0.3
-" Last Change: February 7th, 2011
-"
-" Edited from fruit color scheme by Tiza, version 1.3
-" This color scheme uses a light background.
+" Maintainer:	Tien Le (tienlex@gmail.com)
+" Version:      1.0
+" Last Change:	Dec 17 2010
+" Based on the Vividchalk theme of Tim Pope and Mustang theme
 
-hi clear
-
-set background=light
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-        syntax reset
-    endif
+if has("gui_running")
+    set background=dark
 endif
-let g:colors_name="fokus"
+hi clear
+if exists("syntax_on")
+   syntax reset
+endif
 
-hi Normal       guifg=#404040 guibg=#F5F3E7
+let colors_name = "bocau"
 
-" Search
-hi IncSearch    gui=UNDERLINE guifg=#404040 guibg=#FF99FF
-hi Search       gui=NONE guifg=#404040 guibg=#ffdd99
+" First two functions adapted from inkpot.vim
 
-" Messages
-hi ErrorMsg     gui=NONE guifg=#ff0000 guibg=#ffe4e4
-hi WarningMsg   gui=NONE guifg=#ff0000 guibg=#ffe4e4
-hi ModeMsg      gui=NONE guifg=#ff4080 guibg=NONE
-hi MoreMsg      gui=NONE guifg=#009070 guibg=NONE
-hi Question     gui=NONE guifg=#f030d0 guibg=NONE
+" map a urxvt cube number to an xterm-256 cube number
+fun! s:M(a)
+    return strpart("0245", a:a, 1) + 0
+endfun
 
-" Split area
-hi StatusLine   gui=BOLD guifg=#f8f8f8 guibg=#404040
-hi StatusLineNC gui=NONE guibg=#C2C0B7 guifg=#404040
-hi VertSplit    gui=NONE guifg=#c2c0b7 guibg=#c2c0b7
-hi WildMenu     gui=BOLD guifg=#f8f8f8 guibg=#ff4080
+" map a urxvt colour to an xterm-256 colour
+fun! s:X(a)
+    if &t_Co == 88
+        return a:a
+    else
+        if a:a == 8
+            return 237
+        elseif a:a < 16
+            return a:a
+        elseif a:a > 79
+            return 232 + (3 * (a:a - 80))
+        else
+            let l:b = a:a - 16
+            let l:x = l:b % 4
+            let l:y = (l:b / 4) % 4
+            let l:z = (l:b / 16)
+            return 16 + s:M(l:x) + (6 * s:M(l:y)) + (36 * s:M(l:z))
+        endif
+    endif
+endfun
 
-" Diff
-hi DiffText     gui=NONE guifg=#e04040 guibg=#ffd8d8
-hi DiffChange   gui=NONE guifg=#408040 guibg=#d0f0d0
-hi DiffDelete   gui=NONE guifg=#4848ff guibg=#ffd0ff
-hi DiffAdd      gui=NONE guifg=#4848ff guibg=#ffd0ff
+function! E2T(a)
+    return s:X(a:a)
+endfunction
 
-" Cursor
-hi Cursor       gui=NONE guifg=#ffffff guibg=#404040
-hi CursorLine   guibg=#EBE8DC
-hi lCursor      gui=NONE guifg=#f8f8f8 guibg=#8000ff
-hi CursorIM     gui=NONE guifg=#f8f8f8 guibg=#8000ff
+function! s:choose(mediocre,good)
+    if &t_Co != 88 && &t_Co != 256
+        return a:mediocre
+    else
+        return s:X(a:good)
+    endif
+endfunction
 
-" Fold
-hi Folded       gui=NONE guifg=#20605c guibg=#b8e8dc
-hi FoldColumn   gui=NONE guifg=#40a098 guibg=#f0f0f0
+function! s:hifg(group,guifg,first,second,...)
+    if a:0 && &t_Co == 256
+        let ctermfg = a:1
+    else
+        let ctermfg = s:choose(a:first,a:second)
+    endif
+    exe "highlight ".a:group." guifg=".a:guifg." ctermfg=".ctermfg
+endfunction
 
-" Other
-hi Directory    gui=NONE guifg=#0070b8 guibg=NONE
-hi LineNr       gui=NONE guifg=#acacac guibg=NONE
-hi NonText      gui=BOLD guifg=#aaaaaa
-hi Pmenu        guifg=#404040 guibg=#FFddF5
-hi PmenuSel     guifg=#ff00aa guibg=#ffffff
-hi SpecialKey   gui=NONE guifg=#4040ff guibg=NONE
-hi Title        gui=NONE guifg=#0050a0 guibg=NONE
-hi Visual       gui=NONE guifg=NONE guibg=#FFddF5
-" hi VisualNOS    gui=NONE guifg=#484848 guibg=#e0e0e0
+function! s:hibg(group,guibg,first,second)
+    let ctermbg = s:choose(a:first,a:second)
+    exe "highlight ".a:group." guibg=".a:guibg." ctermbg=".ctermbg
+endfunction
 
-" Syntax group
-hi Boolean      guifg=#F59300
-hi Comment      gui=NONE guifg=#D998C2 guibg=NONE
-hi Constant     gui=NONE guifg=#ff4080 guibg=NONE
-hi Delimiter    gui=NONE guifg=#99cc66
-hi Error        gui=BOLD guifg=#ffffff guibg=#ff4080
-hi Function     guifg=#dd2222
-hi Identifier   gui=NONE guifg=#0070e6 guibg=NONE
-hi Ignore       gui=NONE guifg=#f8f8f8 guibg=NONE
-hi MatchParen   gui=BOLD guifg=#ffffff guibg=#ff4080
-hi PreProc      gui=NONE guifg=#7AA1CC guibg=NONE
-hi Special      gui=NONE guifg=#ff9900 guibg=NONE
-hi Statement    gui=NONE guifg=NONE guibg=NONE
-"#f030d0
-hi String       guifg=#889D52
-hi Todo         gui=UNDERLINE guifg=#ff0070 guibg=#ffe0f4
-hi Type         gui=NONE guifg=#8955A3 guibg=NONE
-hi Underlined   gui=UNDERLINE guifg=fg guibg=NONE
-
-hi Conditional  guifg=#3399ff
-hi Repeat       guifg=#0000ff
-"hi link Operator Normal
-hi Operator guifg=#CC7A7A
-
-" tree
-hi link treePart Comment
-hi link treePartFile treePart
-hi link treeOpenable treePart
-hi link treeClosable treeOpenable
-hi link treeExecFile rubyRegexp
-
-" html
-hi link htmlTag xmlTag
-hi link htmlTagName xmlTagName
-hi link htmlEndTag xmlEndTag
-hi link htmlArg xmlAttrib
-hi link htmlString xmlString
-hi link htmlTagN htmlTagName
-hi link htmlSpecialTagName htmlTagName
-
-hi xmlTag guifg=#bbbbbb
-hi xmlTagName guifg=#CC7A7A
-hi link xmlEndTag xmlTag
-hi link xmlAttrib PreProc
-hi xmlString guifg=#888888
-
-" javascript
-hi javaScriptParens guifg=#bbbbbb
-hi link javaScriptBraces javaScriptFunction
-
-" ruuubyyyy
-hi link rubyDefine PreProc
-hi link rubyIdentifier Identifier
-hi railsClass guifg=#ff4080
-hi link rubyConditional Conditional
-hi link rubyInstanceVariable Type
-hi link rubyClassVariable rubyInstanceVariable
-hi link rubyBeginEnd rubyIdentifier
-hi link rubyBlockParameterList rubyBlockParameter
-hi link rubyConstant Constant
-hi link rubyControl rubyBeginEnd
-hi link rubyInterpolationDelimiter Comment
-hi link rubyOptionalDo rubyBeginEnd
-hi link rubyOperator Operator
-hi link rubyPseudoVariable rubyBoolean
-hi link rubyStringEscape Normal
-hi rubySymbol guifg=#27A3A3
-hi link railsMethod xmlTagName
-hi rubyAccess guifg=#855A76 guibg=#F5D7EB
-hi rubyRegexp guifg=#D63267
+hi link railsMethod         PreProc
+hi link rubyDefine          Keyword
+hi link rubySymbol          Constant
+hi link rubyAccess          rubyMethod
+hi link rubyAttribute       rubyMethod
+hi link rubyEval            rubyMethod
+hi link rubyException       rubyMethod
+hi link rubyInclude         rubyMethod
+hi link rubyStringDelimiter rubyString
+hi link rubyRegexp          Regexp
 hi link rubyRegexpDelimiter rubyRegexp
-hi rubyRegexpSpecial guifg=#D63267
-hi link cucumberWhenTable String
-hi link cucumberThenTable cucumberWhenTable
-hi link cucumberThen railsClass
-hi link cucumberWhen Conditional
-hi link cucumberGiven Type
-hi link cucumberScenario Function
-hi link cucumberFeature Function
+"hi link rubyConstant        Variable
+"hi link rubyGlobalVariable  Variable
+"hi link rubyClassVariable   Variable
+"hi link rubyInstanceVariable Variable
+hi link javascriptRegexpString  Regexp
+hi link javascriptNumber        Number
+hi link javascriptNull          Constant
+highlight link diffAdded        String
+highlight link diffRemoved      Statement
+highlight link diffLine         PreProc
+highlight link diffSubname      Comment
 
-" php
-hi link phpQuoteSingle Delimiter
-hi link phpQuotedouble Delimiter
-hi link phpIdentifier Normal
-hi link phpVarSelector Comment
-hi link phpEcho phpFunctions
-hi link phpFunctions xmlTagName
-hi link phpDefineFuncName Function
-hi link phpDefineMethodName Function
-hi phpDefineClassName guifg=#ff4080
-hi phpStructureHere guifg=#ff4080
-hi link phpRelation phpOperator
-hi link phpBoolean Boolean
-hi link phpSuperGlobal Type
-hi link phpArray phpFunctions
-hi phpStringDouble guifg=#009900
-hi phpParent guifg=#B8CDE6
-hi link phpBrace phpParent
-hi link phpSemicolon phpParent
+call s:hifg("Normal","#EEEEEE","White",87)
+if &background == "light" || has("gui_running")
+    hi Normal guibg=Black ctermbg=Black
+else
+    hi Normal guibg=Black ctermbg=NONE
+endif
+highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
+highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
+"if &t_Co == 256
+    "highlight StatusLine ctermbg=117
+"else
+    "highlight StatusLine ctermbg=43
+"endif
+
+highlight Ignore        ctermfg=Black
+highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
+highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
+highlight CursorLine    guibg=#333333 guifg=NONE
+highlight CursorColumn  guibg=#333333 guifg=NONE
+highlight NonText       guifg=#404040 ctermfg=8
+highlight SpecialKey    guifg=#404040 ctermfg=8
+highlight Directory     none
+high link Directory     Identifier
+highlight ErrorMsg      guibg=Red ctermbg=DarkRed guifg=NONE ctermfg=NONE
+highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
+call s:hibg("Search"    ,"Yellow","DarkBlue",81)
+highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight MoreMsg       guifg=#00AA00 ctermfg=Green
+highlight LineNr        guifg=#808080 ctermfg=White
+call s:hibg("LineNr"    ,"#101010","DarkBlue",80)
+highlight Question      none
+high link Question      MoreMsg
+highlight Title         guifg=White ctermfg=Magenta
+highlight VisualNOS     gui=none cterm=none
+call s:hibg("Visual"    ,"#444444","LightBlue",83)
+call s:hibg("VisualNOS" ,"#222222","DarkBlue",81)
+call s:hibg("MatchParen","#1100AA","DarkBlue",18)
+highlight WarningMsg    guifg=Red ctermfg=Red
+highlight Error         ctermbg=DarkRed
+highlight SpellBad      ctermbg=DarkRed
+" FIXME: Comments
+highlight SpellRare     ctermbg=DarkMagenta
+highlight SpellCap      ctermbg=DarkBlue
+highlight SpellLocal    ctermbg=DarkCyan
+
+call s:hibg("Folded"    ,"#110077","DarkBlue",17)
+call s:hifg("Folded"    ,"#aaddee","LightCyan",63)
+highlight FoldColumn    none
+high link FoldColumn    Folded
+highlight DiffAdd       ctermbg=4 guibg=DarkBlue
+highlight DiffChange    ctermbg=5 guibg=DarkMagenta
+highlight DiffDelete    ctermfg=12 ctermbg=6 gui=bold guifg=Blue guibg=DarkCyan
+highlight DiffText      ctermbg=DarkRed
+highlight DiffText      cterm=bold ctermbg=9 gui=bold guibg=Red
+
+highlight Pmenu         guifg=White ctermfg=White
+highlight PmenuSel      guifg=White ctermfg=White
+call s:hibg("Pmenu"     ,"#000099","Blue",18)
+call s:hibg("PmenuSel"  ,"#5555ff","DarkCyan",39)
+highlight PmenuSbar     guibg=Grey ctermbg=Grey
+highlight PmenuThumb    guibg=White ctermbg=White
+highlight TabLine       gui=underline cterm=underline
+call s:hifg("TabLine"   ,"#bbbbbb","LightGrey",85)
+call s:hibg("TabLine"   ,"#333333","DarkGrey",80)
+highlight TabLineSel    guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight TabLineFill   gui=underline cterm=underline
+call s:hifg("TabLineFill","#bbbbbb","LightGrey",85)
+call s:hibg("TabLineFill","#808080","Grey",83)
+
+hi Type gui=none
+hi Statement gui=none
+if !has("gui_mac")
+    " Mac GUI degrades italics to ugly underlining.
+    hi Comment gui=italic
+    hi railsUserClass  gui=italic
+    hi railsUserMethod gui=italic
+endif
+hi Identifier cterm=none
+" Commented numbers at the end are *old* 256 color values
+"highlight PreProc       guifg=#EDF8F9
+call s:hifg("Comment"        ,"#aaaaaa","Grey",34) " 92
+" 26 instead?
+call s:hifg("Constant"       ,"#AAAA77","DarkCyan",21) " 30
+call s:hifg("rubyNumber"     ,"#CCFF33","Yellow",60) " 190
+call s:hifg("String"         ,"#b1d631","LightGreen",44,82) " 82
+call s:hifg("Identifier"     ,"#33CCFF","Yellow",72) " 220
+call s:hifg("Statement"      ,"#ff7700","Brown",68) " 202
+call s:hifg("PreProc"        ,"#AAFFFF","LightCyan",47) " 213
+call s:hifg("railsUserMethod","#AACCFF","LightCyan",27)
+call s:hifg("Type"           ,"#ffaa00","Grey",57) " 101
+call s:hifg("railsUserClass" ,"#AAAAAA","Grey",7) " 101
+call s:hifg("Special"        ,"#33AA00","DarkGreen",24) " 7
+call s:hifg("Regexp"         ,"#44B4CC","DarkCyan",21) " 74
+call s:hifg("rubyMethod"     ,"#DDE93D","Yellow",77) " 191
+"highlight railsMethod   guifg=#EE1122 ctermfg=1

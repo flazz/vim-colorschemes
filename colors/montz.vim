@@ -1,26 +1,66 @@
-" Vim color file
-" Maintainer:   Connor Berry <connorberry@yahoo.com>
-" Last Change:	2006/05/25 
-" Version: 1.0
+ts/download_script.php?src_id=5807
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:28 GMT
+Vary: Accept-Encoding
 
-set background=light
-highlight clear
-if exists("syntax on")
-  syntax reset
-endif
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5807">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:42:26 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=5924
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:29 GMT
+Vary: Accept-Encoding
 
-let g:colors_name = "montz"
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5924">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:42:26 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=5975
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:29 GMT
+Vary: Accept-Encoding
 
-highlight Normal     term=none ctermfg=black    cterm=none ctermbg=white  guifg=black    gui=none guibg=white
-highlight Comment    term=none ctermfg=darkblue    guifg=darkblue    
-highlight Constant   term=none ctermfg=red     cterm=none guifg=red     gui=none
-highlight Special    term=none ctermfg=red     cterm=bold guifg=red     gui=bold
-highlight Identifier term=none ctermfg=red    cterm=none guifg=red    gui=none
-highlight Statement  term=bold ctermfg=DarkGrey    cterm=bold guifg=DarkGrey    gui=bold
-highlight Operator   term=bold ctermfg=DarkGrey    cterm=bold guifg=DarkGrey    gui=bold
-highlight PreProc    term=bold ctermfg=lightgreen   cterm=none guifg=green   gui=none
-highlight Type       term=bold ctermfg=black cterm=none guifg=black gui=none
-highlight String     term=none ctermfg=magenta     cterm=none guifg=magenta     gui=none
-highlight Number     term=none ctermfg=red     cterm=none guifg=red     gui=none
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5975">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:42:26 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 268
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=14073
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:26 GMT
+Vary: Accept-Encoding
 
-" vim:ts=2:sw=2:et
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=14073">here</a>.</p>
+</body></html>

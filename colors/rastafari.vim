@@ -1,7 +1,7 @@
 " Vim color file
 "
 " Maintainer:  Dominique Pelle <dominique.pelle at gmail.com>
-" Last Change: 30 Apr 2009
+" Last Change: 21 Jun 2010
 " URL:         http://dominique.pelle.free.fr/rastafari.vim
 " Screenshot:  http://dominique.pelle.free.fr/rastafari.vim.png
 "
@@ -11,7 +11,7 @@
 set background=dark
 hi clear
 if exists("syntax on")
-    syntax reset
+  syntax reset
 endif
 
 if has('eval')
@@ -64,8 +64,8 @@ hi TabLineSel   guifg=#ffff60 guibg=#008800 gui=bold term=none     cterm=none   
 hi VertSplit    guifg=#80ff80 guibg=#008800 gui=none term=none     cterm=none    ctermfg=lightgreen ctermbg=green
 hi TabLine      guifg=#66ff66 guibg=#008800 gui=bold term=bold     cterm=bold    ctermfg=lightgreen
 hi StatusLine   guifg=#66ff66 guibg=#008000 gui=bold term=none     cterm=bold    ctermfg=lightgreen
-hi CursorColumn guifg=NONE    guibg=#111111 gui=none term=none     cterm=none    ctermfg=darkgrey ctermbg=grey
-hi CursorLine   guifg=NONE    guibg=#111111 gui=none term=none     cterm=none    ctermfg=darkgrey ctermbg=grey
+hi CursorColumn guifg=NONE    guibg=#111111 gui=none term=none     cterm=none    ctermfg=darkgrey   ctermbg=grey
+hi CursorLine   guifg=NONE    guibg=#111111 gui=none term=none     cterm=none    ctermfg=darkgrey   ctermbg=grey
 " Specific for c {{{1
 hi cOctalZero    guifg=#ff8800 guibg=bg      gui=none term=none     cterm=none    ctermfg=darkyellow
 hi cFormat       guifg=#ff8800 guibg=bg      gui=none term=none     cterm=none    ctermfg=darkyellow
@@ -132,6 +132,13 @@ hi confluenceHeading       guifg=#ffff60 guibg=bg gui=bold term=none cterm=none 
 hi confluenceVerbatim      guifg=#dddddd guibg=bg gui=none term=none cterm=none ctermfg=white
 " Specific for HTML {{{1
 hi htmlLink guifg=#3333ff guibg=bg gui=none term=none cterm=none ctermfg=lightblue
+" Specific for XML {{{1
+hi XmlTagName     guifg=#ffffff guibg=bg gui=bold term=bold cterm=bold ctermfg=white
+hi XmlEndTag      guifg=#ffffff guibg=bg gui=bold term=bold cterm=bold ctermfg=white
+hi XmlTag         guifg=#ffffff guibg=bg gui=bold term=bold cterm=bold ctermfg=white
+hi XmlAttrib      guifg=#666666 guibg=bg gui=bold term=bold cterm=bold ctermfg=darkgrey
+hi XmlEntity      guifg=#ff8800 guibg=bg gui=none term=none cterm=none ctermfg=darkyellow
+hi XmlEntityPunct guifg=#ff8800 guibg=bg gui=none term=none cterm=none ctermfg=darkyellow
 " Spell checking {{{1
 if version >= 700
   hi SpellBad   guisp=red    gui=undercurl guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE term=underline cterm=underline

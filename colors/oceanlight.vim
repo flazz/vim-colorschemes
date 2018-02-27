@@ -1,3 +1,5 @@
+
+
 " Vim color file
 " Maintainer: Håkan Wikström <hakan@wikstrom.st>
 " Last Change: 2005-01-06
@@ -13,6 +15,13 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name = "oceanlight"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 
 """"""""\ Colors \""""""""

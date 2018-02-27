@@ -1,80 +1,66 @@
+/download_script.php?src_id=9863
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:53:20 GMT
+Vary: Accept-Encoding
 
-" By asmanian
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=9863">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:53:17 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=9818
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:53:20 GMT
+Vary: Accept-Encoding
 
-hi clear
-if exists("syntax_on")
-  syntax reset
-endif
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=9818">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:53:17 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 268
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=10274
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:53:18 GMT
+Vary: Accept-Encoding
 
-let colors_name = "lightcolors"
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=10274">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:53:17 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=9784
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:53:18 GMT
+Vary: Accept-Encoding
 
-" blue #2A3F82
-" light blue #5555ff
-" cyan #4b909e
-" light cyan #55cbff
-" grey #CCC0B7
-" dark grey #555555
-" green #4E9A06
-" red #AA2100
-" orange/brown #c18216
-" violet #702589
-
-hi Title guifg=#000000 gui=bold
-
-hi Normal guifg=#000000 guibg=#f0f0f0
-hi NonText guifg=#808080 guibg=#e0e0e0
-hi SpecialKey guibg=#e0e0e0 guifg=#a0a0a0
-
-hi LineNr guifg=#555555 guibg=#ccc0b7 gui=italic
-hi StatusLine guifg=#2A3F82 guibg=#ffffff
-hi StatusLineNC guifg=#4A5Fa2 guibg=#ccc0b7
-hi VertSplit guifg=#4a5fa2 guibg=#4a5fa2
-
-hi Comment guifg=#2a3f82 gui=italic
-hi Todo guifg=#2a3f82 guibg=#f0f0f0 gui=italic,bold
-
-" D: private, int
-hi Type guifg=#4e9a06 gui=none
-hi StorageClass guifg=#4e9a06 gui=italic
-hi Typedef guifg=#4e9a06 gui=underline
-
-
-" D: class
-hi Structure guifg=#4e9a06 guibg=#ceea96 gui=underline
-hi Function guifg=#4b909e gui=bold
-",underline
-"guibg=#d0e0ff
-hi Underlined guifg=#000000 gui=underline
-
-" lua: standard functions
-hi Identifier guifg=#4b909e gui=none
-
-hi Statement guifg=#555555 gui=italic
-"hi Label
-"hi Operator
-"hi Keyword
-"hi Exception
-hi Conditional guifg=#c18216 gui=underline
-"guibg=#ffccaa gui=none
-hi Repeat guifg=#663300 gui=underline
-
-
-hi PreProc guifg=#702589 gui=underline
-hi Include guifg=#702589 gui=underline
-hi Define guifg=#702589 gui=underline
-hi Macro guifg=#702589 gui=underline
-hi PreConduit guifg=#702589 gui=underline
-
-" Constants
-hi Constant guifg=#aa2100 gui=italic
-hi String guifg=#aa2100
-hi Special guifg=#800000
-hi Number guifg=#6a2120
-hi Float guifg=#aa2160
-"guibg=#e0e0a0
-
-
-hi Pmenu guibg=#ccc0b7 gui=italic
-hi PmenuSel guifg=#ffffff guibg=#555555 gui=italic
-
-
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=9784">here</a>.</p>
+</body></html>

@@ -10,29 +10,22 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "Dark"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
+
 
 
 hi Normal guibg=grey20 guifg=GhostWhite
 hi NonText guibg=grey15 guifg=yellow3
-<<<<<<< HEAD
-"hi Normal guibg=grey30 guifg=GhostWhite
-"hi NonText guibg=grey20 guifg=yellow3
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 "hi Cursor guibg=GhostWhite
 "hi Cursor guibg=red guifg=white
 hi Cursor guibg=green2 guifg=black
 
-<<<<<<< HEAD
-if version >= 700
-    " Just a tad off of bg
-    hi CursorLine   guibg=grey25
-    hi CursorColumn guibg=grey25
-endif
-
-
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 hi Statement  guifg=tan
 hi Constant   guifg=#FF7070
 hi String     guifg=#ffa0a0
@@ -52,10 +45,6 @@ hi PreProc guifg=orange2
 
 hi link SpecialKey Comment
 hi link Directory  Comment
-<<<<<<< HEAD
-hi! link MatchParen Search
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 "
 " Colors not part of the original set:

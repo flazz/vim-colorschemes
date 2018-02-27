@@ -1,36 +1,72 @@
 " Vim color file
-" Maintainer:   Gerald S. Williams
-" Last Change:  2007 Jun 13
+" Maintainer:	Glenn T. Norton <gtnorton@adaryn.com>
+" Last Change:	2003-04-11
 
-" This started as a dark version (perhaps opposite is a better term) of
-" PapayaWhip, but took on a life of its own. Easy on the eyes, but still has
-" good contrast. Not bad on a color terminal, either (especially if yours
-" default to PapayaWhip text on a ChocolateLiquor/#3f1f1f background).
-"
-" Only values that differ from defaults are specified.
+" adaryn - A color scheme named after my daughter, Adaryn. (A-da-rin)
+" I like deep, sharp colors and this scheme is inspired by 
+" Bohdan Vlasyuk's darkblue.
+" The cterm background is black since the dark blue was just too light.
+" Also the cterm colors are very close to an old Borland C++ color setup.
 
 set background=dark
 hi clear
 if exists("syntax_on")
-  syntax reset
+	syntax reset
 endif
-let g:colors_name = "ChocolateLiquor"
 
-hi Normal guibg=#3f1f1f guifg=PapayaWhip ctermfg=White
-hi NonText guibg=#1f0f0f guifg=Brown2 ctermfg=Brown ctermbg=Black
-hi LineNr guibg=#1f0f0f guifg=Brown2
-hi DiffDelete guibg=DarkRed guifg=White ctermbg=DarkRed ctermfg=White
-hi DiffAdd guibg=DarkGreen guifg=White ctermbg=DarkGreen ctermfg=White
-hi DiffText gui=NONE guibg=DarkCyan guifg=Yellow ctermbg=DarkCyan ctermfg=Yellow
-hi DiffChange guibg=DarkCyan guifg=White ctermbg=DarkCyan ctermfg=White
-hi Constant ctermfg=Red
-hi Comment guifg=LightBlue3
-hi PreProc guifg=Plum ctermfg=Magenta
-hi StatusLine guibg=White guifg=Sienna4 cterm=NONE ctermfg=Black ctermbg=Brown
-hi StatusLineNC gui=NONE guifg=Black guibg=Gray ctermbg=Black ctermfg=Gray
-hi VertSplit guifg=Gray
-hi Search guibg=Gold3 ctermfg=Blue
-hi Type gui=NONE guifg=DarkSeaGreen2
-hi Statement gui=NONE guifg=Gold3
-hi FoldColumn guibg=#1f0f0f ctermfg=Cyan ctermbg=Black
-hi Folded guibg=grey20 ctermfg=Cyan ctermbg=Black
+let colors_name = "adaryn"
+
+hi Normal   guifg=#fffff0 guibg=#00003F ctermfg=white ctermbg=Black
+hi ErrorMsg guifg=#ffffff guibg=#287eff	ctermfg=white ctermbg=red
+hi Visual   guifg=#8080ff guibg=fg gui=reverse ctermfg=blue ctermbg=fg cterm=reverse
+
+hi VisualNOS guifg=#8080ff guibg=fg gui=reverse,underline ctermfg=lightblue ctermbg=fg cterm=reverse,underline
+
+hi Todo guifg=#d14a14 guibg=#1248d1 ctermfg=red	ctermbg=darkblue
+
+hi Search guifg=#90fff0 guibg=#2050d0	ctermfg=white ctermbg=darkblue cterm=underline term=underline
+
+hi IncSearch    guifg=#b0ffff guibg=#2050d0 ctermfg=darkblue ctermbg=gray
+
+hi SpecialKey   guifg=cyan ctermfg=darkcyan
+hi Directory    guifg=cyan ctermfg=cyan
+hi Title	guifg=#BDD094 gui=none ctermfg=magenta cterm=bold
+hi WarningMsg	guifg=red ctermfg=red
+hi WildMenu	guifg=yellow guibg=black ctermfg=yellow ctermbg=black cterm=none term=none
+hi ModeMsg	guifg=#22cce2 ctermfg=lightblue
+hi MoreMsg	ctermfg=darkgreen ctermfg=darkgreen
+hi Question	guifg=green gui=none ctermfg=green cterm=none
+hi NonText	guifg=#0030ff ctermfg=darkblue
+
+hi StatusLine   guifg=blue guibg=darkgray gui=none ctermfg=blue ctermbg=gray term=none cterm=none
+
+hi StatusLineNC guifg=black guibg=darkgray gui=none ctermfg=black ctermbg=gray term=none cterm=none
+
+hi VertSplit guifg=black guibg=darkgray gui=none ctermfg=black ctermbg=gray term=none cterm=none
+
+hi Folded   guifg=#808080 guibg=#000040	ctermfg=darkgrey ctermbg=black cterm=bold term=bold
+
+hi FoldColumn   guifg=#808080 guibg=#000040 ctermfg=darkgrey ctermbg=black cterm=bold term=bold
+
+hi LineNr   guifg=#90f020   ctermfg=green cterm=none
+
+hi DiffAdd  guibg=darkblue ctermbg=darkblue term=none cterm=none
+hi DiffChange   guibg=darkmagenta ctermbg=magenta cterm=none
+hi DiffDelete	ctermfg=blue ctermbg=cyan gui=bold guifg=Blue guibg=DarkCyan
+hi DiffText	cterm=bold ctermbg=red gui=bold guibg=Red
+
+hi Cursor	guifg=#000020 guibg=#ffaf38 ctermfg=bg ctermbg=brown
+hi lCursor	guifg=#ffffff guibg=#000000 ctermfg=bg ctermbg=darkgreen
+
+
+hi Comment	guifg=yellow ctermfg=Yellow
+hi Constant	ctermfg=green guifg=green cterm=none
+hi Special	ctermfg=White guifg=#FFFFFF cterm=none gui=none
+hi Identifier	ctermfg=DarkRed guifg=#BDD094 cterm=none
+hi Statement	ctermfg=LightCyan cterm=none guifg=#A9A900 gui=none
+hi PreProc	ctermfg=DarkRed guifg=#ffffff gui=none cterm=none
+hi type		ctermfg=LightCyan guifg=LightBlue gui=none cterm=none
+hi Underlined	cterm=underline term=underline
+hi Ignore	guifg=bg ctermfg=bg
+
+

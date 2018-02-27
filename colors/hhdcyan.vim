@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " Vim color file {{{1
 "  Maintainer: hira@users.sourceforge.jp
 " Last Change: 2003/11/08 (Sat) 15:09:10.
@@ -53,7 +50,6 @@ let colors_name       = expand("<sfile>:t:r")
 let html_my_rendering = 1
 
 
-<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -61,8 +57,6 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " frame & title & message (theme) {{{1
 hi NonText                   gui=UNDERLINE   guifg=darkcyan       guibg=black
 hi NonText                 cterm=UNDERLINE ctermfg=darkcyan     ctermbg=black

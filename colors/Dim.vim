@@ -9,6 +9,14 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "Dim"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
+
 
 
 
@@ -16,14 +24,6 @@ hi Normal guibg=black guifg=grey75
 hi Cursor guibg=grey75
 hi NonText guibg=grey10 guifg=yellow4
 
-<<<<<<< HEAD
-if version >= 700
-    hi CursorLine   guibg=grey20
-    hi CursorColumn guibg=grey20
-endif
-
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " Brown / Tan
 "hi Statement guifg=wheat4
 "hi Statement guifg=grey75 gui=bold

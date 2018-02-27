@@ -3,16 +3,15 @@
 runtime colors/Dim.vim
 
 let g:colors_name = "DimRedBG"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
+
 
 hi Normal guibg=#180000
 hi NonText guibg=#080000
 
-<<<<<<< HEAD
-if version >= 700
-    " Just a tad off of bg
-    hi CursorLine   guibg=#302222
-    hi CursorColumn guibg=#302222
-endif
-
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786

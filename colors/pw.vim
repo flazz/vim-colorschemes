@@ -1,209 +1,132 @@
 "
-" pw.vim: theme based on darkspectrum and cream-colors-oceandeep
+" rdark-terminal - vim color scheme
 "
-" License:
-" This program is free software; you can redistribute it and/or modify
-" it under the terms of the GNU General Public License as published by
-" the Free Software Foundation; either version 3 of the License, or
-" (at your option) any later version.
-" [ http://www.gnu.org/licenses/gpl.html ]
+" Modified: Lukas Grässlin
 "
-" This program is distributed in the hope that it will be useful, but
-" WITHOUT ANY WARRANTY; without even the implied warranty of
-" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-" General Public License for more details.
+" Based on rdark
+" (http://www.vim.org/scripts/script.php?script_id=1732)
 "
-" You should have received a copy of the GNU General Public License
-" along with this program; if not, write to the Free Software
-" Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
-" 02111-1307, USA.
+" Originally converted with CSApprox and modified a bit
+" to fit a 256 color capable terminal.
+" (http://www.vim.org/scripts/script.php?script_id=2390)
 "
-"----------------------------------------------------------------------
+" Info: As the original background color is not available in 256 color mode
+" I've set it to black. But you can set the color your terminal should display
+" for black to #1e2426 and you will have almost a 1:1 copy of the gui scheme.
+" I also suggest to set the second black color to #2c3032. (It is the
+" background color which ist used for NonText)
+" If you're using a terminal which reads from Xdefaults (e.g. urxvt) you just
+" do this in your .Xdefaults:
+" "*color0:	rgb:1e/24/26"
+" "*color8:	rgb:2c/30/32"
+"
 
-""" Init
-set background=dark
 hi clear
-if exists("syntax_on")
-    syntax reset
-endif
-let g:colors_name = "pw"
+let colors_name="rdark-terminal"
 
-"""" GUI
+hi clear CursorLine
+hi CursorLine ctermbg=8
 
-hi Cursor        gui=None guibg=PaleTurquoise3 guifg=White
-hi CursorIM      gui=bold guifg=white guibg=PaleTurquoise3
-"hi CursorColumn  gui=None guibg=#003853
-hi Directory     guifg=LightSeaGreen guibg=bg
-hi DiffAdd       gui=None guifg=fg guibg=DarkCyan
-hi DiffChange    gui=None guifg=fg guibg=Red
-hi DiffDelete    gui=None guifg=fg guibg=black
-hi DiffText      gui=bold guifg=fg guibg=bg
-hi ErrorMsg      guifg=LightYellow  guibg=FireBrick
-hi VertSplit     gui=NONE guifg=black guibg=grey60
-hi Folded        gui=bold guibg=#305060 guifg=#b0d0e0
-"hi FoldColumn    gui=bold guibg=#305060 guifg=#b0d0e0
-hi IncSearch     gui=reverse guifg=fg guibg=bg
-hi LineNr        gui=bold guibg=grey6 guifg=LightSkyBlue3
-hi ModeMsg       guibg=DarkGreen guifg=LightGreen
-hi MoreMsg       gui=bold  guifg=SeaGreen4 guibg=bg
-"if version < 600
-"    " same as SpecialKey
-"    hi NonText   guibg=#123A4A guifg=#3D5D6D
-"else
-"    " Bottom fill (use e.g. same as LineNr)
-"    hi NonText   gui=None guibg=#202020 guifg=LightSkyBlue
-"endif
-"hi NonText       gui=None guibg=#062636 guifg=#6080c0
-"+++
-"hi Normal        gui=None guibg=#202020 guifg=honeydew2
-hi Question      gui=bold  guifg=SeaGreen2 guibg=bg
-hi Search        gui=NONE guibg=LightSkyBlue4 guifg=NONE
-"+++
-hi StatusLine    gui=bold guibg=grey88 guifg=black
-hi StatusLineNC  gui=NONE guibg=grey60 guifg=grey10
-hi Title         gui=bold  guifg=MediumOrchid1 guibg=bg
-hi VisualNOS     gui=bold,underline guifg=fg guibg=bg
-hi WarningMsg    gui=bold guifg=FireBrick1 guibg=bg
-hi WildMenu      gui=bold guibg=Chartreuse guifg=Black
+hi Normal term=NONE cterm=NONE ctermbg=0 ctermfg=252
+hi Underlined term=underline cterm=underline ctermbg=bg ctermfg=111
+hi Ignore term=NONE cterm=NONE ctermbg=bg ctermfg=16
+hi Error term=reverse cterm=NONE ctermbg=160 ctermfg=255
+hi Todo term=NONE cterm=NONE ctermbg=16 ctermfg=215
+hi Number term=NONE cterm=NONE ctermbg=bg ctermfg=113
+hi String term=NONE cterm=NONE ctermbg=bg ctermfg=113
+hi Function term=NONE cterm=NONE ctermbg=bg ctermfg=215
+hi SpecialKey term=bold cterm=NONE ctermbg=bg ctermfg=196
+hi NonText term=bold cterm=NONE ctermbg=8 ctermfg=236
+hi MatchParen term=reverse cterm=NONE ctermbg=215 ctermfg=23
+hi Comment term=bold cterm=NONE ctermbg=bg ctermfg=245
+hi Constant term=underline cterm=NONE ctermbg=bg ctermfg=113
+hi Special term=bold cterm=NONE ctermbg=bg ctermfg=248
+hi Keyword term=NONE cterm=NONE ctermbg=bg ctermfg=255
+hi Identifier term=underline cterm=NONE ctermbg=bg ctermfg=252
+hi Statement term=bold cterm=NONE ctermbg=bg ctermfg=74
+hi PreProc term=underline cterm=NONE ctermbg=bg ctermfg=215
+hi Type term=underline cterm=NONE ctermbg=bg ctermfg=188
+hi LineNr term=underline cterm=NONE ctermbg=16 ctermfg=59
+hi ExtraWhitespace term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi Visual term=reverse cterm=NONE ctermbg=102 ctermfg=255
 
-"""" Syntax Colors
-"hi Comment       gui=None guifg=#507080
-hi Comment       gui=None guifg=#80a0b0
-"+++
-hi String        gui=None guifg=turquoise2 guibg=bg
-"           lighter comment colors better
-"hi Identifier    guifg=LightSkyBlue3
-hi Identifier    guifg=DeepSkyBlue3
-"+++
-hi Function      gui=None guifg=DarkSeaGreen3 guibg=bg
+hi Pmenu term=NONE cterm=NONE ctermbg=16 ctermfg=250
+hi PmenuSel term=NONE cterm=NONE ctermbg=61 ctermfg=231
+hi PmenuSbar term=NONE cterm=NONE ctermbg=238 ctermfg=238
+hi PmenuThumb term=NONE cterm=NONE ctermbg=102 ctermfg=102
 
-hi Statement     gui=NONE guifg=LightGreen
-hi Conditional   gui=None guifg=LightGreen guibg=bg
-hi Repeat        gui=None guifg=SeaGreen2 guibg=bg
-hi Keyword       gui=bold guifg=LightGreen guibg=bg
-hi Exception     gui=bold guifg=LightGreen guibg=bg
-
-hi PreProc       guifg=SkyBlue1
-hi Include       gui=None guifg=LightSteelBlue3 guibg=bg
-hi Define        gui=None guifg=LightSteelBlue2 guibg=bg
-hi Macro         gui=None guifg=LightSkyBlue3 guibg=bg
-hi PreCondit     gui=None guifg=LightSkyBlue2 guibg=bg
-
-hi Type          gui=NONE guifg=LightBlue
-hi StorageClass  gui=None guifg=LightBlue guibg=bg
-hi Structure     gui=None guifg=LightBlue guibg=bg
-hi Typedef       gui=None guifg=LightBlue guibg=bg
-
-hi Special       gui=bold guifg=aquamarine3
-hi Underlined    gui=underline guifg=honeydew4 guibg=bg
-hi Ignore        guifg=#204050
-hi Error         guifg=LightYellow  guibg=FireBrick
-hi Todo          guifg=Cyan guibg=#507080
-if v:version >= 700
-    hi PMenu      gui=bold guibg=LightSkyBlue4 guifg=honeydew2
-    hi PMenuSel   gui=bold guibg=DarkGreen guifg=honeydew2
-    hi PMenuSbar  gui=bold guibg=LightSkyBlue4
-    hi PMenuThumb gui=bold guibg=DarkGreen
-    hi SpellBad   gui=undercurl guisp=Red
-    hi SpellRare  gui=undercurl guisp=Orange
-    hi SpellLocal gui=undercurl guisp=Orange
-    hi SpellCap   gui=undercurl guisp=Yellow
-endif
-
-""" Console
-if v:version >= 700
-    hi PMenu      cterm=bold ctermbg=DarkGreen ctermfg=Gray
-    hi PMenuSel   cterm=bold ctermbg=Yellow ctermfg=Gray
-    hi PMenuSbar  cterm=bold ctermbg=DarkGreen
-    hi PMenuThumb cterm=bold ctermbg=Yellow
-    hi SpellBad   ctermbg=Red
-    hi SpellRare  ctermbg=Red
-    hi SpellLocal ctermbg=Red
-    hi SpellCap   ctermbg=Yellow
-endif
-
-hi Search        ctermfg=Black ctermbg=Red cterm=NONE
-hi Visual        cterm=reverse
-hi Cursor        ctermfg=Black ctermbg=Green cterm=bold
-hi Special       ctermfg=Brown
-hi Comment       ctermfg=DarkGray
-hi StatusLine    ctermfg=Blue ctermbg=White
-hi Statement     ctermfg=Yellow cterm=NONE
-hi Type          cterm=NONE
-hi Macro         ctermfg=DarkRed
-hi Identifier    ctermfg=DarkYellow
-hi Structure     ctermfg=DarkGreen
-
-" statusline
-hi User1  gui=BOLD guifg=#b0d0e0 guibg=Black
-hi User2  gui=bold guifg=LightGreen guibg=Black
-hi User3  gui=bold guifg=MediumOrchid1 guibg=Black
-hi User4  gui=bold guifg=FireBrick guibg=Black
-
-" bookmarks:
-"hi Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold gui=BOLD guifg=MediumOrchid1 guibg=#202020
-
-" spell check
-"hi BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=honeydew2 guibg=#602030
-
-" current line
-hi CurrentLine term=reverse ctermbg=0 ctermfg=14 gui=none guibg=#406070
-
-" email
-hi EQuote1 guifg=#99cccc
-hi EQuote2 guifg=#669999
-hi EQuote3 guifg=#007777
-hi Sig guifg=#80a0b0
-
-"+++
-" h syntax /sizeof
-
-" main color scheme
-:hi Normal           gui=None guibg=#150a15 guifg=honeydew2
-"hi Normal           gui=None guibg=##1a0a1a guifg=honeydew2
-"hi Normal           gui=None guibg=#100b10 guifg=honeydew2
-
-" whitespace (indents)
-hi SpecialKey       guifg=#808080 guibg=#150a15 gui=none
-
-" line number:
-hi LineNr           guifg=#535353 guibg=#150a15
-hi Number           gui=None guifg=#fcaf3e guibg=bg
-
-" constants: NULL,stdout, ...
-hi Constant         guifg=#c0a0a0
-
-" e.g text bellow EOF:
-hi NonText          gui=None guibg=#150a15
-
-hi CursorColumn     guibg=#202020
-hi CursorLine       gui=None guibg=#303030
-hi Cursor           guibg=#ffffff guifg=#000000
-
-hi FoldColumn       guibg=#464646
-
-" string: (text between ")
-" printf("%d\n", 42);
-"hi String           gui=NONE   guifg=#c0c0e0 guibg=#404040
-hi String           gui=NONE   guifg=#d0d0b0   guibg=#303030
-
-" string: \n
-hi SpecialChar      gui=NONE   guifg=#d0d0b0   guibg=#303030
-
-" string: e.g 0x%08x
-hi cFormat          gui=NONE guifg=#c08080   guibg=#303030
-
-hi Visual           gui=reverse guibg=#303050 guifg=#d0d0d0 gui=italic
-
-" sizeof..
-hi Operator         gui=NONE   guifg=#90d090   guibg=NONE
-
-" TRUE, false
-hi Boolean          gui=bold guifg=#c0c040 guibg=bg
-
-" current tab (tabbar)
-hi Tb_VisibleNormal gui=NONE guibg=#00ff00 guifg=#fcaf3e
-" !current tab
-hi Tb_Normal        gui=NONE guibg=#00ff00 guifg=#d0d0d0
-" modified tab:
-hi Tb_Changed       gui=NONE guibg=#00ff00 guifg=#c08080
+hi StatusLine term=reverse,bold cterm=NONE ctermbg=250 ctermfg=0
+hi StatusLineNC term=reverse cterm=NONE ctermbg=102 ctermfg=16
+hi VertSplit term=reverse cterm=NONE ctermbg=102 ctermfg=59
+hi Directory term=bold cterm=NONE ctermbg=bg ctermfg=231
+hi ErrorMsg term=NONE cterm=NONE ctermbg=196 ctermfg=231
+hi IncSearch term=reverse cterm=NONE ctermbg=215 ctermfg=23
+hi Search term=reverse cterm=NONE ctermbg=215 ctermfg=23
+hi MoreMsg term=bold cterm=bold ctermbg=bg ctermfg=74
+hi ModeMsg term=bold cterm=bold ctermbg=bg ctermfg=fg
+hi TabLine term=underline cterm=underline ctermbg=16 ctermfg=102
+hi TabLineSel term=bold cterm=NONE ctermbg=59 ctermfg=255
+hi TabLineFill term=reverse cterm=NONE ctermbg=16 ctermfg=16
+hi CursorColumn term=reverse cterm=NONE ctermbg=241 ctermfg=fg
+hi Cursor term=NONE cterm=NONE ctermbg=145 ctermfg=16
+hi cppSTLType term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cssUIProp term=NONE cterm=NONE ctermbg=bg ctermfg=188
+hi vimAutoEvent term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cBracket term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cNumbers term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi phpPropertySelectorInString term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi FoldeColumn term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi Question term=NONE cterm=NONE ctermbg=bg ctermfg=113
+hi Title term=bold cterm=bold ctermbg=bg ctermfg=215
+hi VisualNOS term=bold,underline cterm=bold,underline ctermbg=bg ctermfg=fg
+hi WarningMsg term=NONE cterm=NONE ctermbg=bg ctermfg=196
+hi WildMenu term=NONE cterm=NONE ctermbg=233 ctermfg=255
+hi Folded term=NONE cterm=NONE ctermbg=25 ctermfg=188
+hi phpSemicolon term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpFunctions term=NONE cterm=NONE ctermbg=bg ctermfg=188
+hi phpParent term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi javaScriptBraces term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi javaScriptOperator term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi htmlTag term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi htmlTagName term=NONE cterm=NONE ctermbg=bg ctermfg=145
+hi cCppBracket term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cBlock term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi htmlTitle term=NONE cterm=NONE ctermbg=bg ctermfg=113
+hi cUserCont term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi lCursor term=NONE cterm=NONE ctermbg=145 ctermfg=16
+hi cssPseudoClassId term=NONE cterm=NONE ctermbg=bg ctermfg=255
+hi cssBraces term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi cssIdentifier term=NONE cterm=NONE ctermbg=bg ctermfg=215
+hi cssTagName term=NONE cterm=NONE ctermbg=bg ctermfg=215
+hi cMulti term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi ICursor term=NONE cterm=NONE ctermbg=145 ctermfg=fg
+hi FoldColumn term=NONE cterm=NONE ctermbg=16 ctermfg=61
+hi DiffAdd term=bold cterm=NONE ctermbg=0 ctermfg=113
+hi DiffChange term=bold cterm=NONE ctermbg=0 ctermfg=fg
+hi DiffDelete term=bold cterm=bold ctermbg=0 ctermfg=215
+hi DiffText term=reverse cterm=NONE ctermbg=0 ctermfg=fg
+hi SignColumn term=NONE cterm=NONE ctermbg=16 ctermfg=51
+hi SpellBad term=reverse cterm=undercurl ctermbg=bg ctermfg=196
+hi SpellCap term=reverse cterm=undercurl ctermbg=bg ctermfg=21
+hi SpellRare term=reverse cterm=undercurl ctermbg=bg ctermfg=201
+hi SpellLocal term=underline cterm=undercurl ctermbg=bg ctermfg=51
+hi htmlSpecialTagName term=NONE cterm=NONE ctermbg=bg ctermfg=145
+hi htmlArg term=NONE cterm=NONE ctermbg=bg ctermfg=188
+hi cBitField term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cssSelectorOp term=NONE cterm=NONE ctermbg=bg ctermfg=255
+hi pythonFunction term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi cNumbersCom term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi vimFuncName term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi phpRegionDelimiter term=NONE cterm=NONE ctermbg=bg ctermfg=139
+hi phpPropertySelector term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi cCppParen term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+hi phpOperator term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpArrayPair term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpAssignByRef term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpRelation term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpMemberSelector term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpUnknownSelector term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi phpVarSelector term=NONE cterm=NONE ctermbg=bg ctermfg=145
+hi htmlEndTag term=NONE cterm=NONE ctermbg=bg ctermfg=102
+hi vimFold term=NONE cterm=NONE ctermbg=bg ctermfg=fg

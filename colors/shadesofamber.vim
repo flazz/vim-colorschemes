@@ -1,114 +1,139 @@
 " Vim color file
-" Maintainer: Tim Brown <tim@timb.net>
-" Last Change: 2010-09-22
-" Version: 1.1
-" URI: 
-"
-" Changes:
-" 1.1 six digit colours (e.g. #ff0000 -> #ff0000)
-" 1.0 initial release
+" Maintainer: Sergey Vlasov <sergey.vlsv@gmail.com>
+" Inspired by original Code::Blocks theme in a dark manner.
 
-
-""" Init
 set background=dark
 highlight clear
-if exists("syntax_on")
-    syntax reset
-endif
-let g:colors_name = "shadesofamber"
+let g:colors_name="codeblocks_dark"
 
+let save_cpo = &cpo
+set cpo&vim
 
-"------- COLORS --------
-"-- GUI Colors
-highlight BadStyle      gui=undercurl guifg=#ff0000    guibg=#330000
+" basic highlight groups (:help highlight-groups) {{{
 
-highlight Cursor        gui=None   guifg=black guibg=#ffee00
-highlight CursorIM      gui=italic guifg=black guibg=#ffee00
-highlight Directory                guifg=green guibg=bg
-highlight DiffAdd       gui=None   guifg=green   guibg=#002200
+" text {{{
+hi Normal       guifg=#D1D1D1       guibg=#121316       gui=NONE
 
-highlight DiffChange    gui=none  guifg=#ffff00 guibg=#442200
-highlight DiffDelete    gui=None      guifg=#440000 guibg=#220000
-highlight DiffText      gui=undercurl guifg=#ffff00    guibg=#663300
-highlight ErrorMsg      gui=None   guifg=#ffff00  guibg=#ff4400
-highlight VertSplit     gui=None   guifg=#112200 guibg=#ffcc00
-highlight Folded        gui=Bold   guibg=#334400 guifg=#cc9900
-highlight FoldColumn    gui=None   guibg=#112200 guifg=#ffcc00
-highlight IncSearch     gui=undercurl guibg=#330066 guifg=fg
-highlight LineNr        gui=None   guibg=#334400 guifg=#cc9900
-highlight ModeMsg       gui=none   guibg=#004400  guifg=#00ff00
-highlight MoreMsg       gui=italic guifg=SeaGreen4 guibg=bg
-highlight NonText       guibg=#112200 guifg=#ffcc00
-highlight Normal        gui=None   guibg=#000000 guifg=#ffee00
-highlight Question      gui=italic guifg=SeaGreen2 guibg=bg
-highlight Search        gui=bold   guibg=#440088 guifg=fg
-highlight SpecialKey    gui=bold   guibg=#004400 guifg=#ffff00
-highlight StatusLine    gui=bold   guibg=#ffcc00 guifg=#000088
-highlight StatusLineNC  gui=none   guibg=#ffcc00 guifg=#333300
-highlight Title         gui=bold,italic  guifg=black guibg=#ffff00
-highlight Visual        gui=reverse guibg=#ffff00 guifg=#008800
-highlight VisualNOS     gui=italic,underline guifg=fg guibg=bg
-highlight WarningMsg    gui=bold   guifg=#ff0000 guibg=bg
-highlight WildMenu      gui=bold   guibg=#008888 guifg=#ffff00
-highlight ColorColumn   gui=bold,italic guibg=#444400 guifg=#ff0000
+hi Folded       guifg=#c2bfa5       guibg=#050505       gui=underline
+hi LineNr		guifg=#928c75		guibg=#0B0B0D		gui=NONE
+hi Directory    guifg=#00bbdd       guibg=NONE          gui=bold
+hi NonText      guifg=#77ff22       guibg=NONE          gui=bold
+hi SpecialKey   guifg=#559933       guibg=NONE          gui=NONE
 
-"-- Syntax Colors
-"highlight Comment       gui=reverse guifg=#507080
-highlight Comment       gui=None guifg=#ffaa00 guibg=#221100
+hi SpellBad     guifg=NONE          guibg=NONE          gui=undercurl
+hi SpellCap     guifg=NONE          guibg=NONE          gui=undercurl
+hi SpellLocal   guifg=NONE          guibg=NONE          gui=undercurl
+hi SpellRare    guifg=NONE          guibg=NONE          gui=undercurl
 
-highlight Constant      gui=bold guifg=white guibg=bg
-highlight String      gui=none   guifg=#ccff00 guibg=bg
-"highlight Character gui=None guifg=Cyan guibg=bg
-highlight Number      gui=None guifg=#ccff00 guibg=bg
-highlight Boolean     gui=none guifg=#ff8800 guibg=bg
-"highlight Float gui=None guifg=Cyan guibg=bg
+hi DiffAdd      guifg=#ffffff       guibg=#126493       gui=NONE
+hi DiffChange   guifg=#000000       guibg=#976398       gui=NONE
+hi DiffDelete   guifg=#000000       guibg=#be1923       gui=bold
+hi DiffText     guifg=#ffffff       guibg=#976398       gui=bold
+" }}}
 
-highlight Identifier  guifg=#ddcc00
-highlight Function    gui=None guifg=#ffff88 guibg=bg
+" borders / separators / menus {{{
+hi FoldColumn   guifg=#c8bcb9       guibg=#786d65       gui=bold
+hi SignColumn   guifg=#c8bcb9       guibg=#786d65       gui=bold
 
-highlight Statement   gui=bold   guifg=#ff8800
-highlight Conditional gui=Bold   guifg=#ff8800 guibg=bg
-highlight Repeat      gui=Bold   guifg=#ff8800 guibg=bg
-highlight Label       gui=Bold   guifg=#ff8800 guibg=bg
-highlight Operator    gui=Bold   guifg=#ff8800 guibg=bg
-highlight Keyword     gui=Bold   guifg=#ff8800 guibg=bg
-highlight Exception   gui=Bold   guifg=#ff8800 guibg=bg
+hi Pmenu        guifg=#000000       guibg=#a6a190       gui=NONE
+hi PmenuSel     guifg=#ffffff       guibg=#133293       gui=NONE
+hi PmenuSbar    guifg=NONE          guibg=#555555       gui=NONE
+hi PmenuThumb   guifg=NONE          guibg=#cccccc       gui=NONE
 
-highlight PreProc       guifg=#ffff88
-"highlight Include gui=None guifg=MediumLightSkyBlue1 guibg=bg
-"highlight Define gui=None guifg=MediumLightSkyBlue1g guibg=bg
-"highlight Macro gui=None guifg=MediumLightSkyBlue1g guibg=bg
-"highlight PreCondit gui=None guifg=MediumSlateBlue guibg=bg
+hi StatusLine   guifg=#000000       guibg=#c2bfa5       gui=bold
+hi StatusLineNC guifg=#444444       guibg=#c2bfa5       gui=NONE
+hi WildMenu     guifg=#ffffff       guibg=#133293       gui=bold
+hi VertSplit    guifg=#c2bfa5       guibg=#c2bfa5       gui=NONE
 
-highlight Type          gui=bold guifg=#ff8800
-"highlight StorageClass gui=None guifg=LightBlue guibg=bg
-"highlight Structure gui=None guifg=LightBlue guibg=bg
-"highlight Typedef gui=None guifg=LightBlue guibg=bg
+hi TabLine      guifg=#000000       guibg=#c2bfa5       gui=NONE
+hi TabLineFill  guifg=#000000       guibg=#c2bfa5       gui=NONE
+hi TabLineSel   guifg=#ffffff       guibg=#133293       gui=NONE
 
-highlight Special       gui=none guifg=#ff8800
-"highlight SpecialChar gui=italic guifg=White guibg=bg
-"highlight Tag gui=italic guifg=White guibg=bg
-"highlight Delimiter gui=italic guifg=White guibg=bg
-"highlight SpecialComment gui=italic guifg=White guibg=bg
-"highlight Debug gui=italic guifg=White guibg=bg
+"hi Menu
+"hi Scrollbar
+"hi Tooltip
+" }}}
 
-highlight Underlined gui=underline guifg=fg guibg=bg
+" cursor / dynamic / other {{{
+hi Cursor       guifg=#000000       guibg=#ffff99       gui=NONE
+hi CursorIM     guifg=#000000       guibg=#aaccff       gui=NONE
+hi CursorLine   guifg=NONE          guibg=#1b1b1b       gui=NONE
+hi CursorColumn guifg=NONE          guibg=#1b1b1b       gui=NONE
 
-highlight Ignore     guifg=#aaaa00
+hi Visual       guifg=NONE			guibg=#344863 gui=NONE
+hi IncSearch    guifg=#000000       guibg=#eedd33       gui=bold
+hi Search       guifg=#efefd0       guibg=#A80F2B       gui=NONE
+hi MatchParen   guifg=#FFC124       guibg=#47360A       gui=bold
 
-highlight Error      gui=italic guifg=#ffff00  guibg=#ff0000
-highlight Todo       gui=bold guifg=yellow guibg=#aa7700
+"hi VisualNOS
+" }}}
 
-"-- OLD COLORS
-"highlight prologAtom guifg=#dddd00 gui=italic
-highlight prologVariable     gui=bold,italic guifg=#00ff00
-highlight prologFreeVariable gui=italic      guifg=#00ff00
-highlight xpceVariable       gui=bold        guifg=#ffff00 guibg=#666666
-highlight xpceKeyword        gui=bold        guifg=#ff8800 guibg=#666666
+" listings / messages {{{
+hi ModeMsg      guifg=#eecc18       guibg=NONE          gui=NONE
+hi Title        guifg=#dd4452       guibg=NONE          gui=bold
+hi Question     guifg=#66d077       guibg=NONE          gui=NONE
+hi MoreMsg      guifg=#39d049       guibg=NONE          gui=NONE
+hi ErrorMsg     guifg=#ffffff       guibg=#ff0000       gui=bold
+hi WarningMsg   guifg=#ccae22       guibg=NONE          gui=bold
+" }}}
 
-highlight MatchParen         gui=bold        guibg=#448800 guifg=#ccff00
+" }}}
 
-highlight Pmenu         gui=bold        guifg=#ffcc00 guibg=#004400
-highlight PmenuSel      gui=bold        guibg=#ffcc00 guifg=#004400
-highlight PmenuSbar     gui=bold        guibg=#884400 guifg=#004400
-highlight PmenuThumb    gui=bold        guibg=#ffff00 guifg=#004400
+" syntax highlighting groups {{{
+"*Comment	any comment
+hi Comment      guifg=#566E67       guibg=NONE          gui=NONE
+
+"*Constant		any constant
+" String		a string constant
+" Character		a character constant: 'c', '\n'
+" Number		a number constant: 234, 0xff
+" Boolean		a boolean constant: TRUE, false
+" Float			a floating point constant: 2.3e10
+hi Constant     guifg=#F34AFF       guibg=NONE          gui=NONE
+hi String       guifg=#4D63EB		guibg=NONE			gui=NONE
+hi Character	guifg=orange		guibg=NONE          gui=bold
+hi Boolean		guifg=#F34AFF       guibg=NONE          gui=bold
+
+"*PreProc		generic
+" Include		preprocessor #include
+" Define		preprocessor #define
+" Macro			same as Define
+" PreCondit		preprocessor #if, #else, #endif, etc.
+hi PreProc      guifg=#9FEF47       guibg=NONE          gui=NONE
+
+"*Type			int, long, char, etc.
+" StorageClass	static, register, volatile, etc.
+" Structure		struct, union, enum, etc.
+" Typedef		A typedef
+hi Type         guifg=#47ABF0       guibg=NONE          gui=bold
+
+"*Identifier	any variable name
+" Function		function name (also: methods for classes)
+
+" Statement		any statement
+" Conditional	if, then, else, endif, switch, etc.
+" Repeat		for, do, while, etc.
+" Label			case, default, etc.
+" Operator		sizeof, +, *, etc.
+" Keyword		any other keyword
+" Exception		try, catch, throw
+hi Statement    guifg=#47ABF0       guibg=NONE          gui=bold
+hi Operator     guifg=#EC2417       guibg=NONE          gui=NONE
+
+"*Special		any special symbol
+" SpecialChar	special character in a constant
+" Tag			you can use CTRL-] on this
+" Delimiter		character that needs attention
+" SpecialComment	special things inside a comment
+" Debug			debugging statements
+hi Special      guifg=#83E683		guibg=NONE          gui=bold
+hi SpecialChar	guifg=orange		guibg=NONE          gui=bold
+hi Delimiter	guifg=orange		guibg=NONE          gui=bold
+
+hi Underlined   guifg=#80a0ff       guibg=NONE          gui=underline
+hi Ignore       guifg=#888888       guibg=NONE          gui=NONE
+hi Error        guifg=#ffffff       guibg=#ff0000       gui=NONE
+hi Todo         guifg=#ffffff       guibg=#ee7700       gui=bold
+" }}}
+
+let &cpo = save_cpo

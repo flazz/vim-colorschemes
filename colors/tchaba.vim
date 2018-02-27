@@ -1,107 +1,93 @@
-" Vim color file
-" Maintainer:   Lucas Avanço <avanco89@gmail.com>
-" Last Change:  Oct, 6 2010
+" Vim color scheme
 "
+" Name:        southernlights256.vim
+" Maintainer:  Jakson Aquino
+" Last Change: Sun Oct 24, 2010  10:36AM
+" License:     GNU/GPL
 "
-" This color scheme was based on some tools:
-"
-" It helps visualize the vim colorscheme sections and there colors:
-" sites.google.com/site/yukihironakadaira/vim-color.html  by 
-" 	Yukihiro Nakadaira <yukihiro.nakadaira@gmail.com>
-"
-" Convert a GUI only vim colorscheme file to a gui/256xterm compatible
-" version:
-" http://github.com/kanru/vim-colorscheme-converter	  by
-" 	Kanru Chen <kanru@kanru.info>
-"
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"README
-"setting 't_Co' to 256 in vimrc is enough to make Vim use 256 colors
-"set t_Co=256  =>  ~/.vimrc
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Based on other color schemes. The starting point was 'torte'
 
-set bg=dark
-hi clear 
+set background=dark
+
+hi clear
+
 if exists("syntax_on")
-	  syntax reset
+  syntax reset
 endif
-let colors_name = "tchaba"
 
-hi Comment guifg=skyblue ctermfg=23 cterm=none
-hi Constant guifg=#ffff04 ctermfg=98 cterm=none
-hi Cursor guifg=slategrey guibg=khaki 
-hi CursorColumn guibg=gray40 
-hi CursorIM gui=None 
-hi CursorLine guibg=gray40 
-hi DiffAdd guibg=darkblue 
-hi DiffChange guibg=darkmagenta 
-hi DiffDelete gui=bold guifg=blue guibg=darkcyan 
-hi DiffText gui=bold guibg=red 
-hi Directory guifg=cyan 
-hi Error guifg=white guibg=red 
-hi ErrorMsg guifg=white guibg=red 
-hi FoldColumn guifg=tan guibg=gray30 
-hi Folded guifg=gold guibg=gray30 
-hi Identifier guifg=palegreen 
-hi Ignore guifg=gray40 
-hi IncSearch gui=reverse guifg=slategrey guibg=khaki 
-hi LineNr guifg=yellow 
-hi MatchParen guibg=darkcyan 
-hi ModeMsg gui=bold guifg=goldenrod 
-hi MoreMsg gui=bold guifg=seagreen 
-hi NonText gui=bold guifg=lightblue guibg=gray30
-hi Normal guifg=white guibg=gray20 ctermfg=254	ctermbg=234
-hi Pmenu guibg=magenta 
-hi PmenuSbar guibg=grey 
-hi PmenuSel guibg=darkgray 
-hi PmenuThumb gui=reverse 
-hi PreProc guifg=#0abc00 ctermfg=40
-hi Question gui=bold guifg=springgreen 
-hi Search guifg=wheat guibg=peru 
-hi SignColumn guifg=cyan guibg=grey 
-hi Special guifg=navajowhite 
-hi SpecialKey guifg=yellowgreen 
-hi SpellBad gui=undercurl 
-hi SpellCap gui=undercurl 
-hi SpellLocal gui=undercurl 
-hi SpellRare gui=undercurl 
-hi Statement gui=bold guifg=#ff6000 ctermfg=220
-hi StatusLine guifg=black guibg=#c2bfa5 ctermbg=250 
-hi StatusLineNC guifg=gray50 guibg=#c2bfa5 ctermbg=250 
-hi TabLine gui=underline guibg=darkgray 
-hi TabLineFill gui=reverse 
-hi TabLineSel gui=bold 
-hi Title gui=bold guifg=indianred 
-hi Todo guifg=orangered guibg=yellow2 
-hi Type gui=bold guifg=#8144b4 ctermfg=160
-hi Underlined gui=underline guifg=#80a0ff ctermfg=111 
-hi VertSplit guifg=gray50 guibg=#c2bfa5 ctermbg=250 
-hi Visual guifg=khaki guibg=olivedrab 
-hi VisualNOS gui=bold,underline 
-hi WarningMsg guifg=salmon 
-hi WildMenu guifg=black guibg=yellow 
-hi link Boolean Constant 
-hi link Character Constant 
-hi link Conditional Statement 
-hi link Debug Special 
-hi link Define PreProc 
-hi link Delimiter Special 
-hi link Exception Statement 
-hi link Float Constant 
-hi link Function Identifier 
-hi link Include PreProc 
-hi link Keyword Statement 
-hi link Label Statement 
-hi link Macro PreProc 
-hi link Number Constant 
-hi link Operator Statement 
-hi link PreCondit PreProc 
-hi link Repeat Statement 
-hi link SpecialChar Special 
-hi link SpecialComment Special 
-hi link StorageClass Type 
-hi link String Constant 
-hi link Structure Type 
-hi link Tag Special 
-hi link Typedef Type 
+let colors_name = "southernlights"
+
+hi Boolean	ctermfg=209	guifg=#ff875f
+hi Character	ctermfg=223	guifg=#ffd7af
+hi Comment      ctermfg=147	guifg=#afafff
+hi Constant	ctermfg=219	guifg=#ffafff
+hi Conceal	ctermfg=221	ctermbg=black guifg=#ffd75f guibg=black
+hi Cursor	ctermfg=Black	ctermbg=Green	cterm=bold	guifg=Black	guibg=Green	gui=bold
+hi CursorLine	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
+hi CursorColumn	ctermbg=234	cterm=NONE	guibg=#1c1c1c gui=none
+hi Directory	ctermfg=27	guifg=#005fff
+hi Function	ctermfg=117	guifg=#87d7ff
+hi Identifier	ctermfg=cyan	guifg=cyan
+hi LineNr	ctermfg=Black	ctermbg=240	guifg=Black	guibg=#585858
+hi MatchParen	ctermfg=white	ctermbg=58	guifg=white	guibg=#5f5f00
+hi NonText	ctermfg=21	guifg=#0000ff
+hi Number	ctermfg=223	guifg=#ffd7af
+hi Normal	ctermfg=253	ctermbg=Black	guifg=#dadada guibg=Black
+hi Operator	ctermfg=204	guifg=#ff5f87
+hi Pmenu	ctermfg=119	ctermbg=22	guifg=#87ff5f	guibg=#005f00
+hi PmenuSel	ctermfg=Yellow	ctermbg=28	guifg=Yellow	guibg=#008700
+hi PreProc	ctermfg=13	ctermbg=Black	guifg=#ff40ff
+hi Search	ctermfg=white	ctermbg=58	guifg=white	guibg=#5f5f00
+hi ShowMarksHLl	ctermfg=227	ctermbg=28	guifg=#ffff5f	guibg=#008700
+hi SignColumn							guibg=#585858
+hi Special	ctermfg=221	guifg=#ffd75f
+hi SpecialKey	ctermfg=14	guifg=#00ffff
+hi SpellBad	ctermfg=red	ctermbg=NONE	cterm=UNDERLINE	guisp=red	gui=undercurl
+hi SpellLocal	ctermfg=Green	ctermbg=NONE	cterm=UNDERLINE	guisp=#00AA00	gui=undercurl
+hi SpellRare	ctermfg=Magenta	ctermbg=NONE	cterm=UNDERLINE	guisp=Magenta	gui=undercurl
+hi Statement	ctermfg=yellow	guifg=yellow	cterm=NONE	gui=NONE
+hi StatusLine	ctermfg=239	ctermbg=white	guifg=#4e4e4e	guibg=white
+hi StatusLineNC	ctermfg=239	ctermbg=black	guifg=gray30	guibg=black
+hi TabLineSel	ctermfg=white	ctermbg=239	guifg=#4e4e4e	guibg=white
+hi TabLine     	ctermfg=247	ctermbg=234	cterm=NONE	guifg=#9e9e9e	guibg=#262626 gui=NONE
+hi VertSplit   	ctermfg=239	ctermbg=black	guifg=gray30	guibg=black
+hi String	ctermfg=229	guifg=#ffffaf 
+hi Title	cterm=bold	ctermfg=Magenta	gui=bold	guifg=Magenta
+hi Type		ctermfg=77	guifg=#5fd75f	gui=NONE
+hi vimCommentString ctermfg=147	guifg=#afafff	gui=italic
+hi Visual	ctermfg=248	guifg=#a8a8a8	ctermbg=237 guibg=#3a3a3a
+hi WarningMsg	ctermfg=red
+
+" html
+hi htmlLink			cterm=UNDERLINE	ctermfg=105	gui=UNDERLINE	guifg=#8787ff
+hi htmlBold			cterm=BOLD			gui=BOLD
+hi htmlBoldItalic		cterm=BOLD,ITALIC		gui=BOLD,ITALIC
+hi htmlBoldUnderline		cterm=BOLD,UNDERLINE		gui=BOLD,UNDERLINE
+hi htmlBoldUnderlineItalic	cterm=BOLD,UNDERLINE,ITALIC	gui=BOLD,UNDERLINE,ITALIC
+hi htmlItalic			cterm=ITALIC			gui=ITALIC
+hi htmlUnderline		cterm=UNDERLINE			gui=UNDERLINE
+hi htmlUnderlineItalic		cterm=UNDERLINE,ITALIC		gui=UNDERLINE,ITALIC
+
+" mail
+hi mailHeader  ctermfg=229 guifg=#ffffaf
+hi mailSubject ctermfg=yellow guifg=yellow
+hi mailQuoted1 ctermfg=48 guifg=#00ff87
+hi mailQuoted2 ctermfg=51 guifg=#00ffff
+hi mailQuoted3 ctermfg=39 guifg=#00afff
+hi mailQuoted4 ctermfg=33 guifg=#0087ff
+hi mailQuoted5 ctermfg=27 guifg=#005fff
+hi mailQuoted6 ctermfg=21 guifg=#0000ff
+hi mailSignature ctermfg=209 guifg=#ff875f
+
+" diff
+hi diffAdded	ctermfg=40	guifg=#00d700
+hi diffRemoved	ctermfg=210	guifg=#ff8787
+hi diffFile	ctermfg=117	guifg=#87d7ff
+hi diffOldFile	ctermfg=117	guifg=#87d7ff
+hi diffNewFile	ctermfg=117	guifg=#87d7ff
+hi diffLine	ctermfg=yellow	guifg=yellow
+
+" wdiff
+hi link wdiffOld diffRemoved
+hi link wdiffNew diffAdded
+

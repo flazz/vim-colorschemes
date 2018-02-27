@@ -1,4 +1,4 @@
-" local syntax file - set colors on a per-machine basis:
+
 " vim: tw=0 ts=4 sw=4
 " Vim color file, derived from colorscheme 'murphy'
 " Maintainer:	Michael Muhler <muhler AT web.de>
@@ -14,6 +14,13 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "nightwish"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 
 hi Comment		term=bold	   ctermfg=LightRed   guifg=Orange

@@ -1,60 +1,76 @@
-" Maintainer:	Stuart Radnidge
-" Version:      1.0.0
-" Last Change:	August 1st, 2010
-" Credits:      This is a modification of the BusyBee.vim color scheme by Patrick J. Anderson.
+"
+" Tango-Shady Vim Color Scheme
+" =======================
+"
+" author:   shady <vimpimps@gmail.com>
+"
 
 set background=dark
-
 hi clear
-
 if exists("syntax_on")
-  syntax reset
+    syntax reset
 endif
 
-let colors_name = "busierbee"
+let colors_name = "tangoshady"
 
-" Vim >= 7.0 specific colors
-if version >= 700
-  hi CursorLine    ctermbg=234
-  hi CursorColumn  ctermbg=234
-  hi MatchParen    ctermfg=157 ctermbg=237 cterm=bold
-  hi Pmenu 		   ctermbg=238
-  hi PmenuSel 	   ctermfg=0 ctermbg=148
-endif
 
-" General colors
-hi Cursor 		   ctermbg=241
-hi Normal 		   ctermfg=253 ctermbg=234
-hi NonText 		   ctermfg=244 ctermbg=235
-hi LineNr 		   ctermfg=244 ctermbg=232
-hi StatusLine 	   ctermfg=253 ctermbg=238
-hi StatusLineNC    ctermfg=246 ctermbg=238
-hi VertSplit 	   ctermfg=238 ctermbg=238
-hi Folded 		   ctermbg=4 ctermfg=248
-hi Title		   ctermfg=254 cterm=bold
-hi Visual		   ctermfg=254 ctermbg=4
-hi SpecialKey	   ctermfg=244 ctermbg=236
+"hi Normal guibg=grey15 guifg=#eeeeec 
+"hi Normal guibg=#0D0D0D guifg=#eeeeec 
+hi Normal guibg=#272727 guifg=#eeeeec 
 
-" Syntax highlighting
-hi Comment 		   ctermfg=244
-hi Todo 		   ctermfg=245
-hi Boolean         ctermfg=220
-hi String 		   ctermfg=149
-hi Identifier 	   ctermfg=148
-hi Function 	   ctermfg=176
-hi Type 		   ctermfg=103
-hi Statement 	   ctermfg=103
-hi Keyword		   ctermfg=208
-hi Constant 	   ctermfg=208
-hi Number		   ctermfg=208
-hi Special		   ctermfg=208
-hi PreProc 		   ctermfg=230
-hi Todo            ctermfg=200
-
-" Code-specific colors
-hi pythonImport    ctermfg=38
-hi pythonException ctermfg=200
-hi pythonOperator  ctermfg=103
-hi pythonBuiltinFunction ctermfg=200
-hi pythonExClass   ctermfg=200
-
+highlight SpecialKey      guifg=#3465A4
+highlight NonText         guifg=#3465A4
+highlight Directory       guifg=#3465A4
+highlight ErrorMsg        guifg=#D3D7CF guibg=#CC0000
+highlight IncSearch       gui=reverse
+highlight Search          guibg=#C4A000
+highlight MoreMsg         guifg=#4E9A06
+" highlight ModeMsg         gui=bold
+highlight LineNr          guifg=#666666 guibg=#151515
+"highlight LineNr          term=underline ctermfg=3 guifg=#C4A000 guibg=bg
+highlight Question        guifg=#4E9A06
+highlight StatusLine      gui=reverse
+highlight StatusLineNC    gui=reverse
+highlight VertSplit       gui=reverse
+highlight Title           guifg=#75507B
+" highlight Visual          term=reverse cterm=reverse guibg=#D3D7CF
+highlight Visual          guibg=#363636
+highlight VisualNOS       gui=underline
+highlight WarningMsg      guifg=#CC0000
+highlight WildMenu        guifg=#2E3436 guibg=#C4A000
+"highlight Folded          term=standout ctermfg=4 ctermbg=7 guifg=#3465A4 guibg=#D3D7CF
+"highlight FoldColumn      term=standout ctermfg=4 ctermbg=7 guifg=#D3D7CF guibg=#D3D7CF
+hi Folded guibg=black guifg=grey40 ctermfg=grey ctermbg=darkgrey
+hi FoldColumn guibg=black guifg=grey20 ctermfg=4 ctermbg=7
+highlight DiffAdd         guibg=#3465A4
+highlight DiffChange      guibg=#75507B
+highlight DiffDelete      guifg=#3465A4 guibg=#06989A
+highlight DiffText        guibg=#CC0000
+highlight SignColumn      guifg=#000000 guibg=#D3D7CF
+highlight SpellBad        gui=undercurl guisp=#CC0000
+highlight SpellCap        gui=undercurl guisp=#3465A4
+highlight SpellRare       gui=undercurl guisp=#75507B
+highlight SpellLocal      gui=undercurl guisp=#06989A
+highlight Pmenu           guibg=#75507B guifg=#000000
+highlight PmenuSel        guibg=#D3D7CF guifg=#000000
+highlight PmenuSbar       guibg=#75507B
+highlight PmenuThumb      gui=reverse
+highlight TabLine         gui=underline guibg=#D3D7CF guifg=#000000
+"highlight TabLineSel      gui=bold
+highlight TabLineFill     gui=reverse
+highlight CursorColumn    guibg=#D3D7CF guifg=#000000
+highlight CursorLine      guibg=#D3D7CF guifg=#000000
+highlight Cursor          guifg=bg guibg=fg
+highlight lCursor         guifg=bg guibg=fg
+highlight MatchParen      guibg=#06989A
+hi Comment         guifg=#3465A4
+hi Constant        guifg=#CC0000
+hi Special         guifg=#75507B
+highlight Identifier      guifg=#06989A
+hi Statement       guifg=#C4A000
+hi PreProc         guifg=#75507B
+hi Type            guifg=#4E9A06
+hi Underlined      gui=underline guifg=#75507B
+hi Ignore          guifg=#2E3436
+hi Error           guifg=#D3D7CF guibg=#CC0000
+highlight Todo     guifg=Blue guibg=Yellow 

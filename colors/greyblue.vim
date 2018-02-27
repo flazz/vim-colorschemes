@@ -1,4 +1,4 @@
-" Vim color file
+
 "
 
 set background=dark
@@ -8,6 +8,13 @@ if exists("syntax_on")
 endif
 
 let colors_name = "greyblue"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Normal          ctermfg=NONE ctermbg=NONE gui=NONE guifg=#b7af9f guibg=#090909
 

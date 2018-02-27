@@ -1,51 +1,66 @@
-" Maintainer:	Lars H. Nielsen (dengmao@gmail.com)
-" Last Change:	January 22 2007
+/download_script.php?src_id=7873
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:33:48 GMT
+Vary: Accept-Encoding
 
-set background=dark
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=7873">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:33:46 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=8379
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:33:46 GMT
+Vary: Accept-Encoding
 
-hi clear
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=8379">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:33:46 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=9699
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:33:46 GMT
+Vary: Accept-Encoding
 
-if exists("syntax_on")
-  syntax reset
-endif
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=9699">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:33:46 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 268
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=10350
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:33:49 GMT
+Vary: Accept-Encoding
 
-let colors_name = "wombat"
-
-
-" Vim >= 7.0 specific colors
-if version >= 700
-  hi CursorLine guibg=#2d2d2d
-  hi CursorColumn guibg=#2d2d2d
-  hi MatchParen guifg=#f6f3e8 guibg=#857b6f gui=bold
-  hi Pmenu 		guifg=#f6f3e8 guibg=#444444
-  hi PmenuSel 	guifg=#000000 guibg=#cae682
-endif
-
-" General colors
-hi Cursor 		guifg=NONE    guibg=#656565 gui=none
-hi Normal 		guifg=#f6f3e8 guibg=#242424 gui=none
-hi NonText 		guifg=#808080 guibg=#303030 gui=none
-hi LineNr 		guifg=#857b6f guibg=#000000 gui=none
-hi StatusLine 	guifg=#f6f3e8 guibg=#444444 gui=italic
-hi StatusLineNC guifg=#857b6f guibg=#444444 gui=none
-hi VertSplit 	guifg=#444444 guibg=#444444 gui=none
-hi Folded 		guibg=#384048 guifg=#a0a8b0 gui=none
-hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold
-hi Visual		guifg=#f6f3e8 guibg=#444444 gui=none
-hi SpecialKey	guifg=#808080 guibg=#343434 gui=none
-
-" Syntax highlighting
-hi Comment 		guifg=#99968b gui=italic
-hi Todo 		guifg=#8f8f8f gui=italic
-hi Constant 	guifg=#e5786d gui=none
-hi String 		guifg=#95e454 gui=italic
-hi Identifier 	guifg=#cae682 gui=none
-hi Function 	guifg=#cae682 gui=none
-hi Type 		guifg=#cae682 gui=none
-hi Statement 	guifg=#8ac6f2 gui=none
-hi Keyword		guifg=#8ac6f2 gui=none
-hi PreProc 		guifg=#e5786d gui=none
-hi Number		guifg=#e5786d gui=none
-hi Special		guifg=#e7f6da gui=none
-
-
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=10350">here</a>.</p>
+</body></html>

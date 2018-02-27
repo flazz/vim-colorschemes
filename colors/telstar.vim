@@ -14,6 +14,14 @@ if exists("syntax_on")
 endif
 
 let g:colors_name = "telstar"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
+
 
 hi Normal        guifg=#5060c0 guibg=#000022
 hi Cursor        guibg=#aaaaaa guifg=Black
@@ -56,9 +64,6 @@ hi Todo          gui=bold guifg=black
 hi String        guifg=#999999
 hi Operator      guifg=#8080c0
 hi Identifier    guifg=#686888
-hi Pmenu         guibg=#101033 guifg=#999999 gui=bold
-
-hi MatchParen    gui=bold guibg=#000022
 
 " java highlighting
 hi javaExternal  guifg=#666666

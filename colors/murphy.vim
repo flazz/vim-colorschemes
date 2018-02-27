@@ -1,13 +1,8 @@
 " local syntax file - set colors on a per-machine basis:
 " vim: tw=0 ts=4 sw=4
 " Vim color file
-<<<<<<< HEAD
 " Maintainer:	Ron Aaron <ron@ronware.org>
 " Last Change:	2003 May 02
-=======
-" Maintainer:	Ron Aaron <ron@mossbayeng.com>
-" Last Change:	2001 Sep 02
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 hi clear
 set background=dark
@@ -15,7 +10,6 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "murphy"
-<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -23,8 +17,6 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 
 hi Normal		ctermbg=Black  ctermfg=lightgreen guibg=Black		 guifg=lightgreen
 hi Comment		term=bold	   ctermfg=LightRed   guifg=Orange

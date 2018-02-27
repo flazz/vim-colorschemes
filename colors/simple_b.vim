@@ -1,64 +1,66 @@
-" Vim color file
-" Maintainer:   V Singh <vsingh.usa@gmail.com>
-" Last Change:	2nd June 2003
-" Version:	1.0
+/download_script.php?src_id=7656
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:06 GMT
+Vary: Accept-Encoding
 
-set background=light
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=7656">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:42:06 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=5835
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:08 GMT
+Vary: Accept-Encoding
 
-hi clear
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5835">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:42:06 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=5841
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:06 GMT
+Vary: Accept-Encoding
 
-if exists("syntax_on")
-  syntax reset
-endif
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5841">here</a>.</p>
+</body></html>
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.13.9
+Date: Tue, 27 Feb 2018 18:42:06 GMT
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 267
+Connection: keep-alive
+Location: https://www.vim.org/scripts/download_script.php?src_id=5914
+Cache-Control: max-age=172800
+Expires: Thu, 01 Mar 2018 18:42:07 GMT
+Vary: Accept-Encoding
 
-let g:colors_name = "simple_b"
-
-highlight Normal	    cterm=NONE ctermfg=black ctermbg=lightblue gui=NONE guifg=black guibg=lightblue 
-highlight NonText	    ctermfg=black ctermbg=lightblue  guifg=black guibg=white
-highlight LineNr        cterm=italic ctermfg=black ctermbg=lightblue  gui=italic guifg=black guibg=lightblue 
-
-" Syntax highlighting scheme
-highlight Comment	    cterm=italic ctermfg=black ctermbg=white gui=italic guifg=black guibg=lightblue 
-
-highlight Constant	    ctermfg=black ctermbg=lightblue guifg=black guibg=lightblue 
-highlight String	    ctermfg=black ctermbg=lightblue guifg=black guibg=lightblue
-highlight Character	    ctermfg=black ctermbg=lightblue guifg=black guibg=lightblue
-highlight Number	    ctermfg=black ctermbg=lightblue guifg=black guibg=lightblue
-" Boolean defaults to Constant
-highlight Float		    ctermfg=black ctermbg=lightblue guifg=black guibg=lightblue
-
-highlight Identifier	ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-highlight Function	    ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-
-highlight Statement	    ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-highlight Conditional	ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-highlight Repeat	    ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-highlight Label		    ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-highlight Operator	    ctermfg=black ctermbg=lightblue  guifg=black guibg=lightblue
-" Keyword defaults to Statement
-" Exception defaults to Statement
-
-highlight PreProc	    cterm=bold ctermfg=black ctermbg=lightblue gui=bold guifg=black guibg=lightblue
-" Include defaults to PreProc
-" Define defaults to PreProc
-" Macro defaults to PreProc
-" PreCondit defaults to PreProc
-
-highlight Type		    cterm=bold ctermfg=black ctermbg=lightblue gui=bold guifg=black guibg=lightblue
-" StorageClass defaults to Type
-" Structure defaults to Type
-" Typedef defaults to Type
-
-highlight Special	    cterm=italic ctermfg=black ctermbg=lightblue gui=italic guifg=black guibg=lightblue
-" SpecialChar defaults to Special
-" Tag defaults to Special
-" Delimiter defaults to Special
-highlight SpecialComment cterm=italic ctermfg=black ctermbg=lightblue  gui=italic guifg=black guibg=lightblue
-" Debug defaults to Special
-
-highlight Todo		    cterm=italic,bold ctermfg=black ctermbg=lightblue gui=italic,bold guifg=black guibg=lightblue
-" Ideally, the bg color would be white but VIM cannot print white on black!
-highlight Error		    cterm=bold,reverse ctermfg=black ctermbg=grey gui=bold,reverse guifg=black guibg=grey
-
-" vim:et:ff=unix:tw=0:ts=4:sw=4
-" EOF print_bw.vim
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5914">here</a>.</p>
+</body></html>

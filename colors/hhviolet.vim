@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-" Vim color file {{{1
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 "  Maintainer: hira@users.sourceforge.jp
 " Last Change: 2003/11/29 (Sat) 13:28:25.
 "     Version: 1.2
 " This color scheme uses a dark background.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " Happy Hacking color scheme {{{1
 set background=dark
 hi clear
@@ -21,7 +14,6 @@ let colors_name       = expand("<sfile>:t:r")
 let html_my_rendering = 1
 
 
-<<<<<<< HEAD
 "lyj---//2006-03-15 @ 23:16 By Lyj---------------
 hi User1 guibg=darkblue guifg=yellow
 hi User2 guibg=darkblue guifg=lightblue
@@ -29,8 +21,6 @@ hi User3 guibg=darkblue guifg=red
 hi User4 guibg=darkblue guifg=cyan
 hi User5 guibg=darkblue guifg=lightgreen
 "endlyjset background=light
-=======
->>>>>>> eab315701f4627967fd62582eefc4e37a3745786
 " frame & title & message (theme) {{{1
 hi LineNr                  gui=underline   guifg=#686475 guibg=#13101c
 hi Folded                  gui=none        guifg=#686475 guibg=bg

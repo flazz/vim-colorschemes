@@ -1,6 +1,8 @@
+
 " Vim color file by Jörn Horstmann <joern_h@gmx.net>
-" Black background, works in gui and console
-" Last change 30.11.2004
+" Light background in GUI, dark background in Console
+" Last change 16.07.2004
+" TODO
 
 set bg=dark
 
@@ -10,16 +12,23 @@ if exists("syntax_on")
 endif
 
 let colors_name = "jhdark"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 hi Normal         guifg=#999999 guibg=#000000 gui=none ctermfg=gray     ctermbg=black    cterm=none
 
 hi ErrorMsg       guifg=#ff0000 guibg=bg      gui=none ctermfg=red      ctermbg=bg       cterm=none
-hi Visual         guifg=bg      guibg=#0000ff gui=none ctermfg=bg       ctermbg=blue cterm=none
-hi VisualNOS      guifg=bg      guibg=#0000ff gui=none ctermfg=bg       ctermbg=blue cterm=none
+hi Visual         guifg=bg      guibg=#4444aa gui=none ctermfg=bg       ctermbg=darkcyan cterm=none
+hi VisualNOS      guifg=bg      guibg=#4444aa gui=none ctermfg=bg       ctermbg=darkcyan cterm=none
 hi Todo           guifg=bg      guibg=#aaaa00 gui=none ctermfg=bg       ctermbg=yellow   cterm=none
 "hi Todo          guifg=#884400 guibg=bg      gui=none ctermfg=bg       ctermbg=yellow   cterm=none
-hi Search         guifg=bg      guibg=#4444aa gui=none ctermfg=bg       ctermbg=darkcyan     cterm=none
-hi IncSearch      guifg=bg      guibg=#4444aa gui=none ctermfg=bg       ctermbg=darkcyan     cterm=none
+hi Search         guifg=bg      guibg=#8888ee gui=none ctermfg=bg       ctermbg=blue     cterm=none
+hi IncSearch      guifg=bg      guibg=#8888ee gui=none ctermfg=bg       ctermbg=blue     cterm=none
 
 hi SpecialKey     guifg=#775522 guibg=bg      gui=none ctermfg=magenta  ctermbg=bg       cterm=none
 hi Directory      guifg=#000088 guibg=bg      gui=none ctermfg=blue     ctermbg=bg       cterm=none
@@ -54,13 +63,13 @@ hi Cursor         guifg=bg      guibg=fg      gui=none ctermfg=bg       ctermbg=
 hi lCursor        guifg=bg      guibg=fg      gui=none ctermfg=bg       ctermbg=fg         cterm=none
 
 hi Comment        guifg=#008800 guibg=bg      gui=none ctermfg=darkgreen  ctermbg=bg     cterm=none
-hi Operator       guifg=#ffffff guibg=bg      gui=none ctermfg=fg         ctermbg=bg     cterm=none
+hi Operator       guifg=fg      guibg=bg      gui=none ctermfg=fg         ctermbg=bg     cterm=none
 hi Constant       guifg=#aa0000 guibg=bg      gui=none ctermfg=darkred    ctermbg=bg     cterm=none
 hi Special        guifg=#997700 guibg=bg      gui=none ctermfg=brown      ctermbg=bg     cterm=none
 
-hi Identifier     guifg=#dddddd guibg=bg      gui=none ctermfg=gray     ctermbg=bg    cterm=none
+hi Identifier     guifg=#dddddd guibg=bg      gui=none ctermfg=white    ctermbg=bg    cterm=none
 
-hi Type           guifg=#6666dd guibg=bg      gui=none ctermfg=blue     ctermbg=bg    cterm=none
+hi Type           guifg=#6666dd guibg=bg      gui=none ctermfg=cyan     ctermbg=bg    cterm=none
 hi Statement      guifg=#dddddd guibg=bg      gui=none ctermfg=white    ctermbg=bg    cterm=none
 
 hi PreProc        guifg=#008888 guibg=bg      gui=none ctermfg=darkcyan ctermbg=bg    cterm=none

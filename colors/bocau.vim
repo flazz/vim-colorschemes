@@ -1,187 +1,300 @@
-" Maintainer:	Tien Le (tienlex@gmail.com)
-" Version:      1.0
-" Last Change:	Dec 17 2010
-" Based on the Vividchalk theme of Tim Pope and Mustang theme
+" twilight256 color scheme file
+" Maintainer: Neal Milstein - neal dot milstein at gmail dot com
+" Last Change: 2011 Feb 1
+"
+" This theme copies the colors from the TextMate theme Twilight.
+"
+" The theme is designed to be used on a black background. I only tested it
+" using a 256-color terminal; I do not think it will work on much else (gvim,
+" 8-color terminal, etc.).
+"
+" The functions in this theme that convert hex color codes to the nearest
+" xterm-256 color number are from the theme desert2 (desert256), developed by Henry So, Jr. 
+"
+" The colors of this theme are based on the TextMate Twilight theme
+" – www.macromates.com
 
-if has("gui_running")
-    set background=dark
+set background=dark
+if version > 580
+    " no guarantees for version 5.8 and below, but this makes it stop
+    " complaining
+    hi clear
+    if exists("syntax_on")
+        syntax reset
+    endif
 endif
-hi clear
-if exists("syntax_on")
-   syntax reset
-endif
+let g:colors_name="twilight256"
 
-let colors_name = "bocau"
-
-" First two functions adapted from inkpot.vim
-
-" map a urxvt cube number to an xterm-256 cube number
-fun! s:M(a)
-    return strpart("0245", a:a, 1) + 0
-endfun
-
-" map a urxvt colour to an xterm-256 colour
-fun! s:X(a)
-    if &t_Co == 88
-        return a:a
-    else
-        if a:a == 8
-            return 237
-        elseif a:a < 16
-            return a:a
-        elseif a:a > 79
-            return 232 + (3 * (a:a - 80))
+if has("gui_running") || &t_Co == 88 || &t_Co == 256
+    " functions {{{
+    " returns an approximate grey index for the given grey level
+    fun <SID>grey_number(x)
+        if &t_Co == 88
+            if a:x < 23
+                return 0
+            elseif a:x < 69
+                return 1
+            elseif a:x < 103
+                return 2
+            elseif a:x < 127
+                return 3
+            elseif a:x < 150
+                return 4
+            elseif a:x < 173
+                return 5
+            elseif a:x < 196
+                return 6
+            elseif a:x < 219
+                return 7
+            elseif a:x < 243
+                return 8
+            else
+                return 9
+            endif
         else
-            let l:b = a:a - 16
-            let l:x = l:b % 4
-            let l:y = (l:b / 4) % 4
-            let l:z = (l:b / 16)
-            return 16 + s:M(l:x) + (6 * s:M(l:y)) + (36 * s:M(l:z))
+            if a:x < 14
+                return 0
+            else
+                let l:n = (a:x - 8) / 10
+                let l:m = (a:x - 8) % 10
+                if l:m < 5
+                    return l:n
+                else
+                    return l:n + 1
+                endif
+            endif
         endif
-    endif
-endfun
+    endfun
 
-function! E2T(a)
-    return s:X(a:a)
-endfunction
+    " returns the actual grey level represented by the grey index
+    fun <SID>grey_level(n)
+        if &t_Co == 88
+            if a:n == 0
+                return 0
+            elseif a:n == 1
+                return 46
+            elseif a:n == 2
+                return 92
+            elseif a:n == 3
+                return 115
+            elseif a:n == 4
+                return 139
+            elseif a:n == 5
+                return 162
+            elseif a:n == 6
+                return 185
+            elseif a:n == 7
+                return 208
+            elseif a:n == 8
+                return 231
+            else
+                return 255
+            endif
+        else
+            if a:n == 0
+                return 0
+            else
+                return 8 + (a:n * 10)
+            endif
+        endif
+    endfun
 
-function! s:choose(mediocre,good)
-    if &t_Co != 88 && &t_Co != 256
-        return a:mediocre
-    else
-        return s:X(a:good)
-    endif
-endfunction
+    " returns the palette index for the given grey index
+    fun <SID>grey_color(n)
+        if &t_Co == 88
+            if a:n == 0
+                return 16
+            elseif a:n == 9
+                return 79
+            else
+                return 79 + a:n
+            endif
+        else
+            if a:n == 0
+                return 16
+            elseif a:n == 25
+                return 231
+            else
+                return 231 + a:n
+            endif
+        endif
+    endfun
 
-function! s:hifg(group,guifg,first,second,...)
-    if a:0 && &t_Co == 256
-        let ctermfg = a:1
-    else
-        let ctermfg = s:choose(a:first,a:second)
-    endif
-    exe "highlight ".a:group." guifg=".a:guifg." ctermfg=".ctermfg
-endfunction
+    " returns an approximate color index for the given color level
+    fun <SID>rgb_number(x)
+        if &t_Co == 88
+            if a:x < 69
+                return 0
+            elseif a:x < 172
+                return 1
+            elseif a:x < 230
+                return 2
+            else
+                return 3
+            endif
+        else
+            if a:x < 75
+                return 0
+            else
+                let l:n = (a:x - 55) / 40
+                let l:m = (a:x - 55) % 40
+                if l:m < 20
+                    return l:n
+                else
+                    return l:n + 1
+                endif
+            endif
+        endif
+    endfun
 
-function! s:hibg(group,guibg,first,second)
-    let ctermbg = s:choose(a:first,a:second)
-    exe "highlight ".a:group." guibg=".a:guibg." ctermbg=".ctermbg
-endfunction
+    " returns the actual color level for the given color index
+    fun <SID>rgb_level(n)
+        if &t_Co == 88
+            if a:n == 0
+                return 0
+            elseif a:n == 1
+                return 139
+            elseif a:n == 2
+                return 205
+            else
+                return 255
+            endif
+        else
+            if a:n == 0
+                return 0
+            else
+                return 55 + (a:n * 40)
+            endif
+        endif
+    endfun
 
-hi link railsMethod         PreProc
-hi link rubyDefine          Keyword
-hi link rubySymbol          Constant
-hi link rubyAccess          rubyMethod
-hi link rubyAttribute       rubyMethod
-hi link rubyEval            rubyMethod
-hi link rubyException       rubyMethod
-hi link rubyInclude         rubyMethod
-hi link rubyStringDelimiter rubyString
-hi link rubyRegexp          Regexp
-hi link rubyRegexpDelimiter rubyRegexp
-"hi link rubyConstant        Variable
-"hi link rubyGlobalVariable  Variable
-"hi link rubyClassVariable   Variable
-"hi link rubyInstanceVariable Variable
-hi link javascriptRegexpString  Regexp
-hi link javascriptNumber        Number
-hi link javascriptNull          Constant
-highlight link diffAdded        String
-highlight link diffRemoved      Statement
-highlight link diffLine         PreProc
-highlight link diffSubname      Comment
+    " returns the palette index for the given R/G/B color indices
+    fun <SID>rgb_color(x, y, z)
+        if &t_Co == 88
+            return 16 + (a:x * 16) + (a:y * 4) + a:z
+        else
+            return 16 + (a:x * 36) + (a:y * 6) + a:z
+        endif
+    endfun
 
-call s:hifg("Normal","#EEEEEE","White",87)
-if &background == "light" || has("gui_running")
-    hi Normal guibg=Black ctermbg=Black
-else
-    hi Normal guibg=Black ctermbg=NONE
+    " returns the palette index to approximate the given R/G/B color levels
+    fun <SID>color(r, g, b)
+        " get the closest grey
+        let l:gx = <SID>grey_number(a:r)
+        let l:gy = <SID>grey_number(a:g)
+        let l:gz = <SID>grey_number(a:b)
+
+        " get the closest color
+        let l:x = <SID>rgb_number(a:r)
+        let l:y = <SID>rgb_number(a:g)
+        let l:z = <SID>rgb_number(a:b)
+
+        if l:gx == l:gy && l:gy == l:gz
+            " there are two possibilities
+            let l:dgr = <SID>grey_level(l:gx) - a:r
+            let l:dgg = <SID>grey_level(l:gy) - a:g
+            let l:dgb = <SID>grey_level(l:gz) - a:b
+            let l:dgrey = (l:dgr * l:dgr) + (l:dgg * l:dgg) + (l:dgb * l:dgb)
+            let l:dr = <SID>rgb_level(l:gx) - a:r
+            let l:dg = <SID>rgb_level(l:gy) - a:g
+            let l:db = <SID>rgb_level(l:gz) - a:b
+            let l:drgb = (l:dr * l:dr) + (l:dg * l:dg) + (l:db * l:db)
+            if l:dgrey < l:drgb
+                " use the grey
+                return <SID>grey_color(l:gx)
+            else
+                " use the color
+                return <SID>rgb_color(l:x, l:y, l:z)
+            endif
+        else
+            " only one possibility
+            return <SID>rgb_color(l:x, l:y, l:z)
+        endif
+    endfun
+
+    " returns the palette index to approximate the 'rrggbb' hex string
+    fun <SID>rgb(rgb)
+        let l:r = ("0x" . strpart(a:rgb, 0, 2)) + 0
+        let l:g = ("0x" . strpart(a:rgb, 2, 2)) + 0
+        let l:b = ("0x" . strpart(a:rgb, 4, 2)) + 0
+
+        return <SID>color(l:r, l:g, l:b)
+    endfun
+
+    " sets the highlighting for the given group
+    fun <SID>X(group, fg, bg, attr)
+        if a:fg != ""
+            exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
+        endif
+        if a:bg != ""
+            exec "hi " . a:group . " guibg=#" . a:bg . " ctermbg=" . <SID>rgb(a:bg)
+        endif
+        if a:attr != ""
+            exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
+        endif
+    endfun
+    " }}}
+
+    call <SID>X("Normal", "ffffff", "", "")
+
+    " highlight groups
+    "call <SID>X("Cursor", "708090", "f0e68c", "")
+    "CursorIM
+    "Directory
+    "DiffAdd
+    "DiffChange
+    "DiffDelete
+    "DiffText
+    "ErrorMsg
+    "call <SID>X("VertSplit", "c2bfa5", "7f7f7f", "reverse")
+    "call <SID>X("Folded", "ffd700", "4d4d4d", "")
+    "call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
+    "call <SID>X("IncSearch", "708090", "f0e68c", "")
+    call <SID>X("LineNr", "CCCCCC", "", "")
+    "call <SID>X("ModeMsg", "D4D4D4", "", "")
+    "call <SID>X("MoreMsg", "2e8b57", "", "")
+    "call <SID>X("NonText", "addbe7", "000000", "bold")
+    "call <SID>X("Question", "00ff7f", "", "")
+    "call <SID>X("Search", "f5deb3", "cd853f", "")
+    "call <SID>X("SpecialKey", "9acd32", "", "")
+    "call <SID>X("StatusLine", "c2bfa5", "000000", "reverse")
+    "call <SID>X("StatusLineNC", "c2bfa5", "7f7f7f", "reverse")
+    "call <SID>X("Title", "cd5c5c", "", "")
+    call <SID>X("Visual", "D3D3D3", "3E3E3E", "reverse")
+    "VisualNOS
+    "call <SID>X("WarningMsg", "fa8072", "", "")
+    "WildMenu
+    "Menu
+    "Scrollbar
+    "Tooltip
+
+    " syntax highlighting groups
+    call <SID>X("Comment", "828282", "", "")
+    call <SID>X("Constant", "CF6A4C", "", "")
+    call <SID>X("Identifier", "7587A6", "", "none")
+    call <SID>X("Function", "9B703F", "", "")
+    call <SID>X("Define", "CDA869", "", "none")
+    call <SID>X("Statement", "CDA869", "", "")
+    call <SID>X("String", "8F9D6A", "", "")
+    call <SID>X("PreProc", "AFC4DB", "", "")
+    call <SID>X("Type", "F9EE98", "", "")
+    call <SID>X("Special", "DAEFA3", "", "")
+    "Underlined
+    call <SID>X("Ignore", "666666", "", "")
+    "Error
+    call <SID>X("Todo", "ff4500", "eeee00", "")
+
+    " delete functions {{{
+    delf <SID>X
+    delf <SID>rgb
+    delf <SID>color
+    delf <SID>rgb_color
+    delf <SID>rgb_level
+    delf <SID>rgb_number
+    delf <SID>grey_color
+    delf <SID>grey_level
+    delf <SID>grey_number
+    " }}}
 endif
-highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
-highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
-"if &t_Co == 256
-    "highlight StatusLine ctermbg=117
-"else
-    "highlight StatusLine ctermbg=43
-"endif
 
-highlight Ignore        ctermfg=Black
-highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
-highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
-highlight CursorLine    guibg=#333333 guifg=NONE
-highlight CursorColumn  guibg=#333333 guifg=NONE
-highlight NonText       guifg=#404040 ctermfg=8
-highlight SpecialKey    guifg=#404040 ctermfg=8
-highlight Directory     none
-high link Directory     Identifier
-highlight ErrorMsg      guibg=Red ctermbg=DarkRed guifg=NONE ctermfg=NONE
-highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
-call s:hibg("Search"    ,"Yellow","DarkBlue",81)
-highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
-highlight MoreMsg       guifg=#00AA00 ctermfg=Green
-highlight LineNr        guifg=#808080 ctermfg=White
-call s:hibg("LineNr"    ,"#101010","DarkBlue",80)
-highlight Question      none
-high link Question      MoreMsg
-highlight Title         guifg=White ctermfg=Magenta
-highlight VisualNOS     gui=none cterm=none
-call s:hibg("Visual"    ,"#444444","LightBlue",83)
-call s:hibg("VisualNOS" ,"#222222","DarkBlue",81)
-call s:hibg("MatchParen","#1100AA","DarkBlue",18)
-highlight WarningMsg    guifg=Red ctermfg=Red
-highlight Error         ctermbg=DarkRed
-highlight SpellBad      ctermbg=DarkRed
-" FIXME: Comments
-highlight SpellRare     ctermbg=DarkMagenta
-highlight SpellCap      ctermbg=DarkBlue
-highlight SpellLocal    ctermbg=DarkCyan
-
-call s:hibg("Folded"    ,"#110077","DarkBlue",17)
-call s:hifg("Folded"    ,"#aaddee","LightCyan",63)
-highlight FoldColumn    none
-high link FoldColumn    Folded
-highlight DiffAdd       ctermbg=4 guibg=DarkBlue
-highlight DiffChange    ctermbg=5 guibg=DarkMagenta
-highlight DiffDelete    ctermfg=12 ctermbg=6 gui=bold guifg=Blue guibg=DarkCyan
-highlight DiffText      ctermbg=DarkRed
-highlight DiffText      cterm=bold ctermbg=9 gui=bold guibg=Red
-
-highlight Pmenu         guifg=White ctermfg=White
-highlight PmenuSel      guifg=White ctermfg=White
-call s:hibg("Pmenu"     ,"#000099","Blue",18)
-call s:hibg("PmenuSel"  ,"#5555ff","DarkCyan",39)
-highlight PmenuSbar     guibg=Grey ctermbg=Grey
-highlight PmenuThumb    guibg=White ctermbg=White
-highlight TabLine       gui=underline cterm=underline
-call s:hifg("TabLine"   ,"#bbbbbb","LightGrey",85)
-call s:hibg("TabLine"   ,"#333333","DarkGrey",80)
-highlight TabLineSel    guifg=White guibg=Black ctermfg=White ctermbg=Black
-highlight TabLineFill   gui=underline cterm=underline
-call s:hifg("TabLineFill","#bbbbbb","LightGrey",85)
-call s:hibg("TabLineFill","#808080","Grey",83)
-
-hi Type gui=none
-hi Statement gui=none
-if !has("gui_mac")
-    " Mac GUI degrades italics to ugly underlining.
-    hi Comment gui=italic
-    hi railsUserClass  gui=italic
-    hi railsUserMethod gui=italic
-endif
-hi Identifier cterm=none
-" Commented numbers at the end are *old* 256 color values
-"highlight PreProc       guifg=#EDF8F9
-call s:hifg("Comment"        ,"#aaaaaa","Grey",34) " 92
-" 26 instead?
-call s:hifg("Constant"       ,"#AAAA77","DarkCyan",21) " 30
-call s:hifg("rubyNumber"     ,"#CCFF33","Yellow",60) " 190
-call s:hifg("String"         ,"#b1d631","LightGreen",44,82) " 82
-call s:hifg("Identifier"     ,"#33CCFF","Yellow",72) " 220
-call s:hifg("Statement"      ,"#ff7700","Brown",68) " 202
-call s:hifg("PreProc"        ,"#AAFFFF","LightCyan",47) " 213
-call s:hifg("railsUserMethod","#AACCFF","LightCyan",27)
-call s:hifg("Type"           ,"#ffaa00","Grey",57) " 101
-call s:hifg("railsUserClass" ,"#AAAAAA","Grey",7) " 101
-call s:hifg("Special"        ,"#33AA00","DarkGreen",24) " 7
-call s:hifg("Regexp"         ,"#44B4CC","DarkCyan",21) " 74
-call s:hifg("rubyMethod"     ,"#DDE93D","Yellow",77) " 191
-"highlight railsMethod   guifg=#EE1122 ctermfg=1
+" vim: set fdl=0 fdm=marker:

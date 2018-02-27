@@ -6,6 +6,7 @@
   <title>Error : vim online</title>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
+  <meta name="viewport" content="width=1000, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
 </head>
 
@@ -18,9 +19,11 @@
   </tr>
   <tr>
   <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
-  <td class="lightbg" align="left"><a href="/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
-    <td class="lightbg" align="center"><a href="/"><img src="/images/vim_header.gif" border="0" alt="Vim logo"></a></td>
-    <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
+  <td class="lightbg" align="left"><a href="https://www.vim.org/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
+  <td class="lightbg" align="center">
+	 <a href="/"><img src="/images/vim_header.gif" border="0" alt="Vim logo" class="align-middle"></a>
+	  </td>
+  <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
   </tr>
   <tr>
     <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
@@ -44,11 +47,11 @@
 <!-- INCLUDE THE PAGE NAVIGATION -->
 <table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
     <tr>
-        <td><small>not logged in (<a href="/login.php">login</a>)</small></td>
+        <td><small>not logged in (<a href="https://www.vim.org/login.php">login</a>)</small></td>
     </tr>
     <tr><td>
 <small>&nbsp;</small>
-<form action="http://www.google.com/cse" id="cse-search-box">
+<form action="https://www.google.com/cse" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
     <input type="hidden" name="ie" value="ISO-8859-1" />
@@ -57,7 +60,7 @@
     <input type="submit" name="sa" value="Search" />
   </div>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
     </td></tr>
     <tr>
         <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
@@ -69,40 +72,10 @@
         <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
     </tr>
         <tr>
-            <td class="sidebarheader"><a href="/">Home</a></td>
+            <td class="sidebarheader"><a href="https://www.vim.org/">Home</a></td>
         </tr>
         <tr>
-            <td class="sidebarheader"><a href="/search.php">Advanced search</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/about.php">About Vim</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/community.php">Community</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/news/news.php">News</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/sponsor/index.php">Sponsoring</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/trivia.php">Trivia</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="/docs.php">Documentation</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader download"><a href="/download.php">Download</a></td>
+            <td class="sidebarheader"><a href="https://www.vim.org/search.php">Advanced search</a></td>
         </tr>
     <tr>
         <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
@@ -114,13 +87,25 @@
         <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
     </tr>
         <tr>
-            <td class="sidebarheader"><a href="/scripts/index.php">Scripts</a></td>
+            <td class="sidebarheader"><a href="https://www.vim.org/about.php">About Vim</a></td>
         </tr>
         <tr>
-            <td class="sidebarheader"><a href="/tips/index.php">Tips</a></td>
+            <td class="sidebarheader"><a href="https://www.vim.org/community.php">Community</a></td>
         </tr>
         <tr>
-            <td class="sidebarheader"><a href="/account/index.php">My Account</a></td>
+            <td class="sidebarheader"><a href="https://www.vim.org/news/news.php">News</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="https://www.vim.org/sponsor/index.php">Sponsoring</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="https://www.vim.org/trivia.php">Trivia</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="https://www.vim.org/docs.php">Documentation</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader download"><a href="https://www.vim.org/download.php">Download</a></td>
         </tr>
     <tr>
         <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
@@ -132,7 +117,25 @@
         <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
     </tr>
         <tr>
-            <td class="sidebarheader"><a href="/huh.php">Site Help</a></td>
+            <td class="sidebarheader"><a href="https://www.vim.org/scripts/index.php">Scripts</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="https://www.vim.org/tips/index.php">Tips</a></td>
+        </tr>
+        <tr>
+            <td class="sidebarheader"><a href="https://www.vim.org/account/index.php">My Account</a></td>
+        </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+    <tr>
+        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
+    </tr>
+    <tr>
+        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
+    </tr>
+        <tr>
+            <td class="sidebarheader"><a href="https://www.vim.org/huh.php">Site Help</a></td>
         </tr>
 </table>
 <br>
@@ -303,7 +306,7 @@ download: I couldn't find the file you requested (src_id=7215), are you sure it 
     </td>
 
     <td align="right" valign="top">
-      	<a href="http://sourceforge.net/projects/vim" rel="nofollow"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
+      	<a href="//sourceforge.net/projects/vim" rel="nofollow"><img src="//sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
     </td>
 
     <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>

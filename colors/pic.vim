@@ -1,245 +1,601 @@
-" Vim syntax file
-" Language:     PIC16F84 Assembler (Microchip's microcontroller)
-" Maintainer:   Aleksandar Veselinovic <alexa@cliffhanger.com>
-" Last Change:  2001 May 10
-" URL:          http://SOLAIR.EUnet.yu/~aleksav/vim/syntax/pic.vim
-" Revision:     1.0
+" Vim color file --- psc (peak sea color) "Lite version"
+" Maintainer:	Pan, Shi Zhu <Go to the following URL for my email>
+" URL:		http://vim.sourceforge.net/scripts/script.php?script_id=760
+" Last Change:	5 Feb 2010
+" Version:	3.4
+"
+"	Comments and e-mails are welcomed, thanks.
+"
+"	The peaksea color is simply a colorscheme with the default settings of
+"	the original ps_color. Lite version means there's no custom settings
+"	and fancy features such as integration with reloaded.vim 
+"
+"	The full version of ps_color.vim will be maintained until Vim 8.
+"	By then there will be only the lite version: peaksea.vim
+"
+" Note: Please set the background option in your .vimrc and/or .gvimrc
+"
+"	It is much better *not* to set 'background' option inside
+"	a colorscheme file.  because ":set background" improperly
+"	may cause colorscheme be sourced twice
+"
+" Color Scheme Overview: 
+"	:ru syntax/hitest.vim
+"
+" Relevant Help: 
+"	:h highlight-groups
+"	:h psc-cterm-color-table
+"
+" Colors Order:
+"	#rrggbb
+"
 
-" Modifications
-" Language:	Add support to PIC18fxx2 Assembler (Microchip's microcontroller)
-" Modifications:Diego Belotti <dbelotti@adinet.com.uy> 
-" Last Change:	2003 Ago 26
-" Revision:	2.0	 
+hi clear
 
-
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
-if version < 600
-  syntax clear
-elseif exists("b:current_syntax")
-  finish
+if exists("syntax_on")
+  syntax reset
 endif
 
-syn case match
-syn keyword picTodo NOTE TODO XXX contained
+let g:colors_name = expand("<sfile>:t:r")
 
+" I don't want to abuse folding, but here folding is used to avoid confusion. 
+if &background=='light' 
+  " for background=light {{{2
+  " LIGHT COLOR DEFINE START
 
-syn case ignore
+  hi Normal		guifg=#000000	guibg=#e0e0e0	gui=NONE
+  hi Search		guifg=NONE	guibg=#f8f8f8	gui=NONE
+  hi Visual		guifg=NONE	guibg=#a6caf0	gui=NONE
+  hi Cursor		guifg=#f0f0f0	guibg=#008000	gui=NONE
+  " The idea of CursorIM is pretty good, however, the feature is still buggy
+  " in the current version (Vim 7.0).
+  " The following line will be kept commented until the bug fixed.
+  "
+  " hi CursorIM		guifg=#f0f0f0	guibg=#800080
+  hi Special		guifg=#907000	guibg=NONE	gui=NONE
+  hi Comment		guifg=#606000	guibg=NONE	gui=NONE
+  hi Number		guifg=#907000	guibg=NONE	gui=NONE
+  hi Constant		guifg=#007068	guibg=NONE	gui=NONE
+  hi StatusLine		guifg=fg	guibg=#a6caf0	gui=NONE
+  hi LineNr		guifg=#686868	guibg=NONE	gui=NONE
+  hi Question		guifg=fg	guibg=#d0d090	gui=NONE
+  hi PreProc		guifg=#009030	guibg=NONE	gui=NONE
+  hi Statement		guifg=#2060a8	guibg=NONE	gui=NONE
+  hi Type		guifg=#0850a0	guibg=NONE	gui=NONE
+  hi Todo		guifg=#800000	guibg=#e0e090	gui=NONE
+  " NOTE THIS IS IN THE WARM SECTION
+  hi Error		guifg=#c03000	guibg=NONE	gui=NONE
+  hi Identifier		guifg=#a030a0	guibg=NONE	gui=NONE
+  hi ModeMsg		guifg=fg	guibg=#b0b0e0	gui=NONE
+  hi VisualNOS		guifg=fg	guibg=#b0b0e0	gui=NONE
+  hi SpecialKey		guifg=#1050a0	guibg=NONE	gui=NONE
+  hi NonText		guifg=#002090	guibg=#d0d0d0	gui=NONE
+  hi Directory		guifg=#a030a0	guibg=NONE	gui=NONE
+  hi ErrorMsg		guifg=fg	guibg=#f0b090	gui=NONE
+  hi MoreMsg		guifg=#489000	guibg=NONE	gui=NONE
+  hi Title		guifg=#a030a0	guibg=NONE	gui=NONE
+  hi WarningMsg		guifg=#b02000	guibg=NONE	gui=NONE
+  hi WildMenu		guifg=fg	guibg=#d0d090	gui=NONE
+  hi Folded		guifg=NONE	guibg=#b0e0b0	gui=NONE
+  hi FoldColumn		guifg=fg	guibg=#90e090	gui=NONE
+  hi DiffAdd		guifg=NONE	guibg=#b0b0e0	gui=NONE
+  hi DiffChange		guifg=NONE	guibg=#e0b0e0	gui=NONE
+  hi DiffDelete		guifg=#002090	guibg=#d0d0d0	gui=NONE
+  hi DiffText		guifg=NONE	guibg=#c0e080	gui=NONE
+  hi SignColumn		guifg=fg	guibg=#90e090	gui=NONE
 
-syn match picIdentifier "[a-z_$][a-z0-9_$]*"
-syn match picLabel      "^[A-Z_$][A-Z0-9_$]*"
-syn match picLabel      "^[A-Z_$][A-Z0-9_$]*:"me=e-1
-
-syn match picASCII      "A\='.'"
-syn match picBinary     "B'[0-1]\+'"
-syn match picDecimal    "D'\d\+'"
-syn match picDecimal    "\d\+"
-syn match picHexadecimal "0x\x\+"
-syn match picHexadecimal "H'\x\+'"
-syn match picHexadecimal "[0-9]\x*h"
-syn match picOctal      "O'[0-7]\o*'"
-
-
-syn match picComment    ";.*" contains=picTodo
-
-syn region picString    start=+"+ end=+"+
-
-" Inicio del 16f84
-syn keyword picRegister         INDF TMR0 PCL STATUS FSR PORTA PORTB
-syn keyword picRegister         EEDATA EEADR PCLATH INTCON INDF OPTION_REG PCL
-syn keyword picRegister         FSR TRISA TRISB EECON1 EECON2 INTCON OPTION
-
-" Register --- bits
-
-" STATUS
-syn keyword picRegisterPart     IRP RP1 RP0 TO PD Z DC C
-
-" PORTA
-syn keyword picRegisterPart     T0CKI
-syn match   picRegisterPart     "RA[0-4]"
-
-" PORTB
-syn keyword picRegisterPart     INT
-syn match   picRegisterPart     "RB[0-7]"
-
-" INTCON
-syn keyword picRegisterPart     GIE EEIE T0IE INTE RBIE T0IF INTF RBIF
-
-" OPTION
-syn keyword picRegisterPart     RBPU INTEDG T0CS T0SE PSA PS2 PS1 PS0
-
-" EECON2
-syn keyword picRegisterPart     EEIF WRERR WREN WR RD
-
-" INTCON
-syn keyword picRegisterPart     GIE EEIE T0IE INTE RBIE T0IF INTF RBIF
-
-
-" OpCodes...
-syn keyword picOpcode  ADDWF ANDWF CLRF CLRW COMF DECF DECFSZ INCF INCFSZ
-syn keyword picOpcode  IORWF MOVF MOVWF NOP RLF RRF SUBWF SWAPF XORWF
-syn keyword picOpcode  BCF BSF BTFSC BTFSS
-syn keyword picOpcode  ADDLW ANDLW CALL CLRWDT GOTO IORLW MOVLW RETFIE
-syn keyword picOpcode  RETLW RETURN SLEEP SUBLW XORLW
-syn keyword picOpcode  GOTO
-
-
-" Directives
-syn keyword picDirective __BADRAM BANKISEL BANKSEL CBLOCK CODE __CONFIG
-syn keyword picDirective CONSTANT DATA DB DE DT DW ELSE END ENDC
-syn keyword picDirective ENDIF ENDM ENDW EQU ERROR ERRORLEVEL EXITM EXPAND
-syn keyword picDirective EXTERN FILL GLOBAL IDATA __IDLOCS IF IFDEF IFNDEF
-syn keyword picDirective INCLUDE LIST LOCAL MACRO __MAXRAM MESSG NOEXPAND
-syn keyword picDirective NOLIST ORG PAGE PAGESEL PROCESSOR RADIX RES SET
-syn keyword picDirective SPACE SUBTITLE TITLE UDATA UDATA_OVR UDATA_SHR
-syn keyword picDirective VARIABLE WHILE INCLUDE
-syn match picDirective   "#\=UNDEFINE"
-syn match picDirective   "#\=INCLUDE"
-syn match picDirective   "#\=DEFINE"
-" Fin del 16f84
-
-" Inicio del PIC 18Fxx2
-" Regisers
-syn keyword picRegister		TOSU TOSH TOSL STKPTR PCLATU PCLATH PCL TBLPTRU TBLPTRH TBLPTRL TABLAT
-syn keyword picRegister		PRODH PRODL INTCON INTCON2 INTCON3 INDF0 POSTINC0 POSTDEC0 PREINC0 PLUSW0
-syn keyword picRegister		FSR0H FSR0L WREG INDF1 POSTINC1 POSTDEC1 PREINC1 PLUSw1 FSR1H FSR1L BSR
-syn keyword picRegister		INDF2 POSTINC2 POSTDEC2 PREINC2 PLUSw2 FSR2H FSR2L STATUS TMR0H TMR0L 
-syn keyword picRegister		T0CON OSCCON LVDCON WDTCON RCON TMR1H TMR1L T1CON TMR2 PR2 T2CON SSPBUF
-syn keyword picRegister		SSPADD SSPSTAT SSPCON1 SSPCON2 ADRESH ADRESL ADCON0 ADCON1 CCPR1H CCPR1L
-syn keyword picRegister		CCP1CON CCPR2H CCPR2L CCP2CON TMR3H TMR3L T3CON SPBRG RCREG TXREG TXSTA
-syn keyword picRegister		RCSTA EEADR EEDATA EECON2 EECON1 IPR2 PIR2 PIE2 IPR1 PIR1 PIE1 TRISE
-syn keyword picRegister		TRISD TRISC TRISB TRISA LATC LATD LATB LATA PORTE PORTD PORTC PORTB PORTA
-"Register BITS
-" STKPTR
-syn keyword picRegisterPart	STKFUL STKUNF
-" INTCON
-syn keyword picRegisterPart	GIE GIEH PEIE GIEL TMR0IE T0IE INT0IE INT0E RBIE TMR0IF T0IF INT0IF INT0F RBIF
-" INTCON2
-syn keyword picRegisterPart	NOT_RBPU RBPU INTEDG0 INTEDG1 INTEDG2 TMR0IP T0IP RBIP
-" INTCON3
-syn keyword picRegisterPart	INT2IP INT1IP INT2IE INT2IP INT2IF INT1IF
-" STATUS
-syn keyword picRegisterPart	N OV Z DC C
-" T0CON
-syn keyword picRegisterPart	TMR0ON T08BIT T0CS T0SE PSA T0PS2 T0PS1 T0PS0
-" OSCCON
-syn keyword picRegisterPart 	SCS
-" LVDCON
-syn keyword picRegisterPart	IRVST LVDEN LVDL3 LVDL2 LVDL1 LVDL0
-" WDTCON
-syn keyword picRegisterPart	SWDTE SWDTEN
-" RCON
-syn keyword picRegisterPart	IPEN NOT_RI RI NOT_TO TO NOT_PD PD NOT_POR POR NOT_BOR BOR
-" T1CON
-syn keyword picRegisterPart	RD16 T1CKPS1 T1CKPS0 T1OSCEN NO_T1SYNC T1SYNC T1INSYNC TMR1CS TMR1ON
-" T2CON
-syn keyword picRegisterPart	TOUTPS3 TOUTPS2 TOUTPS1 TOUTPS0 TMR2ON T2CKPS1 T2CKPS0
-" SSPSTAT
-syn keyword picRegisterPart	SMP CKE D I2C_DAT NOT_A NOT_ADDRESS D_A DATA_ADDRESS P I2C_STOP S I2C_START R I2C_READ NOT_W NOT_WRITE R_W READ_WRITE UA BF
-" SSPCON1
-syn keyword picRegisterPart	WCOL SSPOV SSPEN CKP SSPM3 SSPM2 SSPM1 SSPM0
-" SSPCIN2
-syn keyword picRegisterPart	GCEN ACKSTAT ACKDT ACKEN RCEN PEN RSEN SEN
-" ADCON0
-syn keyword picRegisterPart	ADCS1 ADCS0 CHS2 CHS1 CHS0 GO NOT_DONE DONE GO_DONE ADON
-" ADCON1
-syn keyword picRegisterPart	ADFM ADCS2 PCFG3 PCFG2 PCFG1 PCFG0
-" CCP1CON
-syn keyword picRegisterPart	DC1B1 CCP1X DC1BC0 CCP1Y CCP1M3 CCP1M2 CCP1M1 CCP1M0
-" CCP2CON
-syn keyword picRegisterPart	DC2B1 CCP2X DC2B0 CCP2Y CCP2M3 CCP2M2 CCP2M1 CCP2M0
-" T3CON
-syn keyword picRegisterPart	RD16 T3CCP2 T3CKPS1 T3CKPS0 T3CCP1 NOT_T3SYNC T3SYNC T3INSYNC TMR3CS TMR3ON
-" TXSTA
-syn keyword picRegisterPart	CSRC TX9 NOT_TX8 TX8_9 TXEN SYNC BRGH TMRT TX9D TXD8
-" RCSTA
-syn keyword picRegisterPart	SPEN RX9 RC9 NOT_RC8 RC8_9 SREN CREN ADDEN FERR OERR RX9D RCD8
-" IPR2
-syn keyword picRegisterPart	EEIP BCLIP LVDIP TMR3IP CCP2IP
-" PIR2
-syn keyword picRegisterPart	EEIF BCLIF LVDIF TMR3IF CCP2IF
-" PIE2
-syn keyword picRegisterPart	EEIE BCLIE LVDIE TMR3IE CCP2IE
-" IPR1
-syn keyword picRegisterPart	PSPIP ADIP RCIP TXIP SSPIP CCP1IP TMR2IP TMR1IP
-" PIR1	
-syn keyword picRegisterPart	PSPIF ADIF RCIF TXIF SSPIF CCP1IF TMR2IF TMR1IF
-" PIE1	
-syn keyword picRegisterPart	PSPIE ADIE RCIE TXIE SSPIE CCP1IE TMR2IE TMR1IE
-" TRISE
-syn keyword picRegisterPart	IBF OBF IBOV PSPMODE TRISE2 TRISE1 TRISE0
-" EECON1
-syn keyword picRegisterPart	EEPGD CFGS FREE WRERR WREN WR RD
-" PORTA
-syn match picRegisterPart	"RA[0-6]"
-syn match picRegisterPart	"AN[0-4]"
-syn keyword picRegisterPart	VREFM VREFP T0CKI SS LVDIN OSC2	CLKO
-" PORTB
-syn match picRegisterPart 	"RB[0-7]"
-syn keyword picRegisterPart	INT0 INT1 INT2 CCP2A
-" PORTC
-syn match picRegisterPart	"RC[0-7]"
-syn keyword picRegisterPart	T1OSO T1CKI T1OSI CCP2 CCP1 SCK SCL SDI SDA SDO TX CK RX
-" PORTD
-syn match picRegisterPart 	"RD[0-7]"
-syn match picRegisterPart 	"PSP[0-7]"
-" PORTE
-syn match picRegisterPart 	"RE[0-2]"
-syn match picRegisterPart 	"AN[5-7]"
-syn keyword picRegisterPart	RD WR CS
-
-" CONFIG
-syn match picDirective		"_CONFIG[1-7]L"
-syn match picDirective		"_CONFIG[1-7]H"
-syn keyword picDirective	_DEVID1 _DEVID2
-syn match picDirective		"_IDLOC[0-7]"
-
-" OPCODES 
-syn keyword picOpcode		ADDWF ADDWFC ANDWF CLRF COMF CPFSEQ CPFSGT CPFSLT DECF DECFSZ DCFSNZ INCF
-syn keyword picOpcode		INCFSZ INFSNZ IORWF MOVF MOVFF MOVWF MULWF NEGF RLCF RLNCF RRCF RRNCF SETF
-syn keyword picOpcode		SUBFWB SWAPF TSTFSZ XORWF BCF BSF BTFSC BTFSS BTG BC BN BNC BNN BNOV BNZ
-syn keyword picOpcode		BOV BRA BZ CALL CLRWDT DAW GOTO NOP POP PUSH RCALL RESET RETFIE RETLW RETURN
-syn keyword picOpcode		SLEEP ADDLW ANDLW IORLW LFSR MOVLB MOVLW MULLW RETLW SUBLW XORLW
-syn keyword picOpcode		TBLRD* TBLRD*+ TBLRD*- TBLRD +* TBLWT* TBLWT*+ TBLWT*- TBLWT+*
-
-" DIRECTIVES
-" The same as the 16f84
-
-
-" Fin del 18fxx2
-
-" Define the default highlighting.
-" For version 5.7 and earlier: only when not done already
-" For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_pic16f84_syntax_inits")
-  if version < 508
-    let did_pic16f84_syntax_inits = 1
-    command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
+  hi IncSearch		guifg=#f0f0f0	guibg=#806060	gui=NONE
+  hi StatusLineNC	guifg=fg	guibg=#c0c0c0	gui=NONE
+  hi VertSplit		guifg=fg	guibg=#c0c0c0	gui=NONE
+  hi Underlined		guifg=#6a5acd	guibg=NONE	gui=underline
+  hi Ignore		guifg=bg	guibg=NONE
+  " NOTE THIS IS IN THE WARM SECTION
+  if v:version >= 700
+    if has('spell')
+      hi SpellBad	guifg=NONE	guibg=NONE	guisp=#c03000
+      hi SpellCap	guifg=NONE	guibg=NONE	guisp=#2060a8
+      hi SpellRare	guifg=NONE	guibg=NONE	guisp=#a030a0
+      hi SpellLocal	guifg=NONE	guibg=NONE	guisp=#007068
+    endif
+    hi Pmenu		guifg=fg	guibg=#e0b0e0
+    hi PmenuSel		guifg=#f0f0f0	guibg=#806060	gui=NONE
+    hi PmenuSbar	guifg=fg	guibg=#c0c0c0	gui=NONE
+    hi PmenuThumb	guifg=fg	guibg=#c0e080	gui=NONE
+    hi TabLine		guifg=fg	guibg=#c0c0c0	gui=NONE
+    hi TabLineFill	guifg=fg	guibg=#c0c0c0	gui=NONE
+    hi TabLineSel	guifg=fg	guibg=NONE	gui=NONE
+    hi CursorColumn	guifg=NONE	guibg=#f0b090
+    hi CursorLine	guifg=NONE	guibg=NONE	gui=underline
+    hi MatchParen	guifg=NONE	guibg=#c0e080
   endif
 
-  HiLink picTodo               Todo
-  HiLink picComment            Comment
-  HiLink picDirective          Statement
-  HiLink picLabel              Label
-  HiLink picString             String
+  " LIGHT COLOR DEFINE END
 
-  HiLink picOpcode             Keyword
-  HiLink picRegister           Structure
-  HiLink picRegisterPart       Special
+  " Vim 7 added stuffs
+  if v:version >= 700
+    hi Ignore		gui=NONE
 
-  HiLink picASCII              String
-  HiLink picBinary             Number
-  HiLink picDecimal            Number
-  HiLink picHexadecimal        Number
-  HiLink picOctal              Number
+    " the gui=undercurl guisp could only support in Vim 7
+    if has('spell')
+      hi SpellBad	gui=undercurl
+      hi SpellCap	gui=undercurl
+      hi SpellRare	gui=undercurl
+      hi SpellLocal	gui=undercurl
+    endif
+    hi TabLine		gui=underline
+    hi TabLineFill	gui=underline
+    hi CursorLine	gui=underline
+  endif
 
-  HiLink picIdentifier         Identifier
+  " For reversed stuffs, clear the reversed prop and set the bold prop again
+  hi IncSearch		gui=bold
+  hi StatusLine		gui=bold
+  hi StatusLineNC	gui=bold
+  hi VertSplit		gui=bold
+  hi Visual		gui=bold
 
-  delcommand HiLink
+  " Enable the bold property
+  hi Question		gui=bold
+  hi DiffText		gui=bold
+  hi Statement		gui=bold
+  hi Type		gui=bold
+  hi MoreMsg		gui=bold
+  hi ModeMsg		gui=bold
+  hi NonText		gui=bold
+  hi Title		gui=bold
+  hi DiffDelete		gui=bold
+  hi TabLineSel		gui=bold
+
+  " gui define for background=light end here
+
+  " generally, a dumb terminal is dark, we assume the light terminal has 256
+  " color support.
+  if &t_Co==8 || &t_Co==16
+    set t_Co=256
+  endif
+  if &t_Co==256
+    " 256color light terminal support here
+
+    hi Normal		ctermfg=16	ctermbg=254	cterm=NONE
+    " Comment/Uncomment the following line to disable/enable transparency
+    "hi Normal		ctermfg=16	ctermbg=NONE	cterm=NONE
+    hi Search		ctermfg=NONE	ctermbg=231	cterm=NONE
+    hi Visual		ctermfg=NONE	ctermbg=153	cterm=NONE
+    hi Cursor		ctermfg=255	ctermbg=28	cterm=NONE
+    " hi CursorIM	ctermfg=255	ctermbg=90
+    hi Special		ctermfg=94	ctermbg=NONE	cterm=NONE
+    hi Comment		ctermfg=58	ctermbg=NONE	cterm=NONE
+    hi Number		ctermfg=94	ctermbg=NONE	cterm=NONE
+    hi Constant		ctermfg=23	ctermbg=NONE	cterm=NONE
+    hi StatusLine	ctermfg=fg	ctermbg=153	cterm=NONE
+    hi LineNr		ctermfg=242	ctermbg=NONE	cterm=NONE
+    hi Question		ctermfg=fg	ctermbg=186	cterm=NONE
+    hi PreProc		ctermfg=29	ctermbg=NONE	cterm=NONE
+    hi Statement	ctermfg=25	ctermbg=NONE	cterm=NONE
+    hi Type		ctermfg=25	ctermbg=NONE	cterm=NONE
+    hi Todo		ctermfg=88	ctermbg=186	cterm=NONE
+    " NOTE THIS IS IN THE WARM SECTION
+    hi Error		ctermfg=130	ctermbg=NONE	cterm=NONE
+    hi Identifier	ctermfg=133	ctermbg=NONE	cterm=NONE
+    hi ModeMsg		ctermfg=fg	ctermbg=146	cterm=NONE
+    hi VisualNOS	ctermfg=fg	ctermbg=146	cterm=NONE
+    hi SpecialKey	ctermfg=25	ctermbg=NONE	cterm=NONE
+    hi NonText		ctermfg=18	ctermbg=252	cterm=NONE
+    " Comment/Uncomment the following line to disable/enable transparency
+    "hi NonText		ctermfg=18	ctermbg=NONE	cterm=NONE
+    hi Directory	ctermfg=133	ctermbg=NONE	cterm=NONE
+    hi ErrorMsg		ctermfg=fg	ctermbg=216	cterm=NONE
+    hi MoreMsg		ctermfg=64	ctermbg=NONE	cterm=NONE
+    hi Title		ctermfg=133	ctermbg=NONE	cterm=NONE
+    hi WarningMsg	ctermfg=124	ctermbg=NONE	cterm=NONE
+    hi WildMenu		ctermfg=fg	ctermbg=186	cterm=NONE
+    hi Folded		ctermfg=NONE	ctermbg=151	cterm=NONE
+    hi FoldColumn	ctermfg=fg	ctermbg=114	cterm=NONE
+    hi DiffAdd		ctermfg=NONE	ctermbg=146	cterm=NONE
+    hi DiffChange	ctermfg=NONE	ctermbg=182	cterm=NONE
+    hi DiffDelete	ctermfg=18	ctermbg=252	cterm=NONE
+    hi DiffText		ctermfg=NONE	ctermbg=150	cterm=NONE
+    hi SignColumn	ctermfg=fg	ctermbg=114	cterm=NONE
+
+    hi IncSearch	ctermfg=255	ctermbg=95	cterm=NONE
+    hi StatusLineNC	ctermfg=fg	ctermbg=250	cterm=NONE
+    hi VertSplit	ctermfg=fg	ctermbg=250	cterm=NONE
+    hi Underlined	ctermfg=62	ctermbg=NONE	cterm=underline
+    hi Ignore		ctermfg=bg	ctermbg=NONE
+    " NOTE THIS IS IN THE WARM SECTION
+    if v:version >= 700
+      if has('spell')
+        if 0
+          " ctermsp is not supported in Vim7, we ignore it.
+          hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=130
+          hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=25
+          hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=133
+          hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=23
+        else
+          hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+          hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+          hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+          hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+        endif
+      endif
+      hi Pmenu		ctermfg=fg	ctermbg=182
+      hi PmenuSel	ctermfg=255	ctermbg=95	cterm=NONE
+      hi PmenuSbar	ctermfg=fg	ctermbg=250	cterm=NONE
+      hi PmenuThumb	ctermfg=fg	ctermbg=150	cterm=NONE
+      hi TabLine	ctermfg=fg	ctermbg=250	cterm=NONE
+      hi TabLineFill	ctermfg=fg	ctermbg=250	cterm=NONE
+      hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
+      hi CursorColumn	ctermfg=NONE	ctermbg=216
+      hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
+      hi MatchParen	ctermfg=NONE	ctermbg=150
+    endif
+
+    hi TabLine		cterm=underline
+    hi TabLineFill	cterm=underline
+    hi CursorLine	cterm=underline
+
+    " For reversed stuffs, clear the reversed prop and set the bold prop again
+    hi IncSearch	cterm=bold
+    hi StatusLine	cterm=bold
+    hi StatusLineNC	cterm=bold
+    hi VertSplit	cterm=bold
+    hi Visual		cterm=bold
+
+    hi NonText		cterm=bold
+    hi Question		cterm=bold
+    hi Title		cterm=bold
+    hi DiffDelete	cterm=bold
+    hi DiffText		cterm=bold
+    hi Statement	cterm=bold
+    hi Type		cterm=bold
+    hi MoreMsg		cterm=bold
+    hi ModeMsg		cterm=bold
+    hi TabLineSel	cterm=bold
+
+    "hi lCursor		ctermfg=bg	ctermbg=fg	cterm=NONE
+  endif " t_Co==256
+  " }}}2
+elseif &background=='dark' 
+  " for background=dark {{{2
+  " DARK COLOR DEFINE START
+
+  hi Normal		guifg=#d0d0d0	guibg=#202020	gui=NONE
+  hi Comment		guifg=#d0d090	guibg=NONE	gui=NONE
+  hi Constant		guifg=#80c0e0	guibg=NONE	gui=NONE
+  hi Number		guifg=#e0c060	guibg=NONE	gui=NONE
+  hi Identifier		guifg=#f0c0f0	guibg=NONE	gui=NONE
+  hi Statement		guifg=#c0d8f8	guibg=NONE	gui=NONE
+  hi PreProc		guifg=#60f080	guibg=NONE	gui=NONE
+  hi Type		guifg=#b0d0f0	guibg=NONE	gui=NONE
+  hi Special		guifg=#e0c060	guibg=NONE	gui=NONE
+  hi Error		guifg=#f08060	guibg=NONE	gui=NONE
+  hi Todo		guifg=#800000	guibg=#d0d090	gui=NONE
+  hi Search		guifg=NONE	guibg=#800000	gui=NONE
+  hi Visual		guifg=#000000	guibg=#a6caf0	gui=NONE
+  hi Cursor		guifg=#000000	guibg=#00f000	gui=NONE
+  " NOTE THIS IS IN THE COOL SECTION
+  " hi CursorIM		guifg=#000000	guibg=#f000f0	gui=NONE
+  hi StatusLine		guifg=#000000	guibg=#a6caf0	gui=NONE
+  hi LineNr		guifg=#b0b0b0	guibg=NONE	gui=NONE
+  hi Question		guifg=#000000	guibg=#d0d090	gui=NONE
+  hi ModeMsg		guifg=fg	guibg=#000080	gui=NONE
+  hi VisualNOS		guifg=fg	guibg=#000080	gui=NONE
+  hi SpecialKey		guifg=#b0d0f0	guibg=NONE	gui=NONE
+  hi NonText		guifg=#6080f0	guibg=#101010	gui=NONE
+  hi Directory		guifg=#80c0e0	guibg=NONE	gui=NONE
+  hi ErrorMsg		guifg=#d0d090	guibg=#800000	gui=NONE
+  hi MoreMsg		guifg=#c0e080	guibg=NONE	gui=NONE
+  hi Title		guifg=#f0c0f0	guibg=NONE	gui=NONE
+  hi WarningMsg		guifg=#f08060	guibg=NONE	gui=NONE
+  hi WildMenu		guifg=#000000	guibg=#d0d090	gui=NONE
+  hi Folded		guifg=NONE	guibg=#004000	gui=NONE
+  hi FoldColumn		guifg=#e0e0e0	guibg=#008000	gui=NONE
+  hi DiffAdd		guifg=NONE	guibg=#000080	gui=NONE
+  hi DiffChange		guifg=NONE	guibg=#800080	gui=NONE
+  hi DiffDelete		guifg=#6080f0	guibg=#202020	gui=NONE
+  hi DiffText		guifg=#000000	guibg=#c0e080	gui=NONE
+  hi SignColumn		guifg=#e0e0e0	guibg=#008000	gui=NONE
+  hi IncSearch		guifg=#000000	guibg=#d0d0d0	gui=NONE
+  hi StatusLineNC	guifg=#000000	guibg=#c0c0c0	gui=NONE
+  hi VertSplit		guifg=#000000	guibg=#c0c0c0	gui=NONE
+  hi Underlined		guifg=#80a0ff	guibg=NONE	gui=underline 
+  hi Ignore		guifg=#000000	guibg=NONE
+  " NOTE THIS IS IN THE COOL SECTION
+  if v:version >= 700
+    if has('spell')
+    " the guisp= could only support in Vim 7
+      hi SpellBad	guifg=NONE	guibg=NONE	guisp=#f08060
+      hi SpellCap	guifg=NONE	guibg=NONE	guisp=#6080f0
+      hi SpellRare	guifg=NONE	guibg=NONE	guisp=#f0c0f0
+      hi SpellLocal	guifg=NONE	guibg=NONE	guisp=#c0d8f8
+    endif
+    hi Pmenu		guifg=fg	guibg=#800080
+    hi PmenuSel		guifg=#000000	guibg=#d0d0d0	gui=NONE
+    hi PmenuSbar	guifg=fg	guibg=#000080	gui=NONE
+    hi PmenuThumb	guifg=fg	guibg=#008000	gui=NONE
+    hi TabLine		guifg=fg	guibg=#008000	gui=NONE
+    hi TabLineFill	guifg=fg	guibg=#008000	gui=NONE
+    hi TabLineSel	guifg=fg	guibg=NONE	gui=NONE
+    hi CursorColumn	guifg=NONE	guibg=#800000	gui=NONE
+    hi CursorLine	guifg=NONE	guibg=NONE	gui=underline
+    hi MatchParen	guifg=NONE	guibg=#800080
+  endif
+
+  " DARK COLOR DEFINE END
+
+  " Vim 7 added stuffs
+  if v:version >= 700
+    hi Ignore	gui=NONE  
+
+    " the gui=undercurl could only support in Vim 7
+    if has('spell')
+      hi SpellBad	gui=undercurl  
+      hi SpellCap	gui=undercurl  
+      hi SpellRare	gui=undercurl  
+      hi SpellLocal	gui=undercurl 
+    endif
+    hi TabLine		gui=underline  
+    hi TabLineFill	gui=underline  
+    hi Underlined	gui=underline  
+    hi CursorLine	gui=underline 
+  endif
+
+  " gui define for background=dark end here
+
+  if &t_Co==8 || &t_Co==16
+    " for 8-color and 16-color term
+    hi Normal		ctermfg=LightGrey   ctermbg=Black
+    hi Special		ctermfg=Yellow	    ctermbg=bg
+    hi Comment		ctermfg=DarkYellow  ctermbg=bg
+    hi Constant		ctermfg=Blue	    ctermbg=bg
+    hi Number		ctermfg=Yellow	    ctermbg=bg
+    hi LineNr		ctermfg=DarkGrey    ctermbg=bg
+    hi PreProc		ctermfg=Green	    ctermbg=bg
+    hi Statement	ctermfg=Cyan	    ctermbg=bg
+    hi Type		ctermfg=Cyan	    ctermbg=bg
+    hi Error		ctermfg=Red	    ctermbg=bg
+    hi Identifier	ctermfg=Magenta     ctermbg=bg
+    hi SpecialKey	ctermfg=Cyan	    ctermbg=bg
+    hi NonText		ctermfg=Blue	    ctermbg=bg
+    hi Directory	ctermfg=Blue	    ctermbg=bg
+    hi MoreMsg		ctermfg=Green	    ctermbg=bg
+    hi Title		ctermfg=Magenta     ctermbg=bg
+    hi WarningMsg	ctermfg=Red	    ctermbg=bg
+    hi DiffDelete	ctermfg=Blue	    ctermbg=bg
+
+    hi Search		ctermfg=NONE	    ctermbg=DarkRed
+    hi Visual		ctermfg=Black	    ctermbg=DarkCyan
+    hi Cursor		ctermfg=Black	    ctermbg=Green
+    hi StatusLine	ctermfg=Black	    ctermbg=DarkCyan
+    hi Question		ctermfg=Black	    ctermbg=DarkYellow
+    hi Todo		ctermfg=DarkRed     ctermbg=DarkYellow
+    hi Folded		ctermfg=White	    ctermbg=DarkGreen
+    hi ModeMsg		ctermfg=Grey	    ctermbg=DarkBlue
+    hi VisualNOS	ctermfg=Grey	    ctermbg=DarkBlue
+    hi ErrorMsg		ctermfg=DarkYellow  ctermbg=DarkRed
+    hi WildMenu		ctermfg=Black	    ctermbg=DarkYellow
+    hi FoldColumn	ctermfg=White	    ctermbg=DarkGreen
+    hi SignColumn	ctermfg=White	    ctermbg=DarkGreen
+    hi DiffText		ctermfg=Black	    ctermbg=DarkYellow
+
+    if v:version >= 700
+      if has('spell')
+        hi SpellBad	ctermfg=NONE	ctermbg=DarkRed
+        hi SpellCap	ctermfg=NONE	ctermbg=DarkBlue
+        hi SpellRare	ctermfg=NONE	ctermbg=DarkMagenta
+        hi SpellLocal	ctermfg=NONE	ctermbg=DarkGreen
+      endif
+      hi Pmenu		ctermfg=fg	ctermbg=DarkMagenta
+      hi PmenuSel	ctermfg=Black	ctermbg=fg
+      hi PmenuSbar	ctermfg=fg	ctermbg=DarkBlue
+      hi PmenuThumb	ctermfg=fg	ctermbg=DarkGreen
+      hi TabLine	ctermfg=fg	ctermbg=DarkGreen	cterm=underline
+      hi TabLineFill	ctermfg=fg	ctermbg=DarkGreen	cterm=underline
+      hi CursorColumn	ctermfg=NONE	ctermbg=DarkRed
+
+      hi TabLineSel	ctermfg=fg	ctermbg=bg
+      hi CursorLine	ctermfg=NONE	ctermbg=bg		cterm=underline
+
+      hi MatchParen	ctermfg=NONE	ctermbg=DarkMagenta
+    endif
+    if &t_Co==8
+      " 8 colour terminal support, this assumes 16 colour is available through
+      " setting the 'bold' attribute, will get bright foreground colour.
+      " However, the bright background color is not available for 8-color terms.
+      "
+      " You can manually set t_Co=16 in your .vimrc to see if your terminal
+      " supports 16 colours, 
+      hi DiffText	cterm=none  
+      hi Visual		cterm=none  
+      hi Cursor		cterm=none  
+      hi Comment	cterm=none  
+      hi Todo		cterm=none  
+      hi StatusLine	cterm=none  
+      hi Question	cterm=none  
+      hi DiffChange	cterm=none  
+      hi ModeMsg	cterm=none  
+      hi VisualNOS	cterm=none  
+      hi ErrorMsg	cterm=none  
+      hi WildMenu	cterm=none  
+      hi DiffAdd	cterm=none  
+      hi Folded		cterm=none  
+      hi DiffDelete	cterm=none  
+      hi Normal		cterm=none  
+      hi PmenuThumb	cterm=none 
+      hi Search		cterm=bold  
+      hi Special	cterm=bold  
+      hi Constant	cterm=bold  
+      hi Number		cterm=bold  
+      hi LineNr		cterm=bold  
+      hi PreProc	cterm=bold  
+      hi Statement	cterm=bold  
+      hi Type		cterm=bold  
+      hi Error		cterm=bold  
+      hi Identifier	cterm=bold  
+      hi SpecialKey	cterm=bold  
+      hi NonText	cterm=bold  
+      hi MoreMsg	cterm=bold  
+      hi Title		cterm=bold  
+      hi WarningMsg	cterm=bold  
+      hi FoldColumn	cterm=bold  
+      hi SignColumn	cterm=bold  
+      hi Directory	cterm=bold  
+      hi DiffDelete	cterm=bold 
+    else
+      " Background > 7 is only available with 16 or more colors
+
+      hi WarningMsg	cterm=none  
+      hi Search		cterm=none  
+      hi Visual		cterm=none  
+      hi Cursor		cterm=none  
+      hi Special	cterm=none  
+      hi Comment	cterm=none  
+      hi Constant	cterm=none  
+      hi Number		cterm=none  
+      hi LineNr		cterm=none  
+      hi PreProc	cterm=none  
+      hi Todo		cterm=none  
+      hi Error		cterm=none  
+      hi Identifier	cterm=none  
+      hi Folded		cterm=none  
+      hi SpecialKey	cterm=none  
+      hi Directory	cterm=none  
+      hi ErrorMsg	cterm=none  
+      hi Normal		cterm=none  
+      hi PmenuThumb	cterm=none 
+      hi WildMenu	cterm=none  
+      hi FoldColumn	cterm=none  
+      hi SignColumn	cterm=none  
+      hi DiffAdd	cterm=none  
+      hi DiffChange	cterm=none  
+      hi Question	cterm=none  
+      hi StatusLine	cterm=none  
+      hi DiffText	cterm=none 
+      hi IncSearch	cterm=reverse  
+      hi StatusLineNC	cterm=reverse  
+      hi VertSplit	cterm=reverse 
+
+      " Well, well, bold font with color 0-7 is not possible.
+      " So, the Question, StatusLine, DiffText cannot act as expected.
+
+      hi Statement	cterm=none  
+      hi Type		cterm=none  
+      hi MoreMsg	cterm=none  
+      hi ModeMsg	cterm=none  
+      hi NonText	cterm=none  
+      hi Title		cterm=none  
+      hi VisualNOS	cterm=none  
+      hi DiffDelete	cterm=none  
+      hi TabLineSel	cterm=none 
+
+    endif
+  elseif &t_Co==256
+    " 256color dark terminal support here
+    hi Normal		ctermfg=252	ctermbg=234	cterm=NONE
+    " Comment/Uncomment the following line to disable/enable transparency
+    "hi Normal		ctermfg=252	ctermbg=NONE	cterm=NONE
+    hi Comment		ctermfg=186	ctermbg=NONE	cterm=NONE
+    hi Constant		ctermfg=110	ctermbg=NONE	cterm=NONE
+    hi Number		ctermfg=179	ctermbg=NONE	cterm=NONE
+    hi Identifier	ctermfg=219	ctermbg=NONE	cterm=NONE
+    hi Statement	ctermfg=153	ctermbg=NONE	cterm=NONE
+    hi PreProc		ctermfg=84	ctermbg=NONE	cterm=NONE
+    hi Type		ctermfg=153	ctermbg=NONE	cterm=NONE
+    hi Special		ctermfg=179	ctermbg=NONE	cterm=NONE
+    hi Error		ctermfg=209	ctermbg=NONE	cterm=NONE
+    hi Todo		ctermfg=88	ctermbg=186	cterm=NONE
+    hi Search		ctermfg=NONE	ctermbg=88	cterm=NONE
+    hi Visual		ctermfg=16	ctermbg=153	cterm=NONE
+    hi Cursor		ctermfg=16	ctermbg=46	cterm=NONE
+    " NOTE THIS IS IN THE COOL SECTION
+    " hi CursorIM	ctermfg=16	ctermbg=201	cterm=NONE
+    hi StatusLine	ctermfg=16	ctermbg=153	cterm=NONE
+    hi LineNr		ctermfg=249	ctermbg=NONE	cterm=NONE
+    hi Question		ctermfg=16	ctermbg=186	cterm=NONE
+    hi ModeMsg		ctermfg=fg	ctermbg=18	cterm=NONE
+    hi VisualNOS	ctermfg=fg	ctermbg=18	cterm=NONE
+    hi SpecialKey	ctermfg=153	ctermbg=NONE	cterm=NONE
+    hi NonText		ctermfg=69	ctermbg=233	cterm=NONE
+    " Comment/Uncomment the following line to disable/enable transparency
+    "hi NonText		ctermfg=69	ctermbg=NONE	cterm=NONE
+    hi Directory	ctermfg=110	ctermbg=NONE	cterm=NONE
+    hi ErrorMsg		ctermfg=186	ctermbg=88	cterm=NONE
+    hi MoreMsg		ctermfg=150	ctermbg=NONE	cterm=NONE
+    hi Title		ctermfg=219	ctermbg=NONE	cterm=NONE
+    hi WarningMsg	ctermfg=209	ctermbg=NONE	cterm=NONE
+    hi WildMenu		ctermfg=16	ctermbg=186	cterm=NONE
+    hi Folded		ctermfg=NONE	ctermbg=22	cterm=NONE
+    hi FoldColumn	ctermfg=254	ctermbg=28	cterm=NONE
+    hi DiffAdd		ctermfg=NONE	ctermbg=18	cterm=NONE
+    hi DiffChange	ctermfg=NONE	ctermbg=90	cterm=NONE
+    hi DiffDelete	ctermfg=69	ctermbg=234	cterm=NONE
+    hi DiffText		ctermfg=16	ctermbg=150	cterm=NONE
+    hi SignColumn	ctermfg=254	ctermbg=28	cterm=NONE
+    hi IncSearch	ctermfg=16	ctermbg=252	cterm=NONE
+    hi StatusLineNC	ctermfg=16	ctermbg=250	cterm=NONE
+    hi VertSplit	ctermfg=16	ctermbg=250	cterm=NONE
+    hi Underlined	ctermfg=111	ctermbg=NONE	cterm=underline 
+    hi Ignore		ctermfg=16	ctermbg=NONE
+    " NOTE THIS IS IN THE COOL SECTION
+    if v:version >= 700
+      if has('spell')
+        " the ctermsp= is not supported in Vim 7 we simply ignored
+        if 0
+          hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=209
+          hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=69
+          hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=219
+          hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=153
+        else
+          hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+          hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+          hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+          hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+        endif
+      endif
+      hi Pmenu		ctermfg=fg	ctermbg=90
+      hi PmenuSel	ctermfg=16	ctermbg=252	cterm=NONE
+      hi PmenuSbar	ctermfg=fg	ctermbg=18	cterm=NONE
+      hi PmenuThumb	ctermfg=fg	ctermbg=28	cterm=NONE
+      hi TabLine	ctermfg=fg	ctermbg=28	cterm=NONE
+      hi TabLineFill	ctermfg=fg	ctermbg=28	cterm=NONE
+      hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
+      hi CursorColumn	ctermfg=NONE	ctermbg=88	cterm=NONE
+      hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
+      hi MatchParen	ctermfg=NONE	ctermbg=90
+      hi TabLine	cterm=underline  
+      hi TabLineFill	cterm=underline  
+      hi Underlined	cterm=underline  
+      hi CursorLine	cterm=underline 
+    endif
+
+  endif " t_Co
+
+  " }}}2
 endif
 
-let b:current_syntax = "pic"
+" Links:
+"
+" COLOR LINKS DEFINE START
 
-" vim: ts=8
+hi link		String		Constant
+" Character must be different from strings because in many languages
+" (especially C, C++) a 'char' variable is scalar while 'string' is pointer,
+" mistaken a 'char' for a 'string' will cause disaster!
+hi link		Character	Number
+hi link		SpecialChar	LineNr
+hi link		Tag		Identifier
+hi link		cCppOut		LineNr
+" The following are not standard hi links, 
+" these are used by DrChip
+hi link		Warning		MoreMsg
+hi link		Notice		Constant
+" these are used by Calendar
+hi link		CalToday	PreProc
+" these are used by TagList
+hi link		MyTagListTagName	IncSearch
+hi link		MyTagListTagScope	Constant
+
+" COLOR LINKS DEFINE END
+
+" vim:et:nosta:sw=2:ts=8:
+" vim600:fdm=marker:fdl=1:

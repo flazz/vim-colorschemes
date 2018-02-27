@@ -1,185 +1,93 @@
-" =============================================================================
-" File:        stackoverflow.vim
-" Description: Vim color scheme file
-" Filenames:	*.java *.txt 
-" " Maintainer:  Paul Sampi;
-" =============================================================================
-set background=light
-highlight clear
-if exists("syntax_on")
-  syntax reset
+" 本配色方案由 gui2term.py 程序增加彩色终端支持。
+" Vim color file 
+" File: softbluev2 modyfied from softblue by ZhangJing 
+" Ver: 1.2
+" Maintainer:   Larrupingpig
+" Last Change:  Tue Dec 14 16:18:14 CST 2010
+
+set background=dark
+if version > 580
+    hi clear
+    if exists("syntax_on")
+    syntax reset
+    endif
 endif
-let colors_name = "stackoverflow"
-" =============================================================================
-hi Normal       guifg=#000000           guibg=#e9e9e9           gui=NONE
-hi ColorColumn  guifg=NONE              guibg=#e6e6e6
-hi Cursor       guifg=bg                guibg=#F4A83D           gui=NONE
-hi CursorIM     guifg=bg                guibg=fg                gui=NONE
-hi lCursor      guifg=bg                guibg=fg                gui=NONE
-hi CursorLine   gui=reverse
-hi DiffAdd      guifg=NONE              guibg=#9d9d9d           gui=NONE
-hi DiffChange   guifg=NONE              guibg=#d1d1d1           gui=NONE
-hi DiffDelete   guifg=NONE              guibg=#d8d8d5           gui=NONE
-hi DiffText     guifg=black             guibg=#bababa           gui=NONE
-hi Directory    guifg=#525252           guibg=bg                gui=NONE
-hi ErrorMsg     guifg=#6f6f6f           guibg=NONE              gui=NONE
-hi FoldColumn   guifg=#555555           guibg=#cccbcb           gui=bold
-hi Folded       guifg=#555555           guibg=#acacac           gui=italic
+let g:colors_name="softbluev2"
 
-hi IncSearch    guifg=black             guibg=#adadad          gui=NONE
-hi Search       guifg=black             guibg=#adadad          gui=NONE
-hi LineNr       guifg=#A0A0A0           guibg=NONE             gui=NONE
-hi MatchParen   guifg=fg                guibg=#D1C4A3          gui=bold
-hi ModeMsg      guifg=White             guibg=#767676          gui=bold
-hi MoreMsg      guifg=#7c7c7c           guibg=bg               gui=bold
-hi NonText      guifg=#7e7e7e           guibg=bg               gui=bold
-
-hi Pmenu        guifg=#646564           guibg=#b1b2b1          gui=reverse
-hi PmenuSel     guifg=fg                guibg=#EE972F          gui=bold
-hi PmenuSbar    guifg=White             guibg=#989898          gui=NONE
-hi PmenuThumb   guifg=White             guibg=#777777          gui=NONE
-
-hi Question     guifg=#454545           guibg=bg               gui=bold
-hi SignColumn   guifg=white             guibg=#c5c5c5          gui=NONE
-
-hi SpecialKey   guifg=white             guibg=ivory3           gui=NONE
-
-hi SpellBad     guisp=#323232           guibg=#d1cdcd          gui=undercurl
-hi SpellCap     guisp=#5d5d5d                                  gui=undercurl
-hi SpellLocal   guisp=#434343                                  gui=undercurl
-hi SpellRare    guisp=#7d7d7d                                  gui=undercurl
-hi StatusLine   guifg=fg                guibg=#DAB05B          gui=NONE
-hi StatusLineNC guifg=#808080           guibg=#bbbbbb          gui=italic
-hi TabLine      guifg=fg                guibg=LightGrey        gui=underline
-hi TabLineFill  guifg=fg                guibg=bg               gui=reverse
-hi TabLineSel   guifg=fg                guibg=bg               gui=bold
-hi Title        guifg=#6d6d6d           guibg=bg               gui=NONE
-hi VertSplit    guifg=#b9b9b9           guibg=#b9b9b9
-hi Visual       guifg=white             guibg=#B36A02          gui=NONE
-hi WarningMsg   guifg=#cfcfcf           guibg=#5b5b5b          gui=NONE
-hi WildMenu     guifg=Black             guibg=#c2c2c2          gui=NONE
-
-" -----------------------------------------------------------------------------
-hi Comment      guifg=#808080          guibg=NONE      gui=NONE
-hi Constant     guifg=#800000          guibg=NONE      gui=NONE
-hi String       guifg=#800000          guibg=NONE      gui=NONE
-hi Boolean      guifg=#616060          guibg=NONE      gui=NONE
-hi Identifier   guifg=fg               guibg=NONE      gui=NONE
-hi Function     guifg=fg               guibg=NONE      gui=NONE
-hi Statement    guifg=#020076          guibg=NONE      gui=NONE
-hi Keyword      guifg=#666666          guibg=NONE      gui=NONE
-hi PreProc      guifg=#6b6b6b          guibg=NONE      gui=NONE
-hi Type         guifg=#000077          guibg=NONE      gui=NONE
-hi Special      guifg=#6e6e6e          guibg=NONE      gui=NONE
-hi Ignore       guifg=bg               guibg=NONE      gui=NONE
-hi Error        guifg=#727272          guibg=NONE      gui=undercurl
-hi Conditional  guifg=#000052          guibg=NONE      gui=NONE
-hi Todo         guifg=fg               guibg=NONE      gui=bold
-hi Underlined   guifg=#9A4444          guibg=NONE      gui=NONE
-" -----------------------------------------------------------------------------
-hi VimError         guifg=#b6b6b6      guibg=#313131   gui=bold
-hi VimCommentTitle  guifg=#5c5c5c      guibg=bg        gui=bold,italic
-hi qfFileName       guifg=#dedede      guibg=NONE      gui=italic
-hi qfLineNr         guifg=#808080      guibg=NONE      gui=NONE
-hi qfError          guifg=#8e8e8e      guibg=NONE      gui=bold
-
-" -----------------------------------------------------------------------------
-hi pythonDecorator  guifg=#3b3b3b      guibg=NONE      gui=bold
-hi link pythonDecoratorFunction pythonDecorator
-" -----------------------------------------------------------------------------
-hi diffOldFile          guifg=#717171           guibg=NONE      gui=NONE
-hi diffNewFile          guifg=#ababab           guibg=NONE      gui=bold
-hi diffFile             guifg=#676767           guibg=NONE      gui=NONE
-hi link diffOnly        Constant
-hi link diffIdentical   Constant
-hi link diffDiffer      Constant
-hi link diffBDiffer     Constant
-hi link diffIsA         Constant
-hi link diffNoEOL       Constant
-hi link diffCommon      Constant
-hi diffRemoved          guifg=#b1b1b1           guibg=NONE      gui=NONE
-hi diffChanged          guifg=#727272           guibg=NONE      gui=NONE
-hi diffAdded            guifg=#919191           guibg=NONE      gui=NONE
-hi diffLine             guifg=#4e4e4e           guibg=NONE      gui=italic
-hi link diffSubname     diffLine
-hi link diffComment     Comment
-" -----------------------------------------------------------------------------
-"hi htmlLink             guifg=#666666          guibg=NONE      gui=underline,italic
-
-hi htmlTagName          guifg=#800000          guibg=NONE      gui=NONE
-hi link htmlScriptTag htmlTagName
-hi link htmlTag htmlTagName
-hi link htmlTagN htmlTagName
-hi link htmlEndTag htmlTagName
-hi link htmlSpecialTagName htmlTagName
-hi htmlString           guifg=#0000FF          guibg=NONE      gui=NONE
-hi htmlArg              guifg=#FF0000          guibg=NONE      gui=NONE
-hi link htmlValue       Constant
-
-hi link cssRenderAttr Constant 
-hi link cssTextAttr Constant
-hi link cssUIAttr Constant
-hi link cssTableAttr Constant
-hi link cssColorAttr Constant
-hi link cssBoxAttr Constant
-hi link cssCommonAttr Constant
-hi link cssFunctionName Constant
-hi link cssRenderProp Type
-hi link cssBoxProp Type
-
-hi link cssTagName Statement 
-hi link cssClassName cssTagName
-hi link cssIdentifier cssTagName
-hi link cssPseudoClass cssTagName
-hi link cssPseudoClassId cssTagName
-
-hi cssBraces            guifg=fg         guibg=bg      gui=NONE
-hi javaScript           guifg=fg         guibg=NONE
-hi link javaScriptFunction Statement
-hi link javaScriptMember Statement
-hi link javaScriptValue Constant
-hi javaScriptType guifg=#257E9F 
+hi Normal       guibg=#183058   guifg=#b0b0e0 ctermfg=146 ctermbg=17 cterm=none
+hi Cursor       guibg=#b3b2df   guifg=grey30    gui=bold ctermfg=239 ctermbg=146 cterm=bold
+hi cursorline   guibg=#295499                            ctermbg=18  cterm=none       
+hi VertSplit    guibg=#466292   guifg=grey50    gui=none ctermfg=244 ctermbg=67 cterm=none
+hi Folded       guibg=#0d2349   guifg=lightblue ctermfg=152 ctermbg=17 cterm=none
+hi FoldColumn   guibg=#0d2349   guifg=lightblue ctermfg=152 ctermbg=17 cterm=none
+hi LineNr       guifg=grey30 ctermfg=101 ctermbg=17 cterm=none
+hi ModeMsg      guifg=SkyBlue ctermfg=117 ctermbg=17 cterm=none
+hi MoreMsg      guifg=SeaGreen ctermfg=72 ctermbg=17 cterm=none
+" hi NonText      guifg=LightBlue guibg=#0d2349 ctermfg=152 ctermbg=17 cterm=none
+hi Question     guifg=#487cc4 ctermfg=68 ctermbg=17 cterm=none
+hi IncSearch    guifg=#b0ffff        guibg=#2050d0 ctermfg=159 ctermbg=26 cterm=none
+hi Search       guifg=#b0ffff        guibg=#2050d0 ctermfg=159 ctermbg=26 cterm=none
+hi SpecialKey   guifg=yellowgreen ctermfg=149 ctermbg=17 cterm=none
+hi StatusLine   guibg=#466292   guifg=black     gui=none ctermfg=16 ctermbg=67 cterm=none
+hi StatusLineNC guibg=#466292   guifg=grey22    gui=none ctermfg=237 ctermbg=67 cterm=none
+hi Title        guifg=#38d9ff ctermfg=81 ctermbg=17 cterm=none
+hi Visual       guifg=lightblue guibg=#001146   gui=none ctermfg=152 ctermbg=17 cterm=none
+hi WarningMsg   guifg=salmon ctermfg=210 ctermbg=17 cterm=none
+hi ErrorMsg     guifg=white     guibg=#b2377a ctermfg=231 ctermbg=169 cterm=none
 
 
-hi link javaSpecialChar Constant
-hi javaParenT           guifg=fg         guibg=NONE    gui=NONE
-hi javaFold             guifg=#257E9F    guibg=NONE    gui=NONE
-" syn match javaFold /\w\+_\=[A-Z]\w\+/
-" syn match javaFold /\s\+[A-Z]\w\+\s*/
-" syn match javaFold /^[A-Z]\w\+\s*/
-" syn match javaParenT /\w\+()/
+hi Pmenu        guifg=white     guibg=#445599   gui=none ctermfg=231 ctermbg=61 cterm=none
+hi PmenuSel     guifg=#445599   guibg=gray ctermfg=61 ctermbg=170 cterm=none
 
 
-hi link javaAnnotation  Constant
-hi link javaType Statement
-hi link javaConstant Statement
-hi link javaCharacter Statement
+hi Comment      guifg=#6279a0 ctermfg=67 ctermbg=17 cterm=none
+hi Constant     guifg=#9b60be ctermfg=97 ctermbg=17 cterm=none
+hi Identifier   guifg=#00ac55 ctermfg=35 ctermbg=17 cterm=none
+hi Statement    guifg=SkyBlue2 gui=none ctermfg=191 ctermbg=17 cterm=none
+hi Statement    guifg=#cdee56 gui=none ctermfg=191 ctermbg=17 cterm=none
+hi PreProc      guifg=#20a0d0 ctermfg=38 ctermbg=17 cterm=none
+hi Type         guifg=#8070ff ctermfg=63 ctermbg=17 cterm=none
+hi Special      guifg=#b6a040 ctermfg=179 ctermbg=17 cterm=none
+hi Ignore       guifg=grey40 ctermfg=241 ctermbg=17 cterm=none
+hi Error        guifg=white     guibg=#b2377a ctermfg=231 ctermbg=169 cterm=none
+hi Todo         guifg=#54b900   guibg=#622098   gui=bold ctermfg=70 ctermbg=54 cterm=bold
 
-hi link javaNumber Constant
-hi link javaExternal Statement
+"========================================================
+" Highlight All Math Operator
+"========================================================
+hi PreProc          guifg=#ff80ff                ctermfg=171 
+hi Constant         guifg=#ffa0a0                ctermfg=217
+hi Function	        guifg=#C777EF     gui=NONE  ctermfg=177 ctermbg=17 cterm=none
+hi StdFunction      guifg=#C777EF     gui=bold  ctermfg=177 ctermbg=17 cterm=bold
+hi UserLabel2	    guifg=#c96129     gui=bold  ctermfg=166 ctermbg=17 cterm=bold
+hi StdName	        guifg=#5276e6     gui=bold  ctermfg=69  ctermbg=17 cterm=bold
+hi MicroController  guifg=#d00000     gui=bold  ctermfg=160 ctermbg=17 cterm=bold
+hi AnsiFuncPtr	    guifg=#ff0000     gui=NONE  ctermfg=196 ctermbg=17 cterm=none
+hi PreCondit        guifg=#a06129     gui=NONE  ctermfg=130 ctermbg=17 cterm=none
+hi Operator         guifg=Yellow      gui=NONE  ctermfg=226 ctermbg=17 cterm=none
+hi OperatorBold	    guifg=Yellow      gui=bold  ctermfg=226 ctermbg=17 cterm=bold
+hi BlockBraces	    guifg=Yellow      gui=bold  ctermfg=226 ctermbg=17 cterm=bold
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" C math operators
+syn match       cMathOperator     display "[-+\*\%=]"" C pointer operators
+syn match       cPointerOperator  display "->\|\."
+syn match       cLogicalOperator  display "[!<>]=\="
+syn match       cLogicalOperator  display "=="
+syn match       cBinaryOperator   display "\(&\||\|\^\|<<\|>>\)=\="
+syn match       cBinaryOperator   display "\~"
+syn match       cBinaryOperatorError display "\~="
+syn match       cLogicalOperator  display "&&\|||"
+syn match       cLogicalOperatorError display "\(&&\|||\)="
+syn match       cFenhao           display ";"
+hi cMathOperator            guifg=#3EFFE2                          ctermfg=14
+hi cPointerOperator         guifg=#3EFFE2                          ctermfg=14
+hi cLogicalOperator         guifg=#3EFFE2                          ctermfg=14
+hi cLogicalOperator         guifg=#3EFFE2                          ctermfg=14
+hi cBinaryOperator          guifg=#F0088C    gui=NONE              ctermfg=161  ctermbg=17 
+hi cBinaryOperatorError     guifg=white     guibg=#b2377a          ctermfg=231 ctermbg=169 cterm=none
+hi cBraces	                guifg=#C777EF   gui=NONE               ctermfg=177 ctermbg=17 cterm=none
+hi cFenhao                  guifg=#FFA70F                          ctermfg=202 ctermbg=17 cterm=none
+hi cMaohao                  guifg=#3EFFE2                          ctermfg=14
 
-hi link cppStatement  Statement
-hi cBlock               guifg=#257E9F    guibg=NONE    gui=NONE
-" hi cType                guifg=#257E9F    guibg=NONE    gui=NONE
 
-" syn match cBlock /\w\+_\=[A-Z]\w\+/
-" syn match cBlock /\s\+[A-Z]\w\+\s*/
-" syn match cBlock /^[A-Z]\w\+\s*/
-" syn match cBlock /\w\+()/
-
-hi link objcClass Type
-hi link cocoaClass objcClass
-hi link objcSubclass objcClass
-hi link objcSuperclass objcClass
-hi link cocoaFunction Function
-hi link objcMethodName Identifier
-hi link objcMethodArg Normal
-hi link objcMessageName Identifier
-
-hi mTag guifg=#257E9F
-hi nTag guifg=fg
-syn match mTag /\w\+_\=[A-Z]\w\+/
-syn match mTag /\s\+[A-Z]\w\+\s*/
-syn match  mTag /^[A-Z]\w\+\s*/
-syn match nTag /\w\+()/
-
+"vim:ts=4:tw=4

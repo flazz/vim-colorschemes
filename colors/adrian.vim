@@ -1,3 +1,4 @@
+
 " Vim colorscheme file
 " Maintainer:   Adrian Nagle <vim@naglenet.org>
 " Last Change:  2001-09-25 07:48:15 Mountain Daylight Time
@@ -34,6 +35,13 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "adrian"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 " Normal is for the normal (unhighlighted) text and background.
 " NonText is below the last line (~ lines).

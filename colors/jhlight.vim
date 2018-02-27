@@ -1,3 +1,4 @@
+
 " Vim color file by Jörn Horstmann <joern_h@gmx.net>
 " Light background, works in GUI and cobnsole
 " Last change 08.09.2004
@@ -11,8 +12,15 @@ if exists("syntax_on")
 endif
 
 let colors_name = "jhlight"
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
-hi Normal         guifg=#000000 guibg=#ffffff gui=none ctermfg=black    ctermbg=grey     cterm=none
+hi Normal         guifg=#000000 guibg=#dddddd gui=none ctermfg=black    ctermbg=grey     cterm=none
 
 hi ErrorMsg       guifg=#ff0000 guibg=bg      gui=none ctermfg=red      ctermbg=bg       cterm=none
 hi Visual         guifg=bg      guibg=#4444aa gui=none ctermfg=bg       ctermbg=darkcyan cterm=none
@@ -54,7 +62,7 @@ hi DiffText       guifg=fg      guibg=#dd0000 gui=none ctermfg=fg       ctermbg=
 hi Cursor         guifg=bg      guibg=fg      gui=none ctermfg=bg       ctermbg=fg         cterm=none
 hi lCursor        guifg=bg      guibg=fg      gui=none ctermfg=bg       ctermbg=fg         cterm=none
 
-hi Comment        guifg=#006600 guibg=bg      gui=none ctermfg=darkgreen  ctermbg=bg     cterm=none
+hi Comment        guifg=#005500 guibg=bg      gui=none ctermfg=darkgreen  ctermbg=bg     cterm=none
 hi Operator       guifg=fg      guibg=bg      gui=none ctermfg=fg         ctermbg=bg     cterm=none
 hi Constant       guifg=#880000 guibg=bg      gui=none ctermfg=darkred    ctermbg=bg     cterm=none
 hi Special        guifg=#553300 guibg=bg      gui=none ctermfg=brown      ctermbg=bg     cterm=none

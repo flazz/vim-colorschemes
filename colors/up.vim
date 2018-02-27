@@ -1,190 +1,86 @@
-" Maintainer:   Sasha Koss
-" Version:      0.9
-" Last Change:  9 Dec 2010
-" Credits:      Vim color scheme "up" originaly based on BusyBee colorscheme create by Patrick J. Anderson
+" Blueshift color scheme
+" by Jan Zwiener, mail: jan@zwiener.org
+" Based upon the pyte color scheme by Henning Hasemann
+"
+" 2010/11/16: Version 1.0
+"
 
-set background=dark
+set background=light
 
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "up"
+let colors_name = "blueshift"
 
-"————————————————+———————————————————————————————————————————————+———+———————————————————————————————————————————————"
-"                | GUI                                           |   | TERMINAL                                      "
-"      TYPE      +———————————————+———————————————+———————————————+———+———————————————+———————————————+———————————————"
-"                | foreground    | background    |               |   | foreground    | background    |               "
-"————————————————+———————————————+———————————————+———————————————+———+———————————————+———————————————+———————————————"
+" Taglist colors
+hi MyTagListFileName    guifg=black   guibg=#c0d0e0
+hi MyTagListTagName     guifg=black   guibg=#ffbc29
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Guideline
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+if version >= 700
+  hi CursorLine     guibg=#f6f6f6
+  hi CursorColumn   guibg=#f6f6f6
+  hi MatchParen     guifg=black     guibg=#dfdfdf
 
-hi Action          guifg=#FBDE2D   guibg=NONE      gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
-hi Key             guifg=#FBDE2D   guibg=NONE      gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
+  hi TabLine        guifg=black     guibg=#b0b8c0
+  hi TabLineFill    guifg=#9098a0
+  hi TabLineSel     guifg=black     guibg=#f0f0f0 gui=bold
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Interface                                                                                                          "
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+  hi Pmenu          guifg=white     guibg=#808080
+  hi PmenuSel       guifg=black     guibg=#ffbc29
+endif
 
-hi CursorLine      guifg=NONE      guibg=#202020                                       ctermbg=234     cterm=NONE
-hi CursorColumn    guifg=NONE      guibg=#202020                                       ctermbg=234     cterm=NONE
-hi MatchParen      guifg=#d0ffc0   guibg=#202020   gui=bold            ctermfg=157     ctermbg=234     cterm=bold
-hi Pmenu           guifg=#ffffff   guibg=#444444                       ctermfg=255     ctermbg=238     cterm=NONE
-hi PmenuSel        guifg=#000000   guibg=#b1d631                       ctermfg=0       ctermbg=148     cterm=NONE
-hi PmenuSbar       guifg=#000000   guibg=#808080                       ctermfg=0       ctermbg=248     cterm=NONE
-hi PmenuThumb      guifg=#ffffff   guibg=#000000                       ctermfg=255       ctermbg=0     cterm=NONE
+hi Title        guifg=#202020   gui=none
+hi Underlined   guifg=#202020   gui=underline
 
-hi Normal          guifg=#e2e2e5   guibg=#1B1B1B   gui=none            ctermfg=253     ctermbg=235     cterm=NONE
-hi NonText         guifg=#333333   guibg=#232323   gui=none            ctermfg=244     ctermbg=235     cterm=NONE
+hi Normal       guifg=black     guibg=white
+hi ModeMsg      guifg=black     guibg=white
+hi Cursor       guifg=#f0f0f0   guibg=#101010
+hi LineNr       guifg=#ffffff   guibg=#c0d0e0
+hi Visual       guifg=white     guibg=#5381bc
+hi WildMenu     guifg=black     guibg=#ffbc29
+hi IncSearch    guibg=black     guifg=#ffbc29
+hi Question     guifg=black     guibg=#ffbc29
 
-hi LineNr          guifg=#707070   guibg=#3E3E3E   gui=none            ctermfg=244     ctermbg=233     cterm=NONE
+hi StatusLine   guifg=white     guibg=#8090a0 gui=bold
+hi StatusLineNC guifg=#708090   guibg=#ced5db gui=none
+hi VertSplit    guifg=#a0b0c0   guibg=#a0b0c0 gui=none
 
-hi StatusLine      guifg=#0e0e0e   guibg=#fe9e21   gui=none            ctermfg=253     ctermbg=238     cterm=NONE
-hi StatusLineNC    guifg=#f0f6e6   guibg=#68774f   gui=none            ctermfg=246     ctermbg=238     cterm=NONE
-hi VertSplit       guifg=#828282   guibg=#828282   gui=none            ctermfg=238     ctermbg=238     cterm=NONE
-hi Folded          guifg=#a0a8b0   guibg=#384048   gui=none            ctermfg=248     ctermbg=4       cterm=NONE
-hi Title           guifg=#f6f3e8   guibg=NONE      gui=bold            ctermfg=254                     cterm=bold
-hi Visual          guifg=#faf4c6   guibg=#3c414c   gui=none            ctermfg=229     ctermbg=24      cterm=NONE
-hi SpecialKey      guifg=#808080   guibg=#343434   gui=none            ctermfg=244     ctermbg=236     cterm=NONE
+hi NonText      guifg=#bebebe   guibg=#f2f2f2
+hi Comment      guifg=#008000   gui=italic
+hi Folded       guifg=#708090   guibg=#c0d0e0
+hi Folded       guifg=#708090   guibg=#c0d0e0
+hi FoldColumn   guifg=#708090   guibg=#c0d0e0
 
-hi Cursor          guifg=#000000   guibg=#DEFF8E   gui=none            ctermbg=241     ctermbg=NONE    cterm=NONE
+hi Constant     guifg=black
+hi Number       guifg=black
+hi Float        guifg=black
+hi Boolean      guifg=#0048ff
+hi String       guifg=#4070a0   gui=none
 
+hi Statement    guifg=#0048ff   gui=none
+hi Type         guifg=#0048ff   gui=none
+hi Structure    guifg=#0048ff   gui=none
+hi Identifier   guifg=#0048ff   gui=none
+hi Function     guifg=#0048ff   gui=none
+hi Repeat       guifg=#0048ff   gui=bold
+hi Conditional  guifg=#0048ff   gui=bold
+hi Operator     guifg=black
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" VimL related colors
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+hi PreProc      guifg=#1060a0   gui=none
+hi Define       guifg=#1060a0   gui=bold
+hi Include      guifg=#1060a0   gui=none
 
-hi link vimGroup Action
+hi Error        guifg=red       guibg=white     gui=bold,underline
+hi Todo         guifg=white     guibg=#1060a0   gui=bold
+hi SpecialKey	guifg=#1060a0   guibg=white
+hi Special      guifg=black     guibg=white
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Colorscheme related colors
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link vimHiGroup Action
-hi vimHiGuiRgb     guifg=#ABB78D   guibg=NONE      gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
-
-" 7.3 features
-
-hi ColorColumn     guifg=NONE      guibg=#323232   gui=NONE             ctermfg=NONE    ctermbg=234    cterm=NONE
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Basic code highlight
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi Comment         guifg=#605A4E                   gui=italic          ctermfg=223
-hi SpecialComment  guifg=#FAF4C6                   gui=NONE            ctermfg=229
-hi Todo            guifg=#8f8f8f                   gui=NONE            ctermfg=245
-hi Boolean         guifg=#b1d631                   gui=NONE            ctermfg=148
-hi Identifier      guifg=#b1d631                   gui=NONE            ctermfg=148
-hi Function        guifg=#B7EF52                   gui=NONE            ctermfg=155
-hi Type            guifg=#81C7FF                   gui=NONE            ctermfg=75
-hi Typedef         guifg=#7AFFFD                   gui=NONE            ctermfg=81
-hi StorageClass    guifg=#7AFFFD                   gui=NONE            ctermfg=81
-hi Statement       guifg=#7AFFFD                   gui=NONE            ctermfg=81
-hi Keyword         guifg=#ff9800                   gui=NONE            ctermfg=208
-hi Constant        guifg=#14F2E7                   gui=NONE            ctermfg=111
-hi Number          guifg=#FEFFD5                   gui=NONE            ctermfg=229
-hi Special         guifg=#ff9800                   gui=NONE            ctermfg=208
-hi PreProc         guifg=#faf4c6                   gui=NONE            ctermfg=229
-hi Define          guifg=#7AFFFD                   gui=NONE            ctermfg=81
-
-hi String          guifg=#8cd9a2   guibg=NONE      gui=NONE            ctermfg=157
-hi Character       guifg=#22ff00   guibg=NONE      gui=NONE            ctermfg=2
-hi SpecialChar     guifg=#22ff44   guibg=NONE      gui=bold            ctermfg=2
-hi Delimiter       guifg=#ff9800   guibg=NONE      gui=NONE            ctermfg=208
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" NERDTree highlight
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi Directory       guifg=#66A0C4                                        ctermfg=65
-hi treeCWD         guifg=#BBE7FB                                        ctermfg=67
-
-hi treeDirSlash    guifg=#4D4D4D                                        ctermfg=237
-hi treePart        guifg=#919191                                        ctermfg=247
-
-hi treeUp          guifg=#4D4D4D                                        ctermfg=237
-
-hi treeHelp        guifg=#4D4D4D                                        ctermfg=237
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" SQL
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link sqlOperator Special
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Java
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-" nth special
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Ruby
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link rubyFunction Action
-hi link rubyStringEscape SpecialChar
-
-hi rubyLocalVariableOrMethod guifg=#F5F0C7
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" HTML
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi def link javaScript Normal
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" HAML
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link hamlTag       htmlTagName
-
-hi link hamlClass     Action
-hi link hamlClassChar hamlClass
-
-hi hamlId         guifg=#9FDC42
-hi link hamlIdChar    hamlId
+" Diff
+hi DiffChange   guifg=NONE      guibg=#e0e0e0   gui=bold
+hi DiffText     guifg=NONE      guibg=#f0c8c8   gui=bold
+hi DiffAdd      guifg=NONE      guibg=#c0e0d0   gui=bold
+hi DiffDelete   guifg=NONE      guibg=#f0e0b0   gui=bold
 
 
-hi hamlRubyChar guifg=#C86161
-hi link hamlInterpolationDelimiter hamlRubyChar
-
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" CSS
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link cssTagName    htmlTagName
-hi link cssClassName  hamlClass
-hi link cssInentifier hamlId
-hi cssBoxProp  guifg=#9BA789
-hi link cssColorProp cssBoxProp
-hi link cssRenderProp cssBoxProp
-hi link cssFontProp cssBoxProp
-hi link cssTextProp cssBoxProp
-
-hi cssImportant guifg=#E8D1D1
-
-hi cssUIAttr   guifg=#F5F0C7
-hi link cssValueLength cssUIAttr
-hi link cssColor cssUIAttr
-hi link cssColorAttr cssUIAttr
-hi link cssCommonAttr cssUIAttr
-hi link cssTextAttr cssUIAttr
-hi link cssFontAttr cssUIAttr
-hi link cssRenderAttr cssUIAttr
-
-"hi cssBoxProp     guibg=#3E2A2A
-"hi cssColorProp   guibg=#403E31
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" SASS
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link sassClassChar cssClass
-hi link sassProperty  cssDefinition

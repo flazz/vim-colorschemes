@@ -1,3 +1,4 @@
+
 " Vim Syntax Highlighting File
 " 
 " Language: C
@@ -20,6 +21,14 @@ hi clear
 " Eterm users, uncomment the line below
 " hi Normal ctermfg=grey
 
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
+"
 hi PreProc ctermfg=white
 hi Type ctermfg=white
 hi Statement ctermfg=white

@@ -1,4 +1,4 @@
-" vim:set ts=8 sts=2 sw=2 tw=0:
+
 "
 " matrix.vim - MATRIX like colorscheme.
 "
@@ -11,6 +11,13 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = 'matrix'
+"lyj---//2006-03-15 @ 23:16 By Lyj---------------
+hi User1 guibg=darkblue guifg=yellow
+hi User2 guibg=darkblue guifg=lightblue
+hi User3 guibg=darkblue guifg=red
+hi User4 guibg=darkblue guifg=cyan
+hi User5 guibg=darkblue guifg=lightgreen
+"endlyjset background=light
 
 " the character under the cursor
 hi Cursor	guifg=#226622 guibg=#55ff55

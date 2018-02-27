@@ -1,139 +1,186 @@
 " Vim color file
-" Maintainer: Sergey Vlasov <sergey.vlsv@gmail.com>
-" Inspired by original Code::Blocks theme in a dark manner.
+" Name:  pf_earch
 
 set background=dark
-highlight clear
-let g:colors_name="codeblocks_dark"
+hi clear
+if exists("syntax_on")
+   syntax reset
+endif
 
-let save_cpo = &cpo
-set cpo&vim
+let colors_name = "pf_earth"
 
-" basic highlight groups (:help highlight-groups) {{{
+" map a urxvt cube number to an xterm-256 cube number
+fun! <SID>M(a)
+    return strpart("0135", a:a, 1) + 0
+endfun
 
-" text {{{
-hi Normal       guifg=#D1D1D1       guibg=#121316       gui=NONE
+" map a urxvt colour to an xterm-256 colour
+fun! <SID>X(a)
+    if &t_Co == 88
+        return a:a
+    else
+        if a:a == 8
+            return 237
+        elseif a:a < 16
+            return a:a
+        elseif a:a > 79
+            return 232 + (3 * (a:a - 80))
+        else
+            let l:b = a:a - 16
+            let l:x = l:b % 4
+            let l:y = (l:b / 4) % 4
+            let l:z = (l:b / 16)
+            return 16 + <SID>M(l:x) + (6 * <SID>M(l:y)) + (36 * <SID>M(l:z))
+        endif
+    endif
+endfun
 
-hi Folded       guifg=#c2bfa5       guibg=#050505       gui=underline
-hi LineNr		guifg=#928c75		guibg=#0B0B0D		gui=NONE
-hi Directory    guifg=#00bbdd       guibg=NONE          gui=bold
-hi NonText      guifg=#77ff22       guibg=NONE          gui=bold
-hi SpecialKey   guifg=#559933       guibg=NONE          gui=NONE
+if has("gui_running")
+    hi Normal         gui=NONE   guifg=#E7FFD8   guibg=#262320
+    hi IncSearch        guifg=#66ffff                                   gui=reverse
+    hi Search guifg=#000000 guibg=#cae682 ctermfg=0 ctermbg=195
+    hi ErrorMsg       gui=BOLD   guifg=#ffffff   guibg=#ff3300
+    hi WarningMsg     gui=BOLD   guifg=#ffffff   guibg=#ff6600
+    hi ModeMsg        gui=BOLD   guifg=#7e7eae   guibg=NONE
+    hi MoreMsg        gui=BOLD   guifg=#7e7eae   guibg=NONE
+    hi Question       gui=BOLD   guifg=#ffcd00   guibg=NONE
+    hi StatusLine     gui=NONE   guifg=#b9b9b9   guibg=#2F2A26
+    hi StatusLineNC   gui=NONE   guifg=#474A39   guibg=#2F2A26
+    hi VertSplit      gui=NONE   guifg=#b9b9b9   guibg=#3e3e5e
+    hi WildMenu       gui=BOLD   guifg=#ffcd00   guibg=#1e1e2e
 
-hi SpellBad     guifg=NONE          guibg=NONE          gui=undercurl
-hi SpellCap     guifg=NONE          guibg=NONE          gui=undercurl
-hi SpellLocal   guifg=NONE          guibg=NONE          gui=undercurl
-hi SpellRare    guifg=NONE          guibg=NONE          gui=undercurl
+    hi DiffText       gui=NONE   guifg=#ffffcd   guibg=#00cd00
+    hi DiffChange     gui=NONE   guifg=#ffffcd   guibg=#008bff
+    hi DiffDelete     gui=NONE   guifg=#ffffcd   guibg=#cd0000
+    hi DiffAdd        gui=NONE   guifg=#ffffcd   guibg=#00cd00
 
-hi DiffAdd      guifg=#ffffff       guibg=#126493       gui=NONE
-hi DiffChange   guifg=#000000       guibg=#976398       gui=NONE
-hi DiffDelete   guifg=#000000       guibg=#be1923       gui=bold
-hi DiffText     guifg=#ffffff       guibg=#976398       gui=bold
-" }}}
+    hi Cursor         gui=NONE   guifg=#404040   guibg=#D78332
+    hi lCursor        gui=NONE   guifg=#404040   guibg=#8b8bff
+    hi CursorIM       gui=NONE   guifg=#404040   guibg=#8b8bff
+    hi CursorLine       gui=NONE                guibg=#222725           gui=none
 
-" borders / separators / menus {{{
-hi FoldColumn   guifg=#c8bcb9       guibg=#786d65       gui=bold
-hi SignColumn   guifg=#c8bcb9       guibg=#786d65       gui=bold
+    hi Folded         gui=NONE   guifg=#cfcfcd   guibg=#4b208f
+    hi FoldColumn     gui=NONE   guifg=#8b8bcd   guibg=#2e2e2e
 
-hi Pmenu        guifg=#000000       guibg=#a6a190       gui=NONE
-hi PmenuSel     guifg=#ffffff       guibg=#133293       gui=NONE
-hi PmenuSbar    guifg=NONE          guibg=#555555       gui=NONE
-hi PmenuThumb   guifg=NONE          guibg=#cccccc       gui=NONE
+    hi Directory      gui=NONE   guifg=#00ff8b   guibg=NONE
+    hi LineNr         gui=NONE   guifg=#595A48   guibg=#2E2A26
+    hi NonText        gui=BOLD   guifg=#8b8bcd   guibg=NONE
+    hi SpecialKey     gui=BOLD   guifg=#8b00cd   guibg=NONE
+    hi Title          gui=BOLD   guifg=#af4f4b   guibg=#1e1e27
+    hi Visual           guifg=NONE              guibg=#364458
 
-hi StatusLine   guifg=#000000       guibg=#c2bfa5       gui=bold
-hi StatusLineNC guifg=#444444       guibg=#c2bfa5       gui=NONE
-hi WildMenu     guifg=#ffffff       guibg=#133293       gui=bold
-hi VertSplit    guifg=#c2bfa5       guibg=#c2bfa5       gui=NONE
+    hi Comment        gui=italic guifg=#4F4B42
+    hi Constant       gui=NONE   guifg=#ffcd8b   guibg=NONE
+    hi Boolean        gui=italic guifg=#B15A40 guibg=NONE
+    hi String           guifg=#B99B74                                   gui=none
+    hi Error          gui=NONE   guifg=#ffffff   guibg=#ff0000
+    hi Identifier     gui=NONE   guifg=#CEB429   guibg=NONE
+    hi Ignore         gui=NONE   guifg=#8b8bcd   guibg=NONE
+    "hi Number         gui=NONE   guifg=#506dbd   guibg=NONE
+    hi Number guifg=#C0E06C ctermfg=207
+    " def/end
+    hi PreProc        gui=NONE   guifg=#838861   guibg=NONE
+    hi Special        gui=NONE   guifg=#c080d0   guibg=NONE
+    " do/end
+    hi Statement      gui=NONE   guifg=#5FE8D0   guibg=NONE
+    hi Operator      gui=NONE   guifg=#828A66   guibg=NONE
+    "hi Todo           gui=BOLD   guifg=#303030   guibg=#c080d0
+    "hi Todo             guifg=#efef8f           guibg=NONE              gui=underline
+    hi Todo            guifg=#FFFFFF guibg=bg      gui=bold
+    hi Type           gui=NONE   guifg=#ff8bff   guibg=NONE
+    hi Underlined     gui=BOLD   guifg=#ffffcd   guibg=NONE
+    hi TaglistTagName gui=BOLD   guifg=#808bed   guibg=NONE
 
-hi TabLine      guifg=#000000       guibg=#c2bfa5       gui=NONE
-hi TabLineFill  guifg=#000000       guibg=#c2bfa5       gui=NONE
-hi TabLineSel   guifg=#ffffff       guibg=#133293       gui=NONE
+    " match parenthesis, brackets
+    hi MatchParen       guifg=#00ff00           guibg=NONE              gui=bold
+    hi MatchParen       ctermfg=46              ctermbg=NONE            cterm=bold
 
-"hi Menu
-"hi Scrollbar
-"hi Tooltip
-" }}}
+    " Popup Menu
+    " ----------
+    " normal item in popup
+    hi Pmenu            guifg=#e0e0e0           guibg=#303840           gui=none
+    hi Pmenu            ctermfg=253             ctermbg=233             cterm=none
+    " selected item in popup
+    hi PmenuSel         guifg=#cae682           guibg=#505860           gui=none
+    hi PmenuSel         ctermfg=186             ctermbg=237             cterm=none
+    " scrollbar in popup
+    hi PMenuSbar                                guibg=#505860           gui=none
+    hi PMenuSbar                                ctermbg=59              cterm=none
+    " thumb of the scrollbar in the popup
+    hi PMenuThumb                               guibg=#808890           gui=none
+    hi PMenuThumb                               ctermbg=102             cterm=none
 
-" cursor / dynamic / other {{{
-hi Cursor       guifg=#000000       guibg=#ffff99       gui=NONE
-hi CursorIM     guifg=#000000       guibg=#aaccff       gui=NONE
-hi CursorLine   guifg=NONE          guibg=#1b1b1b       gui=NONE
-hi CursorColumn guifg=NONE          guibg=#1b1b1b       gui=NONE
+    " Ruby Highlighting
+    hi rubySymbol guifg=#DA8332 gui=italic
+    hi rubyClass        guifg=#b3d38c               gui=italic
+    hi rubyGlobalVariable           guifg=#45B6DC
+    hi rubyClassVariable           guifg=#CB9064
+    hi rubyInstanceVariable         guifg=#C3BF55
+    hi rubyConstant                 guifg=#8EB564    gui=italic
+    hi rubyBlockParameter           guifg=#CC6BDC
+    hi link rubyClass Keyword
+    hi link rubyModule Keyword
+    hi link rubyOperator Operator
+    hi link rubyIdentifier Identifier
+    hi rubyRegexp guifg=#B18A3D ctermfg=brown
+    hi rubyRegexpDelimiter guifg=#FF8000 ctermfg=brown
+    "hi rubyFunction     guifg=#0066bb               gui=bold
+    "hi rubyKeyword      guifg=#66cd66
+    "hi rubyIndentifier              guifg=#008aff
+    "hi rubyGlobalVariable           guifg=#dd7700
+    "hi rubyPredefinedIdentifier     guifg=#555555   gui=bold
+    "hi rubyString           guifg=#0086d2
+    "hi rubyStringDelimiter  guifg=#dd7700
+    "hi rubySpaceError       guibg=#270000
+    "hi rubyDocumentation    guifg=#aaaaaa
+    "hi rubyData             guifg=#555555
+else
+    exec "hi Normal         cterm=NONE   ctermfg=" . <SID>X("78") . "   ctermbg=" . <SID>X(80) . ""
+    exec "hi IncSearch      cterm=BOLD   ctermfg=" . <SID>X("80") . "   ctermbg=" . <SID>X(73) . ""
+    exec "hi Search         cterm=NONE   ctermfg=" . <SID>X("80") . "   ctermbg=" . <SID>X(73) . ""
+    exec "hi ErrorMsg       cterm=BOLD   ctermfg=" . <SID>X("79") . "   ctermbg=" . <SID>X(64) . ""
+    exec "hi WarningMsg     cterm=BOLD   ctermfg=" . <SID>X("79") . "   ctermbg=" . <SID>X(68) . ""
+    exec "hi ModeMsg        cterm=BOLD   ctermfg=" . <SID>X("39") . ""
+    exec "hi MoreMsg        cterm=BOLD   ctermfg=" . <SID>X("39") . ""
+    exec "hi Question       cterm=BOLD   ctermfg=" . <SID>X("72") . ""
+    exec "hi StatusLine     cterm=BOLD   ctermfg=" . <SID>X("84") . "   ctermbg=" . <SID>X(81) . ""
+    exec "hi StatusLineNC   cterm=NONE   ctermfg=" . <SID>X("84") . "   ctermbg=" . <SID>X(81) . ""
+    exec "hi VertSplit      cterm=NONE   ctermfg=" . <SID>X("84") . "   ctermbg=" . <SID>X(82) . ""
+    exec "hi WildMenu       cterm=BOLD   ctermfg=" . <SID>X("72") . "   ctermbg=" . <SID>X(80) . ""
 
-hi Visual       guifg=NONE			guibg=#344863 gui=NONE
-hi IncSearch    guifg=#000000       guibg=#eedd33       gui=bold
-hi Search       guifg=#efefd0       guibg=#A80F2B       gui=NONE
-hi MatchParen   guifg=#FFC124       guibg=#47360A       gui=bold
+    exec "hi DiffText       cterm=NONE   ctermfg=" . <SID>X("78") . "   ctermbg=" . <SID>X(24) . ""
+    exec "hi DiffChange     cterm=NONE   ctermfg=" . <SID>X("78") . "   ctermbg=" . <SID>X(23) . ""
+    exec "hi DiffDelete     cterm=NONE   ctermfg=" . <SID>X("78") . "   ctermbg=" . <SID>X(48) . ""
+    exec "hi DiffAdd        cterm=NONE   ctermfg=" . <SID>X("78") . "   ctermbg=" . <SID>X(24) . ""
 
-"hi VisualNOS
-" }}}
+    exec "hi Cursor         cterm=NONE   ctermfg=" . <SID>X("8") . "    ctermbg=" . <SID>X(39) . ""
+    exec "hi lCursor        cterm=NONE   ctermfg=" . <SID>X("8") . "    ctermbg=" . <SID>X(39) . ""
+    exec "hi CursorIM       cterm=NONE   ctermfg=" . <SID>X("8") . "    ctermbg=" . <SID>X(39) . ""
 
-" listings / messages {{{
-hi ModeMsg      guifg=#eecc18       guibg=NONE          gui=NONE
-hi Title        guifg=#dd4452       guibg=NONE          gui=bold
-hi Question     guifg=#66d077       guibg=NONE          gui=NONE
-hi MoreMsg      guifg=#39d049       guibg=NONE          gui=NONE
-hi ErrorMsg     guifg=#ffffff       guibg=#ff0000       gui=bold
-hi WarningMsg   guifg=#ccae22       guibg=NONE          gui=bold
-" }}}
+    exec "hi Folded         cterm=NONE   ctermfg=" . <SID>X("78") . "   ctermbg=" . <SID>X(35) . ""
+    exec "hi FoldColumn     cterm=NONE   ctermfg=" . <SID>X("38") . "   ctermbg=" . <SID>X(80) . ""
 
-" }}}
+    exec "hi Directory      cterm=NONE   ctermfg=" . <SID>X("29") . "   ctermbg=NONE"
+    exec "hi LineNr         cterm=NONE   ctermfg=" . <SID>X("38") . "   ctermbg=" . <SID>X(80) . ""
+    exec "hi NonText        cterm=BOLD   ctermfg=" . <SID>X("38") . "   ctermbg=NONE"
+    exec "hi SpecialKey     cterm=BOLD   ctermfg=" . <SID>X("34") . "   ctermbg=NONE"
+    exec "hi Title          cterm=BOLD   ctermfg=" . <SID>X("52") . "   ctermbg=" . <SID>X(80) . ""
+    exec "hi Visual         cterm=NONE   ctermfg=" . <SID>X("80") . "   ctermbg=" . <SID>X(73) . ""
 
-" syntax highlighting groups {{{
-"*Comment	any comment
-hi Comment      guifg=#566E67       guibg=NONE          gui=NONE
+    exec "hi Comment        cterm=NONE   ctermfg=" . <SID>X("52") . "   ctermbg=NONE"
+    exec "hi Constant       cterm=NONE   ctermfg=" . <SID>X("73") . "   ctermbg=NONE"
+    exec "hi String         cterm=NONE   ctermfg=" . <SID>X("73") . "   ctermbg=" . <SID>X(8) . ""
+    exec "hi Error          cterm=NONE   ctermfg=" . <SID>X("79") . "   ctermbg=" . <SID>X(64) . ""
+    exec "hi Identifier     cterm=NONE   ctermfg=" . <SID>X("71") . "   ctermbg=NONE"
+    exec "hi Ignore         cterm=NONE   ctermfg=" . <SID>X("38") . "   ctermbg=NONE"
+    exec "hi Number         cterm=NONE   ctermfg=" . <SID>X("22") . "   ctermbg=NONE"
+    exec "hi PreProc        cterm=NONE   ctermfg=" . <SID>X("10") . "   ctermbg=NONE"
+    exec "hi Special        cterm=NONE   ctermfg=" . <SID>X("39") . "   ctermbg=NONE"
+    exec "hi Statement      cterm=NONE   ctermfg=" . <SID>X("26") . "   ctermbg=NONE"
+    exec "hi Todo           cterm=BOLD   ctermfg=" . <SID>X("08") . "   ctermbg=" . <SID>X(39) . ""
+    exec "hi Type           cterm=NONE   ctermfg=" . <SID>X("71") . "   ctermbg=NONE"
+    exec "hi Underlined     cterm=BOLD   ctermfg=" . <SID>X("78") . "   ctermbg=NONE"
+    exec "hi TaglistTagName cterm=BOLD   ctermfg=" . <SID>X("26") . "   ctermbg=NONE"
+endif
 
-"*Constant		any constant
-" String		a string constant
-" Character		a character constant: 'c', '\n'
-" Number		a number constant: 234, 0xff
-" Boolean		a boolean constant: TRUE, false
-" Float			a floating point constant: 2.3e10
-hi Constant     guifg=#F34AFF       guibg=NONE          gui=NONE
-hi String       guifg=#4D63EB		guibg=NONE			gui=NONE
-hi Character	guifg=orange		guibg=NONE          gui=bold
-hi Boolean		guifg=#F34AFF       guibg=NONE          gui=bold
-
-"*PreProc		generic
-" Include		preprocessor #include
-" Define		preprocessor #define
-" Macro			same as Define
-" PreCondit		preprocessor #if, #else, #endif, etc.
-hi PreProc      guifg=#9FEF47       guibg=NONE          gui=NONE
-
-"*Type			int, long, char, etc.
-" StorageClass	static, register, volatile, etc.
-" Structure		struct, union, enum, etc.
-" Typedef		A typedef
-hi Type         guifg=#47ABF0       guibg=NONE          gui=bold
-
-"*Identifier	any variable name
-" Function		function name (also: methods for classes)
-
-" Statement		any statement
-" Conditional	if, then, else, endif, switch, etc.
-" Repeat		for, do, while, etc.
-" Label			case, default, etc.
-" Operator		sizeof, +, *, etc.
-" Keyword		any other keyword
-" Exception		try, catch, throw
-hi Statement    guifg=#47ABF0       guibg=NONE          gui=bold
-hi Operator     guifg=#EC2417       guibg=NONE          gui=NONE
-
-"*Special		any special symbol
-" SpecialChar	special character in a constant
-" Tag			you can use CTRL-] on this
-" Delimiter		character that needs attention
-" SpecialComment	special things inside a comment
-" Debug			debugging statements
-hi Special      guifg=#83E683		guibg=NONE          gui=bold
-hi SpecialChar	guifg=orange		guibg=NONE          gui=bold
-hi Delimiter	guifg=orange		guibg=NONE          gui=bold
-
-hi Underlined   guifg=#80a0ff       guibg=NONE          gui=underline
-hi Ignore       guifg=#888888       guibg=NONE          gui=NONE
-hi Error        guifg=#ffffff       guibg=#ff0000       gui=NONE
-hi Todo         guifg=#ffffff       guibg=#ee7700       gui=bold
-" }}}
-
-let &cpo = save_cpo
+" vim: set et :
