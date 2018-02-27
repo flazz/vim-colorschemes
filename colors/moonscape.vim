@@ -29,7 +29,7 @@ hi Comment          cterm=NONE      ctermfg=245         ctermbg=NONE
 hi Conditional      cterm=NONE      ctermfg=251         ctermbg=NONE
 hi Constant         cterm=NONE      ctermfg=66          ctermbg=NONE
 hi Cursor           cterm=NONE      ctermfg=242         ctermbg=NONE
-hi CursorLine       cterm=bold      ctermfg=NONE        ctermbg=234
+hi CursorLine       cterm=bold      ctermfg=NONE        ctermbg=NONE
 hi CursorLineNr     cterm=NONE      ctermfg=234         ctermbg=66
 hi Define           cterm=NONE      ctermfg=66          ctermbg=NONE
 hi Delimiter        cterm=bold      ctermfg=66          ctermbg=NONE
@@ -49,7 +49,7 @@ hi IncSearch        cterm=NONE      ctermfg=247         ctermbg=247
 hi LineNr           cterm=NONE      ctermfg=59          ctermbg=234
 hi Macro            cterm=NONE      ctermfg=66          ctermbg=NONE
 hi NonText          cterm=NONE      ctermfg=238         ctermbg=NONE
-hi Normal           cterm=NONE      ctermfg=247         ctermbg=234
+hi Normal           cterm=NONE      ctermfg=247         ctermbg=NONE
 hi Operator         cterm=NONE      ctermfg=251         ctermbg=NONE
 hi Pmenu            cterm=NONE      ctermfg=251         ctermbg=234
 hi PmenuSel         cterm=NONE      ctermfg=234         ctermbg=66

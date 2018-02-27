@@ -1,8 +1,8 @@
-" Minimalist - A Material Colorscheme Darker
+" Minimalist - A Material Color Scheme Darker
 "
 " Author:       Diki Ananta <diki1aap@gmail.com>
 " Repository:   https://github.com/dikiaap/minimalist
-" Version:      1.4
+" Version:      1.5
 " License:      MIT
 
 set background=dark
@@ -63,7 +63,7 @@ hi NERDTreeClosable ctermfg=167     ctermbg=NONE    cterm=NONE      guifg=#D75F5
 """""""""""""""""""""""
 hi Boolean          ctermfg=173     ctermbg=NONE    cterm=NONE      guifg=#D7875F       guibg=NONE      gui=NONE
 hi Character        ctermfg=140     ctermbg=NONE    cterm=NONE      guifg=#AF87D7       guibg=NONE      gui=NONE
-hi Comment          ctermfg=238     ctermbg=NONE    cterm=NONE      guifg=#444444       guibg=NONE      gui=NONE
+hi Comment          ctermfg=240     ctermbg=NONE    cterm=NONE      guifg=#585858       guibg=NONE      gui=NONE
 hi Conditional      ctermfg=140     ctermbg=NONE    cterm=NONE      guifg=#AF87D7       guibg=NONE      gui=NONE
 hi Constant         ctermfg=140     ctermbg=NONE    cterm=NONE      guifg=#AF87D7       guibg=NONE      gui=NONE
 hi Define           ctermfg=140     ctermbg=NONE    cterm=NONE      guifg=#AF87D7       guibg=NONE      gui=NONE
@@ -154,11 +154,11 @@ hi phpClass             ctermfg=215     ctermbg=NONE    cterm=NONE      guifg=#F
 hi phpClassDelimiter    ctermfg=117     ctermbg=NONE    cterm=NONE      guifg=#87D7FF       guibg=NONE      gui=NONE
 hi phpClassExtends      ctermfg=150     ctermbg=NONE    cterm=NONE      guifg=#AFD787       guibg=NONE      gui=NONE
 hi phpClassImplements   ctermfg=150     ctermbg=NONE    cterm=NONE      guifg=#AFD787       guibg=NONE      gui=NONE
-hi phpCommentStar       ctermfg=238     ctermbg=NONE    cterm=NONE      guifg=#444444       guibg=NONE      gui=NONE
-hi phpCommentTitle      ctermfg=238     ctermbg=NONE    cterm=NONE      guifg=#444444       guibg=NONE      gui=NONE
-hi phpDocComment        ctermfg=238     ctermbg=NONE    cterm=NONE      guifg=#444444       guibg=NONE      gui=NONE
-hi phpDocIdentifier     ctermfg=238     ctermbg=NONE    cterm=NONE      guifg=#444444       guibg=NONE      gui=NONE
-hi phpDocParam          ctermfg=238     ctermbg=NONE    cterm=NONE      guifg=#444444       guibg=NONE      gui=NONE
+hi phpCommentStar       ctermfg=240     ctermbg=NONE    cterm=NONE      guifg=#585858       guibg=NONE      gui=NONE
+hi phpCommentTitle      ctermfg=240     ctermbg=NONE    cterm=NONE      guifg=#585858       guibg=NONE      gui=NONE
+hi phpDocComment        ctermfg=240     ctermbg=NONE    cterm=NONE      guifg=#585858       guibg=NONE      gui=NONE
+hi phpDocIdentifier     ctermfg=240     ctermbg=NONE    cterm=NONE      guifg=#585858       guibg=NONE      gui=NONE
+hi phpDocParam          ctermfg=240     ctermbg=NONE    cterm=NONE      guifg=#585858       guibg=NONE      gui=NONE
 hi phpDocTags           ctermfg=242     ctermbg=NONE    cterm=NONE      guifg=#666666       guibg=NONE      gui=NONE
 hi phpFunction          ctermfg=74      ctermbg=NONE    cterm=NONE      guifg=#5FAFD7       guibg=NONE      gui=NONE
 hi phpFunctions         ctermfg=74      ctermbg=NONE    cterm=NONE      guifg=#5FAFD7       guibg=NONE      gui=NONE

@@ -1,106 +1,85 @@
-" Vim color file
-" Maintainer:	Andrew Lyon <orthecreedence@gmail.com>
-" Last Change:	$Date: 2010-11-20 12:27:30PST $
-" Version:	1.1
-
-" Note that this color scheme is loosely based off of desert.vim (Hans Fugal
-" <hans@fugal.net>) mixed with some of slate.vim (Ralph Amissah
-" <ralph@amissah.com>) but with much of my own modification.
+"
+" Vydark
+"
+" A comfortable, dark Vim colour scheme for everyday use.
+" This colour scheme is meant for GUI use.
+"
+" Author: Vy-Shane Sin Fat <shane@node.mu>
+"
 
 set background=dark
-if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
-    hi clear
-    if exists("syntax_on")
-	syntax reset
-    endif
+hi clear
+if exists("syntax_on")
+    syntax reset
 endif
-let g:colors_name="void"
+let g:colors_name="vydark"
 
-hi Normal	guifg=#f5f5f5 guibg=grey15
 
-" highlight groups
-hi Cursor	guibg=khaki guifg=slategrey
-"hi CursorIM
-"hi Directory
-"hi DiffAdd
-"hi DiffChange
-"hi DiffDelete
-"hi DiffText
-"hi ErrorMsg
-hi VertSplit	guibg=black guifg=black gui=none
-hi Folded	guibg=grey30 guifg=gold
-hi FoldColumn	guibg=grey30 guifg=tan
-hi IncSearch	guifg=slategrey guibg=khaki
-"hi LineNr
-hi ModeMsg	guifg=goldenrod
-hi MoreMsg	guifg=SeaGreen
-hi NonText	guifg=LightBlue guibg=grey30
-hi Question	guifg=springgreen
-hi Search	guibg=peru guifg=wheat
-hi SpecialKey	guifg=yellowgreen
-hi StatusLine	guibg=black guifg=#cccccc gui=none
-hi StatusLineNC	guibg=black guifg=grey40 gui=none
-hi Title	guifg=indianred
-hi Visual	gui=none guifg=khaki guibg=olivedrab
-"hi VisualNOS
-hi WarningMsg	guifg=salmon
-"hi WildMenu
-"hi Menu
-"hi Scrollbar
-"hi Tooltip
+hi Normal        guifg=#bbbbbb  guibg=#282828
+hi Title         guifg=white
+hi Cursor        guibg=#ffffff
+hi LineNr        guifg=#444455  guibg=#292929
+hi Visual        guibg=#555555
+hi NonText       guifg=#292929  guibg=#292929
+hi StatusLine    guifg=#bbbbbb  guibg=#353535  gui=none
+hi StatusLineNC  guifg=#777777  guibg=#353535  gui=none
+hi VertSplit     guifg=#353535  guibg=#353535  gui=none
+hi ModeMsg       guifg=#99dd99  guibg=#394439  gui=none
+hi ErrorMsg      guifg=#222222  guibg=#ff8888  gui=none
+hi Error         guifg=#ffaaaa  guibg=#333333  gui=none
+hi Folded        guifg=#666677  guibg=#242424 
 
-" syntax highlighting groups
-hi Comment	guifg=grey50
-hi Constant	guifg=#e09085
-hi Identifier	guifg=#f5f5f5
-hi Statement	guifg=darkkhaki		" #bbccee
-hi PreProc	guifg=#c8e0b0
-hi Type		guifg=darkkhaki
-hi Special	guifg=#bbccee cterm=bold term=bold
-hi Operator guifg=navajowhite cterm=NONE
-"hi Underlined
-hi Ignore	guifg=grey40
-"hi Error
-hi Todo		guifg=orangered guibg=yellow2
-hi Todo		guifg=orange guibg=gray40
 
-" color terminal definitions
-hi SpecialKey	ctermfg=darkgreen
-hi NonText	guibg=grey15 cterm=bold ctermfg=darkblue
-hi Directory	ctermfg=brown  guifg=#ddbb66
-hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
-hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
-hi Search	cterm=NONE ctermfg=grey ctermbg=blue
-hi MoreMsg	ctermfg=darkgreen
-hi ModeMsg	cterm=NONE ctermfg=brown
-hi LineNr guifg=grey50 ctermfg=3
-hi Question	ctermfg=green
-hi StatusLine	cterm=bold,reverse
-hi StatusLineNC cterm=reverse
-hi VertSplit	cterm=reverse
-hi Title	ctermfg=5
-hi Visual	cterm=reverse
-hi VisualNOS	cterm=bold,underline
-hi WarningMsg	ctermfg=1
-hi WildMenu	ctermfg=0 ctermbg=3
-hi Folded	ctermfg=darkgrey ctermbg=NONE
-hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
-hi DiffAdd	ctermbg=4
-hi DiffChange	ctermbg=5
-hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
-hi DiffText	cterm=bold ctermbg=1
-hi Comment	ctermfg=darkcyan
-hi Constant	ctermfg=brown
-hi Special	ctermfg=5
-hi Identifier	ctermfg=6
-hi Statement	ctermfg=3
-hi PreProc	ctermfg=5
-hi Type		ctermfg=2
-hi Underlined	cterm=underline ctermfg=5
-hi Ignore	cterm=bold ctermfg=7
-hi Ignore	ctermfg=darkgrey
-hi Error	cterm=bold ctermfg=7 ctermbg=1
+" Vim 7.x specific
+if version >= 700
+  hi MatchParen  guibg=#364836  gui=none
+  hi Pmenu       guifg=#bbbbbb  guibg=#444444  gui=none
+  hi PmenuSel    guifg=#222222  guibg=#99bbdd  gui=none
+  hi PmenuSbar   guifg=#494949  guibg=#494949  gui=bold
+  hi PmenuThumb  guifg=#666666  guibg=#666666  gui=bold
+  hi Search      guifg=#dddd99  guibg=#444433  gui=none
+  hi IncSearch   guifg=#eeeeaa  guibg=#666633  gui=bold
+  hi CursorLine  guibg=#353535  gui=none
+  hi ColorColumn guibg=#252525
+  hi SpellBad    guisp=#774444
+  hi SpellCap    guisp=#774444
+  hi SpellLocal  guisp=#774444
+  hi SpellRare   guisp=#774444
+endif
 
+
+" Syntax highlighting 
+hi Comment       guifg=#666677  gui=none
+hi Todo          guifg=#8888aa  guibg=#303030  gui=italic
+hi Operator      guifg=#bbbbbb  gui=none
+hi Identifier    guifg=#bbbbbb  gui=none
+hi Statement     guifg=#bbbbbb  gui=none
+hi Type          guifg=#99bbcc  gui=none
+hi Constant      guifg=#88cc99  gui=none
+hi Conditional   guifg=#99bbcc  gui=none
+hi Delimiter     guifg=#99bbdd  gui=none
+hi PreProc       guifg=#88ddcc  gui=none
+hi Special       guifg=#99dd99  gui=bold
+hi Keyword       guifg=#bbbbbb  gui=none
+
+hi link Function        Normal
+hi link Character       Constant
+hi link String          Constant
+hi link Boolean         Constant
+hi link Number          Constant
+hi link Float           Number
+hi link Repeat          Conditional
+hi link Label           Statement
+hi link Exception       Statement
+hi link Include         Normal
+hi link Define          Type
+hi link Macro           PreProc
+hi link PreCondit       PreProc
+hi link StorageClass    Type
+hi link Structure       Type
+hi link Typedef         Type
+hi link Tag             Special
+hi link SpecialChar     Special
+hi link SpecialComment  Special
+hi link Debug           Special
 

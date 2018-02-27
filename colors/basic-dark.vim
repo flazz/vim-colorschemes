@@ -23,6 +23,7 @@ let s:blue = "6699cc"
 let s:purple = "ce93d8"
 let s:window = "37474f"
 let s:grey = "b0bec5"
+let s:lcs = "425761"
 
 if !has("gui_running")
     let s:background = "202020"
@@ -247,7 +248,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " Vim Highlighting
     call <SID>X("Normal", s:foreground, s:background, "none")
     call <SID>X("LineNr", s:grey, "", "none")
-    call <SID>X("NonText", s:foreground, "", "none")
+    call <SID>X("NonText", s:lcs, "", "none")
+    call <SID>X("Whitespace", s:lcs, "", "none")
     call <SID>X("SpecialKey", s:blue, "", "none")
     call <SID>X("Search", s:foreground, s:selection, "none")
     call <SID>X("TabLine", s:foreground, s:background, "reverse")

@@ -1,4 +1,4 @@
-" itg_flat_transparent for VIM
+" itg_flat for VIM
 " Port of the theme-itg-flat Sublime Text theme with some minor tweaks. Credit for the original theme goes to @itsthatguy (https://github.com/itsthatguy/theme-itg-flat)
 " This is the transparent background version of itg_flat if you want to use a custom background
 " Green/Blue - #92e4c0, LightGray - #606A74, Yellow - #DDC96D, Red - #D1605E, LightGreen #B5DC64, White - #e0e0e0, BG - #282A31
@@ -14,8 +14,8 @@ let colors_name = "itg_flat"
 hi Comment	    	guifg=#606a74    ctermfg=240    gui=none   		cterm=none
 hi Constant	    	guifg=#92e4c0    ctermfg=115    gui=none    	cterm=none
 hi Cursor	   	 	guibg=#f0e68c    ctermbg=255    guifg=#708090   ctermfg=242    	gui=none    cterm=none
-hi CursorLine					   	 ctermfg=none   guibg=#404040   ctermbg=237    	gui=none    cterm=none
-hi ColorColumn	    guifg=#e4e4e4    ctermfg=254    guibg=#cc4040   ctermbg=252    	gui=none    cterm=none
+hi CursorLine					   	 ctermfg=none   guibg=#404040   ctermbg=none    	gui=none    cterm=none
+hi ColorColumn	    guifg=#e4e4e4    ctermfg=254    guibg=#606a74 ctermbg=240 gui=none    cterm=none
 hi Directory	    guifg=#008b8b    ctermfg=33    	gui=none    	cterm=none
 hi Folded	    	guibg=#262626    ctermbg=none    guifg=#8a8a8a   ctermfg=245    	gui=none    cterm=none
 hi Function	    	guifg=#92e4c0    ctermfg=115    gui=none    	cterm=none
@@ -43,4 +43,3 @@ hi Visual	    	guifg=#f0e68c    ctermfg=255    guibg=#6b8e23   ctermbg=242    	g
 hi MatchParen 		guibg=#30323b    ctermbg=236    guifg=#00afff   ctermfg=39
 hi Pmenu			guibg=#30323b	 ctermbg=237	guifg=#e0e0e0	ctermfg=254		gui=none	cterm=none
 hi TabLineFill	    guibg=#2D2F36    ctermbg=none    guifg=#2D2F36   ctermfg=235    	gui=none    cterm=none
-b

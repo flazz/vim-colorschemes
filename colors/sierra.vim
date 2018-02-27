@@ -1,4 +1,3 @@
-
 "    ███████╗██╗███████╗██████╗ ██████╗  █████╗
 "    ██╔════╝██║██╔════╝██╔══██╗██╔══██╗██╔══██╗
 "    ███████╗██║█████╗  ██████╔╝██████╔╝███████║
@@ -6,91 +5,84 @@
 "    ███████║██║███████╗██║  ██║██║  ██║██║  ██║
 "    ╚══════╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
 
-
-" A Terminal Vim colorscheme
-" Author:       Alessandro Yorba
-" Script URL:   https://github.com/AlessandroYorba/Sierra
-" License:      MIT
-
-"================================================================================
-"COLOR PALETTE:
-"================================================================================
-
-"White:
-"================================================================================
-"Salt           231      #ffffff      http://www.colorhexa.com/ffffff
-"Cloud          254      #e4e4e4      http://www.colorhexa.com/e4e4e4
-
-"Black:
-"================================================================================
-"Abyss          16       #000000      http://www.colorhexa.com/000000
-"Pitch          232      #080808      http://www.colorhexa.com/080808
-"Midnight       233      #121212      http://www.colorhexa.com/121212
-"Twilight       234      #1c1c1c      http://www.colorhexa.com/1c1c1c
-
-"Gray:
-"================================================================================
-"Stars          188      #dfdfdf      http://www.colorhexa.com/dfdfdf
-"Sunset         235      #262626      http://www.colorhexa.com/262626
-"Day            236      #303030      http://www.colorhexa.com/303030
-"Shade          237      #3a3a3a      http://www.colorhexa.com/3a3a3a
-"Ash            238      #444444      http://www.colorhexa.com/444444
-"Pebble         239      #4e4e4e      http://www.colorhexa.com/4e4e4e
-"Graphite       240      #585858      http://www.colorhexa.com/585858
-"Fog            241      #626262      http://www.colorhexa.com/626262
-"Charcoal       242      #6c6c6c      http://www.colorhexa.com/6c6c6c
-"Slate          243      #767676      http://www.colorhexa.com/767676
-"Stone          245      #8a8a8a      http://www.colorhexa.com/8a8a8a
-
-"Red:
-"================================================================================
-"Dusk           95       #875f5f      http://www.colorhexa.com/875f5f
-"Firecracker    131      #af5f5f      http://www.colorhexa.com/af5f5f
-"Evening        138      #af8787      http://www.colorhexa.com/af8787
-"Rose           167      #d75f5f      http://www.colorhexa.com/d75f5f
-"Bellflower     174      #d78787      http://www.colorhexa.com/d78787
-"Cherry         196      #ff0000     http://www.colorhexa.com/ff0000
-"Claret         210      #ff8787      http://www.colorhexa.com/ff8787
-"Daybreak       217      #ffafaf      http://www.colorhexa.com/ffafaf
-
-"Green:
-"================================================================================
-"Cactus         64       #5f8700      http://www.colorhexa.com/5f8700
-"Fern           65       #5f875f      http://www.colorhexa.com/5f875f
-"Sage           107      #87af5f      http://www.colorhexa.com/87af5f
-"Marsh          108      #87af87      http://www.colorhexa.com/87af87
-"Agave          114      #87d787      http://www.colorhexa.com/87d787
-
-"Yellow:
-"================================================================================
-"Flats          144      #afaf87      http://www.colorhexa.com/afaf87
-"Dune           187      #dfdfaf      http://www.colorhexa.com/dfdfaf
-"Firefly        230      #ffffdf      http://www.colorhexa.com/ffffdf
-
-"Cyan:
-"================================================================================
-"Lilac          60       #5f5f87      http://www.colorhexa.com/5f5f87
-"Lake           66       #5f8787      http://www.colorhexa.com/5f8787
-"Oasis          109      #87afaf      http://www.colorhexa.com/87afaf
-"Robin          111      #87afff      http://www.colorhexa.com/87afff
-"Nolana         152      #afd7d7      http://www.colorhexa.com/afd7d7
-
-"Blue:
-"================================================================================
-"Heather        103      #8787af      http://www.colorhexa.com/8787af
-"Azure          110      #87afd7      http://www.colorhexa.com/87afd7
-
-"Purple:
-"================================================================================
-"Lavender       146      #afafd7      http://www.colorhexa.com/afafd7
-
-"Orange:
-"================================================================================
-"Bluebells      130     #af5f00       http://www.colorhexa.com/af5f00
-"Mallow         179     #dfaf5f       http://www.colorhexa.com/dfaf5f
-"Honeystrand    208     #ff8700       http://www.colorhexa.com/ff8700
-
-
+" A Vim colorscheme
+" AUTHOR:       Alessandro Yorba
+" SCRIPT URL:   https://github.com/AlessandroYorba/Sierra
+"
+" UPDATED:      Dec 6, 2017
+" LATEST CHANGES: Brighter Comments for Midnight and Pitch
+"
+" MAINTAINER:            Alessandro Yorba       https://github.com/AlessandroYorba
+" Kaolin For Emacs:      ogdenwebb              https://github.com/ogdenwebb
+" Airline Theme:         Danilo Augusto         https://github.com/danilo-augusto
+"
+" SUPPORTED ENVIRONMENTS:
+" 256 color terminals, Gui versions of vim, and Termguicolors versions of vim
+"
+" INSTALL INSTRUCTIONS:
+" Unix users, place sierra.vim in ~/.vim/colors
+" Windows users, place sierra.vim in  ~\vimfiles\colors
+"
+" SETUP AND CUSTOMIZATION:
+" To enable Sierra as your default colorscheme add the following  to your .vimrc:
+"   colorscheme sierra
+"
+" There are several settings for Sierra that you can enable from within your .vimrc
+" Here are some descriptions and examples on how to enable them:
+"
+"   "Darker Grey Background
+"   let g:sierra_Sunset = 1
+"   colorscheme sierra
+"
+"   "Darkest Grey Background
+"   let g:sierra_Twilight = 1
+"   colorscheme sierra
+"
+"   "Amost Black Background
+"   let g:sierra_Midnight = 1
+"   colorscheme sierra
+"
+"   "Black Background
+"   let g:sierra_Pitch = 1
+"   colorscheme sierra
+"
+"   "Matching Parens are underlined
+"   let g:sierra_Nevada = 1
+"   colorscheme sierra
+"
+" MATCHING TERMINAL:
+" Other themes for sierra: https://github.com/AlessandroYorba/Sierra
+"
+"-------------------------------------|-----------------------------------------
+"   BASIC        HEX                  |      BASIC         HEX                 |
+"-------------------------------------|-----------------------------------------
+"   Foreground   #dfdfaf              |      Selection     #ffffdf             |
+"   Background   #303030              |      Selected Text #dfdfaf             |
+"   Bold         #ffffff              |                                        |
+"   Links        #005cbb              |                                        |
+"-------------------------------------|-----------------------------------------
+"
+"-------------------------------------|-----------------------------------------
+"   CURSOR       HEX                                                           |
+"-------------------------------------|-----------------------------------------
+"   Cursor       #dfdfaf              |                                        |
+"   Cursor Text  #303030              |                                        |
+"-------------------------------------|-----------------------------------------
+"
+"-------------------------------------|-----------------------------------------
+"   NORMAL       HEX          XTERM   |      BRIGHT       HEX          XTERM   |
+"-------------------------------------|-----------------------------------------
+"   Black        #303030      0       |      brBlack      #6c6c6c      8       |
+"   Red          #af5f5f      1       |      brRed        #af5f5f      9       |
+"   Green        #d75f5f      2       |      brGreen      #d75f5f      10      |
+"   Yellow       #afd7d7      3       |      brYellow     #afd7d7      11      |
+"   Blue         #af8787      4       |      brBlue       #af8787      12      |
+"   Magenta      #dfaf87      5       |      brMagenta    #dfaf87      13      |
+"   Cyan         #ffafaf      6       |      brCyan       #ffafaf      14      |
+"   White        #dfdfaf      7       |      brWhite      #dfdfaf      15      |
+"-------------------------------------|-----------------------------------------
+"
+"SIERRA:
 set background=dark
 
 highlight clear
@@ -98,381 +90,236 @@ if exists("syntax_on")
     syntax reset
 endif
 
-
-"================================================================================
-" SET DEFAULT PARAMETERS:
-"================================================================================
-
-
 let g:colors_name="sierra"
-
 
 if !exists("g:sierra_Sunset")
     let g:sierra_Sunset = 0
 endif
 
-
 if !exists("g:sierra_Twilight")
     let g:sierra_Twilight = 0
 endif
-
 
 if !exists("g:sierra_Midnight")
     let g:sierra_Midnight = 0
 endif
 
-
 if !exists("g:sierra_Pitch")
     let g:sierra_Pitch = 0
 endif
-
-
-if !exists("g:sierra_Campfire")
-    let g:sierra_Campfire = 0
-endif
-
-
-if !exists("g:sierra_Clear_Skies")
-    let g:sierra_Clear_Skies = 0
-endif
-
 
 if !exists("g:sierra_Nevada")
     let g:sierra_Nevada = 0
 endif
 
-if !exists("g:sierra_Stargaze")
-    let g:sierra_Stargaze = 0
+"COMMON COLORS AND SETTINGS
+highlight PreProc                guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight Function               guifg=#afd7d7  guibg=NONE     gui=NONE       ctermfg=152    ctermbg=NONE  cterm=NONE
+highlight Identifier             guifg=#87afaf  guibg=NONE     gui=NONE       ctermfg=109    ctermbg=NONE  cterm=NONE
+highlight Statement              guifg=#87afaf  guibg=NONE     gui=NONE       ctermfg=109    ctermbg=NONE  cterm=NONE
+highlight Constant               guifg=#af5f5f  guibg=NONE     gui=NONE       ctermfg=131    ctermbg=NONE  cterm=NONE
+highlight Type                   guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight Label                  guifg=#af5f5f  guibg=NONE     gui=NONE       ctermfg=131    ctermbg=NONE  cterm=NONE
+highlight String                 guifg=#dfafaf  guibg=NONE     gui=NONE       ctermfg=181    ctermbg=NONE  cterm=NONE
+highlight Special                guifg=#af8787  guibg=NONE     gui=NONE       ctermfg=138    ctermbg=NONE  cterm=NONE
+highlight Operator               guifg=#b2b2b2  guibg=NONE     gui=NONE       ctermfg=249    ctermbg=NONE  cterm=NONE
+highlight Title                  guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight Conditional            guifg=#5f8787  guibg=NONE     gui=NONE       ctermfg=66     ctermbg=NONE  cterm=NONE
+highlight StorageClass           guifg=#af8787  guibg=NONE     gui=NONE       ctermfg=138    ctermbg=NONE  cterm=NONE
+highlight htmlStatement          guifg=#afd7d7  guibg=NONE     gui=NONE       ctermfg=152    ctermbg=NONE  cterm=NONE
+highlight htmlItalic             guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight htmlArg                guifg=#d78787  guibg=NONE     gui=NONE       ctermfg=174    ctermbg=NONE  cterm=NONE
+highlight cssTagName             guifg=#afd7d7  guibg=NONE     gui=NONE       ctermfg=152    ctermbg=NONE  cterm=NONE
+highlight cssClassName           guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight cssIdentifier          guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+
+"DIFF
+highlight DiffAdd                guifg=#afafd7  guibg=NONE     gui=reverse    ctermfg=146    ctermbg=NONE  cterm=reverse
+highlight DiffChange             guifg=#5f5f87  guibg=NONE     gui=reverse    ctermfg=60     ctermbg=NONE  cterm=reverse
+highlight DiffText               guifg=#8787af  guibg=NONE     gui=reverse    ctermfg=103    ctermbg=NONE  cterm=reverse
+highlight DiffDelete             guifg=#af5f5f  guibg=NONE     gui=reverse    ctermfg=131    ctermbg=NONE  cterm=reverse
+
+"SPELLING
+highlight SpellBad               guifg=#ff0000  guibg=NONE     gui=undercurl  ctermfg=196    ctermbg=NONE  cterm=undercurl
+highlight SpellLocal             guifg=#5f875f  guibg=NONE     gui=undercurl  ctermfg=65     ctermbg=NONE  cterm=undercurl
+highlight SpellCap               guifg=#87afff  guibg=NONE     gui=undercurl  ctermfg=111    ctermbg=NONE  cterm=undercurl
+highlight SpellRare              guifg=#ff8700  guibg=NONE     gui=undercurl  ctermfg=208    ctermbg=NONE  cterm=undercurl
+
+"WINDOW UI
+highlight MoreMsg                guifg=#dfaf5f  guibg=NONE     gui=NONE       ctermfg=179    ctermbg=NONE  cterm=NONE
+highlight SpecialComment         guifg=#87afaf  guibg=NONE     gui=reverse    ctermfg=109    ctermbg=NONE  cterm=reverse
+highlight VimCommentTitle        guifg=#b2b2b2  guibg=NONE     gui=reverse    ctermfg=249    ctermbg=NONE  cterm=reverse
+highlight Underlined             guifg=#dfaf87  guibg=NONE     gui=NONE       ctermfg=180    ctermbg=NONE  cterm=NONE
+highlight FoldColumn             guifg=#afd7d7  guibg=NONE     gui=NONE       ctermfg=152    ctermbg=NONE  cterm=NONE
+highlight Todo                   guifg=#eeeeee  guibg=#1c1c1c  gui=reverse    ctermfg=255    ctermbg=234   cterm=reverse
+highlight Visual                 guifg=#5f8787  guibg=NONE     gui=reverse    ctermfg=66     ctermbg=NONE  cterm=reverse
+highlight Question               guifg=#dfaf5f  guibg=NONE     gui=NONE       ctermfg=179    ctermbg=NONE  cterm=NONE
+highlight Search                 guifg=#dfdfaf  guibg=NONE     gui=reverse    ctermfg=187    ctermbg=NONE  cterm=reverse
+highlight MatchParen             guifg=#eeeeee  guibg=#875f5f  gui=NONE       ctermfg=255    ctermbg=95    cterm=NONE
+highlight Error                  guifg=#d75f5f  guibg=NONE     gui=reverse    ctermfg=167    ctermbg=NONE  cterm=reverse
+highlight ErrorMsg               guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight WarningMsg             guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight netrwExe               guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167    ctermbg=NONE  cterm=NONE
+highlight Directory              guifg=#af8787  guibg=NONE     gui=NONE       ctermfg=138    ctermbg=NONE  cterm=NONE
+highlight Cursor                 guifg=#000000  guibg=#ffffff  gui=NONE       ctermfg=16     ctermbg=231   cterm=NONE
+highlight CursorLineNr           guifg=#c6c6c6  guibg=NONE     gui=reverse    ctermfg=251    ctermbg=NONE  cterm=reverse
+highlight WildMenu               guifg=#c6c6c6  guibg=NONE     gui=reverse    ctermfg=251    ctermbg=NONE  cterm=reverse
+highlight ModeMsg                guifg=#dfdfdf  guibg=NONE     gui=NONE       ctermfg=188    ctermbg=NONE  cterm=NONE
+highlight SignColumn             guifg=#87af87  guibg=NONE     gui=NONE       ctermfg=108    ctermbg=NONE  cterm=NONE
+
+"DAY:
+if 1
+    "COLORS
+    highlight Normal            guifg=#e4e4e4  guibg=#303030  gui=NONE     ctermfg=254   ctermbg=236   cterm=NONE
+    highlight Comment           guifg=#626262  guibg=NONE     gui=NONE     ctermfg=241   ctermbg=NONE  cterm=NONE
+
+    "WINDOW UI
+	highlight StatusLine        guifg=#eeeeee  guibg=#262626  gui=NONE     ctermfg=255   ctermbg=235   cterm=NONE
+	highlight StatusLineNC      guifg=#767676  guibg=#262626  gui=NONE     ctermfg=243   ctermbg=235   cterm=NONE
+    highlight Pmenu             guifg=#767676  guibg=#3a3a3a  gui=NONE     ctermfg=243   ctermbg=237   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#3a3a3a  guibg=#3a3a3a  gui=NONE     ctermfg=237   ctermbg=237   cterm=NONE
+    highlight PmenuThumb        guifg=#3a3a3a  guibg=#3a3a3a  gui=NONE     ctermfg=237   ctermbg=237   cterm=NONE
+    highlight TabLine           guifg=#767676  guibg=#262626  gui=NONE     ctermfg=243   ctermbg=235   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#262626  gui=NONE     ctermfg=255   ctermbg=235   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#3a3a3a  gui=NONE     ctermfg=NONE  ctermbg=237   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#3a3a3a  gui=NONE     ctermfg=NONE  ctermbg=237   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#3a3a3a  gui=NONE     ctermfg=NONE  ctermbg=237   cterm=NONE
+    highlight Folded            guifg=#626262  guibg=NONE     gui=NONE     ctermfg=241   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#444444  guibg=#303030  gui=NONE     ctermfg=238   ctermbg=236   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#262626  gui=NONE     ctermfg=239   ctermbg=235   cterm=NONE
+    highlight NonText           guifg=#444444  guibg=NONE     gui=NONE     ctermfg=238   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#444444  guibg=NONE     gui=NONE     ctermfg=238   ctermbg=NONE  cterm=NONE
 endif
 
-
-"================================================================================
-" DAY:
-"================================================================================
-
-" Editor Settings:
-hi Normal           ctermfg=254        guifg=#e4e4e4     ctermbg=236      guibg=#303030      cterm=NONE     gui=NONE
-hi LineNr           ctermfg=241        guifg=#626262     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi CursorLineNr     ctermfg=187        guifg=#dfdfaf     ctermbg=235     guibg=#262626         cterm=NONE     gui=NONE
-hi CursorLine       ctermfg=NONE       guifg=NONE        ctermbg=237      guibg=#3a3a3a      cterm=NONE     gui=NONE
-
-" Number Column:
-hi Folded           ctermfg=187        guifg=#dfdfaf     ctermbg=66       guibg=#5f8787      cterm=NONE     gui=NONE
-hi FoldColumn       ctermfg=109        guifg=#87afaf     ctermbg=236      guibg=#303030      cterm=NONE     gui=NONE
-hi SignColumn       ctermfg=108        guifg=#87af87     ctermbg=236      guibg=#303030      cterm=NONE     gui=NONE
-
-
-" WindowTab Delimiters:
-hi TabLineFill      ctermfg=NONE       guifg=NONE        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi ColorColumn      ctermfg=NONE       guifg=NONE        ctermbg=237      guibg=#3a3a3a      cterm=NONE     gui=NONE
-hi VertSplit        ctermfg=237        guifg=#3a3a3a     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi TabLine          ctermfg=243        guifg=#767676     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi TabLineSel       ctermfg=235        guifg=#262626     ctermbg=144      guibg=#afaf87      cterm=NONE     gui=NONE
-
-" File Navigation:
-hi Directory        ctermfg=138       guifg=#af8787      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Search           ctermfg=187       guifg=#dfdfaf      ctermbg=95       guibg=#875f5f      cterm=NONE     gui=NONE
-
-
-" Prompt Status:
-hi Title             ctermfg=174      guifg=#d78787      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi ModeMsg           ctermfg=144      guifg=#afaf87      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi MoreMsg           ctermfg=179      guifg=#dfaf5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Question          ctermfg=179      guifg=#dfaf5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi StatusLine        ctermfg=235      guifg=#262626      ctermbg=144      guibg=#afaf87      cterm=NONE     gui=NONE
-hi StatusLineNC      ctermfg=243      guifg=#767676      ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi WildMenu          ctermfg=187      guifg=#dfdfaf      ctermbg=95       guibg=#875f5f      cterm=NONE     gui=NONE
-
-" Visual Aid:
-hi NonText           ctermfg=243      guifg=#767676      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi SpecialKey        ctermfg=110      guifg=#87afd7      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Underlined        ctermfg=110      guifg=#87afd7      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi WarningMsg        ctermfg=130      guifg=#af5f00      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi MatchParen        ctermfg=233      guifg=#121212      ctermbg=245      guibg=#8a8a8a      cterm=NONE     gui=NONE
-hi Visual            ctermfg=187      guifg=#dfdfaf      ctermbg=95       guibg=#875f5f      cterm=NONE     gui=NONE
-hi Todo              ctermfg=144      guifg=#afaf87      ctermbg=234      guibg=#1c1c1c      cterm=italic   gui=italic
-hi Error             ctermfg=131      guifg=#af5f5f      ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
-hi ErrorMsg          ctermfg=131      guifg=#af5f5f      ctermbg=NONE      guibg=NONE      cterm=NONE  gui=NONE
-
-
-" Variable Types:
-hi Constant          ctermfg=210      guifg=#ff8787      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi String            ctermfg=217      guifg=#ffafaf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Identifier        ctermfg=109      guifg=#87afaf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Function          ctermfg=152      guifg=#afd7d7      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-
-" Language Constructs:
-hi Statement         ctermfg=66       guifg=#5f8787      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Operator          ctermfg=230      guifg=#ffffdf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Comment           ctermfg=241      guifg=#626262      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Special           ctermfg=179      guifg=#dfaf5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-" C Like:
-hi PreProc           ctermfg=167      guifg=#d75f5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi Type              ctermfg=138      guifg=#af8787      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-
-" HTML:
-hi htmlItalic        ctermfg=167      guifg=#d75f5f      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi htmlArg           ctermfg=230      guifg=#ffffdf      ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-
-" Diff:
-hi DiffAdd           ctermfg=234      guifg=#1c1c1c      ctermbg=146      guibg=#afafd7      cterm=NONE     gui=NONE
-hi DiffChange        ctermfg=234      guifg=#1c1c1c      ctermbg=60       guibg=#5f5f87      cterm=NONE     gui=NONE
-hi DiffText          ctermfg=234      guifg=#1c1c1c      ctermbg=103      guibg=#8787af      cterm=NONE     gui=NONE
-hi DiffDelete        ctermfg=234      guifg=#1c1c1c      ctermbg=131      guibg=#af5f5f      cterm=NONE     gui=NONE
-
-" Completion Menu:
-hi Pmenu             ctermfg=236      guifg=#303030      ctermbg=245      guibg=#8a8a8a      cterm=NONE    gui=NONE
-hi PmenuSel          ctermfg=187      guifg=#dfdfaf      ctermbg=95       guibg=#875f5f      cterm=NONE    gui=NONE
-hi PmenuSbar         ctermfg=245    guifg=#8a8a8a        ctermbg=245      guibg=#8a8a8a      cterm=NONE    gui=NONE
-hi PmenuThumb        ctermfg=245     guifg=#8a8a8a       ctermbg=245      guibg=#8a8a8a      cterm=NONE    gui=NONE
-
-
-" Spelling:
-hi SpellBad         ctermfg=196     guifg=#ff0000     ctermbg=NONE     guibg=NONE        cterm=undercurl gui=undercurl
-hi SpellLocal       ctermfg=65      guifg=#5f875f     ctermbg=NONE     guibg=NONE        cterm=undercurl gui=undercurl
-hi SpellCap         ctermfg=111     guifg=#87afff     ctermbg=NONE     guibg=NONE        cterm=undercurl gui=undercurl
-hi SpellRare        ctermfg=208     guifg=#ff8700     ctermbg=NONE     guibg=NONE        cterm=undercurl gui=undercurl
-
-"hi htmlTagName
-"hi htmlTag
-"hi htmlEndTag
-"hi htmlSpecialTagName
-"hi Include
-"hi Define
-"hi Macro
-"hi PreCondit
-"hi StorageClass
-"hi Structure
-"hi Typedef
-"hi SpecialChar
-"hi Tag
-"hi Delimiter
-"hi SpecialComment
-"hi Debug
-"hi Conditional
-"hi Repeat
-"hi Label
-"hi Keyword
-"hi Exception
-"hi StringDelimiter
-"hi Character
-"hi Number
-"hi Boolean
-"hi Float
-"hi Ignore
-"hi VisualNOS
-"hi IncSearch
-"hi Cursor
-"hi CursorColumn
-
-
-"================================================================================
-" SUNSET:
-"================================================================================
+"SUNSET:
 if g:sierra_Sunset
-    " Editor Settings:
-    hi Normal           ctermfg=188        guifg=#dfdfdf     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-    hi CursorLine       ctermfg=NONE       guifg=NONE        ctermbg=236      guibg=#303030      cterm=NONE     gui=NONE
+    "COLORS
+    highlight Normal            guifg=#dfdfdf  guibg=#262626  gui=NONE     ctermfg=188   ctermbg=235   cterm=NONE
+    highlight Comment           guifg=#585858  guibg=NONE     gui=NONE     ctermfg=240   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn       ctermfg=108        guifg=#87af87     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-    hi FoldColumn       ctermfg=109        guifg=#87afaf     ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#1c1c1c  gui=NONE     ctermfg=255   ctermbg=234   cterm=NONE
+    highlight StatusLineNC      guifg=#6c6c6c  guibg=#1c1c1c  gui=NONE     ctermfg=242   ctermbg=234   cterm=NONE
+    highlight Pmenu             guifg=#6c6c6c  guibg=#303030  gui=NONE     ctermfg=242   ctermbg=236   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#303030  guibg=#303030  gui=NONE     ctermfg=236   ctermbg=236   cterm=NONE
+    highlight PmenuThumb        guifg=#303030  guibg=#303030  gui=NONE     ctermfg=236   ctermbg=236   cterm=NONE
+    highlight TabLine           guifg=#6c6c6c  guibg=#1c1c1c  gui=NONE     ctermfg=242   ctermbg=234   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#1c1c1c  gui=NONE     ctermfg=255   ctermbg=234   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#1c1c1c  gui=NONE     ctermfg=NONE  ctermbg=234   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#303030  gui=NONE     ctermfg=NONE  ctermbg=236   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#303030  gui=NONE     ctermfg=NONE  ctermbg=236   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#303030  gui=NONE     ctermfg=NONE  ctermbg=236   cterm=NONE
+    highlight Folded            guifg=#6c6c6c  guibg=NONE     gui=NONE     ctermfg=242   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#3a3a3a  guibg=#262626  gui=NONE     ctermfg=237   ctermbg=235   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#1c1c1c  gui=NONE     ctermfg=239   ctermbg=234   cterm=NONE
+    highlight NonText           guifg=#3a3a3a  guibg=NONE     gui=NONE     ctermfg=237   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#3a3a3a  guibg=NONE     gui=NONE     ctermfg=237   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi ColorColumn      ctermfg=NONE       guifg=NONE        ctermbg=236      guibg=#3a3a3a      cterm=NONE     gui=NONE
-    hi VertSplit        ctermfg=236        guifg=#303030     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-    hi TabLineFill      ctermfg=NONE       guifg=NONE        ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-    hi TabLine          ctermfg=240        guifg=#585858     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-
-    " Prompt Status:
-    hi StatusLineNC     ctermfg=240        guifg=#585858     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-
-    " Visual Aid:
-    hi NonText          ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-    hi Error            ctermfg=131        guifg=#af5f5f     ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
-
-    " Language Constructs:
-    hi Comment          ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-    " Completion Menu:
-    hi Pmenu            ctermfg=235        guifg=#262626     ctermbg=245      guibg=#8a8a8a      cterm=NONE     gui=NONE
-end
-
-
-"================================================================================
-" TWILIGHT:
-"================================================================================
+"TWILIGHT:
 if g:sierra_Twilight
-    " Editor Settings:
-    hi Normal           ctermfg=188        guifg=#dfdfdf     ctermbg=234      guibg=#1c1c1c      cterm=NONE     gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858     ctermbg=233      guibg=#121212      cterm=NONE     gui=NONE
-    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf     ctermbg=233      guibg=#121212      cterm=NONE     gui=NONE
-    hi CursorLine       ctermfg=NONE       guifg=NONE        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
+    "COLORS
+    highlight Normal            guifg=#dfdfdf  guibg=#1c1c1c  gui=NONE     ctermfg=188   ctermbg=234   cterm=NONE
+    highlight Comment           guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn       ctermfg=108        guifg=#87af87     ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi FoldColumn       ctermfg=109        guifg=#87afaf     ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight StatusLineNC      guifg=#626262  guibg=#121212  gui=NONE     ctermfg=241   ctermbg=233   cterm=NONE
+    highlight Pmenu             guifg=#626262  guibg=#262626  gui=NONE     ctermfg=241   ctermbg=235   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#262626  guibg=#262626  gui=NONE     ctermfg=235   ctermbg=235   cterm=NONE
+    highlight PmenuThumb        guifg=#262626  guibg=#262626  gui=NONE     ctermfg=235   ctermbg=235   cterm=NONE
+    highlight TabLine           guifg=#626262  guibg=#121212  gui=NONE     ctermfg=241   ctermbg=233   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#121212  gui=NONE     ctermfg=NONE  ctermbg=233   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight Folded            guifg=#626262  guibg=NONE     gui=NONE     ctermfg=241   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#303030  guibg=#1c1c1c  gui=NONE     ctermfg=236   ctermbg=234   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight NonText           guifg=#303030  guibg=NONE     gui=NONE     ctermfg=236   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#303030  guibg=NONE     gui=NONE     ctermfg=236   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit        ctermfg=236        guifg=#303030     ctermbg=233      guibg=#262626      cterm=NONE    gui=NONE
-    hi ColorColumn      ctermfg=NONE       guifg=NONE        ctermbg=235      guibg=#262626      cterm=NONE    gui=NONE
-    hi TabLineFill      ctermfg=NONE       guifg=NONE        ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi TabLine          ctermfg=240        guifg=#585858     ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-
-    " Prompt Status:
-    hi StatusLineNC     ctermfg=240        guifg=#585858     ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-
-    " Visual Aid:
-    hi NonText          ctermfg=239        guifg=#4e4e4e     ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-    hi Error            ctermfg=131        guifg=#af5f5f     ctermbg=234      guibg=#1c1c1c      cterm=reverse gui=reverse
-
-    " Language Constructs:
-    hi Comment          ctermfg=240        guifg=#585858     ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-
-    " Completion Menu:
-    hi Pmenu            ctermfg=234        guifg=#1c1c1c     ctermbg=245      guibg=#8a8a8a      cterm=NONE    gui=NONE
-end
-
-
-"================================================================================
-" MIDNIGHT:
-"================================================================================
+"MIDNIGHT:
 if g:sierra_Midnight
-    " Editor Settings:
-    hi Normal           ctermfg=188        guifg=#dfdfdf      ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi CursorLine       ctermfg=NONE       guifg=NONE         ctermbg=234     guibg=#1c1c1c      cterm=NONE    gui=NONE
+    "COLORS
+    highlight Normal            guifg=#dfdfdf  guibg=#121212  gui=NONE     ctermfg=188   ctermbg=233   cterm=NONE
+    highlight Comment           guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn       ctermfg=108        guifg=#87af87      ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
-    hi FoldColumn       ctermfg=109        guifg=#87afaf      ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#1c1c1c  gui=none     ctermfg=255   ctermbg=234   cterm=none
+    highlight StatusLineNC      guifg=#585858  guibg=#1c1c1c  gui=none     ctermfg=240   ctermbg=234   cterm=none
+    highlight Pmenu             guifg=#585858  guibg=#1c1c1c  gui=none     ctermfg=240   ctermbg=234   cterm=none
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=none     ctermfg=255   ctermbg=66   cterm=none
+    highlight PmenuSbar         guifg=#1c1c1c  guibg=#1c1c1c  gui=NONE     ctermfg=234   ctermbg=234   cterm=NONE
+    highlight PmenuThumb        guifg=#1c1c1c  guibg=#1c1c1c  gui=NONE     ctermfg=234   ctermbg=234   cterm=NONE
+    highlight TabLine           guifg=#585858  guibg=#1c1c1c  gui=none     ctermfg=240   ctermbg=234   cterm=none
+    highlight TabLineSel        guifg=#eeeeee  guibg=#1c1c1c  gui=none     ctermfg=255   ctermbg=234   cterm=none
+    highlight TabLineFill       guifg=NONE     guibg=#1c1c1c  gui=NONE     ctermfg=NONE  ctermbg=234   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#080808  gui=NONE     ctermfg=NONE  ctermbg=232   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#080808  gui=NONE     ctermfg=NONE  ctermbg=232   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#080808  gui=NONE     ctermfg=NONE  ctermbg=232   cterm=NONE
+    highlight Folded            guifg=#585858  guibg=NONE     gui=NONE     ctermfg=240   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#262626  guibg=#121212  gui=NONE     ctermfg=235   ctermbg=233   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#1c1c1c  gui=none     ctermfg=239   ctermbg=234   cterm=none
+    highlight NonText           guifg=#262626  guibg=NONE     gui=NONE     ctermfg=235   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#262626  guibg=NONE     gui=NONE     ctermfg=235   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit        ctermfg=234        guifg=#1c1c1c      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi ColorColumn      ctermfg=NONE       guifg=NONE         ctermbg=234     guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi TabLineFill      ctermfg=NONE       guifg=NONE         ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi TabLine          ctermfg=240        guifg=#585858     ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-
-    " Prompt Status:
-    hi StatusLineNC     ctermfg=240       guifg=#585858         ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-
-    " Visual Aid:
-    hi NonText          ctermfg=238        guifg=#444444      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
-    hi Error            ctermfg=131        guifg=#af5f5f      ctermbg=233     guibg=#121212      cterm=reverse gui=reverse
-
-    " Language Constructs:
-    hi Comment          ctermfg=240        guifg=#585858      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
-
-    " Completion Menu:
-    hi Pmenu            ctermfg=233        guifg=#121212      ctermbg=245     guibg=#8a8a8a      cterm=NONE    gui=NONE
-end
-
-
-"--------------------------------------------------------------------
-" PITCH:
-"--------------------------------------------------------------------
+"PITCH:
 if g:sierra_Pitch
-    " Editor Settings:
-    hi Normal           ctermfg=188        guifg=#dfdfdf      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi LineNr           ctermfg=240        guifg=#585858      ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-    hi CursorLineNr     ctermfg=187        guifg=#dfdfaf      ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-    hi CursorLine       ctermfg=NONE       guifg=NONE         ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
+    "COLORS
+    highlight Normal            guifg=#dfdfdf  guibg=#080808  gui=NONE     ctermfg=188   ctermbg=232   cterm=NONE
+    highlight Comment           guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn       ctermfg=108        guifg=#87af87      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
-    hi FoldColumn       ctermfg=109        guifg=#87afaf      ctermbg=232     guibg=#080808      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight StatusLineNC      guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight Pmenu             guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#121212  guibg=#121212  gui=NONE     ctermfg=233   ctermbg=233   cterm=NONE
+    highlight PmenuThumb        guifg=#121212  guibg=#121212  gui=NONE     ctermfg=233   ctermbg=233   cterm=NONE
+    highlight TabLine           guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#121212  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#000000  gui=NONE     ctermfg=NONE  ctermbg=16    cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#000000  gui=NONE     ctermfg=NONE  ctermbg=16    cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#000000  gui=NONE     ctermfg=NONE  ctermbg=16    cterm=NONE
+    highlight Folded            guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#1c1c1c  guibg=#080808  gui=NONE     ctermfg=234   ctermbg=232   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight NonText           guifg=#1c1c1c  guibg=NONE     gui=NONE     ctermfg=234   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#1c1c1c  guibg=NONE     gui=NONE     ctermfg=234   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit        ctermfg=234         guifg=#1c1c1c     ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-    hi ColorColumn      ctermfg=NONE        guifg=NONE        ctermbg=233     guibg=#121212      cterm=NONE    gui=NONE
-    hi TabLineFill      ctermfg=NONE        guifg=NONE        ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-    hi TabLine          ctermfg=240         guifg=#585858     ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-
-    " Prompt Status:
-    hi StatusLineNC     ctermfg=240         guifg=#585858     ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-
-    " Visual Aid:
-    hi NonText          ctermfg=238        guifg=#444444      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
-    hi Error            ctermfg=131         guifg=#af5f5f     ctermbg=16      guibg=#000000      cterm=reverse gui=reverse
-
-    " Language Constructs:
-    hi Comment          ctermfg=240        guifg=#585858      ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
-
-    " Completion Menu:
-    hi Pmenu            ctermfg=16          guifg=#000000     ctermbg=245     guibg=#8a8a8a      cterm=NONE    gui=NONE
-end
-
-
-"================================================================================
-" NEVADA:
-"================================================================================
+"NEVADA:
 if g:sierra_Nevada
-    " Visual Aid:
-    hi MatchParen       ctermfg=231         guifg=#ffffff     ctermbg=16      guibg=#080808      cterm=underline gui=underline
-end
+    "WINDOW UI
+    highlight MatchParen        guifg=#ffffff  guibg=#000000  gui=underline  ctermfg=231  ctermbg=16  cterm=underline
+endif
 
-"================================================================================
-" CLEAR SKIES:
-"================================================================================
-if g:sierra_Clear_Skies
-    " Editor Settings:
-    hi CursorLine       ctermfg=NONE        guifg=NONE        ctermbg=NONE    guibg=NONE        cterm=NONE gui=NONE
-end
-
-"================================================================================
-" STARGAZE:
-"================================================================================
-if g:sierra_Stargaze
-    "TODO
-end
-
-"================================================================================
-" CAMPFIRE:
-"================================================================================
-if g:sierra_Campfire
-    let sierra_Hour = strftime("%H")
-
-    "Day: 7am - 5pm
-    if 7 <= sierra_Hour && sierra_Hour < 17
-        let g:sierra_Sunset = 0
-        let g:sierra_Twilight = 0
-        let g:sierra_Midnight = 0
-        let g:sierra_Pitch = 0
-
-    "Sunset: 5pm - 7pm
-    elseif 17 <= sierra_Hour && sierra_Hour < 19
-        let g:sierra_Sunset = 1
-        let g:sierra_Twilight = 0
-        let g:sierra_Midnight = 0
-        let g:sierra_Pitch = 0
-
-    "Twilight: 7pm - 9pm
-    elseif 19 <= sierra_Hour && sierra_Hour < 21
-        let g:sierra_Sunset = 0
-        let g:sierra_Twilight = 1
-        let g:sierra_Midnight = 0
-        let g:sierra_Pitch = 0
-
-    "Midnight: 9pm - 12am
-    elseif 21 <= sierra_Hour && sierra_Hour < 24
-        let g:sierra_Sunset = 0
-        let g:sierra_Twilight = 0
-        let g:sierra_Midnight = 1
-        let g:sierra_Pitch = 0
-
-    "Pitch: 12am - 7am
-    else
-        let g:sierra_Sunset = 0
-        let g:sierra_Twilight = 0
-        let g:sierra_Midnight = 0
-        let g:sierra_Pitch = 1
-
-    endif
-end
+" LICENSE:
+" Copyright (c) 2017 Alessandro Yorba
+"
+" Permission is hereby granted, free of charge, to any person obtaining a copy
+" of this software and associated documentation files (the "Software"), to deal
+" in the Software without restriction, including without limitation the rights
+" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+" copies of the Software, and to permit persons to whom the Software is
+" furnished to do so, subject to the following conditions:
+"
+" The above copyright notice and this permission notice shall be included in
+" all copies or substantial portions of the Software.
+"
+" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+" THE SOFTWARE.

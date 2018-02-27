@@ -45,7 +45,7 @@ hi Identifier guifg=#5bc4bf guibg=NONE guisp=NONE gui=NONE ctermfg=80 ctermbg=NO
 hi SpecialChar guifg=#f99a15 guibg=NONE guisp=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
 hi Conditional guifg=#9e70c9 guibg=NONE guisp=NONE gui=NONE ctermfg=140 ctermbg=NONE cterm=NONE
 hi StorageClass guifg=#9e70c9 guibg=NONE guisp=NONE gui=NONE ctermfg=140 ctermbg=NONE cterm=NONE
-hi Todo guifg=#000000 guibg=#5bc4bf guisp=#5bc4bf gui=NONE ctermfg=NONE ctermbg=80 cterm=NONE
+hi Todo guifg=#5bc4bf guibg=#1b1825 guisp=#5bc4bf gui=NONE ctermfg=NONE ctermbg=80 cterm=NONE
 hi Special guifg=#f99a15 guibg=NONE guisp=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#7f7f7f guibg=NONE guisp=NONE gui=NONE ctermfg=8 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=NONE guibg=#303030 guisp=#303030 gui=bold ctermfg=NONE ctermbg=236 cterm=bold

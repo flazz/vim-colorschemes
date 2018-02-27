@@ -1,5 +1,5 @@
 " sprinkles - a vim colorscheme with a configurable color palette
-" Maintainer: Alex Griffin <alex@alexjgriffin.com>
+" Maintainer: Alex Griffin <a@ajgrf.com>
 " Version:    0.2.0-pre
 " License:    This file is placed under an ISC-style license. See the included
 "             LICENSE file for details.
@@ -131,11 +131,8 @@ let s:color_indices = [
 
 " Standard Syntax Highlighting Groups {{{
 
-if has("gui_running")
-  call s:Style("Normal", s:text, s:background, "")
-else
-  call s:Style("Normal", "", "", "")
-endif
+execute "highlight Normal ctermfg=NONE ctermbg=NONE cterm=NONE guifg=" .
+  \ s:text . " guibg=" . s:background . " gui=NONE"
 
 ""           HIGHLIGHT GROUP   TEXT       BACKGROUND ATTRIBUTES
 call s:Style("Constant",       "",        "",        "")
@@ -152,6 +149,7 @@ call s:Style("Underlined",     "",        "",        "underline")
 call s:Style("Error",          s:white,   s:red,     "bold")
 call s:Style("Todo",           s:black,   s:yellow,  "")
 call s:Style("MatchParen",     "",        s:cyan,    "")
+call s:Style("Delimiter",      "",        "",        "")
 
 " }}}
 
@@ -163,59 +161,56 @@ call s:Style("javascriptFunction",   "",  "",        "bold")
 call s:Style("javascriptIdentifier", "",  "",        "bold")
 call s:Style("luaFunction",    "",        "",        "bold")
 call s:Style("phpDefine",      "",        "",        "bold")
+call s:Style("phpVarSelector", s:text,    "",        "")
 call s:Style("rubyDefine",     "",        "",        "bold")
-
-" this might be a bit too invasive, but for some reason phpVarSelector doesn't
-" respond to normal styling
-highlight link phpVarSelector phpIdentifier
 
 " }}}
 
 " Vim UI Highlight Groups {{{
 
 ""           HIGHLIGHT GROUP   TEXT       BACKGROUND ATTRIBUTES
-call s:Style("NonText",        s:cyan,    "",        "")
-call s:Style("SpecialKey",     s:cyan,    "",        "")
-call s:Style("LineNr",         s:cyan,    "",        "")
-call s:Style("CursorLineNr",   s:cyan,    "",        "")
-call s:Style("ErrorMsg",       s:white,   s:red,     "bold")
-call s:Style("MoreMsg",        s:cyan,    "",        "")
-call s:Style("ModeMsg",        "",        "",        "bold")
-call s:Style("Question",       s:cyan,    "",        "")
-call s:Style("Title",          s:magenta, "",        "")
-call s:Style("WarningMsg",     s:red,     "",        "")
-call s:Style("Cursor",         "",        "",        "reverse")
-call s:Style("lCursor",        "",        "",        "reverse")
-call s:Style("Visual",         "",        "",        "reverse")
-call s:Style("VisualNOS",      "",        "",        "bold,underline")
-call s:Style("TabLine",        "",        "",        "")
-call s:Style("TabLineSel",     s:cyan,    "",        "")
-call s:Style("TabLineFill",    "",        "",        "")
-call s:Style("ColorColumn",    "",        s:red,     "")
-call s:Style("CursorColumn",   "",        "",        "reverse")
-call s:Style("CursorLine",     "",        "",        "underline")
-call s:Style("VertSplit",      "",        "",        "reverse")
-call s:Style("StatusLine",     "",        "",        "reverse,bold")
-call s:Style("StatusLineNC",   "",        "",        "reverse")
-call s:Style("WildMenu",       s:white,   s:magenta, "bold")
-call s:Style("Search",         s:black,   s:yellow,  "")
-call s:Style("IncSearch",      s:black,   s:cyan,    "")
-call s:Style("Directory",      s:blue,    "",        "bold")
-call s:Style("DiffAdd",        s:green,   "",        "")
-call s:Style("DiffDelete",     s:red,     "",        "bold")
-call s:Style("DiffChange",     s:magenta, "",        "")
-call s:Style("DiffText",       s:magenta, "",        "bold")
-call s:Style("Folded",         s:cyan,    "",        "")
-call s:Style("FoldColumn",     s:cyan,    "",        "")
-call s:Style("SignColumn",     s:cyan,    "",        "")
-call s:Style("Pmenu",          s:white,   s:magenta, "")
-call s:Style("PmenuSel",       "",        "",        "reverse")
-call s:Style("PmenuSbar",      "",        s:white,   "")
-call s:Style("PmenuThumb",     "",        s:black,   "")
-call s:Style("SpellBad",       "",        s:red,     "")
-call s:Style("SpellCap",       "",        s:green,   "")
-call s:Style("SpellRare",      "",        s:green,   "")
-call s:Style("SpellLocal",     "",        s:green,   "")
+call s:Style("NonText",        s:cyan,    "",           "")
+call s:Style("SpecialKey",     s:cyan,    "",           "")
+call s:Style("LineNr",         s:cyan,    "",           "")
+call s:Style("CursorLineNr",   s:cyan,    "",           "")
+call s:Style("ErrorMsg",       s:white,   s:red,        "bold")
+call s:Style("MoreMsg",        s:cyan,    "",           "")
+call s:Style("ModeMsg",        "",        "",           "bold")
+call s:Style("Question",       s:cyan,    "",           "")
+call s:Style("Title",          s:magenta, "",           "")
+call s:Style("WarningMsg",     s:red,     "",           "")
+call s:Style("Cursor",         s:text,    s:background, "reverse")
+call s:Style("lCursor",        s:text,    s:background, "reverse")
+call s:Style("Visual",         "",        "",           "reverse")
+call s:Style("VisualNOS",      "",        "",           "bold,underline")
+call s:Style("TabLine",        "",        "",           "")
+call s:Style("TabLineSel",     s:cyan,    "",           "")
+call s:Style("TabLineFill",    "",        "",           "")
+call s:Style("ColorColumn",    "",        s:red,        "")
+call s:Style("CursorColumn",   "",        "",           "reverse")
+call s:Style("CursorLine",     "",        "",           "underline")
+call s:Style("VertSplit",      "",        "",           "reverse")
+call s:Style("StatusLine",     "",        "",           "reverse,bold")
+call s:Style("StatusLineNC",   "",        "",           "reverse")
+call s:Style("WildMenu",       s:white,   s:magenta,    "bold")
+call s:Style("Search",         s:black,   s:yellow,     "")
+call s:Style("IncSearch",      s:black,   s:cyan,       "")
+call s:Style("Directory",      s:blue,    "",           "bold")
+call s:Style("DiffAdd",        s:green,   "",           "")
+call s:Style("DiffDelete",     s:red,     "",           "bold")
+call s:Style("DiffChange",     s:magenta, "",           "")
+call s:Style("DiffText",       s:magenta, "",           "bold")
+call s:Style("Folded",         s:cyan,    "",           "")
+call s:Style("FoldColumn",     s:cyan,    "",           "")
+call s:Style("SignColumn",     s:cyan,    "",           "")
+call s:Style("Pmenu",          s:white,   s:magenta,    "")
+call s:Style("PmenuSel",       "",        "",           "reverse")
+call s:Style("PmenuSbar",      "",        s:white,      "")
+call s:Style("PmenuThumb",     "",        s:black,      "")
+call s:Style("SpellBad",       "",        s:red,        "")
+call s:Style("SpellCap",       "",        s:green,      "")
+call s:Style("SpellRare",      "",        s:green,      "")
+call s:Style("SpellLocal",     "",        s:green,      "")
 
 " Purposefully left unset: Conceal
 

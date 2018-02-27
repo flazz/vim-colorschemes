@@ -27,6 +27,7 @@ let s:diff_red = "ff9999"
 let s:diff_green = "99ff99"
 let s:diff_yellow = "ffff99"
 let s:diff_aqua = "9999ff"
+let s:lcs = "C7BFBB"
 
 
 set background=light
@@ -246,7 +247,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " Vim Highlighting
     call <SID>X("Normal", s:foreground, s:background, "none")
     call <SID>X("LineNr", s:comment, "", "none")
-    call <SID>X("NonText", s:foreground, "", "none")
+    call <SID>X("NonText", s:lcs, "", "none")
+    call <SID>X("Whitespace", s:lcs, "", "none")
     call <SID>X("SpecialKey", s:blue, "", "none")
     call <SID>X("Search", s:foreground, s:selection, "none")
     call <SID>X("TabLine", s:foreground, s:background, "reverse")

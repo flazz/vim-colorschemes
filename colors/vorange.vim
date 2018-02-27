@@ -188,7 +188,7 @@ call s:HL('FoldColumn', s:muted, s:bg)
 " Character under cursor
 call s:HL('Cursor', s:none, s:none, s:inverse)
 " Visual mode cursor, selection
-hi! link vCursor Cursor
+call s:HL('vCursor', s:none, s:none, s:underline)
 " Input moder cursor
 hi! link iCursor Cursor
 " Language mapping cursor

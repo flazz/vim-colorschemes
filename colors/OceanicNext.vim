@@ -1,186 +1,279 @@
 " ===============================================================
 " OceanicNext
-" 
-" URL: 
 " Author: Mike Hartington
-" License: Apache
-" Last Change: 2016/11/03 14:38
 " ===============================================================
 
-let g:colors_name="OceanicNext"
-hi clear
-if exists("syntax_on")
-  syntax reset
-endif
-set background=dark
+" {{{ Setup
+  set background=dark
+  hi clear
+  if exists("syntax_on")
+    syntax reset
+  endif
+  let g:colors_name="OceanicNext"
+" }}}
+" {{{ Italics
+  let g:oceanic_next_terminal_italic = get(g:, 'oceanic_next_terminal_italic', 0)
+  let s:italic = ""
+  if g:oceanic_next_terminal_italic == 1
+    let s:italic = "italic"
+  endif
+"}}}
+" {{{ Bold
+  let g:oceanic_next_terminal_bold = get(g:, 'oceanic_next_terminal_bold', 0)
+  let s:bold = ""
+  if g:oceanic_next_terminal_bold == 1
+   let s:bold = "bold"
+  endif
+"}}}
+" {{{ Colors
+  let s:base00=['#1b2b34', '235']
+  let s:base01=['#343d46', '237']
+  let s:base02=['#4f5b66', '240']
+  let s:base03=['#65737e', '243']
+  let s:base04=['#a7adba', '145']
+  let s:base05=['#c0c5ce', '251']
+  let s:base06=['#cdd3de', '252']
+  let s:base07=['#d8dee9', '253']
+  let s:base08=['#ec5f67', '203']
+  let s:base09=['#f99157', '209']
+  let s:base0A=['#fac863', '221']
+  let s:base0B=['#99c794', '114']
+  let s:base0C=['#62b3b2', '73']
+  let s:base0D=['#6699cc', '68']
+  let s:base0E=['#c594c5', '176']
+  let s:base0F=['#ab7967', '137']
+  let s:base10=['#ffffff', '15']
+  let s:none=['NONE', 'NONE']
 
-hi Bold gui=bold cterm=bold
-hi Debug guifg=#ec5f67 ctermfg=203
-hi Directory guifg=#6699cc ctermfg=68
-hi ErrorMsg guifg=#ec5f67 ctermfg=203 guibg=#1b2b34 ctermbg=235
-hi Exception guifg=#ec5f67 ctermfg=203
-hi FoldColumn guibg=#343d46 ctermbg=237
-hi Folded guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237
-hi IncSearch guifg=#343d46 ctermfg=237 guibg=#f99157 ctermbg=209
-hi Italic gui=italic cterm=italic
-hi Macro guifg=#ec5f67 ctermfg=203
-hi MatchParen guifg=#c0c5ce ctermfg=251 guibg=#65737e ctermbg=243
-hi ModeMsg guifg=#99c794 ctermfg=114
-hi MoreMsg guifg=#99c794 ctermfg=114
-hi Question guifg=#6699cc ctermfg=68
-hi Search guifg=#65737e ctermfg=243 guibg=#fac863 ctermbg=221
-hi SpecialKey guifg=#65737e ctermfg=243
-hi TooLong guifg=#ec5f67 ctermfg=203
-hi Underlined guifg=#ec5f67 ctermfg=203
-hi Visual guibg=#4f5b66 ctermbg=240
-hi VisualNOS guifg=#ec5f67 ctermfg=203
-hi WarningMsg guifg=#ec5f67 ctermfg=203
-hi WildMenu guifg=#ffffff ctermfg=15 guibg=#6699cc ctermbg=68
-hi Title guifg=#6699cc ctermfg=68 gui=NONE cterm=NONE
-hi Conceal guifg=#6699cc ctermfg=68 guibg=#1b2b34 ctermbg=235
-hi Cursor guifg=#1b2b34 ctermfg=235 guibg=#c0c5ce ctermbg=251
-hi NonText guifg=#65737e ctermfg=243
-hi Normal guifg=#c0c5ce ctermfg=251 guibg=#1b2b34 ctermbg=235
-hi LineNr guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237
-hi CursorLineNR guifg=#ffffff ctermfg=15 guibg=#ffffff ctermbg=15
-hi SignColumn guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237
-hi StatusLine guifg=#a7adba ctermfg=145 guibg=#4f5b66 ctermbg=240 gui=NONE cterm=NONE
-hi StatusLineNC guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi VertSplit guifg=#4f5b66 ctermfg=240 guibg=#4f5b66 ctermbg=240 gui=NONE cterm=NONE
-hi ColorColumn guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi CursorColumn guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi CursorLine guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi CursorLineNr guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237
-hi PMenu guifg=#a7adba ctermfg=145 guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi PMenuSel guifg=#343d46 ctermfg=237 guibg=#a7adba ctermbg=145
-hi PmenuSbar guibg=#4f5b66 ctermbg=240
-hi PmenuThumb guibg=#d8dee9 ctermbg=253
-hi TabLine guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi TabLineFill guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi TabLineSel guifg=#99c794 ctermfg=114 guibg=#343d46 ctermbg=237 gui=NONE cterm=NONE
-hi Boolean guifg=#f99157 ctermfg=209
-hi Character guifg=#ec5f67 ctermfg=203
-hi Comment guifg=#65737e ctermfg=243 gui=italic cterm=italic
-hi Conditional guifg=#c594c5 ctermfg=176
-hi Constant guifg=#f99157 ctermfg=209
-hi Define guifg=#c594c5 ctermfg=176 gui=NONE cterm=NONE
-hi Delimiter guifg=#ab7967 ctermfg=137
-hi Float guifg=#f99157 ctermfg=209
-hi Function guifg=#6699cc ctermfg=68
-hi Identifier guifg=#ec5f67 ctermfg=203 gui=NONE cterm=NONE
-hi Include guifg=#6699cc ctermfg=68
-hi Keyword guifg=#c594c5 ctermfg=176
-hi Label guifg=#fac863 ctermfg=221
-hi Number guifg=#f99157 ctermfg=209
-hi Operator guifg=#c0c5ce ctermfg=251 gui=NONE cterm=NONE
-hi PreProc guifg=#fac863 ctermfg=221
-hi Repeat guifg=#fac863 ctermfg=221
-hi Special guifg=#62b3b2 ctermfg=73
-hi SpecialChar guifg=#ab7967 ctermfg=137
-hi Statement guifg=#ec5f67 ctermfg=203
-hi StorageClass guifg=#fac863 ctermfg=221
-hi String guifg=#99c794 ctermfg=114
-hi Structure guifg=#c594c5 ctermfg=176
-hi Tag guifg=#fac863 ctermfg=221
-hi Todo guifg=#fac863 ctermfg=221 guibg=#343d46 ctermbg=237
-hi Type guifg=#fac863 ctermfg=221 gui=NONE cterm=NONE
-hi Typedef guifg=#fac863 ctermfg=221
-hi SpellBad guibg=#1b2b34 ctermbg=235 gui=undercurl cterm=undercurl
-hi SpellLocal guibg=#1b2b34 ctermbg=235 gui=undercurl cterm=undercurl
-hi SpellCap guibg=#1b2b34 ctermbg=235 gui=undercurl cterm=undercurl
-hi SpellRare guibg=#1b2b34 ctermbg=235 gui=undercurl cterm=undercurl
-hi csClass guifg=#fac863 ctermfg=221
-hi csAttribute guifg=#fac863 ctermfg=221
-hi csModifier guifg=#c594c5 ctermfg=176
-hi csType guifg=#ec5f67 ctermfg=203
-hi csUnspecifiedStatement guifg=#6699cc ctermfg=68
-hi csContextualStatement guifg=#c594c5 ctermfg=176
-hi csNewDecleration guifg=#ec5f67 ctermfg=203
-hi cOperator guifg=#62b3b2 ctermfg=73
-hi cPreCondit guifg=#c594c5 ctermfg=176
-hi cssColor guifg=#62b3b2 ctermfg=73
-hi cssBraces guifg=#c0c5ce ctermfg=251
-hi cssClassName guifg=#c594c5 ctermfg=176
-hi DiffAdd guifg=#99c794 ctermfg=114 guibg=#343d46 ctermbg=237
-hi DiffChange guifg=#65737e ctermfg=243 guibg=#343d46 ctermbg=237
-hi DiffDelete guifg=#ec5f67 ctermfg=203 guibg=#343d46 ctermbg=237
-hi DiffText guifg=#6699cc ctermfg=68 guibg=#343d46 ctermbg=237
-hi DiffAdded guifg=#ffffff ctermfg=15 guibg=#99c794 ctermbg=114
-hi DiffFile guifg=#ec5f67 ctermfg=203 guibg=#1b2b34 ctermbg=235
-hi DiffNewFile guifg=#99c794 ctermfg=114 guibg=#1b2b34 ctermbg=235
-hi DiffLine guifg=#6699cc ctermfg=68 guibg=#1b2b34 ctermbg=235
-hi DiffRemoved guifg=#ffffff ctermfg=15 guibg=#ec5f67 ctermbg=203
-hi gitCommitOverflow guifg=#ec5f67 ctermfg=203
-hi gitCommitSummary guifg=#99c794 ctermfg=114
-hi htmlBold guifg=#fac863 ctermfg=221
-hi htmlItalic guifg=#c594c5 ctermfg=176
-hi xmlTag guifg=#62b3b2 ctermfg=73 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi xmlEndTag guifg=#c0c5ce ctermfg=251 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi htmlTag guifg=#62b3b2 ctermfg=73
-hi htmlEndTag guifg=#62b3b2 ctermfg=73
-hi htmlArg guifg=#fac863 ctermfg=221 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi htmlTagName guifg=#d8dee9 ctermfg=253
-hi javaScript guifg=#c0c5ce ctermfg=251
-hi javaScriptNumber guifg=#f99157 ctermfg=209
-hi javaScriptBraces guifg=#c0c5ce ctermfg=251
-hi markdownCode guifg=#99c794 ctermfg=114
-hi markdownCodeBlock guifg=#99c794 ctermfg=114
-hi markdownHeadingDelimiter guifg=#6699cc ctermfg=68
-hi markdownItalic guifg=#c594c5 ctermfg=176 gui=italic cterm=italic
-hi markdownBold guifg=#fac863 ctermfg=221 gui=bold cterm=bold
-hi markdownCodeDelimiter guifg=#ab7967 ctermfg=137 gui=italic cterm=italic
-hi markdownError guifg=#c0c5ce ctermfg=251 guibg=#1b2b34 ctermbg=235
-hi NeomakeErrorSign guifg=#ec5f67 ctermfg=203 guibg=#343d46 ctermbg=237
-hi NeomakeWarningSign guifg=#fac863 ctermfg=221 guibg=#343d46 ctermbg=237 gui=bold cterm=bold
-hi NeomakeInfoSign guifg=#ffffff ctermfg=15 guibg=#343d46 ctermbg=237
-hi NeomakeError guifg=#ec5f67 ctermfg=203 gui=undercurl cterm=undercurl
-hi NeomakeWarning guifg=#ec5f67 ctermfg=203 gui=undercurl cterm=undercurl
-hi NERDTreeExecFile guifg=#c0c5ce ctermfg=251
-hi NERDTreeDirSlash guifg=#6699cc ctermfg=68
-hi NERDTreeOpenable guifg=#c0c5ce ctermfg=251 gui=bold cterm=bold
-hi phpComparison guifg=#c0c5ce ctermfg=251
-hi phpParent guifg=#c0c5ce ctermfg=251
-hi phpMemberSelector guifg=#c0c5ce ctermfg=251
-hi pythonRepeat guifg=#c594c5 ctermfg=176
-hi pythonOperator guifg=#c594c5 ctermfg=176
-hi rubyConstant guifg=#fac863 ctermfg=221
-hi rubySymbol guifg=#99c794 ctermfg=114
-hi rubyAttribute guifg=#6699cc ctermfg=68
-hi rubyInterpolation guifg=#99c794 ctermfg=114
-hi rubyInterpolationDelimiter guifg=#ab7967 ctermfg=137
-hi rubyStringDelimiter guifg=#99c794 ctermfg=114
-hi rubyRegexp guifg=#62b3b2 ctermfg=73
-hi sassidChar guifg=#ec5f67 ctermfg=203
-hi sassClassChar guifg=#f99157 ctermfg=209
-hi sassInclude guifg=#c594c5 ctermfg=176
-hi sassMixing guifg=#c594c5 ctermfg=176
-hi sassMixinName guifg=#6699cc ctermfg=68
-hi GitGutterAdd guifg=#99c794 ctermfg=114 guibg=#343d46 ctermbg=237
-hi GitGutterChange guifg=#6699cc ctermfg=68 guibg=#343d46 ctermbg=237
-hi GitGutterDelete guifg=#ec5f67 ctermfg=203 guibg=#343d46 ctermbg=237
-hi GitGutterChangeDelete guifg=#c594c5 ctermfg=176 guibg=#343d46 ctermbg=237
-hi xmlTagName guifg=#c0c5ce ctermfg=251 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+" }}}
+" {{{ Highlight function
+function! <sid>hi(group, fg, bg, attr, attrsp)
+  " fg, bg, attr, attrsp
+  if !empty(a:fg)
+    exec "hi " . a:group . " guifg=" .  a:fg[0]
+    exec "hi " . a:group . " ctermfg=" . a:fg[1]
+  endif
+  if !empty(a:bg)
+    exec "hi " . a:group . " guibg=" .  a:bg[0]
+    exec "hi " . a:group . " ctermbg=" . a:bg[1]
+  endif
+  if a:attr != ""
+    exec "hi " . a:group . " gui=" .   a:attr
+    exec "hi " . a:group . " cterm=" . a:attr
+  endif
+  if !empty(a:attrsp)
+    exec "hi " . a:group . " guisp=" . a:attrsp[0]
+  endif
+endfunction
+" }}}
+" {{{ call <sid>:hi(group, fg, bg, gui, guisp)
+call <sid>hi('Bold',                       '',       '',       'bold',      '')
+call <sid>hi('Debug',                      s:base08, '',       '',          '')
+call <sid>hi('Directory',                  s:base0D, '',       '',          '')
+call <sid>hi('ErrorMsg',                   s:base08, s:base00, '',          '')
+call <sid>hi('Exception',                  s:base08, '',       '',          '')
+call <sid>hi('FoldColumn',                 s:base0D, s:base00, '',          '')
+call <sid>hi('Folded',                     s:base03, s:base01, s:italic,    '')
+call <sid>hi('IncSearch',                  s:base01, s:base09, '',          '')
+call <sid>hi('Italic',                     '',       '',       s:italic,    '')
 
-let g:terminal_color_0 = "#1b2b34"
-let g:terminal_color_1 = "#ec5f67"
-let g:terminal_color_2 = "#99c794"
-let g:terminal_color_3 = "#fac863"
-let g:terminal_color_4 = "#6699cc"
-let g:terminal_color_5 = "#c594c5"
-let g:terminal_color_6 = "#62b3b2"
-let g:terminal_color_7 = "#d8dee9"
-let g:terminal_color_8 = "#65737e"
-let g:terminal_color_9 = "#ec5f67"
-let g:terminal_color_10 = "#343d46"
-let g:terminal_color_11 = "#4f5b66"
-let g:terminal_color_12 = "#a7adba"
-let g:terminal_color_13 = "#c0c5ce"
-let g:terminal_color_14 = "#ab7967"
-let g:terminal_color_15 = "#d8dee9"
-let g:terminal_color_background = "#1b2b34"
-let g:terminal_color_foreground = "#d8dee9"
+call <sid>hi('Macro',                      s:base08, '',       '',          '')
+call <sid>hi('MatchParen',                 s:base05, s:base03, '',          '')
+call <sid>hi('ModeMsg',                    s:base0B, '',       '',          '')
+call <sid>hi('MoreMsg',                    s:base0B, '',       '',          '')
+call <sid>hi('Question',                   s:base0D, '',       '',          '')
+call <sid>hi('Search',                     s:base03, s:base0A, '',          '')
+call <sid>hi('SpecialKey',                 s:base03, '',       '',          '')
+call <sid>hi('TooLong',                    s:base08, '',       '',          '')
+call <sid>hi('Underlined',                 s:base08, '',       '',          '')
+call <sid>hi('Visual',                     '',       s:base02, '',          '')
+call <sid>hi('VisualNOS',                  s:base08, '',       '',          '')
+call <sid>hi('WarningMsg',                 s:base08, '',       '',          '')
+call <sid>hi('WildMenu',                   s:base10, s:base0D, '',          '')
+call <sid>hi('Title',                      s:base0D, '',       '',          '')
+call <sid>hi('Conceal',                    s:base0D, s:base00, '',          '')
+call <sid>hi('Cursor',                     s:base00, s:base05, '',          '')
+call <sid>hi('NonText',                    s:base03, '',       '',          '')
+call <sid>hi('Normal',                     s:base05, s:base00, '',          '')
+call <sid>hi('EndOfBuffer',                s:base05, s:base00, '',          '')
+call <sid>hi('LineNr',                     s:base03, s:base00, '',          '')
+call <sid>hi('SignColumn',                 s:base00, s:base00, '',          '')
+call <sid>hi('StatusLine',                 s:base01, s:base03, '',          '')
+call <sid>hi('StatusLineNC',               s:base03, s:base01, '',          '')
+call <sid>hi('VertSplit',                  s:base00, s:base02, '',          '')
+call <sid>hi('ColorColumn',                '',       s:base01, '',          '')
+call <sid>hi('CursorColumn',               '',       s:base01, '',          '')
+call <sid>hi('CursorLine',                 '',       s:base01, 'NONE',      '')
+call <sid>hi('CursorLineNR',               s:base00, s:base00, '',          '')
+call <sid>hi('CursorLineNr',               s:base03, s:base01, '',          '')
+call <sid>hi('PMenu',                      s:base04, s:base01, '',          '')
+call <sid>hi('PMenuSel',                   s:base10, s:base0D, '',          '')
+call <sid>hi('PmenuSbar',                  '',       s:base02, '',          '')
+call <sid>hi('PmenuThumb',                 '',       s:base07, '',          '')
+call <sid>hi('TabLine',                    s:base03, s:base01, '',          '')
+call <sid>hi('TabLineFill',                s:base03, s:base01, '',          '')
+call <sid>hi('TabLineSel',                 s:base0B, s:base01, '',          '')
+call <sid>hi('helpExample',                s:base0A, '',       '',          '')
+call <sid>hi('helpCommand',                s:base0A, '',       '',          '')
 
-" ===================================
-" Generated by Estilo 1.3.1
-" https://github.com/jacoborus/estilo
-" ===================================
+" Standard syntax highlighting
+call <sid>hi('Boolean',                    s:base09, '',       '',          '')
+call <sid>hi('Character',                  s:base08, '',       '',          '')
+call <sid>hi('Comment',                    s:base03, '',       s:italic,    '')
+call <sid>hi('Conditional',                s:base0E, '',       '',          '')
+call <sid>hi('Constant',                   s:base09, '',       '',          '')
+call <sid>hi('Define',                     s:base0E, '',       '',          '')
+call <sid>hi('Delimiter',                  s:base0F, '',       '',          '')
+call <sid>hi('Float',                      s:base09, '',       '',          '')
+call <sid>hi('Function',                   s:base0D, '',       '',          '')
+call <sid>hi('Identifier',                 s:base08, '',       '',          '')
+call <sid>hi('Include',                    s:base0D, '',       '',          '')
+call <sid>hi('Keyword',                    s:base0E, '',       '',          '')
+call <sid>hi('Label',                      s:base0A, '',       '',          '')
+call <sid>hi('Number',                     s:base09, '',       '',          '')
+call <sid>hi('Operator',                   s:base05, '',       '',          '')
+call <sid>hi('PreProc',                    s:base0A, '',       '',          '')
+call <sid>hi('Repeat',                     s:base0A, '',       '',          '')
+call <sid>hi('Special',                    s:base0C, '',       '',          '')
+call <sid>hi('SpecialChar',                s:base0F, '',       '',          '')
+call <sid>hi('Statement',                  s:base08, '',       '',          '')
+call <sid>hi('StorageClass',               s:base0A, '',       '',          '')
+call <sid>hi('String',                     s:base0B, '',       '',          '')
+call <sid>hi('Structure',                  s:base0E, '',       '',          '')
+call <sid>hi('Tag',                        s:base0A, '',       '',          '')
+call <sid>hi('Todo',                       s:base0A, s:base01, '',          '')
+call <sid>hi('Type',                       s:base0A, '',       '',          '')
+call <sid>hi('Typedef',                    s:base0A, '',       '',          '')
+
+call <sid>hi('SpellBad',                   '',       '',       'undercurl', '')
+call <sid>hi('SpellLocal',                 '',       '',       'undercurl', '')
+call <sid>hi('SpellCap',                   '',       '',       'undercurl', '')
+call <sid>hi('SpellRare',                  '',       '',       'undercurl', '')
+
+call <sid>hi('csClass',                    s:base0A, '',       '',          '')
+call <sid>hi('csAttribute',                s:base0A, '',       '',          '')
+call <sid>hi('csModifier',                 s:base0E, '',       '',          '')
+call <sid>hi('csType',                     s:base08, '',       '',          '')
+call <sid>hi('csUnspecifiedStatement',     s:base0D, '',       '',          '')
+call <sid>hi('csContextualStatement',      s:base0E, '',       '',          '')
+call <sid>hi('csNewDecleration',           s:base08, '',       '',          '')
+call <sid>hi('cOperator',                  s:base0C, '',       '',          '')
+call <sid>hi('cPreCondit',                 s:base0E, '',       '',          '')
+
+call <sid>hi('cssColor',                   s:base0C, '',       '',          '')
+call <sid>hi('cssBraces',                  s:base05, '',       '',          '')
+call <sid>hi('cssClassName',               s:base0E, '',       '',          '')
+
+
+call <sid>hi('DiffAdd',                    s:base0B, s:base01, '',          '')
+call <sid>hi('DiffChange',                 s:base03, s:base01, '',          '')
+call <sid>hi('DiffDelete',                 s:base08, s:base01, '',          '')
+call <sid>hi('DiffText',                   s:base0D, s:base01, '',          '')
+call <sid>hi('DiffAdded',                  s:base10, s:base0B, '',          '')
+call <sid>hi('DiffFile',                   s:base08, s:base00, '',          '')
+call <sid>hi('DiffNewFile',                s:base0B, s:base00, '',          '')
+call <sid>hi('DiffLine',                   s:base0D, s:base00, '',          '')
+call <sid>hi('DiffRemoved',                s:base10, s:base08, '',          '')
+
+call <sid>hi('gitCommitOverflow',          s:base08, '',       '',          '')
+call <sid>hi('gitCommitSummary',           s:base0B, '',       '',          '')
+
+call <sid>hi('htmlBold',                   s:base0A, '',       '',          '')
+call <sid>hi('htmlItalic',                 s:base0E, '',       '',          '')
+call <sid>hi('htmlTag',                    s:base0C, '',       '',          '')
+call <sid>hi('htmlEndTag',                 s:base0C, '',       '',          '')
+call <sid>hi('htmlArg',                    s:base0A, '',       '',          '')
+call <sid>hi('htmlTagName',                s:base07, '',       '',          '')
+
+call <sid>hi('javaScript',                 s:base05, '',       '',          '')
+call <sid>hi('javaScriptNumber',           s:base09, '',       '',          '')
+call <sid>hi('javaScriptBraces',           s:base05, '',       '',          '')
+
+call <sid>hi('markdownCode',               s:base0B, '',       '',          '')
+call <sid>hi('markdownCodeBlock',          s:base0B, '',       '',          '')
+call <sid>hi('markdownHeadingDelimiter',   s:base0D, '',       '',          '')
+call <sid>hi('markdownItalic',             s:base0E, '',       s:italic,    '')
+call <sid>hi('markdownBold',               s:base0A, '',       s:bold,      '')
+call <sid>hi('markdownCodeDelimiter',      s:base0F, '',       s:italic,    '')
+call <sid>hi('markdownError',              s:base05, s:base00, '',          '')
+
+call <sid>hi('NeomakeErrorSign',           s:base08, s:base00, '',          '')
+call <sid>hi('NeomakeWarningSign',         s:base0A, s:base00, '',          '')
+call <sid>hi('NeomakeInfoSign',            s:base10, s:base00, '',          '')
+call <sid>hi('NeomakeError',               s:base08, '',       'undercurl', s:base08)
+call <sid>hi('NeomakeWarning',             s:base08, '',       'undercurl', s:base08)
+
+call <sid>hi('ALEErrorSign',               s:base08, s:base00, s:bold,      '')
+call <sid>hi('ALEWarningSign',             s:base0A, s:base00, s:bold,      '')
+call <sid>hi('ALEInfoSign',                s:base10, s:base00, s:bold,      '')
+
+call <sid>hi('NERDTreeExecFile',           s:base05, '',       '',          '')
+call <sid>hi('NERDTreeDirSlash',           s:base0D, '',       '',          '')
+call <sid>hi('NERDTreeOpenable',           s:base0D, '',       '',          '')
+
+
+
+call <sid>hi('phpComparison',              s:base05, '',       '',          '')
+call <sid>hi('phpParent',                  s:base05, '',       '',          '')
+call <sid>hi('phpMemberSelector',          s:base05, '',       '',          '')
+
+call <sid>hi('pythonRepeat',               s:base0E, '',       '',          '')
+call <sid>hi('pythonOperator',             s:base0E, '',       '',          '')
+
+call <sid>hi('rubyConstant',               s:base0A, '',       '',          '')
+call <sid>hi('rubySymbol',                 s:base0B, '',       '',          '')
+call <sid>hi('rubyAttribute',              s:base0D, '',       '',          '')
+call <sid>hi('rubyInterpolation',          s:base0B, '',       '',          '')
+call <sid>hi('rubyInterpolationDelimiter', s:base0F, '',       '',          '')
+call <sid>hi('rubyStringDelimiter',        s:base0B, '',       '',          '')
+call <sid>hi('rubyRegexp',                 s:base0C, '',       '',          '')
+
+call <sid>hi('sassidChar',                 s:base08, '',       '',          '')
+call <sid>hi('sassClassChar',              s:base09, '',       '',          '')
+call <sid>hi('sassInclude',                s:base0E, '',       '',          '')
+call <sid>hi('sassMixing',                 s:base0E, '',       '',          '')
+call <sid>hi('sassMixinName',              s:base0D, '',       '',          '')
+
+call <sid>hi('vimfilerLeaf',               s:base05, '',       '',          '')
+call <sid>hi('vimfilerNormalFile',         s:base05, s:base00, '',          '')
+call <sid>hi('vimfilerOpenedFile',         s:base0D, '',       '',          '')
+call <sid>hi('vimfilerClosedFile',         s:base0D, '',       '',          '')
+
+call <sid>hi('GitGutterAdd',               s:base0B, s:base00, s:bold,      '')
+call <sid>hi('GitGutterChange',            s:base0D, s:base00, s:bold,      '')
+call <sid>hi('GitGutterDelete',            s:base08, s:base00, s:bold,      '')
+call <sid>hi('GitGutterChangeDelete',      s:base0E, s:base00, s:bold,      '')
+
+
+call <sid>hi('xmlTag',                     s:base0C, '',       '',          '')
+call <sid>hi('xmlTagName',                 s:base05, '',       '',          '')
+call <sid>hi('xmlEndTag',                  s:base0C, '',       '',          '')
+" }}}
+
+let g:terminal_color_0=s:base00[0]
+let g:terminal_color_8=s:base00[0]
+
+let g:terminal_color_1=s:base08[0]
+let g:terminal_color_9=s:base08[0]
+
+let g:terminal_color_2=s:base0B[0]
+let g:terminal_color_10=s:base0B[0]
+
+let g:terminal_color_3=s:base0A[0]
+let g:terminal_color_11=s:base0A[0]
+
+let g:terminal_color_4=s:base0D[0]
+let g:terminal_color_12=s:base0D[0]
+
+let g:terminal_color_5=s:base0E[0]
+let g:terminal_color_13=s:base0E[0]
+
+let g:terminal_color_6=s:base0C[0]
+let g:terminal_color_14=s:base0C[0]
+
+let g:terminal_color_7=s:base05[0]
+let g:terminal_color_15=s:base05[0]
+
+let g:terminal_color_background=s:base00[0]
+let g:terminal_color_foreground=s:base10[0]
+

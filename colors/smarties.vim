@@ -260,7 +260,7 @@ if !exists("g:smarties_background_color")
   let g:smarties_background_color = "151515"
 end
 
-call s:X("Normal","3366ff",g:smarties_background_color,"","Blue","") " keep
+call s:X("Normal","33ffcc",g:smarties_background_color,"","Blue","") " keep
 set background=dark
 
 if !exists("g:smarties_use_lowcolor_black") || g:jellybeans_use_lowcolor_black

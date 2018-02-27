@@ -1,4 +1,4 @@
-" Maintainer:	 Roly Fentanes (https://github.com/fent)
+" Maintainer:	 fent (https://github.com/fent)
 " Version:     1.0
 " Last Change: May 4 2014
 

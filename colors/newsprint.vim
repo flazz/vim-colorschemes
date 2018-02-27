@@ -1,191 +1,175 @@
-" Maintainer:   Sasha Koss
-" Version:      0.9
-" Last Change:  9 Dec 2010
-" Credits:      Vim color scheme "up" originaly based on BusyBee colorscheme create by Patrick J. Anderson
-
-set background=dark
-
-hi clear
-
+" =============================================================================
+" File:        newsprint.vim
+" Description: Vim color scheme file
+" Maintainer:  Byron Ruth
+" =============================================================================
+set background=light
+highlight clear
 if exists("syntax_on")
   syntax reset
 endif
+let colors_name = "newsprint"
 
-let colors_name = "up"
+hi Normal       guifg=#333333          guibg=#EEEEEE   gui=NONE
+hi CursorLine   guifg=NONE             guibg=#DDDDDD   gui=NONE
+hi CursorColumn guifg=NONE             guibg=#E5E5E5   gui=NONE
+hi LineNr       guifg=#AAAAAA          guibg=NONE      gui=NONE
+hi Statement    guifg=#595959          guibg=NONE      gui=bold
+hi Function     guifg=#111111          guibg=NONE      gui=bold
+hi String       guifg=#7C7C7C          guibg=NONE      gui=NONE
+hi Type         guifg=#111111          guibg=NONE      gui=bold
+hi Conditional  guifg=#878787          guibg=NONE      gui=bold
+hi Todo         guifg=#A42E2E          guibg=#FFDDDD   gui=underline
+hi Comment      guifg=#888888          guibg=NONE      gui=NONE
+hi PmenuSel     guifg=#FFFFFF          guibg=#565655   gui=bold
+hi Special      guifg=#797A7A          guibg=NONE      gui=NONE
+hi Identifier   guifg=#111111          guibg=NONE      gui=bold
+hi Keyword      guifg=#999999          guibg=NONE      gui=bold
+hi PreProc      guifg=#949494          guibg=NONE      gui=bold
+hi Include      guifg=#1F1F1F          guibg=NONE      gui=NONE
+hi Constant     guifg=#7C7C7C          guibg=#DDDDDD   gui=bold
+hi Delimiter    guifg=#7C7C7C          guibg=NONE      gui=NONE
 
-"————————————————+———————————————————————————————————————————————+———+———————————————————————————————————————————————"
-"                | GUI                                           |   | TERMINAL                                      "
-"      TYPE      +———————————————+———————————————+———————————————+———+———————————————+———————————————+———————————————"
-"                | foreground    | background    |               |   | foreground    | background    |               "
-"————————————————+———————————————+———————————————+———————————————+———+———————————————+———————————————+———————————————"
+hi Visual       guifg=#000000          guibg=#AEAEAE   gui=NONE
+hi ColorColumn  guifg=NONE             guibg=#DDDDDD
+hi Cursor       guifg=bg               guibg=fg        gui=NONE
+hi CursorIM     guifg=bg               guibg=fg        gui=NONE
+hi lCursor      guifg=bg               guibg=fg        gui=NONE
+hi iCursor			                   guibg=fg
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Guideline
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+hi DiffAdd      guifg=#FF33FF          guibg=#FFDDFF   gui=NONE
+hi DiffChange   guifg=#0066AA          guibg=#FFDDDD   gui=NONE
+hi DiffDelete   guifg=#A42E2E          guibg=#FFDDDD   gui=NONE
+hi DiffText     guifg=#A42E2E          guibg=#FFDDDD   gui=NONE
 
-hi Action          guifg=#FBDE2D   guibg=NONE      gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
-hi Key             guifg=#FBDE2D   guibg=NONE      gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
+hi Directory    guifg=#6D6D6D          guibg=bg        gui=NONE
+hi ErrorMsg     guifg=#909090          guibg=NONE      gui=NONE
+hi FoldColumn   guifg=#AAAAAA          guibg=#BEBEBE   gui=bold
+hi Folded       guifg=#7D7D7D          guibg=#DEDEDE   gui=italic
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Interface                                                                                                          "
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+hi IncSearch    guifg=#FFFFFF          guibg=#525252   gui=NONE
+hi Search       guifg=#FFFFFF          guibg=#3A3C3C   gui=NONE
+hi MatchParen   guifg=#FFFFFF          guibg=#575757   gui=bold
+hi ModeMsg      guifg=#000000          guibg=#898989   gui=bold
+hi MoreMsg      guifg=#838383          guibg=bg        gui=bold
+hi NonText      guifg=#818181          guibg=bg        gui=bold
 
-hi CursorLine      guifg=NONE      guibg=#202020                                       ctermbg=234     cterm=NONE
-hi CursorColumn    guifg=NONE      guibg=#202020                                       ctermbg=234     cterm=NONE
-hi MatchParen      guifg=#d0ffc0   guibg=#202020   gui=bold            ctermfg=157     ctermbg=237     cterm=bold
-hi Pmenu           guifg=#ffffff   guibg=#444444                       ctermfg=255     ctermbg=238     cterm=NONE
-hi PmenuSel        guifg=#000000   guibg=#b1d631                       ctermfg=0       ctermbg=148     cterm=NONE
-hi PmenuSbar       guifg=#000000   guibg=#808080                       ctermfg=0       ctermbg=148     cterm=NONE
-hi PmenuThumb      guifg=#ffffff   guibg=#000000                       ctermfg=0       ctermbg=148     cterm=NONE
+hi Pmenu        guifg=#9A9A9A          guibg=#C0C0C0   gui=NONE
+hi PmenuSbar    guifg=fg               guibg=#A2A2A2   gui=NONE
+hi PmenuThumb   guifg=fg               guibg=#888888   gui=NONE
 
-hi Normal          guifg=#e2e2e5   guibg=#1B1B1B   gui=none            ctermfg=253     ctermbg=234     cterm=NONE
-hi NonText         guifg=#333333   guibg=#232323   gui=none            ctermfg=244     ctermbg=235     cterm=NONE
+hi Question     guifg=#BABABA          guibg=bg        gui=bold
+hi SignColumn   guifg=#000000          guibg=#E7E7E7   gui=NONE
 
-hi LineNr          guifg=#707070   guibg=#3E3E3E   gui=none            ctermfg=244     ctermbg=232     cterm=NONE
+hi SpecialKey   guifg=#BABABA          guibg=#FFFFFF   gui=NONE
 
-hi StatusLine      guifg=#0e0e0e   guibg=#fe9e21   gui=none            ctermfg=253     ctermbg=238     cterm=NONE
-hi StatusLineNC    guifg=#f0f6e6   guibg=#68774f   gui=none            ctermfg=246     ctermbg=238     cterm=NONE
-hi VertSplit       guifg=#828282   guibg=#828282   gui=none            ctermfg=238     ctermbg=238     cterm=NONE
-hi Folded          guifg=#a0a8b0   guibg=#384048   gui=none            ctermfg=248     ctermbg=4       cterm=NONE
-hi Title           guifg=#f6f3e8   guibg=NONE	     gui=bold            ctermfg=254                     cterm=bold
-hi Visual          guifg=#faf4c6   guibg=#3c414c   gui=none            ctermfg=254     ctermbg=4       cterm=NONE
-hi SpecialKey      guifg=#808080   guibg=#343434   gui=none            ctermfg=244     ctermbg=236     cterm=NONE
+hi SpellBad     guisp=#000000          guibg=#FFFFFF   gui=undercurl    guisp=#003F3F
+hi SpellCap     guisp=#A2A2A2                          gui=undercurl
+hi SpellLocal   guisp=#BCBCBC                          gui=undercurl
+hi SpellRare    guisp=#828282                          gui=undercurl
+hi StatusLine   guifg=#FFFFFF          guibg=#8D8D8D   gui=bold
+hi StatusLineNC guifg=#A5A6A6          guibg=#DDDDDD   gui=italic
+hi TabLine      guifg=fg               guibg=#8A8A8A   gui=underline
+hi TabLineFill  guifg=fg               guibg=bg        gui=reverse
+hi TabLineSel   guifg=fg               guibg=bg        gui=bold
+hi Title        guifg=#929292          guibg=bg        gui=bold
+hi VertSplit    guifg=#DDDDDD          guibg=#DDDDDD
+hi WarningMsg   guifg=#303030          guibg=#A4A4A4   gui=NONE
+hi WildMenu     guifg=#FFFFFF          guibg=#7D7D7D   gui=NONE
+hi Boolean      guifg=#9E9F9F          guibg=NONE      gui=bold
+hi Ignore       guifg=bg               guibg=NONE      gui=NONE
+hi Error        guifg=#008D8D          guibg=NONE      gui=undercurl guisp=#A42E2E
 
-hi Cursor          guifg=#000000   guibg=#DEFF8E   gui=none            ctermbg=241     ctermbg=NONE    cterm=NONE
-hi CursorLine                      guibg=#3c3c3c
+" -----------------------------------------------------------------------------
+" Taglist
+hi MyTagListFileName guifg=#000000      guibg=#BBBBBB
+hi MyTagListTitle    guifg=#999999      guibg=bg        gui=bold
 
+hi VimError         guifg=#494949      guibg=#CECECE   gui=bold
+hi VimCommentTitle  guifg=#A3A3A3      guibg=bg        gui=bold,italic
+hi qfFileName       guifg=#959595      guibg=NONE      gui=italic
+hi qfLineNr         guifg=fg           guibg=NONE      gui=NONE
+hi qfError          guifg=fg           guibg=#FFFFFF   gui=undercurl
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" VimL related colors
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+" 256-color Terminal support
+if &t_Co > 255
+   hi  Normal             ctermfg=251        ctermbg=0          cterm=NONE
+   hi  CursorLine         ctermfg=NONE       ctermbg=240        cterm=NONE
+   hi  CursorColumn       ctermfg=NONE       ctermbg=234        cterm=NONE
+   hi  LineNr             ctermfg=240        ctermbg=NONE       cterm=NONE
+   hi  Statement          ctermfg=248        ctermbg=NONE       cterm=bold
+   hi  Function           ctermfg=255        ctermbg=NONE       cterm=bold
+   hi  String             ctermfg=244        ctermbg=NONE       cterm=NONE
+   hi  Type               ctermfg=255        ctermbg=NONE       cterm=bold
+   hi  Conditional        ctermfg=243        ctermbg=NONE       cterm=bold
+   hi  Todo               ctermfg=9          ctermbg=NONE       cterm=underline
+   hi  Comment            ctermfg=243        ctermbg=NONE       cterm=NONE
+   hi  PmenuSel           ctermfg=0          ctermbg=248        cterm=bold
+   hi  Special            ctermfg=244        ctermbg=NONE       cterm=NONE
+   hi  Identifier         ctermfg=15         ctermbg=NONE       cterm=bold
+   hi  Keyword            ctermfg=242        ctermbg=NONE       cterm=bold
+   hi  PreProc            ctermfg=242        ctermbg=NONE       cterm=bold
+   hi  Include            ctermfg=254        ctermbg=NONE       cterm=NONE
+   hi  Constant           ctermfg=244        ctermbg=235        cterm=bold
+   hi  Delimiter          ctermfg=244        ctermbg=NONE       cterm=NONE
 
-hi link vimGroup Action
+   hi  Visual             ctermfg=15         ctermbg=239        cterm=NONE
+   hi  ColorColumn        ctermfg=NONE       ctermbg=234
+   hi  Cursor             ctermfg=bg         ctermbg=fg         cterm=NONE
+   hi  CursorIM           ctermfg=bg         ctermbg=fg         cterm=NONE
+   hi  lCursor            ctermfg=bg         ctermbg=fg         cterm=NONE
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Colorscheme related colors
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+   hi  DiffAdd            ctermfg=40         ctermbg=22         cterm=NONE
+   hi  DiffChange         ctermfg=209        ctermbg=52         cterm=NONE
+   hi  DiffDelete         ctermfg=9          ctermbg=52         cterm=NONE
+   hi  DiffText           ctermfg=9          ctermbg=52         cterm=NONE
 
-hi link vimHiGroup Action
-hi vimHiGuiRgb     guifg=#ABB78D   guibg=NONE      gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
+   hi  Directory          ctermfg=246        ctermbg=bg         cterm=NONE
+   hi  ErrorMsg           ctermfg=242        ctermbg=NONE       cterm=NONE
+   hi  FoldColumn         ctermfg=240        ctermbg=237        cterm=bold
+   hi  Folded             ctermfg=244        ctermbg=234        cterm=italic
 
-" 7.3 features
+   hi  IncSearch          ctermfg=0          ctermbg=248        cterm=NONE
+   hi  Search             ctermfg=0          ctermbg=251        cterm=NONE
+   hi  MatchParen         ctermfg=0          ctermbg=248        cterm=bold
+   hi  ModeMsg            ctermfg=15         ctermbg=243        cterm=bold
+   hi  MoreMsg            ctermfg=243        ctermbg=bg         cterm=bold
+   hi  NonText            ctermfg=244        ctermbg=bg         cterm=bold
 
-hi ColorColumn     guifg=NONE      guibg=#323232   gui=NONE             ctermfg=NONE    ctermbg=NONE    cterm=NONE
+   hi  Pmenu              ctermfg=242        ctermbg=237        cterm=NONE
+   hi  PmenuSbar          ctermfg=fg         ctermbg=241        cterm=NONE
+   hi  PmenuThumb         ctermfg=fg         ctermbg=243        cterm=NONE
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Basic code highlight
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+   hi  Question           ctermfg=238        ctermbg=bg         cterm=bold
+   hi  SignColumn         ctermfg=15         ctermbg=233        cterm=NONE
 
-hi Comment         guifg=#605A4E                   gui=italic          ctermfg=244
-hi SpecialComment  guifg=#FAF4C6                   gui=NONE            ctermfg=244
-hi Todo            guifg=#8f8f8f                   gui=NONE            ctermfg=245
-hi Boolean         guifg=#b1d631                   gui=NONE            ctermfg=148
-hi Identifier      guifg=#b1d631                   gui=NONE            ctermfg=148
-hi Function        guifg=#B7EF52                   gui=NONE            ctermfg=255
-hi Type            guifg=#81C7FF                   gui=NONE            ctermfg=103
-hi Typedef         guifg=#7AFFFD                   gui=NONE            ctermfg=103
-hi StorageClass    guifg=#7AFFFD                   gui=NONE            ctermfg=103
-hi Statement       guifg=#7AFFFD                   gui=NONE            ctermfg=103
-hi Keyword         guifg=#ff9800                   gui=NONE            ctermfg=208
-hi Constant        guifg=#14F2E7                   gui=NONE            ctermfg=208
-hi Number          guifg=#FEFFD5                   gui=NONE            ctermfg=208
-hi Special         guifg=#ff9800                   gui=NONE            ctermfg=208
-hi PreProc         guifg=#faf4c6                   gui=NONE            ctermfg=230
-hi Define          guifg=#7AFFFD                   gui=NONE            ctermfg=230
+   hi  SpecialKey         ctermfg=238        ctermbg=bg         cterm=NONE
 
-hi String          guifg=#8cd9a2   guibg=NONE      gui=NONE            ctermfg=148
-hi Character       guifg=#22ff00   guibg=NONE      gui=NONE            ctermfg=148
-hi SpecialChar     guifg=#22ff44   guibg=NONE      gui=bold            ctermfg=148
-hi Delimiter       guifg=#ff9800   guibg=NONE      gui=NONE            ctermfg=148
+   hi  SpellBad           ctermbg=0          cterm=NONE
+   hi  SpellCap           ctermbg=0          cterm=NONE
+   hi  SpellLocal         ctermbg=0          cterm=NONE
+   hi  SpellRare          ctermbg=0          cterm=NONE
+   hi  StatusLine         ctermfg=0          ctermbg=243        cterm=bold
+   hi  StatusLineNC       ctermfg=241        ctermbg=235        cterm=NONE
+   hi  TabLine            ctermfg=fg         ctermbg=243        cterm=underline
+   hi  TabLineFill        ctermfg=fg         ctermbg=bg         cterm=reverse
+   hi  TabLineSel         ctermfg=fg         ctermbg=bg         cterm=bold
+   hi  Title              ctermfg=242        ctermbg=bg         cterm=bold
+   hi  VertSplit          ctermfg=234        ctermbg=234
+   hi  WarningMsg         ctermfg=252        ctermbg=240        cterm=NONE
+   hi  WildMenu           ctermfg=0          ctermbg=244        cterm=NONE
+   hi  Boolean            ctermfg=241        ctermbg=NONE       cterm=bold
+   hi  Ignore             ctermfg=bg         ctermbg=NONE       cterm=NONE
+   hi  Error              ctermfg=210        ctermbg=NONE       cterm=underline
 
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" NERDTree highlight
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
+   hi  VimError           ctermfg=250        ctermbg=236        cterm=bold
+   hi  VimCommentTitle    ctermfg=244        ctermbg=236        cterm=bold
+   hi  qfFileName         ctermfg=242        ctermbg=NONE       cterm=NONE
+   hi  qfLineNr           ctermfg=fg         ctermbg=NONE       cterm=NONE
+   hi  qfError            ctermfg=fg         ctermbg=0          cterm=underline
 
-hi Directory       guifg=#4784AA
-hi treeCWD         guifg=#BBE7FB
+   " Taglist
+   hi MyTagListFileName   ctermfg=15         ctermbg=238
+   hi MyTagListTitle      ctermfg=241        ctermbg=bg         cterm=bold
+end
 
-hi treeDirSlash    guifg=#4D4D4D
-hi treePart        guifg=#919191
-
-hi treeUp          guifg=#4D4D4D
-
-hi treeHelp        guifg=#4D4D4D
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" SQL
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link sqlOperator Special
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Java
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-" nth special
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" Ruby
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link rubyFunction Action
-hi link rubyStringEscape SpecialChar
-
-hi rubyLocalVariableOrMethod guifg=#F5F0C7
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" HTML
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi def link javaScript Normal
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" HAML
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link hamlTag       htmlTagName
-
-hi link hamlClass     Action
-hi link hamlClassChar hamlClass
-
-hi hamlId         guifg=#9FDC42
-hi link hamlIdChar    hamlId
-
-
-hi hamlRubyChar guifg=#C86161
-hi link hamlInterpolationDelimiter hamlRubyChar
-
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" CSS
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link cssTagName    htmlTagName
-hi link cssClassName  hamlClass
-hi link cssInentifier hamlId
-hi cssBoxProp  guifg=#9BA789
-hi link cssColorProp cssBoxProp
-hi link cssRenderProp cssBoxProp
-hi link cssFontProp cssBoxProp
-hi link cssTextProp cssBoxProp
-
-hi cssImportant guifg=#E8D1D1
-
-hi cssUIAttr   guifg=#F5F0C7
-hi link cssValueLength cssUIAttr
-hi link cssColor cssUIAttr
-hi link cssColorAttr cssUIAttr
-hi link cssCommonAttr cssUIAttr
-hi link cssTextAttr cssUIAttr
-hi link cssFontAttr cssUIAttr
-hi link cssRenderAttr cssUIAttr
-
-"hi cssBoxProp     guibg=#3E2A2A
-"hi cssColorProp   guibg=#403E31
-
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-" SASS
-"————————————————————————————————————————————————————————————————————————————————————————————————————————————————————"
-
-hi link sassClassChar cssClass
-hi link sassProperty  cssDefinition

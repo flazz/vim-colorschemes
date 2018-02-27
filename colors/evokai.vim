@@ -6,7 +6,7 @@ highlight clear
 set background=dark
 
 if exists("syntax_on")
-    syntax reset
+  syntax reset
 endif
 
 let g:colors_name = "evokai"
@@ -19,7 +19,8 @@ hi Normal                guifg=#efefef   guibg=#1b1b13   gui=NONE
 hi Title                 guifg=#ffffff   guibg=NONE      gui=NONE
 
 hi Comment               guifg=#75715e   guibg=NONE      gui=NONE
-hi Constant              guifg=#c500ff   guibg=NONE      gui=NONE
+hi Conceal               guifg=#75715e   guibg=NONE      gui=NONE
+hi Constant              guifg=#99f6fa   guibg=NONE      gui=NONE
 hi String                guifg=#fff600   guibg=#333100   gui=NONE
 hi Character             guifg=#c500ff   guibg=NONE      gui=NONE
 hi Number                guifg=#c500ff   guibg=NONE      gui=NONE
@@ -37,11 +38,11 @@ hi Keyword               guifg=#ff027f   guibg=NONE      gui=NONE
 hi Exception             guifg=#e60000   guibg=NONE      gui=NONE
 
 " hi PreProc               guifg=#3cff00   guibg=NONE      gui=NONE
-hi PreProc               guifg=#75715e   guibg=#000000   gui=NONE
-hi Include               guifg=#75715e   guibg=#000000   gui=NONE
-hi Define                guifg=#75715e   guibg=#000000   gui=NONE
-hi Macro                 guifg=#75715e   guibg=#000000   gui=NONE
-hi PreCondit             guifg=#75715e   guibg=#000000   gui=NONE
+hi PreProc               guifg=#75715e   guibg=NONE   gui=NONE
+hi Include               guifg=#75715e   guibg=NONE   gui=NONE
+hi Define                guifg=#75715e   guibg=NONE   gui=NONE
+hi Macro                 guifg=#75715e   guibg=NONE   gui=NONE
+hi PreCondit             guifg=#75715e   guibg=NONE   gui=NONE
 
 hi Type                  guifg=#3cff00   guibg=NONE      gui=NONE
 hi StorageClass          guifg=#ff4b00   guibg=NONE      gui=NONE
@@ -61,30 +62,32 @@ hi Error                 guifg=#d7d7d7   guibg=#e60000   gui=NONE
 hi Todo                  guifg=#000000   guibg=#75715e   gui=NONE
 
 " hi ColorColumn           guifg=#ff0000   guibg=#121212    gui=NONE
-hi ColorColumn           guifg=#ff0000   guibg=#121212    gui=inverse
+hi ColorColumn           guifg=#ff0000   guibg=NONE    gui=inverse
 hi Noise                 guifg=#8200a8   guibg=NONE       gui=NONE
 
 " Vim UI Stuff
 hi Cursor                guifg=#000000   guibg=#ff027f   gui=NONE
-hi NonText               guifg=#1b1b13   guibg=NONE      gui=NONE
-hi LineNr                guifg=#666666   guibg=#121212   gui=NONE
-hi SignColumn            guifg=#666666   guibg=#121212   gui=NONE
+hi NonText               guifg=#444444   guibg=NONE      gui=NONE
+hi EndOfBuffer           guifg=#1b1b13
+hi LineNr                guifg=#444444   guibg=#121212   gui=NONE
+hi SignColumn            guifg=#444444   guibg=#121212   gui=NONE
 hi Visual                guifg=#1b1b13   guibg=#efefef   gui=NONE
 hi VisualNOS             guifg=#ffffff   guibg=#ff0000   gui=NONE
-hi VertSplit             guifg=#333333   guibg=#000000   gui=NONE
+hi VertSplit             guifg=#444444   guibg=NONE      gui=NONE
 hi Pmenu                 guifg=#999999   guibg=#121212   gui=NONE
 hi PmenuSel              guifg=#000000   guibg=#72faff   gui=NONE
 hi PmenuSbar             guifg=NONE      guibg=NONE      gui=NONE
 hi PmenuThumb            guifg=#ff0000
 hi SpecialKey            guifg=#444444   guibg=NONE      gui=NONE
-hi StatusLine            guifg=NONE      guibg=#2a2a1c   gui=bold
-hi StatusLineNC          guifg=#444444   guibg=#1b1b13   gui=NONE
+hi StatusLine            guifg=NONE      guibg=#262626   gui=bold
+hi StatusLineNC          guifg=#444444   guibg=#262626   gui=NONE
 hi CursorLine            guifg=NONE      guibg=NONE      gui=NONE
-hi CursorLineNr          guifg=#ff027f   guibg=#121212   gui=BOLD
+hi CursorLineNr          guifg=#ff027f   guibg=NONE      gui=BOLD
 hi CursorColumn          guifg=NONE      guibg=#000000   gui=NONE
-hi MatchParen            guifg=NONE      guibg=NONE      gui=inverse
-hi Search                guifg=#000000   guibg=#fff600   gui=NONE
-hi IncSearch             guifg=#000000   guibg=#ff027f   gui=NONE
+hi MatchParen            guifg=#000000   guibg=#8200a8   gui=NONE
+hi Search                guifg=#FC167C   guibg=#481a28   gui=NONE
+hi QuickFixLine                guifg=#FC167C   guibg=#481a28   gui=NONE
+hi IncSearch             guifg=#FC167C   guibg=#481a28   gui=INVERSE
 
 hi Directory             guifg=#36a6ff   guibg=NONE      gui=NONE
 hi Folded                guifg=#75715e   guibg=#121212   gui=NONE
@@ -122,12 +125,14 @@ hi xmlAttribPunct         guifg=#ff027f   guibg=NONE      gui=NONE
 
 " Javascript Specific
 hi jsFuncCall            guifg=#cefdff
+hi jsTaggedTemplate      guifg=#ff027f   guibg=NONE
 hi jsUndefined           guifg=#c500ff   guibg=NONE      gui=NONE
 hi jsNull                guifg=#c500ff   guibg=NONE      gui=NONE
 hi jsFunction            guifg=#00d5dd   guibg=NONE      gui=NONE
-hi jsClassMethodDefinitions guifg=#00d5dd   guibg=NONE      gui=NONE
+hi jsClassMethodType     guifg=#00d5dd   guibg=NONE      gui=italic
 hi jsArrowFunction       guifg=#00d5dd   guibg=NONE      gui=NONE
 hi jsFuncName            guifg=#00d5dd   guibg=NONE      gui=BOLD
+hi jsObjectFuncName      guifg=#00d5dd   guibg=NONE      gui=BOLD
 hi jsFuncParens          guifg=#00d5dd   guibg=NONE      gui=BOLD
 hi jsFuncBraces          guifg=#00d5dd   guibg=NONE      gui=NONE
 hi jsClassBraces         guifg=#00d5dd   guibg=NONE      gui=NONE
@@ -137,30 +142,31 @@ hi jsGlobalObjects       guifg=#00d5dd   guibg=NONE      gui=NONE
 hi jsOpAssign            guifg=#ff027f   guibg=NONE      gui=NONE
 hi jsSpecial             guifg=#ff4b00   guibg=#330f00   gui=NONE
 hi jsParens              guifg=#ff027f   guibg=NONE      gui=NONE
-hi jsBraces              guifg=#8200a8   guibg=NONE      gui=NONE
+hi jsStyledTemplateTicks guifg=#ff027f   guibg=NONE      gui=NONE
+hi jsBraces              guifg=#00d5dd   guibg=NONE      gui=NONE
 hi jsBrackets            guifg=#8200a8   guibg=NONE      gui=NONE
 hi jsObjectKey           guifg=#3cff00   guibg=NONE      gui=NONE
-hi jsFunctionKey         guifg=#3cff00   guibg=#000000   gui=NONE
+hi jsFunctionKey         guifg=#3cff00   guibg=NONE      gui=NONE
 hi jsFunctionVar         guifg=#00d5dd   guibg=NONE      gui=NONE
 hi jsBooleanTrue         guifg=#3cff00   guibg=#155800   gui=NONE
 hi jsBooleanFalse        guifg=#ff221e   guibg=#761210   gui=NONE
-hi jsClassKeywords       guifg=#ff4b00   guibg=NONE      gui=NONE
+hi jsClassKeyword        guifg=#ff4b00   guibg=NONE      gui=NONE
+hi jsExtendsKeyword      guifg=#ff4b00   guibg=NONE      gui=NONE
 hi xmlEqual              guifg=#8200a8   guibg=NONE      gui=NONE
-hi jsTemplateVar         guifg=#c500ff   guibg=#330f00   gui=NONE
 hi jsTemplateBraces      guifg=#ff4a00   guibg=#330f00   gui=NONE
 hi jsGenerator           guifg=#8200a8   guibg=NONE      gui=NONE
 hi jsClassDefinition     guifg=#00d5dd   guibg=NONE      gui=BOLD
 hi jsDestructuringBlock  guifg=#ff4b00   guibg=NONE      gui=italic
-hi jsDestructuringBraces guifg=#5d2c00   guibg=NONE      gui=NONE
+hi jsDestructuringBraces guifg=#9c5800   guibg=NONE      gui=NONE
 
 hi jsDestructuringProperty      guifg=#ff4b00 guibg=NONE gui=italic
 hi jsDestructuringPropertyValue guifg=#ff4b00 guibg=NONE gui=italic
 
 " Flow Specific Stuff
-hi jsFlowType            guifg=#30cc01   guibg=#000000   gui=NONE
-hi jsFlowNoise           guifg=#8200a8   guibg=#000000   gui=NONE
-hi jsFlowStorageClass    guifg=#ff4b00   guibg=#000000   gui=NONE
-hi jsFlowDeclareKeyword  guifg=#3cff00   guibg=#000000   gui=NONE
+hi jsFlowType            guifg=#448231   guibg=NONE   gui=NONE
+hi jsFlowNoise           guifg=#8200a8   guibg=NONE   gui=NONE
+hi jsFlowStorageClass    guifg=#ff4b00   guibg=NONE   gui=NONE
+hi jsFlowDeclareKeyword  guifg=#3cff00   guibg=NONE   gui=NONE
 
 
 " JSON Specific
@@ -212,7 +218,7 @@ hi cssNumberNoise        guifg=#ff027f   guibg=NONE      gui=NONE
 
 hi cssFunction           guifg=#66d9ef   guibg=NONE      gui=NONE
 hi cssFunctionName       guifg=#cefdff   guibg=#000000   gui=NONE
-hi cssFunctionDelimiters guifg=#cefdff   guibg=#000000   gui=NONE
+hi cssFunctionDelimiters guifg=#cefdff   guibg=NONE      gui=NONE
 
 hi cssFunctionComma      guifg=#397d80   guibg=NONE      gui=NONE
 hi cssMediaComma         guifg=#ff4b00   guibg=NONE      gui=NONE
@@ -244,6 +250,10 @@ hi GitGutterAdd          guifg=#3cff00   guibg=#121212   gui=NONE
 hi GitGutterChange       guifg=#fff200   guibg=#121212   gui=NONE
 hi GitGutterDelete       guifg=#e60000   guibg=#121212   gui=NONE
 hi GitGutterChangeDelete guifg=#fff600   guibg=#121212   gui=NONE
+
+" ALE Signs
+hi ALEErrorSign          guifg=#e60000   guibg=#121212   gui=BOLD
+hi ALEWarningSign        guifg=#fff600   guibg=#121212   gui=BOLD
 
 hi SignifySignAdd        guifg=#3cff00   guibg=#121212   gui=NONE
 hi SignifySignChange     guifg=#fff200   guibg=#121212   gui=NONE
@@ -283,7 +293,7 @@ hi SpellRare   guisp=#FFFFFF gui=undercurl
 
 " Overlength?
 hi OverLength  guifg=#ff0000
-hi CtrlPMark   guifg=#fff600   guibg=#121212
+hi CtrlPMark   guifg=#fff600   guibg=NONE
 
 " Bash Stuff
 hi shQuote     guifg=#ff027f   guibg=#333100   gui=NONE
@@ -294,3 +304,10 @@ hi NERDTreeOpenable guifg=#36a6ff   guibg=NONE      gui=NONE
 
 " Markdown
 hi markdownCode     guifg=#fff600   guibg=#333100   gui=NONE
+
+" LocalIndentGuide
+hi LocalIndentGuide guifg=#333333   guibg=NONE      gui=inverse
+
+" Vim Highlighting
+hi vimOperParen     guifg=#8200a8   guibg=NONE       gui=NONE
+hi vimSep           guifg=#8200a8   guibg=NONE       gui=NONE

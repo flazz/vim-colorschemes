@@ -55,9 +55,10 @@ endfunction
 
 
 " General colors
-call s:highlight("Normal", "WHITE", "GREY", "NONE")
+call s:highlight("Normal", "WHITE", "NONE", "NONE")
 call s:highlight("NonText", "BRIGHT_BLACK", "NONE", "NONE")
 call s:highlight("SpecialKey", "NONE", "BRIGHT_BLACK", "NONE")
+call s:highlight("SignColumn", "NONE", "NONE", "NONE")
 
 "call s:highlight("Cursor", "GREY", "WHITE", "reverse")
 call s:highlight("LineNr", "BRIGHT_BLACK", "NONE", "NONE")
@@ -129,6 +130,12 @@ call s:highlight("RED", "RED", "NONE", "NONE")
 call s:highlight("WHITE", "BRIGHT_WHITE", "NONE", "NONE")
 call s:highlight("Gold", "ORANGE", "NONE", "NONE")
 call s:highlight("Purple", "DARK_MAGENTA", "NONE", "NONE")
+
+"" For vim diff
+call s:highlight("Diffchange", "WHITE", "DARK_ORANGE", "NONE")
+call s:highlight("Difftext", "WHITE", "DARK_ORANGE", "NONE")
+call s:highlight("Diffadd", "WHITE", "DARK_SEA_GREEN", "NONE")
+call s:highlight("Diffdelete", "WHITE", "BRIGHT_BLACK", "NONE")
 
 hi link Character       Constant
 hi link Conditional     Keyword

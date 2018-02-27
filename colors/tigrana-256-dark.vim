@@ -2,7 +2,7 @@
 "  Author: Joseph Carter
 "     URL: https://github.com/iKarith/tigrana
 " Created: 2017
-" Version: 0.3
+" Version: 0.4
 "
 " Based on https://github.com/baskerville/bubblegum
 
@@ -100,7 +100,7 @@ hi MatchParen ctermfg=16 ctermbg=215 cterm=none guifg=#000000 guibg=#FFAF5F gui=
 
 " Cursor
 hi CursorColumn ctermbg=237 cterm=none guibg=#3A3A3A gui=none
-hi CursorLine ctermbg=237 cterm=none guibg=#3A3A3A gui=none
+hi CursorLine ctermbg=236 cterm=none guibg=#303030 gui=none
 hi CursorLineNr ctermfg=249 ctermbg=237 cterm=none guifg=#B2B2B2 guibg=#3A3A3A gui=none
 
 " Search
@@ -159,3 +159,6 @@ hi mailSignature ctermfg=244 cterm=none guifg=#808080 gui=none
 hi markdownCode ctermfg=244 cterm=none guifg=#808080 gui=none
 hi markdownCodeBlock ctermfg=244 cterm=none guifg=#808080 gui=none
 hi markdownItalic ctermfg=252 cterm=none guifg=#D0D0D0 gui=none
+
+" Trailing whitespace (vim-scripts/ShowTrailingWhitespace)
+hi ShowTrailingWhitespace ctermbg=240 guibg=#585858

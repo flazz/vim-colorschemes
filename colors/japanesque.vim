@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 set background=dark
 highlight clear
 
@@ -32,7 +34,8 @@ function! s:hi(group, highlight_args) abort
   if !has_key(a:highlight_args, 'gui')
     let a:highlight_args.gui = 'none'
   endif
-  let attrs = map(items(a:highlight_args), 'v:val[0] . "=" . v:val[1]')
+  let a:highlight_args.cterm = a:highlight_args.gui
+  let attrs = map(items(a:highlight_args), "v:val[0] . '=' . v:val[1]")
   let args = ['highlight', a:group] + attrs
   execute join(args, ' ')
 endfunction
@@ -59,7 +62,7 @@ call s:hi('DiffChange', { 'guifg': 'fg', 'guibg': s:yellow})
 call s:hi('DiffText',   { 'gui': 'reverse', 'guifg': 'fg', 'guibg': s:yellow})
 call s:hi('MatchParen', { 'guibg': s:yellow})
 
-if version >= 700
+if v:version >= 700
   call s:hi('Cursor', { 'gui': 'reverse', 'guifg': 'NONE', 'guibg': 'NONE' })
   call s:hi('CursorLine', { 'guibg': '#2c2c2c' })
   call s:hi('LineNr',       { 'guifg': s:gray })
@@ -78,7 +81,7 @@ call s:hi('PreProc',    { 'guifg': s:dark_green })
 call s:hi('Type',       { 'guifg': s:yellow })
 call s:hi('Identifier', { 'guifg': s:purple })
 call s:hi('Function',   { 'guifg': s:green })
-call s:hi('Conceal',    { 'guifg': s:dark_gray })
+call s:hi('Conceal',    { 'guifg': s:dark_gray, 'guibg': 'NONE' })
 call s:hi('Special',    { 'guifg': s:yellow })
 call s:hi('Title',      { 'guifg': s:purple })
 

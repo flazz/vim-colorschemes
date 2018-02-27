@@ -5,13 +5,34 @@
 " Modified:    Carlos Ramos, carakan
 " License:     public domain
 "
-" A GUI Only port of the RailsCasts TextMate theme [1] to Vim.
-" Some parts of this theme were borrowed from the well-documented Lucius theme [2].
-"
+" Theme Color scheme
+" #00BBEF
+" #8EA8FC
+" #00A1EC
+" #0095CB
+" #00869A
+" #9F7BC3
+" #D7B0FC
+" #DD75C9
+" #4C8077
+" #4C4452
+" #FFFADE
+" #FFF7D0
+" #FFC66D this is the old
+" #F9F871
+" #C3A138
+" #D38E39
+" #FFBD96
+" #FFA78D
+" #F47454
+" #CB725B
+" #FFACC1
+" #FFAAE7
+" #30444E
 
-let g:colors_name = "new-railscasts"
+let g:colors_name = 'new-railscasts'
 hi clear
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
 highlight clear SignColumn
@@ -20,7 +41,7 @@ set background=dark
 hi Normal                    guifg=#E6E1DC guibg=#212121 ctermfg=white ctermbg=234
 hi Cursor                    guifg=#000000 guibg=#FFFFFF ctermfg=0 ctermbg=15
 hi CursorLine                guibg=#282828 ctermbg=235 cterm=NONE
-hi Search                    guibg=#072f95 ctermfg=NONE ctermbg=236
+hi Search                    guifg=#FFC66D guibg=#072f95 gui=bold
 hi Visual                    guibg=#004568 ctermbg=60
 hi LineNr                    guifg=#707070 guibg=#2d2d2d  ctermfg=242
 hi StatusLine                guifg=#e4e4e4 guibg=#606060 gui=NONE ctermfg=254 ctermbg=241 cterm=NONE
@@ -33,19 +54,15 @@ hi ColorColumn               guibg=#333435 ctermbg=235
 highlight SignColumn guibg=#2d2d2d
 
 " StatusLine
-" Bold
-hi User1                     guifg=#eeeeee guibg=#606060 gui=bold ctermfg=255 ctermbg=241 cterm=bold
-" Yellow
-hi User2                     guifg=#FFAF00 guibg=#606060 gui=bold ctermfg=214 ctermbg=241 cterm=bold
-" Green
-hi User3                     guifg=#15d300 guibg=#606060 gui=bold ctermfg=82 ctermbg=241 cterm=bold
-" Red
-hi User4                     guifg=#870000 guibg=#606060 gui=bold ctermfg=88 ctermbg=241 cterm=bold
-hi User5                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
-hi User6                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
-hi User7                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
-hi User8                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
-hi User9                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
+hi User1                     guifg=#eeeeee guibg=#606060 gui=bold
+hi User2                     guifg=#FFAF00 guibg=#606060 gui=bold
+hi User3                     guifg=#15d300 guibg=#606060 gui=bold
+hi User4                     guifg=#870000 guibg=#606060 gui=bold
+hi User5                     guifg=#e4e4e4 guibg=#606060 gui=bold
+hi User6                     guifg=#e4e4e4 guibg=#606060 gui=bold
+hi User7                     guifg=#e4e4e4 guibg=#606060 gui=bold
+hi User8                     guifg=#e4e4e4 guibg=#606060 gui=bold
+hi User9                     guifg=#e4e4e4 guibg=#606060 gui=bold
 
 " Folds
 " -----
@@ -77,12 +94,12 @@ hi Comment                   guifg=#bc7f23 guibg=NONE gui=italic ctermfg=137 cte
 hi Todo                      guifg=#df5f5f guibg=NONE gui=bold,italic ctermfg=94
 
 "rubyPseudoVariable: nil, self, symbols, etc
-hi Constant                  guifg=#6D9CBE ctermfg=73
+hi Constant                  guifg=#0095CB ctermfg=73
 " rubyClass, rubyModule, rubyDefine def, end, include, etc
-hi Define                    guifg=#CC7833 ctermfg=173
+hi Define                    guifg=#D38E39 ctermfg=173
 " Interpolation
 hi Delimiter                 guifg=#519F50
-hi WarningMsg                guifg=#DA4939 guibg=NONE ctermfg=1 ctermbg=NONE
+hi WarningMsg                guifg=#DA4939 guibg=NONE gui=NONE
 " Error, rubyInvalidVariable
 hi Error                     guifg=#FFFFFF guibg=#990000 ctermfg=221 ctermbg=88
 " Function
@@ -90,29 +107,29 @@ hi Function                  guifg=#FFC66D gui=NONE guibg=NONE ctermfg=221 cterm
 " Identifier: @var, @@var, $var, etc
 hi Identifier                guifg=#d7b0fc guibg=NONE ctermfg=73 cterm=NONE
 " Include: include, autoload, extend, load, require
-hi Include                   guifg=#CC7833  guibg=NONE ctermfg=173 cterm=NONE
+hi Include                   guifg=#F47454 guibg=NONE ctermfg=173 cterm=NONE
 " Keyword, rubyKeywordAsMethod: alias, undef, super, yield, callcc, caller, lambda, proc
-hi Keyword                   guifg=#d8690f ctermfg=172 cterm=NONE
+hi Keyword                   guifg=#FFA78D ctermfg=172 cterm=NONE
 " same as define
-hi Macro                     guifg=#CC7833  guibg=NONE ctermfg=172
+hi Macro                     guifg=#F47454 guibg=NONE ctermfg=172
 "rubyInteger
 hi Number                    guifg=#A5C261 ctermfg=107
 hi Boolean                   guifg=#47a3e5 ctermfg=107 gui=italic
 " #if, #else, #endif
-hi PreCondit                 guifg=#CC7833  guibg=NONE ctermfg=172 cterm=NONE
+hi PreCondit                 guifg=#F47454 guibg=NONE ctermfg=172 cterm=NONE
 " generic preprocessor
-hi PreProc                   guifg=#CC7833  guibg=NONE ctermfg=103
+hi PreProc                   guifg=#F47454 guibg=NONE ctermfg=103
 " Control, Access, Eval: case, begin, do, for, if unless, while, until else, etc.
-hi Statement                 guifg=#CC7833 guibg=NONE ctermfg=172 cterm=NONE
+hi Statement                 guifg=#F47454 guibg=NONE ctermfg=172 cterm=NONE
 " String
 hi String                    guifg=#74d155 guibg=NONE ctermfg=107
 hi! Title                    guifg=#FFFFFF guibg=NONE ctermfg=15
 " Constant
-hi Type                      guifg=#ff5d4f guibg=NONE gui=NONE
-hi PreProc                   guifg=#ff8700 guibg=NONE ctermfg=208
-hi Special                   guifg=#ff8700 guibg=NONE ctermfg=22
-hi Operator                  guifg=#CC7833 guibg=NONE ctermfg=73
-hi Tag                       guifg=#CC7833 guibg=NONE ctermfg=73
+hi Type                      guifg=#F47454 guibg=NONE gui=NONE
+hi PreProc                   guifg=#FFA78D guibg=NONE ctermfg=208
+hi Special                   guifg=#FFA78D guibg=NONE ctermfg=22
+hi Operator                  guifg=#FFC66D guibg=NONE ctermfg=73
+hi Tag                       guifg=#F47454 guibg=NONE ctermfg=73
 hi Label                     guifg=#6D9CBE ctermfg=221 gui=bold
 
 " Indentation
@@ -130,69 +147,75 @@ hi diffRemoved               guifg=#800000 ctermfg=1
 hi diffNewFile               guifg=#FFFFFF guibg=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
 hi diffFile                  guifg=#FFFFFF guibg=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
 
-
-hi javaScriptOperator        guifg=#c9d05c ctermfg=185 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi javaScriptBraces          guifg=#dd7927 ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi javaScriptNull            guifg=#dd7927 ctermfg=215 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi SignifySignAdd            guifg=#008700 guibg=#2d2d2d gui=NONE
+hi SignifySignChange         guifg=#c643c6 guibg=#2d2d2d gui=NONE
+hi SignifySignDelete         guifg=#ff5d4f guibg=#2d2d2d gui=NONE
 
 " Ruby
 " ----
-hi rubyTodo                  guifg=#fc5858 guibg=NONE gui=bold ctermfg=167 ctermbg=NONE cterm=bold
-hi rubyClass                 guifg=#dd7927 ctermfg=15
-hi rubyConstant              guifg=#fc5858 ctermfg=167
-hi rubyInterpolation         guifg=#ea8c3f ctermfg=15
-hi rubyBlockParameter        guifg=#d7b0fc ctermfg=189
-hi rubyPseudoVariable        guifg=#47a3e5 ctermfg=221 gui=italic,bold
-hi rubySymbol                guifg=#6D9CBE ctermfg=73 gui=bold
-hi rubyStringDelimiter       guifg=#87af5f ctermfg=107
-hi rubyInstanceVariable      guifg=#d7b0fc ctermfg=189
-hi rubyPredefinedConstant    guifg=#fc5858 ctermfg=167
-hi rubyLocalVariableOrMethod guifg=#d7b0fc ctermfg=189
+hi rubyBlockParameter        guifg=#d7b0fc
 hi rubyBoolean               guifg=#47a3e5 gui=italic
-
+hi rubyClass                 guifg=#D38E39
+hi rubyConstant              guifg=#F47454
+hi rubyInstanceVariable      guifg=#d7b0fc
+hi rubyInterpolation         guifg=#ea8c3f
+hi rubyLocalVariableOrMethod guifg=#d7b0fc
+hi rubyPredefinedConstant    guifg=#F47454
+hi rubyPseudoVariable        guifg=#47a3e5 gui=italic,bold
+hi rubyStringDelimiter       guifg=#87af5f
+hi rubySymbol                guifg=#6D9CBE gui=bold
 " JAVASCRIPT
 "
-hi jsFunction                 guifg=#ff8700 ctermfg=221 gui=italic
-hi jsFunctionKey              guifg=#ff8700 ctermfg=221 gui=italic
-hi jsArrowFunction            guifg=#ff8700 ctermfg=221
-hi jsObjectKey                guifg=#6D9CBE ctermfg=73 gui=bold
-hi jsThis                     guifg=#d7b0fc ctermfg=189 gui=bold,italic
-hi jsStorageClass             guifg=#fc5858 ctermfg=167 gui=italic
-hi jsNull                     guifg=#ff8700 ctermfg=221 gui=italic
+hi jsArrowFunction            guifg=#FFA78D
+hi jsFunction                 guifg=#FFA78D ctermfg=221 gui=italic
+hi jsFunctionKey              guifg=#FFA78D gui=italic
+hi jsNoise                    guifg=#CB725B gui=bold
+hi jsNull                     guifg=#FFA78D gui=italic
 hi jsObjectFuncName           guifg=#FFC66D gui=bold,italic guibg=NONE
-
+hi jsObjectKey                guifg=#6D9CBE gui=bold
+hi jsStorageClass             guifg=#F47454 gui=italic
+hi jsThis                     guifg=#d7b0fc gui=bold,italic
+hi link jsGlobalObjects       Type
+hi link jsObjectProp          Type
 " Typescript
 "
-hi typescriptArrowFunc        guifg=#ff8700 ctermfg=221 gui=italic
-hi typescriptIdentifier       guifg=#d7b0fc ctermfg=189 gui=italic
-hi typescriptAsyncFuncKeyword guifg=#47a3e5 gui=italic
-hi typescriptType             guifg=#ff8700 ctermfg=167 gui=italic
-hi typescriptObjectLabel      guifg=#6D9CBE ctermfg=73 gui=bold
+hi typescriptArrowFunc              guifg=#FFA78D gui=italic
+hi typescriptVariable               guifg=#d7b0fc gui=italic
+hi typescriptAsyncFuncKeyword       guifg=#47a3e5 gui=italic
+hi typescriptType                   guifg=#FFA78D gui=italic
+hi typescriptPredefinedType         guifg=#FFA78D gui=italic
+hi typescriptObjectLabel            guifg=#6D9CBE gui=bold
+hi typescriptFuncName               guifg=#FFC66D gui=bold,italic guibg=NONE
+hi typescriptMethodName             guifg=#FFC66D gui=bold,italic guibg=NONE
+hi typescriptIdentifier             guifg=#d7b0fc gui=bold,italic
+hi typescriptVariable               guifg=#CB725B gui=italic
+hi typescriptAccessibilityModifier  guifg=#FFA78D gui=italic
 
 " Python
 " ------
-hi pythonExceptions          guifg=#ffaf87 ctermfg=216
-hi pythonDoctest             guifg=#8787ff ctermfg=105
-hi pythonDoctestValue        guifg=#87d7af ctermfg=115
+hi pythonExceptions            guifg=#ffaf87 ctermfg=216
+hi pythonDoctest               guifg=#8787ff ctermfg=105
+hi pythonDoctestValue          guifg=#87d7af ctermfg=115
 
 " Elixir
 "
 hi elixirAtom                 guifg=#6D9CBE gui=bold
-hi elixirMapDelimiter         guifg=#CC7833 gui=bold
-hi elixirTupleDelimiter       guifg=#CC7833 gui=bold
-hi elixirMap                  guifg=#CC7833 gui=bold
-hi elixirTuple                guifg=#CC7833 gui=bold
-hi elixirOperator             guifg=#ff8700
-hi elixirDefine               guifg=#CC7833 gui=bold
-hi elixirPrivateDefine        guifg=#CC7833 gui=bold,italic
-hi elixirModuleDefine         guifg=#CC7833 gui=bold
+hi elixirMapDelimiter         guifg=#D38E39 gui=bold
+hi elixirTupleDelimiter       guifg=#D38E39 gui=bold
+hi elixirMap                  guifg=#FFA78D gui=bold
+hi elixirTuple                guifg=#FFA78D gui=bold
+hi elixirOperator             guifg=#FFC66D
+hi elixirDefine               guifg=#D38E39 gui=bold
+hi elixirPrivateDefine        guifg=#D38E39 gui=bold,italic
+hi elixirModuleDefine         guifg=#D38E39 gui=bold
 
 " CSS
 hi cssClassName                 guifg=#FFC66D gui=italic
 hi cssIdentifier                guifg=#47a3e5 gui=italic
-hi cssFontProp                  guifg=#6D9CBE gui=bold
-hi cssColorProp                 guifg=#6D9CBE gui=bold
-hi cssPositioningProp           guifg=#6D9CBE gui=bold
+hi cssProp                      guifg=#6D9CBE gui=bold
+hi cssVendor                    guifg=#6D9CBE gui=bold,italic
+hi cssIncludeKeyword            guifg=#d7b0fc gui=bold,italic
+hi cssImportant                 guifg=#47a3e5 gui=italic
 
 " JSON
 hi jsonBoolean                 guifg=#47a3e5 gui=italic
@@ -204,17 +227,17 @@ hi yamlKey                    guifg=#d7b0fc ctermfg=189 gui=bold
 " Mail
 " ----
 hi mailEmail                 guifg=#87af5f ctermfg=107 gui=italic cterm=underline
-hi mailHeaderKey             guifg=#ffdf5f ctermfg=221
+hi mailHeaderKey             guifg=#FFC66D ctermfg=221
 hi! link mailSubject mailHeaderKey
 
 " Spell
 " ----
-hi! SpellBad                  guifg=#df5f87 guibg=NONE gui=NONE ctermfg=160 ctermbg=NONE cterm=underline
-hi! SpellRare                 guifg=#df5f87 guibg=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=underline
-hi! SpellCap                  guifg=#dfdfff guibg=NONE gui=NONE ctermfg=189 ctermbg=NONE cterm=underline
-hi! SpellLocal                guifg=#00FFFF guibg=NONE gui=NONE ctermfg=51 ctermbg=NONE cterm=underline
-hi! MatchParen                guifg=#FFFFFF guibg=#005f5f ctermfg=15 ctermbg=23
-hi! Question                  guifg=#df5f87 guibg=NONE gui=NONE ctermfg=168 ctermbg=NONE cterm=underline
+hi SpellBad                  guibg=#420101 gui=NONE guisp=red
+hi SpellRare                 guibg=#420101 gui=NONE
+hi SpellCap                  guibg=#420101 gui=NONE
+hi SpellLocal                guibg=#420101 gui=NONE
+hi MatchParen                guifg=#FFC66D guibg=#072f95 gui=bold
+hi Question                  guibg=#420101 gui=NONE
 
 " XML
 " ---
@@ -229,12 +252,12 @@ hi htmlArg                   guifg=#ff8700 gui=italic
 
 " HBS
 " ---
-hi hbsHandles               guifg=#CC7833 gui=bold
-hi hbsArg                   guifg=#ff8700 gui=italic
-hi hbsKeyword               guifg=#dfaf5f gui=italic
+hi hbsHandles               guifg=#D38E39 gui=bold
+hi hbsArg                   guifg=#F47454 gui=italic
+hi hbsKeyword               guifg=#0095CB gui=italic
 hi hbsMustacheName          guifg=#FFC66D gui=NONE
-hi hbsPencilName            guifg=#dfaf5f gui=bold
+hi hbsPencilName            guifg=#D38E39 gui=bold
 
-hi checkbox guifg=#3a3a3a guibg=NONE gui=NONE ctermfg=237 ctermbg=NONE cterm=NONE
-hi checkboxDone guifg=#15d300 guibg=NONE gui=BOLD ctermfg=82 ctermbg=NONE cterm=BOLD
-hi checkboxNotDone guifg=#005fdf guibg=NONE gui=BOLD ctermfg=26 ctermbg=NONE cterm=BOLD
+hi checkbox                 guifg=#3a3a3a guibg=NONE gui=NONE
+hi checkboxDone             guifg=#15d300 guibg=NONE gui=BOLD
+hi checkboxNotDone          guifg=#005fdf guibg=NONE gui=BOLD

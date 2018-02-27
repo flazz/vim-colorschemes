@@ -46,7 +46,7 @@ function! s:set() abort
   let benimurasaki   = {'gui': '#b44c97',   'cterm': '133'}
   let kuwanomi       = {'gui': '#74325c',   'cterm': '89'}
   let sikon          = {'gui': '#460e44',   'cterm': '54'}
-  let kamenozoki     = {'gui': '#a2d7dd',   'cterm': '159'}
+  let mizuiro        = {'gui': '#bce2e8',   'cterm': '159'}
   let usukon         = {'gui': '#9abafd',   'cterm': '111'}
   let tuyukusa       = {'gui': '#38a1db',   'cterm': '39'}
   let kakitubata     = {'gui': '#3e62ad',   'cterm': '63'}
@@ -59,6 +59,7 @@ function! s:set() abort
   let underline      = {'gui': 'underline', 'cterm': 'underline'}
   let undercurl      = {'gui': 'undercurl', 'cterm': 'underline'}
   let boldcurl       = {'gui': 'bold,undercurl', 'cterm': 'bold,underline'}
+  let boldunderline  = {'gui': 'bold,underline', 'cterm': 'bold,underline'}
 
   let highlight_group = {}
   if &background ==# 'light'
@@ -75,7 +76,7 @@ function! s:set() abort
     " Sidebar
     let highlight_group.LineNr       = [oitake,       wakana,      none,      none]
     let highlight_group.CursorLineNr = [tekkon,       wakana,      bold,      none]
-    let highlight_group.FoldColumn   = [tekkon,       wakana,      none,      none]
+    let highlight_group.FoldColumn   = [tekkon,       shirafuji,   none,      none]
     let highlight_group.SignColumn   = [hiwada,       wakana,      none,      none]
     let highlight_group.VertSplit    = [wakatake,     rokusho,     none,      none]
     let highlight_group.ColorColumn  = [none,         aokuchiba,   none,      none]
@@ -85,6 +86,8 @@ function! s:set() abort
     let highlight_group.StatusLine   = [nanohana,     rokusho,     none,      none]
     let highlight_group.StatusLineNC = [wakatake,     rokusho,     none,      none]
     let highlight_group.WildMenu     = [rokusho,      nanohana,    bold,      none]
+    let highlight_group.StatusLineTerm = highlight_group.StatusLine
+    let highlight_group.StatusLineTermNC = highlight_group.StatusLineNC
     " Tabline
     let highlight_group.TabLine      = [wakatake,     rokusho,     none,      none]
     let highlight_group.TabLineSel   = [nanohana,     rokusho,     bold,      none]
@@ -100,12 +103,12 @@ function! s:set() abort
     let highlight_group.Title        = [rokusho,      none,        bold,      none]
     let highlight_group.WarningMsg   = [kokutan,      nanohana,    none,      none]
     " Completion
-    let highlight_group.Pmenu        = [tekkon,       kamenozoki,  none,      none]
+    let highlight_group.Pmenu        = [tekkon,       mizuiro,     none,      none]
     let highlight_group.PmenuSel     = [tekkon,       tuyukusa,    none,      none]
     let highlight_group.PmenuSbar    = [kakitubata,   sakurairo,   none,      none]
     let highlight_group.PmenuThumb   = [sakurairo,    kakitubata,  none,      none]
     " Diff
-    let highlight_group.DiffAdd      = [none,         kamenozoki,  none,      none]
+    let highlight_group.DiffAdd      = [none,         mizuiro,     none,      none]
     let highlight_group.DiffChange   = [none,         nanohana,    none,      none]
     let highlight_group.DiffDelete   = [none,         tokiiro,     none,      none]
     let highlight_group.DiffText     = [none,         nanohana,    underline, none]
@@ -130,7 +133,7 @@ function! s:set() abort
     let highlight_group.Todo         = [dobunezumi,   kanzo,       none,      none]
 
     "*** Settings for plugin ***"
-    let highlight_group.MatchParen   = [none,         tamago,      none,      none]
+    let highlight_group.MatchParen   = [none, none, boldunderline, none]
 
     let bg_none    = {'gui': wakame.gui, 'cterm': 'NONE'}
   else
@@ -147,16 +150,18 @@ function! s:set() abort
     " Sidebar
     let highlight_group.LineNr       = [torinoko,     matsubairo,  none,      none]
     let highlight_group.CursorLineNr = [nanohana,     matsubairo,  bold,      none]
-    let highlight_group.FoldColumn   = [torinoko,     matsubairo,  none,      none]
-    let highlight_group.SignColumn   = [kamenozoki,   matsubairo,  none,      none]
+    let highlight_group.FoldColumn   = [torinoko,     mokuranziki, none,      none]
+    let highlight_group.SignColumn   = [mizuiro,      matsubairo,  none,      none]
     let highlight_group.VertSplit    = [oitake,       mushiao,     none,      none]
     let highlight_group.ColorColumn  = [none,         wakana,      none,      none]
     " Fold
-    let highlight_group.Folded       = [sakurairo,    mokuranziki, none,      none]
+    let highlight_group.Folded       = [torinoko,     mokuranziki, none,      none]
     " Statusline
     let highlight_group.StatusLine   = [nanohana,     mushiao,     none,      none]
     let highlight_group.StatusLineNC = [oitake,       mushiao,     none,      none]
     let highlight_group.WildMenu     = [mushiao,      nanohana,    bold,      none]
+    let highlight_group.StatusLineTerm = highlight_group.StatusLine
+    let highlight_group.StatusLineTermNC = highlight_group.StatusLineNC
     " Tabline
     let highlight_group.TabLine      = [sakurairo,    mushiao,     none,      none]
     let highlight_group.TabLineSel   = [nanohana,     mushiao,     bold,      none]
@@ -179,7 +184,7 @@ function! s:set() abort
     " Diff
     let highlight_group.DiffAdd      = [none,         rurikon,     none,      none]
     let highlight_group.DiffChange   = [none,         sikon,       none,      none]
-    let highlight_group.DiffDelete   = [none,         kokihi,      none,      none]
+    let highlight_group.DiffDelete   = [none,         hiiro,       none,      none]
     let highlight_group.DiffText     = [none,         sikon,       underline, none]
     " Miscellaneous
     let highlight_group.Directory    = [tokiiro,      none,        none,      none]
@@ -191,7 +196,7 @@ function! s:set() abort
     let highlight_group.Comment      = [wakatake,     none,        none,      none]
     let highlight_group.Constant     = [usumurasaki,  none,        none,      none]
     let highlight_group.Identifier   = [tanko,        none,        none,      none]
-    let highlight_group.Function     = [kamenozoki,   none,        none,      none]
+    let highlight_group.Function     = [mizuiro,      none,        none,      none]
     let highlight_group.Statement    = [tokiiro,      none,        none,      none]
     let highlight_group.PreProc      = [ominaeshi,    none,        bold,      none]
     let highlight_group.Type         = [kanzo,        none,        none,      none]
@@ -202,7 +207,7 @@ function! s:set() abort
     let highlight_group.Todo         = [sakurairo,    tuyukusa,    none,      none]
 
     "*** Settings for plugin ***"
-    let highlight_group.MatchParen   = [none,         tuyukusa,    none,      none]
+    let highlight_group.MatchParen   = [none, none, boldunderline, none]
 
     let bg_none    = {'gui': oitake.gui, 'cterm': 'NONE'}
   endif

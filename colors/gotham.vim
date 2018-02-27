@@ -72,7 +72,7 @@ let s:colors.base0 = { 'gui': '#0c1014', 'cterm': 0 }
 let s:colors.base1 = { 'gui': '#11151c', 'cterm': 8 }
 let s:colors.base2 = { 'gui': '#091f2e', 'cterm': 10 }
 let s:colors.base3 = { 'gui': '#0a3749', 'cterm': 12 }
-let s:colors.base4 = { 'gui': '#245361', 'cterm': 11 }
+let s:colors.base4 = { 'gui': '#1e6479', 'cterm': 11 }
 let s:colors.base5 = { 'gui': '#599cab', 'cterm': 14 }
 let s:colors.base6 = { 'gui': '#99d1ce', 'cterm': 7 }
 let s:colors.base7 = { 'gui': '#d3ebe9', 'cterm': 15 }
@@ -120,7 +120,7 @@ call s:Col('CursorLine', '', 'base1')
 call s:Col('CursorColumn', '', 'base1')
 
 " Sign column, line numbers.
-call s:Col('LineNr', 'base4', s:linenr_background)
+call s:Col('LineNr', 'blue', s:linenr_background)
 call s:Col('CursorLineNr', 'base5', s:linenr_background)
 call s:Col('SignColumn', '', s:linenr_background)
 call s:Col('ColorColumn', '', s:linenr_background)
@@ -129,7 +129,7 @@ call s:Col('ColorColumn', '', s:linenr_background)
 call s:Col('Visual', '', 'base3')
 
 " Easy-to-guess code elements.
-call s:Col('Comment', 'base4')
+call s:Col('Comment', 'blue')
 call s:Col('String', 'green')
 call s:Col('Number', 'orange')
 call s:Col('Statement', 'base5')
@@ -153,7 +153,7 @@ call s:Col('Type', 'orange')
 call s:Col('PreProc', 'red')
 
 " Tildes on the bottom of the page.
-call s:Col('NonText', 'base4')
+call s:Col('NonText', 'blue')
 
 " Concealed stuff.
 call s:Col('Conceal', 'cyan', s:background)
@@ -162,11 +162,11 @@ call s:Col('Conceal', 'cyan', s:background)
 call s:Col('Todo', 'magenta', s:background)
 
 " The column separating vertical splits.
-call s:Col('VertSplit', 'base4', s:linenr_background)
-call s:Col('StatusLineNC', 'base4', 'base2')
+call s:Col('VertSplit', 'blue', s:linenr_background)
+call s:Col('StatusLineNC', 'blue', 'base2')
 
 " Matching parenthesis.
-call s:Col('MatchParen', 'base1', 'orange')
+call s:Col('MatchParen', 'base6', 'orange')
 
 " Special keys, e.g. some of the chars in 'listchars'. See ':h listchars'.
 call s:Col('SpecialKey', 'base3')
@@ -181,9 +181,9 @@ call s:Attr('IncSearch', 'reverse')
 
 " Popup menu.
 call s:Col('Pmenu', 'base6', 'base2')
-call s:Col('PmenuSel', 'base7', 'base4')
+call s:Col('PmenuSel', 'base7', 'blue')
 call s:Col('PmenuSbar', '', 'base2')
-call s:Col('PmenuThumb', '', 'base4')
+call s:Col('PmenuThumb', '', 'blue')
 
 " Command line stuff.
 call s:Col('ErrorMsg', 'red', 'base1')
@@ -200,7 +200,7 @@ call s:Col('WildMenu', 'base7', 'cyan')
 call s:Col('Question', 'green')
 
 " Tab line.
-call s:Col('TabLineSel', 'base7', 'base4')  " the selected tab
+call s:Col('TabLineSel', 'base7', 'blue')  " the selected tab
 call s:Col('TabLine', 'base6', 'base2')     " the non-selected tabs
 call s:Col('TabLineFill', 'base0', 'base0') " the rest of the tab line
 
@@ -218,7 +218,7 @@ call s:Col('DiffText', 'base7', 'cyan')
 call s:Col('DiffAdded', 'green')
 call s:Col('DiffChanged', 'blue')
 call s:Col('DiffRemoved', 'red')
-call s:Col('DiffSubname', 'base4')
+call s:Col('DiffSubname', 'blue')
 
 " Directories (e.g. netrw).
 call s:Col('Directory', 'cyan')
@@ -250,7 +250,7 @@ call s:Col('GitGutterChangeDelete', 'magenta', s:linenr_background)
 " CtrlP
 call s:Col('CtrlPNoEntries', 'base7', 'orange') " no entries
 call s:Col('CtrlPMatch', 'green')               " matching part
-call s:Col('CtrlPPrtBase', 'base4')             " '>>>' prompt
+call s:Col('CtrlPPrtBase', 'blue')             " '>>>' prompt
 call s:Col('CtrlPPrtText', 'cyan')              " text in the prompt
 call s:Col('CtrlPPtrCursor', 'base7')           " cursor in the prompt
 
@@ -258,6 +258,15 @@ call s:Col('CtrlPPtrCursor', 'base7')           " cursor in the prompt
 call s:Col('UniteGrep', 'base7', 'green')
 let g:unite_source_grep_search_word_highlight = 'UniteGrep'
 
+" ale https://github.com/w0rp/ale
+call s:Col('ALEWarningSign', 'yellow', s:linenr_background)
+call s:Col('ALEErrorSign', 'red', s:linenr_background)
+
+" neomake https://github.com/neomake/neomake
+call s:Col('NeomakeWarningSign', 'yellow', s:linenr_background)
+call s:Col('NeomakeErrorSign', 'red', s:linenr_background)
+call s:Col('NeomakeWarning', 'yellow')
+call s:Col('NeomakeError', 'red')
 
 " Cleanup =====================================================================
 

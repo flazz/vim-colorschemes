@@ -20,14 +20,14 @@ highlight clear
 if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name = "noclown"
+let g:colors_name = 'noclown'
 
 " Terminals that don't support italics, resort to rendering them as standout.
 " For comments and other things we italicize, this can become annoying very
 " quickly.  We are going to ignore 'italic' attribute if the terminal doesn't
 " know about it.
 if (has('gui_running') ||
-      \ has('unix') && system('tput sitm') == "\e[3m")
+      \ has('unix') && system('tput sitm') ==# "\e[3m")
   let g:noclown_has_italics = 1
 endif
 
@@ -57,7 +57,7 @@ function! s:attr(...)
   if !exists('g:noclown_has_italics')
     " We're going to modify the list, so make a copy (a:* are immutable)
     let l:alist = copy(a:000)
-    call filter(l:alist, 'v:val != "italic"')
+    call filter(l:alist, "v:val !=# 'italic'")
   endif
 
   " l:attrs: comma separated 'l:alist' as string or if empty: 'NONE'
@@ -68,21 +68,21 @@ endfunction
 
 " Clear every attribute to NONE to avoid inheriting from default colorscheme.
 let s:hi_clear = {}
-for key in ['term', 'cterm', 'ctermfg', 'ctermbg', 'gui', 'guifg', 'guibg']
-  let s:hi_clear[key] = 'NONE'
+for s:key in ['term', 'cterm', 'ctermfg', 'ctermbg', 'gui', 'guifg', 'guibg']
+  let s:hi_clear[s:key] = 'NONE'
 endfor
 
 function! s:Defn(group, ...)
   let l:hi_dict = copy(s:hi_clear)
 
   " Merge attribute group definitions to main dictionary
-  for setting in a:000
-    call extend(l:hi_dict, setting)
+  for l:setting in a:000
+    call extend(l:hi_dict, l:setting)
   endfor
 
   let l:hi_expr = 'highlight ' . a:group  . ' '
   " Convert { k1: v1, k2: v2, ..., kn: vn} dictionary to 'k1=v1 k2=v2 ... kn=vn' string
-  let l:hi_expr .= join(map(items(l:hi_dict), 'join(v:val, "=")'), ' ')
+  let l:hi_expr .= join(map(items(l:hi_dict), "join(v:val, '=')"), ' ')
 
   execute l:hi_expr
 endfunction
@@ -177,3 +177,39 @@ call s:Defn('qfFileName', s:fg('fade'))
 "TabLineSel	tab pages line, active tab page label
 "VisualNOS	Visual mode selection when vim is "Not Owning the Selection".
 "		Only X11 Gui's |gui-x11| and |xterm-clipboard| supports this.
+
+"""
+" Highlight debugging helpers
+"""
+function! s:HighlightGroupChain()
+  " Return the names in syntax identifier chain for the symbol under cursor.
+  " Chain is a '->' delimited string of linked syntax identifier names from
+  " leaf to root.
+  let l:chain = []
+  let l:leaf_id = synID(line('.'), col('.'), 1)
+  let l:leaf_name = synIDattr(l:leaf_id, 'name')
+  let l:root_name = synIDattr(synIDtrans(l:leaf_id), 'name')
+
+  call add(l:chain, l:leaf_name)
+
+  while len(l:chain) < 10  " highlight group linking is prone to loops
+    redir => l:hi_output | execute 'silent! highlight ' . l:leaf_name | redir END
+    let l:matches = matchlist(l:hi_output, '\vxxx links to (\w+)$')
+    if len(l:matches) > 0
+      let l:leaf_name = l:matches[1]
+      call add(l:chain, l:leaf_name)
+    else
+      " highlight group doesn't link to anything. done following links.
+      break
+    endif
+  endwhile
+
+  if l:chain[-1] != l:root_name
+    call add(l:chain, '...')
+    call add(l:chain, l:root_name)
+  endif
+
+  return join(l:chain, '->')
+endfunction
+
+nmap <Plug>(noclown-echo-highlight-group-chain) :echo <SID>HighlightGroupChain()<CR>

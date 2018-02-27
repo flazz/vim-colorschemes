@@ -61,7 +61,7 @@ hi Search       guifg=#4e4e4e guibg=#ffff00 gui=NONE
 " Boundaries
 hi VertSplit    guifg=#4e4e4e guibg=#1c1c1c gui=reverse
 hi Wildmenu     guifg=#000000 guibg=#ffff00 gui=bold
-hi ColorColumn  guifg=NONE    guibg=#1c1c1c gui=NONE
+hi ColorColumn  guifg=NONE    guibg=#262626 gui=NONE
 hi LineNr       guifg=#303030 guibg=NONE    gui=NONE
 hi CursorLineNr guifg=#4e4e4e guibg=NONE    gui=NONE
 hi! link        CursorColumn  ColorColumn
@@ -81,6 +81,10 @@ hi Pmenu        guifg=#d0d0d0 guibg=#303030 gui=NONE
 hi PmenuSel     guifg=#000000 guibg=#d0d0d0 gui=NONE
 hi PmenuSbar    guifg=NONE    guibg=#444444 gui=NONE
 hi PmenuThumb   guifg=NONE    guibg=#767676 gui=NONE
+
+" Quickfix
+hi QuickFixLine guifg=NONE    guibg=#303030 gui=NONE
+hi! link        qfLineNr      Special
 
 " Visual Mode
 hi Visual       guifg=NONE    guibg=#303030 gui=NONE
@@ -102,7 +106,7 @@ hi Folded       guifg=#d0d0d0 guibg=#303030 gui=NONE
 hi FoldColumn   guifg=#d0d0d0 guibg=NONE    gui=NONE
 
 " Signs
-hi SignColumn   guifg=#d0d0d0 guibg=#303030 gui=NONE
+hi SignColumn   guifg=#d0d0d0 guibg=#1c1c1c gui=NONE
 
 " Vimdiff
 hi DiffAdd      guifg=#f5f5f5 guibg=#005f00 gui=NONE
@@ -115,7 +119,7 @@ hi! link        diffRemoved   DiffDelete
 hi! link        diffAdded     DiffAdd
 
 " Directories
-hi Directory    guifg=#00d7d7 guibg=NONE    gui=NONE
+hi! link Directory String
 
 " ==============================================================================
 " Additional Highlighting

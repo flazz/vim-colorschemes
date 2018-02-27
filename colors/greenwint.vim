@@ -1,6 +1,6 @@
 "
 " Name: greenwint
-" Version: 0.3.1
+" Version: 0.3.3
 " Maintainer: https://www.github.com/preocanin
 " Licence: The MIT Licence (MIT)
 " 
@@ -28,8 +28,8 @@ hi LineNr  guibg=#262626 guifg=#616161 ctermbg=235 ctermfg=59
 
 hi Conceal guibg=#F3F3F3 guifg=#50E89C ctermbg=255 ctermfg=79 gui=none cterm=none
 
-hi Cursor      guibg=#50E89C guifg=#3F3F3F ctermbg=79 ctermfg=59
-hi ColorColumn guibg=#BBFFBB guifg=#3F3F3F ctermbg=157 ctermfg=59 gui=bold cterm=bold 
+hi Cursor      guibg=#50E89C guifg=#3F3F3F ctermbg=79  ctermfg=59
+hi ColorColumn guibg=#BBFFBB guifg=#3F3F3F ctermbg=157 ctermfg=59  gui=bold cterm=bold 
 hi SignColumn  guibg=#262626 guifg=#F3F3F3 ctermbg=235 ctermfg=255
 
 hi StatusLine guibg=#207050 guifg=#D8D8D8 ctermbg=29 ctermfg=188 gui=italic cterm=italic
@@ -58,34 +58,34 @@ hi Title guifg=#BBFFBB ctermfg=157
 hi link Folded Title
 
 hi ModeMsg   guifg=#BBFFDD ctermfg=158 gui=none cterm=none
-hi Directory guifg=#6BEE6B ctermfg=83 gui=none cterm=none
+hi Directory guifg=#6BEE6B ctermfg=83  gui=none cterm=none
 
 if version >= 700
     hi Pmenu        guibg=#BBFFDD guifg=#3F3F3F ctermbg=158 ctermfg=59
-    hi PmenuSel     guibg=#35EF9F guifg=#0C0C0C ctermbg=85 ctermfg=232
+    hi PmenuSel     guibg=#35EF9F guifg=#0C0C0C ctermbg=85  ctermfg=232
     hi PmenuSbar    guibg=#141414               ctermbg=233
     hi PmenuThumb   guibg=#2D2D2D               ctermbg=236
-    hi Search       guibg=#BBFFDD guifg=#000000 ctermbg=158 ctermfg=16 gui=bold cterm=bold
-    hi IncSearch    guibg=#000000 guifg=#BBFFDD ctermbg=16 ctermfg=158 gui=bold cterm=bold
-    hi CursorLine   guibg=#303030               ctermbg=236 gui=none cterm=none
-    hi CursorLineNr guibg=#121212 guifg=#50E89C ctermbg=233 ctermfg=79 gui=bold cterm=bold
+    hi Search       guibg=#BBFFDD guifg=#000000 ctermbg=158 ctermfg=16  gui=bold cterm=bold
+    hi IncSearch    guibg=#000000 guifg=#BBFFDD ctermbg=16  ctermfg=158 gui=bold cterm=bold
+    hi CursorLine   guibg=#303030               ctermbg=236             gui=none cterm=none
+    hi CursorLineNr guibg=#121212 guifg=#50E89C ctermbg=233 ctermfg=79  gui=bold cterm=bold
     hi CursorColumn guibg=#2B2B2B ctermbg=236
 endif
 
-hi Operator      guifg=#F3F3F3               ctermfg=255 gui=none cterm=none
-hi Identifier    guifg=#F3F3F3               ctermfg=255 gui=bold cterm=bold
-hi Comment       guifg=#7F7F7F               ctermfg=244 gui=italic cterm=italic 
-hi Todo          guifg=#207050 guibg=#F3F3F3 ctermfg=23 ctermbg=255 gui=bold cterm=bold
-hi Statement     guifg=#0C0C0C               ctermfg=232 gui=none
-hi Type          guifg=#50E89C               ctermfg=79 gui=none cterm=none
-hi Constant      guifg=#50E89C               ctermfg=79 gui=italic cterm=italic
-hi Conditional   guifg=#0C0C0C               ctermfg=232 gui=bold cterm=bold
-hi Number        guifg=#6BEE6B               ctermfg=83 gui=none cterm=none
-hi String        guifg=#6BEE6B               ctermfg=83 gui=italic cterm=italic 
-hi Delimiter     guifg=#BBFFDD               ctermfg=158 gui=bold cterm=bold
-hi PreProc       guifg=#BBFFDD               ctermfg=158 gui=italic cterm=italic
-hi Special       guifg=#0C0C0C               ctermfg=232 gui=none cterm=none
-hi Keyword       guifg=#F3F3F3               ctermfg=255 gui=bold cterm=bold
+hi Operator      guifg=#F3F3F3               ctermfg=255             gui=none    cterm=none
+hi Identifier    guifg=#F3F3F3               ctermfg=255             gui=bold    cterm=bold
+hi Comment       guifg=#7F7F7F               ctermfg=244             gui=italic  cterm=italic 
+hi Todo          guifg=#207050 guibg=#F3F3F3 ctermfg=23  ctermbg=255 gui=bold    cterm=bold
+hi Statement     guifg=#0C0C0C               ctermfg=232             gui=none
+hi Type          guifg=#50E89C               ctermfg=79              gui=none    cterm=none
+hi Constant      guifg=#50E89C               ctermfg=79              gui=italic  cterm=italic
+hi Conditional   guifg=#0C0C0C               ctermfg=232             gui=bold    cterm=bold
+hi Number        guifg=#6BEE6B               ctermfg=83              gui=none    cterm=none
+hi String        guifg=#6BEE6B               ctermfg=83              gui=italic  cterm=italic 
+hi Delimiter     guifg=#BBFFDD               ctermfg=158             gui=bold    cterm=bold
+hi PreProc       guifg=#BBFFDD               ctermfg=158             gui=italic  cterm=italic
+hi Special       guifg=#0C0C0C               ctermfg=232             gui=none    cterm=none
+hi Keyword       guifg=#F3F3F3               ctermfg=255             gui=bold    cterm=bold
 
 hi link Function        Normal
 hi link Character       Constant
@@ -122,3 +122,21 @@ hi pythonInclude guifg=#BBFFDD ctermfg=158
 " --- Verilog ---
 hi link verilogOperator Type
 hi link verilogConstant PreProc
+
+" --- Javascript ---
+hi link javaScriptBraces      javaScriptParens
+hi link javaScriptFunction    Statement
+hi link javaScriptIdentifier  Type
+hi link javaScriptMember      javaScriptOperator
+hi link javaScriptNumber      Number
+hi link javaScriptOperator    Identifier 
+hi link javaScriptParens      hsDelimiter 
+
+" --- Typescript ---
+hi link typescriptBraces       javaScriptBraces
+hi link typescriptDotNotation  typescriptBraces
+hi link typescriptEndColons    Normal
+hi link typescriptFuncKeyword  javaScriptFunction
+hi link typescriptIdentifier   javaScriptIdentifier
+hi typescriptLogicSymbols guifg=#BBFFDD ctermfg=158 gui=bold cterm=bold
+hi link typescriptParens javaScriptBraces

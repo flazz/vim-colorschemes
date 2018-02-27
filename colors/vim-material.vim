@@ -17,7 +17,7 @@ let s:gui.foreground = { 'dark': '#EEFFFF', 'light': '#000000' }
 let s:gui.none       = { 'dark': 'NONE', 'light': 'NONE' }
 let s:gui.selection  = { 'dark': '#455A64', 'light': '#BCBCBC' }
 let s:gui.line       = { 'dark': '#212121', 'light': '#D0D0D0' }
-let s:gui.comment    = { 'dark': '#49656F', 'light': '#5F5F5F' }
+let s:gui.comment    = { 'dark': '#5D818E', 'light': '#5F5F5F' }
 
 let s:gui.red          = { 'dark': '#FF5370', 'light': '#E53935' }
 let s:gui.dark_red     = { 'dark': '#B71C1C', 'light': '#E53935' }
@@ -78,12 +78,12 @@ call s:hi("WarningMsg",   s:gui.orange,     "",               "", "", "")
 call s:hi("VertSplit",    s:gui.background, s:gui.foreground, "", "", "")
 call s:hi("Conceal",      s:gui.comment,    s:gui.background, "", "", "")
 
-call s:hi("DiffAdd",     "",             s:gui.teal,         "", "", "")
-call s:hi("DiffAdded",   s:gui.green,    "",                 "", "", "")
-call s:hi("DiffChange",  "",             s:gui.teal,         "", "", "")
-call s:hi("DiffRemoved", s:gui.red, "",                 "", "", "")
-call s:hi("DiffDelete",  s:gui.red,      s:gui.dark_red,          "", "", "")
-call s:hi("DiffText",    "",             s:gui.lighter_teal, "", "", "")
+call s:hi("DiffAdd",     "",          s:gui.teal,         "", "", "")
+call s:hi("DiffAdded",   s:gui.green, "",                 "", "", "")
+call s:hi("DiffChange",  "",          s:gui.teal,         "", "", "")
+call s:hi("DiffRemoved", s:gui.red,   "",                 "", "", "")
+call s:hi("DiffDelete",  s:gui.red,   s:gui.dark_red,     "", "", "")
+call s:hi("DiffText",    "",          s:gui.lighter_teal, "", "", "")
 
 
 call s:hi("NonText",     s:gui.comment,    "",               "", "", "")
@@ -100,21 +100,22 @@ call s:hi("Define",      s:gui.cyan,       "",               "", "", "")
 call s:hi("Statement",   s:gui.cyan,       "",               "", "", "none")
 call s:hi("Function",    s:gui.blue,       "",               "", "", "")
 call s:hi("Conditional", s:gui.cyan,       "",               "", "", "")
-call s:hi("Float",       s:gui.red,        "",               "", "", "")
-call s:hi("Number",      s:gui.red,        "",               "", "", "")
+call s:hi("Float",       s:gui.orange,     "",               "", "", "")
+call s:hi("Noise",       s:gui.cyan,       "",               "", "", "")
+call s:hi("Number",      s:gui.orange,     "",               "", "", "")
 call s:hi("Identifier",  s:gui.pink,       "",               "", "", "")
 call s:hi("Operator",    s:gui.cyan,       "",               "", "", "")
 call s:hi("PreProc",     s:gui.blue,       "",               "", "", "")
 call s:hi("Search",      s:gui.none,       s:gui.none,       "", "", "underline")
 call s:hi("InSearch",    s:gui.background, s:gui.foreground, "", "", "")
-call s:hi("Todo",        s:gui.red,        s:gui.none,       "", "", "")
+call s:hi("Todo",        s:gui.red,        s:gui.foreground, "", "", "reverse")
 call s:hi("Special",     s:gui.orange,     "",               "", "", "")
 
 
 
 " Ruby colors
-call s:hi("rubySymbolDelimiter", s:gui.cyan, "", "", "", "")
-call s:hi("rubyKeywordAsMethod", s:gui.blue, "", "", "", "")
+call s:hi("rubySymbolDelimiter", s:gui.cyan,   "", "", "", "")
+call s:hi("rubyKeywordAsMethod", s:gui.blue,   "", "", "", "")
 call s:hi("rubyConstant",        s:gui.yellow, "", "", "", "")
 call s:hi("rubyClassName",       s:gui.yellow, "", "", "", "bold")
 
@@ -125,28 +126,44 @@ call s:hi("eRubyDelimiter", s:gui.cyan, "", "", "", "")
 call s:hi("elixirKeyword", s:gui.blue, "", "", "", "")
 
 " Javascript colors
-call s:hi("javascriptVariable",         s:gui.purple, "", "", "", "")
-call s:hi("javascriptObjectLabel",      s:gui.blue, "", "", "", "")
-call s:hi("javascriptProperty",         s:gui.cyan, "", "", "", "")
-call s:hi("javascriptBraces",           s:gui.cyan, "", "", "", "")
-call s:hi("javascriptBrackets",         s:gui.cyan, "", "", "", "")
-call s:hi("javascriptClassName",        s:gui.yellow, "", "", "", "bold")
-call s:hi("javascriptClassSuperName",   s:gui.yellow, "", "", "", "")
-call s:hi("javascriptLabel",            s:gui.blue, "", "", "", "")
+" yajs
+call s:hi("javascriptArrayMethod",      s:gui.blue,       "", "", "", "")
+call s:hi("javascriptBlock",            s:gui.cyan,       "", "", "", "")
+call s:hi("javascriptBraces",           s:gui.cyan,       "", "", "", "")
+call s:hi("javascriptBrackets",         s:gui.cyan,       "", "", "", "")
+call s:hi("javascriptClassName",        s:gui.yellow,     "", "", "", "bold")
+call s:hi("javascriptClassSuperName",   s:gui.yellow,     "", "", "", "")
+call s:hi("javascriptExport",           s:gui.cyan,       "", "", "", "")
+call s:hi("javascriptFuncKeyword",      s:gui.purple,     "", "", "", "")
+call s:hi("javascriptIdentifierName",   s:gui.foreground, "", "", "", "")
+call s:hi("javascriptLabel",            s:gui.foreground, "", "", "", "")
+call s:hi("javascriptMethod",           s:gui.blue,       "", "", "", "")
+call s:hi("javascriptObjectMethodName", s:gui.blue,       "", "", "", "")
 call s:hi("javascriptObjectLabel",      s:gui.foreground, "", "", "", "")
-call s:hi("javascriptObjectLabelColon", s:gui.cyan, "", "", "", "")
-call s:hi("javascriptExport",           s:gui.cyan, "", "", "", "")
-call s:hi("javascriptFuncKeyword",      s:gui.purple, "", "", "", "")
+call s:hi("javascriptObjectLabelColon", s:gui.cyan,       "", "", "", "")
+call s:hi("javascriptOperator",         s:gui.purple,     "", "", "", "")
+call s:hi("javascriptProperty",         s:gui.cyan,       "", "", "", "")
+call s:hi("javascriptStringMethod",     s:gui.blue,       "", "", "", "")
+call s:hi("javascriptVariable",         s:gui.purple,     "", "", "", "")
+
+" vim-javascript
+call s:hi("jsArrowFunction", s:gui.cyan,       "", "", "", "")
+call s:hi("jsFunction",      s:gui.purple,     "", "", "", "")
+call s:hi("jsFuncCall",      s:gui.blue,       "", "", "", "")
+call s:hi("jsNoise",         s:gui.cyan,       "", "", "", "")
+call s:hi("jsOperator",      s:gui.purple,     "", "", "", "")
+call s:hi("jsParens",        s:gui.foreground, "", "", "", "")
+call s:hi("jsStorageClass",  s:gui.purple,     "", "", "", "")
 
 " HTML colors
-call s:hi("htmlTag",            s:gui.cyan, "", "", "", "")
-call s:hi("htmlEndTag",         s:gui.cyan, "", "", "", "")
-call s:hi("htmlTagName",        s:gui.red, "", "", "", "")
-call s:hi("htmlSpecialTagName", s:gui.red, "", "", "", "")
+call s:hi("htmlTag",            s:gui.cyan,   "", "", "", "")
+call s:hi("htmlEndTag",         s:gui.cyan,   "", "", "", "")
+call s:hi("htmlTagName",        s:gui.red,    "", "", "", "")
+call s:hi("htmlSpecialTagName", s:gui.red,    "", "", "", "")
 call s:hi("htmlArg",            s:gui.yellow, "", "", "", "")
 
 " jsx colors
-call s:hi("xmlTag",     s:gui.cyan, "", "", "", "")
-call s:hi("xmlEndTag",  s:gui.cyan, "", "", "", "")
-call s:hi("xmlTagName", s:gui.red, "", "", "", "")
+call s:hi("xmlTag",     s:gui.cyan,   "", "", "", "")
+call s:hi("xmlEndTag",  s:gui.cyan,   "", "", "", "")
+call s:hi("xmlTagName", s:gui.red,    "", "", "", "")
 call s:hi("xmlAttrib",  s:gui.yellow, "", "", "", "")

@@ -1,41 +1,33 @@
+" Vim filetype plugin file
+" Language:    C file syntax extensions
+" Maintainer:  Alexey Mozhaev <lxmzhv@gmail.com>
+" Last Change: 09-Jan-14
 
-" Vim Syntax Highlighting File
-" 
-" Language: C
-"
-" Extra: This is to copy the vi clone elvis on its
-"        syntax highlighting.
-"
-" Maintainer: Dean Jones<dean@cleancode.org>
-"
-" Comment: This works well with the default c.vim
-"          that comes with vim6.x.  It basically 
-"          overrides the very bright colors it uses
-"          and uses simple white for highlighting 
-"          key words and types in the C language.
-"          If you're using Eterm, uncomment the 
-"          Normal line specified below.
+" Common
+syn match    Delimiter "[[\](){},;:?]"
+syn match    Operator "[!&]"
+syn match    Operator "[*+]"
+syn match    Operator "[-%]"
+syn match    Operator "\."
+syn match    Operator "="
+syn match    Operator "<"
+syn match    Operator ">"
+syn match    Operator "|"
+syn match    Operator "\^"
+syn match    Operator "\~"
+" Define operator / so that it wouldn't overlap definition of /* // and /=
+syn match    Operator "/[^*/=]"me=e-1
+syn match    Operator "/$"
 
-hi clear
+" Functions
+syn match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1
+syn match cUserFunctionPointer "(\s*\*\s*\h\w*\s*)\(\s\|\n\)*(" contains=Delimiter,Operator
 
-" Eterm users, uncomment the line below
-" hi Normal ctermfg=grey
+if filereadable( '.syntax.vim' ) | exec 'so .syntax.vim' | endif
 
-"lyj---//2006-03-15 @ 23:16 By Lyj---------------
-hi User1 guibg=darkblue guifg=yellow
-hi User2 guibg=darkblue guifg=lightblue
-hi User3 guibg=darkblue guifg=red
-hi User4 guibg=darkblue guifg=cyan
-hi User5 guibg=darkblue guifg=lightgreen
-"endlyjset background=light
-"
-hi PreProc ctermfg=white
-hi Type ctermfg=white
-hi Statement ctermfg=white
-hi Comment ctermfg=grey
-hi Constant cterm=NONE ctermfg=NONE
-hi Number cterm=NONE ctermfg=NONE
-hi String cterm=NONE ctermfg=NONE
-hi Special cterm=NONE ctermfg=NONE
+syn match   Macro    "\<[A-Z_][A-Z_0-9]*\>"
+syn keyword Macro    NULL TRUE FALSE
 
-" EOF for Dean's Elvis like highlighting
+" Links
+hi def link cUserFunction         Function
+hi def link cUserFunctionPointer  Function

@@ -10,7 +10,7 @@
 "            1.1 - update TabLine settings
 "            1.2 - add vim-indent-guides highlight
 "            1.3 - color modified
-" Colors: 
+" Colors:
 "   type   cterm   gui
 "   1      0       #000000
 "   2      17      #003C70
@@ -92,7 +92,7 @@ hi SignColumn                   ctermbg=0   guibg=#000000
 " Pmenu
 hi Pmenu            ctermfg=15  ctermbg=60  guibg=#666666 guifg=#eeeeec
 hi PmenuSel         ctermfg=0   ctermbg=214 guibg=#fcaf3e guifg=#000000
-hi PmenuSbar                    ctermbg=240 guibg=#333333 
+hi PmenuSbar                    ctermbg=240 guibg=#333333
 hi PmenuThumb       ctermfg=255 ctermbg=255               guifg=#ffffff
 
 " Diff
@@ -101,7 +101,7 @@ hi DiffAdd          ctermfg=255 ctermbg=238 guibg=#1f2b2d
 hi DiffChange       ctermfg=255 ctermbg=17  guibg=#003C70
 hi DiffText         ctermfg=255 ctermbg=164 guibg=#b30487               gui=none cterm=none
 
-" ** todo ** 
+" ** todo **
 " Folds
 hi Folded           ctermfg=135 ctermbg=0   guibg=#ae5ff2 guifg=#000000
 hi FoldColumn                   ctermbg=0   guibg=#000000 guifg=#3465a4
@@ -111,7 +111,7 @@ hi Title            ctermfg=214                           guifg=#fcaf3e
 "" I'm thinking now.
 "hi Todo             ctermfg=82  ctermbg=196 guibg=#fe2626 guifg=#5ee710 gui=underline cterm=underline
 hi Todo             ctermfg=82  ctermbg=0   guibg=#fe2626 guifg=#5ee710 gui=underline cterm=underline
-hi SpecialKey       ctermfg=197                           guifg=#ef2929 gui=underline cterm=underline
+hi SpecialKey       ctermfg=60                             guifg=#ef2929 gui=underline cterm=underline
 
 " Tabs
 hi TabLine          ctermfg=251 ctermbg=59  guibg=#626262 guifg=#babdb6 gui=none cterm=none

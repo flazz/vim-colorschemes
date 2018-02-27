@@ -22,14 +22,14 @@ hi Constant                                cterm=NONE  ctermfg=6  guifg=#2aa198 
 hi Cursor                                  cterm=NONE  ctermfg=15  ctermbg=11  guifg=#fdf6e3  guibg=#657b83  gui=NONE
 hi CursorColumn                            cterm=NONE  ctermbg=7  guibg=#eee8d5  gui=NONE
 hi CursorLine                              cterm=NONE  ctermbg=7  guibg=#eee8d5  guisp=#586e75  gui=NONE
-hi CursorLineNr                            ctermfg=130  gui=NONE  guifg=Brown
+hi CursorLineNr                            cterm=NONE  ctermfg=130  gui=NONE  guifg=Brown
 hi DiffAdd                                 cterm=NONE  ctermfg=2  ctermbg=7  gui=NONE  guifg=#719e07  guibg=#eee8d5  guisp=#719e07  gui=NONE
 hi DiffChange                              cterm=NONE  ctermfg=3  ctermbg=7  gui=NONE  guifg=#b58900  guibg=#eee8d5  guisp=#b58900  gui=NONE
 hi DiffDelete                              cterm=NONE  ctermfg=1  ctermbg=7  gui=NONE  guifg=#dc322f  guibg=#eee8d5  gui=NONE
 hi DiffText                                cterm=NONE  ctermfg=4  ctermbg=7  gui=NONE  guifg=#268bd2  guibg=#eee8d5  guisp=#268bd2  gui=NONE
 hi Directory                               cterm=NONE  ctermfg=4  guifg=#268bd2  gui=NONE
-hi Error                                   cterm=NONE  ctermfg=1  gui=NONE  guifg=#dc322f  guibg=#fdf6e3  gui=NONE
-hi ErrorMsg                                cterm=reverse  ctermfg=1  cterm=NONE  gui=reverse  guifg=#dc322f  guibg=NONE  cterm=NONE
+hi Error                                   cterm=NONE  ctermfg=1  ctermbg=NONE  guifg=#dc322f  guibg=#fdf6e3  gui=NONE
+hi ErrorMsg                                cterm=reverse  ctermfg=1  ctermbg=NONE guifg=#dc322f  guibg=NONE gui=reverse
 hi FoldColumn                              cterm=NONE  ctermfg=11  ctermbg=7  guifg=#657b83  guibg=#eee8d5  gui=NONE
 hi Folded                                  cterm=NONE,underline  ctermfg=11  ctermbg=7  guifg=#657b83  guibg=#eee8d5  guisp=#fdf6e3  gui=NONE
 hi HelpExample                             cterm=NONE  ctermfg=10  guifg=#586e75  gui=NONE
@@ -40,20 +40,20 @@ hi MatchParen                              cterm=NONE  ctermfg=1  ctermbg=14  gu
 hi ModeMsg                                 cterm=NONE  ctermfg=4  guifg=#268bd2  gui=NONE
 hi MoreMsg                                 cterm=NONE  ctermfg=4  guifg=#268bd2  gui=NONE
 hi NonText                                 cterm=NONE  ctermfg=12  gui=NONE  guifg=#839496  gui=NONE
-hi Pmenu                                   cterm=reverse  ctermfg=11  ctermbg=7  cterm=NONE  gui=reverse  guifg=#657b83  guibg=#eee8d5  guibg=NONE
-hi PmenuSbar                               cterm=reverse  ctermfg=0  ctermbg=11  cterm=NONE  gui=reverse  guifg=#073642  guibg=#657b83  guibg=NONE
-hi PmenuSel                                cterm=reverse  ctermfg=14  ctermbg=0  cterm=NONE  gui=reverse  guifg=#93a1a1  guibg=#073642  guibg=NONE
-hi PmenuThumb                              cterm=reverse  ctermfg=11  ctermbg=15  cterm=NONE  gui=reverse  guifg=#657b83  guibg=#fdf6e3  guibg=NONE
+hi Pmenu                                   cterm=reverse  ctermfg=11  ctermbg=7  guifg=#657b83  guibg=#eee8d5  gui=reverse
+hi PmenuSbar                               cterm=reverse  ctermfg=0  ctermbg=11  guifg=#073642  guibg=#657b83  gui=reverse
+hi PmenuSel                                cterm=reverse  ctermfg=14  ctermbg=0  guifg=#93a1a1  guibg=#073642  gui=reverse
+hi PmenuThumb                              cterm=reverse  ctermfg=11  ctermbg=15  guifg=#657b83  guibg=#fdf6e3  gui=reverse
 hi PreProc                                 cterm=NONE  ctermfg=9  guifg=#cb4b16  gui=NONE
 hi Question                                cterm=NONE  ctermfg=6  gui=NONE  guifg=#2aa198  gui=NONE
-hi Search                                  cterm=reverse  ctermfg=3  cterm=NONE  gui=reverse  guifg=#b58900  guibg=NONE
-hi SignColumn                              cterm=NONE  ctermfg=11  ctermbg=248  guifg=#657b83  guibg=Grey  gui=NONE
+hi Search                                  cterm=reverse  ctermfg=3  ctermbg=NONE  guifg=#b58900  guibg=NONE gui=reverse
+hi SignColumn                              cterm=NONE  ctermfg=11  ctermbg=NONE  guifg=#657b83  guibg=NONE  gui=NONE
 hi Special                                 cterm=NONE  ctermfg=1  guifg=#dc322f  gui=NONE
 hi SpecialKey                              cterm=NONE  ctermfg=12  ctermbg=7  gui=NONE  guifg=#839496  guibg=#eee8d5  gui=NONE
-hi SpellBad                                cterm=undercurl  gui=undercurl  guisp=#dc322f
-hi SpellCap                                cterm=undercurl  gui=undercurl  guisp=#6c71c4
-hi SpellLocal                              cterm=undercurl  gui=undercurl  guisp=#b58900
-hi SpellRare                               cterm=undercurl  gui=undercurl  guisp=#2aa198
+hi SpellBad                                cterm=undercurl ctermfg=NONE  ctermbg=NONE  gui=undercurl  guisp=#dc322f
+hi SpellCap                                cterm=undercurl  ctermfg=NONE  ctermbg=NONE  gui=undercurl  guisp=#6c71c4
+hi SpellLocal                              cterm=undercurl  ctermfg=NONE  ctermbg=NONE  gui=undercurl  guisp=#b58900
+hi SpellRare                               cterm=undercurl  ctermfg=NONE  ctermbg=NONE  gui=undercurl  guisp=#2aa198
 hi Statement                               cterm=NONE  ctermfg=2  guifg=#719e07  gui=NONE
 hi StatusLine                              cterm=reverse  ctermfg=10  ctermbg=7  gui=reverse  guifg=#586e75  guibg=#eee8d5  guibg=NONE
 hi StatusLineNC                            cterm=reverse  ctermfg=12  ctermbg=7  gui=reverse  guifg=#839496  guibg=#eee8d5  guibg=NONE
@@ -68,8 +68,8 @@ hi VarId                                   cterm=NONE  ctermfg=4  guifg=#268bd2 
 hi VertSplit                               cterm=NONE  ctermfg=12  ctermbg=12  guifg=#839496  guibg=#839496  gui=NONE
 hi Visual                                  cterm=reverse  ctermfg=14  ctermbg=15 gui=reverse  guifg=#93a1a1  guibg=#fdf6e3  guibg=NONE
 hi VisualNOS                               cterm=reverse  ctermbg=7 gui=reverse  guibg=#eee8d5  guibg=NONE
-hi WarningMsg                              cterm=NONE  ctermfg=1  gui=NONE  guifg=#dc322f  gui=NONE
-hi WildMenu                                cterm=reverse  ctermfg=0  ctermbg=7  cterm=NONE  gui=reverse  guifg=#073642  guibg=#eee8d5  guibg=NONE
+hi WarningMsg                              cterm=NONE  ctermfg=9  gui=NONE  guifg=#dc322f  gui=NONE
+hi WildMenu                                cterm=reverse  ctermfg=0  ctermbg=7  guifg=#073642  guibg=#eee8d5  gui=reverse
 hi cPreCondit                              cterm=NONE  ctermfg=9  guifg=#cb4b16  gui=NONE
 hi gitcommitBranch                         cterm=NONE  ctermfg=5  gui=NONE  guifg=#d33682  gui=NONE
 hi gitcommitComment                        cterm=NONE  ctermfg=14  gui=italic  guifg=#93a1a1  gui=NONE
@@ -152,13 +152,13 @@ hi pandocListReference                     cterm=underline  ctermfg=5  gui=under
 hi pandocMetadata                          cterm=NONE  ctermfg=4  gui=NONE  guifg=#268bd2  gui=NONE
 hi pandocMetadataDelim                     cterm=NONE  ctermfg=14  guifg=#93a1a1  gui=NONE
 hi pandocMetadataKey                       cterm=NONE  ctermfg=4  guifg=#268bd2  gui=NONE
-hi pandocNonBreakingSpace                  cterm=reverse  ctermfg=1  cterm=NONE  gui=reverse  guifg=#dc322f  guibg=NONE
+hi pandocNonBreakingSpace                  cterm=reverse  ctermfg=1  ctermbg=NONE  gui=reverse  guifg=#dc322f  guibg=NONE
 hi pandocRule                              cterm=NONE  ctermfg=4  gui=NONE  guifg=#268bd2  gui=NONE
 hi pandocRuleLine                          cterm=NONE  ctermfg=4  gui=NONE  guifg=#268bd2  gui=NONE
-hi pandocStrikeout                         cterm=reverse  ctermfg=14  cterm=NONE  gui=reverse  guifg=#93a1a1  guibg=NONE
-hi pandocStrikeoutDefinition               cterm=reverse  ctermfg=13  cterm=NONE  gui=reverse  guifg=#6c71c4  guibg=NONE
-hi pandocStrikeoutHeading                  cterm=reverse  ctermfg=9  cterm=NONE  gui=reverse  guifg=#cb4b16  guibg=NONE
-hi pandocStrikeoutTable                    cterm=reverse  ctermfg=4  cterm=NONE  gui=reverse  guifg=#268bd2  guibg=NONE
+hi pandocStrikeout                         cterm=reverse  ctermfg=14  ctermbg=NONE  gui=reverse  guifg=#93a1a1  guibg=NONE
+hi pandocStrikeoutDefinition               cterm=reverse  ctermfg=13  ctermbg=NONE  gui=reverse  guifg=#6c71c4  guibg=NONE
+hi pandocStrikeoutHeading                  cterm=reverse  ctermfg=9  ctermbg=NONE  gui=reverse  guifg=#cb4b16  guibg=NONE
+hi pandocStrikeoutTable                    cterm=reverse  ctermfg=4  ctermbg=NONE  gui=reverse  guifg=#268bd2  guibg=NONE
 hi pandocStrongEmphasis                    cterm=NONE  ctermfg=11  gui=NONE  guifg=#657b83  gui=NONE
 hi pandocStrongEmphasisDefinition          cterm=NONE  ctermfg=13  gui=NONE  guifg=#6c71c4  gui=NONE
 hi pandocStrongEmphasisEmphasis            cterm=NONE  ctermfg=11  gui=NONE  guifg=#657b83  gui=NONE

@@ -230,8 +230,8 @@ call Hi("sassPlaceholder", s:colors["yellow"], "NONE", "NONE")
 call Hi("sassVariable", s:colors["dark_blue"], "NONE", "NONE")
 call Hi("sassMixin", s:colors["light_purple"], "NONE", "NONE")
 call Hi("sassMixing", s:colors["white"], "NONE", "NONE")
-call Hi("sassClassChar", s:colors["white"], "NONE", "NONE")
-call Hi("sassIdChar", s:colors["white"], "NONE", "NONE")
+call Hi("sassClassChar", s:colors["hot_pink"], "NONE", "NONE")
+call Hi("sassIdChar", s:colors["dark_blue"], "NONE", "NONE")
 call Hi("sassId", s:colors["dark_blue"], "NONE", "NONE")
 
 """css settings"""
@@ -367,3 +367,11 @@ call Hi("yamlAnchor", s:colors["yellow"], "NONE", "NONE")
 call Hi("yamlAlias", s:colors["light_purple"], "NONE", "NONE")
 call Hi("yamlFlowIndicator", s:colors["hot_pink"], "NONE", "NONE")
 call Hi("yamlFlowMappingKey", s:colors["dark_blue"], "NONE", "NONE")
+"
+""""""""""""""""""""""""""""""""
+"    .ini specific settings    "
+"                              "
+""""""""""""""""""""""""""""""""
+
+call Hi("dosiniHeader", s:colors["dark_blue"], "NONE", "NONE")
+call Hi("dosiniLabel", s:colors["hot_pink"], "NONE", "NONE")

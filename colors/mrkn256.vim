@@ -1,18 +1,19 @@
 " Vim color file
 " Maintainer: Kenta Murata <mrkn@mrkn.jp>
 
-" These are the color theme designed by mrkn based on "desert256" theme
-" created by Henry So, Jr.  This theme is designed to work with with 88-
-" and 256-color xterms.
+" This is the colorscheme designed by mrkn based on "desert256" colorscheme
+" created by Henry So, Jr.  This colorscheme is designed to work with with
+" 88- and 256-color xterms.
 "
-" The ancestor version "desert256" theme is available at
+" The ancestor version "desert256" colorscheme is available at
 " http://www.vim.org/scripts/script.php?script_id=1243
 "
-" The real feature of this color scheme, with a wink to the "inkpot" theme, is
-" the programmatic approximation of the gui colors to the palettes of 88- and
-" 256- color xterms.  The functions that do this (folded away, for
-" readability) are calibrated to the colors used for Thomas E. Dickey's xterm
-" (version 200), which is available at http://dickey.his.com/xterm/xterm.html.
+" The real feature of this color scheme, with a wink to the "inkpot"
+" colorscheme, is the programmatic approximation of the gui colors to the
+" palettes of 88- and 256- color xterms.  The functions that do this (folded
+" away, for readability) are calibrated to the colors used for
+" Thomas E. Dickey's xterm (version 200), which is available at
+" http://dickey.his.com/xterm/xterm.html.
 "
 " Henry had struggled with trying to parse the rgb.txt file to avoid the
 " necessity of converting color names to #rrggbb form, but decided it was just
@@ -253,15 +254,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     "DiffText
     "ErrorMsg
     call <SID>X("VertSplit", "666666", "000000", "none")
-    call <SID>X("Folded", "ffd700", "4d4d4d", "")
+    call <SID>X("Folded", "ffd700", "000000", "bold")
     call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
-    call <SID>X("IncSearch", "708090", "f0e68c", "")
     call <SID>X("LineNr", "666666", "", "none")
     call <SID>X("ModeMsg", "daa520", "", "")
     call <SID>X("MoreMsg", "2e8b57", "", "")
     call <SID>X("NonText", "666699", "", "none")
     call <SID>X("Question", "00ff7f", "", "")
-    call <SID>X("Search", "f5deb3", "cd853f", "")
+    call <SID>X("IncSearch", "708090", "f0e68c", "")
+    call <SID>X("Search", "333333", "cccccc", "bold")
     call <SID>X("SpecialKey", "666699", "", "none")
     call <SID>X("StatusLine", "ffffff", "666666", "none")
     call <SID>X("StatusLineNC", "000000", "666666", "none")
@@ -280,17 +281,42 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " call <SID>X("PmenuThumb", "", "", "")
 
     " syntax highlighting groups
-    call <SID>X("Comment", "87ceeb", "", "")
+    call <SID>X("Comment", "00ff00", "", "")
     call <SID>X("Constant", "ffcc66", "", "")
     call <SID>X("Identifier", "99ff00", "", "none")
     call <SID>X("Statement", "6699ff", "", "none")
     call <SID>X("PreProc", "ff6666", "", "")
-    call <SID>X("Type", "ffcc66", "", "none")
+    call <SID>X("Type", "ffcc66", "", "bold")
     call <SID>X("Special", "ffdead", "", "")
+    call <SID>X("Number", "cc66ff", "", "")
+    call <SID>X("String", "99cccc", "", "")
+    call <SID>X("Operator", "ff00ff", "", "")
+    call <SID>X("Conditional", "ff6633", "", "bold")
+    call <SID>X("Repeat", "66ff66", "", "bold")
+    call <SID>X("Function", "9999ff", "", "underline")
+    call <SID>X("Delimiter", "99cccc", "", "bold")
     "Underlined
     call <SID>X("Ignore", "666666", "", "")
-    "Error
+    call <SID>X("Error", "fa8072", "000000", "")
     call <SID>X("Todo", "ff4500", "eeee00", "")
+
+    " for Ruby {{{
+    call <SID>X("rubyDefine", "ffff00", "", "bold")
+    call <SID>X("rubyClass", "3399ff", "", "bold")
+    call <SID>X("rubyModule", "ff9966", "", "bold")
+    call <SID>X("rubyControl", "ff99ff", "", "none")
+    call <SID>X("rubyGlobalVariable", "ff3300", "", "")
+    call <SID>X("rubyClassVariable", "ff3300", "", "")
+    call <SID>X("rubyPredefinedVariable", "ff9999", "", "")
+    call <SID>X("rubyPredefinedConstant", "ff9999", "", "")
+    call <SID>X("rubySymbol", "99ffcc", "", "")
+    call <SID>X("rubyKeyword", "ff6666", "", "bold")
+    " }}}
+
+    " for IndentGuides {{{
+    call <SID>X("IndentGuidesOdd",  "666699", "333333", "")
+    call <SID>X("IndentGuidesEven", "9999CC", "666666", "")
+    " }}}
 
     " delete functions {{{
     delf <SID>X
@@ -341,4 +367,4 @@ else
     hi Error         cterm=bold ctermfg=7 ctermbg=1
 endif
 
-" vim: set fdl=0 fdm=marker:
+" vim: foldlevel=0 foldmethod=marker

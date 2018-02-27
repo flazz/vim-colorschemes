@@ -81,13 +81,35 @@ hi DiffDelete   guifg=bg        guibg=#b95942   ctermfg=bg     ctermbg=1        
 hi DiffText     guifg=bg        guibg=fg        ctermfg=bg     ctermbg=fg        gui=none      cterm=none
 
 " Misc
-hi Directory    guifg=fg        guibg=NONE      ctermfg=fg     ctermbg=NONE      gui=none      cterm=none
+hi Directory    guifg=#308090   guibg=NONE      ctermfg=6      ctermbg=NONE      gui=none      cterm=none
 hi ErrorMsg     guifg=#f10000   guibg=NONE      ctermfg=9      ctermbg=NONE      gui=none      cterm=none
 hi SignColumn   guifg=#678797   guibg=NONE      ctermfg=12     ctermbg=NONE      gui=none      cterm=none
 hi MoreMsg      guifg=#878787   guibg=NONE      ctermfg=8      ctermbg=NONE      gui=none      cterm=none
 hi ModeMsg      guifg=fg        guibg=NONE      ctermfg=fg     ctermbg=NONE      gui=none      cterm=none
-hi Question     guifg=fg        guibg=NONE      ctermfg=fg     ctermbg=NONE      gui=none      cterm=none
+hi Question     guifg=#b95942   guibg=NONE      ctermfg=1      ctermbg=NONE      gui=none      cterm=none
 hi WarningMsg   guifg=#b95942   guibg=NONE      ctermfg=1      ctermbg=NONE      gui=none      cterm=none
 hi WildMenu     guifg=#50707e   guibg=#e4dccc   ctermfg=4      ctermbg=14        gui=none      cterm=none
 hi ColorColumn  guifg=NONE      guibg=#ede4d4   ctermfg=NONE   ctermbg=7         gui=none      cterm=none
 hi Ignore       guifg=bg                        ctermfg=bg
+
+" Neovim Terminal buffer support
+if has('nvim')
+  let g:terminal_color_0 = '#774f38'
+  let g:terminal_color_1 = '#b95942'
+  let g:terminal_color_2 = '#308444'
+  let g:terminal_color_3 = '#996e1f'
+  let g:terminal_color_4 = '#50707e'
+  let g:terminal_color_5 = '#aa56b2'
+  let g:terminal_color_6 = '#308090'
+  let g:terminal_color_7 = '#ede4d4'
+  let g:terminal_color_8 = '#878787'
+  let g:terminal_color_9 = '#f10000'
+  let g:terminal_color_10 = '#82a3b3'
+  let g:terminal_color_11 = '#c79747'
+  let g:terminal_color_12 = '#678797'
+  let g:terminal_color_13 = '#afafaf'
+  let g:terminal_color_14 = '#e4dccc'
+  let g:terminal_color_15 = '#f7efdf'
+  let g:terminal_color_background = g:terminal_color_0
+  let g:terminal_color_foreground = g:terminal_color_7
+endif

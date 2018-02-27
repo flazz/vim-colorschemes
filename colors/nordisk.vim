@@ -4,11 +4,11 @@
 "				Arctic Ice Studio’s Nord palette					"
 "				https://github.com/arcticicestudio/nord				"
 " author		kamil.stachowski@gmail.com							"
-" version		0.3 (\#)								"
+" version		0.5 (2016.12.06)									"
 " license		GPLv3+												"
 " ----------------------------------------------------------------- "
 
-" - preamble ---------------------------------------------------------------------------------- {{{ -
+" - preamble ---------------------------------------------------------------------------------- <<< -
 
 let colors_name = "nordisk"
 set background=dark
@@ -38,48 +38,46 @@ function! s:hi(group, fg, bg, gui)
 	execute l:res
 endfunction
 
-" --------------------------------------------------------------------------------------------- }}} -
-" - palette ----------------------------------------------------------------------------------- {{{ -
+" --------------------------------------------------------------------------------------------- >>> -
+" - palette ----------------------------------------------------------------------------------- <<< -
 
 let s:col00 = "#252a33"		" blackish 1
 let s:col01 = "#38404d"		" blackish 2
 let s:col02 = "#4a5466"		" blackish 3
 let s:col03 = "#5e6b81"		" blackish 4
 let s:col04 = "#6f7e98"		" blackish 5
-
-let s:col05 = "#d7e3f8"		" whitish 1
+let s:col05 = "#d7dbe2"		" whitish 1
 let s:col06 = "#ffffff"		" whitish 2
-
 let s:col07 = "#8fbcbb"		" light blue 1
-let s:col08 = "#88c0d0"		" light blue 2
-let s:col09 = "#81a1c1"		" light blue 3
+let s:col08 = "#81a1c1"		" light blue 3
+let s:col09 = "#88c0d0"		" light blue 2
 let s:col10 = "#5e81ac"		" light blue 4
 let s:col11 = "#a3be8c"		" green
 let s:col12 = "#b48ead"		" purple
-let s:col13 = "#ebcb8b"		" yellow
-let s:col14 = "#d08770"		" orange
-let s:col15 = "#bf616a"		" red
+let s:col13 = "#eccf95"		" yellow
+let s:col14 = "#d18a75"		" orange
+let s:col15 = "#bf6971"		" red
 
-" --------------------------------------------------------------------------------------------- }}} -
-" - originals --------------------------------------------------------------------------------- {{{ -
+" --------------------------------------------------------------------------------------------- >>> -
+" - originals --------------------------------------------------------------------------------- <<< -
 
 call s:hi ("CursorLine",	"",			s:col01,	"none")
 call s:hi ("Ignore",		s:col02,	s:col00,	"none")
-call s:hi ("Visual",		"",			s:col03,	"none")
+call s:hi ("Visual",		s:col00,	s:col03,	"none")
 call s:hi ("Comment",		s:col04,	s:col00,	"none")
 
 call s:hi ("Normal",		s:col05,	s:col00,	"none")
 call s:hi ("Special",		s:col06,	s:col00,	"none")
 
 call s:hi ("Operator",		s:col07,	s:col00,	"none")
-call s:hi ("PreProc",		s:col08,	s:col00,	"none")
-call s:hi ("Identifier",	s:col09,	s:col00,	"none")
+call s:hi ("Identifier",	s:col08,	s:col00,	"none")
+call s:hi ("PreProc",		s:col09,	s:col00,	"none")
 call s:hi ("Constant",		s:col10,	s:col00,	"none")
 call s:hi ("Statement",		s:col11,	s:col00,	"none")
 call s:hi ("Type",			s:col12,	s:col00,	"none")
 
 call s:hi ("Cursor",		"",			"",			"inverse")
-call s:hi ("DiffAdd",		s:col08,	s:col00,	"none")
+call s:hi ("DiffAdd",		s:col11,	s:col00,	"none")
 call s:hi ("DiffChange",	s:col13,	s:col00,	"none")
 call s:hi ("DiffDelete",	s:col15,	s:col00,	"none")
 call s:hi ("Error",			s:col00,	s:col15,	"none")
@@ -92,8 +90,8 @@ call s:hi ("Todo",			s:col14,	s:col00,	"none")
 call s:hi ("Underlined",	s:col05,	s:col00,	"underline")
 call s:hi ("WarningMsg",	s:col13,	s:col00,	"none")
 
-" --------------------------------------------------------------------------------------------- }}} -
-" - linked ------------------------------------------------------------------------------------ {{{ -
+" --------------------------------------------------------------------------------------------- >>> -
+" - linked ------------------------------------------------------------------------------------ <<< -
 
 hi! link Boolean		Constant
 hi! link Character		Constant
@@ -152,8 +150,8 @@ hi! link VertSplit		StatusLineNC
 hi! link VisualNOS		Visual
 hi! link WildMenu		StatusLineNC
 
-" --------------------------------------------------------------------------------------------- }}} -
-" - languages --------------------------------------------------------------------------------- {{{ -
+" --------------------------------------------------------------------------------------------- >>> -
+" - languages --------------------------------------------------------------------------------- <<< -
 
 " c++
 hi! link cppAccess		Type
@@ -205,4 +203,6 @@ hi! link vimOption		Special
 hi! link vimSyntax		Special
 hi! link vimSynType		Special
 
-" --------------------------------------------------------------------------------------------- }}} -
+" --------------------------------------------------------------------------------------------- >>> -
+
+" vim: foldmarker=<<<,>>>

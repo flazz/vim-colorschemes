@@ -7,6 +7,8 @@ endif
 
 let g:colors_name = 'fairyfloss'
 
+" UI
+
 hi ColorColumn guifg=fg guibg=#a8a4b1 gui=NONE ctermfg=0
 "hi Conceal
 "hi Cursor
@@ -19,7 +21,6 @@ hi DiffAdd guifg=bg guibg=#c2ffdf gui=NONE ctermfg=0
 hi DiffChange guifg=#f92672 guibg=#f8f8f0 gui=NONE ctermfg=0
 hi DiffDelete guifg=#f92672 guibg=bg gui=NONE ctermfg=0
 hi DiffText guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
-"hi EndOfBuffer guifg=bg guibg=bg gui=NONE ctermfg=0
 hi ErrorMsg guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
 "hi FoldColumn
 hi Folded guifg=#8076aa guibg=NONE gui=NONE ctermfg=0
@@ -37,17 +38,18 @@ hi PmenuSel guifg=fg guibg=#ae81ff gui=NONE ctermfg=0
 hi Question guifg=#c2ffdf guibg=bg gui=NONE ctermfg=0
 "hi QuickFixLine
 hi Search guifg=bg guibg=#c5a3ff gui=NONE ctermfg=0
-"hi SignColumn
+hi SignColumn guifg=#a8a4b1 guibg=NONE gui=NONE ctermfg=0
 "hi SpecialKey
 hi SpellBad guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
 "hi SpellCap
 "hi SpellLocal
 "hi SpellRare
-hi StatusLine guifg=fg guibg=#373348 gui=NONE ctermfg=0
-hi StatusLineNC guifg=fg guibg=#373348 gui=NONE ctermfg=0
-hi TabLine guifg=fg guibg=#373348 gui=NONE ctermfg=0
-hi TabLineFill guifg=fg guibg=#373348 gui=NONE ctermfg=0
-"hi TabLineSel
+hi StatusLine guifg=#a8a4b1 guibg=#373348 gui=NONE ctermfg=0
+hi StatusLineNC guifg=#a8a4b1 guibg=#373348 gui=NONE ctermfg=0
+hi Substitute guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
+hi TabLine guifg=#a8a4b1 guibg=#373348 gui=NONE ctermfg=0
+hi TabLineFill guifg=#a8a4b1 guibg=#373348 gui=NONE ctermfg=0
+hi TabLineSel guifg=#a8a4b1 guibg=bg gui=NONE ctermfg=0
 "hi TermCursor
 "hi TermCursorNC
 hi Title guifg=fg guibg=NONE gui=bold ctermfg=0
@@ -55,6 +57,8 @@ hi VertSplit guifg=#373348 guibg=#373348 gui=NONE ctermfg=0
 hi Visual guifg=NONE guibg=#8077A8 gui=NONE ctermfg=0
 hi WarningMsg guifg=#f8f8f0 guibg=#f92672 gui=NONE ctermfg=0
 hi WildMenu guifg=bg guibg=#c2ffdf gui=bold ctermfg=0
+
+" Text
 
 hi Comment guifg=#e6c000 guibg=NONE gui=NONE ctermfg=0
 

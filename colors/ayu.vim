@@ -102,7 +102,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_panel       .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_panel       .s:fmt_none
 "   Incsearch"
 
-exe "hi! MatchParen"    .s:fg_bg          .s:bg_fg          .s:fmt_none
+exe "hi! MatchParen"    .s:fg_fg          .s:bg_bg          .s:fmt_undr
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_bg          .s:bg_none        .s:fmt_none
@@ -195,7 +195,6 @@ exe "hi! CursorLineConceal" .s:fg_guide   .s:bg_line        .s:fmt_none
 " Terminal in NVIM
 " ---------
 if has("nvim")
-  exec "hi! TermCursor"     .s:fg_bg    .s:bg_fg
   let g:terminal_color_0 =  s:palette.bg[s:style]
   let g:terminal_color_1 =  s:palette.markup[s:style]
   let g:terminal_color_2 =  s:palette.string[s:style]

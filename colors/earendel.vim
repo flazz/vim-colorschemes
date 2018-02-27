@@ -1,332 +1,163 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+hi clear
 
-<head>
-  <link rel="Stylesheet" type="text/css" href="/css/style.css" >
-  <title>Error : vim online</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <meta name="KEYWORDS" content="Vim, Vi IMproved, text editor, home, documentation, tips, scripts, news">
-  <meta name="viewport" content="width=1000, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/images/vim_shortcut.ico">
-</head>
+if exists("syntax_on")
+    syntax reset
+endif
 
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"> 
+let colors_name = "earendel"
 
-<!-- HEADER, SPONSOR IMAGE, VIM IMAGE AND BOOK AD -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-  <tr>
-    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  </tr>
-  <tr>
-  <td class="lightbg">&nbsp;&nbsp;&nbsp;</td>
-  <td class="lightbg" align="left"><a href="https://www.vim.org/sponsor/index.php"><img src="/images/sponsorvim.gif" alt="sponsor Vim development" border="0"></a></td>
-  <td class="lightbg" align="center">
-	 <a href="/"><img src="/images/vim_header.gif" border="0" alt="Vim logo" class="align-middle"></a>
-	  </td>
-  <td class="lightbg" align="right"><a href="http://iccf-holland.org/click5.html"><img src="/images/buyhelplearn.gif" alt="Vim Book Ad" border="0"></a></td>
-  </tr>
-  <tr>
-    <td colspan="4" class="lightbg"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  </tr>
-  <tr>
-    <td colspan="4" class="darkbg"><img src="/images/spacer.gif" width="1" height="10" alt=""></td>
-  </tr>
-</table>
-<!-- THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
+execute "command! -nargs=1 Colo set background=<args>"
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%">
-  <col width="180">
-  <col width="1">
+if &background == "light"
+    hi Normal ctermbg=15 ctermfg=0 guibg=#fafafa guifg=#2d2d2d gui=none
 
-  <tr valign="top">
-    <td class="sidebar">
-      <table width="180" cellpadding="4" cellspacing="0" border="0">
-        <tr valign="top">
-          <td class="sidebar">
+    hi ColorColumn ctermbg=7 ctermfg=fg guibg=#d5d5d5 gui=none
+    hi Cursor guibg=#000000 guifg=#ffffff gui=none
+    hi CursorColumn ctermbg=7 ctermfg=fg guibg=#e0e0e0 gui=none
+    hi CursorLine ctermbg=7 ctermfg=fg guibg=#e0e0e0 gui=none
+    hi CursorLineNr guibg=bg guifg=#808080 gui=bold
+    hi DiffAdd guibg=#bae981 guifg=fg gui=none
+    hi DiffChange guibg=#8495e6 guifg=fg gui=none
+    hi DiffDelete guibg=#ff95a5 guifg=fg gui=none
+    hi DiffText guibg=#b9c2f0 guifg=fg gui=bold
+    hi Directory guibg=bg guifg=#272fc2 gui=none
+    hi ErrorMsg guibg=#ca001f guifg=#ffffff gui=bold
+    hi FoldColumn ctermbg=bg guibg=bg guifg=#808080 gui=none
+    hi Folded guibg=#bdbdbd guifg=#4a4a4a gui=bold
+    hi IncSearch guibg=#f7b69d gui=none
+    hi LineNr guibg=bg guifg=#808080 gui=none
+    hi ModeMsg ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=bold
+    hi MoreMsg guibg=bg guifg=#4a4a4a gui=bold
+    hi NonText ctermfg=8 guibg=bg guifg=#808080 gui=bold
+    hi Pmenu guibg=#c5c5c5 guifg=fg gui=none
+    hi PmenuSbar guibg=#8f8f8f guifg=fg gui=none
+    hi PmenuSel guibg=#fee06b guifg=fg gui=none
+    hi PmenuThumb guibg=#d4d4d4 guifg=fg gui=none
+    hi Question guibg=bg guifg=#4a4a4a gui=bold
+    hi Search guibg=#fee481 gui=none
+    hi SignColumn ctermbg=bg guibg=bg guifg=#808080 gui=none
+    hi SpecialKey guibg=bg guifg=#844631 gui=none
+    hi StatusLine ctermbg=0 ctermfg=15 guibg=#b5b5b5 guifg=fg gui=bold
+    hi StatusLineNC ctermbg=7 ctermfg=fg guibg=#cdcdcd guifg=#384547 gui=none
+    if has("spell")
+        hi SpellBad guisp=#ca001f gui=undercurl
+        hi SpellCap guisp=#272fc2 gui=undercurl
+        hi SpellLocal guisp=#0f8674 gui=undercurl
+        hi SpellRare guisp=#d16c7a gui=undercurl
+    endif
+    hi TabLine guibg=#d4d4d4 guifg=fg gui=underline
+    hi TabLineFill guibg=#d4d4d4 guifg=fg gui=underline
+    hi TabLineSel guibg=bg guifg=fg gui=bold
+    hi Title guifg=fg gui=bold
+    hi VertSplit ctermbg=7 ctermfg=fg guibg=#cdcdcd guifg=#384547 gui=none
+    if version >= 700
+        hi Visual ctermbg=7 ctermfg=fg guibg=#c5c5c5 gui=none
+    else
+        hi Visual ctermbg=7 ctermfg=fg guibg=#c5c5c5 guifg=fg gui=none
+    endif    
+    hi VisualNOS ctermbg=8 ctermfg=fg guibg=bg guifg=#4a4a4a gui=bold,underline
+    hi WarningMsg guibg=bg guifg=#ca001f gui=bold
+    hi WildMenu guibg=#fedc56 guifg=fg gui=bold
 
-<!-- INCLUDE THE PAGE NAVIGATION -->
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-    <tr>
-        <td><small>not logged in (<a href="https://www.vim.org/login.php">login</a>)</small></td>
-    </tr>
-    <tr><td>
-<small>&nbsp;</small>
-<form action="https://www.google.com/cse" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-3005259998294962:bvyni59kjr1" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="20" />
-    <br>
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
-<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-    </td></tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="1"></td>
-    </tr>
-    <tr>
-        <td class="darkbg"><img src="/images/spacer.gif" alt='' border="0" height="3"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="2"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/">Home</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/search.php">Advanced search</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/about.php">About Vim</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/community.php">Community</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/news/news.php">News</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/sponsor/index.php">Sponsoring</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/trivia.php">Trivia</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/docs.php">Documentation</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader download"><a href="https://www.vim.org/download.php">Download</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/scripts/index.php">Scripts</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/tips/index.php">Tips</a></td>
-        </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/account/index.php">My Account</a></td>
-        </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-    <tr>
-        <td class="checker"><img src="/images/spacer.gif" alt='' border="0" height="1"></td>
-    </tr>
-    <tr>
-        <td><img src="/images/spacer.gif" alt="" border="0" width="1" height="7"></td>
-    </tr>
-        <tr>
-            <td class="sidebarheader"><a href="https://www.vim.org/huh.php">Site Help</a></td>
-        </tr>
-</table>
-<br>
-<g:plusone></g:plusone>
+    hi Comment guibg=bg guifg=#558817 gui=none
+    hi Constant guibg=bg guifg=#a8660d gui=none
+    hi Error guibg=bg guifg=#bf001d gui=none
+    hi Identifier guibg=bg guifg=#0e7c6b gui=none
+    hi Ignore guibg=bg guifg=bg gui=none
+    hi lCursor guibg=#79bf21 guifg=#ffffff gui=none
+    hi MatchParen guibg=#0f8674 guifg=#ffffff gui=none
+    hi PreProc guibg=bg guifg=#a33243 gui=none
+    hi Special guibg=bg guifg=#844631 gui=none
+    hi Statement guibg=bg guifg=#2239a8 gui=bold
+    hi Todo guibg=#fedc56 guifg=#512b1e gui=bold
+    hi Type guibg=bg guifg=#1d318d gui=bold
+    hi Underlined ctermbg=bg ctermfg=fg guibg=bg guifg=#272fc2 gui=underline
 
-            <table width="172" cellpadding="0" cellspacing="0" border="0">
-              <tr><td><img src="/images/spacer.gif" alt="" border="0" width="1" height="8"></td></tr>
-              <tr><td class="darkbg"><img src="/images/spacer.gif" width="1" height="3" alt=""></td></tr>
-            </table>
-            <br>
+    hi htmlBold ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=bold
+    hi htmlBoldItalic ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=bold,italic
+    hi htmlBoldUnderline ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=bold,underline
+    hi htmlBoldUnderlineItalic ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=bold,underline,italic
+    hi htmlItalic ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=italic
+    hi htmlUnderline ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=underline
+    hi htmlUnderlineItalic ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=underline,italic
+else
+    hi Normal ctermbg=0 ctermfg=7 guibg=#2a2a2a guifg=#cacaca gui=none
 
-<!-- INCLUDE THE PAGE SIDEBAR TEXT -->
-&nbsp;
+    hi ColorColumn ctermbg=8 ctermfg=15 guibg=#4a4a4a gui=none
+    hi Cursor guibg=#e5e5e5 guifg=#000000 gui=none
+    hi CursorColumn ctermbg=8 ctermfg=15 guibg=#404040 gui=none
+    hi CursorLine ctermbg=8 ctermfg=15 guibg=#404040 gui=none
+    hi CursorLineNr guibg=bg guifg=#808080 gui=bold
+    hi DiffAdd guibg=#558817 guifg=#dadada gui=none
+    hi DiffChange guibg=#1b2e85 guifg=#dadada gui=none
+    hi DiffDelete guibg=#9f0018 guifg=#dadada gui=none
+    hi DiffText guibg=#2540ba guifg=#dadada gui=bold
+    hi Directory guibg=bg guifg=#8c91e8 gui=none
+    hi ErrorMsg guibg=#ca001f guifg=#e5e5e5 gui=bold
+    hi FoldColumn ctermbg=bg guibg=bg guifg=#808080 gui=none
+    hi Folded guibg=#555555 guifg=#cfcfcf gui=bold
+    hi IncSearch guibg=#a7380e guifg=#dadada gui=none
+    hi LineNr guibg=bg guifg=#808080 gui=none
+    hi ModeMsg ctermbg=bg ctermfg=fg guibg=bg guifg=fg gui=bold
+    hi MoreMsg guibg=bg guifg=#b5b5b5 gui=bold
+    hi NonText ctermfg=8 guibg=bg guifg=#808080 gui=bold
+    hi Pmenu guibg=#5a5a5a guifg=#dadada gui=none
+    hi PmenuSbar guibg=#4a4a4a guifg=#dadada gui=none
+    hi PmenuSel guibg=#f3c201 guifg=#000000 gui=none
+    hi PmenuThumb guibg=#858585 guifg=#dadada gui=none
+    hi Question guibg=bg guifg=#b5b5b5 gui=bold
+    hi Search guibg=#947601 guifg=#dadada gui=none
+    hi SignColumn ctermbg=bg guibg=bg guifg=#808080 gui=none
+    hi SpecialKey guibg=bg guifg=#d3a901 gui=none
+    hi StatusLine ctermbg=7 ctermfg=0 guibg=#505050 guifg=#e5e5e5 gui=bold
+    hi StatusLineNC ctermbg=7 ctermfg=0 guibg=#666666 guifg=#bfbfbf gui=none
+    if has("spell")
+        hi SpellBad guisp=#ea0023 gui=undercurl
+        hi SpellCap guisp=#8c91e8 gui=undercurl
+        hi SpellLocal guisp=#16c9ae gui=undercurl
+        hi SpellRare guisp=#e09ea8 gui=undercurl
+    endif
+    hi TabLine guibg=#4a4a4a guifg=#e5e5e5 gui=underline
+    hi TabLineFill guibg=#4a4a4a guifg=#e5e5e5 gui=underline
+    hi TabLineSel guibg=bg guifg=#e5e5e5 gui=bold
+    hi Title ctermbg=bg ctermfg=15 guifg=#e5e5e5 gui=bold
+    hi VertSplit ctermbg=7 ctermfg=0 guibg=#666666 guifg=#bfbfbf gui=none
+    if version >= 700
+        hi Visual ctermbg=7 ctermfg=0 guibg=#5a5a5a gui=none
+    else
+        hi Visual ctermbg=7 ctermfg=0 guibg=#5a5a5a guifg=fg gui=none
+    endif    
+    hi VisualNOS ctermbg=8 ctermfg=0 guibg=bg guifg=#cfcfcf gui=bold,underline
+    hi WarningMsg guibg=bg guifg=#ea0023 gui=bold
+    hi WildMenu guibg=#fbca01 guifg=#000000 gui=bold
 
-          </td>
-        </tr>
-      </table>
-    </td>
+    hi Comment guibg=bg guifg=#77be21 gui=none
+    hi Constant guibg=bg guifg=#dc8511 gui=none
+    hi Error guibg=bg guifg=#ea0023 gui=none
+    hi Identifier guibg=bg guifg=#16c9ae gui=none
+    hi Ignore guibg=bg guifg=bg gui=none
+    hi lCursor guibg=#c4ec93 guifg=#000000 gui=none
+    hi MatchParen guibg=#17d2b7 guifg=#000000 gui=none
+    hi PreProc guibg=bg guifg=#e09ea8 gui=none
+    hi Special guibg=bg guifg=#d3a901 gui=none
+    hi Statement guibg=bg guifg=#a7b4ed gui=bold
+    hi Todo guibg=#fedc56 guifg=#512b1e gui=bold
+    hi Type guibg=bg guifg=#95a4ea gui=bold
+    hi Underlined ctermbg=bg ctermfg=15 guibg=bg guifg=#8c91e8 gui=underline
 
-    <td class="darkbg"><img src="/images/spacer.gif" width="1" height="1" border="0" alt=""><br></td>
-    <td>
-      <table width="100%" cellpadding="10" cellspacing="0" border="0" bordercolor="red">
-        <tr>
-          <td valign="top">
+    hi htmlBold ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=bold
+    hi htmlBoldItalic ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=bold,italic
+    hi htmlBoldUnderline ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=bold,underline
+    hi htmlBoldUnderlineItalic ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=bold,underline,italic
+    hi htmlItalic ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=italic
+    hi htmlUnderline ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=underline
+    hi htmlUnderlineItalic ctermbg=bg ctermfg=15 guibg=bg guifg=fg gui=underline,italic
+endif
 
-<p class="errorheader">
-<b>Vim Online Error</b><br><br>
-</p>
-<p>
-download: I couldn't find the file you requested (src_id=13651), are you sure it exists?</p>
-<p>
-
-<!-- fill up with spaces to make the main field wide enough -->
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-<!-- finish off the framework -->
-          </td>
-        </tr>
-      </table>
-    </td>
-
-  </tr>
-</table>
-
-<!-- END OF THE PAGE BODY: BETWEEN HEADER AND FOOTER -->
-
-<table width="100%" cellpadding="0" cellspacing="0" border="0" bordercolor="red">
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr><td colspan="4" bgcolor="#000000"><img src="/images/spacer.gif" height="2" width="1" alt=""></td></tr>
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td></tr>
-  <tr>
-    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
-
-    <td align="left" valign="top"><small>
-      If you have questions or remarks about this site, visit the
-      <a href="http://vimonline.sf.net">vimonline development</a> pages.
-      Please use this site responsibly.
-      <br> 
-      
-      Questions about <a href="http://www.vim.org/about.php">Vim</a> should go
-      to the <a href="http://www.vim.org/maillist.php">maillist</a>.
-      Help Bram <a href="http://iccf-holland.org/">help Uganda</a>.
-      </small>
-	&nbsp;
-	&nbsp;
-
-    </td>
-
-    <td align="right" valign="top">
-      	<a href="//sourceforge.net/projects/vim" rel="nofollow"><img src="//sflogo.sourceforge.net/sflogo.php?group_id=8&type=1" width="88" height="31" border="0" alt="SourceForge.net Logo" /></a>
-    </td>
-
-    <td><img src="/images/spacer.gif" width="5" height="1" alt=""></td>
-  </tr>
-
-    
-  <tr><td colspan="4"><img src="/images/spacer.gif" width="1" height="5" alt=""></td>
-  
-  </tr>
-</table>
-
-<!-- for Google +1 button -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-</body>
-</html>
-
+hi! default link bbcodeBold htmlBold
+hi! default link bbcodeBoldItalic htmlBoldItalic
+hi! default link bbcodeBoldItalicUnderline htmlBoldUnderlineItalic
+hi! default link bbcodeBoldUnderline htmlBoldUnderline
+hi! default link bbcodeItalic htmlItalic
+hi! default link bbcodeItalicUnderline htmlUnderlineItalic
+hi! default link bbcodeUnderline htmlUnderline

@@ -1,93 +1,85 @@
-"   ________  _______   ________  ________  ________  ________  ___  ________     
-"  |\   ___ \|\  ___ \ |\   ____\|\   __  \|\   __  \|\   ____\|\  \|\   __  \    
-"  \ \  \_|\ \ \   __/|\ \  \___|\ \  \|\  \ \  \|\  \ \  \___|\ \  \ \  \|\  \   
-"   \ \  \ \\ \ \  \_|/_\ \_____  \ \   ____\ \   __  \ \  \    \ \  \ \  \\\  \  
-"    \ \  \_\\ \ \  \_|\ \|____|\  \ \  \___|\ \  \ \  \ \  \____\ \  \ \  \\\  \ 
+"   ________  _______   ________  ________  ________  ________  ___  ________
+"  |\   ___ \|\  ___ \ |\   ____\|\   __  \|\   __  \|\   ____\|\  \|\   __  \
+"  \ \  \_|\ \ \   __/|\ \  \___|\ \  \|\  \ \  \|\  \ \  \___|\ \  \ \  \|\  \
+"   \ \  \ \\ \ \  \_|/_\ \_____  \ \   ____\ \   __  \ \  \    \ \  \ \  \\\  \
+"    \ \  \_\\ \ \  \_|\ \|____|\  \ \  \___|\ \  \ \  \ \  \____\ \  \ \  \\\  \
 "     \ \_______\ \_______\____\_\  \ \__\    \ \__\ \__\ \_______\ \__\ \_______\
 "      \|_______|\|_______|\_________\|__|     \|__|\|__|\|_______|\|__|\|_______|
-"                         \|_________|                                            
-
-" A Terminal Vim colorscheme
-" Author:       Alessandro Yorba
-" Script URL:   https://github.com/AlessandroYorba/Despacio
-" License:      MIT
-
-"================================================================================
-"COLOR PALETTE:
-"================================================================================
-
-"White:
-"================================================================================
-"Cloud          254      #e4e4e4      http://www.colorhexa.com/e4e4e4
-
-"Black:
-"================================================================================
-"Abyss          16       #000000      http://www.colorhexa.com/000000
-"Pitch          232      #080808      http://www.colorhexa.com/080808
-"Midnight       233      #121212      http://www.colorhexa.com/121212
-"Twilight       234      #1c1c1c      http://www.colorhexa.com/1c1c1c
-
-"Gray:
-"================================================================================
-"Stars          188      #dfdfdf      http://www.colorhexa.com/dfdfdf
-"Sunset         235      #262626      http://www.colorhexa.com/262626
-"Day            236      #303030      http://www.colorhexa.com/303030
-"Shade          237      #3a3a3a      http://www.colorhexa.com/3a3a3a
-"Ash            238      #444444      http://www.colorhexa.com/444444
-"Pebble         239      #4e4e4e      http://www.colorhexa.com/4e4e4e
-"Graphite       240      #585858      http://www.colorhexa.com/585858
-"Fog            241      #626262      http://www.colorhexa.com/626262
-"Ash            243      #767676      http://www.colorhexa.com/767676
-"Stone          245      #8a8a8a      http://www.colorhexa.com/8a8a8a
-
-"Red:
-"================================================================================
-"Firecracker    131      #af5f5f      http://www.colorhexa.com/af5f5f
-"Scarlet        160      #d70000      http://www.colorhexa.com/d70000
-"Rose           167      #d75f5f      http://www.colorhexa.com/d75f5f
-"Cherry         196      #ff0000      http://www.colorhexa.com/ff0000
-
-"Green:
-"================================================================================
-"Marsh          108      #87af87      http://www.colorhexa.com/87af87
-"Fern           65       #5f875f      http://www.colorhexa.com/5f875f
-
-"Yellow:
-"================================================================================
-"Dune           187      #dfdfaf      http://www.colorhexa.com/dfdfaf
-"Flats          144      #afaf87      http://www.colorhexa.com/afaf87
-"Linen          222      #ffdf87      http://www.colorhexa.com/ffdf87
-"Sand           223      #ffdfaf      http://www.colorhexa.com/ffdfaf
-"Firefly        230      #ffffdf      http://www.colorhexa.com/ffffdf
-
-"Cyan:
-"================================================================================
-"Lilac          60       #5f5f87      http://www.colorhexa.com/5f5f87
-"Lake           66       #5f8787      http://www.colorhexa.com/5f8787
-"Oasis          109      #87afaf      http://www.colorhexa.com/87afaf
-"Robin          111      #87afff     http://www.colorhexa.com/87afff
-
-"Blue:
-"================================================================================
-"Heather        103      #8787af      http://www.colorhexa.com/8787af
-
-"Purple:
-"================================================================================
-"Lavender       146      #afafd7      http://www.colorhexa.com/afafd7
-
-"Orange:
-"================================================================================
-"Bluebells      130     #af5f00       http://www.colorhexa.com/af5f00
-"Oak            137     #af875f       http://www.colorhexa.com/af875f
-"Cider          166     #d75f00       http://www.colorhexa.com/d75f00
-"Mallow         179     #dfaf5f       http://www.colorhexa.com/dfaf5f
-"Cream          180     #dfaf87       http://www.colorhexa.com/dfaf87
-"Honeystrand    208     #ff8700       http://www.colorhexa.com/ff8700
-"Pomegranate    209     #ff875f       http://www.colorhexa.com/ff875f
-"Yam            215     #ffaf5f       http://www.colorhexa.com/ffaf5f
-"Sorbet         216     #ffaf87       http://www.colorhexa.com/ffaf87
+"                         \|_________|
 
 
+" AUTHOR:       Alessandro Yorba
+" SCRIPT URL:   https://github.com/AlessandroYorba/Despacio
+"
+" UPDATED:      Dec 16, 2017
+" LATEST CHANGES: Search
+"
+" MAINTAINER:       Alessandro Yorba    https://github.com/AlessandroYorba
+"
+" SUPPORTED ENVIRONMENTS:
+" 256 color terminals, Gui versions of vim, and Termguicolors versions of vim
+"
+" INSTALL INSTRUCTIONS:
+" Unix users, place despacio.vim in ~/.vim/colors
+" Windows users, place despacio.vim in  ~\vimfiles\colors
+"
+" SETUP AND CUSTOMIZATION:
+" To enable Despacio as your default colorscheme add the following to your .vimrc:
+"   colorscheme despacio
+"
+" The default UI for Despacio is a dark grey UI. However, depending on certain lighting conditions,
+" time of day or personal preference, you might want to try some of the darker or lighter versions.
+" To enable, add one of the following settings to your .vimrc
+"
+"   "Darker Grey
+"   let g:despacio_Sunset = 1
+"   colorscheme despacio
+"
+"   "Darkest Grey
+"   let g:despacio_Twilight = 1
+"   colorscheme despacio
+"
+"   "Amost Black
+"   let g:despacio_Midnight = 1
+"   colorscheme despacio
+"
+"   "Black
+"   let g:despacio_Pitch = 1
+"   colorscheme despacio
+"
+" MATCHING TERMINAL:
+" Other themes for despacio: https://github.com/AlessandroYorba/Despacio/terminal_colors
+"
+"-------------------------------------|-----------------------------------------
+"   BASIC         HEX                 |     BASIC         HEX                  |
+"-------------------------------------|-----------------------------------------
+"   Foreground    #ffffdf             |     Selection     #5f8787              |
+"   Background    #303030             |     Selected Text #eeeeee              |
+"   Bold          #ffffff             |                                        |
+"   Links         #d75f00             |                                        |
+"-------------------------------------|-----------------------------------------
+"
+"-------------------------------------|-----------------------------------------
+"   CURSOR         HEX                |                                        |
+"-------------------------------------|-----------------------------------------
+"   CursorColor   #ffffff             |                                        |
+"   CursorText    #000000             |                                        |
+"-------------------------------------|-----------------------------------------
+"
+"-------------------------------------|-----------------------------------------
+"   NORMAL        HEX          XTERM  |      BRIGHT        HEX          XTERM  |
+"-------------------------------------|-----------------------------------------
+"   Black         #303030      0      |      brBlack       #767676      8      |
+"   Red           #d75f5f      1      |      brRed         #d75f5f      9      |
+"   Green         #5f8787      2      |      brGreen       #5f8787      10     |
+"   Yellow        #dfaf87      3      |      brYellow      #dfaf87      11     |
+"   Blue          #af875f      4      |      brBlue        #af875f      12     |
+"   Magenta       #875f5f      5      |      brMagenta     #875f5f      13     |
+"   Cyan          #87afaf      6      |      brCyan        #87afaf      14     |
+"   White         #ffffdf      7      |      brWhite       #ffffdf      15     |
+"-------------------------------------|-----------------------------------------
+"
+" DESPACIO:
 set background=dark
 
 highlight clear
@@ -95,11 +87,8 @@ if exists("syntax_on")
     syntax reset
 endif
 
-"================================================================================
-" SET DEFAULT PARAMETERS:
-"================================================================================
-
 let g:colors_name="despacio"
+
 
 if !exists("g:despacio_Sunset")
     let g:despacio_Sunset = 0
@@ -109,7 +98,7 @@ if !exists("g:despacio_Twilight")
     let g:despacio_Twilight = 0
 endif
 
-if !exists("g:despacio_Midnight") 
+if !exists("g:despacio_Midnight")
     let g:despacio_Midnight = 0
 endif
 
@@ -117,284 +106,211 @@ if !exists("g:despacio_Pitch")
     let g:despacio_Pitch = 0
 endif
 
-if !exists("g:despacio_Clear_Skies")
-    let g:despacio_Clear_Skies = 0
-endif
 
-if !exists("g:despacio_Campfire")
-    let g:despacio_Campfire = 0
-endif
+"COMMON DESPACIO SETTINGS
+highlight PreProc               guifg=#d7875f  guibg=NONE     gui=NONE       ctermfg=173   ctermbg=NONE  cterm=NONE
+highlight Function              guifg=#dfaf87  guibg=NONE     gui=NONE       ctermfg=180   ctermbg=NONE  cterm=NONE
+highlight Identifier            guifg=#dfaf87  guibg=NONE     gui=NONE       ctermfg=180   ctermbg=NONE  cterm=NONE
+highlight Statement             guifg=#af875f  guibg=NONE     gui=NONE       ctermfg=137   ctermbg=NONE  cterm=NONE
+highlight Constant              guifg=#d78700  guibg=NONE     gui=NONE       ctermfg=172   ctermbg=NONE  cterm=NONE
+highlight Type                  guifg=#d78700  guibg=NONE     gui=NONE       ctermfg=172   ctermbg=NONE  cterm=NONE
+highlight String                guifg=#5f8787  guibg=NONE     gui=NONE       ctermfg=66    ctermbg=NONE  cterm=NONE
+highlight Special               guifg=#875f5f  guibg=NONE     gui=NONE       ctermfg=95    ctermbg=NONE  cterm=NONE
+highlight Conditional           guifg=#875f5f  guibg=NONE     gui=NONE       ctermfg=95    ctermbg=NONE  cterm=NONE
+highlight Operator              guifg=#dfaf87  guibg=NONE     gui=NONE       ctermfg=180   ctermbg=NONE  cterm=NONE
+highlight Title                 guifg=#d7875f  guibg=NONE     gui=NONE       ctermfg=173   ctermbg=NONE  cterm=NONE
+highlight StorageClass          guifg=#dfaf87  guibg=NONE     gui=NONE       ctermfg=180   ctermbg=NONE  cterm=NONE
+highlight htmlItalic            guifg=#ff875f  guibg=NONE     gui=NONE       ctermfg=209   ctermbg=NONE  cterm=NONE
+highlight htmlEndTag            guifg=#dfaf87  guibg=NONE     gui=NONE       ctermfg=180   ctermbg=NONE  cterm=NONE
+highlight cssTagName            guifg=#af875f  guibg=NONE     gui=NONE       ctermfg=137   ctermbg=NONE  cterm=NONE
+highlight cssClassName          guifg=#ff875f  guibg=NONE     gui=NONE       ctermfg=209   ctermbg=NONE  cterm=NONE
+highlight cssIdentifier         guifg=#ff875f  guibg=NONE     gui=NONE       ctermfg=209   ctermbg=NONE  cterm=NONE
 
-"================================================================================
+"DIFF
+highlight DiffAdd               guifg=#008787  guibg=NONE     gui=reverse    ctermfg=30   ctermbg=NONE  cterm=reverse
+highlight DiffText              guifg=#008787  guibg=NONE     gui=reverse    ctermfg=30   ctermbg=NONE  cterm=reverse
+highlight DiffChange            guifg=#005f5f  guibg=NONE     gui=reverse    ctermfg=23   ctermbg=NONE  cterm=reverse
+highlight DiffDelete            guifg=#af5f5f  guibg=NONE     gui=reverse    ctermfg=131   ctermbg=NONE  cterm=reverse
+
+"SPELLING
+highlight SpellBad              guifg=#d75f5f  guibg=NONE     gui=undercurl  ctermfg=167   ctermbg=NONE  cterm=undercurl
+highlight SpellLocal            guifg=#5f875f  guibg=NONE     gui=undercurl  ctermfg=65    ctermbg=NONE  cterm=undercurl
+highlight SpellCap              guifg=#87afff  guibg=NONE     gui=undercurl  ctermfg=111   ctermbg=NONE  cterm=undercurl
+highlight SpellRare             guifg=#ff8700  guibg=NONE     gui=undercurl  ctermfg=208   ctermbg=NONE  cterm=undercurl
+
+"WINDOW UI
+highlight MoreMsg               guifg=#af875f  guibg=NONE     gui=NONE       ctermfg=137   ctermbg=NONE  cterm=NONE
+highlight SpecialComment        guifg=#b2b2b2  guibg=NONE     gui=reverse    ctermfg=249   ctermbg=NONE  cterm=reverse
+highlight VimCommentTitle       guifg=#b2b2b2  guibg=NONE     gui=reverse    ctermfg=249   ctermbg=NONE  cterm=reverse
+highlight Underlined            guifg=#87afaf  guibg=NONE     gui=NONE       ctermfg=109    ctermbg=NONE  cterm=NONE
+highlight FoldColumn            guifg=#87afaf  guibg=NONE     gui=NONE       ctermfg=109   ctermbg=NONE  cterm=NONE
+highlight Todo                  guifg=#d78700  guibg=NONE     gui=reverse    ctermfg=172   ctermbg=NONE  cterm=reverse
+highlight Visual                guifg=#87afaf  guibg=NONE     gui=reverse    ctermfg=109   ctermbg=NONE  cterm=reverse
+highlight Question              guifg=#af875f  guibg=NONE     gui=NONE       ctermfg=137   ctermbg=NONE  cterm=NONE
+highlight Search                guifg=#dfaf00  guibg=NONE     gui=reverse    ctermfg=178   ctermbg=NONE  cterm=reverse
+highlight MatchParen            guifg=#87afaf  guibg=NONE     gui=reverse    ctermfg=109   ctermbg=NONE  cterm=reverse
+highlight Error                 guifg=#d75f5f  guibg=#121212  gui=reverse    ctermfg=167   ctermbg=233   cterm=reverse
+highlight ErrorMsg              guifg=#d75f5f  guibg=NONE     gui=NONE       ctermfg=167   ctermbg=NONE  cterm=NONE
+highlight WarningMsg            guifg=#ff875f  guibg=NONE     gui=NONE       ctermfg=209   ctermbg=NONE  cterm=NONE
+highlight netrwExe              guifg=#5f8787  guibg=NONE     gui=NONE       ctermfg=66    ctermbg=NONE  cterm=NONE
+highlight netrwlist             guifg=#875f5f  guibg=NONE     gui=NONE       ctermfg=95    ctermbg=NONE  cterm=NONE
+highlight Directory             guifg=#af875f  guibg=NONE     gui=NONE       ctermfg=137   ctermbg=NONE  cterm=NONE
+highlight Cursor                guifg=#000000  guibg=#ffffff  gui=NONE       ctermfg=16    ctermbg=231   cterm=NONE
+highlight CursorLineNr          guifg=#c6c6c6  guibg=NONE     gui=reverse    ctermfg=251   ctermbg=NONE  cterm=reverse
+highlight WildMenu              guifg=#c6c6c6  guibg=NONE     gui=reverse    ctermfg=251   ctermbg=NONE  cterm=reverse
+highlight ModeMsg               guifg=#dfdfdf  guibg=NONE     gui=NONE       ctermfg=188   ctermbg=NONE  cterm=NONE
+highlight SignColumn            guifg=#87af87  guibg=NONE     gui=NONE       ctermfg=108   ctermbg=NONE  cterm=NONE
+
 " DAY:
-"================================================================================
+if 1
+    "COLORS
+    highlight Normal            guifg=#ffffdf  guibg=#303030  gui=NONE     ctermfg=230   ctermbg=236   cterm=NONE
+    highlight Comment           guifg=#626262  guibg=NONE     gui=NONE     ctermfg=241   ctermbg=NONE  cterm=NONE
 
-hi Normal           ctermfg=254        guifg=#e4e4e4       ctermbg=236       guibg=#303030       cterm=NONE     gui=NONE
-hi LineNr           ctermfg=241        guifg=#626262       ctermbg=235       guibg=#262626       cterm=NONE     gui=NONE
-hi CursorLineNR     ctermfg=187        guifg=#dfdfaf       ctermbg=235       guibg=#262626       cterm=NONE     gui=NONE
-hi CursorLine       ctermfg=NONE       guifg=NONE          ctermbg=237       guibg=#3a3a3a       cterm=NONE     gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#262626  gui=NONE     ctermfg=255   ctermbg=235   cterm=NONE
+    highlight StatusLineNC      guifg=#767676  guibg=#262626  gui=NONE     ctermfg=243   ctermbg=235   cterm=NONE
+    highlight Pmenu             guifg=#767676  guibg=#3a3a3a  gui=NONE     ctermfg=243   ctermbg=237   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#3a3a3a  guibg=#3a3a3a  gui=NONE     ctermfg=237   ctermbg=237   cterm=NONE
+    highlight PmenuThumb        guifg=#3a3a3a  guibg=#3a3a3a  gui=NONE     ctermfg=237   ctermbg=237   cterm=NONE
+    highlight TabLine           guifg=#767676  guibg=#262626  gui=NONE     ctermfg=243   ctermbg=235   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#262626  gui=NONE     ctermfg=255   ctermbg=235   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#3a3a3a  gui=NONE     ctermfg=NONE  ctermbg=237   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#3a3a3a  gui=NONE     ctermfg=NONE  ctermbg=237   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#3a3a3a  gui=NONE     ctermfg=NONE  ctermbg=237   cterm=NONE
+    highlight Folded            guifg=#767676  guibg=NONE     gui=NONE     ctermfg=243   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#444444  guibg=#303030  gui=NONE     ctermfg=238   ctermbg=236   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#262626  gui=NONE     ctermfg=239   ctermbg=235   cterm=NONE
+    highlight NonText           guifg=#444444  guibg=NONE     gui=NONE     ctermfg=238   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#444444  guibg=NONE     gui=NONE     ctermfg=238   ctermbg=NONE  cterm=NONE
+endif
 
-" Number Column:
-hi Folded           ctermfg=187        guifg=#dfdfaf       ctermbg=NONE       guibg=NONE         cterm=NONE     gui=NONE
-hi FoldColumn       ctermfg=109        guifg=#87afaf       ctermbg=236        guibg=#303030      cterm=NONE     gui=NONE
-hi SignColumn       ctermfg=108        guifg=#87af87       ctermbg=236        guibg=#303030      cterm=NONE     gui=NONE
 
-" WindowTab Delimiters:
-hi TabLineFill      ctermfg=NONE        guifg=NONE          ctermbg=235       guibg=#262626      cterm=NONE     gui=NONE
-hi ColorColumn      ctermfg=NONE        guifg=NONE          ctermbg=237       guibg=#3a3a3a      cterm=NONE     gui=NONE
-hi VertSplit        ctermfg=137         guifg=#af875f       ctermbg=235       guibg=#262626      cterm=NONE     gui=NONE
-hi TabLine          ctermfg=241         guifg=#626262       ctermbg=235       guibg=#262626      cterm=NONE     gui=NONE
-hi TabLineSel       ctermfg=187         guifg=#dfdfaf       ctermbg=235       guibg=#262626      cterm=NONE     gui=NONE
-
-" File Navigation:
-hi Directory        ctermfg=216         guifg=#ffaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Search           ctermfg=130         guifg=#af5f00       ctermbg=187       guibg=#dfdfaf      cterm=NONE     gui=NONE
-
-" Prompt Status:
-hi Title             ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi ModeMsg           ctermfg=230        guifg=#ffffdf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi MoreMsg           ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Question          ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi StatusLine        ctermfg=230        guifg=#ffffdf       ctermbg=137       guibg=#af875f      cterm=NONE     gui=NONE
-hi StatusLineNC      ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE      cterm=underline gui=underline
-
-hi WildMenu          ctermfg=230        guifg=#ffffdf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
-
-" Visual Aid:
-hi NonText           ctermfg=239        guifg=#4e4e4e       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi SpecialKey        ctermfg=66         guifg=#5f8787       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Underlined        ctermfg=66         guifg=#5f8787       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi WarningMsg        ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi MatchParen        ctermfg=230        guifg=#ffffdf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
-hi Visual            ctermfg=230        guifg=#ffffdf       ctermbg=66        guibg=#5f8787      cterm=NONE     gui=NONE
-hi Todo              ctermfg=209        guifg=#ff875f       ctermbg=236       guibg=#303030      cterm=reverse  gui=reverse
-hi Error             ctermfg=167        guifg=#d75f5f       ctermbg=233       guibg=#121212      cterm=reverse  gui=reverse
-hi ErrorMsg          ctermfg=167        guifg=#d75f5f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE 
-
-" Variable Types:
-hi Constant          ctermfg=166        guifg=#d75f00       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi String            ctermfg=230        guifg=#ffffdf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Identifier        ctermfg=223        guifg=#ffdfaf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Function          ctermfg=223        guifg=#ffdfaf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi StorageClass      ctermfg=180        guifg=#dfaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-
-" Language Constructs:
-hi Label             ctermfg=180        guifg=#dfaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Statement         ctermfg=137        guifg=#af875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Operator          ctermfg=180        guifg=#dfaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Comment           ctermfg=241        guifg=#626262       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Special           ctermfg=216        guifg=#ffaf87       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-
-" C Like:
-hi PreProc           ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi Type              ctermfg=223        guifg=#ffdfaf       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-
-" HTML:
-hi htmlStatement     ctermfg=223        guifg=#ffdfaf        ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-hi htmlItalic        ctermfg=209        guifg=#ff875f       ctermbg=NONE      guibg=NONE         cterm=NONE     gui=NONE
-hi htmlArg           ctermfg=166        guifg=#d75f00        ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-"FIXME:
-" Diff:
-hi DiffAdd           ctermfg=234        guifg=#1c1c1c        ctermbg=223      guibg=#ffdfaf      cterm=NONE     gui=NONE
-hi DiffChange        ctermfg=234        guifg=#1c1c1c        ctermbg=137      guibg=#af875f      cterm=NONE     gui=NONE
-hi DiffText          ctermfg=234        guifg=#1c1c1c        ctermbg=180      guibg=#dfaf87      cterm=NONE     gui=NONE
-hi DiffDelete        ctermfg=187        guifg=#dfdfaf        ctermbg=131      guibg=#af5f5f      cterm=NONE     gui=NONE
-
-" Completion Menu:
-hi Pmenu             ctermfg=187        guifg=#dfdfaf        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi PmenuSel          ctermfg=230        guifg=#ffffdf        ctermbg=66       guibg=#5f8787      cterm=NONE     gui=NONE
-hi PmenuSbar         ctermfg=235        guifg=#262626        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-hi PmenuThumb        ctermfg=235        guifg=#262626        ctermbg=235      guibg=#262626      cterm=NONE     gui=NONE
-
-" Spelling:
-hi SpellBad          ctermfg=167        guifg=#d75f5f        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
-hi SpellLocal        ctermfg=65         guifg=#5f875f        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
-hi SpellCap          ctermfg=111        guifg=#87afff        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
-hi SpellRare         ctermfg=208        guifg=#ff8700        ctermbg=NONE     guibg=NONE         cterm=undercurl gui=undercurl
-
-"================================================================================
 " SUNSET:
-"================================================================================
 if g:despacio_Sunset
-    " Editor Settings:
-    hi Normal            ctermfg=188        guifg=#dfdfdf         ctermbg=235      guibg=#262626      cterm=NONE    gui=NONE
-    hi LineNr            ctermfg=240        guifg=#585858         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi CursorLine        ctermfg=NONE       guifg=NONE            ctermbg=236      guibg=#303030      cterm=NONE    gui=NONE
-    hi CursorLineNR      ctermfg=187        guifg=#dfdfaf         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
+    "COLORS
+    highlight Normal            guifg=#ffffdf  guibg=#262626  gui=NONE     ctermfg=230   ctermbg=235   cterm=NONE
+    highlight Comment           guifg=#585858  guibg=NONE     gui=NONE     ctermfg=240   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn        ctermfg=108        guifg=#87af87         ctermbg=235      guibg=#262626      cterm=NONE    gui=NONE
-    hi Folded            ctermfg=187        guifg=#dfdfaf         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-    hi FoldColumn        ctermfg=109        guifg=#87afaf         ctermbg=235      guibg=#262626      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#1c1c1c  gui=NONE     ctermfg=255   ctermbg=234   cterm=NONE
+    highlight StatusLineNC      guifg=#6c6c6c  guibg=#1c1c1c  gui=NONE     ctermfg=242   ctermbg=234   cterm=NONE
+    highlight Pmenu             guifg=#6c6c6c  guibg=#303030  gui=NONE     ctermfg=242   ctermbg=236   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#303030  guibg=#303030  gui=NONE     ctermfg=236   ctermbg=236   cterm=NONE
+    highlight PmenuThumb        guifg=#303030  guibg=#303030  gui=NONE     ctermfg=236   ctermbg=236   cterm=NONE
+    highlight TabLine           guifg=#6c6c6c  guibg=#1c1c1c  gui=NONE     ctermfg=242   ctermbg=234   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#1c1c1c  gui=NONE     ctermfg=255   ctermbg=234   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#1c1c1c  gui=NONE     ctermfg=NONE  ctermbg=234   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#303030  gui=NONE     ctermfg=NONE  ctermbg=236   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#303030  gui=NONE     ctermfg=NONE  ctermbg=236   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#303030  gui=NONE     ctermfg=NONE  ctermbg=236   cterm=NONE
+    highlight Folded            guifg=#6c6c6c  guibg=NONE     gui=NONE     ctermfg=242   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#3a3a3a  guibg=#262626  gui=NONE     ctermfg=237   ctermbg=235   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#1c1c1c  gui=NONE     ctermfg=239   ctermbg=234   cterm=NONE
+    highlight NonText           guifg=#3a3a3a  guibg=NONE     gui=NONE     ctermfg=237   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#3a3a3a  guibg=NONE     gui=NONE     ctermfg=237   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit         ctermfg=137        guifg=#af875f         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi ColorColumn       ctermfg=NONE       guifg=NONE            ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi TabLineFill       ctermfg=NONE       guifg=NONE            ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi TabLine           ctermfg=240        guifg=#585858         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi TabLineSel        ctermfg=187        guifg=#dfdfaf         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-
-    "Visual Aid:
-    hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=235      guibg=#262626      cterm=reverse  gui=reverse
-
-    " Language Constructs:
-    hi Comment           ctermfg=240        guifg=#585858         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-
-    " Completion Menu:
-    hi Pmenu             ctermfg=187        guifg=#dfdfaf         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi PmenuSbar         ctermfg=234        guifg=#1c1c1c         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi PmenuThumb        ctermfg=234        guifg=#1c1c1c         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-end
-
-"================================================================================
 " TWILIGHT:
-"================================================================================
 if g:despacio_Twilight
-    " Editor Settings:
-    hi Normal            ctermfg=188        guifg=#dfdfdf         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi LineNr            ctermfg=240        guifg=#585858         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi TabLine           ctermfg=240        guifg=#585858         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi CursorLine        ctermfg=NONE       guifg=NONE            ctermbg=235      guibg=#262626      cterm=NONE    gui=NONE
-    hi CursorLineNR      ctermfg=187        guifg=#dfdfaf         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
+    "COLORS
+    highlight Normal            guifg=#ffffdf  guibg=#1c1c1c  gui=NONE     ctermfg=230   ctermbg=234   cterm=NONE
+    highlight Comment           guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn        ctermfg=108        guifg=#87af87         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi Folded            ctermfg=187        guifg=#dfdfaf         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-    hi FoldColumn        ctermfg=109        guifg=#87afaf         ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight StatusLineNC      guifg=#626262  guibg=#121212  gui=NONE     ctermfg=241   ctermbg=233   cterm=NONE
+    highlight Pmenu             guifg=#626262  guibg=#262626  gui=NONE     ctermfg=241   ctermbg=235   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=NONE     ctermfg=255   ctermbg=66   cterm=NONE
+    highlight PmenuSbar         guifg=#262626  guibg=#262626  gui=NONE     ctermfg=235   ctermbg=235   cterm=NONE
+    highlight PmenuThumb        guifg=#262626  guibg=#262626  gui=NONE     ctermfg=235   ctermbg=235   cterm=NONE
+    highlight TabLine           guifg=#626262  guibg=#121212  gui=NONE     ctermfg=241   ctermbg=233   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#121212  gui=NONE     ctermfg=NONE  ctermbg=233   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#262626  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight Folded            guifg=#626262  guibg=NONE     gui=NONE     ctermfg=241   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#303030  guibg=#1c1c1c  gui=NONE     ctermfg=236   ctermbg=234   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight NonText           guifg=#303030  guibg=NONE     gui=NONE     ctermfg=236   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#303030  guibg=NONE     gui=NONE     ctermfg=236   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit         ctermfg=137        guifg=#af875f         ctermbg=233      guibg=#262626      cterm=NONE    gui=NONE
-    hi ColorColumn       ctermfg=NONE       guifg=NONE            ctermbg=235      guibg=#262626      cterm=NONE    gui=NONE
-    hi TabLineFill       ctermfg=NONE       guifg=NONE            ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi TabLine           ctermfg=240        guifg=#585858         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi TabLineSel        ctermfg=187        guifg=#dfdfaf         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
 
-    "Visual Aid:
-    hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=234      guibg=#1c1c1c      cterm=reverse  gui=reverse
-    
-    " Language Constructs:
-    hi Comment           ctermfg=240        guifg=#585858         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-
-    " Completion Menu:
-    hi Pmenu             ctermfg=187        guifg=#dfdfaf         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi PmenuSbar         ctermfg=233        guifg=#121212         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi PmenuThumb        ctermfg=233        guifg=#121212         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-end
-
-"================================================================================
 " MIDNIGHT:
-"================================================================================
 if g:despacio_Midnight
-    " Editor Settings:
-    hi Normal            ctermfg=188        guifg=#dfdfdf         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi LineNr            ctermfg=240        guifg=#585858         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi CursorLine        ctermfg=NONE       guifg=NONE            ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi CursorLineNR      ctermfg=187        guifg=#dfdfaf         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
+    "COLORS
+    highlight Normal            guifg=#ffffdf  guibg=#121212  gui=NONE     ctermfg=230   ctermbg=233   cterm=NONE
+    highlight Comment           guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn       ctermfg=108         guifg=#87af87         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi Folded           ctermfg=187         guifg=#dfdfaf         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-    hi FoldColumn       ctermfg=109         guifg=#87afaf         ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#1c1c1c  gui=none     ctermfg=255   ctermbg=234   cterm=none
+    highlight StatusLineNC      guifg=#585858  guibg=#1c1c1c  gui=none     ctermfg=240   ctermbg=234   cterm=none
+    highlight Pmenu             guifg=#585858  guibg=#1c1c1c  gui=none     ctermfg=240   ctermbg=234   cterm=none
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=none     ctermfg=255   ctermbg=66   cterm=none
+    highlight PmenuSbar         guifg=#1c1c1c  guibg=#1c1c1c  gui=NONE     ctermfg=234   ctermbg=234   cterm=NONE
+    highlight PmenuThumb        guifg=#1c1c1c  guibg=#1c1c1c  gui=NONE     ctermfg=234   ctermbg=234   cterm=NONE
+    highlight TabLine           guifg=#585858  guibg=#1c1c1c  gui=none     ctermfg=240   ctermbg=234   cterm=none
+    highlight TabLineSel        guifg=#eeeeee  guibg=#1c1c1c  gui=none     ctermfg=255   ctermbg=234   cterm=none
+    highlight TabLineFill       guifg=NONE     guibg=#1c1c1c  gui=NONE     ctermfg=NONE  ctermbg=234   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#080808  gui=NONE     ctermfg=NONE  ctermbg=232   cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#080808  gui=NONE     ctermfg=NONE  ctermbg=232   cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#080808  gui=NONE     ctermfg=NONE  ctermbg=232   cterm=NONE
+    highlight Folded            guifg=#585858  guibg=NONE     gui=NONE     ctermfg=240   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#262626  guibg=#121212  gui=NONE     ctermfg=235   ctermbg=233   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#1c1c1c  gui=none     ctermfg=239   ctermbg=234   cterm=none
+    highlight NonText           guifg=#262626  guibg=NONE     gui=NONE     ctermfg=235   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#262626  guibg=NONE     gui=NONE     ctermfg=235   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit        ctermfg=137         guifg=#af875f         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi ColorColumn      ctermfg=NONE        guifg=NONE            ctermbg=234      guibg=#1c1c1c      cterm=NONE    gui=NONE
-    hi TabLineFill      ctermfg=NONE        guifg=NONE            ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi TabLine          ctermfg=240         guifg=#585858         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi TabLineSel       ctermfg=187         guifg=#dfdfaf         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
 
-    "Visual Aid:
-    hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=233      guibg=#121212      cterm=reverse  gui=reverse
-
-    " Language Constructs:
-    hi Comment          ctermfg=240         guifg=#585858         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-
-    " Completion Menu:
-    hi Pmenu            ctermfg=187         guifg=#dfdfaf         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi PmenuSbar        ctermfg=232         guifg=#080808         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi PmenuThumb       ctermfg=232         guifg=#080808         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-end
-
-"================================================================================
 " PITCH:
-"================================================================================
 if g:despacio_Pitch
-    " Editor Settings:
-    hi Normal           ctermfg=188         guifg=#dfdfdf         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi LineNr           ctermfg=240         guifg=#585858         ctermbg=16       guibg=#000000      cterm=NONE    gui=NONE
-    hi CursorLine       ctermfg=NONE        guifg=NONE            ctermbg=233      guibg=#121212      cterm=NONE    gui=NONE
-    hi CursorLineNR     ctermfg=187         guifg=#dfdfaf         ctermbg=16       guibg=#000000      cterm=NONE    gui=NONE
+    "COLORS
+    highlight Normal            guifg=#ffffdf  guibg=#080808  gui=NONE     ctermfg=230   ctermbg=232   cterm=NONE
+    highlight Comment           guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
 
-    " Number Column:
-    hi SignColumn       ctermfg=108         guifg=#87af87         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
-    hi Folded           ctermfg=187         guifg=#dfdfaf         ctermbg=NONE     guibg=NONE         cterm=NONE    gui=NONE
-    hi FoldColumn       ctermfg=109         guifg=#87afaf         ctermbg=232      guibg=#080808      cterm=NONE    gui=NONE
+    "WINDOW UI
+    highlight StatusLine        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight StatusLineNC      guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight Pmenu             guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight PmenuSel          guifg=#eeeeee  guibg=#5f8787  gui=none     ctermfg=255   ctermbg=66   cterm=none
+    highlight PmenuSbar         guifg=#121212  guibg=#121212  gui=NONE     ctermfg=233   ctermbg=233   cterm=NONE
+    highlight PmenuThumb        guifg=#121212  guibg=#121212  gui=NONE     ctermfg=233   ctermbg=233   cterm=NONE
+    highlight TabLine           guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight TabLineSel        guifg=#eeeeee  guibg=#121212  gui=NONE     ctermfg=255   ctermbg=233   cterm=NONE
+    highlight TabLineFill       guifg=NONE     guibg=#121212  gui=NONE     ctermfg=NONE  ctermbg=235   cterm=NONE
+    highlight CursorLine        guifg=NONE     guibg=#000000  gui=NONE     ctermfg=NONE  ctermbg=16    cterm=NONE
+    highlight CursorColumn      guifg=NONE     guibg=#000000  gui=NONE     ctermfg=NONE  ctermbg=16    cterm=NONE
+    highlight ColorColumn       guifg=NONE     guibg=#000000  gui=NONE     ctermfg=NONE  ctermbg=16    cterm=NONE
+    highlight Folded            guifg=#4e4e4e  guibg=NONE     gui=NONE     ctermfg=239   ctermbg=NONE  cterm=NONE
+    highlight VertSplit         guifg=#1c1c1c  guibg=#080808  gui=NONE     ctermfg=234   ctermbg=232   cterm=NONE
+    highlight LineNr            guifg=#4e4e4e  guibg=#121212  gui=NONE     ctermfg=239   ctermbg=233   cterm=NONE
+    highlight NonText           guifg=#1c1c1c  guibg=NONE     gui=NONE     ctermfg=234   ctermbg=NONE  cterm=NONE
+    highlight SpecialKey        guifg=#1c1c1c  guibg=NONE     gui=NONE     ctermfg=234   ctermbg=NONE  cterm=NONE
+endif
 
-    " WindowTab Delimiters:
-    hi VertSplit        ctermfg=137         guifg=#af875f         ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
-    hi ColorColumn      ctermfg=NONE        guifg=NONE            ctermbg=233      guibg=#121212      cterm=NONE     gui=NONE
-    hi TabLineFill      ctermfg=NONE        guifg=NONE            ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
-    hi TabLine          ctermfg=240         guifg=#585858         ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
-    hi TabLineSel       ctermfg=187         guifg=#dfdfaf         ctermbg=16       guibg=#000000      cterm=NONE     gui=NONE
-
-    "Visual Aid:
-    hi Todo              ctermfg=209        guifg=#ff875f         ctermbg=232      guibg=#080808      cterm=reverse  gui=reverse
-
-    " Language Constructs:
-    hi Comment          ctermfg=240         guifg=#585858         ctermbg=NONE     guibg=NONE         cterm=NONE     gui=NONE
-
-    " Completion Menu:
-    hi Pmenu            ctermfg=187         guifg=#dfdfaf         ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-    hi PmenuSbar        ctermfg=16          guifg=#000000         ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-    hi PmenuThumb       ctermfg=16          guifg=#000000         ctermbg=16      guibg=#000000      cterm=NONE    gui=NONE
-end
-
-if g:despacio_Clear_Skies
-    " Editor Settings:
-    hi CursorLine       ctermfg=NONE        guifg=NONE            ctermbg=NONE    guibg=NONE         cterm=NONE    gui=NONE
-end
-
-"================================================================================
-" CAMPFIRE:
-"================================================================================
-if g:despacio_Campfire
-    let despacio_Hour = strftime("%H")
-
-    "Day: 7am - 5pm
-    if 7 <= despacio_Hour && despacio_Hour < 17
-        let g:despacio_Sunset = 0
-        let g:despacio_Twilight = 0
-        let g:despacio_Midnight = 0
-        let g:despacio_Pitch = 0
-
-    "Sunset: 5pm - 7pm
-    elseif 17 <= despacio_Hour && despacio_Hour < 19
-        let g:despacio_Sunset = 1
-        let g:despacio_Twilight = 0
-        let g:despacio_Midnight = 0
-        let g:despacio_Pitch = 0
-
-    "Twilight: 7pm - 9pm
-    elseif 19 <= despacio_Hour && despacio_Hour < 21
-        let g:despacio_Sunset = 0
-        let g:despacio_Twilight = 1
-        let g:despacio_Midnight = 0
-        let g:despacio_Pitch = 0
-
-    "Midnight: 9pm - 12am
-    elseif 21 <= despacio_Hour && despacio_Hour < 24
-        let g:despacio_Sunset = 0
-        let g:despacio_Twilight = 0
-        let g:despacio_Midnight = 1
-        let g:despacio_Pitch = 0
-
-    "Pitch: 12am - 7am
-    else
-        let g:despacio_Sunset = 0
-        let g:despacio_Twilight = 0
-        let g:despacio_Midnight = 0
-        let g:despacio_Pitch = 1
-
-    endif
-end
+" LICENSE:
+" Copyright (c) 2018 Alessandro Yorba
+"
+" Permission is hereby granted, free of charge, to any person obtaining a copy
+" of this software and associated documentation files (the "Software"), to deal
+" in the Software without restriction, including without limitation the rights
+" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+" copies of the Software, and to permit persons to whom the Software is
+" furnished to do so, subject to the following conditions:
+"
+" The above copyright notice and this permission notice shall be included in
+" all copies or substantial portions of the Software.
+"
+" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+" THE SOFTWARE.

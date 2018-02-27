@@ -1,7 +1,7 @@
 " Vim color file
 " Maintainer: github.com/prognostic
-" Last Change: 2017/06/01
-" version: 0.0.5
+" Last Change: 2018/02/05
+" version: 0.0.7
 " License: The MIT License (MIT)
 
 set background=light
@@ -40,8 +40,10 @@ hi Typedef        ctermfg=111  ctermbg=NONE cterm=bold
 hi Title          ctermfg=189  ctermbg=235  cterm=bold
 hi Folded         ctermfg=109  ctermbg=248  cterm=NONE
 hi PreCondit      ctermfg=220  ctermbg=NONE cterm=NONE
+hi TabLine        ctermfg=109  ctermbg=66   cterm=bold
+hi TabLineFill    ctermfg=109  ctermbg=66   cterm=bold
+hi TabLineSel     ctermfg=241  ctermbg=109  cterm=bold
 hi Include        ctermfg=15   ctermbg=NONE cterm=NONE
-hi TabLineSel     ctermfg=109  ctermbg=1    cterm=bold
 hi StatusLineNC   ctermfg=109  ctermbg=66   cterm=bold
 hi NonText        ctermfg=195  ctermbg=NONE cterm=NONE
 hi DiffText       ctermfg=NONE ctermbg=52   cterm=NONE
@@ -50,10 +52,10 @@ hi Debug          ctermfg=220  ctermbg=NONE cterm=NONE
 hi PMenuSbar      ctermfg=NONE ctermbg=102  cterm=NONE
 hi SpecialChar    ctermfg=220  ctermbg=NONE cterm=NONE
 hi StorageClass   ctermfg=111  ctermbg=NONE cterm=bold
-hi Todo           ctermfg=189  ctermbg=1    cterm=NONE
+hi Todo           ctermfg=229  ctermbg=109  cterm=bold
 hi Special        ctermfg=120  ctermbg=NONE cterm=NONE
 hi LineNr         ctermfg=109  ctermbg=NONE cterm=NONE
-hi StatusLine     ctermfg=109  ctermbg=1    cterm=bold
+hi StatusLine     ctermfg=241  ctermbg=109  cterm=bold
 hi Label          ctermfg=220  ctermbg=NONE cterm=bold
 hi PMenuSel       ctermfg=109  ctermbg=1    cterm=NONE
 hi Search         ctermfg=66   ctermbg=194  cterm=NONE
@@ -62,7 +64,6 @@ hi Statement      ctermfg=229  ctermbg=NONE cterm=bold
 hi SpellRare      ctermfg=189  ctermbg=235  cterm=underline
 hi Operator       ctermfg=152  ctermbg=NONE cterm=bold
 hi CursorLine     ctermfg=NONE ctermbg=NONE cterm=NONE
-hi TabLineFill    ctermfg=109  ctermbg=66   cterm=bold
 hi WarningMsg     ctermfg=195  ctermbg=88   cterm=NONE
 hi VisualNOS      ctermfg=109  ctermbg=189  cterm=underline
 hi DiffDelete     ctermfg=NONE ctermbg=235  cterm=NONE
@@ -93,7 +94,6 @@ hi Structure      ctermfg=111  ctermbg=NONE cterm=bold
 hi Macro          ctermfg=220  ctermbg=NONE cterm=NONE
 hi Underlined     ctermfg=189  ctermbg=235  cterm=underline
 hi DiffAdd        ctermfg=NONE ctermbg=236  cterm=NONE
-hi TabLine        ctermfg=109  ctermbg=66   cterm=bold
 hi cursorim       ctermfg=109  ctermbg=60   cterm=NONE
 hi EndOfBuffer    ctermfg=109  ctermbg=NONE cterm=NONE
 hi CursorLineNR   ctermfg=109  ctermbg=NONE cterm=bold

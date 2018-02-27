@@ -1,13 +1,20 @@
 " Author:   Andrey Bartashevitch <wind29121982@gmail.com>
-" URL:      Что-то на github
+" URL:      https://github.com/andbar-ru/vim-unicon
 " License:  MIT
-" Last Change: ?
+" Last Change: 2017-12-05
+" Version: 1.2
 " Descrition: Uniform contrast vim light/dark color scheme for gui and
-"             256 color terminals
+"             256-color and true-color terminals
 
 " Initialization: {{{
 " ---------------------------------------------------------------------
-if !has('gui_running') && &t_Co != 256
+if has('gui_running') || (has('termguicolors') && &termguicolors)
+    let s:true_color = 1
+else
+    let s:true_color = 0
+endif
+
+if !s:true_color && &t_Co < 256
     finish
 endif
 
@@ -15,99 +22,47 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-
 let g:colors_name = "unicon"
 
 " }}}
-" Options: "{{{
-" ---------------------------------------------------------------------
-if has("gui_running")
-    if !exists('g:unicon_italic')
-        let g:unicon_italic=1
-    endif
-else
-    let g:unicon_italic=0
-endif
 
-" }}}
-" GUI & term256 palettes: "{{{
+let s:none = {'gui': 'NONE', 'cterm': 'NONE'}
+
 if &background == "light"
-    if has("gui_running")
-        let s:vmode        = "gui"
-        let s:base1        = "#f1f1f1"
-        let s:base2        = "#d4d4d4"
-        let s:base3        = "#b9b9b9"
-        let s:base4        = "#848484"
-        let s:base5        = "#6a6a6a"
-        let s:base6        = "#3b3b3b"
-        let s:base7        = "#262626"
-        let s:base8        = "#111111"  " hue saturation lightness(lab)
-        let s:red          = "#ad2b52"  " 342 75 40
-        let s:orange       = "#944a25"  "  20 75 40
-        let s:yellow       = "#636119"  "  58 75 40
-        let s:green        = "#1b6d1b"  " 120 75 40
-        let s:cyan         = "#1a6969"  " 180 75 40
-        let s:blue         = "#3352ce"  " 228 75 40
-        let s:violet       = "#7635d6"  " 264 75 40
-        let s:magenta      = "#9e289e"  " 300 75 40
-    else
-        let s:vmode        = "cterm"
-        let s:base1        = "255"
-        let s:base2        = "188"
-        let s:base3        = "250"
-        let s:base4        = "102"
-        let s:base5        = "242"
-        let s:base6        = "237"
-        let s:base7        = "235"
-        let s:base8        = "233"
-        let s:red          = "124"
-        let s:orange       = "130"
-        let s:yellow       = "58"
-        let s:green        = "22"
-        let s:cyan         = "23"
-        let s:blue         = "62"
-        let s:violet       = "56"
-        let s:magenta      = "127"
-    endif
+    let s:base1   = {'gui': '#f1f1f1', 'cterm': 255}
+    let s:base2   = {'gui': '#d4d4d4', 'cterm': 188}
+    let s:base3   = {'gui': '#b9b9b9', 'cterm': 250}
+    let s:base4   = {'gui': '#848484', 'cterm': 102}
+    let s:base5   = {'gui': '#6a6a6a', 'cterm': 242}
+    let s:base6   = {'gui': '#3b3b3b', 'cterm': 237}
+    let s:base7   = {'gui': '#262626', 'cterm': 235}
+    let s:base8   = {'gui': '#111111', 'cterm': 233} " hue saturation lightness(lab)
+    let s:red     = {'gui': '#ad2b52', 'cterm': 124} " 342 75 40
+    let s:orange  = {'gui': '#944a25', 'cterm': 130} "  20 75 40
+    let s:yellow  = {'gui': '#636119', 'cterm':  58} "  58 75 40
+    let s:green   = {'gui': '#1b6d1b', 'cterm':  22} " 120 75 40
+    let s:cyan    = {'gui': '#1a6969', 'cterm':  23} " 180 75 40
+    let s:blue    = {'gui': '#3352ce', 'cterm':  62} " 228 75 40
+    let s:violet  = {'gui': '#7635d6', 'cterm':  56} " 264 75 40
+    let s:magenta = {'gui': '#9e289e', 'cterm': 127} " 300 75 40
 " if &background == "dark"
 else
-    if has("gui_running")
-        let s:vmode        = "gui"
-        let s:base1        = "#111111"
-        let s:base2        = "#262626"
-        let s:base3        = "#3b3b3b"
-        let s:base4        = "#6a6a6a"
-        let s:base5        = "#848484"
-        let s:base6        = "#b9b9b9"
-        let s:base7        = "#d4d4d4"
-        let s:base8        = "#f1f1f1"  " hue saturation lightness(lab)
-        let s:red          = "#db6e8e"  " 342 50 60
-        let s:orange       = "#c28161"  "  20 50 60
-        let s:yellow       = "#96944b"  "  58 50 60
-        let s:green        = "#51a251"  " 120 50 60
-        let s:cyan         = "#4e9d9d"  " 180 50 60
-        let s:blue         = "#748be8"  " 228 50 60
-        let s:violet       = "#a878f0"  " 264 50 60
-        let s:magenta      = "#d168d1"  " 300 50 60
-    else
-        let s:vmode       = "cterm"
-        let s:base1       = "233"
-        let s:base2       = "235"
-        let s:base3       = "237"
-        let s:base4       = "242"
-        let s:base5       = "102"
-        let s:base6       = "250"
-        let s:base7       = "188"
-        let s:base8       = "255"
-        let s:red         = "204"
-        let s:orange      = "173"
-        let s:yellow      = "143"
-        let s:green       = "71"
-        let s:cyan        = "73"
-        let s:blue        = "69"
-        let s:violet      = "140"
-        let s:magenta     = "170"
-    endif
+    let s:base1   = {'gui': '#111111', 'cterm': 233}
+    let s:base2   = {'gui': '#262626', 'cterm': 235}
+    let s:base3   = {'gui': '#3b3b3b', 'cterm': 237}
+    let s:base4   = {'gui': '#6a6a6a', 'cterm': 242}
+    let s:base5   = {'gui': '#848484', 'cterm': 102}
+    let s:base6   = {'gui': '#b9b9b9', 'cterm': 250}
+    let s:base7   = {'gui': '#d4d4d4', 'cterm': 188}
+    let s:base8   = {'gui': '#f1f1f1', 'cterm': 255}  " hue saturation lightness(lab)
+    let s:red     = {'gui': '#db6e8e', 'cterm': 204}  " 342 50 60
+    let s:orange  = {'gui': '#c28161', 'cterm': 173}  "  20 50 60
+    let s:yellow  = {'gui': '#96944b', 'cterm': 143}  "  58 50 60
+    let s:green   = {'gui': '#51a251', 'cterm': 71}   " 120 50 60
+    let s:cyan    = {'gui': '#4e9d9d', 'cterm': 73}   " 180 50 60
+    let s:blue    = {'gui': '#748be8', 'cterm': 69}   " 228 50 60
+    let s:violet  = {'gui': '#a878f0', 'cterm': 140}  " 264 50 60
+    let s:magenta = {'gui': '#d168d1', 'cterm': 170}  " 300 50 60
 endif
 "}}}
 
@@ -118,7 +73,7 @@ function! s:HL(group, fg, ...)
     if a:0 >= 1
         let bg = a:1
     else
-        let bg = 'NONE'
+        let bg = s:none
     endif
 
     if a:0 >= 2
@@ -128,11 +83,14 @@ function! s:HL(group, fg, ...)
     endif
 
     let histring = ['hi', a:group]
-    call add(histring, s:vmode.'fg=' . fg)
-    call add(histring, s:vmode.'bg=' . bg)
-    call add(histring, s:vmode.'=' . format)
+    call add(histring, 'guifg=' . fg['gui'])
+    call add(histring, 'ctermfg=' . fg['cterm'])
+    call add(histring, 'guibg=' . bg['gui'])
+    call add(histring, 'ctermbg=' . bg['cterm'])
+    call add(histring, 'gui=' . format)
+    call add(histring, 'cterm=' . format)
     if a:0 >= 3
-        call add(histring, 'guisp=' . a:3)
+        call add(histring, 'guisp=' . a:3['gui'])
     endif
     execute join(histring, ' ')
 endfunction
@@ -152,31 +110,31 @@ call s:HL('Statement', s:blue)
 call s:HL('PreProc', s:cyan)
 call s:HL('Type', s:orange)
 call s:HL('Special', s:magenta)
-call s:HL('Underlined', s:violet, 'NONE', 'underline')
-call s:HL('Error', s:red, 'NONE', 'bold')
-call s:HL('Todo', s:magenta, 'NONE', 'bold')
+call s:HL('Underlined', s:violet, s:none, 'underline')
+call s:HL('Error', s:red, s:none, 'bold')
+call s:HL('Todo', s:magenta, s:none, 'bold')
 ""
 ""}}}
 "" Extended highlighting "{{{
 "" ---------------------------------------------------------------------
-call s:HL('SpecialKey', s:base4, s:base2, 'bold')
-call s:HL('NonText', s:base3, 'NONE', 'bold')
+call s:HL('SpecialKey', s:base3, s:none, 'bold')
+call s:HL('NonText', s:base3, s:none, 'bold')
 call s:HL('StatusLine', s:base6, s:base2, 'reverse')
 call s:HL('StatusLineNC', s:base4, s:base2, 'reverse')
 call s:HL('Visual', s:base7, s:base3)
 call s:HL('VisualNOS', s:base7, s:base3, 'reverse')
 call s:HL('Directory', s:green)
-call s:HL('ErrorMsg', s:red, 'NONE', 'reverse')
-call s:HL('IncSearch', s:cyan, 'NONE', 'reverse')
-call s:HL('Search', s:yellow, 'NONE', 'reverse')
-call s:HL('MoreMsg', s:base6, 'NONE', 'bold')
-call s:HL('ModeMsg', s:base6, 'NONE', 'bold')
+call s:HL('ErrorMsg', s:red, s:none, 'reverse')
+call s:HL('IncSearch', s:cyan, s:none, 'reverse')
+call s:HL('Search', s:yellow, s:none, 'reverse')
+call s:HL('MoreMsg', s:base6, s:none, 'bold')
+call s:HL('ModeMsg', s:base6, s:none, 'bold')
 call s:HL('LineNr', s:base4, s:base2)
-call s:HL('Question', s:orange, 'NONE', 'bold')
+call s:HL('Question', s:orange, s:none, 'bold')
 call s:HL('VertSplit', s:base4, s:base4)
-call s:HL('Title', s:base7, 'NONE', 'bold')
-call s:HL('WarningMsg', s:red, 'NONE', 'bold')
-call s:HL('WildMenu', 'NONE', s:base2)
+call s:HL('Title', s:base7, s:none, 'bold')
+call s:HL('WarningMsg', s:red, s:none, 'bold')
+call s:HL('WildMenu', s:none, s:base2)
 call s:HL('Folded', s:base4, s:base2)
 call s:HL('FoldColumn', s:base4, s:base2)
 call s:HL('DiffAdd', s:green, s:base1, 'reverse')
@@ -185,28 +143,28 @@ call s:HL('DiffDelete', s:red, s:base1, 'reverse')
 call s:HL('DiffText', s:orange, s:base1, 'reverse')
 call s:HL('SignColumn', s:base5)
 call s:HL('Conceal', s:green)
-call s:HL('SpellBad', 'NONE', 'NONE', 'undercurl', s:red)
-call s:HL('SpellCap', 'NONE', 'NONE', 'undercurl', s:violet)
-call s:HL('SpellRare', 'NONE', 'NONE', 'undercurl', s:cyan)
-call s:HL('SpellLocal', 'NONE', 'NONE', 'undercurl', s:yellow)
+call s:HL('SpellBad', s:none, s:none, 'undercurl', s:red)
+call s:HL('SpellCap', s:none, s:none, 'undercurl', s:violet)
+call s:HL('SpellRare', s:none, s:none, 'undercurl', s:cyan)
+call s:HL('SpellLocal', s:none, s:none, 'undercurl', s:yellow)
 call s:HL('Pmenu', s:base7, s:base3)
 call s:HL('PmenuSel', s:base1, s:base5)
-call s:HL('PmenuSbar', 'NONE', s:base5)
-call s:HL('PmenuThumb', 'NONE', s:base7)
+call s:HL('PmenuSbar', s:none, s:base5)
+call s:HL('PmenuThumb', s:none, s:base7)
 call s:HL('TabLine', s:base5, s:base2, 'underline')
 call s:HL('TabLineFill', s:base5, s:base2, 'underline')
 call s:HL('TabLineSel', s:base7, s:base3, 'underline')
-call s:HL('CursorColumn', 'NONE', s:base2)
-call s:HL('CursorLine', 'NONE', s:base2)
+call s:HL('CursorColumn', s:none, s:base2)
+call s:HL('CursorLine', s:none, s:base2)
 call s:HL('CursorLineNr', s:base7, s:base1, 'bold')
-call s:HL('ColorColumn', 'NONE', s:base2)
+call s:HL('ColorColumn', s:none, s:base2)
 call s:HL('Cursor', s:base1, s:base8)
 call s:HL('lCursor', s:base1, s:magenta)
 call s:HL('MatchParen', s:base7, s:base3, 'bold')
 
 "}}}
 " Reread colorscheme when vim is transferring from terminal to gui mode.
-autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | endif
+autocmd GUIEnter * if !has('gui_running') | exe "colorscheme " . g:colors_name | endif
 
 " License: "{{{
 "

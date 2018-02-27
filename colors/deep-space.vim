@@ -1,7 +1,6 @@
-" Deep Space - An intergalactically friendly Vim color scheme
-" Author: Brandon Siders <tyrannicaltoucan@gmail.com>
+" Deep Space - An intergalactically friendly color scheme for Vim
+" Author: Brandon Siders
 " License: MIT
-" Version: 1.2-pre
 
 highlight clear
 
@@ -10,91 +9,85 @@ if exists('syntax_on')
 endif
 
 set background=dark
+let g:colors_name = 'deep-space'
 
-let t_Co = 256
-let colors_name = 'deep-space'
+let g:deepspace_italics = get(g:, 'deepspace_italics', 0)
 
-if !exists('g:deepspace_italics')
-    let g:deepspace_italics = 0
-endif
-
-let s:gray0     = ['#1b202a', 234]
-let s:gray1     = ['#232936', 235]
-let s:gray2     = ['#323c4d', 237]
-let s:gray3     = ['#51617d', 243]
-let s:gray4     = ['#9aa7bd', 248]
-let s:red       = ['#b15e7c', 132]
-let s:green     = ['#709d6c', 65]
-let s:yellow    = ['#b5a262', 143]
-let s:blue      = ['#608cc3', 67]
-let s:purple    = ['#8f72bf', 97]
-let s:cyan      = ['#56adb7', 73]
-let s:pink      = ['#c47ebd', 168]
-let s:orange    = ['#b3785d', 137]
-let s:neonblue  = ['#73a2e5', 75]
+" Color Palette
+let s:gray1     = '#1b202a'
+let s:gray2     = '#232936'
+let s:gray3     = '#323c4d'
+let s:gray4     = '#51617d'
+let s:gray5     = '#9aa7bd'
+let s:red       = '#b15e7c'
+let s:green     = '#709d6c'
+let s:yellow    = '#b5a262'
+let s:blue      = '#608cc3'
+let s:purple    = '#8f72bf'
+let s:cyan      = '#56adb7'
+let s:orange    = '#b3785d'
+let s:pink      = '#c47ebd'
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
-    if g:deepspace_italics == 0 && l:attr ==? 'italic'
+    if !g:deepspace_italics && l:attr ==# 'italic'
         let l:attr = 'none'
     endif
 
     if !empty(a:fg)
-        exec 'hi ' . a:group . ' guifg=' . a:fg[0] . ' ctermfg=' . a:fg[1]
+        exec 'hi ' . a:group . ' guifg=' . a:fg
     endif
-
     if !empty(a:bg)
-        exec 'hi ' . a:group . ' guibg=' . a:bg[0] . ' ctermbg=' . a:bg[1]
+        exec 'hi ' . a:group . ' guibg=' . a:bg
     endif
-
-    if l:attr != ''
+    if !empty(a:attr)
         exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
     endif
 endfun
 
 " Editor Highlights
-call s:HL('ColorColumn',                    '',         s:gray3,    '')
-call s:HL('Cursor',                         s:gray1,    s:neonblue, '')
-call s:HL('CursorColumn',                   '',         s:gray1,    '')
-call s:HL('CursorLine',                     '',         s:gray1,    'none')
+call s:HL('ColorColumn',                    '',         s:gray4,    '')
+call s:HL('Cursor',                         s:gray2,    s:gray5,    '')
+call s:HL('CursorColumn',                   '',         s:gray2,    '')
+call s:HL('CursorLine',                     '',         s:gray2,    'none')
 call s:HL('Directory',                      s:blue,     '',         '')
-call s:HL('DiffAdd',                        s:gray2,    s:green,    'none')
-call s:HL('DiffChange',                     s:gray2,    s:yellow,   'none')
-call s:HL('DiffDelete',                     s:gray2,    s:red,      'none')
-call s:HL('DiffText',                       s:gray2,    s:blue,     'none')
-call s:HL('ErrorMsg',                       s:red,      s:gray0,    'bold')
-call s:HL('VertSplit',                      s:gray3,    s:gray0,    'none')
-call s:HL('Folded',                         s:gray2,    s:gray0,    '')
-call s:HL('FoldColumn',                     s:cyan,     s:gray0,    '')
-call s:HL('SignColumn',                     s:gray1,    s:gray0,    '')
-call s:HL('LineNr',                         s:gray2,    '',         '')
-call s:HL('CursorLineNr',                   s:gray4,    s:gray1,    'none')
-call s:HL('MatchParen',                     s:gray1,    s:pink,     'bold')
+call s:HL('DiffAdd',                        s:gray3,    s:green,    'none')
+call s:HL('DiffChange',                     s:gray3,    s:yellow,   'none')
+call s:HL('DiffDelete',                     s:gray3,    s:red,      'none')
+call s:HL('DiffText',                       s:gray3,    s:blue,     'none')
+call s:HL('ErrorMsg',                       s:red,      s:gray1,    'bold')
+call s:HL('VertSplit',                      s:gray4,    s:gray1,    'none')
+call s:HL('Folded',                         s:gray3,    s:gray1,    '')
+call s:HL('FoldColumn',                     s:cyan,     s:gray1,    '')
+call s:HL('SignColumn',                     s:gray2,    s:gray1,    '')
+call s:HL('LineNr',                         s:gray3,    '',         '')
+call s:HL('CursorLineNr',                   s:gray5,    s:gray2,    'none')
+call s:HL('MatchParen',                     s:gray2,    s:pink,     'bold')
 call s:HL('ModeMsg',                        s:green,    '',         '')
 call s:HL('MoreMsg',                        s:green,    '',         '')
-call s:HL('NonText',                        s:gray3,    '',         '')
-call s:HL('Normal',                         s:gray4,    s:gray0,    'none')
-call s:HL('Pmenu',                          s:gray4,    s:gray2,    '')
-call s:HL('PmenuSel',                       s:gray1,    s:neonblue, '')
-call s:HL('PmenuSbar',                      s:gray2,    s:gray3,    '')
-call s:HL('PmenuThumb',                     s:gray3,    s:gray4,    '')
+call s:HL('NonText',                        s:gray4,    '',         '')
+call s:HL('Normal',                         s:gray5,    s:gray1,    'none')
+call s:HL('Pmenu',                          s:gray5,    s:gray3,    '')
+call s:HL('PmenuSel',                       s:gray2,    s:blue,     '')
+call s:HL('PmenuSbar',                      s:gray3,    s:gray4,    '')
+call s:HL('PmenuThumb',                     s:gray4,    s:gray5,    '')
 call s:HL('Question',                       s:green,    '',         '')
-call s:HL('Search',                         s:gray0,    s:yellow,   '')
-call s:HL('SpecialKey',                     s:gray3,    '',         '')
+call s:HL('Search',                         s:gray1,    s:yellow,   '')
+call s:HL('SpecialKey',                     s:gray4,    '',         '')
 call s:HL('SpellCap',                       s:blue,     '',         'undercurl')
 call s:HL('SpellBad',                       s:red,      '',         'undercurl')
-call s:HL('StatusLine',                     s:gray4,    s:gray2,    'none')
-call s:HL('StatusLineNC',                   s:gray1,    s:gray3,    '')
-call s:HL('TabLine',                        s:gray2,    s:gray0,    'none')
-call s:HL('TabLineFill',                    s:gray3,    s:gray1,    'none')
-call s:HL('TabLineSel',                     s:gray1,    s:gray3,    '')
+call s:HL('StatusLine',                     s:gray5,    s:gray3,    'none')
+call s:HL('StatusLineNC',                   s:gray2,    s:gray4,    '')
+call s:HL('TabLine',                        s:gray3,    s:gray1,    'none')
+call s:HL('TabLineFill',                    s:gray4,    s:gray2,    'none')
+call s:HL('TabLineSel',                     s:gray2,    s:gray4,    '')
 call s:HL('Title',                          s:yellow,   '',         'none')
-call s:HL('Visual',                         s:gray3,    s:gray1,    '')
+call s:HL('Visual',                         s:gray5,    s:gray3,    '')
 call s:HL('WarningMsg',                     s:red,      '',         '')
-call s:HL('WildMenu',                       s:gray1,    s:neonblue, '')
+call s:HL('WildMenu',                       s:gray2,    s:blue,     '')
 
-" Generic Syntax
-call s:HL('Comment',                        s:gray3,    '',         'italic')
+" Standard Syntax
+call s:HL('Comment',                        s:gray4,    '',         'italic')
 call s:HL('Constant',                       s:red,      '',         '')
 call s:HL('String',                         s:green,    '',         '')
 call s:HL('Character',                      s:green,    '',         '')
@@ -108,19 +101,20 @@ call s:HL('Macro',                          s:blue,     '',         '')
 call s:HL('Type',                           s:orange,   '',         'none')
 call s:HL('Structure',                      s:blue,     '',         '')
 call s:HL('Special',                        s:cyan,     '',         '')
-call s:HL('Error',                          s:red,      s:gray0,    'bold')
-call s:HL('Todo',                           s:pink,     s:gray0,    'bold')
+call s:HL('Underlined',                     s:blue,     '',         'none')
+call s:HL('Error',                          s:red,      s:gray1,    'bold')
+call s:HL('Todo',                           s:pink,     s:gray1,    'bold')
 
 " CSS/Sass/Less
 call s:HL('cssAttrComma',                   s:green,    '',         '')
 call s:HL('cssAttributeSelector',           s:green,    '',         '')
-call s:HL('cssBraces',                      s:gray4,    '',         '')
+call s:HL('cssBraces',                      s:gray5,    '',         '')
 call s:HL('cssClassName',                   s:orange,   '',         '')
 call s:HL('cssClassNameDot',                s:orange,   '',         '')
 call s:HL('cssIdentifier',                  s:yellow,   '',         '')
 call s:HL('cssImportant',                   s:purple,   '',         '')
 call s:HL('cssMediaType',                   s:purple,   '',         '')
-call s:HL('cssProp',                        s:gray4,    '',         '')
+call s:HL('cssProp',                        s:gray5,    '',         '')
 call s:HL('cssSelectorOp',                  s:blue,     '',         '')
 call s:HL('cssSelectorOp2',                 s:blue,     '',         '')
 
@@ -132,11 +126,11 @@ call s:HL('lessAmpersand',                  s:blue,     '',         '')
 call s:HL('lessClass',                      s:orange,   '',         '')
 call s:HL('lessClassChar',                  s:orange,   '',         '')
 call s:HL('lessFunction',                   s:yellow,   '',         '')
-call s:HL('lessCssAttribute',               s:gray4,    '',         '')
+call s:HL('lessCssAttribute',               s:gray5,    '',         '')
 
 " Git
-call s:HL('gitcommitComment',               s:gray3,    '',         'italic')
-call s:HL('gitcommitOnBranch',              s:gray3,    '',         'italic')
+call s:HL('gitcommitComment',               s:gray4,    '',         'italic')
+call s:HL('gitcommitOnBranch',              s:gray4,    '',         'italic')
 call s:HL('gitcommitFile',                  s:cyan,     '',         '')
 call s:HL('gitcommitHeader',                s:purple,   '',         '')
 call s:HL('gitcommitBranch',                s:orange,   '',         '')
@@ -160,10 +154,10 @@ call s:HL('htmlArg',                        s:yellow,   '',         '')
 call s:HL('htmlEndTag',                     s:purple,   '',         '')
 call s:HL('htmlTag',                        s:purple,   '',         '')
 call s:HL('htmlTagName',                    s:blue,     '',         '')
-call s:HL('htmlTitle',                      s:gray4,    '',         '')
+call s:HL('htmlTitle',                      s:gray5,    '',         '')
 
 " Javascript
-call s:HL('javaScriptBraces',               s:gray4,    '',         '')
+call s:HL('javaScriptBraces',               s:gray5,    '',         '')
 call s:HL('javaScriptIdentifier',           s:blue,     '',         '')
 call s:HL('javaScriptFunction',             s:blue,     '',         '')
 call s:HL('javaScriptNumber',               s:red,      '',         '')

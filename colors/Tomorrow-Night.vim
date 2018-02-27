@@ -378,6 +378,10 @@ call s:h("goBuiltins",          { "fg": "#00BFFF" })
 call s:h("goStruct",            { "fg": "#FF531A" })
 call s:h("goStructDef",         { "fg": "#FF531A" })
 call s:h("goMethod",            { "fg": "#CCFF00" })
+call s:h("goVarDefs",           { "fg": "#FF6117" })
+call s:h("goTypeName",          { "fg": "#9FFFC2" })
+call s:h("goReceiverType",      { "fg": "#9FFFC2" })
+call s:h("goTypeConstructor",   { "fg": "#9FFFC2" })
 
 " erlang
 call s:h("erlangGlobalFuncCall", { "fg": "#CCFF00" })

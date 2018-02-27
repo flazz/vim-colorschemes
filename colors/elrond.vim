@@ -20,7 +20,7 @@ let g:elrond#cursorline16 = get(g:, 'elrond#cursorline16' , 'bold')
 
 hi Normal     guifg=#dadada  guibg=black
 
-hi Comment    term=italic    ctermfg=DarkCyan        guifg=#00aaaa
+hi Comment    term=italic    ctermfg=DarkCyan        guifg=#00aaaa    cterm=italic
 hi Constant   term=underline ctermfg=Magenta         guifg=Magenta
 hi Special    term=bold      ctermfg=DarkMagenta     guifg=#aa00aa               gui=NONE
 hi Identifier term=underline ctermfg=Cyan            guifg=Cyan       cterm=bold gui=bold
@@ -113,6 +113,12 @@ if &t_Co < 256
     endif
 
     highlight link LiningVertSep LiningItem
+else
+    " Use more pleasant colors for Diff highlights whenever possible.
+    highlight DiffAdd    cterm=bold ctermbg=22 ctermfg=118
+    highlight DiffDelete cterm=bold ctermbg=52 ctermfg=88
+    highlight DiffChange cterm=NONE ctermbg=236
+    highlight DiffText   cterm=bold ctermbg=53 ctermfg=201
 endif
 
 highlight LiningWarn  ctermbg=Brown ctermfg=Yellow guibg=Brown guifg=Yellow
@@ -142,3 +148,6 @@ hi link SpecialChar    Special
 hi link Delimiter      Special
 hi link SpecialComment Special
 hi link Debug          Special
+
+hi ColorColumn NONE
+hi link ColorColumn    CursorLine

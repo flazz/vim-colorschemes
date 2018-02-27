@@ -9,7 +9,7 @@
 set background=dark
 highlight clear
 if exists("syntax_on")
-  syntax reset
+syntax reset
 endif
 let g:colors_name = "adventurous"
 
@@ -28,15 +28,19 @@ hi IncSearch ctermfg=234 ctermbg=220 cterm=NONE guifg=#191B1F guibg=#FFC620 gui=
 hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 hi Directory ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
 hi Folded ctermfg=32 ctermbg=234 cterm=NONE guifg=#277BD3 guibg=#191B1F gui=NONE
+if has('gui_running') || exists('neovim_dot_app')
 
-" hi Normal ctermfg=231 ctermbg=235 cterm=NONE guifg=#f8f8f2 guibg=#282a36 gui=NONE
-" hi LineNr ctermfg=59 ctermbg=235 cterm=NONE guifg=#64666d guibg=#282a36 gui=NONE
+hi Normal ctermfg=255 ctermbg=234 cterm=NONE guifg=#F8F8F2 guibg=#191B1F gui=NONE
+hi LineNr ctermfg=238 ctermbg=234 cterm=NONE guifg=#404449 guibg=#191B1F gui=NONE
+else
 
 hi Normal ctermfg=255 ctermbg=NONE cterm=NONE guifg=#F8F8F2 guibg=NONE gui=NONE
 hi LineNr ctermfg=238 ctermbg=NONE cterm=NONE guifg=#404449 guibg=NONE gui=NONE
+endif
+
 hi Boolean ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
 hi Character ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
-hi Comment ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
+hi Comment ctermfg=32 ctermbg=NONE cterm=italic guifg=#277BD3 guibg=NONE gui=italic
 hi Conditional ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi Constant ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Define ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
@@ -48,7 +52,7 @@ hi ErrorMsg ctermfg=255 ctermbg=168 cterm=NONE guifg=#F8F8F2 guibg=#DE347A gui=N
 hi WarningMsg ctermfg=255 ctermbg=168 cterm=NONE guifg=#F8F8F2 guibg=#DE347A gui=NONE
 hi Float ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
 hi Function ctermfg=70 ctermbg=NONE cterm=NONE guifg=#4BAE16 guibg=NONE gui=NONE
-hi Identifier ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=italic
+hi Identifier ctermfg=117 ctermbg=NONE cterm=italic guifg=#7FD6FA guibg=NONE gui=italic
 hi Keyword ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi Label ctermfg=220 ctermbg=NONE cterm=NONE guifg=#FFC620 guibg=NONE gui=NONE
 hi NonText ctermfg=238 ctermbg=238 cterm=NONE guifg=#404449 guibg=#404449 gui=NONE
@@ -58,7 +62,7 @@ hi PreProc ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi Special ctermfg=255 ctermbg=NONE cterm=NONE guifg=#F8F8F2 guibg=NONE gui=NONE
 hi SpecialKey ctermfg=238 ctermbg=238 cterm=NONE guifg=#404449 guibg=#404449 gui=NONE
 hi Statement ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
-hi StorageClass ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=italic
+hi StorageClass ctermfg=117 ctermbg=NONE cterm=italic guifg=#7FD6FA guibg=NONE gui=italic
 hi String ctermfg=220 ctermbg=NONE cterm=NONE guifg=#FFC620 guibg=NONE gui=NONE
 hi Tag ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi Title ctermfg=255 ctermbg=NONE cterm=bold guifg=#F8F8F2 guibg=NONE gui=bold
@@ -69,9 +73,9 @@ hi rubyClass ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NO
 hi rubyFunction ctermfg=70 ctermbg=NONE cterm=NONE guifg=#4BAE16 guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi rubySymbol ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
-hi rubyConstant ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=italic
+hi rubyConstant ctermfg=117 ctermbg=NONE cterm=italic guifg=#7FD6FA guibg=NONE gui=italic
 hi rubyStringDelimiter ctermfg=220 ctermbg=NONE cterm=NONE guifg=#FFC620 guibg=NONE gui=NONE
-hi rubyBlockParameter ctermfg=214 ctermbg=NONE cterm=NONE guifg=#F5BB12 guibg=NONE gui=italic
+hi rubyBlockParameter ctermfg=214 ctermbg=NONE cterm=italic guifg=#F5BB12 guibg=NONE gui=italic
 hi rubyInstanceVariable ctermfg=203 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi rubyInclude ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi rubyGlobalVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
@@ -83,7 +87,7 @@ hi rubyClassVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE 
 hi rubyOperator ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi rubyException ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi rubyPseudoVariable ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi rubyRailsUserClass ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=italic
+hi rubyRailsUserClass ctermfg=117 ctermbg=NONE cterm=italic guifg=#7FD6FA guibg=NONE gui=italic
 hi rubyRailsARAssociationMethod ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=NONE
 hi rubyRailsARMethod ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=NONE
 hi rubyRailsRenderMethod ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=NONE
@@ -96,14 +100,14 @@ hi htmlEndTag ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NON
 hi htmlTagName ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlArg ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi htmlSpecialChar ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
-hi javaScriptFunction ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=italic
+hi javaScriptFunction ctermfg=117 ctermbg=NONE cterm=italic guifg=#7FD6FA guibg=NONE gui=italic
 hi javaScriptRailsFunction ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=NONE
 hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlKey ctermfg=168 ctermbg=NONE cterm=NONE guifg=#DE347A guibg=NONE gui=NONE
 hi yamlAnchor ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlAlias ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi yamlDocumentHeader ctermfg=220 ctermbg=NONE cterm=NONE guifg=#FFC620 guibg=NONE gui=NONE
-hi cssURL ctermfg=214 ctermbg=NONE cterm=NONE guifg=#F5BB12 guibg=NONE gui=italic
+hi cssURL ctermfg=214 ctermbg=NONE cterm=italic guifg=#F5BB12 guibg=NONE gui=italic
 hi cssFunctionName ctermfg=117 ctermbg=NONE cterm=NONE guifg=#7FD6FA guibg=NONE gui=NONE
 hi cssColor ctermfg=32 ctermbg=NONE cterm=NONE guifg=#277BD3 guibg=NONE gui=NONE
 hi cssPseudoClassId ctermfg=70 ctermbg=NONE cterm=NONE guifg=#4BAE16 guibg=NONE gui=NONE

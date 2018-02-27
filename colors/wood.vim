@@ -1,66 +1,39 @@
-/download_script.php?src_id=4497
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:37:21 GMT
-Vary: Accept-Encoding
+" Vim color file
+" Maintainer:   freddydaoud@netscape.net
+" Last Change:  09 Apr 2005
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=4497">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:37:20 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=4454
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:37:20 GMT
-Vary: Accept-Encoding
+set background=dark
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+let g:colors_name="wood"
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=4454">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:37:21 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=5513
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:37:21 GMT
-Vary: Accept-Encoding
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=5513">here</a>.</p>
-</body></html>
-HTTP/1.1 301 Moved Permanently
-Server: nginx/1.13.9
-Date: Tue, 27 Feb 2018 18:37:21 GMT
-Content-Type: text/html; charset=iso-8859-1
-Content-Length: 267
-Connection: keep-alive
-Location: https://www.vim.org/scripts/download_script.php?src_id=4597
-Cache-Control: max-age=172800
-Expires: Thu, 01 Mar 2018 18:37:23 GMT
-Vary: Accept-Encoding
-
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
-</head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://www.vim.org/scripts/download_script.php?src_id=4597">here</a>.</p>
-</body></html>
+hi Normal			guibg=#81816A guifg=linen
+hi Cursor			guibg=#CFCFC6 guifg=black gui=bold
+hi VertSplit		guifg=#81816A guibg=#CCCCAA gui=none
+hi Folded			guibg=black guifg=white
+hi FoldColumn		guibg=lightgray guifg=#292926
+hi ModeMsg			guifg=black guibg=#CFCFC6
+hi MoreMsg			guifg=black guibg=#CFCFC6
+hi NonText			guifg=white guibg=#61614A gui=none
+hi Question			guifg=snow
+hi Search			guibg=#CFCFC6 guifg=black gui=bold
+hi SpecialKey		guifg=yellow
+hi StatusLine		guibg=#DFDFD6 guifg=black gui=none
+hi StatusLineNC	    guibg=#BFBFB6 guifg=black gui=none
+hi Title			guifg=bisque3
+hi Subtitle			guifg=black
+hi Visual			guifg=#292926 guibg=#CFCFC6 gui=none
+hi WarningMsg		guifg=salmon4 guibg=gray60 gui=bold
+hi Comment			guifg=#D1D1BA
+hi Constant			guifg=#FFFFCC gui=bold
+hi Identifier		guifg=#FFFFCC
+hi Statement		guifg=#000000
+hi PreProc			guifg=black gui=bold
+hi Type				guifg=#FFE0C0
+hi Special			guifg=navajowhite
+hi Ignore			guifg=grey29
+hi Todo				guibg=black guifg=white
+hi WildMenu			guibg=brown
+hi LineNr           guifg=#CCCCAA guibg=#61614A
