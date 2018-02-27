@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Material scheme by Nate Peterson
+" Material Darker scheme by Nate Peterson
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,19 +10,19 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-material.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-material-darker.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00        = "263238"
-let g:base16_gui00 = "263238"
-let s:gui01        = "2E3C43"
-let g:base16_gui01 = "2E3C43"
-let s:gui02        = "314549"
-let g:base16_gui02 = "314549"
-let s:gui03        = "546E7A"
-let g:base16_gui03 = "546E7A"
+let s:gui00        = "212121"
+let g:base16_gui00 = "212121"
+let s:gui01        = "303030"
+let g:base16_gui01 = "303030"
+let s:gui02        = "353535"
+let g:base16_gui02 = "353535"
+let s:gui03        = "4A4A4A"
+let g:base16_gui03 = "4A4A4A"
 let s:gui04        = "B2CCD6"
 let g:base16_gui04 = "B2CCD6"
 let s:gui05        = "EEFFFF"
@@ -99,7 +99,7 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#263238"
+  let g:terminal_color_0 =  "#212121"
   let g:terminal_color_1 =  "#F07178"
   let g:terminal_color_2 =  "#C3E88D"
   let g:terminal_color_3 =  "#FFCB6B"
@@ -107,7 +107,7 @@ if has("nvim")
   let g:terminal_color_5 =  "#C792EA"
   let g:terminal_color_6 =  "#89DDFF"
   let g:terminal_color_7 =  "#EEFFFF"
-  let g:terminal_color_8 =  "#546E7A"
+  let g:terminal_color_8 =  "#4A4A4A"
   let g:terminal_color_9 =  "#F07178"
   let g:terminal_color_10 = "#C3E88D"
   let g:terminal_color_11 = "#FFCB6B"
@@ -126,7 +126,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-material"
+let g:colors_name = "base16-material-darker"
 
 " Highlighting function
 function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
