@@ -63,21 +63,21 @@ function! s:set() abort
     let highlight_group = {}
 
     let highlight_group.Normal = [muteslate, none, none, none]
-    let highlight_group.Visual = [none, none, none, none]
+    let highlight_group.Visual = [none, lightred, none, none]
     " Cursor
     let highlight_group.Cursor = [muteslate, whiteblue, none, none]
     if &cursorline
         let highlight_group.CursorLine = [none, lightsalmon, none, none]
-        let highlight_group.CursorLineNr = [whiteblue, lightyellow, bolditalic, none]
+        let highlight_group.CursorLineNr = [mutegreen, none, none, none]
     else
         let highlight_group.CursorLineNr = [whiteblue, none, bolditalic, none]
     endif
 
     " Sidebar
-    let highlight_group.LineNr = [lightred, lightyellowgreen, bold, none]
+    let highlight_group.LineNr = [darkgreen, none, bold, none]
 
     " Folds
-    let highlight_group.Folded = [whiteblue, lightyellowgreen, none, none]
+    let highlight_group.Folded = [darkgreen, none, none, none]
 
     let highlight_group.MatchParen = [muteblue, whitepurple, none, none]
 
