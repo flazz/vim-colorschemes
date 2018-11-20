@@ -52,10 +52,13 @@ call <SID>set_hi("StatusLine", s:default_white, s:mid_gray, "bold")
 call <SID>set_hi("StatusLineNC", s:default_white, s:mid_gray, "NONE")
 call <SID>set_hi("Pmenu", s:none, s:none, "NONE")
 call <SID>set_hi("PmenuSel", s:none, s:dark_gray, "NONE")
-call <SID>set_hi("IncSearch", s:default_white, s:light_yellow, "NONE")
+call <SID>set_hi("IncSearch", s:dark_gray, s:light_yellow, "NONE")
 call <SID>set_hi("Search", s:none, s:none, "underline")
 call <SID>set_hi("Directory", s:lavender, s:none, "NONE")
 call <SID>set_hi("Folded", s:light_yellow, s:dark_gray, "NONE")
+call <SID>set_hi("TabLine", s:default_white, s:dark_gray, "NONE")
+call <SID>set_hi("TabLineSel", s:light_purple, s:dark_gray, "NONE")
+call <SID>set_hi("TabLineFill", s:default_white, s:dark_gray, "NONE")
 
 call <SID>set_hi("Define", s:gray_purple, s:none, "NONE")
 call <SID>set_hi("DiffAdd", s:default_white, s:dark_green, "bold")
@@ -82,6 +85,8 @@ call <SID>set_hi("PreProc", s:pink, s:none, "NONE")
 call <SID>set_hi("Special", s:light_purple, s:none, "NONE")
 call <SID>set_hi("SpecialKey", s:default_white, s:dark_gray, "NONE")
 call <SID>set_hi("Statement", s:pink, s:none, "NONE")
+call <SID>set_hi("SpellBad", s:pink, s:none, "underline")
+call <SID>set_hi("SpellCap", s:light_blue, s:none, "underline")
 call <SID>set_hi("StorageClass", s:mint, s:none, "NONE")
 call <SID>set_hi("String", s:light_blue, s:none, "NONE")
 call <SID>set_hi("Tag", s:pink, s:none, "NONE")
@@ -166,3 +171,16 @@ call <SID>set_hi("markdownH5", s:light_blue, s:none, "NONE")
 call <SID>set_hi("markdownH6", s:light_blue, s:none, "NONE")
 call <SID>set_hi("markdownHeadingDelimiter", s:light_blue, s:none, "NONE")
 call <SID>set_hi("markdownRule", s:light_blue, s:none, "NONE")
+
+call <SID>set_hi("SyntasticError", s:dark_gray, s:pink, "NONE")
+call <SID>set_hi("SyntasticWarning", s:dark_gray, s:light_blue, "NONE")
+
+" https://github.com/kien/rainbow_parentheses.vim
+if !exists("g:rbpt_colorpairs")
+  let g:rbpt_colorpairs = [
+        \ s:mint, s:light_blue, s:lavender, s:pink,
+        \ s:mint, s:light_blue, s:lavender, s:pink,
+        \ s:mint, s:light_blue, s:lavender, s:pink,
+        \ s:mint, s:light_blue, s:lavender, s:pink,
+        \ ]
+endif

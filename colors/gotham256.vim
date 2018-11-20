@@ -72,7 +72,7 @@ let s:colors.base0 = { 'gui': '#0c1014', 'cterm': 232 }
 let s:colors.base1 = { 'gui': '#11151c', 'cterm': 233 }
 let s:colors.base2 = { 'gui': '#091f2e', 'cterm': 17  }
 let s:colors.base3 = { 'gui': '#0a3749', 'cterm': 18  }
-let s:colors.base4 = { 'gui': '#245361', 'cterm': 24  }
+let s:colors.base4 = { 'gui': '#1e6479', 'cterm': 31  }
 let s:colors.base5 = { 'gui': '#599cab', 'cterm': 81  }
 let s:colors.base6 = { 'gui': '#99d1ce', 'cterm': 122 }
 let s:colors.base7 = { 'gui': '#d3ebe9', 'cterm': 194 }
@@ -86,6 +86,24 @@ let s:colors.violet  = { 'gui': '#4e5166', 'cterm': 60  }
 let s:colors.blue    = { 'gui': '#195466', 'cterm': 24  }
 let s:colors.cyan    = { 'gui': '#33859E', 'cterm': 44  }
 let s:colors.green   = { 'gui': '#2aa889', 'cterm': 78  }
+
+" Neovim :terminal colors.
+let g:terminal_color_0  = get(s:colors.base0, 'gui')
+let g:terminal_color_8  = g:terminal_color_0
+let g:terminal_color_1  = get(s:colors.red, 'gui')
+let g:terminal_color_9  = g:terminal_color_1
+let g:terminal_color_2  = get(s:colors.green, 'gui')
+let g:terminal_color_10 = g:terminal_color_2
+let g:terminal_color_3  = get(s:colors.yellow, 'gui')
+let g:terminal_color_11 = g:terminal_color_3
+let g:terminal_color_4  = get(s:colors.blue, 'gui')
+let g:terminal_color_12 = g:terminal_color_4
+let g:terminal_color_5  = get(s:colors.violet, 'gui')
+let g:terminal_color_13 = g:terminal_color_5
+let g:terminal_color_6  = get(s:colors.cyan, 'gui')
+let g:terminal_color_14 = g:terminal_color_6
+let g:terminal_color_7  = get(s:colors.base6, 'gui')
+let g:terminal_color_15 = g:terminal_color_7
 
 
 " Native highlighting ==========================================================
@@ -102,7 +120,7 @@ call s:Col('CursorLine', '', 'base1')
 call s:Col('CursorColumn', '', 'base1')
 
 " Sign column, line numbers.
-call s:Col('LineNr', 'base4', s:linenr_background)
+call s:Col('LineNr', 'blue', s:linenr_background)
 call s:Col('CursorLineNr', 'base5', s:linenr_background)
 call s:Col('SignColumn', '', s:linenr_background)
 call s:Col('ColorColumn', '', s:linenr_background)
@@ -111,7 +129,7 @@ call s:Col('ColorColumn', '', s:linenr_background)
 call s:Col('Visual', '', 'base3')
 
 " Easy-to-guess code elements.
-call s:Col('Comment', 'base4')
+call s:Col('Comment', 'blue')
 call s:Col('String', 'green')
 call s:Col('Number', 'orange')
 call s:Col('Statement', 'base5')
@@ -135,7 +153,7 @@ call s:Col('Type', 'orange')
 call s:Col('PreProc', 'red')
 
 " Tildes on the bottom of the page.
-call s:Col('NonText', 'base4')
+call s:Col('NonText', 'blue')
 
 " Concealed stuff.
 call s:Col('Conceal', 'cyan', s:background)
@@ -145,7 +163,7 @@ call s:Col('Todo', 'magenta', s:background)
 
 " The column separating vertical splits.
 call s:Col('VertSplit', 'base2', s:linenr_background)
-call s:Col('StatusLineNC', 'base4', 'base2')
+call s:Col('StatusLineNC', 'blue', 'base2')
 
 " Matching parenthesis.
 call s:Col('MatchParen', 'base1', 'orange')
@@ -163,13 +181,15 @@ call s:Attr('IncSearch', 'reverse')
 
 " Popup menu.
 call s:Col('Pmenu', 'base6', 'base2')
-call s:Col('PmenuSel', 'base7', 'base4')
+call s:Col('PmenuSel', 'base7', 'blue')
 call s:Col('PmenuSbar', '', 'base2')
-call s:Col('PmenuThumb', '', 'base4')
+call s:Col('PmenuThumb', '', 'blue')
 
 " Command line stuff.
 call s:Col('ErrorMsg', 'red', 'base1')
+call s:Col('Error', 'red', 'base1')
 call s:Col('ModeMsg', 'blue')
+call s:Col('WarningMsg', 'red')
 
 " Wild menu.
 " StatusLine determines the color of the non-active entries in the wild menu.
@@ -180,7 +200,7 @@ call s:Col('WildMenu', 'base7', 'cyan')
 call s:Col('Question', 'green')
 
 " Tab line.
-call s:Col('TabLineSel', 'base7', 'base4')  " the selected tab
+call s:Col('TabLineSel', 'base7', 'blue')  " the selected tab
 call s:Col('TabLine', 'base6', 'base2')     " the non-selected tabs
 call s:Col('TabLineFill', 'base0', 'base0') " the rest of the tab line
 
@@ -198,7 +218,7 @@ call s:Col('DiffText', 'base7', 'cyan')
 call s:Col('DiffAdded', 'green')
 call s:Col('DiffChanged', 'blue')
 call s:Col('DiffRemoved', 'red')
-call s:Col('DiffSubname', 'base4')
+call s:Col('DiffSubname', 'blue')
 
 " Directories (e.g. netrw).
 call s:Col('Directory', 'cyan')
@@ -230,7 +250,7 @@ call s:Col('GitGutterChangeDelete', 'magenta', s:linenr_background)
 " CtrlP
 call s:Col('CtrlPNoEntries', 'base7', 'orange') " no entries
 call s:Col('CtrlPMatch', 'green')               " matching part
-call s:Col('CtrlPPrtBase', 'base4')             " '>>>' prompt
+call s:Col('CtrlPPrtBase', 'blue')             " '>>>' prompt
 call s:Col('CtrlPPrtText', 'cyan')              " text in the prompt
 call s:Col('CtrlPPtrCursor', 'base7')           " cursor in the prompt
 

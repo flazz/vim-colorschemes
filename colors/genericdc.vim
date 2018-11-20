@@ -7,14 +7,14 @@ endif
 
 let g:colors_name = "genericdc"
 
-hi Normal       ctermfg=251 ctermbg=235
+hi Normal       ctermfg=251 ctermbg=NONE
 hi Special      ctermfg=253 ctermbg=NONE
-hi Comment      ctermfg=239 ctermbg=NONE cterm=italic
+hi Comment      ctermfg=241 ctermbg=NONE cterm=italic
 hi Constant     ctermfg=249 ctermbg=NONE
 hi String       ctermfg=110 ctermbg=NONE
 hi Number       ctermfg=167 ctermbg=NONE
 hi htmlTagName  ctermfg=249 ctermbg=NONE
-hi Identifier   ctermfg=239 ctermbg=NONE
+hi Identifier   ctermfg=243 ctermbg=NONE
 hi Statement    ctermfg=243 ctermbg=NONE cterm=NONE
 hi Boolean      ctermfg=243 ctermbg=NONE cterm=NONE
 hi PreProc      ctermfg=254 ctermbg=NONE

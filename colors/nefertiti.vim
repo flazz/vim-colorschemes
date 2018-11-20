@@ -124,7 +124,7 @@ if !exists("g:did_nefertiti_code_setup")
         hi CursorColumn     guibg=#000000
         hi CursorLine       guibg=#000000
         hi CursorLineNr     guifg=#ffee99   guibg=bg        gui=none
-        hi ColorColumn      guibg=#202020
+        hi ColorColumn      guibg=#383535
         """ }}}4
         """ Structural {{{4
         hi LineNr           guifg=#807060   guibg=#000000   gui=NONE

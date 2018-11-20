@@ -14,7 +14,7 @@ let g:colors_name = "wellsokai"
 hi Visual ctermfg=black ctermbg=228 cterm=NONE guifg=NONE guibg=#49483e gui=NONE
 hi String ctermfg=228 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 hi IncSearch ctermbg=228 ctermfg=black cterm=NONE guifg=#272822 guibg=#e6db74 gui=NONE
-hi Search ctermbg=228 ctermfg=black guifg=NONE guibg=NONE
+hi Search ctermbg=228 ctermfg=black guifg=#272822 guibg=#e6db74
 
 " keywords, operators
 " pinkish color
@@ -59,6 +59,7 @@ hi cssClassName ctermfg=120 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui
 hi htmlH2 ctermfg=120 ctermbg=NONE cterm=NONE guifg=#67930f guibg=NONE gui=NONE
 hi cssPseudoClassId ctermfg=120 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
 hi CursorLineNr ctermfg=120 ctermbg=237 cterm=NONE guifg=#3a3a3a guibg=NONE gui=NONE
+hi MRUFileName ctermfg=120 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui=NONE
 
 " grey
 " comments, folded
@@ -100,8 +101,7 @@ hi cssURL ctermfg=214 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=itali
 
 hi Label ctermfg=186 ctermbg=NONE cterm=NONE guifg=#e6db74 guibg=NONE gui=NONE
 hi NonText ctermfg=238 ctermbg=NONE cterm=NONE guifg=#49483e guibg=NONE gui=NONE
-hi SpecialKey ctermfg=236 ctermbg=None cterm=NONE guifg=#49483e guibg=#3c3d37 gui=NONE
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi SpecialKey ctermfg=236 ctermbg=None cterm=NONE guifg=#49483e guibg=NONE gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE

@@ -39,6 +39,7 @@ endif
 " Invisibles                  #6A6A6A
 " Comments                    #555555
 " CursorLine                  #292929
+" CursorLine (Eighties)       #111111
 " Selection                   #515151
 " Variables                   #787878
 " Operator                    #AAAAAA
@@ -211,6 +212,10 @@ hi Search                     guifg=#EFEFEF guibg=#40BDFF gui=NONE      ctermfg=
 hi Error                      guifg=#FF3D23 guibg=NONE    gui=bold      ctermfg=009   ctermbg=NONE
 hi Todo                       guifg=#DEDD5A guibg=NONE    gui=bold      ctermfg=226   ctermbg=NONE
 
+if s:background == "eighties"
+  hi CursorLine               guifg=NONE    guibg=#111111 gui=NONE      ctermfg=NONE  ctermbg=008     cterm=NONE
+endif
+
 if s:accent == "red"
   hi IncSearch                guifg=#EFEFEF guibg=#C5282F gui=NONE      ctermfg=255   ctermbg=001
   hi MatchParen               guifg=#191919 guibg=#FF3D23 gui=NONE      ctermfg=235   ctermbg=001
@@ -273,11 +278,12 @@ hi Folded                     guifg=#191919 guibg=#40BDFF gui=NONE      ctermfg=
 hi LineNr                     guifg=#6A6A6A guibg=#0F0F0F gui=NONE      ctermfg=245   ctermbg=000
 hi SignColumn                 guifg=#EFEFEF guibg=NONE    gui=NONE      ctermfg=255   ctermbg=NONE
 hi VertSplit                  guifg=#AAAAAA guibg=NONE    gui=NONE      ctermfg=246   ctermbg=000
-hi WildMenu                   guifg=#CCCCCC guibg=#292929 gui=NONE      ctermfg=250   ctermbg=008
+hi WildMenu                   guifg=#191919 guibg=#40BDFF gui=NONE      ctermfg=235   ctermbg=039
 hi OverLength                 guifg=NONE    guibg=#20272F gui=NONE      ctermfg=NONE  ctermbg=018
 
 if s:background == "eighties"
-  hi LineNr                   ctermbg=232
+  hi CursorLineNr             guifg=#CCCCCC guibg=#111111 gui=bold      ctermfg=255   ctermbg=NONE    cterm=bold
+  hi LineNr                   guifg=#6A6A6A guibg=#2D2D2D gui=NONE      ctermfg=245   ctermbg=232
 endif
 
 if s:accent == "red"
@@ -285,6 +291,7 @@ if s:accent == "red"
   hi PmenuThumb               guifg=#EFEFEF guibg=#FF3D23 gui=NONE      ctermfg=255   ctermbg=001
   hi FoldColumn               guifg=#191919 guibg=#FF3D23 gui=NONE      ctermfg=235   ctermbg=001
   hi Folded                   guifg=#191919 guibg=#FF3D23 gui=NONE      ctermfg=235   ctermbg=001
+  hi WildMenu                 guifg=#191919 guibg=#FF3D23 gui=NONE      ctermfg=235   ctermbg=001
   hi OverLength               guifg=NONE    guibg=#641900 gui=NONE      ctermfg=NONE  ctermbg=052
 endif
 
@@ -293,6 +300,7 @@ if s:accent == "green"
   hi PmenuThumb               guifg=#191919 guibg=#87BF19 gui=NONE      ctermfg=235   ctermbg=002
   hi FoldColumn               guifg=#191919 guibg=#87BF19 gui=NONE      ctermfg=235   ctermbg=002
   hi Folded                   guifg=#191919 guibg=#87BF19 gui=NONE      ctermfg=235   ctermbg=002
+  hi WildMenu                 guifg=#191919 guibg=#87BF19 gui=NONE      ctermfg=235   ctermbg=002
   hi OverLength               guifg=NONE    guibg=#32321E gui=NONE      ctermfg=NONE  ctermbg=022
 endif
 
@@ -301,6 +309,7 @@ if s:accent == "yellow"
   hi PmenuThumb               guifg=#191919 guibg=#DEDD5A gui=NONE      ctermfg=235   ctermbg=226
   hi FoldColumn               guifg=#191919 guibg=#DEDD5A gui=NONE      ctermfg=235   ctermbg=226
   hi Folded                   guifg=#191919 guibg=#DEDD5A gui=NONE      ctermfg=235   ctermbg=226
+  hi WildMenu                 guifg=#191919 guibg=#DEDD5A gui=NONE      ctermfg=235   ctermbg=226
   hi OverLength               guifg=NONE    guibg=#4B4B19 gui=NONE      ctermfg=NONE  ctermbg=058
 endif
 
@@ -309,6 +318,7 @@ if s:accent == "orange"
   hi PmenuThumb               guifg=#FFFFFF guibg=#C88623 gui=NONE      ctermfg=235   ctermbg=208
   hi FoldColumn               guifg=#191919 guibg=#C88623 gui=NONE      ctermfg=235   ctermbg=208
   hi Folded                   guifg=#191919 guibg=#C88623 gui=NONE      ctermfg=235   ctermbg=208
+  hi WildMenu                 guifg=#191919 guibg=#C88623 gui=NONE      ctermfg=235   ctermbg=208
   hi OverLength               guifg=NONE    guibg=#443A16 gui=NONE      ctermfg=NONE  ctermbg=094
 endif
 
@@ -317,6 +327,7 @@ if s:accent == "purple"
   hi PmenuThumb               guifg=#191919 guibg=#B294BB gui=NONE      ctermfg=235   ctermbg=013
   hi FoldColumn               guifg=#191919 guibg=#B294BB gui=NONE      ctermfg=235   ctermbg=013
   hi Folded                   guifg=#191919 guibg=#B294BB gui=NONE      ctermfg=235   ctermbg=013
+  hi WildMenu                 guifg=#191919 guibg=#B294BB gui=NONE      ctermfg=235   ctermbg=013
   hi OverLength               guifg=NONE    guibg=#332238 gui=NONE      ctermfg=NONE  ctermbg=054
 endif
 

@@ -1,68 +1,69 @@
-" hilal - a dark colorscheme for gvim
-" Copyright (c) 2016 Osman Koçak <kocakosm@gmail.com>
-" Licensed under the MIT/X11 license <https://opensource.org/licenses/MIT>
+"----------------------------------------------------------------------"
+" Hilal - A dark colorscheme for gvim                                  "
+" Copyright (c) 2016 Osman Koçak <kocakosm@gmail.com>                  "
+" Licensed under the MIT license <https://opensource.org/licenses/MIT> "
+"----------------------------------------------------------------------"
 
-set background=dark
-
+" Bootstrap
 highlight clear
 if exists("syntax_on")
-    syntax reset
+  syntax reset
 endif
+set background=dark
 let g:colors_name="hilal"
 
 " Editor settings
-hi Normal          guifg=#dadada    guibg=#171717    gui=NONE
-hi Cursor          guifg=#171717    guibg=#dadada    gui=NONE
-hi CursorLine      guifg=NONE       guibg=#1e1e1e    gui=NONE
-hi LineNr          guifg=#6f6f6f    guibg=#1e1e1e    gui=NONE
-hi CursorLineNR    guifg=#aeaeae    guibg=#1e1e1e    gui=BOLD
+hi Normal          guifg=#c0c6cb    guibg=#14171a    gui=NONE
+hi Cursor          guifg=#14171a    guibg=#c0c6cb    gui=NONE
+hi CursorLine      guifg=NONE       guibg=#181d22    gui=NONE
+hi LineNr          guifg=#343c45    guibg=NONE       gui=NONE
+hi CursorLineNR    guifg=#8198b9    guibg=#181d22    gui=NONE
 
-" Number column
-hi CursorColumn    guifg=NONE       guibg=#1e1e1e    gui=NONE
-hi FoldColumn      guifg=#6f6f6f    guibg=#1e1e1e    gui=NONE
-hi SignColumn      guifg=#6f6f6f    guibg=#1e1e1e    gui=NONE
-hi Folded          guifg=#aeaeae    guibg=#1e1e1e    gui=NONE
+" Columns
+hi CursorColumn    guifg=NONE       guibg=#181d22    gui=NONE
+hi FoldColumn      guifg=#343c45    guibg=NONE       gui=NONE
+hi SignColumn      guifg=#343c45    guibg=NONE       gui=NONE
+hi ColorColumn     guifg=NONE       guibg=#181d22    gui=NONE
+hi Folded          guifg=#8198b9    guibg=NONE       gui=NONE
 
 " Window/Tab delimiters
-hi VertSplit       guifg=#1e1e1e    guibg=#1e1e1e    gui=NONE
-hi ColorColumn     guifg=NONE       guibg=#1e1e1e    gui=NONE
-hi TabLine         guifg=NONE       guibg=NONE       gui=NONE
-hi TabLineFill     guifg=NONE       guibg=NONE       gui=NONE
-hi TabLineSel      guifg=NONE       guibg=NONE       gui=NONE
+hi VertSplit       guifg=#256f94    guibg=#181d22    gui=NONE
+hi TabLine         guifg=#7d8487    guibg=#0e2a37    gui=NONE
+hi TabLineFill     guifg=NONE       guibg=#181d22    gui=NONE
+hi TabLineSel      guifg=#dae7ed    guibg=#103040    gui=NONE
 
 " Navigation/Search
 hi Directory       guifg=#5fafaf    guibg=NONE       gui=NONE
-hi Search          guifg=#171717    guibg=#87af87    gui=NONE
-hi IncSearch       guifg=#171717    guibg=#87af87    gui=NONE
+hi Search          guifg=NONE       guibg=NONE       gui=REVERSE
+hi IncSearch       guifg=NONE       guibg=NONE       gui=REVERSE
 
 " Prompt/Status
-hi StatusLine      guifg=NONE       guibg=#002c2c    gui=NONE
-hi StatusLineNC    guifg=NONE       guibg=#1e1e1e    gui=NONE
-hi WildMenu        guifg=#002c2c    guibg=#dadada    gui=NONE
-hi Question        guifg=#87afaf    guibg=NONE       gui=NONE
-hi Title           guifg=#fafafa    guibg=NONE       gui=BOLD
-hi ModeMsg         guifg=#002c2c    guibg=#dadada    gui=BOLD
-hi MoreMsg         guifg=NONE       guibg=NONE       gui=NONE
-hi MoreMsg         guifg=#5fafaf    guibg=NONE       gui=NONE
+hi StatusLine      guifg=#dae7ed    guibg=#103040    gui=NONE
+hi StatusLineNC    guifg=#7d8487    guibg=#0e2a37    gui=NONE
+hi WildMenu        guifg=#103040    guibg=#c0c6cb    gui=NONE
+hi Question        guifg=#ffbb66    guibg=NONE       gui=NONE
+hi Title           guifg=#ecf2fa    guibg=NONE       gui=BOLD
+hi ModeMsg         guifg=#8198b9    guibg=NONE       gui=NONE
+hi MoreMsg         guifg=#8198b9    guibg=NONE       gui=NONE
 
 " Visual aid
 hi MatchParen      guifg=#fefede    guibg=NONE       gui=BOLD
-hi Visual          guifg=#dadada    guibg=#002c2c    gui=NONE
-hi VisualNOS       guifg=NONE       guibg=#002c2c    gui=NONE
-hi NonText         guifg=NONE       guibg=NONE       gui=NONE
+hi Visual          guifg=#c0c6cb    guibg=#2a5787    gui=NONE
+hi VisualNOS       guifg=#c0c6cb    guibg=#2a5787    gui=NONE
+hi NonText         guifg=#343c45    guibg=NONE       gui=NONE
 hi Todo            guifg=NONE       guibg=NONE       gui=BOLD,UNDERLINE
-hi underlined      guifg=NONE       guibg=NONE       gui=UNDERLINE
-hi Error           guifg=#ee7f7f    guibg=NONE       gui=NONE
-hi ErrorMsg        guifg=#ee7f7f    guibg=NONE       gui=NONE
+hi Underlined      guifg=NONE       guibg=NONE       gui=UNDERLINE
+hi Error           guifg=#ee6a6a    guibg=NONE       gui=NONE
+hi ErrorMsg        guifg=#ee6a6a    guibg=NONE       gui=NONE
 hi WarningMsg      guifg=#ffbb66    guibg=NONE       gui=NONE
 hi Ignore          guifg=NONE       guibg=NONE       gui=NONE
-hi SpecialKey      guifg=#ffdddd    guibg=NONE       gui=NONE
+hi SpecialKey      guifg=#7d8487    guibg=NONE       gui=NONE
 
 " Variable types
-hi Constant        guifg=#4fa4af    guibg=NONE       gui=NONE
+hi Constant        guifg=#4fafaf    guibg=NONE       gui=NONE
 hi String          guifg=#fefede    guibg=NONE       gui=NONE
-hi Identifier      guifg=#28a0e0    guibg=NONE       gui=NONE
-hi Function        guifg=#7acab0    guibg=NONE       gui=NONE
+hi Identifier      guifg=#3fafd0    guibg=NONE       gui=NONE
+hi Function        guifg=#b46896    guibg=NONE       gui=NONE
 hi link StringDelimiter String
 hi link Character       String
 hi link Number          Constant
@@ -70,13 +71,13 @@ hi link Boolean         Constant
 hi link Float           Number
 
 " Language constructs
-hi Statement       guifg=#2c89a9    guibg=NONE       gui=NONE
-hi Conditional     guifg=#2c89a9    guibg=NONE       gui=NONE
+hi Statement       guifg=#2c90a9    guibg=NONE       gui=NONE
+hi Conditional     guifg=#2c90a9    guibg=NONE       gui=NONE
 hi Operator        guifg=#ffffff    guibg=NONE       gui=NONE
-hi Keyword         guifg=#2c89a9    guibg=NONE       gui=NONE
-hi Comment         guifg=#4a4a4a    guibg=NONE       gui=ITALIC
-hi Special         guifg=#ffaa88    guibg=NONE       gui=NONE
-hi Delimiter       guifg=#2c89a9    guibg=NONE       gui=NONE
+hi Keyword         guifg=#2c90a9    guibg=NONE       gui=NONE
+hi Comment         guifg=#3f4f5a    guibg=NONE       gui=ITALIC
+hi Special         guifg=#ffbb66    guibg=NONE       gui=NONE
+hi Delimiter       guifg=#2c90a9    guibg=NONE       gui=NONE
 hi link Repeat         Conditional
 hi link Label          Conditional
 hi link Exception      Statement
@@ -87,7 +88,7 @@ hi link Tag            Special
 
 " C like syntax constructs
 hi PreProc         guifg=#609faf    guibg=NONE       gui=NONE
-hi Type            guifg=#2c89a9    guibg=NONE       gui=NONE
+hi Type            guifg=#2c90a9    guibg=NONE       gui=NONE
 hi link StorageClass Type
 hi link Structure    Type
 hi link Typedef      Type
@@ -99,40 +100,46 @@ hi link PreCondit    PreProc
 " Diff
 hi DiffAdd         guifg=#ffffff    guibg=#308a3f    gui=NONE
 hi DiffChange      guifg=#ffffff    guibg=#1f4f8a    gui=NONE
-hi DiffDelete      guifg=#ffffff    guibg=#9f4040    gui=NONE
-hi DiffText        guifg=#ffffff    guibg=#3f6fba    gui=NONE
+hi DiffDelete      guifg=#ffffff    guibg=#ee6a6a    gui=NONE
+hi DiffText        guifg=#104070    guibg=#fafafa    gui=NONE
 
 " Completion menu
-hi Pmenu           guifg=#d0d0d0    guibg=#002c2c    gui=NONE
-hi PmenuSel        guifg=#efefef    guibg=#002c2c    gui=BOLD
+hi Pmenu           guifg=#7d8487    guibg=#103040    gui=NONE
+hi PmenuSel        guifg=#dae7ed    guibg=#2a5787    gui=NONE
 hi PmenuSbar       guifg=NONE       guibg=NONE       gui=NONE
 hi PmenuThumb      guifg=NONE       guibg=NONE       gui=NONE
 
 " Spelling
-hi SpellBad        guifg=#ee7f7f    guibg=NONE       gui=NONE
+hi SpellBad        guifg=NONE       guibg=NONE       gui=UNDERCURL    guisp=#ee6a6a
 hi SpellCap        guifg=NONE       guibg=NONE       gui=NONE
 hi SpellLocal      guifg=NONE       guibg=NONE       gui=NONE
 hi SpellRare       guifg=NONE       guibg=NONE       gui=NONE
 
 " Syntax highlighting for Java
-hi JavaDocTags    guifg=#5e5e5e    guibg=NONE       gui=ITALIC
-hi JavaDocComment guifg=#4a4a4a    guibg=NONE       gui=ITALIC
-hi JavaAnnotation guifg=#6f8080    guibg=NONE       gui=ITALIC
+hi JavaDocComment  guifg=#3f4f5a    guibg=NONE       gui=ITALIC
+hi JavaAnnotation  guifg=#7a8a8f    guibg=NONE       gui=NONE
+hi JavaParen       guifg=#9fafba    guibg=NONE       gui=NONE
 hi link JavaScopeDecl      Identifier
-hi link JavaCommentTitle   JavaDocTags
+hi link JavaCommentTitle   JavaDocComment
+hi link JavaDocTags        JavaDocComment
 hi link JavaDocParam       JavaDocTags
 hi link JavaDocSeeTagParam JavaDocTags
 hi link JavaDocSeeTag      JavaDocTags
+hi link JavaParen1         JavaParen
 
 " Syntax highlighting for XML
-hi XmlTag         guifg=#4ca9b9    guibg=NONE       gui=NONE
+hi XmlTag          guifg=#4ca9b9    guibg=NONE       gui=NONE
 hi link XmlTagName XmlTag
 hi link XmlEndTag  XmlTag
+
+" Syntax highlighting for Javascript
+hi link JavaScriptNumber Number
+hi javaScriptBraces guifg=NONE      guibg=NONE      gui=NONE
+
+" Syntax highlighting for JSON
+hi jsonBraces      guifg=NONE       guibg=NONE       gui=NONE
 
 " Syntax highlighting for HTML
 hi link HtmlTag     XmlTagName
 hi link HtmlTagName XmlTagName
 hi link HtmlEndTag  XmlTagName
-
-" Syntax highlighting for Javascript
-hi link JavaScriptNumber Number

@@ -101,7 +101,9 @@ hi Debug		guifg=#f0f0f0	"debugging statements
 
 "hi Underlined
 
-hi Ignore	guifg=grey40
+" Ignore shouldn't be visible.
+hi Ignore   guifg=bg ctermfg=grey cterm=bold 
+
 "hi Error
 hi Todo		guifg=orangered guibg=yellow2
 

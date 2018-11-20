@@ -17,7 +17,7 @@
 "
 " Name: kolor
 " Author: Alessandro Di Martino <aledimax@gmail.com>
-" Version: 1.4.1
+" Version: 1.4.2
 " URL: https://github.com/zeis/vim-kolor
 " License: MIT
 "
@@ -25,8 +25,7 @@
 " DESCRIPTION
 " --------------------------------------------------------------------------
 " Colorful Vim color scheme with 256 color terminal support.
-" Designed for high readability and optimal visibility of every element,
-" and to be eye comfortable as well.
+" Designed for optimal visibility and comfort.
 "
 " --------------------------------------------------------------------------
 " INSTALLATION
@@ -39,18 +38,26 @@
 " --------------------------------------------------------------------------
 " Options must be set before the line "colorscheme kolor" in your vimrc.
 "
-" let g:kolor_italic=1                 " Enable italic. Default: 1
-" let g:kolor_bold=1                   " Enable bold. Default: 1
-" let g:kolor_underlined=0             " Enable underline. Default: 0
-" let g:kolor_alternative_matchparen=0 " Gray 'MatchParen' color. Default: 0
+" Enable italic. Default: 1
+" let g:kolor_italic=1
+"
+" Enable bold. Default: 1
+" let g:kolor_bold=1
+"
+" Enable underline. Default: 0
+" let g:kolor_underlined=0
+"
+" Gray 'MatchParen' color. Default: 0
+" let g:kolor_alternative_matchparen=0
+"
+" White foreground 'MatchParen' color that might work better with some terminals. Default: 0
+" let g:kolor_inverted_matchparen=0
 "
 " --------------------------------------------------------------------------
 " DONATIONS
 " --------------------------------------------------------------------------
-" This color scheme is dedicated to the the Ugandan children (see Vim's
-" website).
-" How about donating to them? (http://iccf-holland.org/click5.html).
-" And, if you donate, please, let me know.
+" This color scheme is dedicated to the the Ugandan children (How about
+" donating to them? see Vim's website).
 
 
 highlight clear
@@ -72,6 +79,9 @@ if !exists("g:kolor_underlined")
 endif
 if !exists("g:kolor_alternative_matchparen")
   let g:kolor_alternative_matchparen=0
+endif
+if !exists("g:kolor_inverted_matchparen")
+  let g:kolor_inverted_matchparen=0
 endif
 
 highlight Normal          guifg=#c6c6c6    guibg=#2e2d2b    gui=none
@@ -132,10 +142,12 @@ if g:kolor_bold==0
   highlight Todo            guifg=#75d7d8    guibg=NONE       gui=none
   highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=none
   highlight Title           guifg=#a080ea    guibg=NONE       gui=none
-  if g:kolor_alternative_matchparen==0
+  if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
     highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=none
-  else
+  elseif g:kolor_inverted_matchparen==0
     highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=none
+  else
+    highlight MatchParen      guifg=#ffffff     guibg=#ff0087   gui=none
   endif
 else
   highlight ErrorMsg        guifg=#d96e8a    guibg=NONE       gui=bold
@@ -151,10 +163,12 @@ else
   highlight Todo            guifg=#75d7d8    guibg=NONE       gui=bold
   highlight Keyword         guifg=#d96e8a    guibg=NONE       gui=bold
   highlight Title           guifg=#a080ea    guibg=NONE       gui=bold
-  if g:kolor_alternative_matchparen==0
+  if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
     highlight MatchParen      guifg=#2e2c29    guibg=#ff5fd7    gui=bold
-  else
+  elseif g:kolor_inverted_matchparen==0
     highlight MatchParen      guifg=#2e2c29    guibg=#9e9e9e    gui=bold
+  else
+    highlight MatchParen      guifg=#ffffff     guibg=#ff0087   gui=bold
   endif
 endif
 if g:kolor_italic==0
@@ -232,10 +246,12 @@ if &t_Co > 255
     highlight Todo            ctermfg=80      ctermbg=none    cterm=none
     highlight Keyword         ctermfg=168     ctermbg=none    cterm=none
     highlight Title           ctermfg=141     ctermbg=none    cterm=none
-    if g:kolor_alternative_matchparen==0
+    if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
       highlight MatchParen      ctermfg=235     ctermbg=206     cterm=none
-    else
+    elseif g:kolor_inverted_matchparen==0
       highlight MatchParen      ctermfg=235     ctermbg=247     cterm=none
+    else
+      highlight MatchParen      ctermfg=255     ctermbg=198     cterm=none
     endif
   else
     highlight ErrorMsg        ctermfg=168     ctermbg=none    cterm=bold
@@ -251,10 +267,12 @@ if &t_Co > 255
     highlight Todo            ctermfg=80      ctermbg=none    cterm=bold
     highlight Keyword         ctermfg=168     ctermbg=none    cterm=bold
     highlight Title           ctermfg=141     ctermbg=none    cterm=bold
-    if g:kolor_alternative_matchparen==0
+    if g:kolor_alternative_matchparen==0 && g:kolor_inverted_matchparen==0
       highlight MatchParen      ctermfg=235     ctermbg=206     cterm=bold
-    else
+    elseif g:kolor_inverted_matchparen==0
       highlight MatchParen      ctermfg=235     ctermbg=247     cterm=bold
+    else
+      highlight MatchParen      ctermfg=255     ctermbg=198     cterm=bold
     endif
   endif
   if g:kolor_underlined==0

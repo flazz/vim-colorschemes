@@ -18,16 +18,16 @@ let g:elrond#cursorline   = get(g:, 'elrond#cursorline',         1)
 let g:elrond#cursorline16 = get(g:, 'elrond#cursorline16' , 'bold')
 
 
-hi Normal     guifg=#fafafa  guibg=black
+hi Normal     guifg=#dadada  guibg=black
 
-hi Comment    term=italic    ctermfg=DarkCyan        guifg=#80a0ff
+hi Comment    term=italic    ctermfg=DarkCyan        guifg=#00aaaa
 hi Constant   term=underline ctermfg=Magenta         guifg=Magenta
-hi Special    term=bold      ctermfg=DarkMagenta     guifg=Red
-hi Identifier term=underline cterm=bold ctermfg=Cyan guifg=#40ffff
-hi Statement  term=bold      ctermfg=Yellow gui=bold guifg=#aa4444
-hi PreProc    term=underline ctermfg=LightBlue       guifg=#ff80ff
-hi Type       term=underline ctermfg=LightGreen      guifg=#60ff60 gui=bold
-hi Function   term=bold      ctermfg=White           guifg=White
+hi Special    term=bold      ctermfg=DarkMagenta     guifg=#aa00aa               gui=NONE
+hi Identifier term=underline ctermfg=Cyan            guifg=Cyan       cterm=bold gui=bold
+hi Statement  term=bold      ctermfg=Yellow          guifg=Yellow                gui=NONE
+hi PreProc    term=underline ctermfg=LightBlue       guifg=#99ccff
+hi Type       term=underline ctermfg=LightGreen      guifg=LightGreen            gui=NONE
+hi Function   term=bold      ctermfg=White           guifg=White                 gui=NONE
 hi Repeat     term=underline ctermfg=White           guifg=white
 hi Operator                  ctermfg=Red             guifg=Red
 hi Ignore                    ctermfg=black           guifg=bg
@@ -36,44 +36,46 @@ hi Todo       term=standout  ctermbg=Yellow ctermfg=Black guifg=Blue guibg=Yello
 
 highlight CursorLine NONE
 
-if &t_Co == 256
+if &t_Co >= 256 || !empty($NVIM_TUI_ENABLE_TRUE_COLOR)
     if g:elrond#cursorline
         set cursorline
-        highlight CursorLine ctermbg=233
     endif
+endif
 
-    highlight CursorLineNr  ctermbg=235 ctermfg=246
-    highlight LineNr        ctermbg=234 ctermfg=238
-    highlight SignColumn    ctermbg=234
-    highlight Pmenu         ctermbg=235 ctermfg=White
-    highlight PmenuSel      ctermbg=238 ctermfg=White
-    highlight PmenuSbar     ctermbg=238
-    highlight PmenuThumb    ctermbg=240
-    highlight VertSplit     ctermbg=235 ctermfg=235
-    highlight StatusLine    ctermbg=235 ctermfg=230 cterm=NONE
-    highlight StatusLineNC  ctermbg=235 ctermfg=246 cterm=NONE
-    highlight TabLine       ctermbg=235 ctermfg=246 cterm=NONE
-    highlight TabLineSel    ctermbg=246 ctermfg=235
-    highlight TabLineFill   ctermbg=235             cterm=NONE
+highlight CursorLine    ctermbg=234               guibg=#1c1c1c
+highlight CursorLineNr  ctermbg=235 ctermfg=246   guibg=#262626 guifg=#949494
+highlight LineNr        ctermbg=234 ctermfg=238   guibg=#1c1c1c guifg=#444444
+highlight SignColumn    ctermbg=234               guibg=#1c1c1c
+highlight Pmenu         ctermbg=235 ctermfg=White guibg=#262626 guifg=#ffffff
+highlight PmenuSel      ctermbg=238 ctermfg=White guibg=#444444 guifg=#ffffff
+highlight PmenuSbar     ctermbg=238               guibg=#444444
+highlight PmenuThumb    ctermbg=240               guibg=#585858
+highlight VertSplit     ctermbg=235 ctermfg=235   guibg=#262626 guifg=#262626
+highlight StatusLine    ctermbg=235 ctermfg=248   guibg=#262626 guifg=#ffffd7 cterm=NONE gui=NONE
+highlight StatusLineNC  ctermbg=235 ctermfg=246   guibg=#262626 guifg=#949494 cterm=NONE gui=NONE
+highlight TabLine       ctermbg=235 ctermfg=246   guibg=#262626 guifg=#949494 cterm=NONE gui=NONE
+highlight TabLineSel    ctermbg=246 ctermfg=235   guibg=#949494 guifg=#262626 cterm=NONE gui=NONE
+highlight TabLineFill   ctermbg=235               guibg=#262626               cterm=NONE gui=NONE
 
-    highlight LiningItem    ctermbg=236 ctermfg=252
-    highlight LiningVertSep ctermbg=236 ctermfg=240
-    highlight LiningBufName ctermbg=237 ctermfg=252 cterm=bold
-    highlight LiningLnCol   ctermbg=237 ctermfg=252
-else
+highlight LiningItem    ctermbg=236 ctermfg=252   guibg=#303030 guifg=#d0d0d0
+highlight LiningVertSep ctermbg=236 ctermfg=240   guibg=#303030 guifg=#585858
+highlight LiningBufName ctermbg=237 ctermfg=252   guibg=#3a3a3a guifg=#d0d0d0 cterm=bold gui=bold
+highlight LiningBufPath ctermbg=237 ctermfg=252   guibg=#3a3a3a guifg=#d0d0d0 cterm=NONE gui=NONE
+
+if &t_Co < 256
     "
     " Common definitions for 8 & 16 color terminals
     "
-    highlight CursorLineNr  ctermbg=DarkGrey  ctermfg=White     cterm=bold
+    highlight CursorLineNr  ctermbg=DarkGrey  ctermfg=White     cterm=bold gui=bold
     highlight LineNr        ctermbg=DarkGrey  ctermfg=LightGrey
-    highlight SignColumn    ctermbg=Black                       cterm=bold
+    highlight SignColumn    ctermbg=Black                       cterm=bold gui=bold
     highlight VertSplit     ctermbg=DarkGrey  ctermfg=DarkGrey
     highlight StatusLineNC  ctermbg=LightGrey ctermfg=0         cterm=reverse,bold
     highlight TabLine       ctermbg=DarkGrey  ctermfg=LightGrey cterm=NONE
     highlight TabLineSel    ctermbg=LightGrey ctermfg=White
     highlight TabLineFill   ctermbg=DarkGrey                    cterm=NONE
 
-    if &t_Co == 16
+    if &t_Co >= 16
         if g:elrond#cursorline
             set cursorline
             if g:elrond#cursorline16 == 'bold'
@@ -86,13 +88,14 @@ else
         endif
 
         highlight Pmenu         ctermbg=DarkGrey  ctermfg=White
-        highlight PmenuSel      ctermbg=LightGrey ctermfg=White     cterm=bold
+        highlight PmenuSel      ctermbg=LightGrey ctermfg=White cterm=bold
         highlight PmenuSbar     ctermbg=DarkGrey  ctermfg=White
         highlight PmenuThumb    ctermbg=DarkGrey  ctermfg=LightGrey
 
-        highlight StatusLine    ctermbg=White     ctermfg=0         cterm=reverse,bold
+        highlight StatusLine    ctermbg=White     ctermfg=0     cterm=reverse,bold
         highlight LiningItem    ctermbg=DarkGrey  ctermfg=White cterm=NONE
-        highlight LiningBufName ctermbg=LightGrey ctermfg=Black cterm=bold
+        highlight LiningBufName ctermbg=White     ctermfg=Black cterm=bold
+        highlight LiningBufPath ctermbg=LightGrey ctermfg=Black cterm=bold
     else
         " Cursor lines with 8 colors only are quite terribly looking
         set nocursorline
@@ -105,15 +108,17 @@ else
         highlight StatusLine    ctermfg=NONE ctermbg=NONE  cterm=reverse
         highlight StatusLineNC  ctermfg=NONE ctermbg=NONE  cterm=reverse,bold
         highlight LiningBufName ctermfg=Cyan ctermbg=Black cterm=reverse
+        highlight LiningBufPath ctermfg=Cyan ctermbg=Black cterm=reverse,bold
         highlight link LiningItem StatusLine
     endif
 
-    highlight link LiningLnCol   LiningBufName
     highlight link LiningVertSep LiningItem
 endif
 
-highlight LiningWarn  ctermbg=Brown ctermfg=Yellow
-highlight LiningError ctermbg=Red   ctermfg=White
+highlight LiningWarn  ctermbg=Brown ctermfg=Yellow guibg=Brown guifg=Yellow
+highlight LiningError ctermbg=Red   ctermfg=White  guibg=Red   guifg=White
+
+highlight link LiningLnCol   LiningBufName
 highlight link LiningVcsInfo LiningItem
 
 hi link String         Constant
@@ -137,3 +142,6 @@ hi link SpecialChar    Special
 hi link Delimiter      Special
 hi link SpecialComment Special
 hi link Debug          Special
+
+hi ColorColumn NONE
+hi link ColorColumn    CursorLine

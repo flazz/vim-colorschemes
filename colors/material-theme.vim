@@ -174,7 +174,7 @@ call <sid>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none")
 call <sid>hi("PMenuSel",      s:gui0A, s:gui01, s:cterm0A, s:cterm01, "")
 call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
-call <sid>hi("TabLineSel",    s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
+call <sid>hi("TabLineSel",    s:gui09, s:gui01, s:cterm03, s:cterm01, "none")
 
 " Hide '~' at end of buffer in neovim
 " Set g:material_hide_endofbuffer = 0 to disable
@@ -255,7 +255,7 @@ call <sid>hi("htmlBold",    s:gui0A, "", s:cterm0A, "", "")
 call <sid>hi("htmlItalic",  s:gui0E, "", s:cterm0E, "", "")
 call <sid>hi("htmlEndTag",  s:gui04, "", s:cterm04, "", "")
 call <sid>hi("htmlTag",     s:gui04, "", s:cterm04, "", "")
-call <sid>hi("htmlTagName", s:gui0D, "", s:cterm0D, "", "")
+call <sid>hi("htmlTagName", s:gui07, "", s:cterm07, "", "")
 call <sid>hi("htmlArg",     s:gui04, "", s:cterm04, "", "")
 
 " JavaScript highlighting
@@ -285,11 +285,13 @@ call <sid>hi("phpClasses",        s:gui0C, "", s:cterm0C, "", "")
 call <sid>hi("phpParent",         s:gui02, "", s:cterm02, "", "")
 call <sid>hi("phpFunctions",      s:gui07, "", s:cterm07, "", "")
 call <sid>hi("phpFunction",       s:gui07, "", s:cterm07, "", "")
+call <sid>hi("phpMethod",         s:gui07, "", s:cterm07, "", "")
 call <sid>hi("phpOperator",       s:gui04, "", s:cterm04, "", "")
 call <sid>hi("phpKeyword",        s:gui05, "", s:cterm05, "", "")
 call <sid>hi("phpClassExtends",   s:gui0A, "", s:cterm0A, "", "")
 call <sid>hi("phpInclude",        s:gui05, "", s:cterm05, "", "")
 call <sid>hi("phpUseClass",       s:gui0A, "", s:cterm0A, "", "")
+call <sid>hi("phpBoolean",        s:gui05, "", s:cterm05, "", "")
 
 " Python highlighting
 call <sid>hi("pythonOperator",  s:gui04, "", s:cterm04, "", "")
