@@ -1,62 +1,91 @@
+" local syntax file - set colors on a per-machine basis:
+" vim: tw=0 ts=4 sw=4
 " Vim color file
-" Maintainer:	Bohdan Vlasyuk <bohdan@vstu.edu.ua>
-" Last Change:	2002 Mar 09
+" Version: 1.0
+" Maintainer:	lilydjwg <lilydjwg@gmail.com>
+" Last Change:	2009年6月23日
 
-" darkblue -- for those who prefer dark background
-" [note: looks bit uglier with come terminal palettes,
-" but is fine on default linux console palette.]
-
-set bg=dark
+set background=dark
 hi clear
 if exists("syntax_on")
-	syntax reset
+  syntax reset
 endif
+let g:colors_name = "darkBlue"
 
-let colors_name = "darkblue"
-
-hi Normal		guifg=#c0c0c0 guibg=#000040						ctermfg=gray ctermbg=black
-hi ErrorMsg		guifg=#ffffff guibg=#287eff						ctermfg=white ctermbg=lightblue
-hi Visual		guifg=#8080ff guibg=fg		gui=reverse				ctermfg=lightblue ctermbg=fg cterm=reverse
-hi VisualNOS	guifg=#8080ff guibg=fg		gui=reverse,underline	ctermfg=lightblue ctermbg=fg cterm=reverse,underline
-hi Todo			guifg=#d14a14 guibg=#1248d1						ctermfg=red	ctermbg=darkblue
-hi Search		guifg=#90fff0 guibg=#2050d0						ctermfg=white ctermbg=darkblue cterm=underline term=underline
-hi IncSearch	guifg=#b0ffff guibg=#2050d0							ctermfg=darkblue ctermbg=gray
-
-hi SpecialKey		guifg=cyan			ctermfg=darkcyan
-hi Directory		guifg=cyan			ctermfg=cyan
-hi Title			guifg=magenta gui=none ctermfg=magenta cterm=bold
-hi WarningMsg		guifg=red			ctermfg=red
-hi WildMenu			guifg=yellow guibg=black ctermfg=yellow ctermbg=black cterm=none term=none
-hi ModeMsg			guifg=#22cce2		ctermfg=lightblue
-hi MoreMsg			ctermfg=darkgreen	ctermfg=darkgreen
-hi Question			guifg=green gui=none ctermfg=green cterm=none
-hi NonText			guifg=#0030ff		ctermfg=darkblue
-
-hi StatusLine		guifg=blue guibg=darkgray gui=none		ctermfg=blue ctermbg=gray term=none cterm=none
-hi StatusLineNC		guifg=black guibg=darkgray gui=none		ctermfg=black ctermbg=gray term=none cterm=none
-hi VertSplit		guifg=black guibg=darkgray gui=none		ctermfg=black ctermbg=gray term=none cterm=none
-
-hi Folded			guifg=#808080 guibg=#000040			ctermfg=darkgrey ctermbg=black cterm=bold term=bold
-hi FoldColumn		guifg=#808080 guibg=#000040			ctermfg=darkgrey ctermbg=black cterm=bold term=bold
-hi LineNr			guifg=#90f020			ctermfg=green cterm=none
-
-hi DiffAdd			guibg=darkblue	ctermbg=darkblue term=none cterm=none
-hi DiffChange		guibg=darkmagenta ctermbg=magenta cterm=none
-hi DiffDelete		ctermfg=blue ctermbg=cyan gui=bold guifg=Blue guibg=DarkCyan
-hi DiffText			cterm=bold ctermbg=red gui=bold guibg=Red
-
-hi Cursor			guifg=#000020 guibg=#ffaf38 ctermfg=bg ctermbg=brown
-hi lCursor			guifg=#ffffff guibg=#000000 ctermfg=bg ctermbg=darkgreen
-
-
-hi Comment			guifg=#80a0ff ctermfg=darkred
-hi Constant			ctermfg=magenta guifg=#ffa0a0 cterm=none
-hi Special			ctermfg=brown guifg=Orange cterm=none gui=none
-hi Identifier		ctermfg=cyan guifg=#40ffff cterm=none
-hi Statement		ctermfg=yellow cterm=none guifg=#ffff60 gui=none
-hi PreProc			ctermfg=magenta guifg=#ff80ff gui=none cterm=none
-hi type				ctermfg=green guifg=#60ff60 gui=none cterm=none
-hi Underlined		cterm=underline term=underline
-hi Ignore			guifg=bg ctermfg=bg
-
-
+hi Comment guifg=#6666ff
+hi Constant guifg=#99cc33
+hi Cursor guifg=#ffffff guibg=#335577
+hi CursorIM guifg=#00AAFF guibg=#FF66FF
+hi CursorLine guibg=#223344
+hi DiffAdd guifg=#000000 guibg=#33ff33
+hi DiffChange guifg=#dddddd guibg=#5555CC
+hi DiffDelete guifg=#000000 guibg=#ee6699
+hi DiffText guifg=#ffffff guibg=#8888ff
+hi Directory guifg=#ff99ff
+hi Error gui=underline guifg=#ff0000 guibg=#111133
+hi ErrorMsg guifg=#FFFF00 guibg=#0000FF
+hi FoldColumn guifg=#0033FF guibg=#333333
+hi Folded guifg=#6666ff guibg=#223344
+hi Identifier guifg=#00a0e0
+hi Ignore gui=None
+hi IncSearch gui=bold,reverse guifg=#99ff99 guibg=#3454ff
+hi LineNr guifg=#446699
+hi MatchParen guifg=#99FF99 guibg=#112233
+hi ModeMsg gui=bold guifg=#AAAA3C guibg=#222211
+hi MoreMsg guifg=#FFFF00
+hi NonText guifg=#8400ff guibg=#102030
+hi Normal guifg=#eeeeee guibg=#112233
+hi Pmenu guifg=#3366FF guibg=#111111
+hi PmenuSbar guibg=#113355
+hi PmenuSel guifg=#80ff00 guibg=#1a1a1a
+hi PmenuThumb gui=reverse
+hi PreProc guifg=#FF99FF
+hi Question gui=bold guifg=#009966 guibg=#113322
+hi Search guifg=#3404ff guibg=#FFFF00
+hi SignColumn guifg=#00FFFF guibg=#C0C0C0
+hi Special guifg=#FF00FF
+hi SpecialKey guifg=#00AEA0 guibg=#22302D
+hi SpellBad gui=undercurl
+hi SpellCap gui=undercurl
+hi SpellLocal gui=undercurl
+hi SpellRare gui=undercurl
+hi Statement guifg=#00a0e0
+hi StatusLine gui=reverse guifg=#00c4ff guibg=#000000
+hi StatusLineNC guifg=#A4A4FF guibg=#444400
+hi TabLine guifg=#0066FF guibg=#001133
+hi TabLineFill gui=None
+hi TabLineSel gui=underline guifg=#999944 guibg=#112233
+hi Title guifg=#ffff44
+hi Todo gui=bold,underline guifg=#ff0000 guibg=#112233
+hi Type guifg=#ff9933
+hi Underlined gui=underline
+hi VertSplit gui=reverse guifg=#00C4FF guibg=#0000FF
+hi Visual guibg=#223344
+hi VisualNOS gui=None
+hi WarningMsg guifg=#FFA500 guibg=#000080
+hi WildMenu gui=None
+hi link Boolean Constant
+hi link Character Constant
+hi link Conditional Statement
+hi link CursorColumn CursorLine
+hi link Debug Special
+hi link Define PreProc
+hi link Delimiter Special
+hi link Exception Statement
+hi link Float Constant
+hi link Function Identifier
+hi link Include PreProc
+hi link Keyword Statement
+hi link Label Statement
+hi link Macro PreProc
+hi link Number Constant
+hi link Operator Statement
+hi link PreCondit PreProc
+hi link Repeat Statement
+hi link SpecialChar Special
+hi link SpecialComment Special
+hi link StorageClass Type
+hi link String Constant
+hi link Structure Type
+hi link Tag Special
+hi link Typedef Type
