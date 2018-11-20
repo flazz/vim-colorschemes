@@ -30,8 +30,7 @@ Basic install - very simple (*nix or cygwin install)
 
 if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 
-    cd ~/.vim
-    git submodule add https://github.com/flazz/vim-colorschemes.git bundle/colorschemes
+    git submodule add https://github.com/flazz/vim-colorschemes.git ~/.vim/bundle/colorschemes
 
 if you [use vim + vundle](https://github.com/gmarik/vundle)
 
