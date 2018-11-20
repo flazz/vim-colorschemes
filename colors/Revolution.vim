@@ -3,7 +3,7 @@
 hi clear
 if exists('syntax on') | syntax reset | endif
 set background=dark
-let g:colors_name = 'Revolution'
+let g:colors_name = 'revolution'
 
 " Execute the 'highlight' command with a List of arguments.
 function! s:Highlight(args)

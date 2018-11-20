@@ -2,7 +2,7 @@
 " It's based on:
 runtime colors/Dim.vim
 
-let g:colors_name = "DimGrey"
+let g:colors_name = "dimgrey"
 
 "hi Normal guibg=grey10
 "hi NonText guibg=black

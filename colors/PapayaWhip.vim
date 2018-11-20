@@ -2,7 +2,7 @@
 " Maintainer:   Gerald S. Williams
 " Last Change:  2003 Apr 17
 
-" A nice light background (you guessed it, PapayaWhip) that's relatively easy
+" A nice light background (you guessed it, papayawhip) that's relatively easy
 " on the eyes yet very usable. Not nearly as "puffy" as peachpuff.
 "
 " Only values that differ from defaults are specified.
@@ -12,9 +12,9 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "PapayaWhip"
+let g:colors_name = "papayawhip"
 
-hi Normal guifg=#3f1f1f guibg=PapayaWhip ctermbg=Gray ctermfg=Black
+hi Normal guifg=#3f1f1f guibg=papayawhip ctermbg=Gray ctermfg=Black
 hi NonText guibg=Moccasin guifg=Brown ctermfg=Brown
 hi LineNr guibg=Moccasin
 hi DiffDelete guibg=LightRed guifg=Black ctermbg=DarkRed ctermfg=White

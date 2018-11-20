@@ -1,4 +1,4 @@
-" Color Scheme: CandyPaper
+" Color Scheme: candypaper
 " Author: DF_XYZ
 " License: MIT
 

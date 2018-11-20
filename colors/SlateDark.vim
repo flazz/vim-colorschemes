@@ -1,5 +1,5 @@
 "%% SiSU Vim color file
-" SlateDark Maintainer: Rudra Banerjee <bnrj.rudra@yahoo.com> 
+" slatedark Maintainer: Rudra Banerjee <bnrj.rudra@yahoo.com> 
 " Originally inspired from Slate by Ralph Amissah
 :set background=dark
 highlight clear
@@ -9,7 +9,7 @@ if version > 580
  syntax reset
  endif
 endif
-let colors_name = "SlateDark"
+let colors_name = "slatedark"
 hi Normal guifg=#ffffff guibg=#262626
 hi Cursor guibg=#ffffff guifg=#000000
 hi VertSplit guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse

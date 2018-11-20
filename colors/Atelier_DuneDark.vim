@@ -7,7 +7,7 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/Atelier_DuneDark.".&background.".sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/atelier_dunedark.".&background.".sh"
   endif
 endif
 
@@ -59,7 +59,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "Atelier_DuneDark"
+let g:colors_name = "atelier_dunedark"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

@@ -1,4 +1,4 @@
-" Vim color file - Spink
+" Vim color file - spink
 set background=dark
 if version > 580
 	hi clear
@@ -8,7 +8,7 @@ if version > 580
 endif
 
 set t_Co=256
-let g:colors_name = "Spink"
+let g:colors_name = "spink"
 let g:unite_cursor_line_highlight = 'UniteLineHi'
 
 " Alternative support for Vim plugins {

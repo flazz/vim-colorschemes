@@ -5,7 +5,7 @@
 " This started as a dark version (perhaps opposite is a better term) of
 " PapayaWhip, but took on a life of its own. Easy on the eyes, but still has
 " good contrast. Not bad on a color terminal, either (especially if yours
-" default to PapayaWhip text on a ChocolateLiquor/#3f1f1f background).
+" default to PapayaWhip text on a chocolateliquor/#3f1f1f background).
 "
 " Only values that differ from defaults are specified.
 
@@ -14,7 +14,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "ChocolateLiquor"
+let g:colors_name = "chocolateliquor"
 
 hi Normal guibg=#3f1f1f guifg=PapayaWhip ctermfg=White
 hi NonText guibg=#1f0f0f guifg=Brown2 ctermfg=Brown ctermbg=Black

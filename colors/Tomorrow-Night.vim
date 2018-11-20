@@ -1,5 +1,5 @@
 " In The Name Of God
-" File:         Tomorrow-Night.vim
+" File:         tomorrow-night.vim
 " Last Change:	2017 May 25
 " Maintainer:	Parham Alvani <user.email>
 
@@ -26,7 +26,7 @@ if exists("syntax_on")
 	syntax reset
 endif
 
-let g:colors_name = "Tomorrow-Night"
+let g:colors_name = "tomorrow-night"
 
 " Returns an approximate grey index for the given grey level
 function s:grey_number(x)

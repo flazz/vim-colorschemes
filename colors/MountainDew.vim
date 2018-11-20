@@ -1,5 +1,5 @@
 " Colorscheme created with ColorSchemeEditor v1.2.1
-"Name: MountainDew
+"Name: mountaindew
 "Maintainer: Erik Falor <ewfalor@gmail.com>
 "Version: 2.0
 "Last Change: 2008 May 01
@@ -15,7 +15,7 @@ if version > 580
 		syntax reset
 	endif
 endif
-let g:colors_name = "MountainDew"
+let g:colors_name = "mountaindew"
 
 if v:version >= 700
 	highlight CursorColumn guibg=#0F5123 gui=NONE
@@ -102,10 +102,10 @@ highlight Underlined guifg=#80a0ff gui=underline
 
 "ColorScheme metadata{{{
 if v:version >= 700
-	let g:MountainDew_Metadata = {
+	let g:mountaindew_Metadata = {
 				\"Palette" : "#FF0000:#E12E2A:#8B0000:#023525:#0F5123:#017550:#2FB457:#5CAC27:#0D3C0A:#203D29:#FFFF60:#FFFF00:#D8E353:#FF8C00:#FFA500:#60FF60:#21D959:#FFFFFF:#FFFFFF:#000000",
 				\"Maintainer" : "Erik Falor",
-				\"Name" : "MountainDew",
+				\"Name" : "mountaindew",
 				\"License" : ["Vim License",
 				\],
 				\"Notes" : ["Do the Dew!",

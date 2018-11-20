@@ -1,4 +1,4 @@
-" Theme: PaperColor
+" Theme: papercolor
 " Author: Nikyle Nguyen <NLKNguyen@MSN.com>
 " License: MIT
 " Source: http://github.com/NLKNguyen/papercolor-theme
@@ -23,7 +23,7 @@ let s:themes = {}
 let s:themes['default'] = {
       \   'maintainer'  : 'Nikyle Nguyen<NLKNguyen@MSN.com>',
       \   'source' : 'http://github.com/NLKNguyen/papercolor-theme',
-      \   'description' : 'Original PaperColor Theme, inspired by Google Material Design',
+      \   'description' : 'Original papercolor Theme, inspired by Google Material Design',
       \ }
 
 " Theme can have 'light' and/or 'dark' color palette.
@@ -185,14 +185,14 @@ let s:themes['default'].dark = {
 
 let s:theme_name = 'default'
 
-if exists("g:PaperColor_Theme") " Users expressed theme preference
-  let lowercase_theme_name = tolower(g:PaperColor_Theme)
+if exists("g:papercolor_Theme") " Users expressed theme preference
+  let lowercase_theme_name = tolower(g:papercolor_Theme)
 
   if has_key(s:themes, lowercase_theme_name) "the name is part of built-in themes
     let s:theme_name = lowercase_theme_name
 
   else "expect a variable with a designated theme name
-    let theme_variable =  "g:PaperColor_Theme_" . lowercase_theme_name
+    let theme_variable =  "g:papercolor_Theme_" . lowercase_theme_name
 
     if exists(theme_variable)
       " Register custom theme to theme dictionary
@@ -212,8 +212,8 @@ let s:selected_theme = s:themes[s:theme_name]
 " }}}
 
 " Command to show theme information {{{
-fun! g:PaperColor()
-  echom 'PaperColor Theme Framework'
+fun! g:papercolor()
+  echom 'papercolor Theme Framework'
   echom '  version ' . s:version
   echom '  by Nikyle Nguyen et al.'
   echom '  at https://github.com/NLKNguyen/papercolor-theme/'
@@ -224,8 +224,8 @@ fun! g:PaperColor()
   echom '  at ' . s:selected_theme['source']
 endfun
 
-" @brief command alias for g:PaperColor()
-command! -nargs=0 PaperColor :call g:PaperColor()
+" @brief command alias for g:papercolor()
+command! -nargs=0 papercolor :call g:papercolor()
 " }}}
 
 " Get Theme Variant: either dark or light  {{{
@@ -253,7 +253,7 @@ let s:palette = s:selected_theme[s:selected_variant].palette
 
 " Systematic User-Config Options: {{{
 " Example config in .vimrc
-" let g:PaperColor_Theme_Options = {
+" let g:papercolor_Theme_Options = {
 "       \   'theme': {
 "       \     'default': {
 "       \       'allow_bold': 1,
@@ -275,8 +275,8 @@ let s:palette = s:selected_theme[s:selected_variant].palette
 "       \ }
 "
 let s:options = {}
-if exists("g:PaperColor_Theme_Options")
-  let s:options = g:PaperColor_Theme_Options
+if exists("g:papercolor_Theme_Options")
+  let s:options = g:papercolor_Theme_Options
 endif
 
 " }}}
@@ -294,7 +294,7 @@ endif
 " @return the value of that option if specified; empty string otherwise
 " Example: s:Theme_Options('transparent_background')
 "     returns 1 if there is an option for current theme in `theme` section in
-"     g:PaperColor_Theme_Options such as:
+"     g:papercolor_Theme_Options such as:
 "       'theme': {
 "       \   'default': {
 "       \     'transparent_background': 1
@@ -353,7 +353,7 @@ endif
 " @return the option value if it is provided; empty string otherwise
 " Example: s:Language_Options('python.highlight_builtins', 1)
 "     returns 1 if there is an option in `language` section in
-"     g:PaperColor_Theme_Options such as:
+"     g:papercolor_Theme_Options such as:
 "       'language': {
 "       \   'python': {
 "       \     'highlight_builtins': 1
@@ -1773,7 +1773,7 @@ endfun
 "}}}
 
 " =========================== TESTING =====================================
-" Run unit testing :call g:PaperColor_Test()
+" Run unit testing :call g:papercolor_Test()
 
 " UNIT TESTING: {{{
 
@@ -1937,7 +1937,7 @@ endfun
 " endfun
 " ------------------------------------------------------------------
 
-fun! g:PaperColor_Test()
+fun! g:papercolor_Test()
   let l:verbose = 1 " 0: only error
   let l:test_functions =  [
         \ function('s:palettes_should_have_color00_to_color15'),
@@ -1946,7 +1946,7 @@ fun! g:PaperColor_Test()
         \ ]
 
   if l:verbose == 1
-    echo '----- PaperColor-Theme ------'
+    echo '----- papercolor-Theme ------'
     echo '-------- TEST BEGIN ---------'
   endif
 
@@ -1993,7 +1993,7 @@ endfun
 
 let s:script_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
-fun! g:PaperColor_GenerateSpecs()
+fun! g:papercolor_GenerateSpecs()
   call s:generate_color_palettes()
 endfun
 
@@ -2034,7 +2034,7 @@ endfun
 
 hi clear
 syntax reset
-let g:colors_name = "PaperColor"
+let g:colors_name = "papercolor"
 
 call s:adapt_to_environment()
 call s:set_color_variables()

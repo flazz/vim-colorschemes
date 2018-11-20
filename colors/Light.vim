@@ -9,7 +9,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name = "Light"
+let g:colors_name = "light"
 
 
 " These are pretty good on grey75:
@@ -27,7 +27,7 @@ hi Normal  guibg=grey78   guifg=black
 hi NonText guibg=grey75
 
 hi Visual     guibg=palegreen3 guifg=fg   gui=NONE
-hi Search     guibg=LightBlue
+hi Search     guibg=lightBlue
 hi IncSearch  guibg=yellow2    guifg=fg   gui=none
 hi WarningMsg guibg=white      guifg=red3 gui=bold
 

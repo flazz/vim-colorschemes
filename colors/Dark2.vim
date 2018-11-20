@@ -12,7 +12,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let g:colors_name = "Dark2"
+let g:colors_name = "dark2"
 
 
 hi Cursor guibg=IndianRed

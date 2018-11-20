@@ -1,5 +1,5 @@
 " ===============================================================
-" OceanicNextLight
+" oceanicnextlight
 " Author: Mike Hartington
 " ===============================================================
 
@@ -9,7 +9,7 @@
   if exists("syntax_on")
     syntax reset
   endif
-  let g:colors_name="OceanicNextLight"
+  let g:colors_name="oceanicnextlight"
 " }}}
 " {{{ Italics
   let g:oceanic_next_terminal_italic = get(g:, 'oceanic_next_terminal_italic', 0)

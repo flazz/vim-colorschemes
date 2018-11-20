@@ -12,7 +12,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "BlackSea"
+let g:colors_name = "blacksea"
 
 hi Normal guibg=Black guifg=seashell ctermfg=White
 hi NonText guifg=LavenderBlush ctermfg=LightMagenta

@@ -1,4 +1,4 @@
-" Vim C64 color scheme
+" Vim c64 color scheme
 " Author: Aaron Maupin <maupin@pastrytech.com>
 " Base grouping come from Gerardo Galindez's <gerardo.galindez@gmail.com> 
 " Vim color scheme template
@@ -12,7 +12,7 @@ highlight clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="C64"
+let g:colors_name="c64"
 
 " Commodore 64 colors (using the "wanja" palette)
 "

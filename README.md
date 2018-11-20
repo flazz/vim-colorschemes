@@ -16,6 +16,7 @@ Policy
 ------
 - honor system is in effect!
 - new schemes are welcome!
+- colorschemes names should be lowercased!
 - upstream updates are accepted!
 - non-upstream updates are accepted as derivitive schemes: pick a new filename; cite the original!
 - housekeeping updates are accepted too!

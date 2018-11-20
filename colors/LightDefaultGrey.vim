@@ -1,6 +1,6 @@
 
 runtime colors/LightDefault.vim
-let g:colors_name = "LightDefaultGrey"
+let g:colors_name = "lightdefaultgrey"
 
 hi Normal  guifg=black guibg=grey80
 hi NonText guibg=grey75

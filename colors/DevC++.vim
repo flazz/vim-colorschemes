@@ -12,7 +12,7 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="DevC++"
+let g:colors_name="devc++++"
 
 hi Comment	gui=italic		guifg=#335EA8		guibg=NONE
 hi Constant	gui=NONE		guifg=#004488 		guibg=NONE

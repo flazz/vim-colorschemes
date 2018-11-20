@@ -5,15 +5,15 @@
 " This is merely a combination of PapayaWhip and ChocolateLiquor, which
 " started out as light and dark versions of each other anyway.
 
-let s:ChocolatePapaya_style = &background
+let s:chocolatepapaya_style = &background
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "ChocolatePapaya"
+let g:colors_name = "chocolatepapaya"
 
-if s:ChocolatePapaya_style == 'light'
+if s:chocolatepapaya_style == 'light'
     hi Normal guifg=#3f1f1f guibg=PapayaWhip ctermbg=Gray ctermfg=Black
     hi NonText guibg=Moccasin guifg=Brown ctermfg=Brown
     hi LineNr guibg=Moccasin

@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "Dim"
+let g:colors_name = "dim"
 
 
 
