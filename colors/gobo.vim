@@ -14,14 +14,14 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "ColorSchemeCreator"  
-hi Normal		guifg=#111111 guibg=#FFFFFF  
-hi comment		guifg=#33CC99 gui=italic  
-hi constant		guifg=#CC0099 gui=bold  
-hi statement		guifg=#3399FF gui=bold  
+let g:colors_name = "gobo"
+hi Normal		guifg=#111111 guibg=#FFFFFF
+hi comment		guifg=#33CC99 gui=italic
+hi constant		guifg=#CC0099 gui=bold
+hi statement		guifg=#3399FF gui=bold
 hi preproc		guifg=#0066FF
-hi type			guifg=#6600CC gui=bold  
+hi type			guifg=#6600CC gui=bold
 hi special		guifg=#6600CC
 hi operator		guifg=#CC0099
-hi clear Visual 
-hi Visual		term=reverse cterm=reverse gui=reverse  
+hi clear Visual
+hi Visual		term=reverse cterm=reverse gui=reverse

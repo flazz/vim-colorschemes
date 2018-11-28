@@ -19,7 +19,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="molokai"
+let g:colors_name="molokai_dark"
 
 hi Boolean         guifg=#CC0000               gui=bold
 hi Character       guifg=#E6DB74
@@ -45,7 +45,7 @@ hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
 hi Function        guifg=#A6E22E
-hi Identifier      guifg=#FD971F               
+hi Identifier      guifg=#FD971F
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 

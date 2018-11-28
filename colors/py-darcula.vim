@@ -12,7 +12,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "py darcula"
+let colors_name = "py-darcula"
 
 if version >= 700
   hi CursorLine            cterm=NONE      ctermfg=NONE ctermbg=236  gui=NONE    guifg=NONE    guibg=#313335

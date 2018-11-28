@@ -9,7 +9,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "CandyCode"
+let colors_name = "CandyPaper"
 
 " Convert color from HSV to RGB as a hex string
 " See: https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSV
@@ -154,7 +154,7 @@ function s:attr(group, attr) "{
     exec "highlight " . a:group . " gui=" . a:attr . " cterm=" . a:attr
 endfunction "}
 
-" Basic Highlighting Groups: 
+" Basic Highlighting Groups:
 " {
     call s:fg("SpecialKey", 60, 60, 75)
     call s:fg("NonText", 120, 15, 45) | call s:attr("NonText", "none")
@@ -169,7 +169,7 @@ endfunction "}
     call s:fg("CursorLineNr", 120, 15, 60) | call s:attr("CursorLineNr", "none")
     call s:fg("Question", 120, 45, 75) | call s:attr("Question", "none")
     call s:fg("StatusLine", 0, 0, 15) | call s:bg("StatusLine", 120, 15, 75) | call s:attr("StatusLine", "none")
-    call s:fg("StatusLineNC", 120, 15, 30) | call s:bg("StatusLineNC", 120, 15, 75) | call s:attr("StatusLine", "none") 
+    call s:fg("StatusLineNC", 120, 15, 30) | call s:bg("StatusLineNC", 120, 15, 75) | call s:attr("StatusLine", "none")
     call s:fg("Title", 120, 45, 75) | call s:attr("Title", "none")
     call s:bg("Visual", 210, 60, 30)
     call s:bg("VisualNOS", 210, 60, 30) | call s:attr("VisualNOS", "underline")
@@ -267,7 +267,7 @@ endfunction "}
     call s:fg("javascript", 120, 15, 75)
 " }
 
-" Delete Functions: 
+" Delete Functions:
 " {
     delfunction s:hsv_to_rgb
     delfunction s:grey_index

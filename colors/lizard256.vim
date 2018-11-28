@@ -15,7 +15,7 @@ if version > 580
 	endif
 endif
 
-let g:colors_name = "wombat256"
+let g:colors_name = "lizard256"
 
 if !has("gui_running") && &t_Co != 88 && &t_Co != 256
 	finish

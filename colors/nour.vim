@@ -34,7 +34,7 @@ if exists("syntax_on")
 
 endif
 
-let g:colors_name="dw_green"
+let g:colors_name="nour"
 
 
 
@@ -134,7 +134,7 @@ hi WarningMsg                     guibg=#888888  guifg=#000000
 
 
 
-"- end of colorscheme -----------------------------------------------  
+"- end of colorscheme -----------------------------------------------
 
 
 " begin mods to dw_green

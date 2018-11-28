@@ -20,7 +20,7 @@ augroup doublebyte_space
   autocmd!
   autocmd VimEnter,WinEnter * match DoubleByteSpace /　/
 augroup END
-
+let g:colors_name = "abyss"
 " -------------------------------------------------------------------
 
 function! s:hi(name, fg, bg, attr) abort

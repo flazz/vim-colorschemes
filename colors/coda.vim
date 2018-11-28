@@ -21,7 +21,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="summerfruit256"
+let g:colors_name="coda"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " functions {{{
@@ -256,10 +256,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " Specials
     call <SID>X("Todo", "e50808", "dbf3cd", "bold")
     call <SID>X("Title", "000000", "", "")
-    call <SID>X("Special", "996633", "", "") 
+    call <SID>X("Special", "996633", "", "")
 
     " Syntax Elements
-    call <SID>X("String", "ff6600", "", "") 
+    call <SID>X("String", "ff6600", "", "")
     call <SID>X("Constant", "0086d2", "", "")
     call <SID>X("Number", "0000ff", "", "")
     call <SID>X("Statement", "996633", "", "")

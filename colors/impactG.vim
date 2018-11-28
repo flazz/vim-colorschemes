@@ -13,7 +13,7 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="impact"
+let g:colors_name="impactG"
 
 if exists("g:impact_transbg")
         hi Normal       ctermfg=LightGray guifg=LightGray ctermbg=none

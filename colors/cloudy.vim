@@ -9,10 +9,10 @@ hi clear
 if exists("syntax_on")
 	syntax reset
 endif
-let g:colors_name="peppers"
+let g:colors_name="cloudy"
 
-hi Normal   guifg=#ffffcc	 guibg=#003366 
-hi LineNr   guifg=white guibg=#003366 
+hi Normal   guifg=#ffffcc	 guibg=#003366
+hi LineNr   guifg=white guibg=#003366
 hi Statusline    gui=none guibg=#0099cc guifg=#ffffff
 hi StatuslineNC    gui=none guibg=#003399 guifg=#ffffff
 
@@ -34,16 +34,16 @@ hi String        guifg=#99ccff gui=NONE
 hi Number        guifg=#66ff66 gui=NONE
 hi Constant      guifg=#f0f080 gui=NONE
 
-hi Function      gui=NONE      guifg=#fffcfc 
+hi Function      gui=NONE      guifg=#fffcfc
 hi PreProc       guifg=#ffff00 gui=NONE
-hi Define        gui=bold guifg=#f0f0f0 
-hi Special       gui=none guifg=#cccccc 
-hi BrowseDirectory  gui=bold guifg=#FFFF00 
+hi Define        gui=bold guifg=#f0f0f0
+hi Special       gui=none guifg=#cccccc
+hi BrowseDirectory  gui=bold guifg=#FFFF00
 
 hi Keyword       guifg=#ff8088 gui=NONE
-hi Search        gui=NONE guibg=#ffff00 guifg=#330000 
+hi Search        gui=NONE guibg=#ffff00 guifg=#330000
 hi IncSearch     gui=NONE guifg=#fcfcfc guibg=#8888ff
 hi SpecialKey    gui=NONE guifg=#fcfcfc guibg=#8888ff
-hi NonText       gui=NONE guifg=#fcfcfc 
-hi Directory     gui=NONE guifg=#999900 
-hi browseDirectory     gui=NONE guifg=#00F0FF 
+hi NonText       gui=NONE guifg=#fcfcfc
+hi Directory     gui=NONE guifg=#999900
+hi browseDirectory     gui=NONE guifg=#00F0FF

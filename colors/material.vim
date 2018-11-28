@@ -14,7 +14,7 @@ if version > 580
 endif
 
 set t_Co=256
-let g:colors_name = "materialvim"
+let g:colors_name = "material"
 
 hi Normal         guifg=#cdd3de guibg=#263238 guisp=#263238 gui=NONE ctermfg=146 ctermbg=237 cterm=NONE
 hi IncSearch      guifg=#192224 guibg=#BD9800 guisp=#BD9800 gui=NONE ctermfg=235 ctermbg=1 cterm=NONE

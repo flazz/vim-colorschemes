@@ -5,10 +5,10 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "codeburn-0.2"
+let colors_name = "codeburn"
 
 if version >= 700
-  " NERDTree current 
+  " NERDTree current
   hi CursorLine guibg=#BFB7AD gui=none
   "hi CursorColumn guibg=#e4e2e0
   hi MatchParen guibg=black guifg=white gui=none
@@ -32,7 +32,7 @@ hi Question guifg=gray10 guibg=#B3C71E gui=none
 hi WarningMsg guifg=#600000  gui=none guibg=#dcd8d8
 
 " Html-Titles
-hi Title      guifg=gray20 gui=none 
+hi Title      guifg=gray20 gui=none
 
 hi Underlined  guifg=gray20 gui=underline
 hi Cursor    guifg=white   guibg=#888480
@@ -40,7 +40,7 @@ hi lCursor   guifg=black   guibg=white
 hi LineNr    guifg=#B0B1A1
 hi StatusLine guifg=gray90 guibg=#888480 gui=none
 
-" not current status line 
+" not current status line
 hi StatusLineNC guifg=gray40 guibg=#ABA7A4 gui=none
 
 hi VertSplit guifg=#ABA7A4 guibg=#ABA7A4 gui=NONE
@@ -51,7 +51,7 @@ hi NonText gui=none guifg=#dcd8d8
 hi Comment   guifg=#909090 gui=italic
 
 " ruby: symbols
-hi Constant  guifg=MediumSlateBlue 
+hi Constant  guifg=MediumSlateBlue
 
 hi String    guifg=#3366cc
 hi String    guifg=DodgerBlue
@@ -85,7 +85,7 @@ hi Repeat guifg=#660000 gui=none
 " Ruby: if..else..end
 hi Conditional guifg=#990000
 
-" Ruby: require, labels in .vim, 
+" Ruby: require, labels in .vim,
 hi PreProc    guifg=DarkGoldenrod gui=none
 
 hi Folded guifg=#64634B guibg=#c8c4c0 gui=none
@@ -153,7 +153,7 @@ hi link rubyClass Type
 hi link rubyControl Repeat
 
 "for somre reason begin end in erb is tied to this color instead of Conditional and Control
-hi link rubyBeginEnd Repeat 
+hi link rubyBeginEnd Repeat
 
 "hi rubyCurlyBlock guifg=#9C420C
 "hi rubyData                    gui=            guifg=            guibg=

@@ -1,6 +1,8 @@
 set background=dark
 hi clear
 
+let g:colors_name = "redblack"
+
 hi Normal         ctermbg=black guibg=black ctermfg=grey guifg=grey
 hi Boolean        ctermbg=black guibg=black ctermfg=grey guifg=grey
 hi Character      ctermbg=black guibg=black ctermfg=red guifg=red

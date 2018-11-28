@@ -10,7 +10,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name='srcery'
+let g:colors_name='srcery-drk'
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -36,7 +36,7 @@ let s:bright_cyan    = ["#53FDE9", 14]
 let s:white          = ["#FCE8C3", 15]
 
 " default xterm colors.
-let s:orange        = ['#D75F00', 166]  
+let s:orange        = ['#D75F00', 166]
 let s:bright_orange = ['#FF8700', 208]
 let s:hard_black    = ['#080808', 232]
 let s:gray_alt      = ['#4E4E4E', 239]

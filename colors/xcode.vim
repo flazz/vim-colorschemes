@@ -61,7 +61,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-{{scheme-slug}}"
+let g:colors_name = "xcode"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

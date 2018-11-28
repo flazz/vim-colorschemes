@@ -14,15 +14,15 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="nes"
+let g:colors_name="bluenes"
 
 "--------------------------------------------------------------------
 "SyntasticStyleErrorLine - Links to 'SyntasticErrorLine' by default
 "SyntasticErrorLine
 "SyntasticWarningLine
 "
-hi SyntasticStyleWarningLine  gui=bold    guibg=#110000  
-hi SyntasticErrorLine gui=bold    guibg=#220000  
+hi SyntasticStyleWarningLine  gui=bold    guibg=#110000
+hi SyntasticErrorLine gui=bold    guibg=#220000
 hi Boolean         gui=none       guibg=#221133  guifg=#7722ff
 hi cDefine         gui=none                      guifg=#ffffff
 hi cInclude        gui=none                      guifg=#ffffff
@@ -99,4 +99,4 @@ syn region pythonDocstring  start=+^\s*[uU]\?[rR]\?"""+ end=+"""+ keepend exclud
 syn region pythonDocstring  start=+^\s*[uU]\?[rR]\?'''+ end=+'''+ keepend excludenl contains=pythonEscape,@Spell,pythonDoctest,pythonDocTest2,pythonSpaceError
 
 hi pythonDocstring  gui=none       guibg=#333333  guifg=#bbdd77
-"- end of colorscheme -----------------------------------------------  
+"- end of colorscheme -----------------------------------------------

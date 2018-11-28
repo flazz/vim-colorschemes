@@ -14,7 +14,7 @@ if exists('syntax_on')
 endif
 
 " Set theme name
-let g:colors_name = 'darkdonttouchme'
+let g:colors_name = 'chalkboard'
 
 function! s:set() abort
     let white = { 'gui': '#ffffff', 'cterm': '231'}
@@ -36,7 +36,7 @@ function! s:set() abort
     let mutepurple = {'gui': '#875fd7', 'cterm': '97'}
     let mutemud = {'gui': '#875f5f', 'cterm': '95'}
     let muteorange = {'gui': '#af5f00', 'cterm': '130'}
-    let muteslate = {'gui': '#878787', 'cterm': '102'}    
+    let muteslate = {'gui': '#878787', 'cterm': '102'}
     let muteteal = {'gui': '#87af87', 'cterm': '108'}
     let muterainforest = {'gui': '#5f875f', 'cterm': '65'}
     let mutegreen = {'gui': '#5faf5f', 'cterm': '71'}
@@ -50,7 +50,7 @@ function! s:set() abort
     let darkgreen = {'gui': '#005f00', 'cterm': '22'}
     let darkteal = {'gui': '#005f5f', 'cterm': '23'}
     let darkmauve = {'gui': '#5f5f5f', 'cterm': '59'}
-    let alertred = {'gui': '#d70000', 'cterm': '160'} 
+    let alertred = {'gui': '#d70000', 'cterm': '160'}
 
     let none           = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold           = {'gui': 'bold',      'cterm': 'bold'}
@@ -96,7 +96,7 @@ function! s:set() abort
     let highlight_group.Todo = [black, alertred, underline, none]
     let highlight_group.Error = [black, alertred, bold, none]
     let highlight_group.Underlined = [alertred, none, underline, none]
- 
+
 
     let highlight_group.ModeMsg = [muteblue, none, bold, none]
     let highlight_group.SpecialKey = [whiteblue, none, none, none]

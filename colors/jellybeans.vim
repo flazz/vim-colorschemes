@@ -63,7 +63,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "jellybeans"
+let g:colors_name = "jellybeans"
 
 if has("gui_running") || (has('termguicolors') && &termguicolors) || &t_Co >= 88
   let s:low_color = 0

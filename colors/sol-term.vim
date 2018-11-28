@@ -73,7 +73,7 @@ highlight clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name = "sol"
+let g:colors_name = "sol-term"
 " }}}
 "
 " Console vim Highlighting: (see :help highlight-groups)" {{{

@@ -10,7 +10,7 @@ hi clear
 if exists("syntax_on")
    syntax reset
 endif
-let colors_name       = expand("<sfile>:t:r")
+let g:colors_name       = expand("<sfile>:t:r")
 let html_my_rendering = 1
 
 
@@ -19,7 +19,7 @@ hi LineNr                  gui=underline   guifg=#757164 guibg=#1c1910
 hi Folded                  gui=none        guifg=#757164 guibg=bg
 hi FoldColumn              gui=none        guifg=#757164 guibg=bg
 " title
-hi Title                   gui=underline   guifg=fg      guibg=#555144 
+hi Title                   gui=underline   guifg=fg      guibg=#555144
 " message
 hi MoreMsg                 gui=underline   guifg=bg      guibg=#986c32
 hi Question                gui=underline   guifg=bg      guibg=#986c32
@@ -41,25 +41,25 @@ hi Visual                  gui=underline   guifg=bg      guibg=#887f66
 " message {{{1
 hi ErrorMsg                gui=underline   guifg=bg      guibg=#dd6674
 hi WarningMsg              gui=underline   guifg=bg      guibg=#cc7e66
-hi ModeMsg                 gui=underline   guifg=bg      guibg=#819933   
+hi ModeMsg                 gui=underline   guifg=bg      guibg=#819933
 
 
 "TODO
 " inner {{{1
 hi Normal                  gui=none        guifg=#bbae88 guibg=#332f22
-hi Ignore                  gui=none        guifg=bg      guibg=bg   
+hi Ignore                  gui=none        guifg=bg      guibg=bg
 hi Todo                    gui=underline   guifg=bg      guibg=#cc7e66
 hi Error                   gui=underline   guifg=fg      guibg=#7e3399
-hi Special                 gui=none        guifg=#afbb66 guibg=bg   
-hi SpecialKey              gui=none        guifg=#81cc66 guibg=bg   
-hi Identifier              gui=none        guifg=#bea869 guibg=bg   
-hi Constant                gui=none        guifg=#818822 guibg=bg   
-hi Statement               gui=none        guifg=#aa6667 guibg=bg   
-hi Comment                 gui=none        guifg=#458800 guibg=bg   
-hi Underlined              gui=underline   guifg=#66998c guibg=bg   
-hi Directory               gui=none        guifg=#776a44 guibg=bg   
-hi PreProc                 gui=none        guifg=#776e55 guibg=bg   
-hi Type                    gui=none        guifg=#9fbb22 guibg=bg   
+hi Special                 gui=none        guifg=#afbb66 guibg=bg
+hi SpecialKey              gui=none        guifg=#81cc66 guibg=bg
+hi Identifier              gui=none        guifg=#bea869 guibg=bg
+hi Constant                gui=none        guifg=#818822 guibg=bg
+hi Statement               gui=none        guifg=#aa6667 guibg=bg
+hi Comment                 gui=none        guifg=#458800 guibg=bg
+hi Underlined              gui=underline   guifg=#66998c guibg=bg
+hi Directory               gui=none        guifg=#776a44 guibg=bg
+hi PreProc                 gui=none        guifg=#776e55 guibg=bg
+hi Type                    gui=none        guifg=#9fbb22 guibg=bg
 
 
 " diff {{{1
@@ -70,14 +70,14 @@ hi DiffAdd                 gui=underline   guifg=bg      guibg=#cc3a22
 
 
 " html {{{1
-hi htmlLink                gui=underline   guifg=#89aa66 guibg=bg   
-hi htmlBold                gui=underline   guifg=bg      guibg=#aa6667     
-hi htmlBoldUnderline       gui=underline   guifg=#aa6667 guibg=bg   
+hi htmlLink                gui=underline   guifg=#89aa66 guibg=bg
+hi htmlBold                gui=underline   guifg=bg      guibg=#aa6667
+hi htmlBoldUnderline       gui=underline   guifg=#aa6667 guibg=bg
 hi htmlItalic              gui=underline   guifg=bg      guibg=#bccc44
-hi htmlUnderlineItalic     gui=underline   guifg=#bccc44 guibg=bg   
+hi htmlUnderlineItalic     gui=underline   guifg=#bccc44 guibg=bg
 hi htmlBoldItalic          gui=underline   guifg=bg      guibg=#aa5833
-hi htmlBoldUnderlineItalic gui=underline   guifg=#aa5833 guibg=bg   
-hi htmlUnderline           gui=underline   guifg=fg      guibg=bg   
+hi htmlBoldUnderlineItalic gui=underline   guifg=#aa5833 guibg=bg
+hi htmlUnderline           gui=underline   guifg=fg      guibg=bg
 
 "}}}1
 " vim:set nowrap foldmethod=marker expandtab:

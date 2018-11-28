@@ -8,6 +8,8 @@ if exists("syntax_on")
   syntax reset
 endif
 
+let g:colors_name = "thor"
+
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 " General colors
@@ -20,7 +22,7 @@ hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=da
 
 hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=darkgray    ctermbg=darkgray    cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
-hi StatusLineNC     guifg=#E6E6E6     guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
+hi StatusLineNC     guifg=#E6E6E6     guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE
 
 hi Directory        guifg=#00A0A0     guibg=NONE        gui=NONE      ctermfg=lightblue   ctermbg=NONE        cterm=NONE
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -123,69 +125,69 @@ hi railsMethod      guifg=#FFFE8F      guibg=NONE        gui=NONE      ctermfg=w
 "hi railsUserClass   guifg=#FFFA87
 "hi railsUserMethod   guifg=#FFFA87
 
-hi link rubyClass             Keyword 
-hi link rubyModule            Keyword 
-hi link rubyKeyword           Keyword 
+hi link rubyClass             Keyword
+hi link rubyModule            Keyword
+hi link rubyKeyword           Keyword
 hi link rubyOperator          Operator
 "hi link rubyIdentifier        Identifier
 hi link rubyInstanceVariable  Identifier
 hi link rubyGlobalVariable    Identifier
 hi link rubyClassVariable     Identifier
-hi link rubyConstant          Type  
+hi link rubyConstant          Type
 
-"hi rubyNoInterpolation    ctermfg=red guifg=red 
-"hi rubyDelimEscape    ctermfg=red guifg=red 
-"hi rubyNestedParentheses  ctermfg=red guifg=red 
-"hi rubyNestedCurlyBraces  ctermfg=red guifg=red 
-"hi rubyNestedAngleBrackets  ctermfg=red guifg=red 
-"hi rubyNestedSquareBrackets ctermfg=red guifg=red 
-"hi rubyASCIICode    ctermfg=red guifg=red 
-"hi rubyInteger      ctermfg=185 guifg=185 
-"hi rubyFloat      ctermfg=185 guifg=185 
-"hi rubyLocalVariableOrMethod  ctermfg=red guifg=red 
-"hi rubyBlockArgument    ctermfg=red guifg=red 
-"hi rubyConstant     ctermfg=252 guifg=252 
-"hi rubyStringSpecial    ctermfg=red guifg=red 
-"hi rubyBlockParameter   ctermfg=252 guifg=252 
-"hi rubyPredefinedConstant ctermfg=red guifg=red 
-"hi rubyRegexp     ctermfg=167 guifg=167 
-"hi rubyString     ctermfg=185 guifg=185 
-"hi rubyBoolean      ctermfg=252 guifg=252 
-"hi rubyPseudoVariable   ctermfg=252 guifg=252 
-"hi rubyMethodDeclaration  ctermfg=red guifg=red 
-"hi rubyClassDeclaration   ctermfg=red guifg=red 
-"hi rubyModuleDeclaration  ctermfg=red guifg=red 
-"hi rubyFunction     ctermfg=252 guifg=252 
+"hi rubyNoInterpolation    ctermfg=red guifg=red
+"hi rubyDelimEscape    ctermfg=red guifg=red
+"hi rubyNestedParentheses  ctermfg=red guifg=red
+"hi rubyNestedCurlyBraces  ctermfg=red guifg=red
+"hi rubyNestedAngleBrackets  ctermfg=red guifg=red
+"hi rubyNestedSquareBrackets ctermfg=red guifg=red
+"hi rubyASCIICode    ctermfg=red guifg=red
+"hi rubyInteger      ctermfg=185 guifg=185
+"hi rubyFloat      ctermfg=185 guifg=185
+"hi rubyLocalVariableOrMethod  ctermfg=red guifg=red
+"hi rubyBlockArgument    ctermfg=red guifg=red
+"hi rubyConstant     ctermfg=252 guifg=252
+"hi rubyStringSpecial    ctermfg=red guifg=red
+"hi rubyBlockParameter   ctermfg=252 guifg=252
+"hi rubyPredefinedConstant ctermfg=red guifg=red
+"hi rubyRegexp     ctermfg=167 guifg=167
+"hi rubyString     ctermfg=185 guifg=185
+"hi rubyBoolean      ctermfg=252 guifg=252
+"hi rubyPseudoVariable   ctermfg=252 guifg=252
+"hi rubyMethodDeclaration  ctermfg=red guifg=red
+"hi rubyClassDeclaration   ctermfg=red guifg=red
+"hi rubyModuleDeclaration  ctermfg=red guifg=red
+"hi rubyFunction     ctermfg=252 guifg=252
 "hi rubyDefine     ctermfg=32  guifg=32
 "hi rubyClass      ctermfg=25  guifg=25
 "hi rubyModule     ctermfg=25  guifg=25
-"hi rubyBlock      ctermfg=252 guifg=252 
-"hi rubyConditional    ctermfg=81  guifg=81  
+"hi rubyBlock      ctermfg=252 guifg=252
+"hi rubyConditional    ctermfg=81  guifg=81
 "hi rubyRepeat     ctermfg=81  guifg=81
 "hi rubyControl      ctermfg=81  guifg=81
-"hi rubyKeyword      ctermfg=red guifg=red 
-"hi rubyOperator     ctermfg=red guifg=red 
-"hi rubyBeginEnd     ctermfg=red guifg=red 
-"hi rubyAccess     ctermfg=32  guifg=32  
-"hi rubyEval     ctermfg=red guifg=red 
-"hi rubyException    ctermfg=red guifg=red 
-"hi rubyInclude      ctermfg=252 guifg=252 
-"hi rubySharpBang    ctermfg=red guifg=red 
-"hi rubyTodo     ctermfg=34  guifg=34  
+"hi rubyKeyword      ctermfg=red guifg=red
+"hi rubyOperator     ctermfg=red guifg=red
+"hi rubyBeginEnd     ctermfg=red guifg=red
+"hi rubyAccess     ctermfg=32  guifg=32
+"hi rubyEval     ctermfg=red guifg=red
+"hi rubyException    ctermfg=red guifg=red
+"hi rubyInclude      ctermfg=252 guifg=252
+"hi rubySharpBang    ctermfg=red guifg=red
+"hi rubyTodo     ctermfg=34  guifg=34
 "hi rubyComment      ctermfg=28  guifg=28
-"hi rubyDocumentation    ctermfg=red guifg=red 
-"hi rubyData     ctermfg=red guifg=red 
+"hi rubyDocumentation    ctermfg=red guifg=red
+"hi rubyData     ctermfg=red guifg=red
 "
 "hi railsMethod    ctermfg=107 guifg=107
 
 
 " Special for Java
 " hi link javaClassDecl    Type
-hi link javaScopeDecl         Identifier 
-hi link javaCommentTitle      javaDocSeeTag 
-hi link javaDocTags           javaDocSeeTag 
-hi link javaDocParam          javaDocSeeTag 
-hi link javaDocSeeTagParam    javaDocSeeTag 
+hi link javaScopeDecl         Identifier
+hi link javaCommentTitle      javaDocSeeTag
+hi link javaDocTags           javaDocSeeTag
+hi link javaDocParam          javaDocSeeTag
+hi link javaDocSeeTagParam    javaDocSeeTag
 
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
@@ -193,27 +195,27 @@ hi javaDocSeeTag              guifg=#CCCCCC     guibg=NONE        gui=NONE      
 
 
 " Special for XML
-hi link xmlTag          Keyword 
-hi link xmlTagName      Conditional 
-hi link xmlEndTag       Identifier 
+hi link xmlTag          Keyword
+hi link xmlTagName      Conditional
+hi link xmlEndTag       Identifier
 
 
 " Special for HTML
-hi link htmlTag         Keyword 
-hi link htmlTagName     Conditional 
-hi link htmlEndTag      Identifier 
+hi link htmlTag         Keyword
+hi link htmlTagName     Conditional
+hi link htmlEndTag      Identifier
 
 
 " Special for Javascript
-hi link javaScriptNumber      Number 
+hi link javaScriptNumber      Number
 
 
 " Special for Python
-"hi  link pythonEscape         Keyword      
+"hi  link pythonEscape         Keyword
 
 
 " Special for CSharp
-hi  link csXmlTag             Keyword      
+hi  link csXmlTag             Keyword
 
 
 " Special for PHP

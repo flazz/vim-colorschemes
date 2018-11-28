@@ -1,10 +1,11 @@
+let g:colors_name = "charged-256"
 hi Normal       ctermfg=247 ctermbg=16
 hi NonText      ctermfg=247 ctermbg=232
 
 hi LineNr       ctermfg=237 ctermbg=232
 hi VertSplit    ctermfg=234 ctermbg=234
 hi StatusLine   ctermfg=240 ctermbg=234
-hi StatusLineNC ctermfg=234 ctermbg=238 
+hi StatusLineNC ctermfg=234 ctermbg=238
 
 hi Folded       ctermfg=243 ctermbg=16
 hi FoldColumn   ctermfg=243 ctermbg=16

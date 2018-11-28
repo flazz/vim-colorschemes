@@ -1,6 +1,6 @@
 " Vim color file based on nightsky
 " Maintainer:   Ian Kelling
-" Last Change:  
+" Last Change:
 
 
 " cool help screens
@@ -13,13 +13,13 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="northsky"
+let g:colors_name="nightsky"
 
 
 " Search & normal
-hi Normal		guifg=#eeeeee guibg=black 
-hi Search		guibg=#3D5B8C guifg=yellow gui=bold 
-hi IncSearch	guifg=bg guibg=cyan gui=bold 
+hi Normal		guifg=#eeeeee guibg=black
+hi Search		guibg=#3D5B8C guifg=yellow gui=bold
+hi IncSearch	guifg=bg guibg=cyan gui=bold
 if &t_Co == "256"
 	hi Normal		ctermfg=255 ctermbg=16
 	hi Search		ctermfg=226 ctermbg=60
@@ -32,23 +32,23 @@ endif
 
 " highlight groups
 hi Cursor	guifg=bg guibg=fg
-hi VertSplit	guibg=#C0FFFF guifg=#075554 gui=none 
-hi Folded	guifg=plum1 guibg=#061A3E 
-hi FoldColumn	guibg=#800080 guifg=tan 
-hi ModeMsg	guifg=#404040 guibg=#C0C0C0 
-hi MoreMsg	guifg=darkturquoise guibg=#188F90 
-hi NonText	guibg=#191919 guifg=#9FADC5 
-hi Question	guifg=#F4BB7E 
-hi SpecialKey	guifg=#BF9261 
-hi StatusLine	guibg=#222222 guifg=#b0b0b0 gui=none 
-hi StatusLineNC	guibg=#001111 guifg=DimGrey gui=none 
-hi Title	guifg=#8DB8C3 
-hi Visual gui=bold guifg=black guibg=#84AF84 
-hi WarningMsg	guifg=#F60000 gui=underline 
+hi VertSplit	guibg=#C0FFFF guifg=#075554 gui=none
+hi Folded	guifg=plum1 guibg=#061A3E
+hi FoldColumn	guibg=#800080 guifg=tan
+hi ModeMsg	guifg=#404040 guibg=#C0C0C0
+hi MoreMsg	guifg=darkturquoise guibg=#188F90
+hi NonText	guibg=#191919 guifg=#9FADC5
+hi Question	guifg=#F4BB7E
+hi SpecialKey	guifg=#BF9261
+hi StatusLine	guibg=#222222 guifg=#b0b0b0 gui=none
+hi StatusLineNC	guibg=#001111 guifg=DimGrey gui=none
+hi Title	guifg=#8DB8C3
+hi Visual gui=bold guifg=black guibg=#84AF84
+hi WarningMsg	guifg=#F60000 gui=underline
 if &t_Co == "256"
 	hi Cursor		ctermfg=254 ctermbg=166
 	hi VertSplit	ctermfg=23 ctermbg=159
-	hi Folded		ctermfg=219 ctermbg=17 
+	hi Folded		ctermfg=219 ctermbg=17
 	hi FoldColumn	ctermfg=180 ctermbg=90
 	hi ModeMsg		ctermfg=238 ctermbg=250
 	hi MoreMsg		ctermfg=44 ctermbg=30
@@ -61,7 +61,7 @@ if &t_Co == "256"
 	hi Visual		ctermfg=16 ctermbg=108
 	hi WarningMsg	ctermfg=196
 else
-	hi Cursor		ctermfg=white ctermbg=red 
+	hi Cursor		ctermfg=white ctermbg=red
 	hi VertSplit	ctermfg=darkblue ctermbg=cyan
 	hi Folded		ctermfg=lightmagenta ctermbg=bg
 	hi FoldColumn	ctermfg=lightgray ctermbg=darkmagenta
@@ -110,7 +110,7 @@ else
 	hi PreProc		ctermfg=darkgreen
 	hi Type			ctermfg=white "brown
 	hi Special		ctermfg=brown "darkmagenta
-	hi Ignore		ctermfg=gray 
+	hi Ignore		ctermfg=gray
 	hi Todo			ctermfg=darkblue ctermbg=darkgray
 	hi Label		ctermfg=darkmagenta
 endif
@@ -140,8 +140,8 @@ if &t_Co == "256"
 	hi Underlined	ctermfg=111
 	hi Error		ctermfg=231 ctermbg=196
 else
-	hi lCursor		ctermbg=lightgreen ctermfg=NONE 
+	hi lCursor		ctermbg=lightgreen ctermfg=NONE
 endif
 
 
-" vim:sw=4 ts=4 sts=4 
+" vim:sw=4 ts=4 sts=4

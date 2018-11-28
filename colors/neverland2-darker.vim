@@ -14,7 +14,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="neverland2-dark"
+let g:colors_name="neverland2-darker"
 
 hi Normal          guifg=#ffffff guibg=#080808
 set background=dark
