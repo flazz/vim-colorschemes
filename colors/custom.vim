@@ -11,12 +11,13 @@ if version >= 500
 "  source $VIM/vim-5.0/syntax/syntax.vim
 
   hi clear
+  let g:colors_name = "custom"
   " Switch on search pattern highlighting.
   set hlsearch
 
   " highlight Comment gui=italic
 
-  highlight Comment    guifg=green3 guibg=black 
+  highlight Comment    guifg=green3 guibg=black
 "  highlight Comment     guifg=SkyBlue1 gui=none
   highlight Constant    guifg=cyan gui=none guibg=black
 "  highlight Constant gui=col_lgreen_bl

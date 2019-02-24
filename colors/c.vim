@@ -1,5 +1,5 @@
 " Vim Syntax Highlighting File
-" 
+"
 " Language: C
 "
 " Extra: This is to copy the vi clone elvis on its
@@ -8,14 +8,16 @@
 " Maintainer: Dean Jones<dean@cleancode.org>
 "
 " Comment: This works well with the default c.vim
-"          that comes with vim6.x.  It basically 
+"          that comes with vim6.x.  It basically
 "          overrides the very bright colors it uses
-"          and uses simple white for highlighting 
+"          and uses simple white for highlighting
 "          key words and types in the C language.
-"          If you're using Eterm, uncomment the 
+"          If you're using Eterm, uncomment the
 "          Normal line specified below.
 
 hi clear
+
+let g:colors_name = "c"
 
 " Eterm users, uncomment the line below
 " hi Normal ctermfg=grey

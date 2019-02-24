@@ -1,5 +1,6 @@
 set background=light
 hi clear
+let g:colors_name = "whitedust"
 
 hi Boolean          guifg=#235C5C gui=bold
 hi Character        guifg=#235C5C gui=bold

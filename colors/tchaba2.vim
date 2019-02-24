@@ -34,7 +34,7 @@ if exists("syntax_on")
 	    syntax reset
 endif
 
-let colors_name = "tchaba"
+let colors_name = "tchaba2"
 
 "Vim’s syntax groups
 "To see the full list, run ':source $VIMRUNTIME/syntax/hitest.vim'

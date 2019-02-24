@@ -15,15 +15,15 @@
 "    nontext
 "        "underlined" : underline, fg=dark<theme>,  bg=black
 "        "normal"     : none,      fg=dark<theme>,  bg=black
-"    
+"
 "        This is original settings.
 "            :let hhcs_both_all_linenr  ="light"
 "            :let hhcs_both_all_nontext ="underlined"
-"    
+"
 "        This is prototype settings.
 "            :let hhcs_both_all_linenr  ="dark"
 "            :let hhcs_both_all_nontext ="underlined"
-"    
+"
 "        If you don't want to eccentric feature, try this.
 "            :let hhcs_both_all_linenr  ="normal"
 "            :let hhcs_both_all_nontext ="normal"
@@ -45,7 +45,7 @@ hi clear
 if exists("syntax_on")
    syntax reset
 endif
-let colors_name       = expand("<sfile>:t:r")
+let g:colors_name       = expand("<sfile>:t:r")
 let html_my_rendering = 1
 
 
@@ -201,8 +201,8 @@ hi htmlBold                  gui=UNDERLINE   guifg=black          guibg=lightred
 hi htmlBold                cterm=UNDERLINE ctermfg=black        ctermbg=lightred
 hi htmlItalic                gui=UNDERLINE   guifg=black          guibg=lightgreen
 hi htmlItalic              cterm=UNDERLINE ctermfg=black        ctermbg=lightgreen
-hi htmlBoldItalic            gui=UNDERLINE   guifg=black          guibg=lightblue 
-hi htmlBoldItalic          cterm=UNDERLINE ctermfg=black        ctermbg=lightblue 
+hi htmlBoldItalic            gui=UNDERLINE   guifg=black          guibg=lightblue
+hi htmlBoldItalic          cterm=UNDERLINE ctermfg=black        ctermbg=lightblue
 hi htmlUnderline             gui=UNDERLINE   guifg=lightgray      guibg=black
 hi htmlUnderline           cterm=UNDERLINE ctermfg=lightgray    ctermbg=black
 hi htmlBoldUnderline         gui=UNDERLINE   guifg=lightred       guibg=black

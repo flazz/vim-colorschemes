@@ -3,7 +3,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "RefractorMyCode"
+let g:colors_name = "refactor"
 
 hi Comment guifg=#80a0ff
 hi Constant guifg=#527023

@@ -9,7 +9,7 @@ if exists("syntax_on")
 	syntax reset
 endif
 set t_Co=256
-let colors_name = "itg_flat"
+let colors_name = "itg_flat_transparent"
 
 hi Comment	    	guifg=#606a74    ctermfg=240    gui=none   		cterm=none
 hi Constant	    	guifg=#92e4c0    ctermfg=115    gui=none    	cterm=none

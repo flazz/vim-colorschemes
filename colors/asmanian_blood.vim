@@ -1,4 +1,4 @@
-
+let g:colors_name = "asmanian_blood"
 set background=dark
 
 hi Normal       guifg=#b4b0b0 guibg=#080404 gui=none

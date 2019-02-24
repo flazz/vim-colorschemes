@@ -1,15 +1,15 @@
 " Vim color file
 "  Maintainer: Surya
-"  Last Change: 12/23/2003 10:32:41 . 
+"  Last Change: 12/23/2003 10:32:41 .
 "     version: 1.0
 " This color scheme uses a dark background.
 set background=dark
 hi clear
 if exists("syntax_on")
-   syntax reset 
+   syntax reset
 endif
 
-let g:colors_name = "koehler"
+let g:colors_name = "blackbeauty"
 hi Normal		  guifg=white  guibg=black
 hi Scrollbar	  guibg=darkgray guifg=darkgray
 hi Menu			  guifg=black guibg=gray

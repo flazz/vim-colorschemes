@@ -13,7 +13,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="soyokaze"
+let g:colors_name="shiny-white"
 
 hi Bold gui=bold
 " hi Debug
@@ -57,7 +57,7 @@ hi PMenuSel guifg=#ffffff guibg=#666666
 " hi TabLine
 " hi TabLineFill
 " hi TabLineSel
-" 
+"
 " " Standard syntax highlighting
 hi Boolean guifg=#ff3264
 " hi Character
@@ -86,7 +86,7 @@ hi Statement guifg=#49ff89
 " hi Todo
 hi Type guifg=#49ff89
 hi Typedef guifg=#49ff89
-" 
+"
 " " Spelling highlighting
 " hi SpellBad
 " hi SpellLocal

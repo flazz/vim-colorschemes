@@ -1,6 +1,8 @@
 " This scheme was created by CSApproxSnapshot
 " on Sat, 11 Jun 2016
 
+let g:colors_name = 'highwayman'
+
 hi clear
 if exists("syntax_on")
     syntax reset

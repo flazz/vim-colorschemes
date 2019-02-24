@@ -10,12 +10,12 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name="DevC++"
+let g:colors_name="kate"
 
 hi Comment      gui=italic      guifg=#808080		guibg=NONE
 hi Identifier   gui=NONE		guifg=Black			guibg=NONE
 hi Statement    gui=bold		guifg=DarkBlue		guibg=NONE
-hi PreProc      gui=NONE		guifg=#008000		guibg=NONE	
+hi PreProc      gui=NONE		guifg=#008000		guibg=NONE
 hi Statement    gui=bold        guifg=Black         guibg=NONE
 hi Type         gui=bold		guifg=#800000		guibg=NONE
 hi link Constant Type

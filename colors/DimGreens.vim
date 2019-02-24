@@ -2,7 +2,7 @@
 " It's based on:
 runtime colors/Dim.vim
 
-let g:colors_name = "DimGreen2"
+let g:colors_name = "DimGreens"
 
 hi Normal guibg=#001800 guifg=#99aa99
 hi Normal guibg=black guifg=ForestGreen
