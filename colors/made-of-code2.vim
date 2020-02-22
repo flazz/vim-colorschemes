@@ -9,7 +9,6 @@ if version > 580
 endif
 
 set t_Co=256
-let g:colors_name = "madeofcode"
 
 hi IncSearch guifg=NONE guibg=#233466 guisp=#233466 gui=NONE ctermfg=NONE ctermbg=17 cterm=NONE
 "hi WildMenu -- no settings --
@@ -146,4 +145,4 @@ hi rubyoperator guifg=#ff3854 guibg=NONE guisp=NONE gui=NONE ctermfg=13 ctermbg=
 hi htmlendtag guifg=#45c1ea guibg=NONE guisp=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
 
 
-let g:colors_name = "madeofcode"
+let g:colors_name = "made-of-code2"

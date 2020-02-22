@@ -8,8 +8,6 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "Made of Code"
-
 hi Cursor ctermfg=NONE ctermbg=51 cterm=NONE guifg=NONE guibg=#00ffff gui=NONE
 hi Visual ctermfg=NONE ctermbg=24 cterm=NONE guifg=NONE guibg=#05448d gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#212231 gui=NONE
@@ -102,4 +100,4 @@ hi cssValueLength ctermfg=39 ctermbg=NONE cterm=NONE guifg=#0a9cff guibg=NONE gu
 hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
-let g:colors_name = "made-of-code"
+let g:colors_name = "made-of-code1"
