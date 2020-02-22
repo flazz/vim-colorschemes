@@ -77,3 +77,5 @@ highlight TabLineSel    guifg=#000000 guibg=#cccccc gui=NONE
 
 " __END__
 " vim: foldmethod=marker
+
+let g:colors_name = "nevfn"

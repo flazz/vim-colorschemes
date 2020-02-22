@@ -57,3 +57,5 @@ hi Function       guifg=#C7CA87     gui=none
 hi StorageClass   guifg=#C7CA87     gui=none
 
 hi PreProc        guifg=khaki4
+
+let g:colors_name = "zmrok"

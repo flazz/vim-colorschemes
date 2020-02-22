@@ -218,3 +218,5 @@ if (&ft=='css')
     hi level15 guifg=#CEA65B  guibg=NONE  guisp=#1a1a1a  gui=NONE
     hi level16 guifg=#CEA65B  guibg=NONE  guisp=#1a1a1a  gui=NONE
 endif
+
+let g:colors_name = "spink"

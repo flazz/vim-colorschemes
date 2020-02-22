@@ -159,3 +159,5 @@ hi PmenuSel     ctermbg=lightblue ctermfg=white
 "vim: sw=4
 
                                      
+
+let g:colors_name = "bayqua"

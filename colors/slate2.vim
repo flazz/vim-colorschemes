@@ -80,3 +80,5 @@ hi htmlBoldItalic guibg=bg guifg=fg gui=bold,italic
 hi htmlBoldUnderline guibg=bg guifg=fg gui=bold,underline
 hi htmlBoldUnderlineItalic guibg=bg guifg=fg gui=bold,underline,italic
 hi htmlUnderlineItalic guibg=bg guifg=fg gui=underline,italic
+
+let g:colors_name = "slate2"

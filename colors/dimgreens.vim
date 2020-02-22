@@ -63,3 +63,5 @@ hi IncSearch guifg=yellow guibg=LightSkyBlue3 gui=bold
 hi WarningMsg guifg=red guibg=GhostWhite gui=bold
 hi Error guibg=red3
 
+
+let g:colors_name = "dimgreens"

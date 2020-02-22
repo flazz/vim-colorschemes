@@ -83,3 +83,5 @@ hi Number          guifg=#FFFFFF    guibg=#000000    ctermfg=white    ctermbg=bl
 hi Pmenu           guifg=#FFFFFF    guibg=#000000    ctermfg=white    ctermbg=black    gui=BOLD         cterm=BOLD
 hi String          guifg=#FFFFFF    guibg=#000000    ctermfg=white    ctermbg=black    gui=NONE         cterm=NONE
 
+
+let g:colors_name = "true-monochrome"

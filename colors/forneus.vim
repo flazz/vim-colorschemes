@@ -117,3 +117,5 @@ hi rubySymbol ctermfg=89 gui=bold guifg=#6ac825
 "eruby specific colors
 hi erubyDelimiter cterm=bold ctermfg=1 guifg=#ee0000
 hi erubyRailsHelperMethod guibg=#333333
+
+let g:colors_name = "forneus"

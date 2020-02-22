@@ -145,3 +145,5 @@ hi link cssBoxAttr              Constant
 hi link cssTextAttr             Constant
 hi link cssColorAttr            Constant
 hi link cssFontAttr             Constant
+
+let g:colors_name = "kiss"

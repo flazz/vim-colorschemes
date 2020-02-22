@@ -104,3 +104,5 @@ hi link vimEnvvar          Constant
 hi link vimHiattrib        Constant
 hi link vimFbBgAttrib      Constant
 
+
+let g:colors_name = "cleanroom"

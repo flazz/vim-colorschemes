@@ -48,3 +48,5 @@ hi IncSearch     gui=NONE guifg=#fcfcfc guibg=#8888ff
 hi SpecialKey    gui=NONE guifg=#fcfcfc guibg=#8888ff
 hi NonText       gui=NONE guifg=#fcfcfc 
 hi Directory     gui=NONE guifg=#999900
+
+let g:colors_name = "mud"

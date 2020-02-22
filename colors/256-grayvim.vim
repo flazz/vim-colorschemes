@@ -44,3 +44,5 @@ hi PmenuSbar    ctermfg=DarkGray    ctermbg=DarkGray    cterm=None
 hi PmenuThumb   ctermfg=Gray        ctermbg=Gray        cterm=None
 
 "vim: sw=4
+
+let g:colors_name = "256-grayvim"

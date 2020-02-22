@@ -357,3 +357,5 @@ let g:terminal_color_12 = s:blue
 let g:terminal_color_13 = s:pink
 let g:terminal_color_14 = s:turqoise
 let g:terminal_color_15 = s:white
+
+let g:colors_name = "happy-hacking"

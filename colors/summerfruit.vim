@@ -85,3 +85,5 @@ hi jinjaOperator    guifg=#ffffff   guibg=#fbf4c7
 hi jinjaVariable    guifg=#92cd35   guibg=#fbf4c7
 hi jinjaAttribute   guifg=#dd7700   guibg=#fbf4c7
 hi jinjaSpecial     guifg=#008ffd   guibg=#fbf4c7
+
+let g:colors_name = "summerfruit"

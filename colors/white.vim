@@ -60,3 +60,5 @@ hi Number           ctermfg=magenta                         guifg=magenta
 
 
 "vim: sw=4
+
+let g:colors_name = "white"

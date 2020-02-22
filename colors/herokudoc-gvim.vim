@@ -88,3 +88,5 @@ hi Title guifg=#d8fa3c
 
 " ruby specific
 hi RubySymbol guifg=#d8fa3c
+
+let g:colors_name = "herokudoc-gvim"

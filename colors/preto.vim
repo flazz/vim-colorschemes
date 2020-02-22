@@ -236,3 +236,5 @@ let g:rbpt_colorpairs = [
 			\ s:palette.darkyellow,
 			\ s:palette.darkred
 			\ ]
+
+let g:colors_name = "preto"

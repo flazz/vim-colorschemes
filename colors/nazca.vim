@@ -250,3 +250,5 @@ hi  link csXmlTag             Keyword
 
 " Special for PHP
 hi phpDefine  guifg=#ffc795    gui=BOLD ctermfg=209 cterm=BOLD
+
+let g:colors_name = "nazca"

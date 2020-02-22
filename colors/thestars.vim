@@ -76,3 +76,5 @@ hi Underlined guifg=white guibg=black gui=none " ctermfg=white ctermbg=black cte
 hi Ignore guibg=black guifg=black " ctermfg=black ctermbg=black
 hi Error guibg=red guifg=white gui=bold " ctermfg=white ctermbg=red cterm=bold
 hi Todo guifg=#006400 guibg=black gui=bold " ctermfg=darkgreen ctermbg=black cterm=bold
+
+let g:colors_name = "thestars"

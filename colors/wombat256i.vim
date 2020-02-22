@@ -305,3 +305,5 @@ delf <SID>grey_number
 " }}}
 
 " vim:set ts=4 sw=4 noet fdm=marker:
+
+let g:colors_name = "wombat256i"

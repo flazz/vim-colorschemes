@@ -85,3 +85,5 @@ hi Identifier gui=bold guifg=LightBlue4 guibg=bg cterm=bold ctermfg=66 ctermbg=N
 hi PreProc gui=NONE guifg=#ffa0a0 guibg=bg cterm=NONE ctermfg=217 ctermbg=NONE
 hi Type gui=NONE guifg=NavajoWhite guibg=bg cterm=NONE ctermfg=223 ctermbg=NONE
 hi Underlined gui=underline guifg=fg guibg=bg cterm=underline ctermfg=fg ctermbg=NONE
+
+let g:colors_name = "synic"

@@ -126,3 +126,5 @@ call s:hi("javascriptObjectLabel", s:gui.blue, "", "", "", "")
 call s:hi("javascriptProperty",    s:gui.cyan, "", "", "", "")
 call s:hi("javascriptBraces",      s:gui.cyan, "", "", "", "")
 call s:hi("javascriptBrackets",    s:gui.cyan, "", "", "", "")
+
+let g:colors_name = "vim-material"

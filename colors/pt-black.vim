@@ -179,3 +179,5 @@ hi  link csXmlTag             Keyword
 
 
 
+
+let g:colors_name = "pt-black"

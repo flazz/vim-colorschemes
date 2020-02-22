@@ -14,3 +14,5 @@ let g:colors_name = "DarkDefault"
 
 hi Normal guibg=grey25 guifg=GhostWhite
 
+
+let g:colors_name = "darkdefault"

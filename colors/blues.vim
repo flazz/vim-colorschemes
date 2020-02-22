@@ -53,3 +53,5 @@ hi DiffDelete    ctermfg=203    ctermbg=None  cterm=None  guifg=#ff5f5f  guibg=#
 hi SignColumn    ctermfg=None   ctermbg=None  cterm=None  guifg=#1c1c1c  guibg=#1c1c1c
 
 end
+
+let g:colors_name = "blues"

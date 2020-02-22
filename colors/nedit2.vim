@@ -27,3 +27,5 @@ hi Special		gui=bold		guifg=Magenta3		guibg=NONE
 "hi Error			gui=NONE		guifg=Red					guibg=Linen
 "hi Todo		
 
+
+let g:colors_name = "nedit2"

@@ -113,3 +113,5 @@ highlight Todo          guifg=Cyan guibg=#507080
 
 
 
+
+let g:colors_name = "oceanblack"

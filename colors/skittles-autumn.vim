@@ -97,3 +97,5 @@ hi GitGutterDelete ctermfg=125 ctermbg=none cterm=bold
 hi GitGutterAdd    ctermfg=190 ctermbg=none cterm=bold
 hi link TagbarSignature Type
 
+
+let g:colors_name = "skittles-autumn"

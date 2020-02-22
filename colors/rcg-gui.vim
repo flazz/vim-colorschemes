@@ -24,3 +24,5 @@ highlight String        guifg=red
 highlight Number        guifg=red
 highlight Constant      guifg=Red
 highlight Comment       guifg=darkgray
+
+let g:colors_name = "rcg-gui"

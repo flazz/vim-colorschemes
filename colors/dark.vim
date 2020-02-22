@@ -61,3 +61,5 @@ hi Error guibg=red3
 "hi guifg=Cyan gui=bold
 "hi guifg=White gui=bold
 "
+
+let g:colors_name = "dark"

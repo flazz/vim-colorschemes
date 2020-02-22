@@ -168,3 +168,5 @@ else
 	hi diffChanged	ctermfg=Red	ctermbg=White
 	hi WildMenu	ctermfg=DarkGray	ctermbg=White
 endif
+
+let g:colors_name = "256-noir"

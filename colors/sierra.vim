@@ -373,3 +373,5 @@ endif
 if g:sierra_Clear_Skies
     highlight! CursorLine         guifg=NONE  guibg=NONE  gui=NONE  ctermfg=NONE  ctermbg=NONE  cterm=NONE
 endif
+
+let g:colors_name = "sierra"

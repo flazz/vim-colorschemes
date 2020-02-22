@@ -7,3 +7,5 @@ let g:colors_name = "DimSlateBG"
 hi Normal guibg=#002020
 hi NonText guibg=#001818
 
+
+let g:colors_name = "dimslate"

@@ -185,3 +185,5 @@ call s:HL('GitGutterChangeDelete',          s:orange,   '',         '')
 call s:HL('SignifySignAdd',                 s:green,    '',         '')
 call s:HL('SignifySignChange',              s:yellow,   '',         '')
 call s:HL('SignifySignDelete',              s:red,      '',         '')
+
+let g:colors_name = "deep-space"

@@ -57,3 +57,5 @@ hi Cursor                    guifg=White   guibg=#00ff33
 hi LineNr       gui=NONE     guifg=#cccccc guibg=#334444
 hi ModeMsg      gui=NONE     guifg=Blue    guibg=White
 hi Question     gui=NONE     guifg=#66ff99 guibg=#110022
+
+let g:colors_name = "asu1dark"

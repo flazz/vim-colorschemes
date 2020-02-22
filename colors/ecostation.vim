@@ -63,3 +63,5 @@ hi Pmenu                guifg=#EDA383 guibg=#694E60             ctermfg=darkgray
 hi PmenuSel             guifg=#000000 guibg=#9c6666             ctermfg=gray ctermbg=darkgray cterm=bold term=reverse,underline
 hi PmenuSbar            guifg=#433c49 guibg=#433c49
 hi PmenuThumb           guifg=#666666 guibg=#666666
+
+let g:colors_name = "ecostation"

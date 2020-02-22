@@ -102,3 +102,5 @@ highlight Todo          guifg=#969248 guibg=#507080
 
 
 
+
+let g:colors_name = "python"

@@ -48,3 +48,5 @@ highlight TabLine       ctermfg=255     ctermbg=242     cterm=NONE
 highlight Todo          ctermfg=197     ctermbg=208     cterm=bold
 highlight Type          ctermfg=112     ctermbg=NONE    cterm=NONE
 highlight Visual        ctermfg=NONE    ctermbg=236     cterm=NONE
+
+let g:colors_name = "simple-dark"

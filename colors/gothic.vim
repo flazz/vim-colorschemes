@@ -43,3 +43,5 @@ highlight PreProc		ctermfg=Magenta cterm=NONE
 highlight Statement  ctermfg=Brown cterm=NONE
 highlight Constant   ctermfg=Red cterm=NONE
 highlight Type       ctermfg=Green cterm=NONE
+
+let g:colors_name = "gothic"

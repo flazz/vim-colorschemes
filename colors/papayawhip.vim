@@ -29,3 +29,5 @@ hi StatusLineNC gui=None guibg=Gray
 hi VertSplit gui=None guibg=Gray
 hi Identifier guifg=#005f5f
 hi Statement ctermfg=DarkRed
+
+let g:colors_name = "papayawhip"

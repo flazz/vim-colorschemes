@@ -73,3 +73,5 @@ hi Visual         guifg=#e6fff3 guibg=#61a181 gui=none
 hi VisualNOS      guifg=#9bcfb5 guibg=#000000 gui=underline
 hi WarningMsg     guifg=#1d3026 guibg=#61a181 gui=bold
 hi WildMenu       guifg=#43705a guibg=#e6fff3 gui=none
+
+let g:colors_name = "revolutions"

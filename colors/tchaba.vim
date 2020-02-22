@@ -105,3 +105,5 @@ hi link String Constant
 hi link Structure Type 
 hi link Tag Special 
 hi link Typedef Type 
+
+let g:colors_name = "tchaba"

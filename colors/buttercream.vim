@@ -57,3 +57,5 @@ hi VertSplit									gui=reverse
 hi Visual		guifg=LightGrey						gui=reverse
 hi VisualNOS									gui=underline,bold
 hi Todo						guibg=#ccaa22			gui=bold,underline
+
+let g:colors_name = "buttercream"

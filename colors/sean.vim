@@ -81,3 +81,5 @@ function! ToggleSemicolonHighlighting()
 	endif
 endfunction
 "}}}
+
+let g:colors_name = "sean"

@@ -120,3 +120,5 @@ hi cformat ctermfg=176 ctermbg=238
 hi cspecialcharacter ctermfg=176 ctermbg=238
 hi cursorim ctermfg=15 ctermbg=93
 
+
+let g:colors_name = "highlighter-term"

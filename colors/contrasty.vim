@@ -230,3 +230,5 @@ hi Todo term=inverse
 hi Todo cterm=none ctermfg=Red ctermbg=Black
 hi Todo gui=none guifg=#ff0000 guibg=Black
 
+
+let g:colors_name = "contrasty"

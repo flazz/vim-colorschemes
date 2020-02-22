@@ -303,3 +303,5 @@ hi link cssFontAttr Constant
 
 " Clean up
 delfunction s:Color
+
+let g:colors_name = "mdark"

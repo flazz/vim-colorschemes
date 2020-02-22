@@ -361,3 +361,5 @@ hi VisualNOS cterm=bold,underline
 hi SpellErrors cterm=bold ctermfg=7 ctermbg=1 gui=undercurl,bold
 
 
+
+let g:colors_name = "vimbrains"

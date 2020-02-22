@@ -193,3 +193,5 @@ hi link VimwikiPre Special
 " hi VimwikiCode guifg=#ffff00 guibg=NONE gui=NONE ctermfg=37 ctermbg=none cterm=NONE
 " hi link VimwikiCode WarningMsg
 " hi VimwikiCode guifg=#ffff00 guibg=NONE gui=NONE ctermfg=167 ctermbg=none cterm=NONE
+
+let g:colors_name = "darth"

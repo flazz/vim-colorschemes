@@ -226,3 +226,5 @@ let g:Darkdevel.comment.guibg   = 'NONE'
   highlight link htmlTagName          xmlTagName
   highlight link htmlEndTag           xmlEndTag
 
+
+let g:colors_name = "darkdevel"

@@ -150,3 +150,5 @@ hi! link Directory Identifier
 
 
 
+
+let g:colors_name = "light"

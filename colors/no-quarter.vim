@@ -133,3 +133,5 @@ hi PmenuThumb			guifg=grey30
 hi rightMargin          guibg=#453030
 
 " EOF
+
+let g:colors_name = "no-quarter"

@@ -101,3 +101,5 @@ hi Underlined guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=18
 hi DiffAdd guifg=#d3dade guibg=#525252 guisp=#525252 gui=NONE ctermfg=152 ctermbg=239 cterm=NONE
 hi TabLine guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
 hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
+
+let g:colors_name = "spurs-away"

@@ -86,3 +86,5 @@ if exists('loaded_taglist')
    highlight TagListComment  cterm=none ctermfg=16  ctermbg=28 gui=none guifg=#000000 guibg=#008700
    highlight TagListFileName cterm=none ctermfg=15  ctermbg=90 gui=none guifg=#ffffff guibg=#870087
 endif
+
+let g:colors_name = "colorful256"

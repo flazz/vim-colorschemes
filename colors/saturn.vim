@@ -438,3 +438,5 @@ endif
 delf <SID>H
 
 " vim: foldmethod=marker
+
+let g:colors_name = "saturn"

@@ -104,3 +104,5 @@ hi cursorim       guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235
 "hi LocalVariable -- no settings --
 "hi CTagsClass -- no settings --
 "hi clear -- no settings --
+
+let g:colors_name = "material"

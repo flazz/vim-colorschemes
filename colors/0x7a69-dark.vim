@@ -110,3 +110,5 @@ hi CursorLine 	term=underline cterm=underline guibg=grey14
 
 
 "vim: sw=4
+
+let g:colors_name = "0x7a69-dark"

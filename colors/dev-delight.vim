@@ -46,3 +46,5 @@ hi Character 	guifg=#FF1493   gui=bold
 hi Constant 	guifg=#FF1493   gui=bold 
 
 
+
+let g:colors_name = "dev-delight"

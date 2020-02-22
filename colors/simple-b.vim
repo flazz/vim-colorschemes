@@ -62,3 +62,5 @@ highlight Error		    cterm=bold,reverse ctermfg=black ctermbg=grey gui=bold,reve
 
 " vim:et:ff=unix:tw=0:ts=4:sw=4
 " EOF print_bw.vim
+
+let g:colors_name = "simple-b"

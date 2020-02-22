@@ -195,3 +195,5 @@ exe 'hi Todo         guifg=bg guibg=' . s:brown
 let colors_name = "ansi_blows"
 
 " vim: sw=2
+
+let g:colors_name = "ansi-blows"

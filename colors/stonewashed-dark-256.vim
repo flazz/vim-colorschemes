@@ -58,3 +58,5 @@ hi Wildmenu ctermbg=120 cterm=underline
 " Vim Color Names http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 " Syntax higlighting http://vimdoc.sourceforge.net/htmldoc/syntax.html#:highlight
 " Make Vim Pretty http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/
+
+let g:colors_name = "stonewashed-dark-256"

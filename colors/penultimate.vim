@@ -197,3 +197,5 @@ hi scalaInterpolation guibg=#0b0b0b guifg=skyblue
 " TagBar "
 
 hi link TagbarSignature Passive
+
+let g:colors_name = "penultimate"

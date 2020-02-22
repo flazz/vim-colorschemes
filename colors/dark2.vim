@@ -89,3 +89,5 @@ hi! link SpecialKey Identifier
 hi! link Directory Identifier
 
 
+
+let g:colors_name = "dark2"

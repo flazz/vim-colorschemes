@@ -279,3 +279,5 @@ augroup MONOKAI_PHOENIX_FILETYPE_LOADER
   au Filetype json call <SID>jsonMonokaiPhoenixFiletype()
   au Filetype javascript call <SID>javascriptMonokaiPhoenixFiletype()
 augroup END
+
+let g:colors_name = "monokai-phoenix"

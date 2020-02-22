@@ -24,3 +24,5 @@ highlight String     term=none ctermfg=Gray    cterm=none guifg=Gray    gui=none
 highlight Number     term=none ctermfg=Gray    cterm=none guifg=Gray    gui=none
 highlight Constant   term=none ctermfg=Gray    cterm=none guifg=Gray    gui=none
 highlight Comment    term=none ctermfg=red     cterm=none guifg=red     gui=none
+
+let g:colors_name = "rcg-term"

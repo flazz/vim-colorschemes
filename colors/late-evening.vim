@@ -146,3 +146,5 @@ hi WarningMsg	term=standout
 hi WildMenu		term=standout
 
 " vim: sw=2 ts=4
+
+let g:colors_name = "late-evening"

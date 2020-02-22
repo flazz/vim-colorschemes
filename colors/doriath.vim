@@ -54,3 +54,5 @@ hi Ignore               guifg=grey40
 "hi Error               
 hi Todo                 guifg=orangered guibg=yellow2
 
+
+let g:colors_name = "doriath"

@@ -172,3 +172,5 @@ hi Todo         guifg=#ffffff       guibg=#ee7700       gui=bold
 let &cpo = save_cpo
 
 " vim: fdm=marker fdl=0
+
+let g:colors_name = "candycode"

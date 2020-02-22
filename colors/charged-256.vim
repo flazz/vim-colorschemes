@@ -16,3 +16,5 @@ hi PMenuThumb   ctermfg=237 ctermbg=232
 hi TabLine      ctermfg=240 ctermbg=234
 hi TabLineSel   ctermfg=16  ctermbg=243
 hi TabLineFill  ctermfg=238 ctermbg=234 cterm=underline
+
+let g:colors_name = "charged-256"

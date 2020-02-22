@@ -251,3 +251,5 @@ delcommand  HI
 delfunction s:HI
 
 " vim: set expandtab ts=4 sts=4 sw=4 :
+
+let g:colors_name = "jellyx"

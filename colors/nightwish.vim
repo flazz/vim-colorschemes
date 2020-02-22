@@ -57,3 +57,5 @@ hi Tag          term=standout  ctermfg=Green     guifg=#55ff0d
 hi Scrollbar  guifg=darkcyan guibg=cyan
 hi Menu       guifg=black    guibg=cyan
 hi link Conditional	    Repeat
+
+let g:colors_name = "nightwish"

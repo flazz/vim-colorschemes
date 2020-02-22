@@ -30,3 +30,5 @@ hi clear VertSplit
 hi clear Normal
 
 let colors_name = "xedit"
+
+let g:colors_name = "xedit"

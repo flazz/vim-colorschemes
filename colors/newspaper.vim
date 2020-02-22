@@ -145,3 +145,5 @@ hi pythonDecorator  guifg=#6c1111 guibg=NONE gui=bold
 hi link pythonDecoratorFunction pythonDecorator
 " -----------------------------------------------------------------------------
 
+
+let g:colors_name = "newspaper"

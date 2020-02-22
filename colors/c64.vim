@@ -174,3 +174,5 @@ hi javaScriptNumber          guifg=#ffff7b    guibg=NONE    guisp=NONE    gui=NO
 
 
 
+
+let g:colors_name = "c64"

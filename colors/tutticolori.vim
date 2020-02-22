@@ -45,3 +45,5 @@ highlight Underlined                guifg=#2f4f6f guibg=NONE    gui=underline
 
 highlight htmlHead                                guibg=#ffffff
 highlight javaScript                guifg=#434343 guibg=#ffffff
+
+let g:colors_name = "tutticolori"

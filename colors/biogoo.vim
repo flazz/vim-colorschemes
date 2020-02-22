@@ -119,3 +119,5 @@ if !exists("g:biogoo_normal_cursor")
 endif
 
 " vim:noet:ts=4 sw=4 tw=80 cc=+1
+
+let g:colors_name = "biogoo"

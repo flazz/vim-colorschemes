@@ -7,3 +7,5 @@ hi NonText guibg=grey75
 hi Visual  guifg=grey85
 
 hi PreProc guifg=purple3
+
+let g:colors_name = "lightdefaultgrey"

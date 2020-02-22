@@ -125,3 +125,5 @@ hi GitGutterChange          ctermbg=232 ctermfg=3 guifg=#bbbb00
 hi GitGutterDelete          ctermbg=232 ctermfg=1 guifg=#ff2222
 hi GitGutterChangeDelete    ctermbg=232 ctermfg=3 guifg=#bbbb00  
 hi link GitGutterChangeDelete GitGutterChange
+
+let g:colors_name = "fu"

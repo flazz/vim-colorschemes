@@ -74,3 +74,5 @@ hi Underlined      gui=underline guifg=#75507B
 hi Ignore          guifg=#2E3436
 hi Error           guifg=#D3D7CF guibg=#CC0000
 highlight Todo     guifg=Blue guibg=Yellow 
+
+let g:colors_name = "tangoshady"

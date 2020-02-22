@@ -214,3 +214,5 @@ exe 'hi markdownBold gui=bold'
 exe 'hi markdownItalic gui=italic'
 
 
+
+let g:colors_name = "otaku"

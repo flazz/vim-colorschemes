@@ -95,3 +95,5 @@ hi Visual guifg=#080808 guibg=#ffffaf guisp=#ffffaf gui=NONE ctermfg=232 ctermbg
 hi VisualNOS guifg=#080808 guibg=#d7d7af guisp=#d7d7af gui=NONE ctermfg=232 ctermbg=187 cterm=NONE
 hi WarningMsg guifg=#ff8787 guibg=NONE guisp=NONE gui=NONE ctermfg=210 ctermbg=NONE cterm=NONE
 hi WildMenu guifg=#d7d75f guibg=#262626 guisp=NONE gui=NONE ctermfg=185 ctermbg=235 cterm=NONE
+
+let g:colors_name = "moody"

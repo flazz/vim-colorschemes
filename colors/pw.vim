@@ -207,3 +207,5 @@ hi Tb_VisibleNormal gui=NONE guibg=#00ff00 guifg=#fcaf3e
 hi Tb_Normal        gui=NONE guibg=#00ff00 guifg=#d0d0d0
 " modified tab:
 hi Tb_Changed       gui=NONE guibg=#00ff00 guifg=#c08080
+
+let g:colors_name = "pw"

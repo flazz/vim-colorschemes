@@ -199,3 +199,5 @@ else
     call s:hi('EasyMotionIncCursor',0,        0,            'reverse')
 endif
 
+
+let g:colors_name = "spring-night"

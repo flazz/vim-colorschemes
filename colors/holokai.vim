@@ -194,3 +194,5 @@ if &t_Co > 255
     hi NonText          ctermfg=244
     hi SpecialKey       ctermfg=244
 end
+
+let g:colors_name = "holokai"

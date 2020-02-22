@@ -64,3 +64,5 @@ if has("unix")
   endif
 endif
 
+
+let g:colors_name = "motus"

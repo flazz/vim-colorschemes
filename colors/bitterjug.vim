@@ -71,3 +71,5 @@ hi link pythonFunction Title
 hi link pythonClass Title
 hi LongLines ctermbg=233
 hi pythonSpaceError ctermbg=234
+
+let g:colors_name = "bitterjug"

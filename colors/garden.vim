@@ -95,3 +95,5 @@ hi Visual guifg=#080808 guibg=#ffffaf guisp=#ffffaf gui=NONE ctermfg=232 ctermbg
 hi VisualNOS guifg=#080808 guibg=#d7d7af guisp=#d7d7af gui=NONE ctermfg=232 ctermbg=187 cterm=NONE
 hi WarningMsg guifg=#ff5f00 guibg=NONE guisp=NONE gui=NONE ctermfg=202 ctermbg=NONE cterm=NONE
 hi WildMenu guifg=#afd700 guibg=#808080 guisp=NONE gui=NONE ctermfg=148 ctermbg=244 cterm=NONE
+
+let g:colors_name = "garden"

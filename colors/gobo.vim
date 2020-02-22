@@ -25,3 +25,5 @@ hi special		guifg=#6600CC
 hi operator		guifg=#CC0099
 hi clear Visual 
 hi Visual		term=reverse cterm=reverse gui=reverse  
+
+let g:colors_name = "gobo"

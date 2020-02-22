@@ -225,3 +225,5 @@ hi xmlEqual             ctermfg=117     ctermbg=NONE    cterm=NONE      guifg=#8
 hi xmlProcessingDelim   ctermfg=117     ctermbg=NONE    cterm=NONE      guifg=#87D7FF       guibg=NONE      gui=NONE
 hi xmlTag               ctermfg=117     ctermbg=NONE    cterm=NONE      guifg=#87D7FF       guibg=NONE      gui=NONE
 hi xmlTagName           ctermfg=167     ctermbg=NONE    cterm=NONE      guifg=#D75F5F       guibg=NONE      gui=NONE
+
+let g:colors_name = "minimalist"

@@ -45,3 +45,5 @@ hi SpecialKey    gui=NONE guifg=#fcfcfc guibg=#8888ff
 hi NonText       gui=NONE guifg=#fcfcfc 
 hi Directory     gui=NONE guifg=#999900
 hi Conditional   gui=NONE guifg=#ff9900
+
+let g:colors_name = "night-vision"

@@ -103,3 +103,5 @@ hi otlTagDef  guifg=white guibg=#005090
 
 
 
+
+let g:colors_name = "ekvoli"

@@ -67,3 +67,5 @@ hi Statement    gui=NONE guifg=#f0d050 guibg=NONE
 hi Todo         gui=BOLD,UNDERLINE guifg=#f070e0 guibg=NONE
 hi Type         gui=NONE guifg=#40f080 guibg=NONE
 hi Underlined   gui=UNDERLINE,BOLD guifg=#f0f0f8 guibg=NONE
+
+let g:colors_name = "edo-sea"

@@ -140,3 +140,5 @@ hi Ignore		ctermfg=lightblue
 hi Error		ctermfg=red ctermbg=white
 hi Todo			ctermfg=grey ctermbg=white
 " }}}
+
+let g:colors_name = "mars"

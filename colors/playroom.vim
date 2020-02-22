@@ -37,3 +37,5 @@ hi Type	    guifg=#e67e22    ctermfg=254    gui=none    cterm=none
 hi Underlined	    guifg=#80a0ff    ctermfg=89    gui=underline    cterm=underline 
 hi VertSplit	    guibg=#ecf0f1    ctermbg=237    guifg=#7f8c8d    ctermfg=252    gui=none    cterm=none
 hi Visual	    guifg=#969696    ctermfg=247    guibg=#333333    ctermbg=237    gui=none    cterm=none 
+
+let g:colors_name = "playroom"

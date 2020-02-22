@@ -137,3 +137,5 @@ hi Todo         guifg=#ffffff       guibg=#ee7700       gui=bold
 " }}}
 
 let &cpo = save_cpo
+
+let g:colors_name = "codeblocks-dark"

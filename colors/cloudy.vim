@@ -47,3 +47,5 @@ hi SpecialKey    gui=NONE guifg=#fcfcfc guibg=#8888ff
 hi NonText       gui=NONE guifg=#fcfcfc 
 hi Directory     gui=NONE guifg=#999900 
 hi browseDirectory     gui=NONE guifg=#00F0FF 
+
+let g:colors_name = "cloudy"

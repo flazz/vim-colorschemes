@@ -241,3 +241,5 @@ if $NVIM_TUI_ENABLE_TRUE_COLOR == 1
   let g:terminal_color_7    = "#FAFAFA"
   let g:terminal_color_15   = "#E4E4E4"
 endif
+
+let g:colors_name = "lightning"

@@ -69,3 +69,5 @@ hi Type		gui=NONE guifg=NavajoWhite guibg=bg
 hi Underlined	gui=underline guifg=fg guibg=bg
 
 " vim: sw=2
+
+let g:colors_name = "dusk"

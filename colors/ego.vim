@@ -114,3 +114,5 @@ hi Error                guifg=#FFFF99 ctermfg=228  guibg=#FF0000 ctermbg=9
 " Ruby-specific
 hi rubySharpBang        gui=bold guifg=#e29aeb ctermfg=176
 hi rubyRegexp           guifg=#9BB2EE ctermfg=111
+
+let g:colors_name = "ego"

@@ -30,3 +30,5 @@ hi PmenuSel   ctermfg=black  ctermbg=yellow
 hi PmenuSbar  ctermfg=white  ctermbg=black
 hi PmenuThumb ctermfg=white  ctermbg=gray
 
+
+let g:colors_name = "d8g-02"

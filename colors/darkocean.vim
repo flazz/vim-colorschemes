@@ -50,3 +50,5 @@ hi Error          gui=None            guibg=#b22222    guifg=#ffffe0
 hi Todo           gui=None            guibg=#507080    guifg=#3bcccc
 hi Ignore         gui=None            guibg=bg         guifg=#777777
 hi TagName        gui=None            guibg=#660000    guifg=#a7a7a7
+
+let g:colors_name = "darkocean"

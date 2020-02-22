@@ -164,3 +164,5 @@ hi Error	cterm=bold ctermfg=7 ctermbg=1
 
 
 " vim: sw=4 fdm=marker
+
+let g:colors_name = "sandydune"

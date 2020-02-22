@@ -61,3 +61,5 @@ hi Wildmenu guibg=#87ffaf gui=underline
 " Syntax higlighting http://vimdoc.sourceforge.net/htmldoc/syntax.html#:highlight
 " Make Vim Pretty http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/
 " List all syntax groups: :so $VIMRUNTIME/syntax/hitest.vim 
+
+let g:colors_name = "stonewashed-dark-gui"

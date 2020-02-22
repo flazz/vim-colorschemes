@@ -395,3 +395,5 @@ endif
 "------------------------------------------------------------------------------
 " vim: nowrap tabstop=8 shiftwidth=3 softtabstop=3 noexpandtab
 " vim: filetype=vim foldmethod=marker textwidth=0
+
+let g:colors_name = "martin-krischik"

@@ -114,3 +114,5 @@ highlight Ignore    guifg=#204050
 highlight Error      guifg=LightYellow  guibg=FireBrick
 
 
+
+let g:colors_name = "nightshimmer"

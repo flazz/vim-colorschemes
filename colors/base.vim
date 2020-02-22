@@ -115,3 +115,5 @@ hi SneakStreakTarget ctermfg=88 guifg=red
 hi link SneakStreakStatusLine StatusLineNC
 hi link netrwMarkFile string
 hi signcolumn ctermbg=234
+
+let g:colors_name = "base"

@@ -452,3 +452,5 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 endif
 
 
+
+let g:colors_name = "kkruby"

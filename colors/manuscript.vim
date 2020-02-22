@@ -94,3 +94,5 @@ hi diffDelete   guifg=fg      guibg=bg      gui=none
 hi diffChange   guifg=bg      guibg=#a08080 gui=none
 hi diffText     guifg=bg      guibg=#a05c5c gui=none
 "}}}
+
+let g:colors_name = "manuscript"

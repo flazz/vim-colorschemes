@@ -178,3 +178,5 @@ hi li netrwClassify Green
 
 hi li gitcommitFile Orange
 hi li gitcommitBranch Blue
+
+let g:colors_name = "pride"

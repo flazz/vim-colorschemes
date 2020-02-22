@@ -360,3 +360,5 @@ elseif &t_Co == 256
     endif
     delcommand CSAHi
 endif
+
+let g:colors_name = "legiblelight"

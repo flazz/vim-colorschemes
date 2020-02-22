@@ -145,3 +145,5 @@ endif
 
 hi MyTagListFileName guibg=#121212 guifg=#d0d0d0 gui=NONE term=bold cterm=bold ctermbg=53 ctermfg=220
 
+
+let g:colors_name = "evolution"

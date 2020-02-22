@@ -60,3 +60,5 @@ hi Visual         ctermbg=black guibg=black ctermfg=grey guifg=grey
 hi VisualNOS      ctermbg=black guibg=black ctermfg=grey guifg=grey
 hi WarningMsg     ctermbg=black guibg=black ctermfg=red guifg=red
 hi WildMenu       ctermbg=white guibg=white ctermfg=darkgrey guifg=#606060
+
+let g:colors_name = "redblack"

@@ -219,3 +219,5 @@ hi CtrlPMode2      ctermfg=166  ctermbg=NONE cterm=NONE
 "
 " vim:foldmethod=marker:foldlevel=0:textwidth=79
 "
+
+let g:colors_name = "sol-term"

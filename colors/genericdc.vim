@@ -96,3 +96,5 @@ hi goStructDef ctermfg=251 ctermbg=NONE cterm=italic
 " NerdTree
 hi link NERDTreeDir Special
 hi NERDTreeFile     ctermfg=246
+
+let g:colors_name = "genericdc"

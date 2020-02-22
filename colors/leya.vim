@@ -229,3 +229,5 @@ hi notesInProgress guifg=none guibg=none gui=bold ctermfg=none ctermbg=none cter
 hi notesShortHeading guifg=#444444 guibg=#FFFDF7 gui=bold ctermfg=235 ctermbg=NONE cterm=NONE
 hi notesTitle guifg=#444444 guibg=#FFFDF7 gui=bold ctermfg=235 ctermbg=NONE cterm=NONE
 hi notesTodo guifg=#cb4b16 guibg=NONE gui=bold ctermfg=28 ctermbg=NONE cterm=bold
+
+let g:colors_name = "leya"

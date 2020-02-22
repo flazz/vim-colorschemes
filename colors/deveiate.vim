@@ -88,3 +88,5 @@ highlight rubyOperator guifg=#00cbcd
 " ----------------------------------------
 highlight MyTagListFileName guifg=yellow guibg=NONE
 
+
+let g:colors_name = "deveiate"

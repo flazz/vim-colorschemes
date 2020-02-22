@@ -60,3 +60,5 @@ hi Visual           guifg=#CCCCCC guibg=#0E7369 gui=reverse
 hi VisualNOS        guifg=#CCCCCC guibg=#0E7369 gui=bold,underline
 hi WarningMsg       guifg=#000000 guibg=#CCCCCC gui=bold
 hi WildMenu         guifg=#FFFFFF guibg=#235C5C
+
+let g:colors_name = "whitedust"

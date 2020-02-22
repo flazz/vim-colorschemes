@@ -324,3 +324,5 @@ endif
 " scheme by Romain Lafourcade (https://github.com/romainl/flattened), which
 " is in turn derived from the 'Solarized' colour scheme by Ethan Schnoonover
 " (https://github.com/altercation/vim-colors-solarized).
+
+let g:colors_name = "crunchbang"

@@ -68,3 +68,5 @@ let g:colors_name="reloaded"
         hi cursorcolumn guifg=Black guibg=Green
         hi cursorcolumn ctermfg=Black ctermbg=Green
 
+
+let g:colors_name = "reloaded"

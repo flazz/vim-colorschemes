@@ -8,3 +8,5 @@ hi Normal guibg=#CDCABD
 hi NonText guibg=#C5C2B5
 
 
+
+let g:colors_name = "lighttan"

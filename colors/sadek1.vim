@@ -98,3 +98,5 @@ hi Directory guifg=#87ceeb guibg=NONE guisp=NONE gui=NONE ctermfg=117 ctermbg=NO
 hi Structure guifg=#878787 guibg=NONE guisp=NONE gui=NONE ctermfg=102 ctermbg=NONE cterm=NONE
 hi Macro guifg=#FF7070 guibg=NONE guisp=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
 hi cursorim guifg=#ffffff guibg=#536991 guisp=#536991 gui=NONE ctermfg=15 ctermbg=60 cterm=NONE
+
+let g:colors_name = "sadek1"

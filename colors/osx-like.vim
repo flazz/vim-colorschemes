@@ -67,3 +67,5 @@ hi htmlBoldItalic gui=bold,italic
 hi htmlBoldUnderline gui=bold,underline
 hi htmlBoldUnderlineItalic gui=bold,underline,italic
 hi htmlUnderlineItalic gui=underline,italic
+
+let g:colors_name = "osx-like"

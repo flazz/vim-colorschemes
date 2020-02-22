@@ -34,3 +34,5 @@ hi Cursor       ctermfg=White      ctermbg=White      guifg=#000000    guibg=#EE
 hi StatusLine   ctermfg=White      ctermbg=Black      guifg=#EEEEEC    guibg=#000000 cterm=bold,underline term=bold gui=bold,underline
 hi StatusLineNC ctermfg=Gray       ctermbg=Black      guifg=#D3D7CF    guibg=#000000 cterm=bold,underline term=bold gui=bold,underline
 hi LineNr       ctermfg=DarkYellow ctermbg=Black      guifg=#EDDE5C    guibg=#000000 cterm=none term=bold
+
+let g:colors_name = "nature"

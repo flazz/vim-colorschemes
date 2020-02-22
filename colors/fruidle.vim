@@ -72,3 +72,5 @@ hi Underlined   gui=UNDERLINE guifg=fg guibg=NONE
 hi Include      gui=BOLD guifg=#dd0000 guibg=NONE 
 hi Function     gui=BOLD guifg=#00aa00 guibg=NONE
 hi String       gui=NONE guifg=#00aa00 ctermfg=1
+
+let g:colors_name = "fruidle"

@@ -73,3 +73,5 @@ hi Underlined	cterm=underline term=underline
 hi Ignore	guifg=bg ctermfg=bg
 
 
+
+let g:colors_name = "nightshade-print"

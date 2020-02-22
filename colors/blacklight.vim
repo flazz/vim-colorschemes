@@ -47,3 +47,5 @@ hi Underlined      term=underline cterm=underline ctermfg=47 gui=underline guifg
 hi Ignore          cterm=bold ctermfg=242 guifg=grey40
 hi Error           term=reverse cterm=bold ctermfg=7 ctermbg=1 guifg=White guibg=Red
 hi Todo            term=standout ctermfg=0 ctermbg=11 guifg=orangered guibg=yellow2
+
+let g:colors_name = "blacklight"

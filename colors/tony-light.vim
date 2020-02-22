@@ -47,3 +47,5 @@ hi Todo         gui=none guifg=black guibg=yellow
 
 hi MoreMsg      gui=none
 hi ModeMsg      gui=none
+
+let g:colors_name = "tony-light"

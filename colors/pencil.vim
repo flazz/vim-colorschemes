@@ -386,3 +386,5 @@ else
   hi link GitGutterChange             LineNr
   hi link GitGutterChangeDelete       LineNr
 endif
+
+let g:colors_name = "pencil"

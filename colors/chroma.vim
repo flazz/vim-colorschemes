@@ -206,3 +206,5 @@ hi link diffAdded   DiffAdd
 hi link diffChanged DiffChange
 
 " vim: fdm=marker
+
+let g:colors_name = "chroma"

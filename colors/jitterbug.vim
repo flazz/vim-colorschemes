@@ -78,3 +78,5 @@ hi pythonSpaceError ctermbg=234
 " NeoMake errors
 " Turn off the red (keep the underline)
 hi NeomakeErrorDefault ctermfg=None
+
+let g:colors_name = "jitterbug"

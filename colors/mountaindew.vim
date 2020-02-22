@@ -118,3 +118,5 @@ if v:version >= 700
 endif
 "}}}
 " vim:set foldmethod=marker expandtab filetype=vim:
+
+let g:colors_name = "mountaindew"

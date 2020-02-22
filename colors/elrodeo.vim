@@ -655,3 +655,5 @@ delf <SID>grey_level
 delf <SID>grey_number
 "}}}
 
+
+let g:colors_name = "elrodeo"

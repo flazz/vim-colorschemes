@@ -187,3 +187,5 @@ else
     hi ColorColumn                      guibg=gray10
   endif
 endif
+
+let g:colors_name = "eink"

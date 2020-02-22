@@ -384,3 +384,5 @@ delf <SID>grey_number
 " vim: set fdl=0 fdm=marker:
 
 set background=light
+
+let g:colors_name = "rakr-light"

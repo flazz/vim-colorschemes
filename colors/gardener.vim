@@ -269,3 +269,5 @@ endif
 let g:colors_name = "gardener"
 let colors_name   = "gardener"
 
+
+let g:colors_name = "gardener"

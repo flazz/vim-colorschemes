@@ -177,3 +177,5 @@ call s:Defn('qfFileName', s:fg('fade'))
 "TabLineSel	tab pages line, active tab page label
 "VisualNOS	Visual mode selection when vim is "Not Owning the Selection".
 "		Only X11 Gui's |gui-x11| and |xterm-clipboard| supports this.
+
+let g:colors_name = "noclown"

@@ -79,3 +79,5 @@ hi DiffAdd guifg=#ffffff guibg=#06989a gui=none
 hi DiffChange guifg=#ffffff guibg=#a40000 gui=none
 hi DiffDelete guibg=bg
 hi DiffText guifg=#ffffff guibg=#c4a000 gui=none
+
+let g:colors_name = "tangox"

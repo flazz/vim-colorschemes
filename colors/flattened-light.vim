@@ -312,3 +312,5 @@ if has('nvim')
   let g:terminal_color_14 = '#586e75'
   let g:terminal_color_15 = '#002b36'
 endif
+
+let g:colors_name = "flattened-light"

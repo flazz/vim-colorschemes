@@ -42,3 +42,5 @@ hi Special			guifg=navajowhite
 hi Ignore				guifg=grey29
 hi Todo					guibg=black guifg=white
 hi WildMenu			guibg=aquamarine
+
+let g:colors_name = "aqua"

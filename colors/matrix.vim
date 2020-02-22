@@ -95,3 +95,5 @@ highlight link CursorIM Cursor
 highlight link CursorColumn Cursor
 "highlight link CursorLine Cursor
 highlight link lCursor ursor
+
+let g:colors_name = "matrix"

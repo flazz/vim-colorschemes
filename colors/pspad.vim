@@ -35,3 +35,5 @@ hi Typedef		guifg=#804040 gui=bold 		"dark red, other keywords
 hi clear Visual
 hi Visual		term=reverse cterm=reverse gui=reverse
 
+
+let g:colors_name = "pspad"

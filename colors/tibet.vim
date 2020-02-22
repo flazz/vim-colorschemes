@@ -99,3 +99,5 @@ hi Error         cterm=bold ctermfg=7 ctermbg=1
 
 
 "
+
+let g:colors_name = "tibet"

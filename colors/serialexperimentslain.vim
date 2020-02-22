@@ -99,3 +99,5 @@ hi Underlined guifg=#e1e1e6 guibg=#192224 guisp=#192224 gui=underline ctermfg=25
 hi DiffAdd guifg=NONE guibg=#193224 guisp=#193224 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 hi TabLine guifg=#911a32 guibg=#2b2d4d guisp=#2b2d4d gui=bold ctermfg=88 ctermbg=239 cterm=bold
 hi cursorim guifg=#1a2124 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
+
+let g:colors_name = "serialexperimentslain"

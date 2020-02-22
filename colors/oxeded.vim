@@ -103,3 +103,5 @@ hi link rubyRailsMethod       Method
 
 
 
+
+let g:colors_name = "oxeded"

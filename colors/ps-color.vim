@@ -470,3 +470,5 @@ delcommand MultiHi
 
 " vim:et:nosta:sw=2:ts=8:
 " vim600:fdm=marker:fdl=1:
+
+let g:colors_name = "ps-color"

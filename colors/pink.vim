@@ -166,3 +166,5 @@ endif
 
 let &cpo = s:save_cpo " restoring &cpo value
 
+
+let g:colors_name = "pink"

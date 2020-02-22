@@ -30,3 +30,5 @@ hi String cterm=NONE ctermfg=NONE
 hi Special cterm=NONE ctermfg=NONE
 
 " EOF for Dean's Elvis like highlighting
+
+let g:colors_name = "c"

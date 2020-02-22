@@ -86,3 +86,5 @@ if !has("gui_running")
 endif
 
 " vim:ff=unix:
+
+let g:colors_name = "carrot"

@@ -216,3 +216,5 @@ hi link cssPagingProp           White
 hi link cssTableProp            White
 hi link cssUIProp               White
 hi link cssFontDescriptorProp   White
+
+let g:colors_name = "inori"

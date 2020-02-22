@@ -32,3 +32,5 @@ hi Function     guifg=#660066   gui=NONE
 hi PreProc      guifg=#000080   gui=bold
 hi Keyword      guifg=#c03417   gui=NONE
 
+
+let g:colors_name = "ashen"

@@ -153,3 +153,5 @@ hi! link WildMenu		StatusLineNC
 hi! link helpSectionDelim	Type
 
 " --------------------------------------------------------------------------------------------- }}} -
+
+let g:colors_name = "mythos"

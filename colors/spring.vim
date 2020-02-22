@@ -69,3 +69,5 @@ hi SpecialKey       guifg=#d8a080    guibg=#e8e8e8  gui=NONE
 " vim:tabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:colors_name = "spring"

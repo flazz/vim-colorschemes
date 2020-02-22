@@ -130,3 +130,5 @@ hi phpUnknownSelector term=NONE cterm=NONE ctermbg=bg ctermfg=102
 hi phpVarSelector term=NONE cterm=NONE ctermbg=bg ctermfg=145
 hi htmlEndTag term=NONE cterm=NONE ctermbg=bg ctermfg=102
 hi vimFold term=NONE cterm=NONE ctermbg=bg ctermfg=fg
+
+let g:colors_name = "rdark-terminal"

@@ -619,3 +619,5 @@ else
     hi DjangoBlock cterm=bold ctermfg=22
   endif
 endif 
+
+let g:colors_name = "kalisi"

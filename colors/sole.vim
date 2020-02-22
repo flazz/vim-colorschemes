@@ -26,3 +26,5 @@ hi StatusLineNC cterm=NONE			gui=NONE			ctermfg=DarkGray	guifg=#333333		guibg=#a
 hi Todo			cterm=italic		gui=italic 			ctermfg=White		ctermbg=DarkBlue	guifg=DarkBlue guibg=White
 hi Visual		cterm=NONE			gui=NONE			ctermfg=black		ctermbg=LightCyan	guibg=LightMagenta
 
+
+let g:colors_name = "sole"

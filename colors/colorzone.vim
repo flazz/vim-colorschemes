@@ -166,3 +166,5 @@ hi StatuslineCapsBuddy cterm=none ctermfg=white ctermbg=green gui=none guibg=#8a
 "Version:1.0: 2010 June: Optimize cterm colors and changes for gui 
 "             This version support both term and gui very well
 "vim: sw=2
+
+let g:colors_name = "colorzone"

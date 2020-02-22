@@ -58,3 +58,5 @@ hi Ignore       gui=NONE    guifg=#000000   guibg=NONE
 hi Error        gui=NONE    guifg=#FFFFFF   guibg=#FF0088
 hi Todo         gui=BOLD    guifg=#FFA0A0   guibg=NONE
 hi Number       gui=NONE    guifg=#FFCCCC   guibg=NONE
+
+let g:colors_name = "wintersday"

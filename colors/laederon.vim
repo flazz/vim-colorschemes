@@ -653,3 +653,5 @@ call s:HL('VimBracket', 'wintrygray', '', 'none')
 
 endif
 " }}}
+
+let g:colors_name = "laederon"

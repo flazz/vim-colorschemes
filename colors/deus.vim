@@ -1174,3 +1174,5 @@ hi! link SignColumn LineNr
     hi! FoldColumn guibg=#242a32
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+
+let g:colors_name = "deus"

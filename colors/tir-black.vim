@@ -128,3 +128,5 @@ hi link javaScriptNumber Number
 
 " Special for CSharp
 hi link csXmlTag Keyword 
+
+let g:colors_name = "tir-black"

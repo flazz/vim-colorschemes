@@ -35,3 +35,5 @@ hi FoldColumn guibg=gray10
 " Original values:
 "hi Constant guifg=DeepPink
 "hi PreProc guifg=Magenta ctermfg=Magenta
+
+let g:colors_name = "blacksea"

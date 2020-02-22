@@ -32,3 +32,5 @@ def xmas():
             vim.command("redraw")
 
 EOL
+
+let g:colors_name = "xmaslights"

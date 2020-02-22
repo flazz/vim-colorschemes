@@ -78,3 +78,5 @@ hi Error          guifg=fg      guibg=#880000 gui=none ctermfg=bg       ctermbg=
 
 hi Ignore         guifg=bg      ctermfg=bg   
 hi Underlined     guifg=fg guibg=bg ctermfg=fg ctermbg=bg cterm=underline term=underline gui=underline
+
+let g:colors_name = "jhlight"

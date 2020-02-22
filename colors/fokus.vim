@@ -166,3 +166,5 @@ hi phpStringDouble guifg=#009900
 hi phpParent guifg=#B8CDE6
 hi link phpBrace phpParent
 hi link phpSemicolon phpParent
+
+let g:colors_name = "fokus"

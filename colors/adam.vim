@@ -46,3 +46,5 @@ hi DiffDelete   guibg=coral
 hi Folded		guibg=gray30
 hi FoldColumn	guibg=gray30 guifg=white
 hi cIf0			guifg=gray
+
+let g:colors_name = "adam"

@@ -255,3 +255,5 @@ call <sid>hi('jsThis', s:cdBlue, {}, 'none', {})
 " Ruby:
 call <sid>hi('rubyClassNameTag', s:cdBlueGreen, {}, 'none', {})
 
+
+let g:colors_name = "codedark"

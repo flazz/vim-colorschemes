@@ -460,3 +460,5 @@ let &background = s:style
 " THE SOFTWARE.
 
 " }}}
+
+let g:colors_name = "hybrid-material"

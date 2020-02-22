@@ -8,3 +8,5 @@ hi Normal guibg=white
 hi NonText guibg=grey95
 
 
+
+let g:colors_name = "white2"

@@ -49,3 +49,5 @@ highlight Visual term=reverse  gui=reverse guifg=Yellow guibg=Black
 highlight VisualNOS term=bold,underline  gui=bold,underline
 highlight WarningMsg term=standout  guifg=Red
 highlight WildMenu term=standout  guifg=Black guibg=Yellow
+
+let g:colors_name = "toothpik"

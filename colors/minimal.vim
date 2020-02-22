@@ -49,3 +49,5 @@ hi FoldColumn	guifg=#424242		guifg=#424242	ctermfg=black		ctermfg=black
 hi cIf0			guifg=#424242			ctermfg=black
 
 
+
+let g:colors_name = "minimal"

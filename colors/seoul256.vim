@@ -433,3 +433,5 @@ if s:colors_name != g:colors_name || s:background == s:style
 else
   let &background = s:background
 endif
+
+let g:colors_name = "seoul256"

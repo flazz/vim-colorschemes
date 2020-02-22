@@ -114,3 +114,5 @@ function! s:set() abort
     endfor
 endfunction
 call s:set()
+
+let g:colors_name = "donttouchme"

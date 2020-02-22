@@ -90,3 +90,5 @@ if has("spell")
    hi spellRare      guifg=#bcbcbc guibg=#1c1c1c ctermfg=250 ctermbg=233
    hi spelllocal     cterm=NONE ctermfg=NONE ctermbg=20 gui=NONE guifg=NONE guibg=#0000df
 endif
+
+let g:colors_name = "meta5"

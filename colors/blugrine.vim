@@ -40,3 +40,5 @@ hi Special guifg=#EEBABA
 hi Ignore	guifg=grey60
 hi Todo	guibg=#9C8C84 guifg=#244C0A
 
+
+let g:colors_name = "blugrine"

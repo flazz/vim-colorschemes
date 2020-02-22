@@ -8,3 +8,5 @@ hi Normal guibg=#DDDDAA
 hi NonText guibg=#CCCC99
 
 
+
+let g:colors_name = "lightyellow"

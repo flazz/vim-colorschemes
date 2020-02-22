@@ -382,3 +382,5 @@ hi link javaType Statement
 hi link cppStatement  Statement
 
 
+
+let g:colors_name = "zenesque"

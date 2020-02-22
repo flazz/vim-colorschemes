@@ -76,3 +76,5 @@ hi cIf0			guifg=Gray			ctermfg=Gray ctermbg=black
 
 
 
+
+let g:colors_name = "prmths"

@@ -255,3 +255,5 @@ hi WarningMsg ctermfg=yellow guifg=yellow
 
 " The current match in 'wildmenu' completion
 hi WildMenu	ctermfg=black ctermbg=darkcyan guifg=black guibg=darkcyan
+
+let g:colors_name = "wargrey"

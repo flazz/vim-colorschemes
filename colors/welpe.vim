@@ -559,3 +559,5 @@ hi! link snipLeadingSpaces Noise
 
 hi! link DiffAdded DiffAdd
 hi! link diffRemoved DiffDelete
+
+let g:colors_name = "welpe"

@@ -212,3 +212,5 @@ if &t_Co > 255
 	" Unselected
 	hi TabLine 	   ctermbg=Black
 end
+
+let g:colors_name = "monokain"

@@ -383,3 +383,5 @@ for key in keys(colorgroup)
     execute "hi ".key." term=".term." cterm=".cterm." gui=".gui." ctermfg=".ctermfg." guifg=".guifg." ctermbg=".ctermbg." guibg=".guibg." guisp=".guisp
   endif
 endfor
+
+let g:colors_name = "lucid"

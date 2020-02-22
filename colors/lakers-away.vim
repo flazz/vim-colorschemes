@@ -103,3 +103,5 @@ hi DiffAdd guifg=#ffc800 guibg=#4682b4 guisp=#4682b4 gui=NONE ctermfg=220 ctermb
 hi cursorim guifg=#ffffff guibg=#e000b0 guisp=#e000b0 gui=NONE ctermfg=15 ctermbg=163 cterm=NONE
 hi lcursor guifg=NONE guibg=#00ffff guisp=#00ffff gui=NONE ctermfg=NONE ctermbg=14 cterm=NONE
 hi browsedirectory guifg=#97ffff guibg=NONE guisp=NONE gui=NONE ctermfg=123 ctermbg=NONE cterm=NONE
+
+let g:colors_name = "lakers-away"

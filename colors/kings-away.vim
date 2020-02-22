@@ -101,3 +101,5 @@ hi Underlined guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=18
 hi DiffAdd guifg=NONE guibg=#bd06c7 guisp=#bd06c7 gui=NONE ctermfg=NONE ctermbg=5 cterm=NONE
 hi TabLine guifg=#192224 guibg=#bd06c7 guisp=#bd06c7 gui=bold ctermfg=235 ctermbg=5 cterm=bold
 hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
+
+let g:colors_name = "kings-away"

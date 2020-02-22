@@ -192,3 +192,5 @@ hi moinRule       ctermfg=13
 hi moinComment    ctermfg=23
 hi moinPragma     ctermfg=253
 hi moinInterLink  ctermfg=1
+
+let g:colors_name = "adobe"

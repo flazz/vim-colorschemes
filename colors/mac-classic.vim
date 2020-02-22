@@ -224,3 +224,5 @@ hi OL4 guifg=#6E79F1 ctermfg=69 gui=NONE
 " Modelines: {{{1
 " vim: nowrap fdm=marker
 " }}}
+
+let g:colors_name = "mac-classic"

@@ -14,3 +14,5 @@ hi Identifier guifg=#60CC60
 " Experimental:
 " Stick with the default for a while...
 "hi Cursor guibg=red2 guifg=white
+
+let g:colors_name = "black"

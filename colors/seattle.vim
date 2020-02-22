@@ -399,3 +399,5 @@ command!    SeattleLightsUp     so % | call s:SeattleLightsUp()
 command!    SeattleNeon         so % | call s:SeattleNeon()
 " }}}
 " vim: set ts=4 et ft=vim ff=unix fdm=marker:
+
+let g:colors_name = "seattle"

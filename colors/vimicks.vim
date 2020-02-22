@@ -80,3 +80,5 @@ call MyHighlight("Title", 67,  -1,  -1)
 call MyLink("htmlTagN", "htmlTagName")
 
 call MyHighlight("PreProc", 67, -1, -1)
+
+let g:colors_name = "vimicks"

@@ -151,3 +151,5 @@ hi Cursor   guifg=#000000 guibg=#ff0000
 hi lCursor  guifg=#000000 guibg=#80ff80
 hi CursorIM guifg=#000000 guibg=#0090ff
 " vim: foldmethod=marker foldmarker={{{,}}}:
+
+let g:colors_name = "rastafari"

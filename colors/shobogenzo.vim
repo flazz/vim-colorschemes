@@ -96,3 +96,5 @@ hi Underlined     term=underline cterm=underline ctermfg=81 guifg=#5fd7ff
 hi TaglistTagName cterm=bold ctermfg=26 ctermbg=none guifg=#005fd7
 
 " vim: set et :
+
+let g:colors_name = "shobogenzo"

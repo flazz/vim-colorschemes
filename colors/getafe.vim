@@ -194,3 +194,5 @@ hi phpStorageClass guifg=#69C3FF
 hi phpRepeat       guifg=#FF6E0E
 hi phpIdentifier   guifg=#F8FFF9
 hi phpMethodsVar   guifg=#69C3FF
+
+let g:colors_name = "getafe"

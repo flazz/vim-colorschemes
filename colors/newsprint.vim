@@ -173,3 +173,5 @@ if &t_Co > 255
    hi MyTagListTitle      ctermfg=241        ctermbg=bg         cterm=bold
 end
 
+
+let g:colors_name = "newsprint"

@@ -92,3 +92,5 @@ highlight Todo guifg=#FFFFFF guibg=#EE6B29 gui=bold
 highlight Type guifg=#0097B3 gui=bold
 highlight link Typedef Type
 highlight Underlined guifg=#888888 gui=underline
+
+let g:colors_name = "orange"

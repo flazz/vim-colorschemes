@@ -66,3 +66,5 @@ hi BookmarkLine             ctermfg=075         ctermbg=none
 hi BookmarkAnnotationSign   ctermfg=075         ctermbg=none
 hi BookmarkAnnotationLine   ctermfg=075         ctermbg=none
 hi SignColumn               ctermfg=210         ctermbg=none
+
+let g:colors_name = "lapis256"

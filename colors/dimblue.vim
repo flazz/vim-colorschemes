@@ -7,3 +7,5 @@ let g:colors_name = "DimBlueBG"
 hi Normal guibg=#000033
 hi NonText guibg=#000011
 
+
+let g:colors_name = "dimblue"

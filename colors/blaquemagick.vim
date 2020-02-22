@@ -62,3 +62,5 @@ hi! link Question        DiffChange
 hi! link TabLine         StatusLineNC
 hi! link TabLineFill     StatusLineNC
 hi! link VimHiGroup      VimGroup
+
+let g:colors_name = "blaquemagick"

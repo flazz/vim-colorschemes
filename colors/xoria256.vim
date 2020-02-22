@@ -140,3 +140,5 @@ hi treeLink       ctermfg=182  guifg=#dfafdf
 " sign define both        linehl=currentLine text=>>
 " sign define empty       linehl=empty
 
+
+let g:colors_name = "xoria256"

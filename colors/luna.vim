@@ -253,3 +253,5 @@ hi SignifySignDelete guifg=#ff0000 guibg=#212121 gui=NONE
 "
 " vim:foldmethod=marker:foldlevel=0:textwidth=79
 "
+
+let g:colors_name = "luna"

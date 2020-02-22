@@ -465,3 +465,5 @@ endif
 
 " TODO check for more obscure syntax groups that they're ok
 
+
+let g:colors_name = "zenburn"

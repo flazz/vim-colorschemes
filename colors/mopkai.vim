@@ -255,3 +255,5 @@ if has('nvim') || !has('gui_running')
 
     hi SpecialKey      ctermfg=59
 endif
+
+let g:colors_name = "mopkai"

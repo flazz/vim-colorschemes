@@ -153,3 +153,5 @@ hi link rubyStringDelimiter         String
 hi link xmlTag              htmlTag
 hi link xmlEndTag           htmlEndTag
 hi link xmlTagName          htmlTagName
+
+let g:colors_name = "chance-of-storm"

@@ -136,3 +136,5 @@ exe "hi! netrwClassify" .s:bg_none .s:fg_tan
 exe "hi! netrwCmdSep"   .s:bg_none .s:fg_tan
 exe "hi! netrwList"     .s:bg_none .s:fg_red
 exe "hi! netrwVersion"  .s:bg_none .s:fg_cyan
+
+let g:colors_name = "firewatch"

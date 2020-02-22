@@ -61,3 +61,5 @@ hi DiffText guifg=#8ae234 guibg=#4e9a06
 hi SpellBad gui=undercurl guisp=#f02020
 
 
+
+let g:colors_name = "proton"

@@ -97,3 +97,5 @@ hi! link Tag		Special
 hi! link Typedef	Type
 hi! link VertSplit	StatusLineNC
 hi! link WarningMsg	Error
+
+let g:colors_name = "corporation"

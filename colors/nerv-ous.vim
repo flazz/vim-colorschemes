@@ -58,3 +58,5 @@ if has('spell')
         hi SpellCap guisp=#9253ad gui=undercurl
         hi SpellLocal guisp=#8eaa29 gui=undercurl
 endif
+
+let g:colors_name = "nerv-ous"

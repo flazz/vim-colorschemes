@@ -169,3 +169,5 @@ hi GitGutterAdd ctermfg=156 ctermbg=NONE cterm=bold guifg=#bee38a guibg=NONE gui
 hi GitGutterChange ctermfg=179 ctermbg=NONE cterm=bold guifg=#D7AF5F guibg=NONE gui=bold
 hi GitGutterDelete ctermfg=168 ctermbg=NONE cterm=bold guifg=#D75F87 guibg=NONE gui=bold
 "}}}
+
+let g:colors_name = "eva01-lcl"

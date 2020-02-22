@@ -95,3 +95,5 @@ if v:version >= 700
 
 	hi MatchParen	cterm=bold	ctermbg=none	ctermfg=green	gui=bold	guibg=bg	guifg=#44ff44
 endif
+
+let g:colors_name = "darkdot"

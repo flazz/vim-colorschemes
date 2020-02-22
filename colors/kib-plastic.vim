@@ -186,3 +186,5 @@ hi CursorLine	guibg=#212628
 " }}}
 
 "vim: sw=4
+
+let g:colors_name = "kib-plastic"

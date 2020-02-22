@@ -266,3 +266,5 @@ let g:terminal_color_14=s:base0F[0]
 let g:terminal_color_15=s:base07[0]
 let g:terminal_color_background=s:base00[0]
 let g:terminal_color_foreground=s:base10[0]
+
+let g:colors_name = "oceanicnextlight"

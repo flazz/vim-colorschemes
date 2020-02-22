@@ -101,3 +101,5 @@ hi Underlined guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=18
 hi DiffAdd guifg=#335b38 guibg=#bd9700 guisp=#bd9700 gui=NONE ctermfg=65 ctermbg=1 cterm=NONE
 hi TabLine guifg=#335b38 guibg=#3bc74c guisp=#3bc74c gui=bold ctermfg=65 ctermbg=77 cterm=bold
 hi cursorim guifg=#192224 guibg=#536991 guisp=#536991 gui=NONE ctermfg=235 ctermbg=60 cterm=NONE
+
+let g:colors_name = "celtics-away"

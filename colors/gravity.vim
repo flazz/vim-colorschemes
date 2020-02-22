@@ -86,3 +86,5 @@ hi link SpecialComment  Special
 hi link Debug           Special
 
 "vim: sw=4
+
+let g:colors_name = "gravity"

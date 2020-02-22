@@ -84,3 +84,5 @@ hi diffOldFile guifg=#9f9 ctermfg=120 gui=none
 hi diffNewFile guifg=#f99 ctermfg=210 gui=none
 
 hi Keyword guifg=#8ff ctermfg=123
+
+let g:colors_name = "felipec"

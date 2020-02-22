@@ -113,3 +113,5 @@ highlight link SpecialComment Special
 highlight link Debug Special
 
 " vim:ff=unix:
+
+let g:colors_name = "symfony"

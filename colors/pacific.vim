@@ -64,3 +64,5 @@ hi Visual   guifg=#6D4039 guibg=#009192
 hi Pmenu	guifg=#5A5A5A guibg=#A8FF97
 hi PmenuSel	guifg=#2E2E2E guibg=#62FB44 
 "vim: sw=4
+
+let g:colors_name = "pacific"

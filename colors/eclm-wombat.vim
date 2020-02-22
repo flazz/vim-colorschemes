@@ -54,3 +54,5 @@ hi link RubyStringDemiliter String
 hi link htmlTag                     Identifier
 hi link htmlTagName                 htmlTag
 hi link htmlEndTag                  htmlTag
+
+let g:colors_name = "eclm-wombat"

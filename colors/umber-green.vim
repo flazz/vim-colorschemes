@@ -87,3 +87,5 @@ hi Special	guifg=#ddffcc
 "hi Error		
 "hi Todo		
 
+
+let g:colors_name = "umber-green"

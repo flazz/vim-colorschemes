@@ -128,3 +128,5 @@ if has("nvim")
   exe "hi TermCursorNC gui=NONE guifg=" s:sky_gui[4] "guibg=" s:sky_gui[0] "ctermfg=" s:sky_cterm[4] "ctermbg=" s:sky_cterm[0]
 endif
 
+
+let g:colors_name = "sky"

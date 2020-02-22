@@ -168,3 +168,5 @@ hi VisualNOS	gui=underline,bold
 hi Todo			gui=reverse
 
 " vim: sw=2
+
+let g:colors_name = "fog"

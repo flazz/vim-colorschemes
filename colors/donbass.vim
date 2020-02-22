@@ -87,3 +87,5 @@ hi diffChanged   ctermfg=130  guifg=#af5f00  ctermbg=bg   guibg=bg       cterm=b
 hi diffFile      ctermfg=25   guifg=#005faf  ctermbg=bg   guibg=bg       cterm=bold  gui=bold
 hi diffLine      ctermfg=25   guifg=#005faf  ctermbg=bg   guibg=bg       cterm=bold  gui=bold
 hi diffSubname   ctermfg=29   guifg=#00875f  ctermbg=bg   guibg=bg       cterm=bold  gui=bold
+
+let g:colors_name = "donbass"

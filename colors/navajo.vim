@@ -63,3 +63,5 @@ hi Error term=reverse ctermfg=Gray ctermbg=DarkRed cterm=bold gui=bold guifg=Whi
 hi Todo term=standout ctermfg=DarkBlue ctermbg=Yellow guifg=Blue guibg=Yellow
 
 " vim:set list et:
+
+let g:colors_name = "navajo"

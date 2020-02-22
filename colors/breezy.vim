@@ -197,3 +197,5 @@ hi link cIncluded cInclude
 
 hi AleErrorSign   guibg=#31363b guifg=#f67400 gui=NONE
 hi AleWarningSign guibg=#31363b guifg=#fdbc4b gui=NONE
+
+let g:colors_name = "breezy"

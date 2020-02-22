@@ -353,3 +353,5 @@ if has("gui_running")
   delf <SID>grey_level
   delf <SID>grey_number
 endif
+
+let g:colors_name = "heroku"

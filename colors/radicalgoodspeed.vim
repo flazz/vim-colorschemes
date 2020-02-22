@@ -207,3 +207,5 @@ hi link cssFontAttr Constant
 "nathanaelkane/vim-indent-guides
 hi IndentGuidesOdd  ctermbg=236 guibg=#090909
 hi IndentGuidesEven ctermbg=237 guibg=#000000
+
+let g:colors_name = "radicalgoodspeed"

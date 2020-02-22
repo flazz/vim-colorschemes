@@ -146,3 +146,5 @@ syn region level13 matchgroup=level13c start=/(/ end=/)/ contains=TOP,level13,le
 syn region level14 matchgroup=level14c start=/(/ end=/)/ contains=TOP,level14,level15, level16,NoInParens
 syn region level15 matchgroup=level15c start=/(/ end=/)/ contains=TOP,level15, level16,NoInParens
 syn region level16 matchgroup=level16c start=/(/ end=/)/ contains=TOP,level16,NoInParens
+
+let g:colors_name = "tetragrammaton"

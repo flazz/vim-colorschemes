@@ -54,3 +54,5 @@ hi Comment		ctermfg=96		cterm=none		guifg=#875f87	gui=italic
 hi! link FoldColumn		Folded
 hi! link CursorColumn	CursorLine
 
+
+let g:colors_name = "diokai"

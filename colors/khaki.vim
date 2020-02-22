@@ -176,3 +176,5 @@ if has("gui_running") && v:version >= 700
 endif
 
 " vim: set sts=4 et tw=0 ft=vim:
+
+let g:colors_name = "khaki"

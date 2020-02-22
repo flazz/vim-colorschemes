@@ -130,3 +130,5 @@ hi Underlined        ctermfg=69    ctermbg=NONE  gui=underline  cterm=underline 
 hi VertSplit         ctermfg=105   ctermbg=236   gui=NONE       cterm=NONE      guifg=#8787ff  guibg=#303030
 hi Visual            ctermfg=111   ctermbg=237   gui=NONE       cterm=NONE      guifg=#87afff  guibg=#3a3a3a
 hi WarningMsg        ctermfg=254   ctermbg=1     gui=NONE       cterm=NONE      guifg=#e4e4e4  guibg=#800000
+
+let g:colors_name = "neonwave"

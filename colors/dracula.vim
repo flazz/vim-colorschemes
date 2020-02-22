@@ -176,3 +176,5 @@ hi markdownUrlTitleDelimiter ctermfg=84 ctermbg=NONE cterm=NONE guifg=#50fa7b gu
 
 execute "set background=dark"
 "-------------------
+
+let g:colors_name = "dracula"

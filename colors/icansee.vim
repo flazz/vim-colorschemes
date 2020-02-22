@@ -59,3 +59,5 @@ hi Todo		term=standout		ctermbg=DarkYellow	ctermfg=Black	guibg=Yellow	guifg=Blac
 hi Type					ctermfg=Green				gui=NONE	guifg=Green
 hi Visual	term=reverse		cterm=reverse				guibg=DarkGreen	guifg=White
 hi WarningMsg	term=standout		ctermfg=Red						guifg=Red
+
+let g:colors_name = "icansee"

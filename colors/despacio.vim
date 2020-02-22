@@ -360,3 +360,5 @@ if g:despacio_Clear_Skies
     highlight! CursorLine          guifg=NONE  guibg=NONE  gui=NONE  ctermfg=NONE  ctermbg=NONE  cterm=NONE
     highlight! CursorColumn        guifg=NONE  guibg=NONE  gui=NONE  ctermfg=NONE  ctermbg=NONE  cterm=NONE
 endif
+
+let g:colors_name = "despacio"

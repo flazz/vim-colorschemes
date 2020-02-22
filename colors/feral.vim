@@ -102,3 +102,5 @@ hi phpClasses       ctermfg=208
  hi def link NERDTreeCloseable NERDTreeOpenable
  hi def link NERDTreeCWD String
  hi def link NERDTreePart String
+
+let g:colors_name = "feral"

@@ -108,3 +108,5 @@ hi link Debug           Special
 
 
 
+
+let g:colors_name = "winterd"

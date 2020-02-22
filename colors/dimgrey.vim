@@ -9,3 +9,5 @@ let g:colors_name = "DimGrey"
 hi Normal guibg=grey15
 hi NonText guibg=grey10
 
+
+let g:colors_name = "dimgrey"

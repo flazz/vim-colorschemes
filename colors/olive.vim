@@ -117,3 +117,5 @@ hi texSection		guifg=greenyellow
 hi texMatcher		guifg=yellowgreen			gui=none
 hi texMath							gui=none
 
+
+let g:colors_name = "olive"

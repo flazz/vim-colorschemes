@@ -19,3 +19,5 @@ hi Constant guifg=Magenta3
 hi WarningMsg gui=bold
 hi Search guibg=Yellow2
 hi Function guifg=IndianRed
+
+let g:colors_name = "lightdefault"

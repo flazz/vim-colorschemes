@@ -678,3 +678,5 @@ exe "hi! pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
 " }}}
+
+let g:colors_name = "parsec"

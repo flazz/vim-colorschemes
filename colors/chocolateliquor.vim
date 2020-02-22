@@ -34,3 +34,5 @@ hi Type gui=NONE guifg=DarkSeaGreen2
 hi Statement gui=NONE guifg=Gold3
 hi FoldColumn guibg=#1f0f0f ctermfg=Cyan ctermbg=Black
 hi Folded guibg=grey20 ctermfg=Cyan ctermbg=Black
+
+let g:colors_name = "chocolateliquor"

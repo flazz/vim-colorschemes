@@ -28,3 +28,5 @@ highlight StatusLineNC guifg=#8090a0
 highlight StatusLine guifg=#005070
 
 "vim: tw=0 sw=3 ts=3 sts=3 et
+
+let g:colors_name = "sand"

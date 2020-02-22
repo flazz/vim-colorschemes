@@ -52,3 +52,5 @@ endif
 hi Ignore ctermfg=LightGrey guifg=grey90
 
 " vim: sw=2
+
+let g:colors_name = "morning"

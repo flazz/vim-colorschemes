@@ -145,3 +145,5 @@ endif
 
 
 " vim:sw=4 ts=4 sts=4 
+
+let g:colors_name = "nightsky"

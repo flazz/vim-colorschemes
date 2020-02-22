@@ -234,3 +234,5 @@ endif
 "}}}
 " vim: set foldmethod=marker:
 
+
+let g:colors_name = "cherryblossom"

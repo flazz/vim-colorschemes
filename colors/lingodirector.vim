@@ -42,3 +42,5 @@ hi PreProc	  ctermfg=Green guifg=#008040  gui=NONE
 hi Keyword	  ctermfg=Green guifg=#008040  gui=NONE
 
 "set number
+
+let g:colors_name = "lingodirector"

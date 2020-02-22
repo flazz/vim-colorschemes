@@ -285,3 +285,5 @@ if !exists("s:main")
 endif
 
 call s:main()
+
+let g:colors_name = "marklar"

@@ -101,3 +101,5 @@ hi cssClassName ctermfg=81 ctermbg=NONE cterm=NONE guifg=#6fd3ff guibg=NONE gui=
 hi cssValueLength ctermfg=39 ctermbg=NONE cterm=NONE guifg=#0a9cff guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE guifg=#cf6a4c guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+let g:colors_name = "made-of-code"

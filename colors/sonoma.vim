@@ -154,3 +154,5 @@ hi link Tag             Special
 " hi clear Conceal
 " hi Conceal
 
+
+let g:colors_name = "sonoma"

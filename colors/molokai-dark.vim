@@ -247,3 +247,5 @@ if &t_Co > 255
        hi SpecialKey      ctermfg=239
    endif
 end
+
+let g:colors_name = "molokai-dark"

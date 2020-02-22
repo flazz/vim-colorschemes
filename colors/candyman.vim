@@ -424,3 +424,5 @@ delf s:grey_number
 " }}}
  
 
+
+let g:colors_name = "candyman"

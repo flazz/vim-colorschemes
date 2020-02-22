@@ -123,3 +123,5 @@ highlight Ignore         ctermfg=67
 highlight Error          ctermfg=230          ctermbg=167
 
 highlight Todo           ctermfg=51           ctermbg=66
+
+let g:colors_name = "oceanblack256"

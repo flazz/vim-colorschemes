@@ -75,3 +75,5 @@ hi plsqlRepeat guifg=#99CCFF
 hi plsqlStorage guifg=wheat
 hi! link plsqlTypeAttribute plsqlStorage
 hi! link plsqlAttribute plsqlStorage
+
+let g:colors_name = "mint"

@@ -108,3 +108,5 @@ hi warningmsg   guibg=#fafafa   guifg=#ff0000   gui=none
 
 hi wildmenu     guibg=#339900   guifg=#ffffff   gui=none
 
+
+let g:colors_name = "chela-light"

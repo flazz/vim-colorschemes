@@ -93,3 +93,5 @@ hi Underlined NONE  " TODO
 hi Ignore guifg=#000000 ctermfg=0
 hi Error NONE guifg=#b2b2b2 ctermfg=249 guibg=#af0000 ctermbg=124
 hi Todo NONE gui=bold cterm=bold guifg=#000000 ctermfg=0 guibg=#8787af ctermbg=103
+
+let g:colors_name = "cabin"

@@ -134,3 +134,5 @@ hi CursorLine guibg=grey5
 hi CursorColumn guibg=grey5
 hi Pmenu guibg=grey20 guifg=white
 hi PmenuSel guibg=green guifg=black
+
+let g:colors_name = "metacosm"

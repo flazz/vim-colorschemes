@@ -283,3 +283,5 @@ endfunction "}
 " }
 
 " vim: cc=120 foldmethod=marker foldmarker={,}
+
+let g:colors_name = "candypaper"

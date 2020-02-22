@@ -220,3 +220,5 @@ call s:Style("SpellLocal",     "",        s:green,      "")
 " Purposefully left unset: Conceal
 
 " }}}
+
+let g:colors_name = "sprinkles"

@@ -64,3 +64,5 @@ else
         hi StatusLineNC term=bold cterm=bold,underline ctermfg=Gray  ctermbg=Black
         hi LineNr       term=bold cterm=bold ctermfg=White ctermbg=DarkGray
 endif
+
+let g:colors_name = "impact"

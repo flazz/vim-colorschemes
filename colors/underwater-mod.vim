@@ -148,3 +148,5 @@ hi link xmlTag                  htmlTag
 hi link xmlTagName              htmlTagName
 
 " vim: set sw=4 sts=4 et :
+
+let g:colors_name = "underwater-mod"

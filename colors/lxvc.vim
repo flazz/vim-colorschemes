@@ -346,3 +346,5 @@ hi link EasyMotionShade  Comment
 
 hi link EasyMotionTarget2First MatchParen
 hi link EasyMotionTarget2Second MatchParen
+
+let g:colors_name = "lxvc"

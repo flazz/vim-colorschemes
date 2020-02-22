@@ -267,3 +267,5 @@ call s:Col('ALEErrorSign', 'red', s:linenr_background)
 unlet s:colors
 unlet s:background
 unlet s:linenr_background
+
+let g:colors_name = "gotham"

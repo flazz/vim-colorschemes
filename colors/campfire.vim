@@ -55,3 +55,5 @@ hi Underlined		cterm=underline term=underline
 hi Ignore			guifg=bg ctermfg=bg
 hi String       term=NONE           cterm=NONE           gui=NONE           start=^[[m^[[33m    stop=^[[m^[[32m   ctermfg=3   guifg=LightGrey
 hi Constant     term=NONE           cterm=NONE           gui=NONE           start=^[[m^[[33m    stop=^[[m^[[32m   ctermfg=3   guifg=LightGrey
+
+let g:colors_name = "campfire"

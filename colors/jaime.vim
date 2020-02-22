@@ -53,3 +53,5 @@ hi pythonDottedName     guifg=#99968b gui=italic
 hi pythonBuiltinFunc    guifg=#408080 gui=none
 hi pythonBuiltinObj     guifg=#0000ff gui=italic
 hi pythonSelf           guifg=#000000 gui=italic
+
+let g:colors_name = "jaime"

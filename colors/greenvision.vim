@@ -70,3 +70,5 @@ hi Visual		guibg=#001500 gui=reverse ctermbg=000 cterm=reverse
 hi VisualNOS		guibg=#002700 gui=reverse ctermbg=022 cterm=reverse
 hi WarningMsg		guifg=#000000 guibg=#00ff00 gui=none ctermfg=010 ctermbg=000 cterm=none
 hi WildMenu		guifg=#00cb00 guibg=#000000 gui=reverse ctermfg=000 ctermbg=010 cterm=reverse
+
+let g:colors_name = "greenvision"

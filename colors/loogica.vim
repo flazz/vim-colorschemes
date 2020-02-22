@@ -42,3 +42,5 @@ hi Special guifg=SlateBlue guibg=#E6E6E1
 hi Ignore guifg=#E6E6E1
 hi String guifg=#A80000 guibg=#E6E6E1
 hi Function guifg=#CC0000
+
+let g:colors_name = "loogica"

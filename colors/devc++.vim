@@ -30,3 +30,5 @@ hi LineNr	gui=italic		guifg=Black   guibg=#EBE9ED
 hi NonText 	gui=bold 		guifg=Grey70 guibg=White
 hi Visual	gui=NONE		guifg=DarkBlue		guibg=White
 
+
+let g:colors_name = "devc++"

@@ -128,3 +128,5 @@ else
 	hi WarningMsg guifg=#e0b088 ctermfg=144
 	hi WildMenu guifg=#dadad5 guibg=#121713 gui=none ctermfg=255 ctermbg=234 cterm=none
 endif
+
+let g:colors_name = "scheakur"

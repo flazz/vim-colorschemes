@@ -184,3 +184,5 @@ if !exists("g:rbpt_colorpairs")
         \ s:mint, s:light_blue, s:lavender, s:pink,
         \ ]
 endif
+
+let g:colors_name = "1989"

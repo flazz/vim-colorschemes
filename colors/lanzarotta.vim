@@ -66,3 +66,5 @@ if has("gui_running")
 endif
 
 " vim: sw=8
+
+let g:colors_name = "lanzarotta"

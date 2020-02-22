@@ -369,3 +369,5 @@ hi link SignifySignDelete GitGutterDelete
 " }}}
 
 set background=dark
+
+let g:colors_name = "neodark"

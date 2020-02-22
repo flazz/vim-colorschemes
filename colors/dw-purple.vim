@@ -64,3 +64,5 @@ hi Visual                         guibg=#dd00dd  guifg=#000000
 hi WarningMsg                     guibg=#888888  guifg=#000000
 
 "- end of colorscheme -----------------------------------------------  
+
+let g:colors_name = "dw-purple"

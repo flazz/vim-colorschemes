@@ -120,3 +120,5 @@ hi Keyword 	        guibg=white		guifg=#141312	gui=NONE
 
 hi link SpecialComment 	Special
 hi link Debug		Special
+
+let g:colors_name = "silent"

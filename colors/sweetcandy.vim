@@ -98,3 +98,5 @@ hi Repeat guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=Red ctermbg=NONE 
 hi Structure guifg=#dadada guibg=NONE guisp=NONE gui=NONE ctermfg=LightGray ctermbg=NONE cterm=NONE
 hi Macro guifg=#00dada guibg=NONE guisp=NONE gui=NONE ctermfg=DarkCyan ctermbg=NONE cterm=NONE
 hi TabLine guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=Red ctermbg=NONE cterm=NONE
+
+let g:colors_name = "sweetcandy"

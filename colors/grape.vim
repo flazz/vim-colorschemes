@@ -57,3 +57,5 @@ hi! link HTMLH2             Title
 hi HTMLString               guifg=darkgoldenrod
 hi! link HTMLTag            Keyword
 hi! link HTMLEndTag         Keyword
+
+let g:colors_name = "grape"

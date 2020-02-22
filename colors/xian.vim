@@ -48,3 +48,5 @@ hi Visual	guifg=#FFFF00 guibg=#6B959B gui=none
 hi VisualNOS	guifg=#FFFFFF guibg=#946464 gui=underline
 hi WarningMsg	guifg=#000000 guibg=#FF0000 gui=bold,underline
 hi WildMenu	guifg=#FFFFFF guibg=#0000FF gui=none
+
+let g:colors_name = "xian"

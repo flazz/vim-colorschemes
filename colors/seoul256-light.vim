@@ -74,3 +74,5 @@ else
   echom 'seoul256.vim not found'
 endif
 
+
+let g:colors_name = "seoul256-light"

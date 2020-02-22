@@ -10,3 +10,5 @@ hi NonText guibg=#400000
 " Experimental:
 hi Cursor guibg=green guifg=black
 
+
+let g:colors_name = "red"

@@ -111,3 +111,5 @@ hi Error	cterm=bold ctermfg=7 ctermbg=1
 
 
 "vim: sw=4
+
+let g:colors_name = "desertedoceanburnt"

@@ -81,3 +81,5 @@ hi link Delimiter	Special
 hi link SpecialComment	Special
 hi link Debug		Special
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:colors_name = "dante"

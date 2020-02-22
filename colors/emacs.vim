@@ -61,3 +61,5 @@ hi Ignore guifg=White
 
 
 " vim: sw=2
+
+let g:colors_name = "emacs"

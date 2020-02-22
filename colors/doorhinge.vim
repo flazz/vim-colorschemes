@@ -97,3 +97,5 @@ hi MoreMsg 		                    guifg=#80C9FF   ctermfg=Blue        ctermbg=non
 hi NonText 		    guibg=#2D3D4F   guifg=#405871   ctermfg=DarkGray    ctermbg=none        cterm=bold      term=bold   gui=bold		        
 hi MatchParen       guibg=Black     guifg=#FF9911   ctermfg=Brown       ctermbg=none        cterm=bold      term=bold   gui=bold
 " EOF
+
+let g:colors_name = "doorhinge"

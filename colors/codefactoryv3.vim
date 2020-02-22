@@ -264,3 +264,5 @@ hi Search           cterm=NONE              ctermfg=black           ctermbg=gree
 
 
 "vim: sw=4
+
+let g:colors_name = "codefactoryv3"

@@ -113,3 +113,5 @@ endif
 
 
 
+
+let g:colors_name = "black-angus"

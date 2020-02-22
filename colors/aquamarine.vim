@@ -73,3 +73,5 @@ hi Pmenu			guibg=LightGray			guifg=Black
 hi PmenuSel			guibg=MediumSlateBlue	guifg=White
 
 " vim: set noet sw=4 sts=4 ts=4 :
+
+let g:colors_name = "aquamarine"

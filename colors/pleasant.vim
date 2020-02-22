@@ -35,3 +35,5 @@ hi Constant guifg=#888080 gui=NONE
 hi Function guifg=#008040 gui=NONE guibg=#cccccc
 hi PreProc guifg=#808040 gui=NONE
 hi Keyword guifg=#008088 gui=NONE
+
+let g:colors_name = "pleasant"

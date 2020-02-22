@@ -85,3 +85,5 @@ hi Todo             guifg=#FF0000 guibg=#FFFF00 gui=UNDERLINE
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+let g:colors_name = "winter"

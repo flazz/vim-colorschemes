@@ -99,3 +99,5 @@ hi DiffAdd guifg=NONE guibg=#c0e0d0 gui=bold
 hi DiffDelete guifg=NONE guibg=#f0a0a0 gui=italic,bold
 
 
+
+let g:colors_name = "warm-grey"

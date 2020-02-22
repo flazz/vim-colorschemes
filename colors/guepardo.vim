@@ -121,3 +121,5 @@ hi! default link Underlined Special
 
 " pythonException:
 
+
+let g:colors_name = "guepardo"

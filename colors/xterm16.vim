@@ -809,3 +809,5 @@ finally
     delfunction s:set_brightness
     " }}}1
 endtry
+
+let g:colors_name = "xterm16"

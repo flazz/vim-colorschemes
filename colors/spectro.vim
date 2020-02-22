@@ -205,3 +205,5 @@ hi link DiffDelete	    DiffRemoved
 hi link DiffText	    DiffLine
 hi link FoldColumn	    Folded
 
+
+let g:colors_name = "spectro"

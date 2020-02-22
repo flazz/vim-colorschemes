@@ -365,3 +365,5 @@ endif
 "
 " vim:foldmethod=marker:foldlevel=0
 "}}}
+
+let g:colors_name = "solarized8-light-high"

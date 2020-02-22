@@ -120,3 +120,5 @@ hi user1 guifg=#b1efff guibg=#49225e guisp=#49225e gui=NONE ctermfg=159 ctermbg=
 hi doxygenspecialonelinedesc guifg=#8ead85 guibg=NONE guisp=NONE gui=NONE ctermfg=108 ctermbg=NONE cterm=NONE
 hi doxygencomment guifg=#ada49a guibg=NONE guisp=NONE gui=NONE ctermfg=144 ctermbg=NONE cterm=NONE
 hi cspecialcharacter guifg=#d1418e guibg=#2e2d40 guisp=#2e2d40 gui=NONE ctermfg=169 ctermbg=238 cterm=NONE
+
+let g:colors_name = "vivid"

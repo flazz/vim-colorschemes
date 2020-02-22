@@ -65,3 +65,5 @@ hi VertSplit                                                        gui=NONE  ct
 hi MatchParen     ctermfg=0 ctermbg=3 guibg=#335EA8
 hi User1                                                            gui=bold  cterm=bold
 
+
+let g:colors_name = "developer"

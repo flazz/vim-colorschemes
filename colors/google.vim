@@ -103,3 +103,5 @@ hi! link Structure		Type
 hi! link Title			Structure
 hi! link Typedef		Type
 hi! link WarningMsg		Error
+
+let g:colors_name = "google"

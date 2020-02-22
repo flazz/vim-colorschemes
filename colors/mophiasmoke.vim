@@ -89,3 +89,5 @@ highlight	link	CursorColumn	CursorLine
 highlight	link	Question	WarningMsg
 
 endif
+
+let g:colors_name = "mophiasmoke"

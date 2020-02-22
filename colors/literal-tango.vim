@@ -181,3 +181,5 @@ if &background == "dark"
 elseif &background == "light"
     " TODO
 endif
+
+let g:colors_name = "literal-tango"

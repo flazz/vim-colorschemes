@@ -69,3 +69,5 @@ hi javaParen2    guifg=#a0c0ff
 hi javaFuncDef   guifg=#7080f0
 hi javaLangObject guifg=#6080c0
 hi javaBraces    guifg=#406090
+
+let g:colors_name = "telstar"

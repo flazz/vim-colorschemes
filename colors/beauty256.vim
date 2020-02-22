@@ -77,3 +77,5 @@ hi djangoStatement guibg=#ddffaa ctermbg=150 ctermfg=22
 hi docSpecial guifg=RoyalBlue1
 hi docTrans guibg=White guifg=White
 hi docCode guifg=#00aa00
+
+let g:colors_name = "beauty256"

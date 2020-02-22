@@ -39,3 +39,5 @@ hi StatusLine   term=bold cterm=bold ctermfg=White ctermbg=Blue		gui=bold guifg=
 hi StatusLineNC term=bold cterm=bold ctermfg=Gray  ctermbg=Blue      gui=bold guifg=#AAAAAA guibg=#000090
 hi LineNr		 term=bold cterm=bold ctermfg=White ctermbg=DarkBlue  gui=bold guifg=#00A0FF guibg=#000050
 
+
+let g:colors_name = "blue"

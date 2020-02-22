@@ -125,3 +125,5 @@ hi User1 guifg=#000000 ctermfg=0 guibg=#84E12E ctermbg=112
 
 hi clear htmlTagN
 hi link htmlTagN Typedef
+
+let g:colors_name = "skittles-dark"

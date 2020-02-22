@@ -46,3 +46,5 @@ highlight Constant	guifg=#000000	guibg=#aaaaaa gui=underline,bold
 "}}}
 
 
+
+let g:colors_name = "scite"

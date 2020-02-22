@@ -299,3 +299,5 @@ endif
 if 1
     delcommand CSAHi
 endif
+
+let g:colors_name = "herokudoc"

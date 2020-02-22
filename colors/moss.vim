@@ -241,3 +241,5 @@ else
     hi Todo       cterm=bold ctermfg=LightYellow
 
 endif
+
+let g:colors_name = "moss"

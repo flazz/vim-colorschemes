@@ -57,3 +57,5 @@ hi link texRefZone Normal
 hi link texMath PreProc
 hi link texLigature texMath
 hi texStatement gui=NONE        guifg=#800000       guibg=NONE
+
+let g:colors_name = "kate"

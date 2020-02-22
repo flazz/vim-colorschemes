@@ -69,3 +69,5 @@ hi Statement    gui=NONE guifg=#008858 guibg=NONE
 hi Todo         gui=NONE guifg=#ff0070 guibg=#ffe0f4
 hi Type         gui=NONE guifg=#7040ff guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=#0000ff guibg=NONE
+
+let g:colors_name = "rainbow-fine-blue"

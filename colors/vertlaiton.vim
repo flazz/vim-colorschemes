@@ -83,3 +83,5 @@ hi Todo			ctermfg=192		ctermbg=022		cterm=bold
 hi! link FoldColumn		Folded
 hi! link NonText		LineNr
 
+
+let g:colors_name = "vertlaiton"

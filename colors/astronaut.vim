@@ -162,3 +162,5 @@ exe "hi AltType        start=[m[4;32;40m stop=[m[32m   ctermfg=".s:green."  
 exe "hi User1                                                  ctermfg=".s:white."     ctermbg=".s:blue."      guifg=white       guibg=blue"
 exe "hi User2                                                  ctermfg=".s:cyan."      ctermbg=".s:blue."      guifg=cyan        guibg=blue"
 " vim: nowrap
+
+let g:colors_name = "astronaut"

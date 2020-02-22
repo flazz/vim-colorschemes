@@ -71,3 +71,5 @@ else
     highlight Search ctermbg=yellow
     highlight CursorLine cterm=NONE ctermbg=235
 endif
+
+let g:colors_name = "ingretu"

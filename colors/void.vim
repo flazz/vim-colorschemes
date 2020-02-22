@@ -109,3 +109,5 @@ hi Error	cterm=bold ctermfg=7 ctermbg=1
 
 " python specific highlightning
 hi link pythonOperator Statement
+
+let g:colors_name = "void"

@@ -67,3 +67,5 @@ hi Todo         gui=BOLD,UNDERLINE guifg=#993300 guibg=NONE
 hi Type         gui=NONE guifg=#993300 guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=#663300 guibg=NONE
 
+
+let g:colors_name = "earth"

@@ -122,3 +122,5 @@ exec "hi htmlArg guifg=". s:white.gui ." guibg=NONE gui=NONE ctermfg=". s:white.
 exec "hi DiffAdd guifg=NONE guibg=". s:green.gui ." ctermbg=". s:green.cterm
 exec "hi DiffChange guifg=NONE guibg=". s:blue.gui ." ctermbg=". s:blue.cterm
 exec "hi DiffDelete guifg=NONE guibg=". s:red.gui ." ctermbg=". s:red.cterm
+
+let g:colors_name = "northpole"

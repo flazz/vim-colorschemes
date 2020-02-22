@@ -39,3 +39,5 @@ hi Keyword guifg=#008088 gui=NONE
 
 hi Search guibg=#336600 guifg=#FFFF00 gui=NONE
 hi IncSearch guibg=#CC6600  gui=NONE
+
+let g:colors_name = "mellow"

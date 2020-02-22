@@ -264,3 +264,5 @@ let g:unite_source_grep_search_word_highlight = 'UniteGrep'
 unlet s:colors
 unlet s:background
 unlet s:linenr_background
+
+let g:colors_name = "gotham256"

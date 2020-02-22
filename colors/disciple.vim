@@ -209,3 +209,5 @@ hi link diffIdentical      WarningMsg
 hi link diffIsA            WarningMsg
 hi link diffNoEOL          WarningMsg
 hi link diffOnly           WarningMsg
+
+let g:colors_name = "disciple"

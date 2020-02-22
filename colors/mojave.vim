@@ -72,3 +72,5 @@ hi Type           ctermfg=143 guifg=#bdb76b
 hi Special        ctermfg=223 guifg=#ffdead
 hi Ignore         ctermfg=240 guifg=#666666
 hi Todo           ctermfg=196 ctermbg=226 guifg=#ff4500 guibg=#eeee00
+
+let g:colors_name = "mojave"

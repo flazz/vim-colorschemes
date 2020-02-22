@@ -145,3 +145,5 @@ hi rubyoperator guifg=#ff3854 guibg=NONE guisp=NONE gui=NONE ctermfg=13 ctermbg=
 "hi clear -- no settings --
 hi htmlendtag guifg=#45c1ea guibg=NONE guisp=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
 
+
+let g:colors_name = "madeofcode"

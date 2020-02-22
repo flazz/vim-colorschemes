@@ -67,3 +67,5 @@ hi Ignore       guifg=#c8c8c8
 hi Error        guifg=#ffffff   guibg=#c81414
 hi Todo         guifg=#c81414   guibg=#ffffff
 
+
+let g:colors_name = "bclear"

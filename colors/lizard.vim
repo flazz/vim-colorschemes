@@ -53,3 +53,5 @@ hi Boolean              guifg=#FFAFAF gui=NONE
 " Python syntax
 hi pythonCoding         guifg=#99968B gui=ITALIC
 hi pythonNumber         guifg=#FFAFAF gui=NONE
+
+let g:colors_name = "lizard"

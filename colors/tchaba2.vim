@@ -96,3 +96,5 @@ hi NonText		ctermfg=25	ctermbg=234
 hi Title		ctermfg=160
 
 hi Normal		ctermfg=252 ctermbg=233
+
+let g:colors_name = "tchaba2"

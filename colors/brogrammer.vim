@@ -113,3 +113,5 @@ hi SignColumn ctermfg=244 ctermbg=236 guifg=#838586 guibg=#2f2f2f
 hi GitGutterChangeDefault ctermfg=244 ctermbg=236 guifg=#bbbb00 guibg=#2f2f2f
 hi GitGutterAddDefault ctermfg=2 ctermbg=236 guifg=#009900 guibg=#2f2f2f
 hi GitGutterDeleteDefault ctermfg=1 ctermbg=236 guifg=#ff2222 guibg=#2f2f2f
+
+let g:colors_name = "brogrammer"

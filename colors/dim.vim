@@ -82,3 +82,5 @@ hi Error guibg=red3
 hi Todo guibg=yellow3
 hi Question guifg=green3
 
+
+let g:colors_name = "dim"

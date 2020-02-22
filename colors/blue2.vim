@@ -14,3 +14,5 @@ hi Visual guifg=grey40
 
 " Experimental:
 hi Cursor guibg=yellow guifg=bg
+
+let g:colors_name = "blue2"

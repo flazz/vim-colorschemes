@@ -596,3 +596,5 @@ elseif &t_Co == 256
   delcommand CSAHi
 
 endif
+
+let g:colors_name = "maroloccio"

@@ -45,3 +45,5 @@ else
 	highlight SpecialKey term=bold cterm=NONE ctermfg=Yellow
 endif
 
+
+let g:colors_name = "basic"

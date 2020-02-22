@@ -74,3 +74,5 @@ hi PreProc                ctermfg=96  guifg=#875f87
 hi Directory              ctermfg=95  guifg=#875f5f
 hi Underlined             ctermfg=127 guifg=#af00af
 hi Special                ctermfg=173 guifg=#d7875f
+
+let g:colors_name = "mushroom"

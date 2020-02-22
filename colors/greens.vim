@@ -53,3 +53,5 @@ hi TabLineSel                     guifg=White      guibg=Black
 endif
 
 " vim: ts=2 sw=2
+
+let g:colors_name = "greens"

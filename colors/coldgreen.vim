@@ -54,3 +54,5 @@ hi diffFile     ctermfg=yellow      ctermbg=none    cterm=none
 hi diffAdded    ctermfg=lightgreen  ctermbg=none
 hi diffRemoved  ctermfg=lightblue   ctermbg=none
 
+
+let g:colors_name = "coldgreen"

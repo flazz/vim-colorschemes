@@ -184,3 +184,5 @@ else
 endif
 
 " vim: set et :
+
+let g:colors_name = "pf-earth"

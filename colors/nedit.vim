@@ -24,3 +24,5 @@ hi Special		gui=NONE		guifg=darkGreen	guibg=NONE
 "hi Error		
 "hi Todo		
 
+
+let g:colors_name = "nedit"

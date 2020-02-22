@@ -74,3 +74,5 @@ hi Visual         guifg=#ffffff guibg=#00009c gui=none
 hi VisualNOS      guifg=#ffffff guibg=#b0b0b0 gui=none
 hi WarningMsg     guifg=#ffffff guibg=#cc0000 gui=bold
 hi WildMenu       guifg=#f0f0dd guibg=#0000ee gui=none
+
+let g:colors_name = "sf"

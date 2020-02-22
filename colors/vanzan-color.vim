@@ -116,3 +116,5 @@ hi DiffAdd guifg=NONE guibg=#203030 gui=bold
 hi DiffDelete guifg=NONE guibg=#302020 gui=italic,bold
 
 
+
+let g:colors_name = "vanzan-color"

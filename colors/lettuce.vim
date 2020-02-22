@@ -213,3 +213,5 @@ autocmd CmdwinLeave * hi User1      guibg=#303030
 autocmd CmdwinLeave * hi StatusLine guibg=#303030
 
 end
+
+let g:colors_name = "lettuce"

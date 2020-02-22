@@ -39,3 +39,5 @@ highlight Repeat	gui=Bold guifg=SeaGreen2 guibg=bg
 highlight Special	gui=None guifg=#dd88ff
 highlight Underlined	gui=underline guifg=honeydew3 guibg=bg
 highlight Todo		gui=underline guifg=Cyan guibg=#507080
+
+let g:colors_name = "cthulhian"

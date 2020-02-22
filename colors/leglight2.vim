@@ -202,3 +202,5 @@ hi Error            ctermfg=160     ctermbg=231     cterm=bold
 hi Exception        ctermfg=95      ctermbg=231     cterm=bold
 hi Underlined                                       cterm=underline
 " 1}}}
+
+let g:colors_name = "leglight2"

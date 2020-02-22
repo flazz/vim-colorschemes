@@ -83,3 +83,5 @@ hi WarningMsg	guifg=salmon
 " hi Pmenu        guibg=#3a6595 guifg=#9aadd5
 " hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0                    
 endif
+
+let g:colors_name = "mophiadark"

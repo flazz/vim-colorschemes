@@ -59,3 +59,5 @@ hi Todo			cterm=bold,standout	ctermfg=11	ctermbg=0
 hi MatchParen		cterm=bold		ctermfg=none	ctermbg=250
 
 hi ColorColumn							ctermbg=255
+
+let g:colors_name = "kyle"

@@ -52,3 +52,5 @@ highlight Special    guifg=Red      gui=Bold
 highlight Search     guifg=Green    gui=NONE
 highlight Error	     guifg=Red	    gui=NONE
 highlight Todo	     guifg=Cyan	    gui=NONE
+
+let g:colors_name = "satori"

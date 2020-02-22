@@ -72,3 +72,5 @@ hi FoldColumn   cterm=NONE ctermfg=111 ctermbg=NONE
 " misc fixes
 hi link xmlEndTag Function
 "hi link pythonBuiltin Identifier
+
+let g:colors_name = "woju"

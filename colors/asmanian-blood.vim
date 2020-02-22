@@ -40,3 +40,5 @@ hi Special      guifg=#a06050 guibg=#181414 gui=italic
 hi Number       guifg=#60d060 guibg=#080404 gui=none
 hi Constant     guifg=#60d060 guibg=#080404 gui=none
 
+
+let g:colors_name = "asmanian-blood"

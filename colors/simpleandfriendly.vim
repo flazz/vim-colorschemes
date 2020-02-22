@@ -63,3 +63,5 @@ hi Todo	  	term=standout	ctermbg=Yellow  ctermfg=Black guifg=Blue guibg=Yellow
 hi Special 	guibg=grey90	guifg=Slateblue	gui=UNDERLINE
 
 hi operator guifg=gray25  ctermfg=Black   term=bold   cterm=bold  gui=bold
+
+let g:colors_name = "simpleandfriendly"

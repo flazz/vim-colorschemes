@@ -2045,3 +2045,5 @@ call s:set_syntax_highlighting()
 " =========================================================================
 " Cheers!
 " vim: fdm=marker ff=unix
+
+let g:colors_name = "papercolor"

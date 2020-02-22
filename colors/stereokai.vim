@@ -144,3 +144,5 @@ highlight scssNestedProperty ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef gu
 highlight scssVariable ctermfg=208 ctermbg=NONE cterm=NONE guifg=#fd971f guibg=NONE gui=NONE
 highlight scssVariableValue ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 highlight scssColor ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
+
+let g:colors_name = "stereokai"

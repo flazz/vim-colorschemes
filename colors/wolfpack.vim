@@ -119,3 +119,5 @@ hi cssValueLength ctermfg=110 ctermbg=NONE cterm=NONE guifg=#98a6dd guibg=NONE g
 hi cssCommonAttr ctermfg=110 ctermbg=NONE cterm=NONE guifg=#98a6dd guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
+
+let g:colors_name = "wolfpack"

@@ -131,3 +131,5 @@ hi link             diffComment     Comment
 " 2}}}
 
 " 1}}}
+
+let g:colors_name = "liquidcarbon"

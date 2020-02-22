@@ -64,3 +64,5 @@ hi Visual                         guibg=#dddd00  guifg=#000000
 hi WarningMsg                     guibg=#888888  guifg=#000000
 
 "- end of colorscheme -----------------------------------------------  
+
+let g:colors_name = "dw-yellow"

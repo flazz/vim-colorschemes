@@ -98,3 +98,5 @@ hi link phpFunction Function
 hi link phpClass Type
 hi link rustQuestionMark Operator
 hi link vimVar NONE
+
+let g:colors_name = "hydrangea"

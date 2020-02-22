@@ -63,3 +63,5 @@ highlight Todo guifg=orangered guibg=yellow2 gui=NONE ctermfg=202 ctermbg=226 ct
 
 
 
+
+let g:colors_name = "desertex"

@@ -45,3 +45,5 @@ hi! _COperators     ctermfg=white  guifg=white  gui=none
 " For Vim 7
 hi! MatchParen      ctermbg=blue  guifg=white guibg=blue
 
+
+let g:colors_name = "nightflight2"

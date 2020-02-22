@@ -252,3 +252,5 @@ endif
 let &cpo = s:save_cpo   " restoring &cpo value
 " vim: set fdm=marker fileformat=unix:
 
+
+let g:colors_name = "pixelmuerto"
