@@ -5,11 +5,6 @@
 " Note: Based on the molokai theme by Tomas Restrepo
 "
 
-if exists('g:loaded_mopkai')
-    finish
-endif
-let g:loaded_mopkai = 1
-
 set background=dark
 hi clear
 let g:colors_name='mopkai'
