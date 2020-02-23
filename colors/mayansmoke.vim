@@ -341,3 +341,5 @@ hi phpBoolean ctermfg=58 cterm=NONE guifg=brown
 
 " 1}}}
 
+
+let g:colors_name = "mayansmoke"

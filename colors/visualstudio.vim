@@ -90,3 +90,5 @@ hi DiffDelete   guifg=NONE      guibg=#f0e0b0   gui=bold
 
 set guifont=Consolas\ for\ Powerline\ FixedD\ 11
 
+
+let g:colors_name = "visualstudio"

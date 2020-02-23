@@ -202,3 +202,5 @@ endif
 " CSApprox config {{{1
 let g:CSApprox_hook_graywh_post = ['hi Visual          ctermbg=NONE ctermfg=NONE cterm=reverse',
                                  \ 'hi IncSearch       ctermbg=NONE ctermfg=NONE cterm=reverse' ]
+
+let g:colors_name = "graywh"

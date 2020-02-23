@@ -685,3 +685,5 @@ delf s:grey_color
 delf s:grey_level
 delf s:grey_number
 " }}}
+
+let g:colors_name = "jellybeans"

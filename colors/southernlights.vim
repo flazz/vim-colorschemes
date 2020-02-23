@@ -91,3 +91,5 @@ hi diffLine	ctermfg=yellow	guifg=yellow
 hi link wdiffOld diffRemoved
 hi link wdiffNew diffAdded
 
+
+let g:colors_name = "southernlights"

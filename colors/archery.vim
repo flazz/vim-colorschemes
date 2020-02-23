@@ -394,3 +394,5 @@ hi link javaDocParam     Comment
 hi link javaDocTags      Comment
 hi link javaExternal     Statement
 hi link javaScopeDecl    Statement
+
+let g:colors_name = "archery"

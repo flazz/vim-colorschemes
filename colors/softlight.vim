@@ -83,3 +83,5 @@ hi VertSplit  gui=BOLD guifg=#FFFFFF guibg=#0E8ED3
 hi Visual	  gui=BOLD guifg=#FFFFFF guibg=#1679F9
 
 
+
+let g:colors_name = "softlight"

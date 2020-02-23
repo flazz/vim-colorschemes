@@ -69,3 +69,5 @@ hi Ignore     guifg=grey40    gui=none
 hi Todo       guifg=orangered guibg=#304050 gui=none
 
 "vim: sw=4
+
+let g:colors_name = "atom"

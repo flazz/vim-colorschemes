@@ -186,3 +186,5 @@ hi! link helpHyperTextJump   Underlined
 hi! link helpURL             Underlined
 
 
+
+let g:colors_name = "sialoquent"

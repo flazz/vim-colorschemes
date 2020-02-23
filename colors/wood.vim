@@ -37,3 +37,5 @@ hi Ignore			guifg=grey29
 hi Todo				guibg=black guifg=white
 hi WildMenu			guibg=brown
 hi LineNr           guifg=#CCCCAA guibg=#61614A
+
+let g:colors_name = "wood"

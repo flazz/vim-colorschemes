@@ -202,3 +202,5 @@ if &t_Co > 255
   highlight mkdLinkDefTarget ctermfg=69    ctermbg=NONE    cterm=underline
   highlight mkdLinkTitle   ctermfg=141     ctermbg=NONE    cterm=NONE
 end
+
+let g:colors_name = "behelit"

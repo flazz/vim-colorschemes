@@ -100,3 +100,5 @@ else
     " Folds
     hi Folded ctermfg=222 guifg=#FBD485 ctermbg=234 guibg=#1c1c1c cterm=none gui=none
 endif
+
+let g:colors_name = "strange"

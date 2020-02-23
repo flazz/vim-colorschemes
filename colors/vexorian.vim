@@ -40,3 +40,5 @@ hi Todo		    guifg=#008800
 hi Structure     guifg=#000000
 hi Identifier     guifg=#000000
 
+
+let g:colors_name = "vexorian"

@@ -70,3 +70,5 @@ hi! link xmlEndTag          Keyword
 hi! link xmlEntity          Statement
 hi! link xmlCData           Comment
 hi! link xmlAttrib          Attribute
+
+let g:colors_name = "corn"

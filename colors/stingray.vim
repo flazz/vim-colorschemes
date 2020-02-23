@@ -64,3 +64,5 @@ let g:colors_name="stingray"
 
         hi cursorline   ctermbg=DarkBlue
         hi cursorline   guibg=DarkBlue
+
+let g:colors_name = "stingray"

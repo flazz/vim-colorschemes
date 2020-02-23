@@ -35,3 +35,5 @@ hi Special guifg=#ffaa00
 hi SpecialChar guifg=#ffaa00
 hi StorageClass guifg=#ddaacc
 hi Error guifg=red guibg=white
+
+let g:colors_name = "aiseered"

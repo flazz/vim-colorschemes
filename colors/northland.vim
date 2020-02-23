@@ -147,3 +147,5 @@ hi fortranLabelNumber guifg=DarkRed
 
 "hi fortranTodo guifg=Black guibg=#507080
 "hi fortranContinueMark guifg=White guibg=DarkRed
+
+let g:colors_name = "northland"

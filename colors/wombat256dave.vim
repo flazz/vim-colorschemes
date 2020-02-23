@@ -96,3 +96,5 @@ hi! link FoldColumn		Folded
 hi! link CursorColumn	CursorLine
 
 " vim:set ts=4 sw=4 noet:
+
+let g:colors_name = "wombat256dave"

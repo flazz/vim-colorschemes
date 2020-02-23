@@ -51,3 +51,5 @@ hi Number		guifg=#4DF4FF gui=none
 hi Special		guifg=#4DF4FF gui=bold
 
 
+
+let g:colors_name = "ekinivim"

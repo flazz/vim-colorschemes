@@ -64,3 +64,5 @@ hi Number		guifg=#96defa gui=none
 hi Special		guifg=#3e71a1 gui=none
 
 
+
+let g:colors_name = "underwater"

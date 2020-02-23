@@ -20,3 +20,5 @@ hi Folded     guifg=#ffffff guibg=#333333 gui=italic
 " Syntax highlighting
 hi Comment    guifg=#00ff00 guibg=NONE    gui=none
 
+
+let g:colors_name = "spiderhawk"

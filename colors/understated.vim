@@ -56,3 +56,5 @@ hi Ignore		ctermfg=DarkGrey guifg=DarkGrey cterm=bold gui=bold
 hi Error		ctermbg=DarkRed guibg=DarkRed
 hi Todo	    	ctermfg=Black guifg=Black ctermbg=DarkYellow guibg=DarkYellow
 
+
+let g:colors_name = "understated"

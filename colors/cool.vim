@@ -80,3 +80,5 @@ highlight Type		guifg=white   gui=NONE
 
 highlight Visual	guibg=#112233	guifg=#6688AA
 highlight Visual	ctermbg=DarkBlue	ctermfg=LightBlue
+
+let g:colors_name = "cool"

@@ -189,3 +189,5 @@ hi Underlined		cterm=underline	ctermfg=39	gui=underline	guifg=#00afff
 " ADDITIONNAL
 hi Repeat		cterm=none		ctermfg=99				guifg=#875fff
 
+
+let g:colors_name = "leo"

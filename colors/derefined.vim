@@ -99,3 +99,5 @@ hi WildMenu guifg=grey guibg=blue
 " new Vim 7.0 items
 hi Pmenu        guibg=#3a6595 guifg=#9aadd5
 hi PmenuSel     guibg=#4a85ba guifg=#b0d0f0                    
+
+let g:colors_name = "derefined"

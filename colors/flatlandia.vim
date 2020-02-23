@@ -164,3 +164,5 @@ hi! link VisualNOS	Visual
 hi! link FoldColumn	Folded
 
 let g:airline_theme='flatlandia'
+
+let g:colors_name = "flatlandia"

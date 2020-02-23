@@ -2660,3 +2660,5 @@ endif
 " Modeline:       [[[1
 " vim: et:ts=4:sw=4:ft=vim:
 " vim: fmr=[[[,]]]:fdm=marker:fdl=0:
+
+let g:colors_name = "briofita"

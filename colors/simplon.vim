@@ -130,3 +130,5 @@ hi TabLine          guifg=#404040   guibg=#dddddd   gui=none
 hi TabLineFill      guifg=#404040   guibg=#dddddd   gui=none
 hi TabLineSel       guifg=#404040   gui=bold
 " }}}
+
+let g:colors_name = "simplon"

@@ -100,3 +100,5 @@ if version >= 700
 endif
 
 " vim:set ts=8 sts=2 sw=2 tw=0:
+
+let g:colors_name = "darkeclipse"

@@ -106,3 +106,5 @@ hi lCursor                term=NONE            cterm=NONE             ctermbg=16
 hi javascript             term=NONE            cterm=NONE             ctermbg=NONE          ctermfg=fg
 
 hi RubySymbol             term=NONE            cterm=NONE             ctermbg=NONE          ctermfg=90
+
+let g:colors_name = "raggi"

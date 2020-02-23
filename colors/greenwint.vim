@@ -122,3 +122,5 @@ hi pythonInclude guifg=#BBFFDD ctermfg=158
 " --- Verilog ---
 hi link verilogOperator Type
 hi link verilogConstant PreProc
+
+let g:colors_name = "greenwint"

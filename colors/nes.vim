@@ -93,3 +93,5 @@ syn match Braces display '[{}()\[\]]'
 "hi Braces         gui=none                      guifg=#00bb00
 hi Braces         gui=none       guibg=#002200  guifg=#00bb00
 "- end of colorscheme -----------------------------------------------  
+
+let g:colors_name = "nes"

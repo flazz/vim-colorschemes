@@ -201,3 +201,5 @@ hi rubyPredefinedVariable      guifg=gray30
 hi rubySymbol guifg=Purple
 
 "hi rubyTodo                    gui=            guifg=            guibg=
+
+let g:colors_name = "codeburn"

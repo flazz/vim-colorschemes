@@ -40,3 +40,5 @@ hi Todo         ctermfg=blue ctermbg=yellow cterm=none
 
 " vim: set fdl=0 fdm=marker:
 
+
+let g:colors_name = "trivial256"

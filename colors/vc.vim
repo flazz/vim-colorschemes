@@ -22,3 +22,5 @@ hi Special		gui=NONE		guifg=SteelBlue	guibg=NONE
 "hi Error		
 "hi Todo		
 
+
+let g:colors_name = "vc"

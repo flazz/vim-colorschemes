@@ -56,3 +56,5 @@ hi MBEChanged       guifg=#B92503     guibg=#e3f8f2 gui=bold
 hi MBEVisibleNormal guifg=white       guibg=#82b687
 hi MBEVisibleChanged guifg=#880000    guibg=#82b687 gui=bold
 " }}}
+
+let g:colors_name = "heliotrope"

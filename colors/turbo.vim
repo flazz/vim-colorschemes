@@ -85,3 +85,5 @@ hi Underlined                   gui=underline               cterm=none
 hi Ignore                       gui=reverse                 cterm=reverse
 
 
+
+let g:colors_name = "turbo"

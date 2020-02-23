@@ -232,3 +232,5 @@ hi htmlBoldUnderlineItalic cterm=UNDERLINE ctermfg=lightblue    ctermbg=black
 "    16	yellow
 "}}}1
 " vim:set nowrap foldmethod=marker expandtab:
+
+let g:colors_name = "hhdred"

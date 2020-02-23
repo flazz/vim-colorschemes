@@ -348,3 +348,5 @@ hi! link rubyDefine Statement
 hi! link rubyBlockParameter Normal
 hi! link rubyInstanceVariable Normal
 call s:HL('rubyFunction', s:key2, s:bg)
+
+let g:colors_name = "vorange"

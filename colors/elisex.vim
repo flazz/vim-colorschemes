@@ -181,3 +181,5 @@ hi Underlined ctermbg=bg ctermfg=Cyan cterm=underline guibg=bg guifg=Cyan gui=un
 "==========================================================================={{{1
 " vim: set et sw=2 sts=2 ts=8 nowrap:
 " vim600: set fdc=2 fdm=marker:
+
+let g:colors_name = "elisex"

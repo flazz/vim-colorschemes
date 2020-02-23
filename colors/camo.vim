@@ -74,3 +74,5 @@ hi Ignore       guifg=grey30
 hi Error        guifg=bisque    guibg=red
 hi Todo         guifg=red       guibg=bisque
 
+
+let g:colors_name = "camo"

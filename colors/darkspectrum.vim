@@ -128,3 +128,5 @@ hi TabLineFill	guifg=#535353 guibg=#202020 gui=none
 hi TabLineSel	guifg=#FFFFFF gui=bold
 "hi TabLineSel	guifg=#FFFFFF guibg=#000000 gui=bold
 " vim: sw=4 ts=4
+
+let g:colors_name = "darkspectrum"

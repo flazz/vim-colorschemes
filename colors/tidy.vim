@@ -63,3 +63,5 @@ hi WildMenu	guibg=Yellow	guifg=Black
 hi lCursor	guibg=SeaGreen1	guifg=NONE
 hi Underlined			guifg=#80a0ff		gui=underline
 hi Error	guibg=Red	guifg=White
+
+let g:colors_name = "tidy"

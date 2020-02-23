@@ -675,3 +675,5 @@ call s:HL('VimBracket', 'barcared', '', 'none')
 
 endif
 " }}}
+
+let g:colors_name = "ubaryd"

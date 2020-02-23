@@ -267,3 +267,5 @@ hi! link diffAdded String
 let &background = s:style
 
 " }}}
+
+let g:colors_name = "ayu"

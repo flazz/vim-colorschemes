@@ -53,3 +53,5 @@ else
     hi Statement ctermfg=DarkRed
     hi MatchParen guibg=turquoise
 endif
+
+let g:colors_name = "seashell"

@@ -138,3 +138,5 @@ highlight Structure     ctermfg=DarkGreen
 highlight String        ctermfg=DarkCyan
 
 " vim: sw=4 ts=4 et
+
+let g:colors_name = "oceandeep"

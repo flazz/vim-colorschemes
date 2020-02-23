@@ -187,3 +187,5 @@ command! NofrilsFocusComments :call NofrilsFocusComments()
 
 " Setup normal settings
 call NofrilsNormal()
+
+let g:colors_name = "nofrils-sepia"

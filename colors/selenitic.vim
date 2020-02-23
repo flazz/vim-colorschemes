@@ -36,3 +36,5 @@ hi Search       guibg=#505050
 hi PMenu        guifg=#CCCCFF guibg=#232323
 hi PMenuSel     guibg=#303030
 
+
+let g:colors_name = "selenitic"

@@ -89,3 +89,5 @@ if version >= 500
 
 endif
 
+
+let g:colors_name = "custom"

@@ -111,3 +111,5 @@ hi sqlMultiComment gui=BOLD guifg=#990099 guibg=#bbbb99
 hi sqlType gui=BOLD guifg=#996644 guibg=#bbbb99
 hi sqlFunction gui=NONE guifg=#990099 guibg=#bbbb99
 hi sqlOperator gui=NONE guifg=#555577 guibg=#bbbb99
+
+let g:colors_name = "golded"

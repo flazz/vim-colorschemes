@@ -66,3 +66,5 @@ else
     highlight Search ctermbg=White 
     highlight CursorLine cterm=NONE ctermbg=235
 endif
+
+let g:colors_name = "vibrantink"

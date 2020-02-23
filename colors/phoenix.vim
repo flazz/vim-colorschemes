@@ -437,3 +437,5 @@ command! PhoenixOrangeEighties call SetPhoenix("eighties", "orange")
             \ | colorscheme phoenix
 command! PhoenixPurpleEighties call SetPhoenix("eighties", "purple")
             \ | colorscheme phoenix
+
+let g:colors_name = "phoenix"

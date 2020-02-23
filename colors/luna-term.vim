@@ -206,3 +206,5 @@ hi SignifySignDelete ctermfg=196 ctermbg=234 cterm=NONE
 "
 " vim:foldmethod=marker:foldlevel=0:textwidth=79
 "
+
+let g:colors_name = "luna-term"

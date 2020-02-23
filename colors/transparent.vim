@@ -118,3 +118,5 @@ hi Ignore			ctermfg=DarkBlue					guifg=DarkBlue
 hi Error			ctermfg=White	ctermbg=DarkRed				guifg=White	guibg=DarkRed
 
 hi Todo				ctermfg=Black	ctermbg=Gray				guifg=Black	guibg=Gray
+
+let g:colors_name = "transparent"

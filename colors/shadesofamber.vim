@@ -112,3 +112,5 @@ highlight Pmenu         gui=bold        guifg=#ffcc00 guibg=#004400
 highlight PmenuSel      gui=bold        guibg=#ffcc00 guifg=#004400
 highlight PmenuSbar     gui=bold        guibg=#884400 guifg=#004400
 highlight PmenuThumb    gui=bold        guibg=#ffff00 guifg=#004400
+
+let g:colors_name = "shadesofamber"

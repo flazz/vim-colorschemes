@@ -136,3 +136,5 @@ highlight default link mkdDelimiter Statement
 
 " YAML
 highlight default link yamlKeyValueDelimiter Statement
+
+let g:colors_name = "japanesque"

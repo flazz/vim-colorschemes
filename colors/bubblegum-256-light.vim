@@ -158,3 +158,5 @@ hi mailSignature ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF 
 hi markdownCode ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
 hi markdownCodeBlock ctermfg=246 ctermbg=231 cterm=none guifg=#949494 guibg=#FFFFFF gui=none
 hi markdownItalic ctermfg=239 ctermbg=231 cterm=none guifg=#4E4E4E guibg=#FFFFFF gui=none
+
+let g:colors_name = "bubblegum-256-light"

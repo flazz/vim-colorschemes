@@ -43,3 +43,5 @@ hi Ignore 	    guifg=grey40
 hi Error        guifg=white     guibg=#b2377a
 hi Todo		    guifg=#54b900   guibg=#622098   gui=bold
 "vim:ts=4:tw=4
+
+let g:colors_name = "softblue"

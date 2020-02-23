@@ -165,3 +165,5 @@ hi SignColumn        ctermbg=234
 hi GitGutterAdd      ctermfg=3 ctermbg=28 cterm=bold
 hi GitGutterChange   ctermfg=7 ctermbg=26 cterm=bold
 hi GitGutterDelete   ctermfg=2 ctermbg=1 cterm=bold
+
+let g:colors_name = "sift"

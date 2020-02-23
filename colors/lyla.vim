@@ -89,3 +89,5 @@ hi WarningMsg       guifg=#a1a6a8   guibg=#912c00   guisp=#912c00   gui=NONE    
 hi WildMenu         guifg=NONE      guibg=#a1a6a8   guisp=#a1a6a8   gui=NONE        ctermfg=NONE    ctermbg=248     cterm=NONE
 hi cursorim         guifg=#192224   guibg=#536991   guisp=#536991   gui=NONE        ctermfg=235     ctermbg=60      cterm=NONE
 
+
+let g:colors_name = "lyla"

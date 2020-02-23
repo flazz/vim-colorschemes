@@ -80,3 +80,5 @@ hi htmlUnderline           gui=underline   guifg=fg      guibg=bg
 
 "}}}1
 " vim:set nowrap foldmethod=marker expandtab:
+
+let g:colors_name = "hhorange"

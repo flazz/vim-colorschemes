@@ -80,3 +80,5 @@ highlight DiffAdd guibg=#003300 ctermbg=22
 highlight DiffDelete guifg=#731b00 guibg=#400f00 ctermfg=88 ctermbg=52
 highlight DiffChange guibg=#1b0042 ctermbg=17
 highlight DiffText guibg=#003c4c ctermbg=24
+
+let g:colors_name = "lilypink"

@@ -49,3 +49,5 @@ hi Number     guifg=#89ba63 gui=none
 hi Special    guifg=#5b8484 gui=none
 hi PreProc    guifg=#faf4c6 gui=none
 hi Todo       guifg=#808080 guibg=#e6ea50 gui=italic
+
+let g:colors_name = "frozen"

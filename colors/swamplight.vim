@@ -217,3 +217,5 @@ hi SpellBad					ctermfg=160				cterm=undercurl
 hi SpellCap					ctermfg=16				cterm=undercurl
 hi SpellLocal				ctermfg=16				cterm=undercurl
 hi SpellRare				ctermfg=16				cterm=undercurl
+
+let g:colors_name = "swamplight"

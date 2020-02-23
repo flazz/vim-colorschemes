@@ -290,3 +290,5 @@ for s:key in keys(s:ColourAssignment)
         execute 'highlight '.s:key.' term='.s:term.' cterm='.s:cterm.' gui='.s:gui.' ctermfg='.s:ctermfg.' guifg='.s:guifg.' ctermbg='.s:ctermbg.' guibg='.s:guibg.' guisp='.s:guisp
     endif
 endfor
+
+let g:colors_name = "eldar"

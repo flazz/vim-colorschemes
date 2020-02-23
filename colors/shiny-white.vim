@@ -95,3 +95,5 @@ hi Typedef guifg=#49ff89
 
 
 "vim: sw=4
+
+let g:colors_name = "shiny-white"

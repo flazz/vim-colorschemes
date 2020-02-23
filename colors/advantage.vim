@@ -67,3 +67,5 @@ hi WildMenu   guifg=Black guibg=Yellow
 hi lCursor guibg=SeaGreen1 guifg=NONE
 hi Underlined gui=underline guifg=#80a0ff
 hi Error      guifg=White guibg=Red
+
+let g:colors_name = "advantage"

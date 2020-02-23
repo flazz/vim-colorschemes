@@ -179,3 +179,5 @@ endif
 ">>>
 
 " vim: set fdm=marker fmr=<<<,>>> fdl=0:
+
+let g:colors_name = "kalahari"

@@ -104,3 +104,5 @@ hi DiffAdd        guifg=#8f9d6a          guibg=NONE
 hi DiffChange     guifg=#cda869          guibg=NONE
 hi DiffText       guifg=#b6b6b6          guibg=NONE
 hi DiffDelete     guifg=#cf6a4c          guibg=NONE
+
+let g:colors_name = "vilight"

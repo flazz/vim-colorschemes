@@ -95,3 +95,5 @@ if has("gui_running")
   "hi link htmlPreAttr                 xmlEntity
   hi link htmlString                  xmlEntity
 endif
+
+let g:colors_name = "norwaytoday"

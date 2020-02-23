@@ -21,3 +21,5 @@ hi Type       gui=NONE    guifg=Black     guibg=NONE
 hi Special    gui=NONE    guifg=Blue		  guibg=NONE
 hi Todo       gui=Italic  guifg=Red			  guibg=NONE
 hi Error      gui=NONE    guifg=Red			  guibg=NONE
+
+let g:colors_name = "lazarus"

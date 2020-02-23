@@ -119,3 +119,5 @@ else
 endif
 
 " vim: sw=2 ts=8
+
+let g:colors_name = "c16gui"

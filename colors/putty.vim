@@ -80,3 +80,5 @@ hi link SpecialComment	Special
 hi link Debug			Special
 
 " vim: sw=2
+
+let g:colors_name = "putty"

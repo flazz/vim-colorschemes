@@ -68,3 +68,5 @@ hi Statement    gui=NONE guifg=#ffff80 guibg=NONE
 hi Todo         gui=BOLD,UNDERLINE guifg=#ffb0b0 guibg=NONE
 hi Type         gui=NONE guifg=#80ffa0 guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=#ffffff guibg=NONE
+
+let g:colors_name = "breeze"

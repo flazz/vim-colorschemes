@@ -108,3 +108,5 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
 hi link NERDTreeDir Normal
 hi link NERDTreeDirSlash Normal
+
+let g:colors_name = "predawn"

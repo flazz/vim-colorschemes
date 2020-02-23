@@ -21,3 +21,5 @@ hi Type       gui=NONE    guifg=Black     guibg=NONE
 hi Special    gui=NONE    guifg=DarkBlue  guibg=NONE
 hi Todo       gui=Italic  guifg=DarkBlue  guibg=NONE
 hi Error      gui=NONE    guifg=DarkRed   guibg=NONE
+
+let g:colors_name = "delphi"

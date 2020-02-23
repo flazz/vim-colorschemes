@@ -30,3 +30,5 @@ hi vertsplit    guibg=#ae8857 ctermbg=green ctermfg=black guifg=#ae8857 gui=none
 hi visual       guifg=#f9d7a6 guibg=#8e6837 ctermbg=black ctermfg=darkcyan
 hi warningmsg   guifg=#cc3807
 hi wildmenu     guifg=#f9d7a6 guibg=#8e6837
+
+let g:colors_name = "brown"

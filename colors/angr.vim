@@ -152,3 +152,5 @@ if has('nvim')
   hi TermCursor   ctermfg=NONE guibg=#ff00af ctermbg=199 gui=NONE cterm=NONE
   hi TermCursorNC ctermfg=NONE ctermbg=NONE gui=NONE cterm=NONE
 endif
+
+let g:colors_name = "angr"

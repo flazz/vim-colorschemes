@@ -76,3 +76,5 @@ hi Underlined	gui=underline guifg=SlateBlue guibg=bg
 "endif
 
 " vim: sw=2
+
+let g:colors_name = "dawn"

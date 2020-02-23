@@ -49,3 +49,5 @@ hi Function		guifg=#bbcfff gui=bold
 
 
 
+
+let g:colors_name = "surveyor"

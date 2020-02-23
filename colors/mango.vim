@@ -133,3 +133,5 @@ hi Underlined   guifg=NONE      guibg=NONE      gui=underline ctermfg=NONE      
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
+
+let g:colors_name = "mango"

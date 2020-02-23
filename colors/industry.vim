@@ -38,3 +38,5 @@ hi Type	      cterm=NONE ctermfg=LightGreen	gui=bold guifg=#00ff00
 hi Special    cterm=NONE ctermfg=LightRed    	gui=NONE guifg=#ff0000    	
 hi Delimiter  cterm=NONE ctermfg=Yellow    	gui=NONE guifg=#ffff00    	
 
+
+let g:colors_name = "industry"

@@ -118,3 +118,5 @@ hi Type                      guifg=#d78a42                 gui=bold
 hi TagListFileName           guifg=#b2c867                 gui=bold
 
 " vim: set fdm=marker foldmarker={{{,}}}
+
+let g:colors_name = "strawimodo"

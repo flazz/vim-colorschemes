@@ -159,3 +159,5 @@ hi mailSignature ctermfg=244 cterm=none guifg=#808080 gui=none
 hi markdownCode ctermfg=244 cterm=none guifg=#808080 gui=none
 hi markdownCodeBlock ctermfg=244 cterm=none guifg=#808080 gui=none
 hi markdownItalic ctermfg=252 cterm=none guifg=#D0D0D0 gui=none
+
+let g:colors_name = "tigrana-256-dark"

@@ -206,3 +206,5 @@ if &t_Co > 255
    hi TabLineFill     ctermfg=232 ctermbg=233
    hi TabLineSel      ctermfg=220 ctermbg=234
 end
+
+let g:colors_name = "neverland-darker"

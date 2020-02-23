@@ -275,3 +275,5 @@ call Hi("cssValueLength", s:colors["dark_blue"], "NONE", "NONE")
 call Hi("cssValueNumber", s:colors["dark_blue"], "NONE", "NONE")
 
 
+
+let g:colors_name = "neuromancer"

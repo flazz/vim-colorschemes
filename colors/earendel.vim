@@ -161,3 +161,5 @@ hi! default link bbcodeBoldUnderline htmlBoldUnderline
 hi! default link bbcodeItalic htmlItalic
 hi! default link bbcodeItalicUnderline htmlUnderlineItalic
 hi! default link bbcodeUnderline htmlUnderline
+
+let g:colors_name = "earendel"

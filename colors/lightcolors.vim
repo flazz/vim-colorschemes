@@ -78,3 +78,5 @@ hi Pmenu guibg=#ccc0b7 gui=italic
 hi PmenuSel guifg=#ffffff guibg=#555555 gui=italic
 
 
+
+let g:colors_name = "lightcolors"

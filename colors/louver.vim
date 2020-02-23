@@ -152,3 +152,5 @@ endif
 finish
 
 " vim: set foldmethod=marker: set fenc=utf-8:
+
+let g:colors_name = "louver"

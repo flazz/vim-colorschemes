@@ -42,3 +42,5 @@ hi Type		guifg=#55AAFF                           gui=bold,italic
 hi Special	guifg=#A9EE8A
 hi Todo		guifg=#FFFFFF		guibg=#FF0000
 
+
+let g:colors_name = "h80"

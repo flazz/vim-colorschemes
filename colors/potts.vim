@@ -51,3 +51,5 @@ highlight Error term=reverse ctermfg=15 ctermbg=12 guifg=White guibg=Red
 highlight Todo term=standout ctermfg=0 ctermbg=14 guifg=Blue guibg=Yellow
 highlight DebugBreak ctermfg=15 ctermbg=4 guifg=white guibg=darkred
 highlight DebugStop ctermfg=15 ctermbg=10 guifg=white guibg=lightgreen
+
+let g:colors_name = "potts"

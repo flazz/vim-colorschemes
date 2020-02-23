@@ -529,3 +529,5 @@ elseif &t_Co < 256
 
 endif
  
+
+let g:colors_name = "vimbrant"

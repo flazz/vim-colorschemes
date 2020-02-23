@@ -75,3 +75,5 @@ hi PreProc               ctermfg=cyan
 hi CursorLine                   ctermbg=darkblue cterm=None
 
 hi VertSplit       ctermbg=black ctermfg=white
+
+let g:colors_name = "erez"

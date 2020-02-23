@@ -105,3 +105,5 @@ hi htmlUnderline            gui=UNDERLINE
 hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
 
 " vim600:foldmethod=marker
+
+let g:colors_name = "nuvola"

@@ -68,3 +68,5 @@ hi Statement    gui=NONE guifg=#dcdc78 guibg=NONE
 hi Todo         gui=BOLD,UNDERLINE guifg=#ff80d0 guibg=NONE
 hi Type         gui=NONE guifg=#60f0a8 guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=fg guibg=NONE
+
+let g:colors_name = "neon"

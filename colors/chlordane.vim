@@ -77,3 +77,5 @@ if version >= 700
 endif
 
 
+
+let g:colors_name = "chlordane"

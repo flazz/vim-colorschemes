@@ -66,3 +66,5 @@ hi Error gui=NONE guifg=White guibg=Red
 hi Cursor ctermfg=Black ctermbg=Green
 hi Cursor guifg=Black guibg=Green
 
+
+let g:colors_name = "far"

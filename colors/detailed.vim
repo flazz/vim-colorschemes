@@ -903,3 +903,5 @@ endfun
 let &cpo = s:save_cpo
 
 " vim:foldmethod=marker
+
+let g:colors_name = "detailed"

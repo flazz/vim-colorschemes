@@ -212,3 +212,5 @@ hi hsOperator                   ctermfg=NONE    ctermbg=NONE  cterm=NONE
 
 
 " vim:foldmethod=marker:foldlevel=2
+
+let g:colors_name = "smpl"

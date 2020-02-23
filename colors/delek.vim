@@ -55,3 +55,5 @@ if exists("syntax_on")
 endif
 
 " vim: sw=2
+
+let g:colors_name = "delek"

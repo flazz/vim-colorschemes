@@ -480,3 +480,5 @@ if has("nvim")
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
 endif
+
+let g:colors_name = "synthwave"

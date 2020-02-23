@@ -124,3 +124,5 @@ hi LineNr ctermfg=240 ctermbg=NONE cterm=italic
 hi CursorLineNR ctermfg=240 ctermbg=236 cterm=italic
 hi Pmenu ctermfg=NONE ctermbg=234 cterm=NONE
 hi PmenuSel ctermfg=234 ctermbg=105 cterm=NONE
+
+let g:colors_name = "monoacc"

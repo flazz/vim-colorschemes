@@ -54,3 +54,5 @@ highlight DiffChange cterm=bold ctermfg=Black ctermbg=LightGreen gui=none guifg=
 highlight DiffText   cterm=bold ctermfg=Black ctermbg=Yellow gui=none guifg=Black guibg=Red
 
 " vim: sw=2
+
+let g:colors_name = "mohammad"

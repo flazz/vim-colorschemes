@@ -311,3 +311,5 @@ hi LocalIndentGuide guifg=#333333   guibg=NONE      gui=inverse
 " Vim Highlighting
 hi vimOperParen     guifg=#8200a8   guibg=NONE       gui=NONE
 hi vimSep           guifg=#8200a8   guibg=NONE       gui=NONE
+
+let g:colors_name = "evokai"

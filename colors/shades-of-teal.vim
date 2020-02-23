@@ -84,3 +84,5 @@ hi link javaScriptLineComment          Comment
 hi link javaScriptDocComment           Comment
 hi link javaScriptCommentTodo          Todo
 
+
+let g:colors_name = "shades-of-teal"

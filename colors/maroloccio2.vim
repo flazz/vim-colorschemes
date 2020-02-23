@@ -80,3 +80,5 @@ highlight!  link          Typedef             Statement
 highlight!  link          WildMenu            StatusLine
 
 " ------------------------------------------------------------------------------
+
+let g:colors_name = "maroloccio2"

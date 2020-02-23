@@ -333,3 +333,5 @@ let g:terminal_color_12 = s:dark_blue.gui
 let g:terminal_color_13 = s:dark_purple.gui
 let g:terminal_color_14 = s:dark_cyan.gui
 let g:terminal_color_15 = s:dark_clouds.gui
+
+let g:colors_name = "flatcolor"

@@ -160,3 +160,5 @@ highlight default link Title Identifier
 " ModeMsg
 " MoreMsg
 " Question
+
+let g:colors_name = "landscape"

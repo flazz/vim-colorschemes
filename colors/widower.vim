@@ -41,3 +41,5 @@ highlight Constant guifg=Green
 highlight Include guifg=#d632D4
 highlight Operator guifg=Orange guibg=#222222
 
+
+let g:colors_name = "widower"

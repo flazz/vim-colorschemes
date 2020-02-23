@@ -50,3 +50,5 @@ hi Ignore	guifg=grey60
 hi Todo	guibg=#9C8C84 guifg=#244C0A
 
 "vim: ts=4
+
+let g:colors_name = "bluegreen"

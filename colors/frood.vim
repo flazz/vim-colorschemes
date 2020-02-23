@@ -58,3 +58,5 @@ hi Underlined        guifg=LightBlue   guibg=Black       ctermfg=LightBlue   cte
 hi Ignore            guifg=Black       guibg=Black       ctermfg=Black       ctermbg=Black       gui=NONE      cterm=NONE
 hi Error             guifg=Black       guibg=Red         ctermfg=Black       ctermbg=Red         gui=NONE      cterm=NONE
 hi Todo              guifg=Red         guibg=Black       ctermfg=Red         ctermbg=Black       gui=NONE      cterm=NONE
+
+let g:colors_name = "frood"

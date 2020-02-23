@@ -171,3 +171,5 @@ hi link javaScriptCommentSkip js
 
 
 
+
+let g:colors_name = "phphaxor"

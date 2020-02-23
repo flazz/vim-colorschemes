@@ -51,3 +51,5 @@ hi CursorLine   guifg=#000000 guibg=#cccccc ctermfg=0     ctermbg=188 cterm=NONE
 
 " Gutter column
 hi SignColumn   guifg=#aaaaaa guibg=NONE    ctermfg=8     ctermbg=NONE
+
+let g:colors_name = "ancient"

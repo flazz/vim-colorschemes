@@ -51,3 +51,5 @@ hi link StorageClass	Type
 hi link Structure		Type
 hi link Typedef			Type
 hi link Tag				Tags
+
+let g:colors_name = "settlemyer"

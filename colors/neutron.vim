@@ -77,3 +77,5 @@ hi Error          guibg=#faf5cd guifg=#c83c28 gui=none
 hi ToDo           guibg=#f2efd5 guifg=#404040 gui=none
 
 
+
+let g:colors_name = "neutron"

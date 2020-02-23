@@ -65,3 +65,5 @@ hi ncursor      guibg=#FFFFFF guifg=#000000 gui=NONE
 hi rcursor      guibg=#00CCFF guifg=#000000 gui=NONE
 hi lcursor      guibg=#40D040 guifg=#000000 gui=NONE
 
+
+let g:colors_name = "fnaqevan"

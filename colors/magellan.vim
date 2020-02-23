@@ -52,3 +52,5 @@ highlight link Number    Constant
 highlight link Float     Constant
 highlight link Exception Statement
 highlight link Operator  Identifier
+
+let g:colors_name = "magellan"

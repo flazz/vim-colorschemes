@@ -43,3 +43,5 @@ hi Ignore 	    guifg=grey40
 hi Error        guifg=white     guibg=#b03030
 hi Todo		    guifg=#802c13   guibg=#c3bc44   gui=bold
 "vim:ts=4:tw=4
+
+let g:colors_name = "darkerdesert"

@@ -163,3 +163,5 @@ highlight mySemis guifg=#99ff00
 match myAssignments /\(=\)\|\(:\)\|\( \* \)\|\( - \)\|\( + \)\|\( < \)\|\( >= \)\|\( <= \)/
 2match myDots /\(\$\)\|\(\.\)/
 3match mySemis /(\|)\|\(;\)\|\(,\)/
+
+let g:colors_name = "nour"

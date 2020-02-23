@@ -143,3 +143,5 @@ endfunction
 exe 'au InsertEnter * call InsertStatuslineColor(v:insertmode)'
 exe 'au InsertLeave * hi statusline guifg='.NormalFG.' guibg='.StatusBG
 exe 'au InsertLeave * hi User4      guifg='.DarkGray.' guibg='.DarkMagenta
+
+let g:colors_name = "getfresh"

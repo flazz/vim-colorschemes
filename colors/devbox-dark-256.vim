@@ -141,3 +141,5 @@ hi Search           cterm=NONE              ctermfg=15          ctermbg=149
 
 
 "vim: sw=4
+
+let g:colors_name = "devbox-dark-256"

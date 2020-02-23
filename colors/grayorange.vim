@@ -94,3 +94,5 @@ hi Title	guifg=white
 hi VimError	guifg=orange				    gui=bold
 hi SpecialKey	guifg=gold
 
+
+let g:colors_name = "grayorange"

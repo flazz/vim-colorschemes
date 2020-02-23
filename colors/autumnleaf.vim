@@ -152,3 +152,5 @@ hi Title	ctermbg=bg  ctermfg=fg cterm=bold
 hi Ignore	ctermbg=bg  ctermfg=7
 hi Error	ctermbg=12  ctermfg=15
 hi Todo		ctermbg=bg  ctermfg=15
+
+let g:colors_name = "autumnleaf"

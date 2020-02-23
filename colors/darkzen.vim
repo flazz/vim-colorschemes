@@ -21,3 +21,5 @@ highlight PreProc    term=bold ctermfg=lightgreen   cterm=none guifg=green   gui
 highlight Type       term=bold ctermfg=magenta cterm=none guifg=magenta gui=none
 highlight String     term=none ctermfg=red     cterm=none guifg=red     gui=none
 highlight Number     term=none ctermfg=red     cterm=none guifg=red     gui=none
+
+let g:colors_name = "darkzen"

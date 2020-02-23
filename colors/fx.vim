@@ -403,3 +403,5 @@ hi! link hsModuleWhereLabel String
 
 " }}}
 
+
+let g:colors_name = "fx"

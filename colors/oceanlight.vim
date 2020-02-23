@@ -103,3 +103,5 @@ highlight Ignore    guifg=#204050
 highlight Error      guifg=FireBrick gui=Bold  guibg=bg
 
 highlight Todo          guifg=LightSkyBlue guibg=SlateGray
+
+let g:colors_name = "oceanlight"

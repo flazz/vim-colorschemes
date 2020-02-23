@@ -62,3 +62,5 @@ exe "hi TypeDef "         .Snow
 
 " cursorline
 hi cursorline cterm=none ctermbg=236 ctermfg=none guibg=grey20 guifg=NONE
+
+let g:colors_name = "primaries"

@@ -114,3 +114,5 @@ if has("spell")
 endif
 " }}}
 
+
+let g:colors_name = "github"

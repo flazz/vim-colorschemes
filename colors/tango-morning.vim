@@ -68,3 +68,5 @@ hi Error guibg=#cc0000 guifg=#eeeeec
 hi Todo guibg=#fce94f guifg=#204a87
 
 " vim: sw=2
+
+let g:colors_name = "tango-morning"

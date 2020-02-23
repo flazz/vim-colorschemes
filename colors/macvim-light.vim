@@ -66,3 +66,5 @@ hi DiffText   ctermfg=233  ctermbg=189  guifg=#000033 guibg=#DDDDFF gui=none cte
 hi DiffDelete ctermfg=252 ctermbg=224   guifg=#DDCCCC guibg=#FFDDDD gui=none    cterm=none
 
 " vim: sw=2
+
+let g:colors_name = "macvim-light"

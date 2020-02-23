@@ -151,3 +151,5 @@ hi StatusLineNC                                                     gui=none gui
 
 
 
+
+let g:colors_name = "grey2"

@@ -117,3 +117,5 @@ highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#
 "+++
 
 
+
+let g:colors_name = "navajo-night"

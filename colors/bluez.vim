@@ -143,3 +143,5 @@ else
     hi StatusLineNC ctermfg=52 ctermbg=0
     hi VertSplit    ctermfg=52 ctermbg=0
 endif
+
+let g:colors_name = "bluez"

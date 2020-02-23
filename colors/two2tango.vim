@@ -102,3 +102,5 @@ execute "hi WildMenu     guifg=" . s:Butter[2] . " guibg=" . s:Butter[0]
 " }}}
 
 " vim: sw=4 foldmethod=marker
+
+let g:colors_name = "two2tango"

@@ -38,3 +38,5 @@ let colors_name = "stefan"
 :hi Pmenu ctermfg=grey ctermbg=magenta
 :hi PmenuSel ctermfg=magenta ctermbg=grey
 :autocmd BufEnter * if &readonly | hi StatusLine ctermfg=Red | else | hi StatusLine ctermfg=Cyan | endif
+
+let g:colors_name = "stefan"

@@ -56,3 +56,5 @@ hi DiffText                  guibg=#ffcccc gui=bold
                                                        
 hi FoldColumn guifg=DarkBlue guibg=gray95              
 hi Folded     guifg=gray30   guibg=gray95              
+
+let g:colors_name = "thegoodluck"

@@ -618,3 +618,5 @@ endfunction
 "endif
 
 " vim:tw=0:fdm=marker:fdl=0:fdc=3:fen
+
+let g:colors_name = "tabula"

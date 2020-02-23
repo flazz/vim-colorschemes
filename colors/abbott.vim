@@ -154,3 +154,5 @@ call s:H("BadWhitespace", { "fg": s:brown, "bg": s:red })
 
 " Render TeX macros in preprocessor style. They are macros, after all. :P
 highlight link texStatement PreProc
+
+let g:colors_name = "abbott"

@@ -173,3 +173,5 @@ hi link slimRubyOutputChar         Identifier
 hi link xmlTag                     Statement
 hi link xmlTagName                 Statement
 hi link xmlEndTag                  Statement
+
+let g:colors_name = "clearance"

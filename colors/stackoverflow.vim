@@ -183,3 +183,5 @@ syn match mTag /\s\+[A-Z]\w\+\s*/
 syn match  mTag /^[A-Z]\w\+\s*/
 syn match nTag /\w\+()/
 
+
+let g:colors_name = "stackoverflow"

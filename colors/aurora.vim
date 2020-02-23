@@ -89,3 +89,5 @@ hi doxygenSpecialTypeOnelineDesc guifg=#007020 gui=NONE ctermfg=22
 hi doxygenParamName              guifg=#878787 gui=NONE ctermfg=102
 hi doxygenParamDirection         guifg=#5f8787 gui=NONE ctermfg=66
 hi doxygenSpecialOnelineDesc     guifg=#007020 gui=NONE ctermfg=22
+
+let g:colors_name = "aurora"

@@ -95,3 +95,5 @@ highlight link Tag             Special
 "highlight link SpecialComment  Special
 highlight link Debug           Special
 
+
+let g:colors_name = "adrian"

@@ -101,3 +101,5 @@ hi link htmlH6 htmlH5
 let g:colors_name = "Guardian"
 let colors_name   = "Guardian"
 
+
+let g:colors_name = "guardian"

@@ -157,3 +157,5 @@ hi cssClassName guifg=#fff352 guibg=NONE gui=NONE
 hi cssValueLength guifg=#c5a3ff guibg=NONE gui=NONE
 hi cssCommonAttr guifg=#c2ffdf guibg=NONE gui=NONE
 hi cssBraces guifg=NONE guibg=NONE gui=NONE
+
+let g:colors_name = "fairyfloss"

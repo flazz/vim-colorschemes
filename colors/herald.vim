@@ -383,3 +383,5 @@ if has("spell")
 	hi SpellLocal guisp=#FFEE68 gui=undercurl
 	hi SpellRare  guisp=#6DF584 gui=undercurl
 endif
+
+let g:colors_name = "herald"

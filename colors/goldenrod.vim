@@ -102,3 +102,5 @@ call <SID>set_color("Type", color6, "NONE", "NONE")
 call <SID>set_color("Visual", "NONE", color12, "NONE")
 
 delf <SID>set_color
+
+let g:colors_name = "goldenrod"

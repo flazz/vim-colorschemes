@@ -53,3 +53,5 @@ hi Underlined     cterm=underline	ctermfg=NONE
 hi Ignore         cterm=bold		ctermfg=NONE
 hi Error          cterm=reverse		ctermfg=NONE
 hi Todo           cterm=standout	ctermfg=NONE
+
+let g:colors_name = "bw"

@@ -131,3 +131,5 @@ highlight MatchParen  term=reverse ctermbg=11 gui=bold guibg=#B5EEB5 guifg=black
 
 
 " vim600:foldmethod=marker
+
+let g:colors_name = "colorful"

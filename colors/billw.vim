@@ -101,3 +101,5 @@ hi Ignore               guifg=bg
 hi Error                gui=bold guifg=White guibg=Red
 
 "hi Todo
+
+let g:colors_name = "billw"

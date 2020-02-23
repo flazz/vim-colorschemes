@@ -174,3 +174,5 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
+
+let g:colors_name = "iceberg"

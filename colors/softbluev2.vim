@@ -91,3 +91,5 @@ hi cMaohao                  guifg=#3EFFE2                          ctermfg=14
 
 
 "vim:ts=4:tw=4
+
+let g:colors_name = "softbluev2"

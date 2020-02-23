@@ -136,3 +136,5 @@ call s:hi('agitTree',                s:lightblue,   'NONE',     'bold')
 call s:hi('agitDate',                s:gray,        'NONE',     0)
 call s:hi('agitAuthor',              s:purple,      'NONE',     0)
 call s:hi('Flashy',                  s:bg,          s:darkcyan, 0)
+
+let g:colors_name = "abyss"

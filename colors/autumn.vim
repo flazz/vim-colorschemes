@@ -86,3 +86,5 @@ hi link vimfunction     function
 
 
 " vim: set ts=8 sw=8 et sts=8 tw=72 fo-=t ff=unix :
+
+let g:colors_name = "autumn"

@@ -205,3 +205,5 @@ hi! link CtrlPBookmark  Identifier
 hi! link CtrlPMode1     StatusLine
 hi! link CtrlPMode2     StatusLine
 hi! link CtrlPStats     Function
+
+let g:colors_name = "editplus"

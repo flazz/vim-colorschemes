@@ -281,3 +281,5 @@ if &t_Co > 255
     highlight Underlined      ctermfg=111     ctermbg=none    cterm=underline
   endif
 end
+
+let g:colors_name = "kolor"

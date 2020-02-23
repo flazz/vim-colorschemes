@@ -159,3 +159,5 @@ call s:HL('Todo', s:c.black, s:c.wild_blue, 'bold')
 " Specific syntax overrides.   {{{1
 
 hi link jsGlobalObjects Identifier
+
+let g:colors_name = "mourning"

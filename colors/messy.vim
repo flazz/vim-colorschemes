@@ -95,3 +95,5 @@ hi Visual guifg=#ffffff guibg=#0000ff guisp=#0000ff gui=NONE ctermfg=15 ctermbg=
 hi VisualNOS guifg=#c0c0c0 guibg=#000080 guisp=#000080 gui=NONE ctermfg=7 ctermbg=4 cterm=NONE
 hi WarningMsg guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=13 ctermbg=NONE cterm=NONE
 hi WildMenu guifg=#ffff00 guibg=#808080 guisp=NONE gui=NONE ctermfg=11 ctermbg=8 cterm=NONE
+
+let g:colors_name = "messy"

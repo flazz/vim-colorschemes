@@ -231,3 +231,5 @@ delf <sid>HL
 " Remove color variables
 unlet s:enigma
 
+
+let g:colors_name = "enigma"

@@ -67,3 +67,5 @@ hi Statement    gui=NONE guifg=#f030d0 guibg=NONE
 hi Todo         gui=UNDERLINE guifg=#ff0070 guibg=#ffe0f4
 hi Type         gui=NONE guifg=#0070e6 guibg=NONE
 hi Underlined   gui=UNDERLINE guifg=fg guibg=NONE
+
+let g:colors_name = "fruit"

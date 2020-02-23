@@ -113,3 +113,5 @@ hi link                    lessProperty cssDefinition
 hi NERDTreeDirSlash        cterm=NONE      ctermfg=235  ctermbg=NONE gui=NONE    guifg=#2b2b2b guibg=NONE
 hi NERDTreeExecFile        cterm=NONE      ctermfg=107  ctermbg=NONE gui=NONE    guifg=#87af5f guibg=NONE
 
+
+let g:colors_name = "py-darcula"

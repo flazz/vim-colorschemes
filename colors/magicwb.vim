@@ -58,3 +58,5 @@ hi Keyword		    guifg=#000000 gui=none
 hi PreProc 		    guifg=#3B67A2 gui=none
 hi Number		      guifg=#AFAFAF gui=none
 hi Special		    guifg=#e7f6da gui=none
+
+let g:colors_name = "magicwb"

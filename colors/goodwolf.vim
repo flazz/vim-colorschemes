@@ -511,3 +511,5 @@ call s:HL('helpHyperTextJump', 'dress', '', 'none')
 
 " }}}
 
+
+let g:colors_name = "goodwolf"

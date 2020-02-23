@@ -151,3 +151,5 @@ hi link diffNoEOL          WarningMsg
 hi link diffOnly           WarningMsg
 hi link diffRemoved        WarningMsg
 hi link diffAdded          String
+
+let g:colors_name = "yuejiu"

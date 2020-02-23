@@ -169,3 +169,5 @@ hi! link helpURL             Underlined
 
 " vim: fdm=marker:sw=2:sts=2:et
 
+
+let g:colors_name = "eva"

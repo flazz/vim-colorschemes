@@ -214,3 +214,5 @@ hi PmenuSel               cterm=NONE             ctermfg=16    ctermbg=66
 hi PmenuSbar              cterm=NONE             ctermfg=16    ctermbg=66
 hi PmenuThumb             cterm=NONE             ctermfg=16    ctermbg=66
 
+
+let g:colors_name = "sourcerer"

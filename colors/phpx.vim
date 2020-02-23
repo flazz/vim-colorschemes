@@ -164,3 +164,5 @@ hi lCursor         guifg=#d7ffd7 guibg=#0000af
 
 
 
+
+let g:colors_name = "phpx"

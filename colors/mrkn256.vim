@@ -368,3 +368,5 @@ else
 endif
 
 " vim: foldlevel=0 foldmethod=marker
+
+let g:colors_name = "mrkn256"

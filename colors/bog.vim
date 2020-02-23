@@ -85,3 +85,5 @@ hi Underlined guifg=#00d0e8 ctermbg=blue
 hi Ignore guifg=black guibg=white ctermfg=black ctermbg=white		
 "hi Error		
 hi Todo guibg=lightblue guifg=white ctermbg=lightblue ctermfg=white		
+
+let g:colors_name = "bog"

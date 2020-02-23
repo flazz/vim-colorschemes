@@ -100,3 +100,5 @@ syn region pythonDocstring  start=+^\s*[uU]\?[rR]\?'''+ end=+'''+ keepend exclud
 
 hi pythonDocstring  gui=none       guibg=#333333  guifg=#bbdd77
 "- end of colorscheme -----------------------------------------------  
+
+let g:colors_name = "bluenes"

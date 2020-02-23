@@ -113,3 +113,5 @@ hi CursorLineNR   ctermfg=109  ctermbg=NONE cterm=bold
 "hi CTagsClass -- no settings --
 "hi clear -- no settings --
 
+
+let g:colors_name = "plasticine"

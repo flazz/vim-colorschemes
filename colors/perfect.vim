@@ -141,3 +141,5 @@ hi Operator        guifg=#1d5a88
 hi Keyword         guifg=#1d5a88
 hi Define          guifg=#1d5a88
 hi Delimiter       guifg=#56882c
+
+let g:colors_name = "perfect"

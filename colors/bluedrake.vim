@@ -473,3 +473,5 @@ call <SID>Hi_all("rDollar", "base00", "", "")
 "" GV ------------------------------------------------------
 call <SID>Hi_all("gvAuthor", "base00", "", "")
 
+
+let g:colors_name = "bluedrake"

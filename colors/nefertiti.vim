@@ -267,3 +267,5 @@ endif
 " Set background again -- for some reason, this does not always 'take
 set background=dark
 " }}}1
+
+let g:colors_name = "nefertiti"

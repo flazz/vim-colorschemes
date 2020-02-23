@@ -54,3 +54,5 @@ endif
 hi Ignore ctermfg=DarkGrey guifg=grey20
 
 " vim: sw=2
+
+let g:colors_name = "asmanian2"

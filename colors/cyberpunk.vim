@@ -134,3 +134,4 @@ endif
 exe "hi Directory guifg=" . s:colors["cyberpunk-pink-1"]
 
 exe "hi ExtraWhitespace guibg=" . s:colors["cyberpunk-red"]
+let g:colors_name = "cyberpunk"

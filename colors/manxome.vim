@@ -45,3 +45,5 @@ highlight Todo		 	ctermfg=3	ctermbg=none	cterm=none	guifg=#aaaa00	guibg=#000000	
 
 highlight htmlBold		ctermfg=7	ctermbg=none	cterm=bold	guifg=#ffffff	guibg=#000000	gui=none
 highlight htmlItalic	ctermfg=5	ctermbg=none	cterm=bold	guifg=#ff00ff	guibg=#000000	gui=none
+
+let g:colors_name = "manxome"

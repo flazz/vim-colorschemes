@@ -205,3 +205,5 @@ highlight! link                  SneakPluginScope            Visual
 " }}}
 " }}}
 " vim: foldmethod=marker
+
+let g:colors_name = "distill"

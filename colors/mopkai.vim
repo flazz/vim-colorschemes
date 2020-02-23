@@ -5,11 +5,6 @@
 " Note: Based on the molokai theme by Tomas Restrepo
 "
 
-if exists('g:loaded_mopkai')
-    finish
-endif
-let g:loaded_mopkai = 1
-
 set background=dark
 hi clear
 let g:colors_name='mopkai'
@@ -255,3 +250,5 @@ if has('nvim') || !has('gui_running')
 
     hi SpecialKey      ctermfg=59
 endif
+
+let g:colors_name = "mopkai"

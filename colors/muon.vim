@@ -93,3 +93,5 @@ hi Todo       ctermfg=196 ctermbg=234                               gui=None    
 hi Exception  ctermfg=080 ctermbg=234 cterm=bold                    gui=bold        guifg=#5fdfdf       guibg=#1c1c1c
 
 "vim: sw=4
+
+let g:colors_name = "muon"

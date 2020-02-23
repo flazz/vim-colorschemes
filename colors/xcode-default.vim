@@ -108,3 +108,5 @@ hi link htmlEndTag htmlTag
 hi NerdTreeDirSlash cterm=NONE ctermfg=231 ctermbg=231
 hi NerdTreeCWD cterm=NONE ctermfg=241 ctermbg=NONE
 
+
+let g:colors_name = "xcode-default"

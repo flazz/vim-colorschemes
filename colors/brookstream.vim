@@ -81,3 +81,5 @@ hi Boolean									guifg=#9bcd9b
 "hi link FoldColumn  Folded
 
 "- end of colorscheme -----------------------------------------------	
+
+let g:colors_name = "brookstream"

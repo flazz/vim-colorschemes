@@ -55,3 +55,5 @@ hi PMenuSel        guibg=lightslategray guifg=gold gui=bold
 hi PmenuSbar       guibg=blue guifg=green
 hi PMenuThumb      guibg=orange guifg=yellow
 
+
+let g:colors_name = "cgpro"

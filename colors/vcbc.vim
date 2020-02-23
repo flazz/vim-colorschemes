@@ -29,3 +29,5 @@ hi DiffAdd		cterm=NONE		ctermfg=Red			ctermbg=LightGrey	gui=NONE			guifg=Red			g
 hi DiffChange	cterm=NONE		ctermfg=Red			ctermbg=LightGrey	gui=NONE			guifg=Red			guibg=#fff0f0
 hi DiffText		cterm=NONE		ctermfg=White		ctermbg=DarkRed		gui=bold,italic		guifg=Red			guibg=#fff0f0
 hi DiffDelete	cterm=NONE		ctermfg=White		ctermbg=LightGrey	gui=NONE			guifg=DarkGrey		guibg=#f0f0f0
+
+let g:colors_name = "vcbc"

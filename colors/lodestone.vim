@@ -421,3 +421,5 @@ syn keyword Identifier context
 " hi link javascriptNumber        Number
 " hi link javascriptNull          Constant
 " 
+
+let g:colors_name = "lodestone"

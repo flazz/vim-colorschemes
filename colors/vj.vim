@@ -377,3 +377,5 @@ hi PmenuSel     ctermbg=lightblue ctermfg=white
 "vim: sw=4
 
 endif
+
+let g:colors_name = "vj"

@@ -131,3 +131,5 @@ highlight Pmenu              guifg=Black   guibg=#BDDFFF
 highlight PmenuSel           guifg=Black   guibg=Orange
 highlight PmenuSbar          guifg=#CCCCCC guibg=#CCCCCC
 highlight PmenuThumb         gui=reverse guifg=Black   guibg=#AAAAAA
+
+let g:colors_name = "ironman"

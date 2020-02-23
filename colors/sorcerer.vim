@@ -206,3 +206,5 @@ hi lCursor                cterm=NONE             ctermbg=145   ctermfg=234
 hi nCursor                cterm=NONE             ctermbg=46    ctermfg=16
 hi vCursor                cterm=NONE             ctermbg=201   ctermfg=16
 " 1}}}
+
+let g:colors_name = "sorcerer"

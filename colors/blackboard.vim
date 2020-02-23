@@ -104,3 +104,5 @@ else
     hi Error guifg=#990000 guibg=#ffeaea ctermfg=88 ctermbg=224
     hi SpellErrors guifg=White guibg=Red
 endif
+
+let g:colors_name = "blackboard"

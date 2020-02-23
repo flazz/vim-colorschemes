@@ -100,3 +100,5 @@ hi cssClassName  guifg=NONE guibg=NONE gui=NONE
 hi cssValueLength  guifg=#d70000 guibg=NONE gui=NONE
 hi cssCommonAttr  guifg=#06960e guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
+
+let g:colors_name = "argonaut"

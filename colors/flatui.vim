@@ -276,3 +276,5 @@ hi! link elixirDefine Special
 "}}}
 
 " vim: fdm=marker
+
+let g:colors_name = "flatui"

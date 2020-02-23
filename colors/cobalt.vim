@@ -99,3 +99,5 @@ hi Macro guifg=#ffdd00 guibg=NONE guisp=NONE gui=NONE ctermfg=220 ctermbg=NONE c
 hi DiffAdd guifg=NONE guibg=#3a3a3a guisp=#3a3a3a gui=NONE ctermfg=NONE ctermbg=237 cterm=NONE
 hi TabLine guifg=#ffffff guibg=#000000 guisp=#000000 gui=bold ctermfg=15 ctermbg=NONE cterm=bold
 hi cursorim guifg=#1a1a1a guibg=#445291 guisp=#445291 gui=NONE ctermfg=234 ctermbg=60 cterm=NONE
+
+let g:colors_name = "cobalt"

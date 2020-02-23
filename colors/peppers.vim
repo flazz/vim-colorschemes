@@ -60,3 +60,5 @@ hi DiffAdd     gui=none   guifg=yellow guibg=#006000
 hi DiffChange  gui=none   guifg=yellow guibg=#000060 
 hi DiffDelete  gui=none   guifg=black  guibg=#600000 
 
+
+let g:colors_name = "peppers"

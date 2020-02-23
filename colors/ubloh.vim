@@ -47,3 +47,5 @@ hi xmlTag     guifg=deepskyblue2 ctermfg=cyan
 hi xmlTagName guifg=deepskyblue2 ctermfg=cyan
 hi xmlEndTag  guifg=firebrick3 ctermfg=red
 
+
+let g:colors_name = "ubloh"

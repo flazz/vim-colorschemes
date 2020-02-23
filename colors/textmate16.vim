@@ -44,3 +44,5 @@ if ! has("gui_running")
   highlight RubyDocumentation ctermfg=White ctermbg=Darkgrey
 endif
 
+
+let g:colors_name = "textmate16"

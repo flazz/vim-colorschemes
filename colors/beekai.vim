@@ -50,3 +50,4 @@ hi Number		   guifg=#ff4866 gui=none ctermfg=208
 hi Special		   guifg=#ff4866 gui=none ctermfg=208
 hi PreProc 		   guifg=#00f0ff gui=none ctermfg=230
 hi Todo            guifg=#ff4866 guibg=#111111 gui=none
+let g:colors_name = "beekai"

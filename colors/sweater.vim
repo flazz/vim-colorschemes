@@ -69,3 +69,5 @@ highlight Number       ctermfg=238 guifg=#3b3f58 gui=none
 " language syntax highlights
 highlight link cStatement Statement
 highlight link cSpecial Special
+
+let g:colors_name = "sweater"

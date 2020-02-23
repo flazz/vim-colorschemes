@@ -41,3 +41,5 @@ if has("gui_running")
     highlight Visual guifg=white guibg=SlateGray
     highlight LineNr guifg=SlateGray
 endif
+
+let g:colors_name = "trogdor"

@@ -350,3 +350,5 @@ call s:HL('VimBracket', 'dress', '', 'none')
 " }}}
 
 " }}}
+
+let g:colors_name = "moriarty"

@@ -154,3 +154,5 @@ if get(g:, "wwdc16_term_italics", 0)
   hi htmlBoldItalic cterm=NONE,bold,italic
   hi gitcommitComment cterm=italic
 endif
+
+let g:colors_name = "wwdc16"

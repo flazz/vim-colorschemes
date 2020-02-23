@@ -156,3 +156,5 @@ hi Typedef                   ctermfg=81            ctermbg=NONE     cterm=NONE  
 hi Type                      ctermfg=81            ctermbg=NONE     cterm=NONE       guifg=#5fd7ff  guibg=NONE     gui=NONE
 hi Define                    ctermfg=81            ctermbg=NONE     cterm=NONE       guifg=#5fd7ff  guibg=NONE     gui=NONE
 hi Macro                     ctermfg=193           ctermbg=NONE     cterm=NONE       guifg=#D7FF87  guibg=NONE     gui=NONE
+
+let g:colors_name = "lanox"

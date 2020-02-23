@@ -48,3 +48,5 @@ hi TabLine      ctermfg=245         ctermbg=239         cterm=None
 hi TabLineFill  ctermfg=239         ctermbg=239
 hi TabLineSel   ctermfg=104         ctermbg=236         cterm=Bold
 "vim: sw=4
+
+let g:colors_name = "256-jungle"

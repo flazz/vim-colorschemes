@@ -61,3 +61,5 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   hi Error                ctermfg=7   ctermbg=1
   hi ErrorMsg             ctermfg=7   ctermbg=1
 endif
+
+let g:colors_name = "seoul"

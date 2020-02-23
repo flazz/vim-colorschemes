@@ -92,3 +92,5 @@ hi link rubyInterpolationDelimiter    Interpolation
 hi link rubyRailsMethod       Method
 
 
+
+let g:colors_name = "smyck"

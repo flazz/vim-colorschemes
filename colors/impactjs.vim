@@ -32,3 +32,5 @@ hi Function         guifg=#FF0077     guibg=NONE        gui=NONE      ctermfg=ma
 hi Special          guifg=#55DDFF     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Delimiter        guifg=#55DDFF     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi Operator         guifg=#55DDFF     guibg=NONE        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+
+let g:colors_name = "impactjs"

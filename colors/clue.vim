@@ -60,3 +60,5 @@ hi spelllocal                                                                   
 hi title        gui=bold      guifg=white                                       ctermfg=white
 hi signcolumn                 guifg=white     guibg=darkcyan                    ctermfg=black       ctermbg=darkcyan
 hi tabline      gui=underline guifg=black     guibg=darkgrey    cterm=underline ctermfg=black       ctermbg=white
+
+let g:colors_name = "clue"

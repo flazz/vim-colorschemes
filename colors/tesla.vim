@@ -112,3 +112,5 @@ hi link pythonOperator  Statement
 hi TagListFileName   gui=none        guibg=#192636           guifg=white
 
 " =============================================================================
+
+let g:colors_name = "tesla"

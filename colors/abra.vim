@@ -77,3 +77,5 @@ hi VisualNOS gui=none guibg=black
 execute "hi WarningMsg  guifg=" . s:Colors[5]  . " guibg=" . s:Colors[12] . " gui=none"
 execute "hi WildMenu  guifg="   . s:Colors[14] . " guibg=" . s:Colors[5]  . " gui=none"
 
+
+let g:colors_name = "abra"

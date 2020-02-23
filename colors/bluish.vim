@@ -36,3 +36,5 @@ hi Preproc			guifg=LightGoldenRod	ctermfg=227
 hi cUserFunction	guifg=yellow			ctermfg=226
 hi cAnsiFunction    guifg=antiquewhite2		ctermfg=230
 
+
+let g:colors_name = "bluish"

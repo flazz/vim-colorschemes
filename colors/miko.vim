@@ -38,3 +38,5 @@ hi Visual              ctermfg=232 ctermbg=153
 " NonText
 " ErrorMsg
 " Search
+
+let g:colors_name = "miko"

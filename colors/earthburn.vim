@@ -199,3 +199,5 @@ hi rubyPredefinedVariable      guifg=gray40
 ""hi rubySymbol                  gui=none        guifg=#9E9C096A6C19
 
 "hi rubyTodo                    gui=            guifg=            guibg=
+
+let g:colors_name = "earthburn"

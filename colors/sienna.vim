@@ -148,3 +148,5 @@ elseif s:sienna_style == 'light'
     hi htmlBoldUnderlineItalic gui=bold,underline,italic
     hi htmlUnderlineItalic gui=underline,italic
 endif
+
+let g:colors_name = "sienna"

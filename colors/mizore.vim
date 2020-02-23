@@ -101,3 +101,5 @@ hi Macro        guifg=#8070ff  ctermfg=darkmagenta   guibg=#000000 ctermbg=black
 hi Special      guifg=#ff40ff  ctermfg=magenta       guibg=#000000 ctermbg=black
 
 let &cpo = save_cpo
+
+let g:colors_name = "mizore"

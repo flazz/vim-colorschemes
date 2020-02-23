@@ -116,3 +116,5 @@ hi Function ctermfg=yellow
 
 "vim: sw=4
  
+
+let g:colors_name = "carvedwood"

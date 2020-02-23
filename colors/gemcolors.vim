@@ -85,3 +85,5 @@ hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
 
+
+let g:colors_name = "gemcolors"

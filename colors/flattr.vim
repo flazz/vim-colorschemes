@@ -98,3 +98,5 @@ hi GlobalConstant guifg=#16A085 ctermfg=36
 hi GlobalVariable guifg=#1ABC9C ctermfg=37
 hi LocalVariable  guifg=#2ECC71 ctermfg=41
 set background=dark
+
+let g:colors_name = "flattr"

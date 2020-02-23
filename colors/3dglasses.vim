@@ -108,3 +108,5 @@ execute "hi Tooltip			gui=none guibg=" . s:LightBlue[0] . " guifg=" . s:White[1]
 " }}}
 "
 " vim:foldmethod=marker:
+
+let g:colors_name = "3dglasses"

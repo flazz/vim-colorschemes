@@ -50,3 +50,5 @@ highlight browseSuffixes gui=NONE guifg=Cornsilk3    guibg=bg
 
 
 
+
+let g:colors_name = "clarity"

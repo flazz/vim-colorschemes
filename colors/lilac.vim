@@ -73,3 +73,5 @@ hi Visual         guifg=#000000 guibg=#b0d0f0 gui=underline
 hi VisualNOS      guifg=#f0f0f0 guibg=#503040 gui=underline
 hi WarningMsg     guifg=#000000 guibg=#b0d0f0 gui=bold
 hi WildMenu       guifg=#f0f0f0 guibg=#0000f0 gui=none
+
+let g:colors_name = "lilac"

@@ -132,3 +132,5 @@ hi Error guibg=#602020
 "exe 'hi TagListFileName  guifg='.s:lightgrey               .' guibg='.s:darkgrey        .' gui=underline'
 "exe 'hi TagListTitle  guifg='.s:mid_grey_blue               .' guibg='.s:darkgrey        .' gui=italic'
 
+
+let g:colors_name = "phd"

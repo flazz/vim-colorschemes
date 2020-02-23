@@ -347,3 +347,5 @@ hi CtrlPMode2      guifg=#e95600 guibg=NONE    gui=NONE
 "
 " vim:foldmethod=marker:foldlevel=0:textwidth=79
 "
+
+let g:colors_name = "sol"

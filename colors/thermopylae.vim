@@ -213,3 +213,5 @@ call s:HL('SpellRare',  yellow1, 'NONE', 'underline')
 call s:HL('SneakPluginTarget', yellow1, green1, 'underline')
 call s:HL('SneakStreakTarget', yellow1, green1, 'none')
 call s:HL('SneakStreakMask',   green1,  green1, 'none')
+
+let g:colors_name = "thermopylae"

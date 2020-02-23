@@ -258,3 +258,5 @@ else
 	hi mkdURL          ctermfg=33    guifg=#0087FF
 	hi mkdLink         ctermfg=95    guifg=#875F5F
 endif
+
+let g:colors_name = "bubblegum"

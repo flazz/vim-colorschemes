@@ -41,3 +41,5 @@ hi Folded           guifg=#808080 guibg=#1C2325
 hi PMenu            guifg=#CCCCFF guibg=#1C2325
 hi PMenuSel         guibg=#2C3335
 
+
+let g:colors_name = "sonofobsidian"

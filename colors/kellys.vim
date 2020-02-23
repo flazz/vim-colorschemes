@@ -269,3 +269,5 @@ hi! link xmlTagName			Statement
 " hi! link TexSectionMarker	Comment
 " hi! link Delimiter			Comment
 " hi! link TexMatcher			Comment
+
+let g:colors_name = "kellys"

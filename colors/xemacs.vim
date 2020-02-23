@@ -44,3 +44,5 @@ hi Ignore				guifg=grey29
 hi Todo					guibg=gold guifg=black
 hi WildMenu			guibg=#b7b7b7 guibg=grey91
 hi Directory		guibg=#cdcecd guifg=navyblue
+
+let g:colors_name = "xemacs"

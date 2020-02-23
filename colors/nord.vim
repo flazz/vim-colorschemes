@@ -412,3 +412,5 @@ hi! link jsFuncParens Delimiter
 hi! link jsNoise Delimiter
 hi! link jsPrototype Keyword
 hi! link jsRegexpString SpecialChar
+
+let g:colors_name = "nord"

@@ -615,3 +615,5 @@ hi link VimwikiHeader5 SpecialBold
 hi link VimwikiHeader6 TypeBold
 
 
+
+let g:colors_name = "lucius"

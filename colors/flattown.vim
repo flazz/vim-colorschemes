@@ -125,3 +125,5 @@ hi TabLine guifg=#797a7b guibg=#212325 guisp=#212325 gui=NONE ctermfg=8 ctermbg=
 
 hi IndentGuidesOdd guifg=#f6f6f6 guibg=#2f3337 guisp=#2f3337 gui=NONE ctermfg=255 ctermbg=236 cterm=NONE
 hi IndentGuidesEven guifg=#f8f8f8 guibg=#383d41 guisp=#383d41 gui=bold ctermfg=15 ctermbg=238 cterm=NONE
+
+let g:colors_name = "flattown"

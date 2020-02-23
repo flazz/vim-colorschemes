@@ -290,3 +290,5 @@ endfor
 
 
 let b:current_syntax = "colours_bandit"
+
+let g:colors_name = "bandit"

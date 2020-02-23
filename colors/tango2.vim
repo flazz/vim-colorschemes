@@ -60,3 +60,5 @@ hi Special term=underline guifg=#5EAFE5
 
 hi Search guibg=#81ABBD
 " hi QtClass guifg=Orange ctermfg=LightBlue
+
+let g:colors_name = "tango2"

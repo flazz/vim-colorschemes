@@ -100,3 +100,5 @@ hi Underlined ctermfg=white cterm=underline
 "hi Ignore     
 "hi Error      
 hi Todo guifg=yellow3 guibg=blue3 gui=bold ctermfg=3 
+
+let g:colors_name = "midnight"

@@ -132,3 +132,5 @@ call s:r('Underlined',     { 'bg': s:green1, 'fg': s:grey1  })
 call s:r('VertSplit',      { 'bg': s:grey2,  'fg': s:grey2  })
 call s:r('Visual',         { 'bg': s:grey2,  'fg': s:green1 })
 
+
+let g:colors_name = "lumberjack"

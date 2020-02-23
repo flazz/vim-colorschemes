@@ -107,3 +107,5 @@ hi! link pythonKeyword Statement
 " urxvt -bg #222429
 " urxvt*background: #222429
 " printf '\033]4;16;#000000;60;#506681;110;#9CBDDD;189;#D0CFFE;193;#CBF8B0;217;#FFC0CB;233;#15171C;235;#222429;237;#3A3D45;241;#666666;251;#C7C7C7;254;#E3E3E3\007'
+
+let g:colors_name = "babymate256"

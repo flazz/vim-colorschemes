@@ -65,3 +65,5 @@ hi Underlined		guifg=#9cd464	guibg=bg
 hi Ignore		guifg=fg	guibg=bg
 hi Error		guifg=#cc74a8	guibg=#9cd464
 hi Todo			guifg=bg	guibg=#e0d070
+
+let g:colors_name = "caramel"

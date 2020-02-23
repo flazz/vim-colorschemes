@@ -88,3 +88,5 @@ hi link StorageClass    Type
 hi link Structure       Type
 hi link Tag             Special
 hi link Typedef         Type
+
+let g:colors_name = "cascadia"

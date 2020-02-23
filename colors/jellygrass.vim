@@ -274,3 +274,5 @@ call s:X("PreciseJumpTarget",155,22,"")
 delf s:X
 delf s:is_empty_or_none
 " }}}
+
+let g:colors_name = "jellygrass"

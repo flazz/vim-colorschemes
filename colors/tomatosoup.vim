@@ -78,3 +78,5 @@ hi Special guifg=red gui=bold
 "hi Ignore		
 "hi Error		
 hi Todo guifg=yellow guibg=blue gui=bold
+
+let g:colors_name = "tomatosoup"

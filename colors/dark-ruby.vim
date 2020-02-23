@@ -292,3 +292,5 @@ hi htmlH1	ctermfg=25	guifg=25
 "hi erubyBlock	ctermfg=lightgray	guifg=lightgray	
 "hi erubyExpression	ctermfg=lightgray	guifg=lightgray	
 "hi erubyComment	ctermfg=lightgray	guifg=lightgray	
+
+let g:colors_name = "dark-ruby"

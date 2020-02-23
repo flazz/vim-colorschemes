@@ -77,3 +77,5 @@ hi def link SpecialComment Special
 hi def link Debug Special
 
 " vim: sw=2
+
+let g:colors_name = "blink"

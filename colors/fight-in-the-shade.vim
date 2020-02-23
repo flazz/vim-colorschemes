@@ -244,3 +244,5 @@ call s:HL('uniteExrenameModified', defaultForeground, defaultBackground, 'none')
 call s:HL('SneakPluginTarget', persian, defaultBackground, 'underline')
 call s:HL('SneakStreakTarget', smoke,   persian,           'none')
 call s:HL('SneakStreakMask',   persian, persian,           'none')
+
+let g:colors_name = "fight-in-the-shade"

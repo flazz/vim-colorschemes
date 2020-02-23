@@ -89,3 +89,5 @@ else
   hi Error        term=reverse cterm=bold ctermfg=White ctermbg=Red guifg=White guibg=Red
   hi Todo         term=standout ctermfg=Blue ctermbg=Yellow guifg=Blue guibg=Yellow
 endif
+
+let g:colors_name = "dull"

@@ -98,3 +98,5 @@ hi Repeat guifg=#fff200 guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NONE c
 hi Structure guifg=#ffb700 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi Macro guifg=#c25643 guibg=NONE guisp=NONE gui=NONE ctermfg=167 ctermbg=NONE cterm=NONE
 hi DiffAdd guifg=NONE guibg=#5b802c guisp=#5b802c gui=NONE ctermfg=NONE ctermbg=2 cterm=NONE
+
+let g:colors_name = "buddy"

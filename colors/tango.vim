@@ -82,3 +82,5 @@ highlight Type gui=none guifg=#4e9a06 guibg=bg
 highlight Underlined gui=none guifg=#3465a4 guibg=bg
 highlight String gui=none guifg=#a40000 guibg=bg
 highlight Number gui=none guifg=#3465a4 guibg=bg
+
+let g:colors_name = "tango"

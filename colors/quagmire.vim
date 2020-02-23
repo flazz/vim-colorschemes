@@ -110,3 +110,5 @@ hi link macFullscreenBG Normal
 
 
 
+
+let g:colors_name = "quagmire"

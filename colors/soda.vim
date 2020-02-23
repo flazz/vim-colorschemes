@@ -104,3 +104,5 @@ hi cssClassName ctermfg=74 ctermbg=NONE cterm=NONE guifg=#4f9fcf guibg=NONE gui=
 hi cssValueLength ctermfg=97 ctermbg=NONE cterm=NONE guifg=#7653c1 guibg=#f3f2ff gui=NONE
 hi cssCommonAttr ctermfg=97 ctermbg=NONE cterm=NONE guifg=#7653c1 guibg=#f3f2ff gui=NONE
 hi cssBraces ctermfg=0 ctermbg=NONE cterm=NONE guifg=#000000 guibg=NONE gui=NONE
+
+let g:colors_name = "soda"

@@ -171,3 +171,5 @@ if &t_Co > 255
    hi MyTagListFileName   ctermfg=15         ctermbg=238
    hi MyTagListTitle      ctermfg=241        ctermbg=bg         cterm=bold
 end
+
+let g:colors_name = "zazen"

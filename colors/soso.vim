@@ -65,3 +65,5 @@ if version >= 700
   hi TabLineSel                             gui=bold                                                       cterm=bold
   hi TabLineFill guifg=black  guibg=grey80                                                                 cterm=underline
 endif
+
+let g:colors_name = "soso"

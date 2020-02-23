@@ -123,3 +123,5 @@ hi NonText ctermbg=NONE cterm=NONE guifg=#404449 guibg=NONE gui=NONE
 " invisibles
 
 hi SpecialKey ctermbg=NONE cterm=NONE guifg=#404449 guibg=NONE gui=NONE
+
+let g:colors_name = "adventurous"

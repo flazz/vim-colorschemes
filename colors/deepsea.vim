@@ -204,3 +204,5 @@ hi link cssRenderAttr cssUIAttr
 
 hi link sassClassChar cssClass
 hi link sassProperty  cssDefinition
+
+let g:colors_name = "deepsea"

@@ -314,3 +314,5 @@ if g:alduin_Contract_Vampirism
         let g:alduin_Shout_Become_Ethereal = 1
     endif
 end
+
+let g:colors_name = "alduin"

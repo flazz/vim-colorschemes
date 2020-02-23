@@ -110,3 +110,5 @@ hi SyntasticErrorSign ctermfg=red guibg=#121212 ctermbg=233
 set bg=dark "bg switches to light for some reason
 
 " vim:set fdm=marker
+
+let g:colors_name = "maui"

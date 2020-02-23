@@ -100,3 +100,5 @@ hi Macro        guifg=#00b000  ctermfg=darkgreen   guibg=#000000 ctermbg=black
 hi Special      guifg=#ffff00  ctermfg=yellow      guibg=#000000 ctermbg=black
 
 let &cpo = save_cpo
+
+let g:colors_name = "luinnar"

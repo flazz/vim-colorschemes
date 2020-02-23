@@ -50,3 +50,5 @@ hi Constant 	guifg=#FFA1CF gui=none
 
 hi Statement 	guifg=#8ac6f2 gui=none
 hi Keyword		guifg=#8ac6f2 gui=none
+
+let g:colors_name = "mrpink"

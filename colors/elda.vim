@@ -181,3 +181,5 @@ call s:hi('Structure', s:white, s:bg, 'bold')
 call s:hi('Type', s:white, s:bg, 'NONE')
 
 let &cpo = save_cpo
+
+let g:colors_name = "elda"

@@ -320,3 +320,5 @@ endif
 
 " vim: set fdl=0 fdm=marker:
 
+
+let g:colors_name = "summerfruit256"

@@ -101,3 +101,5 @@ hi TabLine guifg=#969696 guibg=#ededed guisp=#ededed gui=NONE ctermfg=246 ctermb
 hi conceal guifg=#707070 guibg=NONE guisp=NONE gui=NONE ctermfg=242 ctermbg=NONE cterm=NONE
 hi colorcolumn guifg=NONE guibg=#f5f5f5 guisp=#f5f5f5 gui=NONE ctermfg=NONE ctermbg=255 cterm=NONE
 hi cursorlinenr guifg=#969696 guibg=NONE guisp=NONE gui=NONE ctermfg=246 ctermbg=NONE cterm=NONE
+
+let g:colors_name = "cake"

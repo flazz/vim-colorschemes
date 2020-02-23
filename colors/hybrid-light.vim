@@ -326,3 +326,5 @@ hi! link diffAdded Statement
 " THE SOFTWARE.
 
 " }}}
+
+let g:colors_name = "hybrid-light"

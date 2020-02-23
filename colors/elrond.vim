@@ -145,3 +145,5 @@ hi link Debug          Special
 
 hi ColorColumn NONE
 hi link ColorColumn    CursorLine
+
+let g:colors_name = "elrond"

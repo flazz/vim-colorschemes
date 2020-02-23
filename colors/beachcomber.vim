@@ -62,3 +62,5 @@ hi Visual   guifg=#726F54 guibg=#D4FEFE
 hi Pmenu	guifg=#52503B guibg=#FAAFFF
 hi PmenuSel	guifg=#242318 guibg=#F375FB 
 "vim: sw=4
+
+let g:colors_name = "beachcomber"

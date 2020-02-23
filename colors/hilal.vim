@@ -143,3 +143,5 @@ hi jsonBraces      guifg=NONE       guibg=NONE       gui=NONE
 hi link HtmlTag     XmlTagName
 hi link HtmlTagName XmlTagName
 hi link HtmlEndTag  XmlTagName
+
+let g:colors_name = "hilal"

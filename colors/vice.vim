@@ -162,3 +162,5 @@ call s:Color("markdownH5", s:light_blue, s:none, "NONE")
 call s:Color("markdownH6", s:light_blue, s:none, "NONE")
 call s:Color("markdownHeadingDelimiter", s:light_blue, s:none, "NONE")
 call s:Color("markdownRule", s:light_blue, s:none, "NONE")
+
+let g:colors_name = "vice"
