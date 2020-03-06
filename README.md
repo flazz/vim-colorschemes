@@ -67,6 +67,24 @@ Previewing colorschemes
 -----------------------
 There are quite a few colorschemes in this. To preview them on your live code inside of Vim, checkout [this page from the vim wikia](http://vim.wikia.com/wiki/Switch_color_schemes) and [this repo for easy installation](https://github.com/felixhummel/setcolors.vim).
 
+Colorscheme Options
+----------------------
+
+#### 0x7A69_dark
+
+![0x7A69_dark_demo](/img/0x7A69_dark_demo.png)
+
+#### 3dglasses
+
+![3dglasses_demo]()
+
+#### 256_noir
+
+![256_noir_demo]()
+
+
+
+
 
 Something missing? Fork!
 ------------------------
