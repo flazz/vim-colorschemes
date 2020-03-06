@@ -76,11 +76,19 @@ Colorscheme Options
 
 #### 3dglasses
 
-![3dglasses_demo]()
+![3dglasses_demo](/img/3dglasses_demo.png)
+
+#### 56-grayvim
+
+![56-grayvim_demo](/img/56-grayvim_demo.png)
 
 #### 256_noir
 
-![256_noir_demo]()
+![256_noir_demo](/img/256_noir_demo.png)
+
+#### 1989 
+
+![1989_demo](/img/1989_demo.png)
 
 
 
