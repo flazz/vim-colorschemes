@@ -1,7 +1,7 @@
 " vim:ft=vim foldmethod=marker
 " === Iroh Colorscheme ===
 " By UnikMask <visorunik@gmail.com>
-" https://github.com/iroh-vim
+" https://github.com/UnikMask/iroh-vim
 " Last Modified: recently
 " === === === === === === ===
 
