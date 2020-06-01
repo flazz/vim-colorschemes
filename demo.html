@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Comment -->
+    <div class="demo-container">
+        <h1 class="demo-header">Demo Text</h1>
+        <p>Demo Paragraph</p>
+        <ul>
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+            <li>Option 5</li>
+        </ul>
+    </div>
+
+    <script>
+        // Javascript Demo
+        const particles = [];
+        // Comment
+        function setup() {
+            createCanvas(window.innerWidth, window.innerHeight);
+            console.log(width);
+            //decides on particle length
+            const particleLength = Math.floor(window.innerWidth / 10);
+            for (let i = 0; i < particleLength; i++) {
+                particles.push(new Particle());
+            }
+        }
+    </script>
+</body>
+
+</html>
