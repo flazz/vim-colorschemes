@@ -9,12 +9,6 @@
 " Init spc settings: {{{"
 
 let g:colors_name='iroh'
-" Check if user doesn't want to use special character formats
-if !exists('g:iroh_use_spc')
-	let g:iroh_use_spc=1
-else
-	let g:iroh_use_spc=0
-endif
 
 " }}}
 " Palette: {{{
