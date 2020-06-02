@@ -112,11 +112,6 @@ function! s:Highlight(group, fg, ...)
 		let bg = s:none
 	endif
 
-	" Debugging
-	if bg[1] =~ 'n'
-		echomsg a:group
-	endif
-
 	" Add emphasis to the highlight for extra possibilities like inverse
 	if a:0 >= 2 && strlen(a:2)
 		let emstr = a:2
