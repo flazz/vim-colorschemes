@@ -5,14 +5,14 @@
 " Note: Based off the colors used in the code snippets over
 " at http://impactjs.com. It uses Molokai as a base.
 
-" **********************************************************************
+" ********************************************************************************
 
 runtime colors/molokai.vim
 
 let g:colors_name = "impactjs"
 
 
-hi Normal           guibg=#2C3033     guifg=NONE        gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
+hi Normal           guibg=#2C3033     guifg=#F8F8F2     gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
 hi Comment          guifg=#999999     guibg=NONE        gui=NONE      ctermfg=gray        ctermbg=NONE        cterm=NONE
 hi String           guifg=#AAEE22     guibg=NONE        gui=NONE      ctermfg=green       ctermbg=NONE        cterm=NONE
