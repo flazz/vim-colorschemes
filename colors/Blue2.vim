@@ -2,7 +2,7 @@
 " It's based on:
 runtime colors/Dark.vim
 
-let g:colors_name = "Blue"
+let g:colors_name = "Blue2"
 
 " hi Normal guibg=#000070 guifg=GhostWhite
 hi Normal guibg=#000050 guifg=GhostWhite
