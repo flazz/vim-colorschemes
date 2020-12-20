@@ -9,7 +9,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "CandyCode"
+let colors_name = "CandyPaper"
 
 " Convert color from HSV to RGB as a hex string
 " See: https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSV
