@@ -36,7 +36,7 @@ if you [use vim + vundle](https://github.com/gmarik/vundle)
 
     " add to .vimrc
     Plugin 'flazz/vim-colorschemes'
-    :PluginInstall
+    :PlugInstall
 
 if you aren't so clever just get all the files in `colors/*.vim` into
   `~/.vim/colors`
