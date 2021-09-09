@@ -35,8 +35,8 @@ if you [use vim + pathogen](http://vimcasts.org/episodes/synchronizing-plugins-w
 if you [use vim + vundle](https://github.com/gmarik/vundle)
 
     " add to .vimrc
-    Plugin 'flazz/vim-colorschemes'
-    :PluginInstall
+    Plug 'flazz/vim-colorschemes'
+    :PlugInstall
 
 if you aren't so clever just get all the files in `colors/*.vim` into
   `~/.vim/colors`
